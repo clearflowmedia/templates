@@ -1,0 +1,688 @@
+/* Normal desktop :1600px. */
+@media (min-width: 1500px) and (max-width: 1600px) {
+.header-menu ul li a {
+    margin: 35px 28px;
+}
+.hero-section .hero-content p {
+    width: 48%;
+}
+.call-action {
+    padding: 0 95px 0 93px;
+}
+.call-action .call-btn a {
+    padding: 17px 70px;
+}
+
+
+}
+/* Normal desktop :1200px. */
+@media (min-width: 1365px) and (max-width: 1500px) {
+.header-menu ul li a {
+    margin: 35px 17px;
+}
+.counter-section {
+    padding: 0 204px;
+}
+.slider-thumb img {
+    width: 100%;
+}
+.call-action {
+    padding: 0 30px 0 30px;
+}
+.call-action .single-call-box .call-title h2 {
+    font-size: 42px;
+}
+.call-action .call-btn a {
+    padding: 17px 70px;
+}
+.faq-section.style-two .shape {
+    left: -205px;
+}
+.blog-section.style-three .blog-shape-img {
+    right: -47px;
+}
+
+}
+/* Normal desktop :1170px. */
+@media (min-width: 1170px) and (max-width: 1365px) {
+.header-menu ul li a {
+    margin: 35px 17px;
+}
+.counter-section {
+    padding: 0 204px;
+}
+.call-action .row.upper6 {
+    padding: 58px 94px 60px;
+}
+.hero-section.style-two .hero-content p {
+    width: 79%;
+}
+.feature-section.style-three .single-feature-box .feature-content .feature-title h3 {
+    letter-spacing: 1px;
+}
+.single-about-box.mt-60 {
+    margin-top: 32px;
+}
+
+}
+/* Normal Laptop :992px. */
+@media (min-width: 992px) and (max-width: 1199px) {
+.header-area {
+    padding: 2px 17px 5px;
+}
+.skill-section .dreamit-section-main-title h1, .skill-section .dreamit-section-main-title h2 {
+    font-size: 40px;
+}
+.about-section .dreamit-section-main-title h1, .about-section .dreamit-section-main-title h2 {
+    font-size: 37px;
+    font-weight: 800;
+    margin: 0;
+}
+.about-section .dreamit-section-content-text p {
+    letter-spacing: 0;
+}
+.counter-section {
+    padding: 0 84px;
+}
+.dreamit-section-main-title h2 {
+    font-size: 37px;
+}
+.blog-section .single-blog-box .blog-content {
+    padding: 24px 24px 19px;
+}
+.blog-section .single-blog-box .blog-content .blog-title  a h2 {
+    font-size: 15px;
+}
+.header-menu ul li a {
+    margin: 35px 8px;
+}
+.about-section .about-thumb {
+    right: 31px;
+}
+.about-thumb img {
+    width: 100%;
+}
+.about-section .shape2 {
+    left: -1%;
+}
+.counter-section .row.upper1 {
+    padding: 57px 28px 34px;
+}
+.skill-section.pt-150 {
+    padding-top: 83px;
+}
+.skill-section .skill-thumb {
+    top: 0;
+}
+.call-action {
+    padding: 0 8px 0 8px;
+    background: #222932;
+}
+.call-action .single-call-box .call-title h2 {
+    font-size: 37px;
+}
+.call-action .call-btn a {
+    padding: 9px 31px;
+}
+.hero-section .hero-content h1, .hero-content h2 {
+    font-size: 57px;
+}
+.hero-section .hero-content p {
+    width: 72%;
+}
+.feature-section.style-two .single-feature-box .feature-title h3 {
+    font-size: 15px;
+}
+.testi-section .row.upper4 {
+    padding: 58px 14px 12px;
+}
+.call-action .row.upper6 {
+    padding: 58px 42px 60px;
+}
+.service-section .single-service-box .service-title h3 {
+    font-size: 19px;
+}
+.header-area.style-two {
+    padding: 2px 35px 0px;
+}
+.service-section .single-service-box {
+    padding: 75px 15px 55px;
+}
+.hero-section.style-two {
+    width: 1170px;
+}
+.feature-shape {
+    right: 138px;
+}
+.single-faq-box {
+    z-index: 2;
+    position: relative;
+}
+.faq-section.style-two .shape {
+    left: -146px;
+}
+.blog-section .single-blog-box .blog-content .blog-meta a {
+    margin-right: 6px;
+}
+.blog-section.style-three .blog-shape-img {
+    right: -247px;
+}
+.header-area.style-three .header-socail-address {
+    right: 1%;
+}
+.header-area.style-three {
+    padding: 0px 0 4px 23px;
+}
+.team-section.style-two .shape {
+    bottom: 8%;
+}
+.team-section.style-two .single-team-box:hover .shape {
+    bottom: 15%;
+}
+.blog-details-section .blog-details-content .blog-details-title h2 {
+    font-size: 36px;
+}
+.blog-details-section .sidebar-thumb-title a h2 {
+    font-size: 16px;
+}
+.location-section .single-location-box .location-content .location-title h2 {
+    font-size: 26px;
+}
+.price-section .single-price-box .price-content span.dolars {
+    left: 8%;
+}
+.service-section.style-two .single-service-box .service-content .service-btn a {
+    font-size: 15px;
+}
+.testi-section .single-testi-box .testi-content h2 {
+    font-size: 22px;
+}
+.hero-section.style-two .hero-content p {
+    width: 94%;
+}
+.service-section.style-three .single-service-box .service-content .service-content-text p {
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+
+}
+/* Tablet Tab :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+.header-area {
+    display: none;
+}
+.slider-thumb {
+    display: none;
+}
+.slider-content p {
+    width: 152%;
+}
+.subscribe-section input.form-control.one {
+    border-radius: 30px;
+}
+.subscribe-section input.form-control.two{
+    border-radius: 30px;
+}
+.about-section .about-thumb {
+    right: 0;
+}
+.about-thumb img {
+    width: 100%;
+}
+.about-section .dreamit-section-main-title h1, .about-section .dreamit-section-main-title h2 {
+    font-size: 33px;
+}
+.about-section .dreamit-section-content-text p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+.dreamit-section-main-title h2 {
+    font-size: 33px;
+}
+.service-section .single-service-box {
+    padding: 75px 18px 55px;
+}
+.counter-section {
+    padding: 0 148px;
+}
+.skill-section .dreamit-section-main-title h1, .skill-section .dreamit-section-main-title h2 {
+    margin: 0;
+    font-size: 30px;
+}
+.skill-section.pt-150 {
+    padding-top: 59px;
+}
+.skill-section .skill-thumb {
+    top: 0;
+}
+.hero-section .hero-content h1, .hero-content h2 {
+    font-size: 40px;
+}
+.hero-section .hero-btn a {
+    font-size: 15px;
+}
+.testi-section .single-testi-box .testi-content h2 {
+    font-size: 19px;
+}
+.hero-section .hero-content p {
+    width: 72%;
+}
+.about-section.style-two .dreamit-section-main-title h1, .about-section .dreamit-section-main-title h2 {
+    font-size: 31px;
+}
+.faq-section .dreamit-section-main-title h2 {
+    font-size:23px;
+}
+.call-action .row.upper6 {
+    padding: 58px 13px 60px;
+}
+.call-action .call-btn {
+    left: 0;
+}
+.call-action {
+    padding: 0 79px 0 76px;
+}
+.hero-section.style-two{
+    width: 991px;
+}
+.feature-shape {
+    right: 120px;
+}
+.feature-section.style-three .dreamit-section-main-title h2:before {
+    top: -79px;
+}
+.team-section.style-two .dreamit-section-main-title h2:before {
+    top: -84px;
+}
+.single-faq-box {
+    position: relative;
+    z-index: 2;
+}
+.blog-section.style-three .dreamit-section-main-title h2:before {
+    top: -132px;
+}
+.blog-section.style-three .dreamit-section-content-text {
+    padding-left: 16px;
+    width: 91%;
+}
+.counter-section.style-three {
+    background-size: cover;
+}
+.blog-details-section .blog-details-content .blog-details-title h2 {
+    font-size: 30px;
+}
+.blog-details-section .blog-details-content {
+    padding: 22px 20px 40px 34px;
+}
+.blog-details-section .sidebar-thumb-title a h2 {
+    font-size: 15px;
+}
+.blog-details-section .form_box.mb-1 {
+    margin-top: 13px;
+}
+.contact-section input.form-control {
+    margin-bottom: 15px;
+}
+.form_box.pt-3{
+    padding-top: 0!important;
+}
+
+
+}
+
+/* Large Mobile :600px. */
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+.header-area {
+    display: none;
+}
+.slider-thumb {
+    display: none;
+}
+.subscribe-section .row.upper {
+    padding: 25px 27px 25px;
+}
+.subscribe-section input.form-control.one {
+    border-radius: 30px;
+}
+.subscribe-section input.form-control.two{
+    border-radius: 30px;
+}
+.dreamit-section-main-title h2 {
+    font-size: 24px;
+}
+.service-section .single-service-box {
+    padding: 75px 68px 55px;
+}
+.counter-section {
+    padding: 0 44px;
+}
+.skill-section .skill-thumb {
+    right: 0;
+    top: 0;
+}
+.skill-thumb img {
+    width: 100%;
+}
+.price-section .single-price-box .price-content span.dolars {
+    left: 23%;
+}
+.hero-section .row.upper3 {
+    margin: 0 8px;
+}
+.hero-section .hero-content h1, .hero-content h2 {
+    font-size: 36px;
+}
+.hero-section .hero-content p {
+    font-size: 17px;
+    width: 100%;
+}
+.about-section.style-two.pt-130 {
+    padding-top: 55px;
+}
+.about-section.style-two .about-thumb {
+    right: 0;
+}
+.service-section.style-two .single-service-box {
+    padding: 75px 43px 55px;
+}
+.testi-section .row.upper4 {
+    padding: 23px 0px 12px;
+}
+.testi-section .single-testi-box {
+    padding: 46px 10px 64px;
+}
+.team-section .single-team-box:hover .team-thumb .team-social-address {
+    top: 43%;
+}
+.faq-section .faq-thumb {
+    left: 0;
+}
+.blog-section.style-two .single-blog-box .blog-content {
+    left: 10px;
+}
+.call-action {
+    padding: 0 0px 0 0px;
+}
+.call-action .row.upper6 {
+    padding: 58px 45px 60px;
+}
+.call-action .call-btn {
+    left: 0;
+}
+.about-section.style-three .shape-image.shape4 {
+    right: 7%;
+    bottom: 7%;
+}
+.feature-shape {
+    right: 74px;
+}
+.testi-section.style-two {
+    height: 898px;
+}
+.testi-section.style-two .dreamit-section-title {
+    left: -15px;
+}
+.team-section.style-two .shape {
+    bottom: 8%;
+}
+.team-section.style-two .dreamit-section-main-title h2:before {
+    top: -106px;
+}
+.faq-section.style-two .dreamit-section-main-title h2:before {
+    top: -103px;
+}
+.faq-section.style-two .faq-thumb {
+    left: 0;
+}
+.blog-section.style-three .dreamit-section-main-title h2:before {
+    top: -125px;
+}
+.counter-section.style-three {
+    background-size: cover;
+}
+.breatcome-area {
+    width: 600px;
+}
+.contact-section input.form-control {
+    margin-bottom: 15px;
+}
+.form_box.pt-3{
+    padding-top: 0!important;
+}
+.blog-shape {
+    right: -236px;
+}
+.feature-section.style-three .dreamit-section-main-title h2:before {
+    top: -109px;
+}
+.feature-section.style-three .single-feature-box {
+    text-align: center;
+}
+.about-thumb img {
+    width: 100%;
+}
+.about-section .about-thumb {
+    right: 0;
+    margin-bottom: 30px;
+}
+.about-section {
+    text-align: center;
+}
+.about-section .dreamit-section-main-title h1, .about-section .dreamit-section-main-title h2 {
+    font-size: 33px;
+}
+.about-section .dreamit-section-content-text p {
+    font-size: 14px;
+}
+.shape img {
+    width: 61%;
+}
+.footer-area {
+    text-align: center;
+}
+
+
+}
+
+/* small mobile :320px. */
+@media only screen and (min-width: 320px) and (max-width: 599px) {
+.header-area {
+    display: none;
+}
+.slider-thumb {
+    display: none;
+}
+.slider-area {
+    text-align: center;
+}
+.subscribe-section .row.upper {
+    padding: 15px 2px 14px;
+}
+.subscribe-section input.form-control.one{
+    border-radius: 30px;
+    padding-left:23px;
+}
+.subscribe-section input.form-control.two {
+    border-radius: 30px;
+}
+.subscribe-section .contact_from .btn {
+    padding: 10px 24px;
+}
+.about-section .dreamit-section-main-title h1, .about-section .dreamit-section-main-title h2 {
+    font-size: 24px;
+}
+.about-section .dreamit-section-content-text p {
+    font-size: 15px;
+}
+.about-section .about-btn a {
+    font-size: 14px;
+}
+.dreamit-section-sub-title h5 {
+    font-size: 16px;
+}
+.dreamit-section-main-title h2 {
+    font-size: 22px;
+}
+.counter-section {
+    padding: 0 0px;
+}
+.skill-section .dreamit-section-main-title h1, .skill-section .dreamit-section-main-title h2 {
+    font-size: 28px;
+}
+.skill-section .skill-thumb {
+    right: 0;
+    top: 0;
+}
+.skill-thumb img {
+    width: 100%;
+}
+.price-section .single-price-box .price-content span.dolars {
+    left: 6%;
+}
+.hero-section .row.upper3 {
+    margin: 0 0px;
+}
+.hero-section .hero-content h1, .hero-content h2 {
+    font-size: 25px;
+}
+.hero-section .hero-content p {
+    font-size: 16px;
+    width: 100%;
+}
+.about-section.style-two .about-thumb {
+    right: 0;
+}
+.service-section.style-two {
+    margin: 0 0px;
+}
+.service-section.style-two .dreamit-section-sub-title h5 {
+    font-size: 19px;
+    letter-spacing: 1px;
+}
+.testi-section .row.upper4 {
+    padding: 10px 0px 12px;
+}
+.testi-section .single-testi-box {
+    padding: 46px 0px 64px;
+}
+.testi-section .single-testi-box .testi-content h2 {
+    font-size: 22px;
+}
+.testi-section .single-testi-box .testi-icon {
+    top: -16%;
+}
+.faq-section .faq-thumb {
+    left: 0;
+}
+.call-action {
+    padding: 0 0px 0 0px;
+}
+.call-action .row.upper6 {
+    padding: 58px 0px 60px;
+}
+.call-action .call-btn {
+    left: 0;
+}
+.team-section.style-two .dreamit-section-main-title h2:before{
+    display: none;
+}
+.faq-section.style-two .dreamit-section-main-title h2:before{
+    display: none;
+}
+.faq-section.style-two .faq-thumb {
+    left: 0;
+}
+.blog-section.style-three .dreamit-section-main-title h2:before{
+    display: none;
+}
+.feature-section.style-three .dreamit-section-main-title h2:before {
+    display: none;
+}
+.about-section.style-three .dreamit-section-title {
+    left: 15px;
+}
+.about-section.style-three .shape-image.shape4 {
+    right: 6%;
+    bottom: 7%;
+}
+.testi-section.style-two {
+    height: 1019px;
+}
+.testi-section.style-two .dreamit-section-title {
+    left: -11px;
+}
+.team-section.style-two.pt-110 {
+    padding-top: 33px;
+}
+.team-section.style-two .dreamit-section-content-text {
+    padding-left: 19px;
+}
+.counter-section.style-three {
+    background-size: cover;
+}
+.blog-section.style-three .dreamit-section-content-text {
+    padding-left: 19px;
+}
+.feature-section.style-three .single-feature-box {
+    text-align: center;
+}
+.hero-section.style-two {
+    height: 600px;
+}
+.feature-section.style-three .dreamit-section-title {
+    padding-left: 15px;
+}
+.feature-section.style-three.pb-40 {
+    padding-bottom: 0;
+}
+.blog-details-section .blog-details-content {
+    padding: 22px 8px 40px 17px;
+}
+.blog-details-section .blog-details-content .blog-details-title h2 {
+    font-size: 28px;
+}
+.contact-section input.form-control {
+    margin-bottom: 15px;
+}
+.form_box.pt-3{
+    padding-top: 0!important;
+}
+.slider-content h1 {
+    font-size: 30px;
+}
+.slider-content h2 {
+    font-size: 30px;
+}
+.slider-content p {
+    font-size: 17px;
+    letter-spacing: 0px;
+}
+.about-thumb img {
+    width: 100%;
+}
+.about-section .about-thumb {
+    right: 0;
+    margin-bottom: 30px;
+}
+.about-section {
+    text-align: center;
+}
+.footer-area {
+    text-align: center;
+}
+.testi-section .single-testi-box .testi-content h2 {
+    font-size: 16px;
+}
+.team-section .dreamit-section-sub-title h5 {
+    font-size: 15px;
+}
+.call-action .single-call-box .call-title h2 {
+    font-size: 28px;
+}
+
+
+
+}
+
+
