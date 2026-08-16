@@ -1,0 +1,34 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+.person {
+	max-width: 390px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.person-img {
+	width: 100%;
+	& + * {
+		margin-top: px-to-rem(20px);
+	}
+}
+
+.person-position {
+	margin-top: px-to-rem(4px);
+	font-size: px-to-rem(16px);
+	text-transform: uppercase;
+	color: $primary;
+}
+
+@include media-breakpoint-up(md) {
+	.person-img {
+		& + * {
+			margin-top: px-to-rem(30px);
+		}
+	}
+}

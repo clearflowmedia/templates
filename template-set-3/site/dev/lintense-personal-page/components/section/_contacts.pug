@@ -1,0 +1,34 @@
+// Contacts
+section#contact.section.section-md.bg-100.bg-overlay.novi-bg.novi-bg-image
+	.bg-overlay-item.bg-secondary.novi-bg.novi-bg-image
+	.container
+		.row.row-20
+			.col-sm-6( data-animate!={ class: 'fadeIn' } )
+				h2.text-decoration Get in Touch
+			.col-sm-6( data-animate!={ class: 'fadeIn', delay: '.15s' } )
+				h5.text-dark Feel free to contact me to discuss your next design or branding project. I’m open to everything!
+		form.rd-form.rd-form-boxed.rd-mailform( data-form-output='contact-form', data-form-type='contact', method='post', action='components/rd-mailform/rd-mailform.php', data-animate!={ class: 'fadeInUp' } )
+			.row.row-gutters-20.row-20.row-xxl-40.align-items-center.row-fix
+				.col-md-4
+					.form-group
+						label.form-label( for='form-name' ) Your name
+						.form-control-wrap
+							input#form-name.form-control( type='text', name='name', placeholder='Your name', data-constraints='@Required' )
+				.col-md-4
+					.form-group
+						label.form-label( for='form-email' ) Your E-mail
+						.form-control-wrap
+							input#form-email.form-control( type='email', name='email', placeholder='E-mail', data-constraints='@Email @Required' )
+				.col-md-4
+					.form-group
+						label.form-label( for='form-phone' ) Your Phone
+						.form-control-wrap
+							input#form-phone.form-control( type='text', name='phone', placeholder='Phone', data-constraints='@Numeric @Required' )
+				.col-12
+					.form-group
+						label.form-label( for='form-Message' ) Your Message
+						.form-control-wrap
+							textarea#form-Message.form-control( name='textarea', placeholder='Message', data-constraints='@Required' )
+			.rd-form-btn.text-left
+				button.btn( type='submit' ) Send Message
+		#contact-form.form-output.snackbar.snackbar-primary

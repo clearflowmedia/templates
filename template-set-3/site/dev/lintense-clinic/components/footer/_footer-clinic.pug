@@ -1,0 +1,37 @@
+include ../rights/_rights
+include ../list/_list
+
+// Footer
+footer#location.section.footer.footer-sm.bg-700.text-400.context-dark
+	.container
+		.row.row-30
+			.col-md-4.col-lg-3
+				.footer-title.h4 Contact Us
+				ul.list.footer-contact-list
+					li.list-item.h3.text-secondary P:
+						=' '
+						a( href='tel:#' ) +1 234 567 8901
+					li.list-item: u: a.link-inherit( href='mailto:#' ) info@demolink.org
+				+list-social
+			.col-auto.col-xs-6.col-md-4.col-lg-3
+				.footer-title.h4 Our Address
+				p
+					a.link-inherit( href='#' ) 178 West 27th Street, Suite 527
+						| #[br]
+						| New York NY 10012
+			.col-auto.col-xs-6.col-md-4.col-lg-3
+				.footer-title.h4 Consulting hours
+				ul.list
+					li.list-item 9 am to 5 pm on Weekdays
+					li.list-item 10 am  to 12 pm on Saturday
+			.col-md-10.col-lg-3
+				.footer-title.h4 Subscribe to our newsletter
+				p Stay up to date with our latest news, updates and special offers.
+				form.rd-mailform.form-inline.flex-xl-nowrap.group-10( data-form-output='form-output-subscribe', data-form-type='subscribe', method='post', action='components/rd-mailform/rd-mailform.php' )
+					.form-inline-group
+						input.form-control.footer-form-control( type='email', name='email', placeholder='Your email address *', data-constraints='@Email @Required' )
+					button.btn.btn-secondary.btn-nuka.px-xl-3( type='submit' ) Send
+						span.btn-overlay
+				#form-output-subscribe.form-output.snackbar.snackbar-secondary
+
+		+rights

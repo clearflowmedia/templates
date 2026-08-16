@@ -1,0 +1,130 @@
+include ../pricing/_pricing
+
+// Pricing
+section#pricing.section.section-lg.bg-transparent
+		.container
+			h2.text-center( data-animate!={ class: 'fadeInUp' } ) Fully powered Web Hosting that
+				| #[br.d-none.d-xs-block]
+				| meets all Your needs!
+			.row.row-20
+				.col-lg-6( data-animate!={ class: 'fadeInUp' } )
+					p.lead RightHost provides hosting services for both personal and corporate clients. Whether you own an international enterprise or need hosting for a personal blog, we are here to help.
+				.col-lg-6( data-animate!={ class: 'fadeInUp' } )
+					p.lead From shared to dedicated hosting, we can create proper servers and environment built with the top-notch equipment to match your company’s budget, needs, and requirements.
+			// Owl Carousel
+			.owl-carousel.owl-style-1(
+				data-owl={
+					loop: false,
+					mouseDrag: false,
+					dots: true,
+					autoplay: false,
+					responsive: {
+						480: {
+							items: 2
+						},
+						992: {
+							items: 3
+						},
+						1200: {
+							items: 4
+						},
+						1600: {
+							items: 4,
+							margin: 50
+						}
+					}
+				},
+				data-animate!={ class: 'fadeInUp' }
+			)
+				+pricing({
+					title:    'Shared <br>Hosting',
+					price:    '$2.69',
+					priceOld: '$7.28',
+					discount: '63%',
+					category: 'Perfect for personal blogs'
+				}).block.block-sm.block-center
+					ul.list.list-lg.pricing-list
+						li.list-item
+							span.font-weight-medium WordPress
+							span.pricing-color , Drupal & Joomla optimized
+						li.list-item
+							span.font-weight-medium 15GB
+							=' '
+							span.pricing-color SSD Storage
+						li.list-item
+							span.font-weight-medium Free
+							=' '
+							span.pricing-color SSL Certificate
+						li.list-item
+							span.font-weight-medium Free
+							=' '
+							span.pricing-color Domain Included
+				+pricing({
+					title:    'Reseller <br>Hosting',
+					price:    '$8.29',
+					priceOld: '$15.28',
+					discount: '48%',
+					category: 'For small businesses'
+				}).block.block-sm.block-center
+					ul.list.list-lg.pricing-list
+						li.list-item
+							span.font-weight-medium Designed
+							span.pricing-color , for WordPress-based websites
+						li.list-item
+							span.font-weight-medium 30GB
+							=' '
+							span.pricing-color SSD Storage
+						li.list-item
+							span.font-weight-medium Unmetered
+							=' '
+							span.pricing-color Bandwidth
+						li.list-item
+							span.font-weight-medium Weekly
+							=' '
+							span.pricing-color Backups
+				+pricing({
+					title:    'VPS <br>Hosting',
+					price:    '$12.69',
+					priceOld: '$22.28',
+					discount: '33%',
+					btnClass: 'btn-primary',
+					category: 'For large websites'
+				}).block.block-sm.context-dark.bg-image( style='background-image: url(images/image-02-280x720.jpg);' ).block-center
+					ul.list.list-lg.pricing-list
+						li.list-item
+							span.font-weight-medium Unlimited
+							=' '
+							span.pricing-color , Email Accounts and Websites
+						li.list-item
+							span.font-weight-medium SSL
+							=' '
+							span.pricing-color Certificate Pre-installed
+						li.list-item
+							span.font-weight-medium Unlimited
+							=' '
+							span.pricing-color Traffic
+						li.list-item
+							span.font-weight-medium Daily
+							=' '
+							span.pricing-color Backups
+				+pricing({
+					title:    'Dedicated <br>Hosting',
+					price:    '$22.69',
+					priceOld: '$27.28',
+					discount: '25%',
+					category: 'For corporate sites and online stores'
+				}).block.block-sm.block-center
+					ul.list.list-lg.pricing-list
+						li.list-item
+							span.font-weight-medium Intel Xeon
+							span.pricing-color , 3GHz servers with 32 GB RAM
+						li.list-item
+							span.font-weight-medium SATA
+							=' '
+							span.pricing-color SSD (2x480 GB)
+						li.list-item
+							span.font-weight-medium Public network
+							span.pricing-color : 1 Gbps
+						li.list-item
+							span.font-weight-medium Private network
+							span.pricing-color : 100 Mbps

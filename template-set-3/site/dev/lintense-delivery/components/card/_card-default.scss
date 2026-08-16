@@ -1,0 +1,126 @@
+// Base
+.card-default {
+	text-align: left;
+	background-color: $white;
+	border-bottom: $border-base;
+
+	&:last-child {
+		border-bottom-color: transparent;
+	}
+
+	.card-title a {
+		position: relative;
+		z-index: 1;
+		padding: $accordion-default-header-padding;
+		font-size: 20px;
+		line-height: 1.6;
+		color: $accordion-default-color;
+		transition: $transition-base;
+
+		&:hover {
+			color: $primary;
+		}
+
+		// Open state
+		.card-arrow {
+			color: $gray-700;
+
+			&:before {
+				content: '\f239';
+			}
+		}
+
+		// Collapsed state
+		&.collapsed {
+			.card-arrow {
+				&:before {
+					content: '\f236';
+				}
+			}
+		}
+
+		.card-title-icon {
+			color: $primary;
+		}
+
+		.card-title-main {
+			font-weight: 500;
+			letter-spacing: -0.02em;
+		}
+
+		.card-title-text {
+			font-size: $font-size-sm;
+			line-height: $line-height-sm;
+			color: $body-color;
+		}
+	}
+
+	.card-title-left {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		@include group( px-to-rem( 16px ), px-to-rem( 10px ) );
+	}
+
+	// Panel arrow
+	.card-arrow {
+		position: absolute;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		width: px-to-rem( 120px );
+		font-size: 1.3em;
+		transition: .3s ease;
+		z-index: 2;
+
+		&::before {
+			position: absolute;
+			top: 50%;
+			z-index: 4;
+			transform: translateY(-50%);
+			font-family: 'Material Design Icons';
+		}
+	}
+
+	.collapse {
+		position: relative;
+		z-index: 1;
+		color: $accordion-default-content-color;
+	}
+
+	.card-body {
+		padding: $accordion-default-content-padding;
+		background: transparent;
+	}
+}
+
+
+// Media
+@include media-breakpoint-down(md) {
+	.card-default {
+		.card-title a {
+			padding-right: px-to-rem( 70px );
+			padding-left: px-to-rem( 30px );
+
+			.card-arrow {
+				width: px-to-rem( 70px );
+			}
+		}
+
+		.card-body {
+			padding-right: px-to-rem( 30px );
+			padding-left: px-to-rem( 30px );
+		}
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.card-default {
+		.card-title a {
+			font-size: px-to-rem( 28px );
+		}
+	}
+}

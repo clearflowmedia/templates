@@ -1,0 +1,79 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.quote {
+	position: relative;
+}
+.quote-body {
+	border-left: px-to-rem(5px) solid $primary;
+	padding-left: px-to-rem( 20px );
+}
+
+.quote-text {
+	font-style: italic;
+	color: $secondary;
+}
+
+.quote-author-name {
+	font-family: inherit;
+}
+.quote-author-position {
+	font-size: $font-size-sm;
+}
+
+
+
+// Spacing
+* + .quote {
+	margin-top: px-to-rem( 30px );
+}
+
+* + .quote-author {
+	margin-top: px-to-rem( 25px );
+}
+
+
+// Simple
+.quote-simple {
+	background-color: $primary-light;
+	.quote-icon {
+		position: absolute;
+		top: px-to-rem(-17px);
+		left: px-to-rem(43px);
+
+
+	}
+	.quote-body {
+		border: none;
+		padding: px-to-rem(40px, 20px, 30px);
+	}
+	.quote-text {
+		quotes: none;
+		font-weight: 300;
+		font-style: normal;
+	}
+
+	.quote-author {
+		margin-top: px-to-rem(20px);
+		font-size: px-to-rem(16px);
+		font-weight: 500;
+	}
+}
+
+// Media
+@include media-breakpoint-up(md) {
+	.quote-simple .quote-body {
+		padding: px-to-rem(54px, 47px, 54px, 43px);
+	}
+}
+@include media-breakpoint-up(xxl) {
+	* + .quote {
+		margin-top: px-to-rem( 40px );
+	}
+}

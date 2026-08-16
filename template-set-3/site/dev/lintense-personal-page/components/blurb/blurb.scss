@@ -1,0 +1,69 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+
+// Base
+.blurb {
+	padding: px-to-rem( 76px * $xs-multiplier, 15px * $xs-multiplier, 109px * $xs-multiplier );
+	transition: $transition-base;
+}
+
+.blurb-icon {
+	font-size: px-to-rem( 66px * $xs-multiplier );
+	line-height: 1;
+	transition: $transition-base;
+}
+
+.blurb-title {
+	transition: $transition-base;
+}
+
+
+// Spacing
+* + .blurb-title { margin-top: px-to-rem( 8px ) }
+
+
+// Context dark
+.context-dark {
+	.blurb-icon {
+		color: rgba( $secondary, .2 );
+	}
+
+	.blurb {
+		&:hover {
+			background-color: rgba( $white, .03 );
+
+			.blurb-icon {
+				color: $secondary;
+			}
+			.blurb-title {
+				color: $primary;
+			}
+		}
+	}
+}
+
+// Media
+@include media-breakpoint-up( lg ) {
+	.blurb {
+		padding: px-to-rem( 76px * $lg-multiplier, 15px * $lg-multiplier, 109px * $lg-multiplier );
+	}
+
+	.blurb-icon {
+		font-size: px-to-rem( 66px * $lg-multiplier );
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.blurb {
+		padding: px-to-rem( 76px, 15px, 109px );
+	}
+
+	.blurb-icon {
+		font-size: px-to-rem( 66px );
+	}
+}

@@ -1,0 +1,48 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+// Base
+.service {
+	border-radius: $border-radius;
+	box-shadow: $box-shadow;
+	background-color: $white;
+}
+
+.service-image {
+	border-top-right-radius: inherit;
+	border-top-left-radius: inherit;
+}
+
+.service-body {
+	padding: px-to-rem( 20px );
+	border-bottom-right-radius: inherit;
+	border-bottom-left-radius: inherit;
+}
+
+.service-title {
+	line-height: 1.6;
+}
+
+
+// Spacing
+* + .service-text {
+	margin-top: px-to-rem( 16px );
+}
+
+
+// Media
+@include media-breakpoint-up(md) {
+	.service-body {
+		padding: px-to-rem( 30px );
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.service-body {
+		padding: px-to-rem( 30px, 40px, 50px );
+	}
+}

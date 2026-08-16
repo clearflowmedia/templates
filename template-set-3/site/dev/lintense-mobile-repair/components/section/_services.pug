@@ -1,0 +1,40 @@
+include ../service/_service
+
+// Services
+section#services.section.section-lg.bg-primary-light
+	.container
+		.row
+			.col
+				h2 Your device in safe hands
+				p.lead We are experienced work lovers focused on quality
+		.row.row-50.row-xl-70
+			.col-md-6.col-lg-4
+				+service({
+					img: 'water.svg',
+					title: 'Water ingress damage',
+					text: 'We provide high-quality water damage repair services that prolong your gadgets’ life and improve their performance.'
+				})
+			.col-md-6.col-lg-4
+				+service({
+					img: 'battery-status.svg',
+					title: 'Poor battery life',
+					text: 'As devices age, their batteries degrade. With a new or restored battery, you can enjoy many more hours of charge.'
+				})
+			.col-md-6.col-lg-4
+				+service({
+					img: 'cracked-smartphone.svg',
+					title: 'Cracked screens',
+					text: 'Being a highly popular repair service, we make sure to deliver the top-notch level of screen repair for your phone.'
+				})
+			.col-md-6.col-lg-4
+				+service({
+					img: 'screen.svg',
+					title: 'Bent chassis',
+					text: 'Our team of experts can easily straighten your current chassis or replace it with a factory original.'
+				})
+			.col-md-6.col-lg-4
+				+service({
+					img: 'loud-speaker.svg',
+					title: 'Broken speakers',
+					text: 'Various issues can cause broken speakers, but we can replace them easily so you can enjoy using your phone again.'
+				})

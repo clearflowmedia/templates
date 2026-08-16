@@ -1,0 +1,22 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+
+// Client classic
+.client-classic {
+	display: inline-block;
+	transition: .25s ease;
+}
+
+// Media
+@include media-breakpoint-up(lg) {
+	.desktop {
+		.client-classic:hover {
+			transform: translateY(-10px);
+		}
+	}
+}

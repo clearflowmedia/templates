@@ -1,0 +1,14 @@
+mixin post( obj )
+	article.post&attributes( attributes )
+		.post-media
+			+img( obj.img ).post-img.w-100
+		.post-body
+			.post-meta.small
+				.post-meta-item
+					.post-date= obj.date
+				.post-meta-item
+					span.fst-italic by&nbsp;
+					a(href='#')= obj.author
+			h3.post-title
+				a(href='#')= obj.title
+			block

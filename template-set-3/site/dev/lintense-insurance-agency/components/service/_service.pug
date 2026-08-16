@@ -1,0 +1,7 @@
+mixin service( obj )
+	.service
+		figure.service-figure
+			+img( obj.img )
+		.service-body
+			h3.service-title: a(href='#')= obj.title
+			h5.service-text= obj.text

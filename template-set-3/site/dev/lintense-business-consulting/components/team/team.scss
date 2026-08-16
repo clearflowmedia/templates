@@ -1,0 +1,37 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins/breakpoints";
+
+// Team
+.team {
+	text-align: center;
+}
+
+.team-position {
+	font-style: italic;
+	font-weight: normal;
+	color: $primary;
+}
+
+.team-image {
+	& + * {
+		margin-top: px-to-rem(20px);
+	}
+}
+
+.team-name {
+	& + * {
+		margin-top: px-to-rem(5px);
+	}
+}
+
+// Media queries
+@include media-breakpoint-up(lg) {
+	.team-image {
+		& + * {
+			margin-top: px-to-rem(30px);
+		}
+	}
+}

@@ -1,0 +1,40 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+
+// Block center
+%block-center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+// Modifying
+.block-center {
+	@extend %block-center;
+}
+
+.block-sm {
+	max-width: px-to-rem(280px);
+}
+
+.block-md {
+	max-width: px-to-rem(390px);
+}
+
+.block-lg {
+	max-width: px-to-rem(500px);
+}
+
+.block-xl {
+	max-width: px-to-rem(760px);
+}
+
+.block-xxl {
+	max-width: px-to-rem(950px);
+}
+

@@ -1,0 +1,35 @@
+// Text styling
+
+// Text block
+.text-block {
+
+}
+
+.text-block-maillink a {
+	text-decoration: underline;
+}
+
+a.text-block-social-item {
+	font-size: px-to-rem( 20px );
+  &:hover { color: $dark; }
+}
+
+* + .text-block-text { margin-top: px-to-rem( 24px * $xs-multiplier ) }
+* + .text-block-phonelink { margin-top: px-to-rem( 27px * $xs-multiplier ) }
+* + .text-block-social { margin-top: px-to-rem( 38px * $xs-multiplier ) }
+* + .text-block-social-item { margin-left: px-to-rem( 20px ) }
+* + .text-block-list { margin-top: px-to-rem( 24px * $xs-multiplier ) }
+
+@include media-breakpoint-up(lg) {
+	* + .text-block-text { margin-top: px-to-rem( 24px * $lg-multiplier ) }
+	* + .text-block-phonelink { margin-top: px-to-rem( 27px * $lg-multiplier ) }
+	* + .text-block-social { margin-top: px-to-rem( 38px * $lg-multiplier ) }
+	* + .text-block-list { margin-top: px-to-rem( 24px * $lg-multiplier ) }
+}
+
+@include media-breakpoint-up(xxl) {
+	* + .text-block-text { margin-top: px-to-rem( 24px ) }
+	* + .text-block-phonelink { margin-top: px-to-rem( 27px ) }
+	* + .text-block-social { margin-top: px-to-rem( 38px ) }
+	* + .text-block-list { margin-top: px-to-rem( 24px ) }
+}

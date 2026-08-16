@@ -1,0 +1,42 @@
+// Base
+.blurb-boxed {
+	min-height: 100%;
+	padding: px-to-rem( 30px );
+}
+
+.blurb-boxed-icon {
+	color: $gray-900;
+}
+
+
+// Spacing
+* + .blurb-boxed-title {
+	margin-top: px-to-rem( 30px );
+}
+
+* + .blurb-boxed-text {
+	margin-top: px-to-rem( 12px );
+}
+
+* + .blurb-boxed-link {
+	margin-top: px-to-rem( 14px );
+}
+
+
+// Media
+@include media-breakpoint-up(md) {
+	.blurb-boxed {
+		padding-top: px-to-rem( 50px );
+		padding-bottom: px-to-rem( 50px );
+	}
+}
+
+@include media-breakpoint-up(xxl){
+	.blurb-boxed {
+		padding: px-to-rem( 70px, 60px, 80px );
+	}
+
+	* + .blurb-boxed-title {
+		margin-top: px-to-rem( 45px );
+	}
+}

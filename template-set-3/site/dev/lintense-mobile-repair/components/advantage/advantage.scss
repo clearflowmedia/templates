@@ -1,0 +1,61 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins/breakpoints";
+
+// Advantage
+.advantage {
+	min-height: 100%;
+	padding: px-to-rem(40px, 30px, 25px, 0);
+
+}
+.advantage-title {
+	position: relative;
+
+	z-index: 0;
+	&::before {
+		counter-increment: number;
+		content: "0" counter(number);
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		font-size: px-to-rem(80px);
+		line-height: 1;
+		font-weight: 700;
+		color: $additional;
+		z-index: -1;
+		opacity: .2;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.advantage {
+		padding: px-to-rem(70px, 30px, 45px, 0);
+		border-right: 1px solid $gray-200;
+	}
+	.row>:nth-child(2n) .advantage {
+		border-right: none;
+	}
+
+	.row>:last-child .advantage {
+		border-right: none;
+	}
+}
+@include media-breakpoint-up(lg) {
+	.row>:nth-child(2n) .advantage {
+		border-right: 1px solid $gray-200;
+	}
+	.row>:nth-child(3n) .advantage {
+		border-right: none;
+	}
+}
+.row-reset {
+	counter-reset: number;
+}
+
+@include media-breakpoint-up(xxl) {
+	.advantage {
+		padding: px-to-rem(70px, 50px, 45px, 0);
+	}
+}

@@ -1,0 +1,55 @@
+include ../pricing/_pricing
+include ../quote/_quote
+
+// Event pricing
+section#pricing.section.section-lg.bg-100
+	.container( data-animate!={ class: 'fadeInUp' } )
+		.row.row-20.align-items-center
+			.col-lg-4
+				h2 Event Pricing
+			.col-lg-7.col-xxl-6
+				+quote-minimal({
+					text: 'Here you can take a look at various pricing options of our event’s tickets and select the pricing plan that you find the most suitable.'
+				})
+	.section-sm.position-relative.offset-xxl
+		.bg-layer.bg-layer-1.bg-gradient-rose-primary.rounded-right-xl( data-animate!={ class: 'fadeInLeftBig' } )
+			#particles-js-3.particles-js
+		.bg-layer.bg-layer-2.rounded-left-xl.bg-image( style='background-image: url(images/image-16-804x597.jpg);', data-animate!={class: 'fadeInRightBig'} )
+		.container
+			.row.row-20
+				.col-md-9.col-lg-8.col-xl-9( data-animate!={ class: 'fadeIn' } )
+					.owl-carousel.owl-visible.owl-dot-light(
+						data-owl={
+							margin: 20,
+							loop: false,
+							mouseDrag: false,
+							dots: true,
+							autoplay: false,
+							responsive: {
+								480: {
+									items: 2
+								},
+								1200: {
+									items: 3
+								}
+							}
+						}
+					)
+						+pricing({
+							icon:  'linearicons-baby2',
+							title: 'Kids',
+							items: [ 'Visiting Santa', 'Dining', 'Ice Skating', 'Christmas Tree' ],
+							price: '35'
+						})
+						+pricing({
+							icon:  'linearicons-man',
+							title: 'Adults',
+							items: [ 'Ice Zone', 'Christmas Shopping', 'Workshops', 'Live Music' ],
+							price: '47'
+						})
+						+pricing({
+							icon:  'linearicons-users2',
+							title: 'Family',
+							items: [ 'Chat with Santa', 'Christmas Decorations', 'Ice Carvers', 'Raffle' ],
+							price: '55'
+						})

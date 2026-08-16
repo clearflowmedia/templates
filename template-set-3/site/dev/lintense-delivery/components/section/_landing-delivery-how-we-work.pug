@@ -1,0 +1,242 @@
+include ../card/_card
+include ../lin-icon/_lin-icon
+include ../input/_input
+include ../google-map/_google-map
+
+// How we are working
+section.section.position-relative.py-1
+	.bg-layer.bg-primary( style='bottom: 50%' )
+	.container
+		#accordion1.card-group-custom.shadow.accordion( role='tablist' aria-multiselectable='false' )
+			+card({
+				parentId:  'accordion1',
+				titleIcon: 'lin-calculator',
+				title:     'Cost of delivery',
+				titleText: 'This service will help you find out the estimated cost of your shipment delivery.'
+			}).card-default( data-animate!={ class: 'fadeIn' } )
+				form.rd-mailform( action='#' )
+					.row.row-30.gutters-lg-80
+						.col-lg-6.border-lg-right
+							.row.row-20
+								.col-12
+									.row.row-10.gutters-20.align-items-center
+										.col-md-4.col-lg-12.col-xl-4
+											.h5 Route:
+										.col-md-8.col-lg-12.col-xl-8
+											.row.row-20.gutters-10
+												.col-sm-6
+													.form-group
+														.select-wrap
+															select.select2( name='route-from', data-select2-options!={ placeholder: 'From:' } )
+																option( label='placeholder' )
+																option Seattle, WA
+																option Washington, DC
+																option New York, NY
+												.col-sm-6
+													.form-group
+														.select-wrap
+															select.select2( name='route-to', data-select2-options!={ placeholder: 'To:' } )
+																option( label='placeholder' )
+																option Chicago, IL
+																option Atlanta, GA
+																option Los Angeles, CA
+								.col-12
+									.row.row-10.gutters-20.align-items-center
+										.col-md-4.col-lg-12.col-xl-4
+											.h5 Type of shipping:
+										.col-md-8.col-lg-12.col-xl-8
+											.form-group
+												.select-wrap
+													select.select2( name='type-of-shipping', data-select2-options!={ placeholder: 'Branch - Branch' } )
+														option( label='placeholder' )
+														option Branch - Branch
+														option Branch - Address
+														option Address - Address
+								.col-12
+									.row.row-10.gutters-20.align-items-center
+										.col-md-4.col-lg-12.col-xl-4
+											.h5 Type of delivery:
+										.col-md-8.col-lg-12.col-xl-8
+											.form-group
+												.select-wrap
+													select.select2( name='type-of-delivery', data-select2-options!={ placeholder: 'Same day delivery' } )
+														option( label='placeholder' )
+														option Same day delivery
+														option Overnight
+														option International
+								.col-12
+									.row.row-10.gutters-20.align-items-center
+										.col-md-4.col-lg-12.col-xl-4
+											.h5 Services:
+										.col-md-8.col-lg-12.col-xl-8
+											+checkbox( {
+												checked: true,
+												id:      'check1'
+											} ).custom-control-lg
+												| Return Delivery
+						.col-12.d-lg-none
+							hr.divider.divider-sm
+						.col-lg-6
+							.row.row-20
+								.col-12
+									.row.row-10.gutters-20.align-items-center
+										.col-md-4.col-lg-12.col-xl-3.col-xxl-4
+											.h5 Weight:
+										.col-md-8.col-lg-12.col-xl-9.col-xxl-8
+											.group-10.d-flex.align-items-center
+												.form-group
+													input.form-control( type='text', name='kg', placeholder='0.00', size='5' )
+												div kg
+								.col-12
+									.row.row-10.gutters-20.align-items-center
+										.col-md-4.col-lg-12.col-xl-3.col-xxl-4
+											.h5 Volume:
+										.col-md-8.col-lg-12.col-xl-9.col-xxl-8
+											.group-10.d-flex.flex-wrap.align-items-center.flex-xl-nowrap
+												.form-group.mt-0
+													input.form-control( type='text', name='length', placeholder='Length', size='5' )
+												.form-group.mt-0
+													input.form-control( type='text', name='width', placeholder='Width', size='5' )
+												.form-group.mt-0
+													input.form-control( type='text', name='height', placeholder='Height', size='5' )
+												div cm
+
+								.col-12
+									.row.row-10.gutters-20.align-items-center
+										.col-md-4.col-lg-12.col-xl-3.col-xxl-4
+											.h5 Declared value:
+										.col-md-8.col-lg-12.col-xl-9.col-xxl-8
+											.group-10.d-flex.align-items-center
+												.form-group
+													input.form-control( type='text', name='declared-value', placeholder='0.00', size='17' )
+												div $
+
+								.col-12
+									.row.row-10.gutters-20.align-items-center
+										.col-md-4.col-lg-12.col-xl-3.col-xxl-4
+											.h5 Services:
+										.col-md-8.col-lg-12.col-xl-9.col-xxl-8
+											+checkbox( {
+												id: 'check2'
+											} ).custom-control-lg
+												| Packaging
+					hr.divider.divider-sm
+					.group-30.d-flex.flex-wrap.align-items-center
+						button.btn.btn-lg.btn-dark.btn-nuka( type='submit' ) Calculate the Cost
+							span.btn-overlay
+						button.link.link-inherit.font-weight-normal( type='reset' ) Clear
+				.offset-sm.bg-primary-light.rounded( style='padding: 1.875rem' )
+					.row.row-20
+						.col-lg-6
+							h3 Estimated shipping cost
+							p.small The final cost of transportation may differ from the calculated.
+						.col-lg-6.text-800
+							.row.row-20.justify-content-xs-between.justify-content-lg-center
+								.col-auto.col-sm-4.col-lg-5.col-xl-4
+									.h5 Services:
+									ul.list.mt-3
+										li.list-item Delivery cost
+										li.list-item Return Delivery
+										li.list-item Packaging
+								.col-auto.col-sm-4.col-lg-3
+									.h5 Price:
+									ul.list.mt-3
+										li.list-item $47.58
+										li.list-item $12.2
+										li.list-item $47.58
+								.col-auto.col-sm-4.col-xl-auto
+									.h5 Total:
+									ul.list.mt-3
+										li.list-item.h3 $107.36
+										li.list-item.small TAX included
+			+card({
+				parentId:  'accordion1',
+				titleIcon: 'lin-clock',
+				title:     'Delivery terms',
+				titleText: 'Learn more about the approximate date of arrival of your departure.'
+			}).card-default( data-animate!={ class: 'fadeIn' } )
+				form.rd-mailform( action='#' )
+					.row.row-30.gutters-lg-80
+						.col-lg-6
+							.row.row-20
+								.col-12
+									.row.row-10.gutters-20.align-items-center
+										.col-md-4.col-lg-12.col-xl-4
+											.h5 Route:
+										.col-md-8.col-lg-12.col-xl-8
+											.row.row-20.gutters-10
+												.col-sm-6
+													.form-group
+														.select-wrap
+															select.select2( name='route-from', data-select2-options!={ placeholder: 'From:' } )
+																option( label='placeholder' )
+																option Seattle, WA
+																option Washington, DC
+																option New York, NY
+												.col-sm-6
+													.form-group
+														.select-wrap
+															select.select2( name='route-to', data-select2-options!={ placeholder: 'To:' } )
+																option( label='placeholder' )
+																option Chicago, IL
+																option Atlanta, GA
+																option Los Angeles, CA
+								.col-12
+									.row.row-10.gutters-20.align-items-center
+										.col-md-4.col-lg-12.col-xl-4
+											.h5 Type of shipping:
+										.col-md-8.col-lg-12.col-xl-8
+											.form-group
+												.select-wrap
+													select.select2( name='type-of-shipping', data-select2-options!={ placeholder: 'Branch - Branch' } )
+														option( label='placeholder' )
+														option Branch - Branch
+														option Branch - Address
+														option Address - Address
+								.col-12
+									.row.row-10.gutters-20.align-items-center
+										.col-md-4.col-lg-12.col-xl-4
+											.h5 Type of delivery:
+										.col-md-8.col-lg-12.col-xl-8
+											.form-group
+												.select-wrap
+													select.select2( name='type-of-delivery', data-select2-options!={ placeholder: 'Same day delivery' } )
+														option( label='placeholder' )
+														option Same day delivery
+														option Overnight
+														option International
+								.col-12
+									.row.row-10.gutters-20.align-items-center
+										.col-md-4.col-lg-12.col-xl-4
+											.h5 Services:
+										.col-md-8.col-lg-12.col-xl-8
+											+checkbox( {
+												checked: true,
+												id:      'check3'
+											} ).custom-control-lg
+												| Return Delivery
+					.offset-sm.group-30
+						button.btn.btn-lg.btn-dark.btn-nuka( type='submit' ) Calculate the Date
+							span.btn-overlay
+						button.link.link-inherit.font-weight-normal( type='reset' ) Clear
+				.offset-sm.bg-primary-light.rounded( style='padding: 1.875rem' )
+					.group-20.d-flex.flex-wrap.align-items-baseline
+						.h5 Estimated delivery date:
+						.h3 November 6, 2020
+			+card({
+				parentId:  'accordion1',
+				titleIcon: 'lin-map-marker-multiple',
+				title:     'The nearest branch',
+				titleText: 'Locate the nearest branch office of Lintense Delivery.'
+			}).card-default( data-animate!={ class: 'fadeIn' } )
+				+google-map({
+					center:  { lat: 40.715847, lng: -73.999925 },
+					zoom:    12,
+					markers: {
+						'park': {
+							position: 'Columbus Park, Baxter Street, New York, United State',
+							html:     'Columbus park'
+						}
+					},
+					styles: [{"featureType":"all","elementType":"all","stylers":[{"hue":"#e7ecf0"}]},{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#636c81"}]},{"featureType":"administrative.neighborhood","elementType":"labels.text.fill","stylers":[{"color":"#636c81"}]},{"featureType":"administrative.land_parcel","elementType":"labels.text.fill","stylers":[{"color":"#ff0000"}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"color":"#f1f4f6"}]},{"featureType":"landscape","elementType":"labels.text.fill","stylers":[{"color":"#496271"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-70}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#c6d3dc"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#898e9b"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"visibility":"simplified"},{"saturation":-60}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#d3eaf8"}]}]
+				})

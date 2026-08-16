@@ -1,0 +1,37 @@
+// Base
+.thumbnail-1 {
+	.thumbnail-media {
+		box-shadow: $box-shadow-lg;
+	}
+
+	.thumbnail-body {
+		padding: px-to-rem( 27px * $lg-multiplier, 15px, 0, 53px * $xs-multiplier );
+	}
+}
+
+// Media
+@include media-breakpoint-down( xs ) {
+	.owl-carousel-separate {
+		.thumbnail-1 {
+			.thumbnail-media {
+				box-shadow: none;
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up( lg ) {
+	.thumbnail-1 {
+		.thumbnail-body {
+			padding: px-to-rem( 27px * $lg-multiplier, 15px, 0, 53px * $lg-multiplier );
+		}
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.thumbnail-1 {
+		.thumbnail-body {
+			padding: px-to-rem( 27px, 15px, 0, 53px );
+		}
+	}
+}

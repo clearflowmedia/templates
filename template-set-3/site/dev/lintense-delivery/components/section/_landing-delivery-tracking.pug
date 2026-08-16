@@ -1,0 +1,13 @@
+// Track Your Shipment
+section#delivery.section.section-lg.bg-primary.text-center
+	.container
+		.row.justify-content-center
+			.col-sm-10.col-lg-8.col-xl-6( data-animate!={ class: 'fadeInUp' } )
+				h1 Track Your Shipment
+				p.lead.text-800 Tracking made easy with Lintense
+				.offset-sm
+					form.rd-mailform.form-inline.form-inline-no-gutters.flex-nowrap.justify-content-center.shadow( action='#' )
+						.form-inline-group
+							input.form-control.form-control-lg( type='text', name='number', placeholder='Enter invoice number or phone number *', data-constraints='@Required' )
+						button.btn.btn-lg.btn-dark.btn-nuka.flex-shrink-0.mt-0( type='submit' ) Track Now
+							span.btn-overlay

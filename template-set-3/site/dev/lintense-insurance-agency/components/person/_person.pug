@@ -1,0 +1,18 @@
+mixin persone( obj )
+	.person.row.row-30.align-items-center
+		.person-body.col-sm-6
+			h3.person-name= obj.name
+			p.person-position= obj.position
+			p.person-text= obj.text
+			.person-contacts
+				.person-contacts-link P: #[a( href='tel:#' ) (123) 456 789 000]
+				.person-contacts-link E: #[a( href='mailto:#' )= obj.email]
+				.person-contacts-socials.d-inline-flex.text-primary.group-25
+					a.icon.icon-sm.icon-social.int-facebook( href='#' )
+					a.icon.icon-sm.icon-social.int-instagram( href='#' )
+					a.icon.icon-sm.icon-social.int-twitter( href='#' )
+					a.icon.icon-sm.icon-social.int-linkedin( href='#' )
+		figure.person-figure.col-md-4.offset-md-1.col-sm-6
+			svg.person-figure-object(width='558', height='410', viewBox='0 0 558 410', fill='none', xmlns='http://www.w3.org/2000/svg')
+				path(d='M10.9317 223.995C-15.3522 143.816 27.6079 83.5276 96.9412 40.0431C208.92 -30.1882 369.73 14.5172 483.452 120.698C575.906 207.022 562.657 310.523 530.631 350.067C476 417.523 348.476 405.508 243.76 392.995C175.628 384.853 54.7063 357.53 10.9317 223.995Z', fill='#F75546')
+			+img( obj.img ).person-figure-img

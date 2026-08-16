@@ -1,0 +1,2 @@
+.thumbnail-video .thumbnail-icon {	position: absolute;	top: 50%;	left: 50%;	transform: translate(-50%, -50%);	color: #FFF;	transition: all 0.2s ease-in-out;}.thumbnail-video .thumbnail-icon svg {	fill: currentColor;}.thumbnail-video .thumbnail-icon:hover {	opacity: .5;}
+/*# sourceMappingURL=thumbnail.css.map */

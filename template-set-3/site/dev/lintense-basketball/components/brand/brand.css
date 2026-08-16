@@ -1,0 +1,2 @@
+.brand {	display: flex;	align-items: center;	justify-content: center;	flex: 0 0 auto;	height: 150px;	transition: all 0.3s ease-in-out;	padding: 15px;	border-radius: 15px;}.brand .figure {	overflow: visible;}.brand img {	width: auto;	height: auto;	max-height: 100%;}
+/*# sourceMappingURL=brand.css.map */

@@ -1,0 +1,25 @@
+include ../post/_post
+
+// Section
+section.section.section-lg.bg-transparent
+	.container
+		h1.text-center( data-animate!={ class: 'fadeInUp' } ) Learn More About Us
+		.row.row-offset-lg.row-30
+			.col-xs-6.col-lg-4( data-animate!={ class: 'fadeInUp' } )
+				+post({
+					img:   'image-04-390x280',
+					title: 'For business',
+					text:  'We provide profesional delivery & transportation solutions for businesses of all kinds and sizes. Corporate shipping with Lintense is easy.'
+				}).block.block-md.block-center
+			.col-xs-6.col-lg-4( data-animate!={ class: 'fadeInUp' } )
+				+post({
+					img:   'image-05-390x280',
+					title: 'Become a partner',
+					text:  'Join a widespread network of Lintense Delivery and become our partner today! Get instant access to partnership benefits and more.'
+				}).block.block-md.block-center
+			.col-xs-6.col-lg-4( data-animate!={ class: 'fadeInUp' } )
+				+post({
+					img:   'image-06-390x280',
+					title: 'Lintense network',
+					text:  'We have a wide range of branch offices located all over the world. Use our map to pick the nearest office to send or receive your shipment.'
+				}).block.block-md.block-center

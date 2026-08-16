@@ -1,0 +1,196 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+
+$custom-control-indicator-size: px-to-rem(26px);
+$custom-control-gutter: px-to-rem(18px);
+$custom-control-indicator-border-color: $input-border-color;
+
+$custom-control-indicator-disabled-bg: $input-disabled-bg;
+$custom-control-label-disabled-color: $gray-400;
+
+$custom-control-indicator-checked-color: $dark;
+$custom-control-indicator-checked-bg: $white;
+$custom-control-indicator-checked-disabled-bg: rgba($custom-control-indicator-checked-bg, .5);
+$custom-control-indicator-checked-box-shadow: 0 0 0 1px $input-border-color;
+$custom-control-indicator-checked-border-color: $input-border-color;
+
+$custom-control-indicator-active-color: $component-active-color;
+$custom-control-indicator-active-bg: rgba($custom-control-indicator-checked-bg, .35);
+$custom-control-indicator-active-box-shadow: none;
+$custom-control-indicator-active-border-color: $custom-control-indicator-checked-border-color;
+
+$custom-checkbox-indicator-icon-checked: str-replace(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11 8'%3e%3cpath fill='transparent' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' stroke='#{$custom-control-indicator-checked-color}' d='M10 1L4 7L1 4'/%3e%3c/svg%3e"), "#", "%23");
+
+$custom-radio-indicator-icon-checked: str-replace(url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-3 -3 6 6'%3e%3ccircle r='3' fill='#{$custom-control-indicator-checked-color}'/%3e%3c/svg%3e"), "#", "%23");
+
+$custom-switch-indicator-border-radius: $border-radius-pill;
+$custom-switch-width: px-to-rem(60px);
+$custom-switch-indicator-size: $custom-control-indicator-size;
+
+@import "../bootstrap/scss/mixins";
+@import "../bootstrap/scss/forms";
+@import "../base/mixins";
+
+// Base style
+label {
+  font-size: $label-font-size;
+  cursor: pointer;
+}
+
+.form-wrap {
+  position: relative;
+
+  &.has-error {
+    .form-control {
+      border-color: $danger;
+    }
+  }
+}
+
+.form-wrap + * {
+  margin-top: 20px;
+}
+
+.form-wrap + .btn {
+  margin-top: 30px;
+}
+
+.form-group {
+  position: relative;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.form-control {
+  background-clip: border-box;
+  text-overflow: ellipsis;
+  padding-left: 20px;
+  background-color: $gray-2;
+	color: $input-color;
+	min-height: $input-height;
+
+  &::placeholder {
+    font-family: $font-family-sec;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: rgba($white, .5);
+    letter-spacing: .1em;
+
+  }
+
+  .has-error & {
+    border-color: $danger;
+  }
+
+  &::-webkit-input-placeholder {
+    line-height: normal;
+  }
+}
+
+.form-control-rounded {
+  border-radius: $input-height;
+}
+
+textarea.form-control {
+  height: 130px;
+  min-height: 50px;
+  max-height: 221px;
+  resize: vertical;
+}
+
+.form-control-inline {
+  display: inline-block;
+  text-align: center;
+  width: auto;
+}
+
+.form-group + .form-group {
+  margin-top: 12px;
+}
+
+@include media-breakpoint-up(md) {
+  .form-group + .form-group {
+    margin-top: 22px;
+  }
+}
+
+
+// Reset mozila validation styles
+:invalid {
+  box-shadow: none;
+}
+
+:-moz-submit-invalid {
+  box-shadow: none;
+}
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+
+// RD Form Inline
+.rd-form-inline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  text-align: center;
+  @include group(10px);
+
+  > * {
+    margin-top: 0;
+  }
+
+  .form-validation {
+    right: 20px;
+  }
+
+
+  .form-wrap {
+    flex-grow: 1;
+    min-width: 185px;
+  }
+
+  .form-wrap-select {
+    text-align: left;
+  }
+
+  .form-btn {
+    flex-shrink: 0;
+    max-width: calc(100% - 10px);
+    min-height: $input-height;
+  }
+
+  .btn {
+    min-height: inherit;
+	  margin-top: 0;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    .btn {
+      display: block;
+    }
+  }
+
+  &.rd-form-inline-centered {
+    justify-content: center;
+  }
+}
+
+
+// Contexts
+.form-inline-group {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+
+  > * {
+    flex-grow: 1;
+  }
+}

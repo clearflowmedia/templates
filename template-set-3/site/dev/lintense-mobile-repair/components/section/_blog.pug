@@ -1,0 +1,25 @@
+include ../post/_post
+// Blog
+section#blog.section.section-lg.bg-default
+	.container
+		.row: .col-md-10.col-lg-8
+			h2 Latest news
+			p.lead.block.block-xl Stay up to date with our latest technology news, event schedules, seminars, tech tips & tricks published regularly by our team.
+		.row.row-50
+			.col-md-6
+				+post({
+					img: 'post-01-611x415',
+					date: 'october 20, 2021',
+					title: 'Dropped Your Phone in Water? Here Are 8 Things You Should Do',
+					text: 'After overcoming the shock of seeing your phone fall into the bathtub, you might have tried to wipe off all visible water and give it a few shakes to...'
+				})
+			.col-md-6.col-lg-4.offset-lg-1
+				+post({
+					img: 'post-02-390x565',
+					date: 'october 20, 2021',
+					title: 'Simple Tweaks Before Bringing Your iPhone in for Repair',
+					text: 'In today’s tech-savvy world where more and more consumers have at least some level of...'
+				}).post-figure-sm
+
+
+

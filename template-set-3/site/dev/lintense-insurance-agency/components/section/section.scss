@@ -1,0 +1,114 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+
+
+// Modifying
+.desktop .section-one-screen {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+
+// Sizing
+.section-sm,
+.section-md,
+.section-lg,
+.section-xl {
+	padding: 70px 0;
+}
+
+
+// Media
+@include media-breakpoint-up(md) {
+	.section-md,
+	.section-lg {
+		padding: 80px 0;
+	}
+
+	.section-xl {
+		padding: 100px 0;
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.section-md {
+		padding: 80px 0;
+	}
+
+	.section-lg {
+		padding: 100px 0;
+	}
+
+	.section-xl {
+		padding: 120px 0;
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.section-md {
+		padding: 110px 0 100px;
+	}
+
+	.section-lg {
+		padding: 150px 0;
+	}
+
+	.section-xl {
+		padding: 175px 0;
+	}
+}
+
+
+.section-into {
+	position: relative;
+	padding: 70px 0;
+
+	@include media-breakpoint-up(xl) {
+		padding: 300px 0 200px;
+	}
+
+	@include media-breakpoint-up(xxl) {
+		padding: 355px 0 245px;
+	}
+}
+
+.intro-image {
+	pointer-events: none;
+
+	@include media-breakpoint-up(xl) {
+		max-width: 180%;
+		transform: translateX(-20%);
+	}
+
+	@include media-breakpoint-up(xxl) {
+		max-width: none;
+		transform: translateX(-25.4%);
+	}
+}
+
+.cta-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	max-width: 95%;
+}
+
+.cta-image {
+	position: absolute;
+	bottom: 0;
+	max-width: 90%;
+
+	@include media-breakpoint-up(xl) {
+		right: 114px;
+		bottom: 26px;
+	}
+
+	@include media-breakpoint-up(xxl) {
+		max-width: none;
+	}
+}

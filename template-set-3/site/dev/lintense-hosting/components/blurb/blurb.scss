@@ -1,0 +1,58 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.blurb {}
+
+.blurb-icon {
+	color: $gray-600;
+}
+
+
+// Spacing
+* + .blurb-title {
+	margin-top: px-to-rem( 24px );
+}
+
+* + .blurb-text {
+	margin-top: px-to-rem( 30px );
+}
+
+* + .blurb-link {
+	margin-top: px-to-rem( 30px );
+}
+
+
+// Modifying
+.blurb-mini {
+	* + .blurb-title {
+		margin-top: px-to-rem( 30px );
+	}
+
+	* + .blurb-text {
+		margin-top: px-to-rem( 16px );
+	}
+}
+
+
+// Media
+@include media-breakpoint-up(xxl) {
+	* + .blurb-link {
+		margin-top: px-to-rem( 40px );
+	}
+
+	.blurb-mini {
+		* + .blurb-title {
+			margin-top: px-to-rem( 40px );
+		}
+	}
+}
+
+
+// Blurb variants
+@import "blurb-boxed";

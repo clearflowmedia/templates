@@ -1,0 +1,78 @@
+include ../counter/_counter
+include ../quote/_quote
+
+// Testimonials
+section#reviews.section.section-lg.bg-transparent.text-center
+	.container
+		div( data-animate!={ class: 'fadeInUp' } )
+			+counter-default({
+				classMain: 'h1 text-primary',
+				value:     2000,
+				postfix:   '+'
+			})
+			h2.mt-3 Happy readers
+		.row.row-offset-md.justify-content-center
+			.col-xl-10: .mx-3
+				// Owl Carousel
+				.owl-carousel.owl-style-5(
+					data-owl={
+						items: 1,
+						margin: 20,
+						slideTransition: 'linear',
+						autoplayTimeout: 4500,
+						autoplaySpeed: 4500,
+						responsive: {
+							768: {
+								items: 2
+							}
+						}
+					}
+				)
+					+quote-boxed({
+						text:     'The tools and insights you share in your books have been instrumental in elevating my leadership and results.',
+						img:      'persons/person-02-60x60',
+						name:     'Roy Sanders',
+						position: 'Regular Reader'
+					}).quote-boxed-2
+					+quote-boxed({
+						text:     'I’ve heard great things on your books. I have to follow trends and be on top of all of it or my business will surely sink. Your books have been a great help in learning how I can stay in the know with the tech sides of running by business.',
+						img:      'persons/person-03-60x60',
+						name:     'Anna Robinson',
+						position: 'Regular Reader'
+					}).quote-boxed-1
+					+quote-boxed({
+						text:     'Your book highlights the importance of communication and planning but without any complex terms. Thank you!',
+						img:      'persons/person-04-60x60',
+						name:     'Craig Edwards',
+						position: 'Regular Reader'
+					})
+					+quote-boxed({
+						text:     'It’s required reading for any leader looking to play to his or her strengths and inspire others to win.',
+						img:      'persons/person-05-60x60',
+						name:     'Judith Bell',
+						position: 'Regular Reader'
+					}).quote-boxed-1
+					+quote-boxed({
+						text:     'Adam’s perspective on leadership and his methodologies have really made a difference in my organization.',
+						img:      'persons/person-06-60x60',
+						name:     'Matthew Wood',
+						position: 'Regular Reader'
+					}).quote-boxed-2
+					+quote-boxed({
+						text:     'Adam Smith takes the common sense of great business practices and provides the tools, techniques, and motivation to help every business leader — from supervisor to CEO – to make it common, understandable, and easy-to-use.',
+						img:      'persons/person-07-60x60',
+						name:     'Denise Sanders',
+						position: 'Regular Reader'
+					}).quote-boxed-1
+					+quote-boxed({
+						text:     'Adam’s words not only engage and inspire leaders at a visionary level, but he also provides a host of pragmatic strategies.',
+						img:      'persons/person-08-60x60',
+						name:     'Peter Morris',
+						position: 'Regular Reader'
+					})
+					+quote-boxed({
+						text:     'This book is a wise read for all entrepreneurs as it synthesizes the complexities of running business.',
+						img:      'persons/person-09-60x60',
+						name:     'Janice Allen',
+						position: 'Regular Reader'
+					}).quote-boxed-1

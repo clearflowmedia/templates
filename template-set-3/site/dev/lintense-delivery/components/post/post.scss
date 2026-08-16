@@ -1,0 +1,58 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.post {
+
+}
+
+.post-figure {
+	display: block;
+}
+
+.post-img {
+	width: 100%;
+}
+
+
+// Spacing
+* + .post-title,
+* + .post-btn {
+	margin-top: px-to-rem( 20px );
+}
+
+* + .post-text {
+	margin-top: px-to-rem( 12px );
+}
+
+
+// Contexts
+.desktop {
+	.post-figure {
+		overflow: hidden;
+	}
+
+	.post-img {
+		transition: $transition-base;
+	}
+
+	.post:hover {
+		.post-img {
+			transform: scale( 1.05 );
+		}
+	}
+}
+
+
+// Media
+@include media-breakpoint-up(xxl) {
+	* + .post-title,
+	* + .post-btn {
+		margin-top: px-to-rem( 30px );
+	}
+}

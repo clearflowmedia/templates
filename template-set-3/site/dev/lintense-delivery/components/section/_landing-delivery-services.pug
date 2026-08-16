@@ -1,0 +1,35 @@
+include ../blurb/_blurb
+include ../lin-icon/_lin-icon
+
+// Section
+section#solutions.section.section-lg.bg-transparent
+	.container
+		h1.text-center( data-animate!={ class: 'fadeInUp' } ) Our Products and Solutions
+			br
+			| are for You
+		.row.row-offset-md.row-20.gutters-20
+			.col-xs-6( data-animate!={ class: 'fadeInUp' } )
+				+blurb-boxed({
+					media: 'media-sm flex-column flex-lg-row align-items-lg-end',
+					title: 'Delivery of parcels <br>and documents',
+					text:  'Same day delivery of parcels & documents'
+				}).bg-primary-light
+					+lin-signature.lin-lg.blurb-boxed-icon
+			.col-xs-6( data-animate!={ class: 'fadeInUp' } )
+				+img( 'image-01-625x340' ).h-100( style='object-fit: cover' )
+			.col-xs-6( data-animate!={ class: 'fadeInUp' } )
+				+blurb-boxed({
+					media: 'media-sm flex-column flex-lg-row align-items-lg-end',
+					title: 'Solutions and <br>expertise',
+					text:  'Take a look at our delivery solutions.'
+				}).context-dark.bg-image( style='background-image: url(images/image-02-625x340.jpg)' )
+					+lin-barcode.lin-lg.blurb-boxed-icon
+			.col-xs-6( data-animate!={ class: 'fadeInUp' } )
+				+blurb-boxed({
+					media:     'media-sm flex-column flex-lg-row align-items-lg-end',
+					title:     'Freight <br>transportation',
+					text:      'Solving your freight transportation needs',
+					textClass: 'text-800',
+					linkClass: 'icon-light-filled'
+				}).bg-primary
+					+lin-delivery-truck.lin-lg.blurb-boxed-icon

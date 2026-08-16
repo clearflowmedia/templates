@@ -1,0 +1,22 @@
+include ../quote/_quote
+
+// Testimonials
+section#testimonials.section.section-lg.bg-transparent
+	.container
+		h6 testimonials
+		h3 What people say about us
+		.row.row-30.justify-content-end
+			.col-xl-5.col-md-6
+				+quote-boxed({
+					text:     'Working with Lintense in Canada has been great.  The resources available, the website and the support from the charity  team has been fantastic.',
+					img:      'persons/person-01-60x60',
+					name:     'Adam Smith',
+					position: 'Volunteer'
+				})
+			.col-xl-5.col-md-6
+				+quote-boxed({
+					text:     'I’d like to thank you for a chance to change the world and positively influence kids’ lives. The year I spent at Lintense as a volunteer is a memorable experience.',
+					img:      'persons/person-02-60x60',
+					name:     'Emma Wilson',
+					position: 'Volunteer'
+				})

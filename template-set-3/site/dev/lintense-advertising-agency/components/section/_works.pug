@@ -1,0 +1,41 @@
+include ../post/_post
+
+// Works
+section#works.section.section-md.novi-bg.novi-bg-image.bg-transparent
+	.container
+		h5 our Portfolio
+		h3 The work we do
+		.row.row-30.justify-content-end
+			.col-xs-6.col-xl-5
+				+post({
+					img: 'post-01-500x490',
+					title: 'iStep Co.',
+					text: 'SEO & SMM campaign'
+				})
+				+post({
+					img: 'post-02-500x560',
+					title: 'Hope Charity',
+					text: 'Creating a new logo and brand design'
+				})
+				+post({
+					img: 'post-03-500x680',
+					title: 'Dr. Adam Wilson',
+					text: 'Business cards design'
+				})
+			.col-xs-6.col-xl-5
+				+post({
+					img: 'post-04-500x680',
+					title: 'Fashion Ltd.',
+					text: 'Responsive website development'
+				})
+				+post({
+					img: 'post-05-500x560',
+					title: 'Dot Bank',
+					text: 'Reputation management'
+				})
+				+post({
+					img: 'post-06-500x490',
+					title: 'Creative Coworking',
+					text: 'Advertising campaign development'
+				})
+				.post-link-big: a( href='#' ) More Works

@@ -1,0 +1,37 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.counter-default {
+	padding: 53px 20px 53px 36px;
+	background-color: $primary-light-2;
+
+	.counter {
+
+	}
+}
+
+.counter-default-main {
+	font-size: 60px;
+	line-height: 1.1;
+	color: $primary;
+	font-family: $font-family-sec;
+	font-weight: 700;
+}
+
+.counter-default-title {
+	font-family: $font-family-sec;
+	color: $gray-700;
+}
+
+.context-dark {
+	.counter-default-title,
+	.counter-default-main {
+		color: $white;
+	}
+}

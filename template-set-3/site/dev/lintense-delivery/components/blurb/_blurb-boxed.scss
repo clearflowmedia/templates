@@ -1,0 +1,49 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.blurb-boxed {
+	min-height: 100%;
+	padding: px-to-rem( 30px, 20px );
+}
+
+.blurb-boxed-icon {
+	color: $gray-800;
+}
+
+
+// Spacing
+* + .blurb-boxed-title {
+	margin-top: px-to-rem( 20px );
+}
+
+* + .blurb-boxed-text {
+	margin-top: px-to-rem( 10px );
+}
+
+
+// Media
+@include media-breakpoint-up( md ) {
+	.blurb-boxed {
+		padding: px-to-rem( 30px );
+	}
+
+	* + .blurb-boxed-title {
+		margin-top: px-to-rem( 30px );
+	}
+
+	* + .blurb-boxed-text {
+		margin-top: px-to-rem( 20px );
+	}
+}
+
+@include media-breakpoint-up( xl ) {
+	.blurb-boxed {
+		padding: px-to-rem( 50px );
+	}
+}

@@ -1,0 +1,297 @@
+// Elements
+* + p {
+	margin-top: px-to-rem(15px);
+}
+
+* + h1,
+* + h2,
+* + h3,
+* + h4,
+* + h5,
+* + h6 {
+	margin-top: px-to-rem(20px);
+}
+
+h1 + h3 {
+	margin-top: px-to-rem(41px * $xs-multiplier);
+}
+
+h1 + h4 {
+	margin-top: px-to-rem(8px * $xs-multiplier);
+}
+
+h1 + h5 {
+	margin-top: px-to-rem(25px * $xs-multiplier);
+}
+
+h2 + h5 {
+	margin-top: px-to-rem( 45px * $xs-multiplier );
+}
+
+h5 + h5 {
+	margin-top: px-to-rem( 26px * $xs-multiplier );
+}
+
+h5 + h3 {
+	margin-top: 15px;
+}
+
+.quote-simple + h5 {
+	margin-top: px-to-rem( 42px * $xs-multiplier );
+}
+
+* + figure {
+	margin-top: px-to-rem(60px * $xs-multiplier);
+}
+
+* + figcaption {
+	margin-top: px-to-rem(9px);
+}
+
+* + form {
+	margin-top: px-to-rem(30px);
+}
+
+// Heading + p
+h1 + p {
+	margin-top: px-to-rem(27px * $xs-multiplier);
+}
+
+h2 + p {
+	margin-top: px-to-rem(24px * $xs-multiplier);
+}
+
+h3 + p {
+	margin-top: px-to-rem(32px * $xs-multiplier);
+}
+
+h4 + p {
+	margin-top: px-to-rem(21px * $xs-multiplier);
+}
+
+h5 + p {
+	margin-top: 0;
+}
+
+h6 + p {
+	margin-top: px-to-rem(6px);
+}
+
+// P + heading
+p + h2 {
+	margin-top: px-to-rem(28px);
+}
+
+p + h3 {
+	margin-top: px-to-rem(50px * $xs-multiplier);
+}
+
+p + h4 {
+	margin-top: px-to-rem(20px);
+}
+
+p + h5 {
+	margin-top: px-to-rem(20px);
+}
+
+p + h6 {
+	margin-top: px-to-rem(18px);
+}
+
+* + address {
+	margin-top: 16px;
+}
+
+// Media
+@include media-breakpoint-up(lg) {
+	// Elements spacing
+	* + p {
+		margin-top: px-to-rem(20px);
+	}
+
+	* + h1,
+	* + h2,
+	* + h4,
+	* + h5,
+	* + h6 {
+		margin-top: px-to-rem(28px);
+	}
+
+	h1 + h3 {
+		margin-top: px-to-rem(41px * $lg-multiplier);
+	}
+
+	h1 + h4 {
+		margin-top: px-to-rem(8px * $lg-multiplier);
+	}
+
+	h1 + h5 {
+		margin-top: px-to-rem(25px * $lg-multiplier);
+	}
+
+	h2 + h5 {
+		margin-top: px-to-rem( 45px * $lg-multiplier );
+	}
+
+	h5 + h5 {
+		margin-top: px-to-rem( 26px * $lg-multiplier );
+	}
+
+	// Heading + p
+	h1 + p {
+		margin-top: px-to-rem(27px * $lg-multiplier);
+	}
+
+	h2 + p {
+		margin-top: px-to-rem(24px * $lg-multiplier);
+	}
+
+	h3 + p {
+		margin-top: px-to-rem(32px * $lg-multiplier);
+	}
+
+	h4 + p {
+		margin-top: px-to-rem(21px * $lg-multiplier);
+	}
+
+	h6 + p {
+		margin-top: px-to-rem(10px);
+	}
+
+	// P + heading
+	p + h2 {
+		margin-top: px-to-rem(32px);
+	}
+
+	p + h3 {
+		margin-top: px-to-rem(50px * $lg-multiplier);
+	}
+
+	p + h4 {
+		margin-top: px-to-rem(26px);
+	}
+
+	p + h5 {
+		margin-top: px-to-rem(24px);
+	}
+
+	h3 + h5 {
+		margin-top: px-to-rem(28px * $lg-multiplier);
+	}
+
+	.quote-simple + h5 {
+		margin-top: px-to-rem( 42px * $lg-multiplier );
+	}
+
+	p + h6 {
+		margin-top: px-to-rem(24px);
+	}
+
+	* + figure {
+		margin-top: px-to-rem(60px * $lg-multiplier);
+	}
+}
+
+@include media-breakpoint-up(xxl) {
+	p + h2 {
+		margin-top: px-to-rem(48px);
+	}
+
+	h1 + h3 {
+		margin-top: px-to-rem(41px);
+	}
+
+	p + h3 {
+		margin-top: px-to-rem(50px);
+	}
+
+	h1 + h4 {
+		margin-top: px-to-rem(8px);
+	}
+
+	h1 + h5 {
+		margin-top: px-to-rem(25px);
+	}
+
+	h2 + h5 {
+		margin-top: px-to-rem(45px);
+	}
+
+	h5 + h5 {
+		margin-top: px-to-rem( 26px );
+	}
+
+	.quote-simple + h5 {
+		margin-top: px-to-rem( 42px );
+	}
+
+	h1 + p {
+		margin-top: px-to-rem(27px);
+	}
+
+	h2 + p {
+		margin-top: px-to-rem(24px);
+	}
+
+	h3 + p {
+		margin-top: px-to-rem(32px);
+	}
+	h4 + p {
+		margin-top: px-to-rem(21px);
+	}
+
+	* + figure {
+		margin-top: px-to-rem(60px);
+	}
+}
+
+// Spacers
+* + .offset-md {
+
+}
+
+
+// Group spacing
+html {
+	.group-1 {
+		margin-top: px-to-rem( 33px * $xs-multiplier );
+		@include group( px-to-rem( 24px ), px-to-rem( 10px ) );
+	}
+
+	.group-20 {
+		@include group(px-to-rem(20px));
+	}
+
+	.group-80x15 {
+		@include group( px-to-rem( 40px ), px-to-rem( 15px ) );
+	}
+
+	@include media-breakpoint-up( sm ) {
+		.group-1 {
+			padding-left: px-to-rem( 74px * $xs-multiplier );
+		}
+	}
+
+	@include media-breakpoint-up( lg ) {
+		.group-1 {
+			margin-top: px-to-rem( 33px * $lg-multiplier );
+			padding-left: px-to-rem( 74px * $lg-multiplier );
+		}
+	}
+
+	@include media-breakpoint-up( xl ) {
+		.group-1 {
+			padding-left: px-to-rem( 74px );
+		}
+	}
+
+	@include media-breakpoint-up( xxl ) {
+		.group-1 {
+			margin-top: px-to-rem( 33px );
+		}
+
+		.group-80x15 {
+			@include groupX( px-to-rem( 80px ) );
+		}
+	}
+}

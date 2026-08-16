@@ -1,0 +1,131 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../bootstrap/scss/buttons";
+@import "../bootstrap/scss/button-group";
+@import "../base/mixins";
+
+
+
+// Base
+.btn {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border: $btn-border-width solid transparent;
+	font-family: $btn-font-family;
+	font-weight: $btn-font-weight;
+	box-shadow: $btn-box-shadow;
+	background: $dark;
+	color: $white;
+	transition: $transition-base;
+	line-height: $btn-line-height;
+	text-transform: uppercase;
+
+	@include button-size(
+		$btn-padding-y,
+		$btn-padding-x,
+		$btn-font-size,
+		$btn-border-radius
+	);
+
+	&:hover,
+	&.hover,
+	&:active,
+	&.active {
+		text-decoration: none;
+		border-color: transparent;
+		background: $gray-200;
+		color: $dark;
+	}
+
+	&:focus,
+	&.focus {
+		outline: 0;
+		box-shadow: none !important;
+	}
+
+	&.disabled,
+	&:disabled {
+		opacity: $btn-disabled-opacity;
+		pointer-events: none;
+	}
+}
+
+
+// Icon
+.btn-icon {
+	font-size: 1.2em;
+	margin: 0 .47058em;
+	padding-bottom: .2em;
+
+	&:first-child {
+		margin-left: 0;
+	}
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+
+// Modifying
+.btn-gray {
+	color: $dark;
+	background-color: $gray-100;
+	border-color: $gray-100;
+
+	&:hover,
+	&.hover,
+	&:active,
+	&.active {
+		color: $white;
+		background-color: $dark;
+		border-color: $dark;
+	}
+}
+
+.btn-white {
+	color: $dark;
+	background-color: $white;
+	border-color: $white;
+
+	&:hover,
+	&.hover,
+	&:active,
+	&.active {
+		color: $white;
+		background-color: transparent;
+		border-color: $white;
+	}
+}
+
+
+.btn-group-1 {
+	@include group( px-to-rem( 20px ) );
+}
+
+// Offsets
+.row + .btn {
+	margin-top: px-to-rem( 70px * $xs-multiplier );
+}
+
+// Media
+@include media-breakpoint-up(lg) {
+	.row + .btn {
+		margin-top: px-to-rem( 70px * $lg-multiplier );
+	}
+}
+
+@include media-breakpoint-up(xxl) {
+	.row + .btn {
+		margin-top: px-to-rem( 70px );
+	}
+
+	.btn {
+		min-width: 260px;
+	}
+}

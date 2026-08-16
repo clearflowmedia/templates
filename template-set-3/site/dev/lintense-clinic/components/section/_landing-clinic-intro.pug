@@ -1,0 +1,36 @@
+include  ../video/_video
+
+// Intro
+section.section.section-lg.position-relative.pb-1
+	.bg-layer.bg-secondary-light.overlay-white.overlay-07.overlay-lg-none.bg-image( style='bottom: 18%; background-image: url(images/image-01-1920x628.png);' )
+	.container
+		.row.row-30.justify-content-end.justify-content-sm-start.justify-content-md-between
+			.col-sm-6.col-md-5( data-animate!={ class: 'fadeInUp' } )
+				h1 Quality Medical Treatment
+				h3.text-secondary.font-weight-normal For You And Your Family
+				.offset-lg
+					.media.media-sm.align-items-center
+						.media-left
+							+video-btn.video-btn-sm.video-btn-primary
+						.media-body.font-weight-bold.text-700 Watch our video
+
+			.col-xs-8.col-sm-6.col-lg-5( data-animate!={ class: 'fadeInUp' } )
+				article.box
+					.box-header.bg-700.context-dark
+						.box-title.h2 Make an appointment
+					.box-body
+						.box-text Enter your contacts below to schedule an appointment or discuss it with us in details.
+						//RD Mailform
+						form.rd-mailform.box-form( data-form-output='form-output-global', data-form-type='contact', method='post', action='components/rd-mailform/rd-mailform.php' )
+							.form-group
+								input.form-control( type='text', name='name', placeholder='Name *', data-constraints='@Required' )
+							.form-group
+								input.form-control( type='email', name='email', placeholder='Email address *', data-constraints='@Email @Required' )
+							.form-group
+								input.form-control( type='text', name='phone', placeholder='Phone *', data-constraints='@Required @PhoneNumber' )
+							.box-btn
+								button.btn.btn-secondary.btn-nuka( type='submit' ) Book now
+									span.btn-overlay
+						.box-text Hurry up, we have a limited amount of slots this month.
+
+			#form-output-global.form-output.snackbar.snackbar-secondary

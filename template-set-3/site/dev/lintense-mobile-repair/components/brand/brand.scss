@@ -1,0 +1,26 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+// Brand
+.brand {
+	max-width: 280px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	&:hover {
+		box-shadow: 0 0 15px $white;
+	}
+	img {
+		width: 100%;
+	}
+}
+@include media-breakpoint-down(sm) {
+	.brand {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

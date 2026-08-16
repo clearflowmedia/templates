@@ -1,0 +1,49 @@
+include ../quote/_quote
+
+// Testimonials
+section.section.section-lg.bg-transparent#testimonials
+	.container
+		h2.text-primary.text-center( data-animate!={ class: 'fadeInUp' } ) What Our Patients Say
+		.row.justify-content-center
+			.col-xl-10
+				// Owl Carousel
+				.owl-carousel.owl-style-3(
+					data-owl={
+						margin: 40,
+						nav: true,
+						dots: true,
+						responsive: {
+							768: {
+								items: 2
+							},
+							1600: {
+								items: 2,
+								margin: 50
+							}
+						}
+					}
+				)
+					+quote-boxed({
+						text:     'Dr. Thompson is the best cardiac surgeon! He is very experienced, as well as friendly, supportive, and always ready to help.',
+						img:      'persons/person-02-60x60',
+						name:     'Ann Williams',
+						position: 'Patient'
+					})
+					+quote-boxed({
+						text:     'Thanks to Dr. Thompson, I can now enjoy my life to the fullest. Thank you for your help and the care you have provided.',
+						img:      'persons/person-03-60x60',
+						name:     'Adam Smith',
+						position: 'Patient'
+					})
+					+quote-boxed({
+						text:     'I found Dr. Thompson to be a truly engaging and pleasant person. His patient rapport is excellent and he explains everything.',
+						img:      'persons/person-04-60x60',
+						name:     'Michelle King',
+						position: 'Patient'
+					})
+					+quote-boxed({
+						text:     'I have been an existing patient of Dr. Thompson for the last nine years and have always had a positive experience.',
+						img:      'persons/person-05-60x60',
+						name:     'Justin Collins',
+						position: 'Patient'
+					})

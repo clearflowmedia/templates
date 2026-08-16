@@ -1,0 +1,2 @@
+.quote {	display: flex;}.quote-icon {	width: 60px;	flex-shrink: 0;}.quote-body {	margin-left: 30px;}@media (min-width: 1600px) {	.quote-body {		margin-left: 50px;	}}.quote-body q::before, .quote-body q::after {	display: none;}.quote-author {	font-size: 16px;	font-weight: 700;	text-transform: uppercase;	margin-top: 15px;}
+/*# sourceMappingURL=quote.css.map */

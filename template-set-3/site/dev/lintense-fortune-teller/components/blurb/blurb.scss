@@ -1,0 +1,40 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins/breakpoints";
+
+// Blurb
+.blurb {
+	text-align: center;
+}
+
+.blurb-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	height: 200px;
+	border: 1px solid $primary;
+	border-radius: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.blurb-body {
+	margin-top: 30px;
+}
+
+.blurb-title {
+	font-size: 24px;
+	line-height: 1;
+	font-family: $font-family-sec;
+
+	@include media-breakpoint-up(xl) {
+		font-size: 30px;
+	}
+}
+
+.blurb-text {
+	margin-top: 4px;
+}

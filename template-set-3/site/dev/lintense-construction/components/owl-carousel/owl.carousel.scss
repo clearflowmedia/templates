@@ -1,0 +1,150 @@
+@import "../bootstrap/scss/_functions";
+@import "../base/_functions";
+@import "../base/_variables";
+@import "../bootstrap/scss/_variables";
+@import "../bootstrap/scss/_mixins";
+@import "../base/_mixins";
+
+
+// Variables
+$owl-base: $gray-900;
+$owl-primary: $primary;
+$owl-secondary: $secondary;
+
+@import "defaults";
+
+
+// Base
+.owl-carousel {
+	// Dots
+	.owl-dots {
+		text-align: center;
+		margin-top: px-to-rem( 40px );
+		font-size: 0;
+		line-height: 0;
+	}
+
+	.owl-dot {
+		position: relative;
+		display: inline-block;
+		text-align: center;
+		width: 24px;
+		height: 12px;
+		margin: 0 4px;
+		zoom: 1;
+
+		span {
+			display: inline-block;
+			width: 12px;
+			height: inherit;
+			border-radius: 8px;
+			background: #F2F1F6;
+			transition: all .3s ease;
+		}
+
+		&:hover {
+			span {
+				background: $owl-primary;
+			}
+		}
+
+		&.active {
+			span {
+				width: inherit;
+				background: $owl-primary;
+			}
+		}
+	}
+}
+
+
+// Spacing
+* + .owl-carousel {
+	margin-top: px-to-rem( 40px );
+}
+
+
+// Contexts
+.context-dark {
+	.owl-carousel {
+		.owl-dot {
+			span {
+				background: rgba( $white, .3 );
+			}
+
+			&:hover {
+				span {
+					background: $white;
+				}
+			}
+
+			&.active {
+				span {
+					width: inherit;
+					background: $white;
+				}
+			}
+		}
+	}
+}
+
+
+// Media
+@include media-breakpoint-up(lg) {
+	* + .owl-carousel {
+		margin-top: px-to-rem( 50px );
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.owl-carousel {
+		.owl-dots {
+			margin-top: px-to-rem( 60px );
+		}
+	}
+}
+
+@include media-breakpoint-up(xxl) {
+	* + .owl-carousel {
+		margin-top: px-to-rem( 70px );
+	}
+}
+
+
+// Owl nav container custom
+.owl-nav-container {
+	@include group( 10px );
+
+	.owl-prev,
+	.owl-next {
+		display: inline-block;
+		padding: px-to-rem( 2px, 16px );
+		font-family: 'icomoon';
+		line-height: 1;
+		color: $dark;
+		border: 1px solid $border-color;
+		border-radius: 30px;
+		transition: $transition-base;
+
+		&:hover {
+			background-color: $gray-100;
+			border-color: $gray-100;
+		}
+	}
+
+	.owl-prev {
+		&::before {
+			content: '\e900';
+		}
+	}
+
+	.owl-next {
+		&::before {
+			content: '\e901';
+		}
+	}
+}
+
+@include media-breakpoint-up(xxl) {
+
+}

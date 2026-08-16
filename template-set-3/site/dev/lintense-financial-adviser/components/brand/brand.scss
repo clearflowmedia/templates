@@ -1,0 +1,30 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+// Brand
+.brands {
+	display: flex;
+	flex-wrap: wrap;
+	@include group(10px);
+
+	@include media-breakpoint-up(sm) {
+		@include group(20px);
+	}
+
+	@include media-breakpoint-up(md) {
+		justify-content: flex-end;
+	}
+}
+
+.brand {
+	display: inline-block;
+	transition: $transition-base;
+
+	&:hover {
+		transform: translateY(-5px);
+	}
+}

@@ -1,0 +1,60 @@
+include ../lin-icon/_lin-icon
+
+// Book Your Tour
+section#packages.section.section-lg.bg-image-2
+	.container
+		.row.row-40.justify-content-xl-between
+			.col-sm-6.col-lg-5.col-xl-4( data-animate!={ class: 'fadeInUp' } )
+				h6.text-primary Affordable tour price
+				h2 $199
+				div( style='line-height: 1' ) per person
+				p.small 3-night stay at Fiji Island (air fair is not included).
+				.offset-lg
+					h6 Offer Includes
+					ul.list.list-xxl
+						li.list-item.media.media-sm.align-items-center
+							.media-left
+								+lin-bed.lin-md
+							.media-body
+								p First-class accommodation
+						li.list-item.media.media-sm.align-items-center
+							.media-left
+								+lin-sunbed.lin-md
+							.media-body
+								p A variety of beach activities
+						li.list-item.media.media-sm.align-items-center
+							.media-left
+								+lin-tray.lin-md
+							.media-body
+								p All-inclusive restaurant service
+				.offset-lg
+					h6.text-primary for more info call
+					.mt-2
+						a.link.h4( href='tel:#' ) 1.800.234.5678
+			.col-sm-6.col-lg-7( data-animate!={ class: 'fadeInUp' } )
+				h6 Start Your Journey Today!
+				h3.text-primary.mt-2 Book Your Tour to Fiji Right Now
+				.offset-xxl
+					form.rd-mailform( data-form-output='form-output-global', data-form-type='contact', method='post', action='components/rd-mailform/rd-mailform.php' )
+						.row.row-20.gutters-20
+							.col-xs-6.col-sm-12.col-lg-6
+								.form-group
+									input.form-control( type='text', name='name', placeholder='Your name *', data-constraints='@Required' )
+							.col-xs-6.col-sm-12.col-lg-6
+								.form-group
+									input.form-control( type='email', name='email', placeholder='Your e-mail address *', data-constraints='@Email @Required' )
+							.col-xs-6.col-sm-12.col-lg-6
+								.form-group
+									input.form-control( type='text', name='phone', placeholder='Phone *', data-constraints='@Required @PhoneNumber' )
+							.col-xs-6.col-sm-12.col-lg-6
+								.form-group
+									input.form-control( type='text', name='people', placeholder='No. of people', data-constraints=' @Required' )
+						.offset-lg
+							button.btn.btn-block.btn-lg.btn-primary.btn-nuka( type='submit' ) Subscribe
+								span.btn-overlay
+					p.small.mt-4
+						| By clicking the button you agree to the
+						| #[a.link.link-primary( href='#' ) Privacy Policy] and
+						| #[a.link.link-primary( href='#' ) Terms and Conditions]
+
+		#form-output-global.form-output.snackbar.snackbar-secondary

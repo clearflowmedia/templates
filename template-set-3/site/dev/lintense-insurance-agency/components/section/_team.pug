@@ -1,0 +1,54 @@
+include ../person/_person
+
+// Team
+section#team.section.section-lg.bg-transparent
+	.container
+		h2.text-center Our expert team members
+		// Owl Carousel
+		.owl-carousel.owl-style-1(
+			data-owl={
+				nav: true,
+				items: 1,
+				margin: 30,
+				navContainer: '.owl-style-1-nav-container',
+				navText: [
+					'<svg width="11" height="18" fill="none" viewBox="0 0 11 18" xmlns="http://www.w3.org/2000/svg">\n' +
+						'<path d="M10 1L2 9L10 17" stroke-width="2"/>\n' +
+					'</svg>\n',
+					'<svg width="11" height="18" fill="none" viewBox="0 0 11 18" xmlns="http://www.w3.org/2000/svg">\n' +
+						'<path d="M1 1L9 9L1 17" stroke-width="2"/>\n' +
+					'</svg>\n'
+				]
+			}
+		)
+			+persone({
+				name: 'Robert Fox',
+				position: 'President',
+				text: 'Robert became the President of Lintense in 2009. he has been with the agency for over 15 years and has proven himself to be a capable leader.',
+				email: 'rfox@demolink.org',
+				img: 'persons/person-01-390x490'
+			})
+			+persone({
+				name: 'Emma Smith',
+				position: 'CFO and Vice-President of Operations',
+				text: 'Emma is an accounting genius who manages the analysis side of financial performance for the Lintense Insurance Agency.',
+				email: 'esmith@demolink.org',
+				img: 'persons/person-02-390x490'
+			})
+			+persone({
+				name: 'Kate Adams',
+				position: 'Personal Insurance Agent',
+				text: 'Kate provides our clients with information about the uniqueness of living along the local area and the associated insurance risks.',
+				email: 'kadams@demolink.org',
+				img: 'persons/person-03-390x490'
+			})
+			+persone({
+				name: 'John Peters',
+				position: 'Business Insurance Agent',
+				text: 'John has been with us for four years. He is now successfully leading the team in the commercial insurance department.',
+				email: 'jpeters@demolink.org',
+				img: 'persons/person-04-390x490'
+			})
+		.row
+			.col-md-2.offset-md-8
+				.owl-style-1-nav-container

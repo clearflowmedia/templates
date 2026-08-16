@@ -1,0 +1,25 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+// Post
+.post-meta {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.post-media {
+	& + * {
+		margin-top: px-to-rem(15px);
+	}
+}
+
+.post-meta {
+	& + * {
+		margin-top: px-to-rem(20px);
+	}
+}

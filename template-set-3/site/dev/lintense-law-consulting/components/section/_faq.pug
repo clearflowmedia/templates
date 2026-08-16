@@ -1,0 +1,34 @@
+include ../card/_card
+// Faqs
+section#faqs.section.section-xl.bg-default
+	.container
+		.row.row-40
+			.col-md-6.col-xl-5
+				h6 FAQS
+				h3 We are always happy to answer your questions
+			.col-md-6.offset-xl-1
+				#accordion1.accordion.card-group-custom( role='tablist' aria-multiselectable='false' )
+					+card({
+                        show: true,
+                        parentId: 'accordion1',
+                        title: 'What types of cases does your law firm handle?'
+                    }).card-default
+						p We handle claims at all levels of litigation. Our areas of practice include Business Law, Employment and Labor Law, and others.
+					+card({
+                        parentId: 'accordion1',
+                        title: 'Is Lintense Law Firm the right law firm for me?'
+                    }).card-default
+						p Lintense is a law firm with three dedicated trial attorneys with over 40 years of combined experience. Being that we are a boutique firm, we are able to dedicate the appropriate resources and time to manage your case.
+					+card({
+                        parentId: 'accordion1',
+                        title: 'How long have you been in business?'
+                    }).card-default
+						p Our firm was founded by Jenny Wilson in 2005 and since it’s inception it has maintained an unwavering commitment to trying cases and/or brokering favorable settlement agreements for our clients whenever possible.
+					+card({
+                        parentId: 'accordion1',
+                        title: 'Do I need to come into your office?'
+                    }).card-default
+						p It is preferable for you to come to our office so that you can become acquainted with the staff who will be working diligently on your case. However, when it is not possible for you to come to our office, we can schedule a date and time to meet with you at a location that is more convenient for you. In addition, we can facilitate business electronically to save you time and money.
+
+
+

@@ -1,0 +1,29 @@
+// Base
+.quote-simple {
+	padding-left: px-to-rem( 28px * $xs-multiplier );
+	border-left: 8px solid $secondary;
+
+	.quote-text {
+		color: $primary;
+	}
+}
+
+* + .quote-simple { margin-top: px-to-rem( 43px * $xs-multiplier ) }
+
+
+@include media-breakpoint-up( lg ) {
+	.quote-simple {
+		padding-left: px-to-rem( 28px * $lg-multiplier );
+	}
+
+	* + .quote-simple { margin-top: px-to-rem( 43px * $lg-multiplier ) }
+}
+
+
+@include media-breakpoint-up( xxl ) {
+	.quote-simple {
+		padding-left: px-to-rem( 28px );
+	}
+
+	* + .quote-simple { margin-top: px-to-rem( 43px ) }
+}

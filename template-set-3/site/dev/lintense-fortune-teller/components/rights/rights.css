@@ -1,0 +1,2 @@
+p.rights {	font-size: 16px;}* + p.rights {	margin-top: 40px;}@media (min-width: 768px) {	* + p.rights {		margin-top: 60px;	}}@media (min-width: 1200px) {	* + p.rights {		margin-top: 85px;	}}
+/*# sourceMappingURL=rights.css.map */

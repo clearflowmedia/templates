@@ -1,0 +1,2 @@
+.blurb-head {	display: flex;	align-items: baseline;	margin-bottom: -15px;	margin-left: -15px;	color: #1DC5A3;}.blurb-head:empty {	margin-bottom: 0;	margin-left: 0;}.blurb-head > * {	margin-top: 0;	margin-bottom: 15px;	margin-left: 15px;}.blurb-head > .blurb-title {	color: inherit;}* + .blurb {	margin-top: 1.875rem;}* + .blurb-text {	margin-top: 0.625rem;}.context-dark .blurb-head {	color: inherit;}
+/*# sourceMappingURL=blurb.css.map */

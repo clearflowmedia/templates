@@ -1,0 +1,41 @@
+include ../service/_service
+
+// Areas Of Expertise Section
+section#areas-of-expertise.section.section-lg.bg-100
+	.container
+		h2.text-primary( data-animate!={ class: 'fadeInUp' } ) Areas of Expertise
+		.row.row-30.row-lg-50
+			.col-xs-6.col-lg-4.align-self-center( data-animate!={ class: 'fadeInUp' } )
+				+img( 'image-02-390x240' ).rounded
+			.col-xs-6.col-lg-4( data-animate!={ class: 'fadeInUp' } )
+				+service({
+					title: 'Diabetic heart disease',
+					text:  'People with diabetes are more likely to have certain conditions that increase the chances of having heart disease or high blood pressure.'
+				})
+			.col-xs-6.col-lg-4( data-animate!={ class: 'fadeInUp' } )
+				+service({
+					title: 'Atherosclerosis',
+					text:  'Atherosclerosis is a condition where the arteries become narrowed and hardened due to a buildup of plaque around the artery wall.'
+				})
+			.col-xs-6.col-lg-4( data-animate!={ class: 'fadeInUp' } )
+				+service({
+					title: 'Prediabetes',
+					text:  'This condition arises when your blood glucose level is higher than normal but not high enough for diabetes.'
+				})
+			.col-xs-6.col-lg-4( data-animate!={ class: 'fadeInUp' } )
+				+service({
+					title: 'Dietary and exercise counseling',
+					text:  'Changing unhealthy eating habits and maintaining good ones greatly reduces the risk for heart disease.'
+				}).service-boxed
+			.col-xs-6.col-lg-4.align-self-center( data-animate!={ class: 'fadeInUp' } )
+				+img( 'image-03-390x240' ).rounded
+			.col-xs-6.col-lg-4( data-animate!={ class: 'fadeInUp' } )
+				+service({
+					title: 'Coronary artery disease',
+					text:  'Coronary artery disease is the narrowing or blockage of the coronary arteries, usually caused by atherosclerosis.'
+				}).service-boxed
+			.col-xs-6.col-lg-4( data-animate!={ class: 'fadeInUp' } )
+				+service({
+					title: 'Heart failure',
+					text:  'Heart failure is characterized by the heart’s inability to pump an adequate supply of blood to the body. '
+				})

@@ -1,0 +1,2 @@
+.google-map-markers {	display: none;}.google-map-container button img {	margin: 0;}.google-map {	height: 400px;	width: 100%;}.google-map img {	vertical-align: top;}@media (min-width: 768px) {	.google-map {		height: 480px;	}}@media (min-width: 1200px) {	.google-map {		height: 550px;	}}
+/*# sourceMappingURL=google-map.css.map */

@@ -1,0 +1,116 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// pricing
+.pricing {
+	display: flex;
+	flex-wrap: wrap;
+	background: $white;
+	box-shadow: $box-shadow;
+}
+
+.pricing-list {
+	display: flex;
+	padding: 5% 0;
+	flex-grow: 1;
+}
+
+.pricing-list-item {
+	padding: 0 5%;
+	flex-grow: 1;
+
+	+ .pricing-list-item {
+		position: relative;
+
+		&::before {
+			position: absolute;
+			content: '';
+			top: 50%;
+			left: 0;
+			width: 0;
+			height: 85%;
+			border-left: 1px solid $gray-200;
+			transform: translateY(-50%);
+		}
+	}
+}
+
+.pricing-aside {
+	width: 100%;
+	padding: 5%;
+	background: $primary;
+}
+
+.pricing-title {
+	color: $secondary;
+
+	> * {
+		color: inherit;
+	}
+}
+
+
+// Spacing
+* + .pricing-subtitle,
+* + .pricing-price {
+	margin-top: px-to-rem( 4px )
+}
+
+* + .pricing-text {
+	margin-top: px-to-rem( 10px )
+}
+
+
+// Media
+@include media-breakpoint-down(md) {
+	.pricing-list {
+		width: 100%;
+		overflow-x: auto;
+		white-space: nowrap;
+	}
+
+	.pricing-aside {
+		text-align: center;
+		padding: 15px;
+
+		> * {
+			display: inline-block;
+			margin-top: 0;
+
+			+ * {
+				margin-left: px-to-rem( 30px );
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.pricing {
+		flex-wrap: nowrap;
+	}
+
+	.pricing-list-item {
+		flex: 0 0 33.33333%;
+		max-width: 33.33333%;
+	}
+
+	.pricing-aside {
+		flex-basis: 25%;
+		max-width: 25%;
+	}
+
+	* + .pricing-text {
+		margin-top: px-to-rem( 20px );
+	}
+}
+
+@include media-breakpoint-up(xxl) {
+	* + .pricing-text {
+		margin-top: px-to-rem( 34px );
+	}
+}

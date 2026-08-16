@@ -1,0 +1,185 @@
+// Mixins
+@mixin bg-variant($parent, $color) {
+	#{$parent} {
+		background-color: $color;
+	}
+	a#{$parent},
+	button#{$parent} {
+		@include hover-focus {
+			background-color: darken($color, 10%);
+		}
+	}
+}
+
+@mixin bg-gradient-variant($parent, $color) {
+	#{$parent} {
+		background: $color linear-gradient(180deg, mix($body-bg, $color, 15%), $color) repeat-x;
+	}
+}
+
+@mixin bg-adjacent() {
+	&:not([style*='background-']) + &:not([style*='background-']) {
+		padding-top: 0;
+	}
+}
+
+// Bootstrap styles
+@each $color, $value in $theme-colors {
+	@include bg-variant(".bg-#{$color}", $value);
+}
+
+@if $enable-gradients {
+	@each $color, $value in $theme-colors {
+		@include bg-gradient-variant(".bg-gradient-#{$color}", $value);
+	}
+}
+
+.bg-white {
+	@include bg-adjacent();
+	background-color: $white;
+}
+
+.bg-primary-light {
+	@include bg-adjacent();
+	background-color: $primary-light;
+}
+
+.bg-transparent {
+	@include bg-adjacent();
+	background-color: transparent;
+}
+
+// Gray backgrounds
+@each $color, $value in $grays {
+	@include bg-variant(".bg-#{$color}", $value);
+}
+
+// Image background
+.bg-image {
+	background-position: center center;
+	background-size: cover;
+}
+
+// Background overlay
+.bg-overlay {
+	position: relative;
+	z-index: 0;
+
+	.bg-overlay-item {
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 50%;
+		z-index: -1;
+		border-bottom: 4px solid $primary;
+	}
+}
+
+// Background mask
+.bg-mask {
+	position: relative;
+
+	&::before {
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba( $white, .8 );
+		content: '';
+		pointer-events: none;
+	}
+}
+
+.bg-mask-1 {
+	&::before {
+		background: rgba( $white, .5 );
+	}
+}
+
+@include media-breakpoint-up( md ) {
+	.bg-mask-1 {
+		&::before {
+			display: none;
+		}
+	}
+
+	// Partial backgrounds
+	.bg-left {
+		position: relative;
+
+		.bg-item {
+			position: absolute;
+			top: 0;
+			bottom: -1px;
+			right: calc( 50% + 190px );
+			width: calc( 50% - 180px);
+			content: '';
+		}
+	}
+
+	.bg-left-1 {
+		position: relative;
+
+		.bg-item {
+			position: absolute;
+			bottom: -1px;
+			right: calc( 50% + 190px );
+			width: calc( 50% - 180px);
+			height: 36%;
+			content: '';
+		}
+	}
+
+	.bg-right {
+		position: relative;
+		z-index: 0;
+
+		.bg-item-1,
+		.bg-item-2 {
+			position: absolute;
+			top: 0;
+			z-index: -1;
+			left: calc( 50% + 190px );
+			width: calc( 50% - 180px);
+			content: '';
+		}
+
+		.bg-item-1 {
+			bottom: 0;
+		}
+
+		.bg-item-2 {
+			height: 28%;
+		}
+	}
+}
+
+@include media-breakpoint-up( lg ) {
+	.bg-mask {
+		&::before {
+			display: none;
+		}
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.bg-left,
+	.bg-left-1 {
+		.bg-item {
+			right: calc( 50% + 390px );
+			width: calc( 50% - 380px);
+		}
+	}
+
+	.bg-right {
+		position: relative;
+
+		.bg-item-1,
+		.bg-item-2 {
+			left: calc(50% + 390px);
+			width: calc(50% - 380px);
+		}
+	}
+}

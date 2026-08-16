@@ -1,0 +1,28 @@
+include ../counter/_counter
+
+// How We Work
+section#how-we-work.section.section-md.bg-transparent
+	.container
+		.row.row-30.justify-content-between
+			.col-xl-5.col-md-6
+				h3 HR solutions that grow with your business
+				h5 At Lintense, we are ready to offer you what your business needs to find the suitable employees.
+			.col-md-6
+				p.big.pr-xl-5 We provide recruitment solutions that are scalable to your business. Our team uses a customizable approach to each business, project, and startup we work with. You can easily rely on us to deliver the recruitment results you need.
+				.row.row-40
+					.col-xs-6
+						+counter-default({
+							value: '1500',
+							title: 'Filled Vacancies'
+						})
+					.col-xs-6
+						+counter-default({
+							value: '98',
+							postfix: 'k',
+							title: 'RESUMES IN OUR DATABASE'
+						})
+					.col-xs-6
+						+counter-default({
+							value: '975',
+							title: 'TRAINED SPECIALISTS'
+						})

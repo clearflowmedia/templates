@@ -1,0 +1,20 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+
+block variables
+	- pageName = 'Home';
+
+block page
+	section.section.novi-relative
+		+rd-navbar
+		include ../components/section/_intro
+	include ../components/section/_about-us
+	include ../components/section/_blurbs
+	include ../components/section/_latest-works
+	include ../components/section/_clients
+	include ../components/section/_contacts
+	include ../components/section/_blog
+	include ../components/footer/_footer-default
+
+block modal
+	include ../components/section/_modal-project

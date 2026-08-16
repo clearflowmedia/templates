@@ -1,0 +1,110 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.pricing {
+	text-align: center;
+	border: $border-width solid $border-color;
+	background-color: $white;
+	box-shadow: $box-shadow;
+	transition: $transition-base;
+}
+
+.pricing-head {
+	padding: px-to-rem( 30px );
+}
+
+.pricing-category {
+	padding: px-to-rem( 14px, 15px );
+	font-size: 14px;
+	color: $gray-900;
+	background-color: rgba( $gray-900, .03 )
+}
+
+.pricing-body {
+	padding: px-to-rem( 30px );
+}
+
+.pricing-price {
+	line-height: 1;
+	color: $primary;
+}
+
+.pricing-period {
+	font-size: 14px;
+	line-height: 1;
+	color: $primary;
+}
+
+.pricing-list {
+	text-align: left;
+	font-size: px-to-rem( 16px );
+}
+
+.pricing-color {
+	color: $gray-500;
+}
+
+
+// Spacing
+* + .pricing-details {
+	margin-top: px-to-rem( 20px );
+}
+
+* + .pricing-price {
+	margin-top: px-to-rem( 6px );
+}
+
+* + .pricing-discount {
+	margin-top: px-to-rem( 8px );
+}
+
+
+// Contexts
+.desktop {
+	.pricing:hover {
+		transform: translateY( -30px );
+		box-shadow: 11px 34px 14px rgba($gray-900, 0.05);
+	}
+}
+
+.context-dark {
+	.pricing {
+		border-color: transparent;
+	}
+
+	.pricing-price {
+		color: $primary
+	}
+
+	.pricing-category {
+		color: inherit;
+		background-color: rgba( $gray-900, .9 );
+	}
+
+	.pricing-color {
+		color: inherit;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	* + .pricing-details {
+		margin-top: px-to-rem( 30px );
+	}
+}
+
+@include media-breakpoint-up(xxl) {
+	.pricing-head {
+		padding-top: px-to-rem( 50px );
+		padding-bottom: px-to-rem( 50px );
+	}
+
+	.pricing-body {
+		padding-bottom: px-to-rem( 50px );
+	}
+}

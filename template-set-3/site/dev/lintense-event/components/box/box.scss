@@ -1,0 +1,215 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.box {
+  border-radius: 0;
+  color: $body-color;
+  background-color: transparent;
+  box-shadow: $box-shadow;
+}
+
+.box-header {
+  padding: px-to-rem(30px);
+  //border-top-left-radius: $border-radius;
+  //border-top-right-radius: $border-radius;
+}
+
+.box-body {
+  padding: px-to-rem(30px);
+}
+
+.box-text {
+  font-size: $font-size-sm;
+}
+
+// Spacing
+* + .box-title {
+  margin-top: px-to-rem(6px)
+}
+
+* + .box-text {
+  margin-top: px-to-rem(14px)
+}
+
+* + .box-form {
+  margin-top: px-to-rem(60px);
+}
+
+* + .box-btn {
+  margin-top: px-to-rem(20px)
+}
+
+h1 + .box-btn, .h1 + .box-btn {
+  margin-top: px-to-rem(50px);
+}
+
+
+// Media
+@include media-breakpoint-up(md) {
+  .box-header {
+    padding: px-to-rem(30px, 40px);
+  }
+
+  .box-body {
+    padding: px-to-rem(40px);
+  }
+
+  * + .box-btn {
+    margin-top: px-to-rem(50px)
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .box-header {
+    padding: px-to-rem(40px, 50px, 30px);
+  }
+
+  .box-body {
+    padding: px-to-rem(40px, 50px, 50px);
+  }
+}
+
+
+// Benefit
+.box-benefit {
+  max-width: 265px;
+  margin: 0 auto;
+}
+
+.box-benefit-title {
+  margin-top: px-to-rem(15px);
+  @include media-breakpoint-up(md) {
+    margin-top: px-to-rem(40px);
+  }
+}
+
+.box-benefit-text {
+  margin-top: px-to-rem(10px);
+  @include media-breakpoint-up(md) {
+    margin-top: px-to-rem(16px);
+  }
+}
+
+// Expert
+.box-expert-name {
+  display: inline-block;
+  margin-top: px-to-rem(20px);
+  @include media-breakpoint-up(md) {
+    margin-top: px-to-rem(40px);
+  }
+}
+
+.box-expert-specialization {
+  margin-top: px-to-rem(6px);
+}
+
+// Schedule
+.box-schedule {
+  max-width: 850px;
+}
+
+.box-schedule + .box-schedule {
+  margin-top: px-to-rem(50px);
+  @include media-breakpoint-up(xl) {
+    margin-top: px-to-rem(70px);
+  }
+}
+
+.box-schedule-desc {
+  display: flex;
+  margin-top: px-to-rem(23px);
+}
+
+.box-schedule-main-author {
+  margin-top: px-to-rem(16px);
+  @include media-breakpoint-up(md) {
+    margin-top: px-to-rem(20px);
+  }
+}
+
+.box-schedule-title + * {
+  margin-top: px-to-rem(35px);
+}
+
+.box-schedule-desc:first-child {
+  margin-top: 0;
+}
+
+.box-schedule-desc-title {
+  flex: 0 0 70px;
+  min-width: 70px;
+  line-height: px-to-rem(25px);
+  @include media-breakpoint-up(md) {
+    flex: 0 0 105px;
+    min-width: 105px;
+  }
+}
+
+.box-schedule-main {
+  margin-top: px-to-rem(30px);
+  @include media-breakpoint-up(xl) {
+    margin-top: px-to-rem(70px);
+  }
+}
+
+.box-schedule-main-item + .box-schedule-main-item {
+  margin-top: 40px;
+}
+
+.box-schedule-main-content {
+  margin-left: px-to-rem(70px);
+  @include media-breakpoint-up(md) {
+    margin-left: px-to-rem(105px);
+  }
+}
+
+.box-schedule-main-title {
+  text-transform: none;
+
+  & + * {
+    margin-top: 26px;
+  }
+}
+
+.box-schedule-main-author + * {
+  margin-top: px-to-rem(6px);
+}
+
+.box-schedule-main-quote {
+  font-weight: 400;
+}
+
+// Price
+.box-price {
+  margin-top: px-to-rem(20px);
+
+  span:first-child {
+    font-weight: 400;
+  }
+
+  span:last-child {
+    font-size: 26px;
+
+    @include media-breakpoint-up(md) {
+      font-size: 28px;
+      line-height: $h2-line-height;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: 30px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      font-size: 48px;
+    }
+    margin-left: px-to-rem(11px);
+    font-weight: 700;
+    color: $primary;
+  }
+}

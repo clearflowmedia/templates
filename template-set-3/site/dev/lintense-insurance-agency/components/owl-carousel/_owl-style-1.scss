@@ -1,0 +1,54 @@
+@import "../base/mixins";
+
+// Base
+.owl-style-1 {
+	* + & {
+		margin-top: 50px;
+
+		@include media-breakpoint-up(md) {
+			margin-top: 80px;
+		}
+
+		@include media-breakpoint-up(lg) {
+			margin-top: 100px;
+		}
+
+		@include media-breakpoint-up(xxl) {
+			margin-top: 120px;
+		}
+	}
+
+	& + .row {
+		margin-top: 20px;
+
+		@include media-breakpoint-up(md) {
+			margin-top: 40px;
+		}
+	}
+
+	.owl-stage-outer {
+		padding-top: 40px;
+		margin-top: -40px;
+	}
+}
+
+.owl-style-1-nav-container {
+	display: flex;
+	justify-content: center;
+	@include group(30px);
+
+	.owl-prev,
+	.owl-next {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 30px;
+		height: 30px;
+		@include link($gray-800, $primary);
+		transition: $transition-base;
+
+		path {
+			stroke: currentColor;
+		}
+	}
+}

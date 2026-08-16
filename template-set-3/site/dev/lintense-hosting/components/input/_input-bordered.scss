@@ -1,0 +1,25 @@
+// Base
+.control-bordered {
+	display: inline-block;
+
+	.control-bordered-input:checked ~ .control-bordered-label {
+		border-bottom-color: currentColor;
+	}
+
+	.control-bordered-input:disabled ~ .control-bordered-label {
+		opacity: .5;
+	}
+}
+
+.control-bordered-input {
+	position: absolute;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.control-bordered-label {
+	font-size: inherit;
+	line-height: 1;
+	border-bottom: 3px solid transparent;
+	transition: $transition-base;
+}

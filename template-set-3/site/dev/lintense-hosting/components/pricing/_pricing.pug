@@ -1,0 +1,22 @@
+//- Pricing
+	@param {object} data - data object
+	@param {object} data.title - pricing title
+	@param {object} data.price - pricing price
+mixin pricing( data )
+	// Pricing
+	article.pricing&attributes( attributes )
+		.pricing-head
+			.pricing-title.h4!= data.title
+			.pricing-details
+				.pricing-text.lead Starting from
+				.pricing-price.h2= data.price
+				.pricing-period monthly
+				.pricing-discount
+					span.font-weight-bolder= data.discount + 'Off '
+					span.pricing-color= '(Regular: ' + data.priceOld + ')'
+			a.btn.btn-lg.btn-nuka( class= data.btnClass ? data.btnClass : 'btn-dark', href='#' ) Get Started
+				span.btn-overlay
+
+		.pricing-category= data.category
+		.pricing-body
+			block

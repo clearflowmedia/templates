@@ -1,0 +1,28 @@
+// Contacts
+section#contacts.section.section-md.bg-transparant.novi-bg.novi-bg-image
+	.container
+		.row.row-30.justify-content-between
+			.col-md-4.col-lg-3
+				h5 CONTACT US
+				h3 Get in touch
+				.box-decoration-3.d-none.d-md-block
+					.decoration-1.bg-primary
+			.col-md-8
+				h4 Have a question about our projects or services? Feel free <br class="d-none d-xl-block"> to contact us directly using the form below or call us at <br class="d-none d-xl-block"> any time. We are always happy to help you.
+				form.rd-form.rd-mailform( data-form-output='contact-form', data-form-type='contact', method='post', action='components/rd-mailform/rd-mailform.php', data-animate!={ class: 'fadeInUp' } )
+					.row.row-30.row-xl-46.align-items-center.row-fix
+						.col-12
+							.form-group
+								.form-control-wrap
+									input.form-control( type='text', name='name', placeholder='Your name', data-constraints='@Required' )
+						.col-md-6
+							.form-group
+								.form-control-wrap
+									input.form-control( type='text', name='phone', placeholder='Your phone', data-constraints='@Numeric @Required' )
+						.col-md-6
+							.form-group
+								.form-control-wrap
+									input.form-control( type='email', name='email', placeholder='Your email', data-constraints='@Email @Required' )
+					.rd-form-btn.text-left
+						button.btn.btn-primary.btn-block( type='submit' ) Send enquiry
+		#contact-form.form-output.snackbar.snackbar-primary

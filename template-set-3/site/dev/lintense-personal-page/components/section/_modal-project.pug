@@ -1,0 +1,42 @@
+include ../quote/_quote
+
+// Modal project
+#modal-project.modal.modal-project.fade.text-left( role='dialog' )
+	.modal-dialog
+		// Modal content
+		.modal-content.novi-bg.novi-bg-image
+			.modal-content-bg.novi-bg
+			.container
+				.row.row-30.align-items-md-center.align-items-xxl-start.row-fix
+					.col-md-6
+						h2.text-decoration uDesign
+						.group-1.d-flex.flex-wrap.align-items-center
+							.h5 Client:
+							+img( 'logo-02-187x30.png' )
+						h5 This project combines innovative graphic design and web development techniques to deliver a stunning result.
+						.row.row-15.row-content-3.row-fix
+							.col-sm-6.col-lg-5
+								ul.list.list-marked.h5
+									li.list-item Responsive Interface
+									li.list-item Logo Design
+									li.list-item Branding
+							.col-sm-6.col-lg-5
+								ul.list.list-marked.h5
+									li.list-item Online Gallery
+									li.list-item Blog
+						+quote-simple({
+							quote: 'My goal was to completely rebuild a well-known website for designers.'
+						})
+						h5 Working with one of the biggest web technologies enterprises resulted in a fruitful cooperation. As a result, my project provided better user experience and simpler interaction with many vital website elements & pages.
+
+					.col-md-6.col-xxl-5.offset-xxl-1
+						.owl-carousel.owl-carousel-1( data-owl!= { nav:true }, data-items='1', data-sm-items='2', data-md-items='1', data-xxl-margin='60' )
+							+thumbnail({
+								img: 'image-04-651x773',
+								tags: ['Design', 'Branding', 'Logo']
+							}).thumbnail-1
+							+thumbnail({
+								img: 'image-12-651x773',
+								tags: ['Design', 'Branding']
+							}).thumbnail-1
+				button.close(type='button', data-dismiss='modal'): span.icon.mdi-close

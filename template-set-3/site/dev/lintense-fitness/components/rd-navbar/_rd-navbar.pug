@@ -1,0 +1,29 @@
+include ../logo/_logo
+include _navigation
+include ../lin-icon/_lin-icon
+
+header.section.page-header
+	//RD Navbar
+	.rd-navbar-wrap
+		nav.rd-navbar.rd-navbar-absolute(
+			data-rd-navbar= {
+				responsive: {
+					1200: { autoHeight: false }
+				}
+			}
+		)
+			.rd-navbar-main-outer
+				.rd-navbar-main
+					//RD Navbar Panel
+					.rd-navbar-panel
+						//RD Navbar Toggle
+						button.rd-navbar-toggle( data-rd-navbar-toggle='.rd-navbar-nav-wrap' ): span
+
+						//RD Navbar Brand
+						.rd-navbar-brand
+							+logo
+
+					.rd-navbar-nav-wrap
+						+navigation( menu )
+
+

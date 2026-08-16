@@ -1,0 +1,24 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins/breakpoints";
+
+
+.person {
+  max-width: px-to-rem(390px);
+  margin-left: auto;
+  margin-right: auto;
+}
+.person-figure { font-size: 0; }
+.person-figure + * {
+  margin-top: px-to-rem(15px);
+  @include media-breakpoint-up(xl) {
+	margin-top: px-to-rem(25px);
+  }
+}
+
+.person-position {
+  margin-top: px-to-rem(4px);
+  font-style: italic;
+}

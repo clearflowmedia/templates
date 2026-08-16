@@ -1,0 +1,30 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+// Post
+.post-media {
+	display: block;
+}
+
+.post-img {
+	width: 100%;
+}
+
+
+* + .post-title { margin-top: px-to-rem( 16px ) }
+* + .post-text { margin-top: px-to-rem( 8px ) }
+* + .post-meta { margin-top: px-to-rem( 12px ) }
+
+.post-meta-align {
+	.post-meta {
+		justify-content: space-between;
+	}
+}
+
+
+// Layouts
+@import "post-side";

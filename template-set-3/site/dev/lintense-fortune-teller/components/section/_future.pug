@@ -1,0 +1,39 @@
+include ../thumbnail/_thumbnail
+
+// Find out your future here
+section#gallery.section.section-md.bg-transparent
+	.container
+		.row.justify-content-center
+			.col-xl-7.text-center
+				h2 Our gallery
+				p.big Take a look at the best moments from the work of our astrologers and fortune tellers to get a better understanding of what to expect from your first consultation.
+		.row.row-30.row-xxl-40( data-lightgallery )
+			.col-md-4
+				.row.row-30.row-xxl-40
+					.col-xs-6.col-md-12
+						+thumbnail({
+							img:         'gallery-01-392x620',
+							imgOriginal: 'images/gallery-01-original.jpg'
+						})
+					.col-xs-6.col-md-12
+						+thumbnail({
+							img:         'gallery-04-390x402',
+							imgOriginal: 'images/gallery-04-original.jpg'
+						})
+			.col-md-8
+				.row.row-30.row-xxl-40
+					.col-xs-6.col-md-8
+						+thumbnail({
+							img:         'gallery-02-500x477',
+							imgOriginal: 'images/gallery-02-original.jpg'
+						})
+					.col-xs-6.col-md-4
+						+thumbnail({
+							img:         'gallery-03-244x512',
+							imgOriginal: 'images/gallery-03-original.jpg'
+						})
+					.col-12
+						+thumbnail({
+							img:         'gallery-05-830x507',
+							imgOriginal: 'https://youtu.be/hhF-oZbI0lk'
+						})

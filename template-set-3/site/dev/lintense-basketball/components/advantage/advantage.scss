@@ -1,0 +1,54 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+.advantage {
+	position: relative;
+	padding: 20px;
+	transition: $transition-base;
+	cursor: pointer;
+
+	&:hover {
+		box-shadow: $box-shadow;
+		.advantage-shape {
+			visibility: visible;
+			opacity: .05;
+			animation: bounce 1s;
+			animation-delay: .2s;
+			transform: translateY(0px);
+			animation-iteration-count: infinite;
+		}
+	}
+}
+.advantage-shape {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin-bottom: 22px;
+	margin-right: 50px;
+	opacity: 0;
+	visibility: hidden;
+	transition: $transition-base;
+}
+
+.advantage-title {
+	margin-top: 10px;
+}
+
+.advantage-text {
+	margin-top: 3px;
+}
+
+@include media-breakpoint-up(md) {
+	.advantage {
+		padding: 46px 60px;
+	}
+	.advantage-title {
+		margin-top: 40px;
+	}
+}
+
+

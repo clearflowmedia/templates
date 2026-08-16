@@ -1,0 +1,64 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/maps";
+@import "../bootstrap/scss/mixins/breakpoints";
+@import "../bootstrap/scss/mixins/container";
+@import "../bootstrap/scss/mixins/grid";
+@import "../bootstrap/scss/containers";
+@import "../bootstrap/scss/grid";
+@import "grid-spacing";
+
+
+// Modifying
+.row-20 {
+	@include grid-spacing( 20px );
+}
+
+.row-30 {
+	@include grid-spacing( 30px );
+}
+
+.row-40 {
+	@include grid-spacing( 40px );
+}
+
+
+// Spacing
+* + .row {
+	margin-top: px-to-rem( 40px );
+}
+
+* + .row-offset-1 {
+	margin-top: px-to-rem( 50px );
+}
+
+* + .container-wide {
+	margin-top: px-to-rem( 57px * $xs-multiplier );
+}
+
+// Media
+@include media-breakpoint-up(lg) {
+	* + .row-offset-1 {
+		margin-top: px-to-rem( 50px );
+	}
+
+	* + .container-wide {
+		margin-top: px-to-rem( 57px * $lg-multiplier );
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.container-wide {
+		max-width: 1850px;
+	}
+
+	* + .row-offset-1 {
+		margin-top: px-to-rem( 60px );
+	}
+
+	* + .container-wide {
+		margin-top: px-to-rem( 57px );
+	}
+}

@@ -1,0 +1,21 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+
+.footer-list {
+	font-weight: 400;
+	@include group( px-to-rem( 20px ), px-to-rem( 10px ) );
+
+	> * {
+		display: inline-block;
+	}
+}
+
+
+// Spacing

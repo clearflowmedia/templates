@@ -1,0 +1,18 @@
+include ../material-parallax/_material-parallax
+
+section.section.section-lg.bg-transparent
+	.container
+		+parallax({
+			img: 'images/image-07-1270x537.jpg',
+			innerClass: 'section-lg'
+		}).context-dark
+			.row.row-30.justify-content-center( data-animate!={ class: 'fadeInUp' } )
+				.col-11.col-lg-6.col-xl-auto
+					.h1 #1 Web Hosting
+					h4 The nation’s leading hosting services provider
+				.col-11.col-lg-auto
+					.group-20
+						a.btn.btn-lg.btn-primary.btn-nuka( href='#' ) Sign Up
+							span.btn-overlay
+						a.btn.btn-lg.btn-nuka( href='#pricing', data-anchor-link ) View Pricing
+							span.btn-overlay

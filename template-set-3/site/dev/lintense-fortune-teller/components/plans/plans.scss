@@ -1,0 +1,29 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../bootstrap/scss/utilities/position";
+@import "../base/mixins";
+
+
+.group-plans {
+	@include media-breakpoint-up(lg) {
+		margin-top: 50px;
+	}
+}
+
+.plans {
+	& + & {
+		margin-top: 30px;
+
+		@include media-breakpoint-up(xl) {
+			margin-top: 43px;
+		}
+	}
+}
+
+.plans-title {
+	color: $gray-700;
+	font-weight: 700;
+}

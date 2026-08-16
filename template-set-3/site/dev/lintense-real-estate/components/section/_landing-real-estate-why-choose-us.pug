@@ -1,0 +1,36 @@
+// Why choose us
+section#why-choose-us.section.section-lg.bg-transparent
+	.container
+		.row.row-40.justify-content-lg-between
+			.col-md-7( data-animate!={ class: 'fadeInUp' } )
+				#carousel-parent.slick-slider( data-slick!={
+					fade:         true,
+					arrows:       false,
+					asNavFor:     '#child-carousel'
+				} )
+					div: +img( 'image-02-720x520' )
+					div: +img( 'image-03-720x520' )
+					div: +img( 'image-04-720x520' )
+
+			.col-md-5.col-lg-4.d-lg-flex.flex-lg-column.justify-content-lg-between( data-animate!={ class: 'fadeInUp' } )
+				h5 Why to choose your villa?
+				.offset-xl
+					#child-carousel.slick-slider( data-slick!={
+						fade:         true,
+						arrows:       true,
+						asNavFor:     '#carousel-parent',
+						appendArrows: '.slick-remote-arrows'
+					} )
+						div
+							h2 Outstanding Experience
+							p We have been successfully working with commercial and residential real estate for almost 40 years. More than 300 thousand clients trust us.
+
+						div
+							h2 Spotless Reputation
+							p YOUR Villa has an excellent reputation in the market and in the communities we serve. Our brokers are active, involved and connected.
+
+						div
+							h2 Dedicated Team
+							p Our real estate agency has a focused and dedicated team of agents and staff who are committed to excellence for the customer experience.
+
+				.slick-remote-arrows

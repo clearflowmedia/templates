@@ -1,0 +1,26 @@
+include ../countdown/_countdown
+include ../video/_video
+
+// Section divider
+section#home.section.bg-100.section-sm.pt-xl-0
+	.container
+		.row.row-50
+			.col-11.col-xs-10.col-xs-10.col-lg-6( data-animate!={ class: 'fadeInLeftBig' } )
+				.section-lg.section-lg-1
+					.layer-skew.layer-skew-left
+						.layer-skew-image.layer-skew-left-image.bg-gradient-rose-primary-with-image.bg-image( style='background-position: bottom right' )
+							#particles-js-1.particles-js
+					.layer-skew-content.context-dark
+						h4 December 24-26, 2020
+						h1 Christmas Day
+						+countdown({ from: '2020-03-20', to: '2020-12-01' })
+						.group-20.offset-sm
+							a.btn.btn-round.btn-nuka.text-primary( href='#registration', data-anchor-link ) Book now
+								span.btn-overlay
+							a.btn.btn-round.btn-outline( href='#' ) Explore
+			.col-11.offset-1.col-xs-10.offset-xs-2.col-lg-6.offset-lg-0.d-flex( data-animate!={ class: 'fadeInRightBig' } )
+				.section-lg.d-flex.align-items-center.justify-content-center.justify-content-xxl-end.flex-grow-1
+					.layer-skew.layer-skew-right
+						.layer-skew-image.layer-skew-right-image.bg-primary.bg-image( style='background-image: url(images/image-02-1344x728.jpg);' )
+					.layer-skew-content
+						+video-btn

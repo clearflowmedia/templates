@@ -1,0 +1,29 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.person {}
+
+.person-name {
+	color: $primary;
+	font-weight: 500;
+
+	* + & {
+		margin-top: 23px;
+	}
+
+	a {
+		@include link( inherit, $gray-800 )
+	}
+}
+
+.person-position {
+	* + & {
+		margin-top: 15px;
+	}
+}

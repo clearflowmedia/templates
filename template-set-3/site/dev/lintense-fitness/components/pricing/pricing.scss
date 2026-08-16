@@ -1,0 +1,46 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+// Pricing
+.pricing {
+  max-width: px-to-rem(390px);
+  margin: 0 auto;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: $shadow-area-1, $shadow-area-2;
+  border-radius: $border-radius;
+  overflow: hidden;
+}
+
+.pricing-header {
+  flex-grow: 0;
+  padding: px-to-rem(30px, 20px, 20px);
+  background: linear-gradient(to bottom, #292c33, $dark);
+}
+
+.pricing-title {
+  font-weight: bold;
+  color: $primary;
+}
+
+.pricing-price {
+  font-size: px-to-rem(48px);
+  font-weight: bold;
+  color: $white;
+}
+
+.pricing-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  padding: px-to-rem(0, 0, 50px);
+  background-color: $dark;
+}

@@ -1,0 +1,42 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.lin-icon {
+	width: auto;
+	height: 1em;
+	fill: currentColor;
+}
+
+.lin-path-primary {
+	fill: $primary;
+}
+
+.lin-path-primary-dark {
+	fill: $primary-dark;
+}
+
+.lin-path-secondary {
+	fill: $secondary;
+}
+
+.lin-path-color {
+	fill: currentColor;
+}
+
+
+// Modifying
+.lin-md {
+	width: px-to-rem( 50px );
+	height: px-to-rem( 50px );
+}
+
+.lin-lg {
+	width: px-to-rem( 64px );
+	height: px-to-rem( 64px );
+}

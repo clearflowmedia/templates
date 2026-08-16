@@ -1,0 +1,2 @@
+.footer {	padding: 60px 0;}@media (min-width: 768px) {	.footer {		padding: 100px 0;	}}@media (min-width: 1200px) {	.footer {		padding: 120px 0 112px;	}}.footer .logo + * {	margin-top: 35px;}.footer a {	color: inherit;}.footer a:hover {	opacity: .7;}.footer-contacts + .footer-contacts {	margin-top: 31px;}.footer-nav-list li + li {	margin-top: 12px;}
+/*# sourceMappingURL=footer.css.map */

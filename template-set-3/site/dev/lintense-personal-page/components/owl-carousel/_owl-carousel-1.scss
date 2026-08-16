@@ -1,0 +1,52 @@
+// Base
+.owl-carousel-1 {
+	box-shadow: $box-shadow-lg;
+
+	.owl-prev,
+	.owl-next {
+		width: px-to-rem( 45px );
+		height: px-to-rem( 45px );
+		color: $dark;
+		background-color: $white;
+		box-shadow: $box-shadow;
+		border-radius: 50%;
+		cursor: pointer;
+		pointer-events: auto;
+		transition: $transition-base;
+
+		&::before {
+			display: block;
+		}
+
+		&:hover {
+			color: $primary;
+		}
+	}
+
+	.owl-prev {
+		transform: translateX( -10px );
+	}
+
+	.owl-next {
+		transform: translateX( 10px );
+	}
+}
+
+@include media-breakpoint-up( xl ) {
+	.owl-carousel-1 {
+		.owl-prev {
+			transform: translateX( -50% );
+		}
+
+		.owl-next {
+			transform: translateX( 50% );
+		}
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.owl-carousel-1 {
+		margin-right: px-to-rem( -140px );
+		width: auto;
+	}
+}

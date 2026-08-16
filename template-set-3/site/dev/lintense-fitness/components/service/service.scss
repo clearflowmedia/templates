@@ -1,0 +1,55 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins/breakpoints";
+
+// Service
+.service {
+  max-width: px-to-rem(390px);
+  min-height: 100%;
+  margin: 0 auto;
+  position: relative;
+  border-radius: $border-radius;
+  z-index: 0;
+  box-shadow: $shadow-area-1, $shadow-area-2;
+  overflow: hidden;
+
+  &::before {
+    counter-increment: number;
+    content: "0" counter(number);
+    position: absolute;
+    right: px-to-rem(15px);
+    bottom: px-to-rem(15px);
+    font-size: px-to-rem(100px);
+    font-family: $font-family-sec;
+    line-height: .85;
+    font-weight: 700;
+    color: $additional;
+    z-index: -1;
+    opacity: .05;
+  }
+}
+
+.desktop .service {
+  img {
+    width: 100%;
+    filter: grayscale(100%);
+    transition: all .2s linear;
+  }
+  &:hover {
+    img { filter: grayscale(0%); }
+  }
+}
+
+.service-body {
+  padding: px-to-rem(25px, 20px, 25px);
+  @include media-breakpoint-up(md) {
+    padding: px-to-rem(30px);
+  }
+}
+
+.row-reset {
+  counter-reset: number;
+}
+

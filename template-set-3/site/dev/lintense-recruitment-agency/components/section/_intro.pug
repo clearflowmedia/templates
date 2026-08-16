@@ -1,0 +1,15 @@
+// Intro
+section.section.section-into.bg-100
+	.intro-bg
+		+img( 'bg-01.svg' ).intro-bg-image
+	.container
+		.row.align-items-center
+			.col-md-8
+				h1 Start building your own career now
+				h5 Welcome to the Lintense recruitment agency, #1 location to search for a job of your dream. Use our search system to find the position you need.
+				form.rd-mailform.form-inline( method='get', action='#' )
+					.form-inline-group
+						input.form-control.form-control-search.form-control-round( type='text', name='s', placeholder='Search for job title', data-constraints='@Required', autocomplete='off' )
+					button.btn.btn-primary( type='submit' ) Find jobs
+			.col-md-4.d-none.d-md-block
+				+img( 'home-01-480x895.png' ).intro-image

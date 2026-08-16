@@ -1,0 +1,2 @@
+.tag {	display: inline-block;	padding: 0.375rem 0.625rem;	font-size: 1rem;	line-height: 1.2;	text-align: center;	color: #111235;	background-color: #fff;	border: 1px solid #fff;}a.tag {	transition: all 0.2s ease-in-out;}a.tag:hover {	color: #fff;	background-color: #ee6451;	border-color: #ee6451;}
+/*# sourceMappingURL=tag.css.map */

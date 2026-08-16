@@ -1,0 +1,26 @@
+include ../service/_service
+
+// Services
+section#services.section.section-md.bg-transparent.position-relative
+	.bg-layer.bg-layer-2.bg-primary-light
+	.container
+		.text-center
+			h2 Insurance expertise that you can trust
+		.group-services
+			+service({
+				img: 'service-01-440x275',
+				title: 'Life insurance + quick payout',
+				text:  'Life Insurance is an investment in yourself and the future of your loved ones that secures your responsibilities.'
+			})
+			+service({
+				img: 'service-02-440x275',
+				title: 'Car insurance',
+				text:  'This type of insurance helps to protect against daily risks caused by driving a car on a regular basis.'
+			})
+			+service({
+				img: 'service-03-440x275',
+				title: 'Business insurance',
+				text:  'We’re committed to keeping your business protected—so you can focus on your day-to-day operations.'
+			})
+		.text-center
+			a.btn.btn-primary.btn-lg.btn-round( href='#' ) View all services

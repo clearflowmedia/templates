@@ -1,0 +1,29 @@
+include ../blurb/_blurb
+include ../lin-icon/_lin-icon
+
+// Section
+section#rates.section.section-lg.bg-primary-light.text-center
+	.container
+		h2( data-animate!={ class: 'fadeInUp' } ) Recent Facts About Us
+		.row.row-offset-md.row-30.text-md-left
+			.col-xs-6.col-md-4( data-animate!={ class: 'fadeInUp' } )
+				+blurb({
+					media: 'media-sm flex-column flex-xl-row',
+					title: '1,258,247',
+					text:  'Parcels delivered per year'
+				})
+					+lin-box.lin-md.blurb-icon.mt-xl-2
+			.col-xs-6.col-md-4( data-animate!={ class: 'fadeInUp' } )
+				+blurb({
+					media: 'media-sm flex-column flex-xl-row',
+					title: 'Over 220',
+					text:  'Countries and territories served'
+				})
+					+lin-locations.lin-md.blurb-icon.mt-xl-2
+			.col-xs-6.col-md-4( data-animate!={ class: 'fadeInUp' } )
+				+blurb({
+					media: 'media-sm flex-column flex-xl-row',
+					title: '147,000',
+					text:  'People working at Lintense'
+				})
+					+lin-team.lin-md.blurb-icon.mt-xl-2

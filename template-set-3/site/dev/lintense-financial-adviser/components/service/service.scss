@@ -1,0 +1,32 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins/breakpoints";
+
+// Service
+.service {
+	background-color: $gray-100;
+	border-radius: $border-radius;
+	padding: 30px 15px;
+
+	@include media-breakpoint-up(sm) {
+		padding: 30px 20px;
+	}
+
+	@include media-breakpoint-up(xl) {
+		padding: 42px 60px 41px 45px;
+	}
+}
+
+.service-title {
+	* + & {
+		margin-top: 21px;
+	}
+}
+
+.service-text {
+	* + & {
+		margin-top: 22px;
+	}
+}

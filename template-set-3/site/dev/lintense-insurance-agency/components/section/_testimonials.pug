@@ -1,0 +1,20 @@
+include ../quote/_quote
+
+// Testimonials
+section#testimonials.section.section-md.position-relative.pb-0
+	.bg-layer.bg-primary-light
+	.container
+		h2.text-center What clients say about us
+		.group-quotes
+			+quote({
+				img:      'persons/person-05-100x100.png',
+				text:     'Thank you for taking great care of us on our insurance. You and your team at Lintense have been wonderful to work with. Most agents wouldn’t answer a phone call on a beautiful Saturday morning on Memorial Day weekend to add a vehicle to a client’s policy. You did and it made our recent vehicle purchase quick, easy, and it saved me a trip back to the dealer.',
+				name:     'Ronald Richards'
+			})
+			+quote({
+				img:      'persons/person-06-100x100.png',
+				text:     'Thank you for all your patient assistance during the state of confusion and helping us bundle everything together for auto and the house. It was a very time-consuming task and you helped put us at ease that day. We appreciate also that you used your experience and expertise to help save money on those three policies.',
+				name:     'Kathryn Murphy'
+			})
+		.text-center
+			a.btn.btn-primary.btn-lg.btn-round( href='#' ) More testimonials

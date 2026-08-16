@@ -1,0 +1,266 @@
+include ../accordion/_accordion
+// Schedule
+section#schedule.section.section-lg.bg-default
+	.container
+		.row.justify-content-center
+			.col-md-10.col-xl-8.text-center
+				h2 Schedule
+				p.lead Interested in joining our classes and workouts? Consult the schedule below to find out when our workouts take place. You can also learn more about each class duration below.
+		.row
+			.col: #accordion1.accordion.accordion-flush
+				+accordion-item({
+					parentId: 'accordion1',
+					title: 'Monday',
+					show: true
+				})
+					.row.row-15.row-md-20.gutters-20
+						.col-md-6.col-lg-4.col-xl-auto.col-xxl-3
+							.event
+								.event-header
+									.event-time 10:00
+									h6.event-title  Crossfit
+								.event-footer
+									.event-duration
+										span.icon.fa-clock-o
+										span 60min
+									.event-coach
+										span.icon.fa-user
+										span Ethan Bell
+
+						.col-md-6.col-lg-4.col-xl-auto.col-xxl-3
+							.event
+								.event-header
+									.event-time 11:00
+									h6.event-title  Pilates
+								.event-footer
+									.event-duration
+										span.icon.fa-clock-o
+										span 90min
+									.event-coach
+										span.icon.fa-user
+										span Jenny McKinney
+
+						.col-md-6.col-lg-4.col-xl-auto.col-xxl-3
+							.event
+								.event-header
+									.event-time 12:30
+									h6.event-title  Boxing
+								.event-footer
+									.event-duration
+										span.icon.fa-clock-o
+										span 120min
+									.event-coach
+										span.icon.fa-user
+										span Michael Lee
+
+						.col-md-6.col-lg-4.col-xl-auto.col-xxl-3
+							.event
+								.event-header
+									.event-time 14:30
+									h6.event-title  Yoga
+								.event-footer
+									.event-duration
+										span.icon.fa-clock-o
+										span 90min
+									.event-coach
+										span.icon.fa-user
+										span Annie Smith
+
+				+accordion-item({
+					parentId: 'accordion1',
+					title: 'Tuesday',
+				})
+					.row.row-15.row-md-20.gutters-20
+						.col-md-6.col-lg-4.col-xl-auto.col-xxl-3
+							.event
+								.event-header
+									.event-time 10:00
+									h6.event-title  Crossfit
+								.event-footer
+									.event-duration
+										span.icon.fa-clock-o
+										span 60min
+									.event-coach
+										span.icon.fa-user
+										span Ethan Bell
+
+						.col-md-6.col-lg-4.col-xl-auto.col-xxl-3
+							.event
+								.event-header
+									.event-time 11:00
+									h6.event-title  Pilates
+								.event-footer
+									.event-duration
+										span.icon.fa-clock-o
+										span 90min
+									.event-coach
+										span.icon.fa-user
+										span Jenny McKinney
+
+				+accordion-item({
+					parentId: 'accordion1',
+					title: 'Wednesday',
+				})
+					.row.row-15.row-md-20.gutters-20
+						.col-md-6.col-lg-4.col-xl-auto.col-xxl-3
+							.event
+								.event-header
+									.event-time 10:00
+									h6.event-title  Crossfit
+								.event-footer
+									.event-duration
+										span.icon.fa-clock-o
+										span 60min
+									.event-coach
+										span.icon.fa-user
+										span Ethan Bell
+
+				+accordion-item({
+					parentId: 'accordion1',
+					title: 'Thursday',
+				})
+					.row.row-15.row-md-20.gutters-20
+						.col-md-6.col-lg-4.col-xl-auto.col-xxl-3
+							.event
+								.event-header
+									.event-time 10:00
+									h6.event-title  Crossfit
+								.event-footer
+									.event-duration
+										span.icon.fa-clock-o
+										span 60min
+									.event-coach
+										span.icon.fa-user
+										span Ethan Bell
+
+						.col-md-6.col-lg-4.col-xl-auto.col-xxl-3
+							.event
+								.event-header
+									.event-time 11:00
+									h6.event-title  Pilates
+								.event-footer
+									.event-duration
+										span.icon.fa-clock-o
+										span 90min
+									.event-coach
+										span.icon.fa-user
+										span Jenny McKinney
+
+				+accordion-item({
+					parentId: 'accordion1',
+					title: 'Friday',
+				})
+					.row.row-15.row-md-20.gutters-20
+						.col-md-6.col-lg-4.col-xl-auto.col-xxl-3
+							.event
+								.event-header
+									.event-time 10:00
+									h6.event-title  Crossfit
+								.event-footer
+									.event-duration
+										span.icon.fa-clock-o
+										span 60min
+									.event-coach
+										span.icon.fa-user
+										span Ethan Bell
+
+						.col-md-6.col-lg-4.col-xl-auto.col-xxl-3
+							.event
+								.event-header
+									.event-time 11:00
+									h6.event-title  Pilates
+								.event-footer
+									.event-duration
+										span.icon.fa-clock-o
+										span 90min
+									.event-coach
+										span.icon.fa-user
+										span Jenny McKinney
+
+				+accordion-item({
+					parentId: 'accordion1',
+					title: 'Saturday',
+				})
+					.row.row-15.row-md-20.gutters-20
+						.col-md-6.col-lg-4.col-xl-auto.col-xxl-3
+							.event
+								.event-header
+									.event-time 10:00
+									h6.event-title  Crossfit
+								.event-footer
+									.event-duration
+										span.icon.fa-clock-o
+										span 60min
+									.event-coach
+										span.icon.fa-user
+										span Ethan Bell
+
+						.col-md-6.col-lg-4.col-xl-auto.col-xxl-3
+							.event
+								.event-header
+									.event-time 11:00
+									h6.event-title  Pilates
+								.event-footer
+									.event-duration
+										span.icon.fa-clock-o
+										span 90min
+									.event-coach
+										span.icon.fa-user
+										span Jenny McKinney
+
+				+accordion-item({
+					parentId: 'accordion1',
+					title: 'Sunday',
+				})
+					.row.row-15.row-md-20.gutters-20
+						.col-md-6.col-lg-4.col-xl-auto.col-xxl-3
+							.event
+								.event-header
+									.event-time 10:00
+									h6.event-title  Crossfit
+								.event-footer
+									.event-duration
+										span.icon.fa-clock-o
+										span 60min
+									.event-coach
+										span.icon.fa-user
+										span Ethan Bell
+
+						.col-md-6.col-lg-4.col-xl-auto.col-xxl-3
+							.event
+								.event-header
+									.event-time 11:00
+									h6.event-title  Pilates
+								.event-footer
+									.event-duration
+										span.icon.fa-clock-o
+										span 90min
+									.event-coach
+										span.icon.fa-user
+										span Jenny McKinney
+
+						.col-md-6.col-lg-4.col-xl-auto.col-xxl-3
+							.event
+								.event-header
+									.event-time 12:30
+									h6.event-title  Boxing
+								.event-footer
+									.event-duration
+										span.icon.fa-clock-o
+										span 120min
+									.event-coach
+										span.icon.fa-user
+										span Michael Lee
+
+						.col-md-6.col-lg-4.col-xl-auto.col-xxl-3
+							.event
+								.event-header
+									.event-time 14:30
+									h6.event-title  Yoga
+								.event-footer
+									.event-duration
+										span.icon.fa-clock-o
+										span 90min
+									.event-coach
+										span.icon.fa-user
+										span Annie Smith

@@ -1,0 +1,34 @@
+include ../logo/_logo
+include ../rights/_rights
+include ../list/_list
+
+// Footer
+footer#contacts.section.footer.bg-secondary.context-dark.overlay-secondary.overlay-08.bg-image( style='background-image: url(images/image-12-1920x965.jpg);' )
+	.container
+		.row.row-30.justify-content-lg-between
+			.col-lg-4.col-xl-3.d-lg-flex.flex-lg-column.justify-content-lg-between
+				div
+					+logo
+					.offset-lg
+						ul.list.footer-contact-list
+							li.list-item.h6
+								a.link-inherit( href='#' ) 178 West 27th Street, Suite 527
+									| #[br]
+									| New York NY 10012
+					+list-social
+				+rights
+
+			.col-md-10.col-lg-6.col-xl-7
+				h5 Contact us
+				//RD Mailform
+				form.rd-mailform( data-form-output='form-output-global-2', data-form-type='contact', method='post', action='components/rd-mailform/rd-mailform.php' )
+					.form-group
+						input.form-control( type='text', name='name', placeholder='Full name *', data-constraints='@Required' )
+					.form-group
+						input.form-control( type='email', name='email', placeholder='Email address *', data-constraints='@Email @Required' )
+					.form-group
+						textarea.form-control( name='message', placeholder='Message *', rows='6', data-constraints='@Required' )
+					.offset-xs
+						button.btn.btn-rect.btn-primary.btn-nuka( type='submit' ) Submit
+							span.btn-overlay
+				#form-output-global-2.form-output.snackbar.snackbar-secondary

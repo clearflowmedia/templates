@@ -1,0 +1,20 @@
+include ../team/_team
+
+// Tutors
+section#tutors.section.section-lg.bg-transparent
+	.container
+		.row.row-30
+			.col-md-4( data-animate!={ class: 'fadeInUp' } )
+				h1 Tutors
+			.col-xs-6.col-md-4( data-animate!={ class: 'fadeInUp' } )
+				+team({
+					img:  'persons/person-01-390x390',
+					name: 'John <br>Williams',
+					text: 'John is the leading SEO specialist at iStep Ltd with 10+ years of professional experience.'
+				})
+			.col-xs-6.col-md-4( data-animate!={ class: 'fadeInUp' } )
+				+team({
+					img:  'persons/person-02-390x390',
+					name: 'Peter <br>Smith',
+					text: 'Founder and owner of SEOPro, an award-winning SEO & marketing agency.'
+				})

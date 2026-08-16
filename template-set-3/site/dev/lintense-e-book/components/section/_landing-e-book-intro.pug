@@ -1,0 +1,17 @@
+// Intro
+section.section.section-md.bg-100.text-center.text-md-left.position-relative.pb-1
+	.bg-layer.bg-primary( style='bottom: 16%' )
+	.container
+		.row.row-50.justify-content-center.justify-content-md-between
+			.col-md-6.mt-xl-5.context-dark( style='z-index: 1', data-animate!={ class: 'fadeInUp' } )
+				h4.text-uppercase Adam Smith
+				h1 Lintense: the art of corporate success
+				p.lead Discover the success formula of modern businesses through the stories told by popular CEOs and compiled together by Adam Smith.
+				.offset-sm.d-md-none.d-lg-block
+					h4 This book is useful for:
+					p.lead young entrepreneurs, business management experts & enthusiasts.
+				.offset-md
+					button.btn.btn-round.btn-dark.btn-nuka( data-modal-trigger!={ target: '#modal' } ) Download The Book
+						span.btn-overlay
+			.col-8.col-xs-6.col-md-5.d-flex.align-items-center.justify-content-center( data-animate!={ class: 'fadeInUp' } )
+				+img( 'products/product-01-943x869.png' ).flex-shrink-0( style='max-width: 191%' )

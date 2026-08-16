@@ -1,0 +1,26 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.author {
+	position: relative;
+	padding: 8%;
+	box-shadow: $box-shadow;
+	background: $white;
+}
+
+.author-image {
+	width: 100%;
+}
+
+.author-signature {
+	position: absolute;
+	right: -14%;
+	bottom: -14%;
+	width: 58.8%
+}

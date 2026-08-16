@@ -1,0 +1,9 @@
+mixin service( obj )
+	.service
+		.service-icon
+			+img( obj.img )
+		h4.service-title: a(href='#')= obj.title
+		p.service-text= obj.text
+		a.link-arrow( href='#' )
+			span Read more
+			+arrow

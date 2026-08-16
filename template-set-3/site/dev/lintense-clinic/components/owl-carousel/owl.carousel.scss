@@ -1,0 +1,152 @@
+@import "../bootstrap/scss/_functions";
+@import "../base/_functions";
+@import "../base/_variables";
+@import "../bootstrap/scss/_variables";
+@import "../bootstrap/scss/_mixins";
+
+
+// Variables
+$owl-base: $gray-900;
+$owl-primary: $primary;
+$owl-secondary: $secondary;
+
+@import "defaults";
+
+
+// Base
+.owl-carousel {
+	// Dots
+	.owl-dots {
+		text-align: center;
+		margin-top: px-to-rem( 40px );
+		margin-bottom: -10px;
+		font-size: 0;
+		line-height: 0;
+	}
+
+	.owl-dot {
+		position: relative;
+		display: inline-block;
+		text-align: center;
+		width: 24px;
+		height: 12px;
+		margin: 0 4px 10px;
+		zoom: 1;
+
+		span {
+			display: inline-block;
+			width: 12px;
+			height: inherit;
+			border-radius: 8px;
+			background: rgba( $owl-secondary, .3 );
+			transition: all .3s ease;
+		}
+
+		&:hover {
+			span {
+				background: $owl-secondary;
+			}
+		}
+
+		&.active {
+			span {
+				width: inherit;
+				background: $owl-secondary;
+			}
+		}
+	}
+}
+
+
+// Spacing
+* + .owl-carousel {
+	margin-top: px-to-rem( 40px );
+}
+
+
+// Contexts
+.context-dark {
+	.owl-carousel {
+		.owl-dot {
+			span {
+				background: rgba( $white, .3 );
+			}
+
+			&:hover {
+				span {
+					background: $white;
+				}
+			}
+
+			&.active {
+				span {
+					width: inherit;
+					background: $white;
+				}
+			}
+		}
+	}
+}
+
+
+// Media
+@include media-breakpoint-up(lg) {
+	* + .owl-carousel {
+		margin-top: px-to-rem( 50px );
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.owl-carousel {
+		.owl-dots {
+			margin-top: px-to-rem( 60px );
+		}
+	}
+}
+
+@include media-breakpoint-up(xxl) {
+	* + .owl-carousel {
+		margin-top: px-to-rem( 70px );
+	}
+}
+
+
+// Owl styles
+.owl-visible {
+	.owl-stage-outer {
+		overflow: visible;
+	}
+}
+
+.owl-style-1 {
+	.owl-stage-outer {
+		margin: -50px -25px;
+		padding: 50px 25px;
+	}
+
+	.owl-item > * {
+		transition: $transition-base;
+	}
+
+	.owl-item:not( .active ) > * {
+		box-shadow: none;
+	}
+}
+
+// Media
+@include media-breakpoint-up(xl) {
+	.owl-style-1 {
+		.owl-stage-outer {
+			margin: -50px;
+			padding: 50px;
+		}
+	}
+}
+
+@include media-breakpoint-up(xxl) {
+	.owl-style-1 {
+		.owl-dots {
+			margin-top: px-to-rem( 80px );
+		}
+	}
+}

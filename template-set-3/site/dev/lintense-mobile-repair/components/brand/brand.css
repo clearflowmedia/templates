@@ -1,0 +1,2 @@
+.brand {	max-width: 280px;	display: block;	margin-left: auto;	margin-right: auto;}.brand:hover {	box-shadow: 0 0 15px #FFF;}.brand img {	width: 100%;}@media (max-width: 575.98px) {	.brand {		margin-left: auto;		margin-right: auto;	}}
+/*# sourceMappingURL=brand.css.map */

@@ -1,0 +1,91 @@
+// Headings
+#{headings()} {
+	margin: 0;
+	font-family: $font-family-sec;
+
+	a {
+		color: inherit;
+
+		&:hover {
+			color: $primary;
+		}
+	}
+}
+
+h1, .h1 {
+	font-size: $h1-font-size / 1.35;
+	line-height: $h1-line-height;
+	@include media-breakpoint-up(md) {
+		font-size: $h1-font-size;
+	}
+}
+
+h2, .h2 {
+	font-size: $h2-font-size / 1.25;
+	line-height: $h2-line-height;
+	@include media-breakpoint-up(md) {
+		font-size: $h2-font-size;
+	}
+}
+
+h3, .h3 {
+	font-size: $h3-font-size;
+	line-height: $h3-line-height;
+}
+
+h4, .h4 {
+	font-size: $h4-font-size;
+	line-height: $h4-line-height;
+}
+
+h5, .h5 {
+	font-size: $h5-font-size;
+	line-height: $h5-line-height;
+}
+
+h6, .h6 {
+	font-size: $h6-font-size;
+	line-height: $h6-line-height;
+}
+
+
+// Link
+a {
+	transition: $transition-base;
+}
+
+.link-inherit {
+	color: inherit;
+
+	&:hover {
+		color: $primary;
+	}
+}
+
+// Emphasis
+mark,
+.mark {
+	color: color-contrast($mark-bg);
+}
+
+.lead {
+	font-size: px-to-rem(20px);
+	font-weight: $lead-font-weight;
+	line-height: 1.3;
+	@include media-breakpoint-up(lg) {
+		font-size: $lead-font-size;
+		line-height: 1.5;
+	}
+}
+
+// Underline text
+u {
+	text-decoration: none;
+	border-bottom: 2px solid rgba($primary, .4);
+}
+
+
+// Bold text
+strong {
+	font-weight: $font-weight-bold;
+}

@@ -1,0 +1,120 @@
+include ../rights/_rights
+include ../list/_list
+
+// Footer
+footer#newsletter.section.footer.footer-sm.bg-900.context-dark.text-400
+	.container
+		.row.row-20.align-items-lg-center
+			.col-md-5.col-lg-6.col-xl-7
+				.group-x-20.group-y-10.d-flex.flex-wrap.align-items-center.align-items-xl-baseline
+					span.h4 Newsletter
+					span Subscribe to our newsletter to receive fresh news and updates.
+			.col-md-7.col-lg-6.col-xl-5
+				form.rd-mailform.form-inline.flex-xl-nowrap.group-20( data-form-output='form-output-subscribe', data-form-type='subscribe', method='post', action='components/rd-mailform/rd-mailform.php' )
+					.form-inline-group
+						input.form-control.form-control-lg( type='email', name='email', placeholder='Enter your email address', data-constraints='@Email @Required' )
+					button.btn.btn-lg.btn-nuka( type='submit' ) Submit
+						span.btn-overlay
+				#form-output-subscribe.form-output.snackbar.snackbar-secondary
+
+		hr.divider.divider-sm.footer-divider.mt-5
+
+		.row.row-30.footer-row
+			.col-6.col-md-3
+				.footer-title.h6 Hosting
+				ul.list.list-lg
+					li.list-item
+						a.list-link( href='#' ) Web Hosting
+					li.list-item
+						a.list-link( href='#' ) WordPress Hosting
+					li.list-item
+						a.list-link( href='#' ) Managed WordPress Hosting
+					li.list-item
+						a.list-link( href='#' ) Reseller Hosting
+					li.list-item
+						a.list-link( href='#' ) VPS Hosting
+					li.list-item
+						a.list-link( href='#' ) Managed VPS Hosting
+					li.list-item
+						a.list-link( href='#' ) Cloud VPS Hosting
+					li.list-item
+						a.list-link( href='#' ) Dedicated Server Hosting
+					li.list-item
+						a.list-link( href='#' ) Email Hosting
+
+			.col-6.col-md-3
+				.footer-title.h6 Features
+				ul.list.list-lg
+					li.list-item
+						a.list-link( href='#' ) Developer Friendly Hosting
+					li.list-item
+						a.list-link( href='#' ) Domain Registration
+					li.list-item
+						a.list-link( href='#' ) Domain Transfer
+					li.list-item
+						a.list-link( href='#' ) SSL Certificates
+					li.list-item
+						a.list-link( href='#' ) SwiftServers Fast Hosting
+					li.list-item
+						a.list-link( href='#' ) Compare Hosting
+
+			.col-6.col-md-3
+				.footer-title.h6 Services
+				ul.list.list-lg
+					li.list-item
+						a.list-link( href='#' ) Blog Hosting
+					li.list-item
+						a.list-link( href='#' ) CMS Hosting
+					li.list-item
+						a.list-link( href='#' ) CRM Hosting
+					li.list-item
+						a.list-link( href='#' ) eCommerce Hosting
+					li.list-item
+						a.list-link( href='#' ) Forum Hosting
+					li.list-item
+						a.list-link( href='#' ) Linux Hosting
+					li.list-item
+						a.list-link( href='#' ) Wiki Hosting
+
+			.col-6.col-md-3
+				.footer-title.h6 Support
+				ul.list.list-lg
+					li.list-item
+						a.list-link( href='#' ) Submit a Support Ticket
+					li.list-item
+						a.list-link( href='#' ) Contact Sales
+					li.list-item
+						a.list-link( href='#' ) Knowledge base
+					li.list-item
+						a.list-link( href='#' ) Hosting Blog
+					li.list-item
+						a.list-link( href='#' ) 99.9% Uptime Commitment
+					li.list-item
+						a.list-link( href='#' ) Anytime Money Back Guarantee
+
+		hr.divider.divider-sm.footer-divider
+		.footer-panel.text-center
+			.group-x-30.group-y-10.d-flex.flex-wrap.align-items-center.justify-content-center.justify-content-xl-between
+				div
+					ul.list.footer-list
+						li.list-item
+							a.list-link( href='#' ) Pricing
+						li.list-item
+							a.list-link( href='#' ) Support
+						li.list-item
+							a.list-link( href='#' ) CMS Hosting
+						li.list-item
+							a.list-link( href='#' ) Features
+						li.list-item
+							a.list-link( href='#' ) Domain Registration
+						li.list-item
+							a.list-link( href='#' ) Testimonials
+						li.list-item
+							a.list-link( href='#' ) Awards
+						li.list-item
+							a.list-link( href='#' ) What We Offer
+						li.list-item
+							a.list-link( href='#' ) FAQ
+				div
+					+list-social
+			+rights.text-xl-left.mt-3

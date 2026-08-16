@@ -1,0 +1,45 @@
+//- Blurb
+	@param {object} data - data object
+	@param {string} data.title - blurb title
+	@param {string} data.text - blurb text
+mixin blurb( data )
+	// Blurb
+	article.blurb&attributes( attributes )
+		.blurb-icon
+			block
+		.blurb-title.h4= data.title
+		.blurb-text= data.text
+
+//- Blurb boxed
+	@param {object} data - data object
+	@param {string} data.title - blurb title
+	@param {string} data.text - blurb text
+	@param {string} data.link.href - blurb link href
+	@param {string} data.link.text - blurb link text
+	@param {boolean} data.link.anchor - link anchor
+mixin blurb-boxed( data )
+	// Blurb boxed
+	article.blurb.blurb-boxed&attributes( attributes )
+		.blurb-boxed-icon
+			block
+		.blurb-boxed-title.h3= data.title
+		.blurb-boxed-text= data.text
+		.blurb-boxed-link
+			if( data.link.anchor === true )
+				a.link( href= data.link.href, data-anchor-link )= data.link.text + ' ➞'
+			else
+				a.link( href= data.link.href ? data.link.href : '#' )= data.link.text + ' ➞'
+
+//- Blurb mini
+	@param {object} data - data object
+	@param {string} data.title - blurb title
+	@param {string} data.text - blurb text
+mixin blurb-mini( data )
+	// Blurb mini
+	article.blurb.blurb-mini&attributes( attributes )
+		.blurb-icon
+			block
+		.blurb-title.h5= data.title
+		.blurb-text= data.text
+		.blurb-link
+			a.link.link-primary( href='#' ) Learn More ➞

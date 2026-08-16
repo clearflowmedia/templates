@@ -1,0 +1,28 @@
+include ../counter/_counter
+
+// Statistics
+section.section.section-xl.bg-additional
+    .container
+        .row.row-30
+            .col-md-6( data-animate!={class: 'fadeInUp'} )
+                h2 We are experts in Renovations!
+                .h4.pr-xl-5.offset-xxs Our remodeling company has a long experience of work within numerous commercial, NGO, and residential projects.
+            .col-xl-5.col-md-6( data-animate!={class: 'fadeInUp'} )
+                .row.row-40.justify-content-sm-between
+                    .col-xs-12
+                        p.text-black Be it a full apartment, a home renovation, or just a kitchen or bathroom remodeling, every home improvement job we take is always treated with an accordance to your wishes and personal preferences that we always respect.
+                    .col-xs-6
+                        +counter-default({
+                            value: '1500',
+                            title: 'Projects Completed'
+                        })
+                    .col-xs-6
+                        +counter-default({
+                            value: '265',
+                            title: 'Staff members'
+                        })
+                    .col-xs-6
+                        +counter-default({
+                            value: '102',
+                            title: 'Awards Won'
+                        })

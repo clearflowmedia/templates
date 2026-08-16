@@ -1,0 +1,2 @@
+.link-arrow {	display: inline-block;	font-size: 1rem;	font-weight: 500;	color: #1a1c20;}.link-arrow svg {	margin-left: 10px;	fill: currentColor;}.link-arrow, .link-arrow:active, .link-arrow:focus {	color: #1a1c20;}.link-arrow:hover {	color: #ff4d00;}.link-primary, .link-primary:active, .link-primary:focus {	color: #ff4d00;}.link-primary:hover {	color: #1a1c20;}.link-secondary, .link-secondary:active, .link-secondary:focus {	color: #1a1c20;}.link-secondary:hover {	color: #ff4d00;}
+/*# sourceMappingURL=link.css.map */

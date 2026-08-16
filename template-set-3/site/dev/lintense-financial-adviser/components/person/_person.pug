@@ -1,0 +1,6 @@
+mixin persone( obj )
+	.person
+		figure.person-figure
+			a.person-figure-link.link-img( href='#' ): +img( obj.img ).person-figure-img
+		h5.person-name: a( href='#' )= obj.name
+		p.person-position= obj.position

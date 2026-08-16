@@ -1,0 +1,12 @@
+//- Team
+	@param {object} data - data object
+	@param {string} data.img - team img
+	@param {string} data.text - team text
+	@param {string} data.name - team name
+mixin team( data )
+	// Team
+	article.team&attributes( attributes )
+		+img( data.img ).team-image
+		.team-name.h2
+			a( href='#' )!= data.name
+		.team-text.lead= data.text

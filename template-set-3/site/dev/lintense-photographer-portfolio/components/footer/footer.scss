@@ -1,0 +1,17 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.footer {
+}
+
+.footer-nav-list {
+	text-transform: uppercase;
+	line-height: 2.6;
+	font-size: 14px;
+}

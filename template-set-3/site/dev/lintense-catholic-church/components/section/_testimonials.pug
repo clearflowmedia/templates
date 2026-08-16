@@ -1,0 +1,23 @@
+include ../quote/_quote
+// Testimonials
+section#testimonials.section.section-xl.bg-default
+	.container
+		.row: .col.text-center( data-animate!={class: 'fadeInUp'} )
+			h3.h6  testimonials
+			h2 Feedback from our parishioners
+		.row.row-50
+			.col-lg-4( data-animate!={class: 'fadeInUp'} )
+				+quote-simple({
+					text: 'For me, Lintense is an oasis where I can be refreshed with living water. Every Sunday I come with an expectation of what message I will receive from our Lord.',
+					author: 'Emma Williamson'
+				})
+			.col-lg-4( data-animate!={class: 'fadeInUp'} )
+				+quote-simple({
+					text: 'For the first time in many years, I have found a place at Lintense Church. It\'s like coming home again where the people are so warm and friendly and are genuinely concerned about you. Here everyone genuinely supports you in what you’re doing and gives solid advice when you need it. That’s why I keep coming here every week.',
+					author: 'Peter Adams'
+				})
+			.col-lg-4( data-animate!={class: 'fadeInUp'} )
+				+quote-simple({
+					text: 'I\'ve never been part of a church that\'s just getting started, so this is all new territory for me. It\'s incredible to see God at work bringing people together.',
+					author: 'Ann Smith'
+				})

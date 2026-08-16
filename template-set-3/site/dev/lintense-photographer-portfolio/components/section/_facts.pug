@@ -1,0 +1,29 @@
+include ../counter/_counter
+
+// FACTS ABOUT
+section.section.section-lg.bg-transparent
+	.container
+		.row.row-30
+			.col-xl-3
+				h6 FACTS ABOUT me
+			.col-xl-4.col-6
+				+counter-default({
+					value:   '16',
+					postfix: '+',
+					title:   'Years of experience'
+				})
+				+counter-default({
+					value: '45',
+					title: 'Regular customers'
+				})
+			.col-xl-4.col-6
+				+counter-default({
+					value:   '400',
+					postfix: '+',
+					title:   'photoshoots completed'
+				})
+				+counter-default({
+					value:   '1',
+					postfix: 'k+',
+					title:   'Positive feedback'
+				})

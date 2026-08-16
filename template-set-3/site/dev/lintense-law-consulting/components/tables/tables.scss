@@ -1,0 +1,143 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+// Base
+
+.table-wrap {
+  padding: px-to-rem(25px);
+  box-shadow: $box-shadow;
+}
+
+.table-custom {
+  width: 100%;
+  td, tr {
+	padding: 10px;
+  }
+
+  tr:not(:first-child) {
+	border-top: 1px solid $gray-2;
+  }
+
+  tr:last-child td {
+	padding-bottom: 0;
+  }
+
+  tr:first-child td {
+	padding-top: 0;
+  }
+
+  td {
+	padding: px-to-rem(20px, 15px);
+
+	&.first-column {
+	  padding-left: 0;
+	}
+  }
+
+  .second-column, .third-column {
+	text-align: center;
+  }
+
+  .first-column {
+	min-width: px-to-rem(200px);
+
+	> * {
+	  max-width: px-to-rem(353px);
+	}
+  }
+
+  .second-column {
+	min-width: px-to-rem(200px);
+
+  }
+
+  .third-column {
+	min-width: px-to-rem(200px);
+  }
+
+
+  h4 + .list {
+	margin-top: px-to-rem(15px);
+  }
+
+  .subtitle-sm {
+	margin-top: px-to-rem(2px);
+	font-size: px-to-rem(14px);
+  }
+}
+
+.pricing-pack {
+  display: inline-block;
+  padding: px-to-rem(10px, 15px);
+  border-radius: $border-radius;
+}
+
+.pricing-pack-primary {
+  background-color: $primary;
+
+  > * {
+	color: $white;
+  }
+}
+
+.pricing-pack-additional {
+  background-color: $additional;
+}
+
+// Media
+@include media-breakpoint-down(md) {
+  .table-custom {
+	display: block;
+	width: 100%;
+	overflow-x: auto;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+
+	&.table-bordered {
+	  border: 0;
+	}
+  }
+  .pricing-pack {
+	min-width: px-to-rem(210px);
+	display: inline-block;
+	padding: px-to-rem(10px, 15px);
+	border-radius: $border-radius;
+	margin: px-to-rem(0, 10px)
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .table-wrap {
+	padding: px-to-rem(50px, 40px);
+  }
+  .table-custom {
+	h4 + p {
+	  margin-top: px-to-rem(24px);
+	}
+
+	h4 + .list {
+	  margin-top: px-to-rem(24px);
+	}
+  }
+  .pricing-pack {
+	padding: px-to-rem(20px, 15px);
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .table-custom td {
+	padding: px-to-rem(40px, 15px);
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .table-wrap {
+	padding: px-to-rem(87px, 60px);
+  }
+  .pricing-pack {
+	min-width: px-to-rem(280px);
+  }
+}

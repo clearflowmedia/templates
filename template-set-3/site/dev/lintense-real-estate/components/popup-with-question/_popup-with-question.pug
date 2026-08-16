@@ -1,0 +1,14 @@
+// Popup with question
+#popup-with-question.popup.text-center.modal.shake( tabindex='-1', role='dialog' )
+	.modal-dialog( role='document' )
+		.modal-content
+			button.close( type='button', data-dismiss='modal', aria-label='Close' )
+				span( aria-hidden='true' ) ×
+			.modal-body
+				h5 We Need to Verify Your Age
+				h4.text-secondary.mt-2 Are You 18 or Older?
+				.offset-xs.group-20
+					a.btn.btn-rect.btn-primary.btn-nuka( href='#' ) Yes
+						span.btn-overlay
+					a.btn.btn-rect.btn-primary-light.btn-nuka( href='#' ) No
+						span.btn-overlay

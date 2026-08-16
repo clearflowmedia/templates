@@ -1,0 +1,30 @@
+include ../counter/_counter
+
+// How We Work
+section.section.section-lg.bg-primary.context-dark
+	.container
+		.row.row-30.justify-content-between.align-items-center
+			.col-md-6
+				h6 recent statistics
+				h3 Our charitable organization has helped children and adults all over the world to reduce poverty.
+				h5 Taker a look at some of our organization’s facts and numbers showing what we have achieved.
+			.col-xl-5.col-md-6
+				.row.row-40.justify-content-sm-between
+					.col-xs-6
+						+counter-default({
+							prefix: '$',
+							value: '10',
+							postfix: 'M+',
+							title: 'Annual donations'
+						})
+					.col-xs-5
+						+counter-default({
+							value: '85',
+							title: 'Programs'
+						})
+					.col-xs-6
+						+counter-default({
+							value: '785',
+							postfix: '+',
+							title: 'Volunteers worldwide'
+						})

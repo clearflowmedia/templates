@@ -1,0 +1,32 @@
+include ../service/_service
+
+// Services
+section#our-mission.section.section-lg.bg-transparent
+	.container
+		.row
+			.col-xl-9
+				h2 At Lintense, we provide practical, tangible help that makes an immediate difference to people in need worldwide
+		.row.justify-content-end
+			.col-xl-10
+				h5 Lintense Charity steps in where health care ends, providing direct help to people with special needs. For over 30 years, we have ensured that everyone has the support to reach their potential and thrive. Since our foundation, we have distributed more than $30 million in funding to families and organizations in communities.
+		.row.justify-content-center
+			.col-xl-8
+				.row.row-xxl-40.row-30
+					.col-md-6
+						+service({
+							img: 'icon-01-85x85.png',
+							title: 'Become a volunteer',
+							text: 'If you want to positively impact lives of children and adults in need, the best way to start is volunteering at Lintense.'
+						})
+					.col-md-6
+						+service({
+							img: 'icon-02-85x85.png',
+							title: 'Donate',
+							text: 'Even small donations matter, so consider donating today to change lives worldwide tomorrow.'
+						})
+					.col-md-6
+						+service({
+							img: 'icon-03-85x85.png',
+							title: 'Get involved',
+							text: 'Besides volunteering and donating, there are lots of other ways to get involved. Contact us to find out more.'
+						})

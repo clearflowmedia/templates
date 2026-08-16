@@ -1,0 +1,28 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.google-map {
+	color: #616161;
+	height: 240px;
+	width: 100%;
+
+	img {
+		margin-top: 0;
+		vertical-align: top;
+	}
+}
+
+* + .google-map-container { margin-top: px-to-rem( 40px * $xs-multiplier ) }
+
+@include media-breakpoint-up(lg) {
+	* + .google-map-container { margin-top: px-to-rem( 40px * $lg-multiplier ) }
+}
+
+@include media-breakpoint-up(xxl) {
+	* + .google-map-container { margin-top: px-to-rem( 40px ) }
+}

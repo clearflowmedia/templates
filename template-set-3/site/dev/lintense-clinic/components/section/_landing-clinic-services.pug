@@ -1,0 +1,101 @@
+include  ../service/_service
+
+// Our Services
+section#services.section.section-lg.position-relative.pb-1
+	.bg-layer.bg-primary-light( style='bottom: 28%' )
+	.container
+		.text-center( data-animate!={class: 'fadeInUp'} )
+			h2 Our Services
+			p.lead We offer complete healthcare to individuals with various health concerns.
+		.owl-carousel.owl-style-1(
+			data-owl={
+				dots: true,
+				responsive: {
+					480: {
+						items: 2
+					},
+					768: {
+						items: 3
+					},
+					992: {
+						items: 4
+					},
+					1600: {
+						items: 4,
+						margin: 50
+					}
+				}
+			}
+		)
+			+service({
+				img:        'image-02-280x200',
+				bodyClass:  'bg-primary context-dark',
+				title:      'Imaging & <br>Diagnostics',
+				text:       'Medical provides a comprehensive array of diagnostic/imaging services.'
+			}).block.block-sm.block-center
+			+service({
+				img:        'image-03-280x200',
+				title:      'Rehabilitation <br>Services',
+				titleClass: 'text-secondary',
+				text:       'Rehabilitation can help you speed your recovery and improve your life.'
+			}).block.block-sm.block-center
+			+service({
+				img:        'image-04-280x200',
+				bodyClass:  'bg-700 text-400 context-dark',
+				title:      'Cardiology <br>Services',
+				text:       'Our cardiologists are ready to help you treat any cardiovascular condition.'
+			}).block.block-sm.block-center
+			+service({
+				img:        'image-05-280x200',
+				title:      'Neurological <br>Treatment',
+				titleClass: 'text-secondary',
+				text:       'Our team delivers comprehensive care for nervous system disorders.'
+			}).block.block-sm.block-center
+			+service({
+				img:        'image-06-280x200',
+				bodyClass:  'bg-primary context-dark',
+				title:      'Cancer Care <br>Programs',
+				text:       'Our professionals work to help treat cancer and ease stress on patients.'
+			}).block.block-sm.block-center
+			+service({
+				img:        'image-07-280x200',
+				title:      'Orthopedic <br>Services',
+				titleClass: 'text-secondary',
+				text:       'Our orthopedicians will diagnose your problem and develop a unique care plan.'
+			}).block.block-sm.block-center
+			+service({
+				img:        'image-08-280x200',
+				bodyClass:  'bg-700 text-400 context-dark',
+				title:      'Pediatric <br>Services',
+				text:       'We offer a wide variety of services to help your child maintain a good health.'
+			}).block.block-sm.block-center
+			+service({
+				img:        'image-09-280x200',
+				title:      'Medical/Surgical <br>Care',
+				titleClass: 'text-secondary',
+				text:       'Our attentive staff cares 24/7 for patients who have undergone surgery.'
+			}).block.block-sm.block-center
+			+service({
+				img:        'image-10-280x200',
+				bodyClass:  'bg-primary context-dark',
+				title:      'Emergency Care <br>and Procedures',
+				text:       'Quick medical care for those urgent times when you can’t see your doctor.'
+			}).block.block-sm.block-center
+			+service({
+				img:        'image-11-280x200',
+				title:      'Heart Care <br>Programs',
+				titleClass: 'text-secondary',
+				text:       'We provide everything you need to maintain a healthy heart at all times.'
+			}).block.block-sm.block-center
+			+service({
+				img:        'image-12-280x200',
+				bodyClass:  'bg-700 text-400 context-dark',
+				title:      'Pregnancy & <br>Child Birth',
+				text:       'Delivering the best pregnancy and childbirth experience for women.'
+			}).block.block-sm.block-center
+			+service({
+				img:        'image-13-280x200',
+				title:      'Laboratory <br>Analysis',
+				titleClass: 'text-secondary',
+				text:       'Our laboratory provides testing in hematology, coagulation, blood gas etc.'
+			}).block.block-sm.block-center

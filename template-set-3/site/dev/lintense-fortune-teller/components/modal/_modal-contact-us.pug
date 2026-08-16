@@ -1,0 +1,29 @@
+include ../lin-icon/_lin-icon
+
+// Modal
+#modal-contacts.modal.fade( tabindex='-1', role='dialog' )
+	.modal-dialog.modal-lg( role='document' )
+		.modal-content
+			.modal-body
+				h6 Contact Us
+				h2 Get in touch with us
+				p.lead If you have a question or a testimonial for us, feel free to contact us using the form below.
+				//RD Mailform
+				form.rd-mailform( data-form-output='form-output-global', data-form-type='contact', method='post', action='components/rd-mailform/rd-mailform.php' )
+					.row.row-20.gutters-20
+						.col-xs-6
+							.form-group
+								input.form-control( type='text', name='name', placeholder='Your name *', data-constraints='@Required' )
+						.col-xs-6
+							.form-group
+								input.form-control( type='email', name='email', placeholder='Your e-mail address *', data-constraints='@Email @Required' )
+						.col-12
+							.form-group
+								textarea.form-control( name='question', placeholder='Your question', rows='5', data-constraints='@Required' )
+						.col-12
+							button.btn.btn-primary( type='submit' ) Send
+
+			button.close( type='button', data-dismiss='modal', aria-label='Close' )
+				span( aria-hidden='true' ) ×
+
+#form-output-global.form-output.snackbar.snackbar-secondary

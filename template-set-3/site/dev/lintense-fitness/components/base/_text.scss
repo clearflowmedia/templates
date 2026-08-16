@@ -1,0 +1,19 @@
+// Text styling
+
+
+// Context dark
+.context-dark {
+  @extend %context-dark;
+}
+%context-dark {
+	& {
+    color: $gray-500;
+  }
+	#{headings()} {
+		color: $gray-200;
+	}
+
+	.text-contrast {
+		color: $gray-400;
+	}
+}

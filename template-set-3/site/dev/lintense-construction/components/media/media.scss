@@ -1,0 +1,22 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.media {
+	display: flex;
+	align-items: normal;
+}
+
+.media-body {
+	flex: 1;
+}
+
+// Modifying
+.media-xs {
+	@include group(20px, 15px);
+}

@@ -1,0 +1,39 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.quote {
+	display: flex;
+}
+
+.quote-icon {
+	width: 60px;
+	flex-shrink: 0;
+}
+
+.quote-body {
+	margin-left: 30px;
+
+	@include media-breakpoint-up(xxl) {
+		margin-left: 50px;
+	}
+
+	q {
+		&::before,
+		&::after {
+			display: none;
+		}
+	}
+}
+
+.quote-author {
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-top: 15px;
+}

@@ -1,0 +1,16 @@
+include ../rating/_rating
+
+//- Quote boxed
+	@param {object} data - data object
+	@param {string} data.text - quote text
+	@param {string} data.name - name of author
+	@param {string} data.position - position of author
+mixin quote-boxed( data )
+	// Quote boxed
+	article.quote.quote-boxed&attributes( attributes )
+		+rating.rating-orange.quote-rating
+		.quote-body
+			q.quote-text.h6= data.text
+		.quote-footer.small
+			span.quote-author= data.author
+			time.quote-date( datetime='2020' )= data.date

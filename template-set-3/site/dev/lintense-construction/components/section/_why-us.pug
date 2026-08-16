@@ -1,0 +1,39 @@
+include ../blurb/_blurb
+
+// Why us
+section#whyUs.section.section-lg.bg-transparent.text-center.text-md-start
+	.container
+		.row.row-30.justify-content-between.align-items-center
+			.col-md-7.col-lg-6.col-xl-7
+				.title-custom Why us
+				h2 Building with us is #[br.d-none.d-xl-inline]beneficial in every way
+				p.lead Here are four reasons that define the choice our customers make.
+			.col-md-5.col-lg-4.col-xl-3.text-md-end
+				a.btn( href='tel:#' )
+					span.btn-icon.icomoon-phone
+					span Get a Consultation
+		.row.row-30.row-offset-1
+			.col-xs-6.col-lg-3( data-animate!={ class: 'fadeInUp', delay: '.1s' } )
+				+blurb-default({
+					img: 'icon-architect-48x48.svg',
+					title: 'Qualified specialists',
+					text: 'We have gathered a team of construction experts with years of experience and a proven track record.',
+				})
+			.col-xs-6.col-lg-3( data-animate!={ class: 'fadeInUp', delay: '.2s' } )
+				+blurb-default({
+					img: 'icon-certificate-48x48.svg',
+					title: 'Transparent and <br class="d-none d-xl-inline">stable prices',
+					text: 'At Lintense, we provide services at competitive and affordable prices to all our clients and partners.',
+				})
+			.col-xs-6.col-lg-3( data-animate!={ class: 'fadeInUp', delay: '.3s' } )
+				+blurb-default({
+					img: 'icon-blueprint-48x48.svg',
+					title: 'Quality materials',
+					text: 'In all our construction and renovation projects we use materials of the highest quality to ensure your safety.',
+				})
+			.col-xs-6.col-lg-3( data-animate!={ class: 'fadeInUp', delay: '.4s' } )
+				+blurb-default({
+					img: 'icon-house-48x48.svg',
+					title: 'Streamlined <br class="d-none d-xl-inline">experience',
+					text: 'With over 50 years of industry expertise, our clients trust us with their projects and ideas to get the best results.',
+				})

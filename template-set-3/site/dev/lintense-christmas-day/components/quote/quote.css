@@ -1,0 +1,2 @@
+.quote-author-image {	border-radius: 50%;}.quote-text {	line-height: 1.485;	color: inherit;}* + .quote {	margin-top: 1.875rem;}* + .quote-author-name {	margin-top: 1.875rem;}.quote-minimal-laquo {	color: #F34040;	width: auto;	height: 1em;	font-size: 1.8125rem;}.quote-minimal-laquo path {	fill: currentColor;}@media (min-width: 1600px) {	* + .quote {		margin-top: 2.5rem;	}}
+/*# sourceMappingURL=quote.css.map */

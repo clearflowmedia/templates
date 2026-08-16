@@ -1,0 +1,236 @@
+// Variables
+
+$white:    #FFF;
+$gray-100: #F3F4F7;
+$gray-200: #E9E9EB;
+$gray-300: #C4C4C4;
+$gray-400: #B7B7B7;
+$gray-500: #9BA0AC;
+$gray-600: #777777;
+$gray-700: #333333;
+$gray-800: #192031;
+$gray-900: #111111;
+$black:    #000;
+
+$primary:        #F81D3D;
+$secondary:      #1DC5A3;
+$success:        #77BA21;
+$info:           #138CE4;
+$warning:        #F19711;
+$danger:         #E72660;
+$light:          $gray-100;
+$dark:           $black;
+
+$youtube:  #FE0000;
+$facebook: #4867AA;
+$twitter:  #1EA1F3;
+$linkedin: #3997D0;
+
+
+// Colors shade
+$primary-dark: adjust-color( $primary, $hue: 0deg, $saturation: -15%, $lightness: -7% ); // #D61935
+
+
+// The yiq lightness value
+$yiq-contrasted-threshold:  200;
+
+
+// Body
+$body-color: $gray-600;
+
+
+// Grid breakpoints
+$grid-breakpoints: (
+	xxs: 0,
+	xs: 480px,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1600px
+);
+
+
+// Grid containers
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1200px,
+	xxl: 1320px
+);
+
+
+// Grid columns
+$grid-gutter-width: px-to-rem( 40px );
+$grid-gutter-width-xl: px-to-rem( 50px );
+
+
+// Components
+$border-width:     1px;
+$border-color:     $gray-300;
+
+
+$border-radius:    px-to-rem( 8px );
+$border-radius-lg: px-to-rem( 12px );
+
+$box-shadow-sm:    4px 8px 6px rgba($gray-700, .15);
+$box-shadow:       4px 8px 6px rgba($gray-700, .25);
+$box-shadow-lg:    0 14px 36px rgba($gray-700, .25);
+
+
+// Fonts
+$font-family-base: 'Open Sans', sans-serif;
+$font-family-sec:  'Fredoka One', cursive;
+$font-family-mono: 'IBM Plex Mono', monospace;
+$font-size-base: px-to-rem( 18px );
+$font-size-lg: px-to-rem( 20px );
+$font-size-sm: px-to-rem( 15px );
+$line-height-base: 1.68;
+$line-height-lg: 1.68;
+$line-height-sm: 1.28;
+$font-weight-base: 400;
+
+$h1-font-size: px-to-rem( 124px );
+$h2-font-size: px-to-rem( 64px );
+$h3-font-size: px-to-rem( 48px );
+$h4-font-size: px-to-rem( 36px );
+$h5-font-size: px-to-rem( 30px );
+$h6-font-size: px-to-rem( 24px );
+
+$h1-line-height: 0.862;
+$h5-line-height: 1.18;
+$h6-line-height: 1.18;
+
+$headings-font-family: $font-family-sec;
+$headings-font-weight: 400;
+$headings-line-height: 1.162;
+$headings-color:       $gray-700;
+
+$lead-font-size: $font-size-lg;
+$lead-font-weight: inherit;
+
+$small-font-size: $font-size-sm;
+
+$mark-padding: 0 .1em;
+$mark-bg: $secondary;
+
+$hr-border-color:             rgba($black, .1);
+$hr-border-width:             1px;
+$hr-margin-y: 0;
+
+
+// Links
+$link-color:       $secondary;
+
+
+// Buttons
+$btn-padding-y:        px-to-rem( 13px );
+$btn-padding-x:        px-to-rem( 30px );
+$btn-font-family:      $font-family-sec;
+$btn-font-size:        $font-size-base;
+$btn-line-height:      1.125;
+
+$btn-padding-y-sm:     px-to-rem( 10px );
+$btn-padding-x-sm:     px-to-rem( 20px );
+$btn-font-size-sm:     $font-size-sm;
+$btn-line-height-sm:   1.125;
+
+$btn-padding-y-lg:     px-to-rem( 18px );
+$btn-padding-x-lg:     px-to-rem( 40px );
+$btn-font-size-lg:     $font-size-base;
+$btn-line-height-lg:   1.125;
+
+$btn-border-width:     2px;
+
+$btn-font-weight:      400;
+$btn-box-shadow:       $box-shadow-sm;
+$btn-focus-box-shadow: none;
+$btn-disabled-opacity: .4;
+
+$btn-border-radius:    px-to-rem( 4px );
+$btn-border-radius-sm: $btn-border-radius;
+$btn-border-radius-lg: $btn-border-radius;
+
+
+// Forms
+$label-margin-bottom: .5rem;
+$label-font-size: $font-size-base;
+
+$input-padding-y: px-to-rem( 13px );
+$input-padding-x: px-to-rem( 19px );
+$input-font-size: px-to-rem( 18px );
+$input-font-weight: 400;
+$input-line-height: 1.222;
+
+$input-padding-y-lg: px-to-rem( 18px );
+$input-padding-x-lg: px-to-rem( 30px );
+$input-font-size-lg: $input-font-size;
+$input-line-height-lg: $input-line-height;
+
+$input-bg: $gray-100;
+$input-disabled-bg: rgba( $gray-100, .8 );
+
+$input-color: $gray-700;
+$input-border-color: $input-bg;
+$input-border-width: $border-width;
+
+$input-border-radius: px-to-rem( 2px );
+$input-border-radius-lg: $input-border-radius;
+
+$input-focus-bg: $white;
+$input-focus-color: $gray-700;
+$input-focus-border-color: $gray-200;
+$input-focus-box-shadow: none;
+
+$input-height-border: $input-border-width * 2;
+$input-height: #{$input-font-size * $input-line-height + $input-padding-y * 2 + px-to-rem($input-height-border)};
+$input-height-lg: #{$input-font-size-lg * $input-line-height-lg + $input-padding-y-lg * 2 + px-to-rem($input-height-border)};
+
+$form-grid-gutter-width: 30px;
+
+$input-group-addon-color: $input-focus-color;
+$input-group-addon-bg: $input-bg;
+
+
+// Z-index master list
+$zindex-dropdown:       10;
+$zindex-sticky:         11;
+$zindex-popover:        12;
+$zindex-tooltip:        13;
+$zindex-fixed:          14;
+$zindex-modal-backdrop: 15;
+$zindex-modal:          16;
+
+
+// Badges
+$badge-font-size: px-to-rem(18px);
+$badge-font-weight: 700;
+$badge-padding-y: px-to-rem( 10px );
+$badge-padding-x: px-to-rem( 11px );
+$badge-border-radius: 0;
+
+
+// Tables
+$table-cell-padding: 19px 20px;
+$table-color:        $gray-900;
+$table-accent-bg:    $gray-200;
+
+
+// Modals
+$modal-inner-padding:         px-to-rem( 50px );
+
+$modal-content-border-radius: 0;
+
+$modal-backdrop-bg:           $gray-700;
+$modal-backdrop-opacity:      .4;
+
+$modal-xl:                    px-to-rem( 1140px );
+$modal-lg:                    px-to-rem( 730px );
+$modal-md:                    px-to-rem( 490px );
+
+$modal-fade-transform:        none;
+
+
+// Popups
+$popup-border-radius: px-to-rem( 12px );

@@ -1,0 +1,25 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.quote {
+
+}
+
+
+// Spacing
+* + .quote-author-name {
+	margin-top: px-to-rem( 20px );
+}
+
+// Media
+@include media-breakpoint-up(md) {
+	* + .quote-author-name {
+		margin-top: px-to-rem( 30px );
+	}
+}

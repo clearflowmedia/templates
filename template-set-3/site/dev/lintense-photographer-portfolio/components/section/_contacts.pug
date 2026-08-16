@@ -1,0 +1,28 @@
+// Get in touch
+section.section.section-lg.bg-transparent
+	.container
+		.row.row-30.justify-content-between
+			.col-xl-3
+				h6 Get in touch
+			.col-xl-8
+				h2.text-uppercase Have a question?
+				p.text-uppercase.offset-top-18 Feel free to contact me directly using the form below or call me #[br.d-none.d-xl-block] at any time. I am always happy to help you.
+				form.rd-form.rd-mailform( data-form-output='contact-form', data-form-type='contact', method='post', action='components/rd-mailform/rd-mailform.php', data-animate!={class: 'fadeInUp'} )
+					.row.row-30.row-xl-45.align-items-center.row-fix
+						.col-12
+							.form-group
+								.form-control-wrap
+									input.form-control( type='text', name='name', placeholder='Your name', data-constraints='@Required' )
+						.col-md-6
+							.form-group
+								.form-control-wrap
+									input.form-control( type='text', name='phone', placeholder='Your phone', data-constraints='@Numeric @Required' )
+						.col-md-6
+							.form-group
+								.form-control-wrap
+									input.form-control( type='email', name='email', placeholder='Your email', data-constraints='@Email @Required' )
+					.rd-form-btn.text-left
+						button.link-arrow( type='submit' )
+							span contact me
+							+arrow
+	#contact-form.form-output.snackbar.snackbar-primary

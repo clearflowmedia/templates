@@ -1,0 +1,67 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+@import "../bootstrap/scss/modal";
+
+
+// Base
+.modal {
+	.btn + .btn {
+		margin-top: 0;
+	}
+}
+
+.modal-content {
+	width: calc( 100% - 30px );
+	margin: 30px 15px;
+	border: none;
+	border-radius: $border-radius;
+	background-color: $body-bg;
+}
+
+.modal-dialog {
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.modal-body {
+	padding: px-to-rem( 20px );
+}
+
+.btn-close {
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	font-size: px-to-rem( 32px );
+	line-height: 1;
+	color: $white;
+
+	&:hover {
+		color: $primary;
+	}
+}
+
+
+
+
+@include media-breakpoint-up(sm) {
+	.modal-size-1 {
+		max-width: px-to-rem( 540px );
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.modal-body {
+		padding: px-to-rem(40px);
+	}
+
+	.close {
+		right: auto;
+		left: calc( 100% + 5px );
+	}
+}

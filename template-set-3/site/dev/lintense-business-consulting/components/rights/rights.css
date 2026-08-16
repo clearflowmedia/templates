@@ -1,0 +1,2 @@
+p.rights {	font-size: 16px;	color: #151515;}* + p.rights {	margin-top: 40px;}@media (min-width: 768px) {	* + p.rights {		margin-top: 60px;	}}@media (min-width: 1200px) {	* + p.rights {		margin-top: 85px;	}}p.rights a {	color: inherit;}p.rights a:hover {	color: #5D9D38;}
+/*# sourceMappingURL=rights.css.map */

@@ -1,0 +1,56 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../bootstrap/scss/utilities/position";
+@import "../base/mixins";
+
+.group-programs {
+	@include media-breakpoint-up(lg) {
+		margin-top: 50px;
+	}
+}
+
+.programs {
+	display: flex;
+	align-items: center;
+	padding: 40px 30px;
+	border-radius: 15px;
+	background-color: $white;
+	box-shadow: $box-shadow-lg;
+
+	& + & {
+		margin-top: 30px;
+	}
+}
+
+.programs-body {
+	flex-grow: 1;
+	padding-left: 20px;
+}
+
+.programs-subtitle {
+	font-family: $font-family-sec;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 16px;
+	color: $primary;
+}
+
+.programs-title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 7px;
+
+	> * {
+		color: $headings-color;
+	}
+
+	&:hover {
+		> * {
+			color: $primary;
+		}
+	}
+}

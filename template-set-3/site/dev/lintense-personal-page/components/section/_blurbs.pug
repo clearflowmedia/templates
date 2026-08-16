@@ -1,0 +1,21 @@
+include ../blurb/_blurb
+
+// Blurbs
+section.section.bg-800.context-dark.text-center.novi-bg.novi-bg-image.novi-section-no-padding
+	.row-bordered
+		.row.no-gutters
+			.col-sm-4
+				+blurb({
+					iconClass: 'thin-icon-box',
+					title:     'Branding'
+				})( data-animate!={ class: 'fadeIn' } )
+			.col-sm-4
+				+blurb({
+					iconClass: 'thin-icon-tint',
+					title:     'UI/UX Design'
+				})( data-animate!={ class: 'fadeIn', delay: '.15s' } )
+			.col-sm-4
+				+blurb({
+					iconClass: 'thin-icon-satelite',
+					title:     'Development'
+				})( data-animate!={ class: 'fadeIn', delay: '.3s' } )

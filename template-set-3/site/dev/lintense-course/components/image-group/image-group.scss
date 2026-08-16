@@ -1,0 +1,64 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.image-group-1 {
+	position: relative;
+
+	.layer {
+		position: relative !important;
+	}
+
+	[ class*='image-group-item-' ] {
+		position: absolute;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.image-group-item-1 {
+		pointer-events: none;
+		top: 5%;
+		left: 3%;
+		width: 7.5%;
+	}
+
+	.image-group-item-2 {
+		pointer-events: none;
+		bottom: 5.5%;
+		right: 7.5%;
+		width: 27.5%;
+	}
+}
+
+
+// Media
+@include media-breakpoint-up(md) {
+	.image-group-1 {
+		.image-group-item-1 {
+			top: 33%;
+		}
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.image-group-1 {
+		.image-group-item-1 {
+			left: 8%;
+		}
+	}
+}
+
+@include media-breakpoint-up(xxl) {
+	.image-group-1 {
+		.image-group-item-1 {
+			left: 12%;
+		}
+	}
+}

@@ -1,0 +1,40 @@
+include ../input/_input
+
+section#domain-registration.section.section-lg.bg-primary.context-dark.text-center
+	.container
+		.row.justify-content-center
+			.col-lg-9.col-xl-8( data-animate!={ class: 'fadeInUp' } )
+				h2 Register a domain
+				.offset-xs.lead
+					.group-20.d-inline-flex.flex-wrap.justify-content-center
+						div Popular TLD Options:
+						div
+							.group-10
+								+radio-bordered( {
+									id:   'radio-com',
+									name: 'domainRadio',
+									checked: true
+								} ) .com
+								+radio-bordered( {
+									id:   'radio-net',
+									name: 'domainRadio'
+								} ) .net
+								+radio-bordered( {
+									id:   'radio-org',
+									name: 'domainRadio'
+								} ) .org
+								+radio-bordered( {
+									id:   'radio-biz',
+									name: 'domainRadio'
+								} ) .biz
+								+radio-bordered( {
+									id:   'checkboxradioinfo',
+									name: 'domainRadio'
+								} ) .info
+
+				.offset-md
+					form.rd-mailform.form-inline.justify-content-center.group-20( action='#' )
+						.form-inline-group
+							input.form-control.form-control-lg( type='text', name='domain', placeholder='Enter a desired domain name' )
+						button.btn.btn-lg.btn-dark.btn-nuka( type='submit' ) Search
+							span.btn-overlay

@@ -1,0 +1,17 @@
+//- Post
+	@param {object} data - data object
+	@param {string} data.img - post image
+	@param {string} data.date - post data
+	@param {string} data.title - post title
+	@param {string} data.text - post text
+mixin post( data )
+	article.post.post-simple
+		figure.post-figure&attributes( attributes )
+			a.link-img(href='#')
+				+img(data.img)
+		.post-body
+			.post-meta
+				time( datetime= '2021')= data.date
+			h4.post-title: a(href='#')= data.title
+			p.post-text= data.text
+

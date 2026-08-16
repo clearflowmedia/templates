@@ -1,0 +1,13 @@
+extends ../components/base/_skeleton
+
+block variables
+	-
+		pageName = 'Product popup set',
+		menuPopup[0].title = 'Product popup set',
+		menuPopup[0].link = '#product-popup-set';
+
+block page
+	include ../components/rd-navbar/_rd-navbar-popup
+	include ../components/section/_product-popup-set
+	include ../components/section/_other-popup-sets
+	include ../components/footer/_footer-default

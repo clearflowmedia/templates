@@ -1,0 +1,57 @@
+include ../thumbnail/_thumbnail
+
+// Projects
+section#projects.section.section-lg.bg-transparent.text-center.text-sm-start
+	.container
+		.row.row-20.align-items-end
+			.col-sm-6
+				.title-custom latest Projects
+				h2 Our projects
+			.col-sm-6.text-sm-end
+				.owl-nav-container.pb-sm-2.pb-xxl-3
+	.container.container-wide
+		.owl-carousel.owl-carousel-1(
+			data-items="1",
+			data-sm-items="2",
+			data-lg-items="3",
+			data-xl-items="4",
+			data-xxl-items="4",
+			data-owl!={
+				nav: true,
+				navContainer: '.owl-nav-container'
+		} )
+			+thumbnail-default({
+				img: 'home-01-455x455',
+				title: 'California Mega Mall',
+				caption: 'Building, Mall',
+			})
+			+thumbnail-default({
+				img: 'home-02-410x546',
+				title: 'Residential House at Southward St.',
+				caption: 'Building, House',
+			})
+			+thumbnail-default({
+				img: 'home-03-410x306',
+				title: 'Hearst Center',
+				caption: 'Building, Corporate',
+			})
+			+thumbnail-default({
+				img: 'home-04-455x455',
+				title: 'West Entertainment Center',
+				caption: 'Building, Entertainment',
+			})
+			+thumbnail-default({
+				img: 'home-05-410x306',
+				title: 'Eastwood Hotel',
+				caption: 'Building, Accommodation',
+			})
+			+thumbnail-default({
+				img: 'home-06-410x546',
+				title: 'Westwood Child Center',
+				caption: 'Building, Social',
+			})
+			+thumbnail-default({
+				img: 'home-07-455x455',
+				title: 'Brock Office Center',
+				caption: 'Building, Business',
+			})

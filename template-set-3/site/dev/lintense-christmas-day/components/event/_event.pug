@@ -1,0 +1,21 @@
+//- Event
+	@param {object} data - data object
+	@param {string} data.title - event title
+	@param {string} data.text - event text
+	@param {string} data.time - event time
+mixin event( data )
+	// Event
+	article.event&attributes( attributes )
+		.media.media-md.flex-column.flex-xs-row.align-items-xl-center
+			.media-left
+				a.event-figure( href='#' )
+					+img( data.img ).event-image
+			.media-body
+				.event-title.h6
+					a.event-title-link( href='#' )= data.title
+				.event-text= data.text
+				ul.list.event-list
+					each item in data.list
+						li.list-item.event-list-item
+							span.event-list-item-icon.mdi-information-outline
+							span= item

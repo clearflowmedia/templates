@@ -1,0 +1,2 @@
+.product {	position: relative;}.product-image {	width: 100%;}.product-caption {	position: absolute;	bottom: 0;	left: 0;	width: 100%;	padding: 1.25rem;	background: rgba(15, 60, 124, 0.9);}.product-text {	color: #FFF;}@media (min-width: 480px) {	.product-caption {		padding: 1.875rem;	}}@media (min-width: 1200px) {	.product-caption {		padding: 2.5rem 3.125rem;	}}
+/*# sourceMappingURL=product.css.map */

@@ -1,0 +1,62 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.pricing {
+	text-align: center;
+	padding: px-to-rem( 30px );
+	color: $white;
+	background-color: $secondary;
+	border-radius: $border-radius-lg;
+}
+
+.pricing-title {
+	color: inherit;
+}
+
+.pricing-price {
+	color: inherit;
+}
+
+.pricing-price-prefix {
+	vertical-align: top;
+	font-size: .435em;
+}
+
+
+// Spacing
+* + .pricing-price,
+* + .pricing-list {
+	margin-top: px-to-rem( 18px );
+}
+
+* + .pricing-btn {
+	margin-top: px-to-rem( 20px );
+}
+
+
+// Media
+@include media-breakpoint-down(xs) {
+	.pricing {
+		max-width: 270px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	* + .pricing-btn {
+		margin-top: px-to-rem( 30px );
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.pricing {
+		padding: px-to-rem( 50px, 40px, 60px );
+	}
+}

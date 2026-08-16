@@ -1,0 +1,69 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.event {
+	text-align: left;
+}
+
+.event-image {
+	border-radius: $border-radius;
+}
+
+.event-time {
+	display: flex;
+	align-items: center;
+	color: $secondary;
+	@include group( px-to-rem( 18px ) );
+}
+
+
+// Spacing
+* + .event {
+	margin-top: px-to-rem( 30px );
+}
+
+* + .event-text,
+* + .event-time {
+	margin-top: px-to-rem( 15px );
+}
+
+
+// Contexts
+.desktop {
+	.event-figure {
+		display: block;
+		overflow: hidden;
+		border-radius: $border-radius;
+	}
+
+	.event-image {
+		transition: $transition-base;
+	}
+
+	.event:hover {
+		.event-image {
+			transform: scale( 1.05 );
+		}
+	}
+}
+
+
+// Media
+@include media-breakpoint-between(lg, lg) {
+	.event-image-1 {
+		width: 280px;
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	* + .event-text,
+	* + .event-time {
+		margin-top: px-to-rem( 30px );
+	}
+}

@@ -1,0 +1,45 @@
+include ../service/_service
+// Classes
+section#our-classes.section.section-lg.bg-default
+	.container
+		.row.justify-content-center
+			.col-md-10.col-xl-8.col-xxl-7.text-center
+				h2 Our classes
+				p.lead At Lintense Fitness, we offer a wide range of workouts and classes for everyone. Whatever your goal is, rest assured that our coaches have what you prefer.
+		.row.row-30.row-xxl-50.row-reset
+			.col-md-6.col-lg-4
+				+service({ 
+					title: 'Weight training ',
+					text: 'Make your muscles stronger with weight training at Lintense.',
+					img: 'service-02-390x260'
+				})
+			.col-md-6.col-lg-4
+				+service({
+					title: 'Crossfit',
+					text: 'CrossFit is a conditioning workout made up of high-intensity functional exercises.',
+					img: 'service-01-390x260'
+				})
+			.col-md-6.col-lg-4
+				+service({
+					title: 'Pilates',
+					text: 'Pilates exercises develop the body through constant muscular effort.',
+					img: 'service-03-390x260'
+				})
+			.col-md-6.col-lg-4
+				+service({
+					title: 'Yoga',
+					text: 'Modern yoga helps you boost physical and mental well-being through exercises.',
+					img: 'service-04-390x260'
+				})
+			.col-md-6.col-lg-4
+				+service({
+					title: 'Boxing',
+					text: 'Boxing workouts include intense exercises aimed at strengthening your whole body.',
+					img: 'service-05-390x260'
+				})
+			.col-md-6.col-lg-4
+				+service({
+					title: 'Aerobics',
+					text: 'Aerobics is a great way to build endurance through simple yet effective training.',
+					img: 'service-06-390x260'
+				})

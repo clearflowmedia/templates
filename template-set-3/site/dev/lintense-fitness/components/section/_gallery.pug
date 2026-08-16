@@ -1,0 +1,39 @@
+include ../thumbnail/_thumbnail
+
+// Gallery
+section#gallery.section.section-md.bg-default
+	.container
+		.row.justify-content-center
+			.col-md-10.col-xl-8.col-xxl-7.text-center
+				h2 Our gallery
+				p.lead Take a look at the best moments from the workouts happening at Lintense. In our gallery, we also regularly publish photos from events held at our fitness center.
+		.row.row-15.row-xs-30.row-xxl-50( data-lightgallery )
+			.col-md-4
+				.row.row-15.row-xs-30.row-xxl-50
+					.col-xs-6.col-md-12
+						+thumbnail({
+							img: 'gallery-01-390x620',
+							imgOriginal: 'images/gallery-01-original.jpg'
+						})
+					.col-xs-6.col-md-12
+						+thumbnail({
+							img: 'gallery-04-390x400',
+							imgOriginal: 'images/gallery-04-original.jpg'
+						})
+			.col-md-8
+				.row.row-15.row-xs-30.row-xxl-50
+					.col-xs-6
+						+thumbnail({
+							img: 'gallery-02-390x500',
+							imgOriginal: 'images/gallery-02-original.jpg'
+						})
+					.col-xs-6
+						+thumbnail({
+							img: 'gallery-03-390x500',
+							imgOriginal: 'images/gallery-03-original.jpg'
+						})
+					.col-12
+						+thumbnail({
+							img: 'gallery-05-830x520',
+							imgOriginal: 'images/gallery-05-original.jpg'
+						})

@@ -1,0 +1,9 @@
+mixin pricing( obj )
+	.pricing
+		h3.pricing-title!= obj.title
+		p.pricing-text= obj.text
+		.pricing-price
+			.pricing-currency $
+			.pricing-sum= obj.sum
+		.pricing-button
+			a.btn.btn-primary.d-block( href='#' ) Order now

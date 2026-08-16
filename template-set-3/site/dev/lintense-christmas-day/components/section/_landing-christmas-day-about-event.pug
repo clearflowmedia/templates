@@ -1,0 +1,52 @@
+include ../blurb/_blurb
+
+// About Event
+section#about.section.section-lg.bg-transparent
+	.section-sm-1.position-relative
+		.bg-layer.bg-100.rounded-lg.d-none.d-lg-block( style='left: 50%; right: -30px', data-animate!={ class: 'fadeInRightBig' } )
+		.container
+			.row.row-30.justify-content-md-between
+				.col-md-6.col-lg-4( data-animate!={ class: 'fadeInUp' } )
+					.pr-lg-2.pr-xl-5
+						h2 About Event
+						p Join us to celebrate the biggest event for the whole family this December!
+						p We have prepared a variety of entertaining activities for kids and adults to provide an unforgettable experience of celebrating Christmas the way you want it.
+						a.btn.btn-round.btn-primary.btn-nuka( href='#registration', data-anchor-link ) Book now
+							span.btn-overlay
+				.col-xs-8.col-md-5.col-lg-4( data-animate!={ class: 'fadeInUp' } )
+					.owl-style-1
+						.owl-carousel(
+							data-owl={
+								margin: 1,
+								nav: true
+							}
+						)
+							+img( 'image-03-336x363' )
+							+img( 'image-04-336x363' )
+							+img( 'image-05-336x363' )
+				.col-lg-4
+					.row.row-50
+						.col-6( data-animate!={ class: 'fadeInUp' } )
+							+blurb({
+								icon:  'linearicons-map-marker',
+								title: 'New york, NY',
+								text:  'United Sates'
+							}).pb-5.border-bottom.mr-xs-5.mr-lg-0.mr-xl-4
+						.col-6( data-animate!={ class: 'fadeInUp' } )
+							+blurb({
+								icon:  'linearicons-mic2',
+								title: 'Entertainment',
+								text:  'Great Activities'
+							}).pb-5.border-bottom.mr-xs-5.mr-lg-0.mr-xl-4
+						.col-6( data-animate!={ class: 'fadeInUp' } )
+							+blurb({
+								icon:  'linearicons-users2',
+								title: '1300+ Seats',
+								text:  'Single & VIP'
+							}).mr-xs-5.mr-lg-0.mr-xl-4
+						.col-6( data-animate!={ class: 'fadeInUp' } )
+							+blurb({
+								icon:  'linearicons-calendar-full',
+								title: '24 - 26 Dec',
+								text:  '3 Awesome Days'
+							}).mr-xs-5.mr-lg-0.mr-xl-4

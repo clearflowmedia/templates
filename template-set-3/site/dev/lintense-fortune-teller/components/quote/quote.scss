@@ -1,0 +1,45 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.quote {
+	display: flex;
+	border: 1px solid $primary;
+	padding: 30px 15px;
+	flex-direction: column;
+
+	@include media-breakpoint-up(md) {
+		flex-direction: row;
+		padding: 60px 60px 50px;
+	}
+}
+
+.quote-avatar {
+	flex-shrink: 0;
+}
+
+.quote-body {
+	margin-top: 20px;
+
+	@include media-breakpoint-up(md) {
+		margin-top: 0;
+		margin-left: 40px;
+	}
+}
+
+.quote-text {
+	margin-top: 15px;
+}
+
+.quote-name {
+	font-family: $font-family-sec;
+	font-weight: 600;
+	font-size: 18px;
+	color: $primary;
+	margin-top: 20px;
+}

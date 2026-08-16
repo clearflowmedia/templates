@@ -1,0 +1,24 @@
+include ../lin-icon/_lin-icon
+
+// Intro
+section#about.section.section-lg.section-inset-1.section-one-screen.overlay-white.overlay-07.overlay-md-none.bg-image( style='background-image: url("images/image-01-1920x900.jpg"); background-position-x: right;' )
+	.container.d-flex.flex-column.flex-grow-1
+		.row.align-items-stretch.flex-grow-1
+			.col-md-7.col-lg-6.d-flex.flex-column.justify-content-between
+				div( data-animate!={ class: 'fadeInUp' } )
+					h1 Dr. Robert Thompson
+					h2.text-primary Cardiac surgery expert
+					.offset-xl
+						h4.font-weight-normal.text-600 Director of cardiology dept at St. Francis Hospital
+				.offset-sm( data-animate!={ class: 'fadeInUp' } )
+					.d-inline-block.bg-white.shadow.rounded.py-3.px-4
+						.media.media-sm.align-items-center
+							.media-left
+								+lin-phone.lin-md.lin-calledMe
+							.media-body
+								.h3 P:
+									=' '
+									a( href='tel:#' ) +1 234 567 8901
+								div Consulting hours: 9am to 5 pm on Weekdays
+					.offset-sm
+						p 178 West 27th Street, Suite 527, New York NY 10012

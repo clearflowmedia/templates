@@ -1,0 +1,32 @@
+// Intro
+section#home.section.bg-transparents.section-lg( style='padding-top: 50px' )
+	.container
+		.row.row-30.flex-md-row-reverse
+			.col-md-7( data-animate!={ class: 'fadeInUp' } )
+				article.product
+					+img( 'image-01-720x752' ).product-image
+					.product-caption
+						.product-text.h6 178 West 27th Street, Suite 527,
+							br
+							| New York NY 10012
+			.col-sm-9.col-md-5( data-animate!={ class: 'fadeInUp' } )
+				h1 Top-notch  Villa for your whole family
+				.offset-xxs.block.block-md
+					hr.divider.divider-sm
+					h3.text-800 Welcome to
+						| #[br.d-none.d-sm-block]
+						| your New home!
+					p.small.mt-2 Subscribe and get notified about new properties for you!
+					//RD Mailform
+					form.rd-mailform( data-form-output='contact-form-output', data-form-type='contact', method='post', action='components/rd-mailform/rd-mailform.php' )
+						.form-group
+							input.form-control( type='text', name='name', placeholder='Full name *', data-constraints='@Required' )
+						.form-group
+							input.form-control( type='email', name='email', placeholder='Email address *', data-constraints='@Email @Required' )
+						.form-group
+							input.form-control( type='text', name='phone', placeholder='Phone *', data-constraints='@Required @PhoneNumber' )
+						.offset-xs
+							button.btn.btn-rect.btn-block.btn-primary.btn-nuka( type='submit' ) Get Notified
+								span.btn-overlay
+
+	#contact-form-output.form-output.snackbar.snackbar-secondary

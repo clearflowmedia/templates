@@ -1,0 +1,2 @@
+.footer .logo + * {	margin-top: 1.875rem;}@media (min-width: 992px) {	.footer .logo + * {		margin-top: 3.125rem;	}}.footer a, .footer a:active, .footer a:focus {	color: inherit;}.footer a:hover {	color: #5D9D38;}.footer-contacts + .footer-contacts {	margin-top: 1.9375rem;}.footer-nav-list li + li {	margin-top: 0.75rem;}.footer-rights {	padding: 1.25rem 0rem;}@media (min-width: 992px) {	.footer-rights {		padding: 2.1875rem 0rem;	}}
+/*# sourceMappingURL=footer.css.map */

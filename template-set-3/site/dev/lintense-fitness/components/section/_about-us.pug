@@ -1,0 +1,22 @@
+// About us
+section#about-us.section.section-lg.bg-default
+	.container
+		h2 About us
+		.row.row-30
+			.col-md-6
+				p.lead Lintense Fitness provides a relaxing, open atmosphere for exercise and wellness activities for everyone who cares about their well-being.
+				p Our center gives a warm welcome to all abilities and all age groups and we believe that our friendly atmosphere sets us apart as something special in the world of fitness training. Whether you are old or young, we hope to have something to excite you.
+			.col-md-6.col-xl-5.offset-xl-1
+				.form-box
+					form.rd-mailform( data-form-output='form-output-global', data-form-type='contact', method='post', action='components/rd-mailform/rd-mailform.php' )
+						.form-group
+							input.form-control#contact-name( type='text', name='name', data-constraints='@Required' )
+							label.form-label( for='contact-name')
+								span.icon.fa-user
+								| Your name *
+						.form-group
+							input.form-control#contact-phone( type='text', name='phone', data-constraints='@PhoneNumber @Required' )
+							label.form-label( for='contact-phone')
+								span.icon.fa-phone
+								| Your phone *
+						button.btn.btn-isi( type='submit' ) Book a workout

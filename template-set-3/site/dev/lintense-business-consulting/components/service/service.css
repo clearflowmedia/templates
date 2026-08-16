@@ -1,0 +1,2 @@
+* + .service-title {	margin-top: 1.5625rem;}* + .service-text {	margin-top: 0.625rem;}@media (min-width: 992px) {	* + .service-title {		margin-top: 1.875rem;	}	* + .service-text {		margin-top: 0.9375rem;	}}@media (min-width: 1600px) {	.service {		padding-right: 1.875rem;	}}
+/*# sourceMappingURL=service.css.map */

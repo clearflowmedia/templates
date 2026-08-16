@@ -1,0 +1,81 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+
+
+// Base styles
+.countdown {
+	display: flex;
+	margin: 0 px-to-rem( -20px );
+}
+
+.countdown-block {
+	padding: 0 px-to-rem( 20px );
+}
+
+.countdown-wrap {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.countdown-counter {
+	font-size: px-to-rem( 28px );
+	line-height: 1;
+	letter-spacing: 0.05em;
+}
+
+.countdown-title {
+	font-size: px-to-rem( 16px );
+	text-transform: capitalize;
+}
+
+.countdown-block-seconds {
+	display: none;
+}
+
+
+// Spacing
+* + .countdown {
+	margin-top: px-to-rem( 30px );
+}
+
+
+// Media
+@include media-breakpoint-up(xs) {
+	.countdown-block-seconds {
+		display: block;
+	}
+}
+
+@include media-breakpoint-up(sm) {
+	.countdown-counter {
+		font-size: px-to-rem( 32px );
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.countdown-counter {
+		font-size: px-to-rem( 36px );
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	.countdown-counter {
+		font-size: px-to-rem( 39px );
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.countdown-counter {
+		font-size: px-to-rem( 42px );
+	}
+}
+
+@include media-breakpoint-up(xxl) {
+	.countdown-counter {
+		font-size: px-to-rem( 45px );
+	}
+}

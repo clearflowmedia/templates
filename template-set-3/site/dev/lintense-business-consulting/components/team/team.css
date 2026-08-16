@@ -1,0 +1,2 @@
+.team {	text-align: center;}.team-position {	font-style: italic;	font-weight: normal;	color: #5D9D38;}.team-image + * {	margin-top: 1.25rem;}.team-name + * {	margin-top: 0.3125rem;}@media (min-width: 992px) {	.team-image + * {		margin-top: 1.875rem;	}}
+/*# sourceMappingURL=team.css.map */

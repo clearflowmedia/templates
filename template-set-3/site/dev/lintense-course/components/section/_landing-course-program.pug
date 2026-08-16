@@ -1,0 +1,81 @@
+// Course event
+section#program.section.section-lg.bg-transparent.position-relative
+	+wave-light.wave-light-reverse-y.wave-light-2
+	.container
+		.text-center( data-animate!={ class: 'fadeInUp' } )
+			h1 Course event
+			p.lead Learn more about the event of our upcoming data science course in details.
+		.swiper-container.swiper-slider-1(
+			data-swiper={
+				loop:           false,
+				autoplay:       false,
+				direction:      'vertical',
+				simulateTouch:  false,
+				centeredSlides: true,
+				slidesPerView:  'auto',
+				initialSlide:   2,
+				effect:         'coverflow',
+				coverflowEffect: {
+					rotate:       0,
+					stretch:      280,
+					depth:        80,
+					slideShadows: false
+				}
+			})
+			.swiper-wrapper
+				.swiper-slide
+					article.event
+						.row.row-20
+							.col-md-4.event-left
+								.event-info
+									.event-day
+										span.h1 22
+											=' '
+										span.h2 nd
+									.event-month.h4 September
+									.event-time 10:00 AM — 6:00 PM
+							.col-md-8
+								.event-title.h3 Getting started with Kibana:
+								ul.event-list.list.list-marked.list-secondary.lead
+									li.list-item work basics;
+									li.list-item frameworks of log analysis;
+									li.list-item creating dashboards for monitoring.
+
+				.swiper-slide
+					article.event
+						.row.row-20
+							.col-md-4.event-left
+								.event-info
+									.event-day
+										span.h1 21
+											=' '
+										span.h2 st
+									.event-month.h4 September
+									.event-time 10:00 AM — 6:00 PM
+							.col-md-8
+								.event-title.h3 Working with Google Big Query:
+								ul.event-list.list.list-marked.list-secondary.lead
+									li.list-item work basics and its application in SEO;
+									li.list-item analyzing page success in Big Query;
+									li.list-item LogQ analysis framework in BigQuery.
+
+				.swiper-slide
+					article.event
+						.row.row-20
+							.col-md-4.event-left
+								.event-info
+									.event-day
+										span.h1 20
+											=' '
+										span.h2 th
+									.event-month.h4 September
+									.event-time 10:00 AM — 6:00 PM
+							.col-md-8
+								.event-title.h3 Working with Google Cloud Platform:
+								ul.event-list.list.list-marked.list-secondary.lead
+									li.list-item usage of Google Search Console API;
+									li.list-item introduction to Google Analytics API;
+									li.list-item quick start with the Big Query API.
+
+			//Swiper Pagination
+			.swiper-pagination

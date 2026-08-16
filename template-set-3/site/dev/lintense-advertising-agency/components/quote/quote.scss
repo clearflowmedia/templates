@@ -1,0 +1,67 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+// Quote
+.quote-carousel {
+	position: relative;
+
+	@include media-breakpoint-up(xl) {
+		margin-top: 30px;
+	}
+
+	svg {
+		fill: currentColor;
+	}
+
+	.owl-nav {
+		margin-top: 20px;
+		@include group( 30px );
+
+		@include media-breakpoint-up(sm) {
+			margin-top: 0;
+			position: absolute;
+			right: 0;
+			bottom: 5px;
+		}
+
+		@include media-breakpoint-up(xl) {
+			transform: translateX(35%);
+			@include group( 45px );
+		}
+	}
+}
+
+.quote-icon {
+	@include media-breakpoint-up(sm) {
+		margin-top: -20px;
+	}
+
+	@include media-breakpoint-up(xl) {
+		text-align: right;
+		margin-right: 10px;
+	}
+
+	svg {
+		max-width: 80%;
+		fill: $primary;
+	}
+}
+
+.quote-name {
+	font-weight: 500;
+	line-height: 1.2;
+	margin-top: 30px;
+}
+
+.quote-position {
+	font-size: 20px;
+	color: $primary;
+	text-transform: none;
+	font-weight: 500;
+	line-height: 1.2;
+	margin-top: 3px;
+}

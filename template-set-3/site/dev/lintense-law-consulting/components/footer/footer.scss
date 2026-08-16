@@ -1,0 +1,61 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.footer {
+  padding: 60px 0;
+  @include media-breakpoint-up(md) {
+	padding: 90px 0;
+  }
+  @include media-breakpoint-up(lg) {
+	padding: 100px 0;
+  }
+  @include media-breakpoint-up(xl) {
+  	padding: 110px 0;
+  }
+  @include media-breakpoint-up(xxl) {
+  	padding: 174px 0 120px;
+  }
+  
+}
+.footer-list {
+	font-weight: 400;
+	@include group( px-to-rem( 20px ), px-to-rem( 10px ) );
+
+	> * {
+		display: inline-block;
+	}
+}
+
+.footer-info {
+  font-size: 14px;
+  margin-top: px-to-rem(22px);
+}
+
+.footer-social {
+  li + li {
+	margin-top: px-to-rem(18px);
+  }
+}
+
+.footer-title {
+  & + * {
+	margin-top: px-to-rem(30px);
+  }
+}
+
+.footer-mail-link{
+  margin-top: px-to-rem(10px);
+}
+
+.footer-address {
+  margin-top: px-to-rem(25px);
+}
+
+
+// Spacing

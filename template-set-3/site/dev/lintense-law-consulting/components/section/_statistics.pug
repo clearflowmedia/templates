@@ -1,0 +1,33 @@
+include ../counter/_counter
+
+// Statistics
+section#statistics.section.section-inset-2.bg-default
+	.container
+		.row.row-50
+			.col-md-6.text-center.text-md-left.order-1.order-md-0
+				.box-images
+					+img('statistics-01-390x520').box-images-1
+					+img('statistics-02-280x260').box-images-2
+			.col-xl-5.col-md-6.order-0.orde-md-1
+				.row.row-40.justify-content-sm-between
+					.col-12
+						h6 Statistics
+						h3 Our first-class law solutions support our clients’ interests
+						p.mt-4 Take a look at the recent facts and numbers to find out more about Lintense and how we help our clients.
+					.col-6
+						+counter-default({
+                            value: '35',
+                            title: 'Skilled attorneys',
+                            postfix: '+'
+                        })
+					.col-6
+						+counter-default({
+                            value: '1500',
+                            title: 'Satisfied clients',
+                            postfix: '+'
+                        }).ml-xl-5
+					.col-6
+						+counter-default({
+                            value: '17',
+                            title: 'Years of experience'
+                        })

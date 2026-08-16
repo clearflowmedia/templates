@@ -1,0 +1,43 @@
+include ../blurb/_blurb
+include ../list/_list
+include ../rights/_rights
+
+// Footer
+footer.section.footer.bg-transparent.position-relative
+	.bg-layer.bg-100( style='top: 32%', data-animate!={ class: 'fadeInUpBig' } )
+	.container
+		.footer-main.bg-gradient-rose-primary.context-dark.rounded-lg.position-relative( data-animate!={ class: 'fadeInUp' } )
+			.row.row-30.justify-content-center
+				.col-11.col-md-10.col-lg-4.order-lg-2
+					.footer-title.h5 Get in Touch
+					//RD Mailform
+					form.rd-mailform( data-form-output='form-output-global-2', data-form-type='contact', method='post', action='components/rd-mailform/rd-mailform.php' )
+						.form-group
+							input.form-control( type='text', name='name', placeholder='Name', data-constraints='@Required' )
+						.form-group
+							input.form-control( type='email', name='email', placeholder='Email address', data-constraints='@Email @Required' )
+						.form-group
+							textarea.form-control( name='message', placeholder='Message', rows='5', data-constraints='@Required' )
+						.offset-xxs
+							button.btn.btn-round.btn-nuka.text-primary( type='submit' ) Submit
+								span.btn-overlay
+					#form-output-global-2.form-output.snackbar.snackbar-secondary
+				.col-11.col-md-5.col-lg-4.col-xl-3.order-md-1
+					.footer-title.h5 About Event
+					p Happy Day is an upcoming Christmas Event taking place at NYC Center that guarantees unforgettable impressions for the whole family this holiday season.
+					+list-social
+				.col-11.col-md-5.col-lg-3.d-md-flex.flex-md-column.justify-content-md-between
+					div
+						.footer-title.h5 Address
+						ul.list.footer-contact-list
+							li.list-item
+								a.link.link-inherit.font-weight-normal( href='#' ) 561 Fulton Ave.
+									br
+									| New York, NY, USA
+							li.list-item
+								a.link.link-inherit.font-weight-normal.h5( href='tel:' ) +1 800 456-7890
+							li.list-item
+								a.link.link-inherit.font-weight-normal( href='mailto:' ) info@demolink.org
+					+rights
+
+			+img( 'image-21-514x309.png' ).footer-decor

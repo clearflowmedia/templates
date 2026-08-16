@@ -1,0 +1,2 @@
+.list-marked > .list-item {	padding-left: 1.5rem;}.list-marked > .list-item::before {	display: inline-block;	margin-top: -1px;	margin-left: -1.625rem;	min-width: 1.625rem;	font-family: "Material Design Icons";	font-size: .9em;	content: '\f222';	vertical-align: middle;	color: #ee6451;}.list-marked .list-item + .list-item {	margin-top: 0.9375rem;}.list-marked.h5 {	line-height: 1.2;}* + .list {	margin-top: 15px;}@media (min-width: 992px) {	* + .list {		margin-top: 1.875rem;	}}
+/*# sourceMappingURL=list.css.map */

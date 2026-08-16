@@ -1,0 +1,42 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+// Event
+
+.event {
+  width: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  padding: px-to-rem(20px);
+  border-radius: px-to-rem(6px);
+  box-shadow: $shadow-area-3, $shadow-area-4;
+}
+
+.event-header,
+.event-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.event-footer {
+  padding-top: px-to-rem(20px);
+  border-top: 1px solid $gray-500;
+  * + & {
+    margin-top: px-to-rem(20px);
+  }
+}
+
+.event-time,
+.event-duration {
+  margin-right: px-to-rem(20px);
+}
+
+.event-duration,
+.event-coach {
+  > .icon { margin-right: px-to-rem(10px); }
+}

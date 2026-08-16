@@ -1,0 +1,9 @@
+mixin quote( obj )
+	// Quote boxed
+	article.quote.novi-bg&attributes( attributes )
+		figure.quote-figure
+			+img( obj.img )
+		.quote-body
+			.quote-icon “
+			.quote-text= obj.text
+			.quote-name= obj.name

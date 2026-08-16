@@ -1,0 +1,9 @@
+mixin rating
+	.rating&attributes( attributes )
+		.rating-body
+			.rating-empty
+				+loop( 5 )
+					span.mdi-star
+			.rating-fill( style='width: 90%' )
+				+loop( 5 )
+					span.mdi-star

@@ -1,0 +1,31 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+
+// Box Partner
+.box-partner {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 90px;
+	padding: 0 15px;
+
+	img {
+		transition: $transition-base;
+	}
+
+	a {
+		display: inline-block;
+
+		&:hover {
+			img {
+				transform: scale( .95 );
+				opacity: .9;
+			}
+		}
+	}
+}

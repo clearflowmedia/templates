@@ -1,0 +1,23 @@
+//Modal
+#consultation.modal.fade.text-start(tabindex='-1', role='dialog')
+	.modal-dialog.modal-lg.modal-dialog-centered
+		// Modal content
+		.modal-content
+			.modal-header
+				h4.modal-title Request consultation
+				button.btn-close(type='button', data-bs-dismiss='modal', aria-label='close'): span.icon.mdi.mdi-close
+			.modal-body
+				form.rd-mailform.form-modal( data-form-output='form-output-global', data-form-type='contact', method='post', action='components/rd-mailform/rd-mailform.php' )
+					.form-group
+						input.form-control#contact-name-modal( type='text', name='name', data-constraints='@Required' )
+						label.form-label( for='contact-name-modal')
+							span.icon.fa-user
+							| Your name *
+					.form-group
+						input.form-control#contact-name-phone( type='text', name='phone', data-constraints='@PhoneNumber @Required' )
+						label.form-label( for='contact-name-phone')
+							span.icon.fa-phone
+							| Your phone *
+					button.btn.btn-isi( type='submit' ) Submit
+
+#form-output-global.form-output.snackbar.snackbar-primary

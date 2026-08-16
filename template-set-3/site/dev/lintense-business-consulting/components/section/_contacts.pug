@@ -1,0 +1,12 @@
+// Contacts
+section#contacts.section.section-lg.bg-transparent.text-center
+	.container
+		.row.justify-content-center
+			.col-xl-9
+				h3 Take the next step toward #[br.d-none.d-xl-block] a meaningful career
+				h5.px-xl-2 It’s time to shape your future career path! Sign up to our newsletter to receive weekly tips on recruitment as well as facts about techniques of interacting with HR managers.
+				form.rd-mailform.form-inline.form-inline-center( data-form-output='form-output-subscribe', data-form-type='subscribe', method='post', action='components/rd-mailform/rd-mailform.php' )
+					.form-inline-group
+						input.form-control.form-control-round( type='email', name='email', placeholder='Type your email here', data-constraints='@Email @Required' )
+					button.btn.btn-primary( type='submit' ) Sign up
+				#form-output-subscribe.form-output.snackbar.snackbar-secondary

@@ -1,0 +1,2 @@
+.blurb-icon {	color: #1A1C24;}.blurb-boxed {	min-height: 100%;	padding: 1.875rem 1.25rem;}.blurb-boxed-icon {	color: #1A1C24;}* + .blurb-boxed-title {	margin-top: 1.25rem;}* + .blurb-boxed-text {	margin-top: 0.625rem;}@media (min-width: 768px) {	.blurb-boxed {		padding: 1.875rem;	}	* + .blurb-boxed-title {		margin-top: 1.875rem;	}	* + .blurb-boxed-text {		margin-top: 1.25rem;	}}@media (min-width: 1200px) {	.blurb-boxed {		padding: 3.125rem;	}}
+/*# sourceMappingURL=blurb.css.map */

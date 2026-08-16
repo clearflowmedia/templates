@@ -1,0 +1,2 @@
+.form-label {	position: absolute;	top: calc( 3.44562rem/2);	left: 0;	right: 0;	padding-left: 1.375rem;	padding-right: 1.375rem;	font-size: 1rem;	font-weight: 400;	line-height: 1.18;	color: #525252;	pointer-events: none;	text-align: left;	z-index: 9;	transition: .25s;	will-change: transform;	transform: translateY(-50%);}.form-label.focus {	opacity: 0;}.form-label.auto-fill {	color: #2F2F2F;}
+/*# sourceMappingURL=form-label.css.map */

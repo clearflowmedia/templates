@@ -1,0 +1,62 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+@import "../bootstrap/scss/nav";
+
+
+// Base
+.nav {
+	display: block;
+	white-space: nowrap;
+	scrollbar-width: thin;
+	scrollbar-color: rgba( $gray-400,.3 );
+	overflow-x: auto;
+	overflow-x: overlay;
+	overflow-y: hidden;
+	padding-bottom: px-to-rem( 20px );
+	border-bottom: $border-width solid $border-color;
+
+	&::-webkit-scrollbar {
+		width: 0;
+		height: 0;
+		background: rgba( $gray-400,.3 );
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: rgba( $gray-400, .8);
+	}
+
+	.mobile &,
+	&:hover {
+		&::-webkit-scrollbar {
+			width: 3px;
+			height: 3px;
+		}
+	}
+}
+
+.nav-item {
+	display: inline-block;
+}
+
+.nav-link {
+	white-space: nowrap;
+	color: inherit;
+	padding: px-to-rem( 15px, 20px );
+
+	&.active,
+	&:hover {
+		color: $secondary;
+	}
+
+	> * {
+		color: inherit;
+	}
+
+	> * + * {
+		margin-top: px-to-rem( 2px );
+	}
+}

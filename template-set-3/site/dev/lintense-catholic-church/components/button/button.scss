@@ -1,0 +1,198 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+@import "../bootstrap/scss/button-group";
+
+
+// Base
+.btn {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border: $btn-border-width solid transparent;
+	font-family: $btn-font-family;
+	font-weight: $btn-font-weight;
+	line-height: $btn-line-height,;
+	box-shadow: $btn-box-shadow;
+	background: $white;
+	color: $gray-700;
+	transition: $transition-base;
+    text-transform: uppercase;
+
+	@include button-size(
+		$btn-padding-y,
+		$btn-padding-x,
+		$btn-font-size,
+		$btn-border-radius
+	);
+
+	&:hover,
+	&.hover,
+	&:active,
+	&.active {
+		box-shadow: $btn-focus-box-shadow;
+		text-decoration: none;
+		border-color: transparent;
+		background: $gray-100;
+		color: $gray-700;
+	}
+
+	&:focus,
+	&.focus {
+		outline: 0;
+	}
+
+	&.disabled,
+	&:disabled {
+		opacity: $btn-disabled-opacity;
+		pointer-events: none;
+	}
+
+	&.btn-nuka {
+		&:hover,
+		&.hover,
+		&:active,
+		&.active {
+			background-color: $white;
+			border-color: $white;
+		}
+
+		.btn-overlay {
+			background: adjust-color( $white, $hue: 1deg, $saturation: -7%, $lightness: -5% );
+		}
+	}
+}
+
+// Spacing
+* + .btn,
+* + .btns {
+	margin-top: px-to-rem( 40px );
+}
+
+
+
+// Modifying
+.btn-outline {
+	box-shadow: none;
+	border-color: $white;
+	background: transparent;
+	color: $white;
+
+	&:hover {
+		border-color: $white;
+		background: $white;
+		color: $gray-900;
+	}
+}
+
+.btn-block {
+	display: flex;
+	width: 100%;
+}
+
+.btn-rect {
+	&,
+	&.btn-sm,
+	&.btn-lg {
+		border-radius: 0;
+	}
+}
+
+.btn-round {
+	border-radius: $btn-padding-y * 2 + $btn-font-size * $btn-line-height;
+
+	&.btn-sm {
+		border-radius: $btn-padding-y-sm * 2 + $btn-font-size-sm * $btn-line-height-sm;
+	}
+
+	&.btn-lg {
+		border-radius: $btn-padding-y-lg * 2 + $btn-font-size-lg * $btn-line-height-lg;
+	}
+}
+
+
+// Sizing
+.btn-sm {
+	@include button-size(
+			$btn-padding-y-sm,
+			$btn-padding-x-sm,
+			$btn-font-size-sm,
+			$btn-border-radius-sm
+	);
+	line-height: $btn-line-height-sm;
+}
+
+.btn-lg {
+	@include button-size(
+			$btn-padding-y-lg,
+			$btn-padding-x-lg,
+			$btn-font-size-lg,
+			$btn-border-radius-lg
+	);
+	line-height: 	$btn-line-height-lg;
+}
+
+// Theming
+.btn-primary {
+	@include btn-variant($gray-900, $primary, $primary, $gray-900, $white, $white);
+}
+
+// Outline
+.btn-default-outline {
+	@include btn-variant($primary, transparent, $primary, $gray-900, $primary, $primary);
+}
+
+.btn-light-outline {
+	@include btn-variant($primary-light, transparent, $primary-light, $gray-900, $primary-light, $primary-light);
+}
+
+
+
+// Media
+@include media-breakpoint-up(xxl) {
+	* + .btn,
+	* + .btns {
+		margin-top: px-to-rem( 50px );
+	}
+}
+
+// Button Icon styles
+.btn {
+	&.btn-icon {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		vertical-align: middle;
+		font-size: $btn-font-size;
+		.icon {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			color: inherit;
+		}
+
+		&-left {
+			.icon {
+				padding-right: 11px;
+			}
+		}
+
+		&-right {
+			flex-direction: row-reverse;
+
+			.icon {
+				padding-left: 11px;
+			}
+		}
+	}
+}
+
+
+
+
+// Button effects
+@import "button-nuka";

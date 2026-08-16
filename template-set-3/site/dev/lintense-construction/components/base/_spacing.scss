@@ -1,0 +1,95 @@
+// Elements spacing
+.title-custom + h2 {
+	margin-top: px-to-rem( 34px * $xs-multiplier );
+}
+
+h1 + p {
+	margin-top: px-to-rem( 37px * $xs-multiplier );
+}
+
+h2 + p {
+	margin-top: px-to-rem( 37px * $xs-multiplier );
+}
+
+p + p {
+	margin-top: px-to-rem( 21px * $xs-multiplier );
+}
+
+.logo + p {
+	margin-top: px-to-rem( 52px * $xs-multiplier );
+}
+
+p + img {
+	margin-top: px-to-rem( 30px );
+}
+
+h2 + .lead {
+	margin-top: px-to-rem( 28px * $xs-multiplier );
+}
+
+// Media
+@include media-breakpoint-up(lg) {
+	.title-custom + h2 {
+		margin-top: px-to-rem( 34px * $lg-multiplier );
+	}
+
+	h1 + p {
+		margin-top: px-to-rem( 37px * $lg-multiplier );
+	}
+
+	h2 + p {
+		margin-top: px-to-rem( 37px * $lg-multiplier );
+	}
+
+	p + p {
+		margin-top: px-to-rem( 21px * $lg-multiplier );
+	}
+
+	.logo + p {
+		margin-top: px-to-rem( 52px * $lg-multiplier );
+	}
+
+	p + img {
+		margin-top: px-to-rem( 50px );
+	}
+
+	h2 + .lead {
+		margin-top: px-to-rem( 28px * $lg-multiplier );
+	}
+}
+
+@include media-breakpoint-up( xl ) {
+	p + img {
+		margin-top: px-to-rem( 115px );
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.title-custom + h2 {
+		margin-top: px-to-rem( 34px );
+	}
+
+	h1 + p {
+		margin-top: px-to-rem( 37px );
+	}
+
+	h2 + p {
+		margin-top: px-to-rem( 37px );
+	}
+
+	p + p {
+		margin-top: px-to-rem( 21px );
+	}
+
+	.logo + p {
+		margin-top: px-to-rem( 52px );
+	}
+
+	p + img {
+		margin-top: px-to-rem( 130px );
+	}
+
+	h2 + .lead {
+		margin-top: px-to-rem( 28px );
+	}
+}

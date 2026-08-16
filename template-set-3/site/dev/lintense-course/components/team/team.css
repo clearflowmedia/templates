@@ -1,0 +1,2 @@
+.team-name {	color: #17d69d;}.team-name a:hover {	color: #322153;}.team-text {	max-width: 290px;}* + .team-name {	margin-top: 1.25rem;}* + .team-text {	margin-top: 0.625rem;}@media (max-width: 575.98px) {	.team {		max-width: 290px;	}}@media (min-width: 992px) {	* + .team-name {		margin-top: 1.875rem;	}}@media (min-width: 1600px) {	* + .team-name {		margin-top: 2.5rem;	}	* + .team-text {		margin-top: 1.25rem;	}}
+/*# sourceMappingURL=team.css.map */

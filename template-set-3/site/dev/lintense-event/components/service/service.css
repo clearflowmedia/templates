@@ -1,0 +1,2 @@
+.service {	min-height: 100%;}.service-title-icon {	margin-right: 0.9375rem;	font-weight: 700;	color: #151515;}* + .service-text {	margin-top: 0.9375rem;}.service-boxed {	padding: 1.875rem;	border-radius: 0;	background: #FFF;	box-shadow: none;}@media (min-width: 768px) {	.service {		padding: 2.5rem;	}}
+/*# sourceMappingURL=service.css.map */

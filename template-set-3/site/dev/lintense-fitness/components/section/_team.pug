@@ -1,0 +1,43 @@
+include ../person/_person
+// Team
+section#team.section.section-lg.bg-default
+	.container
+		.row.justify-content-center: .col-md-10.col-xl-8.col-xxl-7.text-center
+			h2 Meet our team members
+			p.lead Lintense is a team of qualified, friendly, and helpful coaches always ready to help you achieve your goals in various types of workouts.
+		.owl-carousel(data-items='1',
+			data-sm-items='2',
+			data-md-items='2',
+			data-lg-items='3',
+			data-xl-items='3',
+			data-autoplay='false'
+			data-owl= {
+				dots: true,
+				autoplayTimeout: 3500
+			}
+		)
+			+person({
+				img: 'team-01-390x575',
+				name: 'Jenny McKinney',
+				position: 'Pilates, coach'
+			})
+			+person({
+				img: 'team-02-390x575',
+				name: 'Liam Wilson',
+				position: 'Fitness trainer'
+			})
+			+person({
+				img: 'team-03-390x575',
+				name: 'Michael Lee',
+				position: 'Boxing, coach'
+			})
+			+person({
+				img: 'team-04-390x575',
+				name: 'Ethan Bell',
+				position: 'Crossfit, coach'
+			})
+			+person({
+				img: 'team-05-390x575',
+				name: 'Annie Smith',
+				position: 'Yoga, coach'
+			})

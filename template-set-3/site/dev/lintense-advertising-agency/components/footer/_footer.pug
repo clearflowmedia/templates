@@ -1,0 +1,36 @@
+include ../logo/_logo
+include ../rights/_rights
+
+footer.footer.bg-100.novi-bg.novi-bg-image
+	.container
+		.footer-top
+			.row.row-40
+				.col-lg-3
+					+logo
+				.col-xs-6.col-md-4.col-lg-3
+					h6.footer-title company
+					ul.footer-list
+						li.footer-list-item: a( href='#' ).footer-list-link About
+						li.footer-list-item: a( href='#' ).footer-list-link Services
+						li.footer-list-item: a( href='#' ).footer-list-link Works
+						li.footer-list-item: a( href='#' ).footer-list-link Partners
+						li.footer-list-item: a( href='#' ).footer-list-link Advantages
+						li.footer-list-item: a( href='#' ).footer-list-link Testimonials
+						li.footer-list-item: a( href='#' ).footer-list-link Contact Us
+				.col-xs-6.col-md-4.col-lg-3
+					h6.footer-title contacts
+					ul.footer-list
+						li.footer-list-item: a( href='mailto:#' ).footer-list-link info@demolink.org
+						li.footer-list-item: a( href='tel:#' ).footer-list-link +1 234 567 8901
+				.col-md-4.col-lg-3
+					h6.footer-title get our newsletter
+					p.small Weekly insights on design & marketing
+					form.rd-mailform.rd-form-inline( data-form-output='form-output-subscribe', data-form-type='subscribe', method='post', action='components/rd-mailform/rd-mailform.php' )
+						input.form-control( type='email', name='email', placeholder='Your email', data-constraints='@Email @Required' )
+						button( type='submit' )
+							svg(width='24', height='24', viewBox='0 0 24 24', xmlns='http://www.w3.org/2000/svg')
+								path(d='M23.9297 12L12.9023 23.0273L11.8477 21.9727L21.0703 12.75H0V11.25H21.0703L11.8477 2.02734L12.9023 0.972656L23.9297 12Z')
+					#form-output-subscribe.form-output.snackbar.snackbar-primary
+		
+		.footer-bottom.text-center
+			+rights.small

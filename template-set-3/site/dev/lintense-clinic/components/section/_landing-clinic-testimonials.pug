@@ -1,0 +1,73 @@
+include  ../quote/_quote
+
+// Quote
+section#reviews.section.section-lg.position-relative.pb-1
+	.bg-layer.bg-secondary-light( style='bottom: 32%' )
+	.container
+		.text-center( data-animate!={ class: 'fadeInUp' } )
+			h2 What Our Patients Say
+			p.lead Read the testimonials by our patients to find out more about our clinic.
+		.row.row-offset-md.justify-content-center
+			.col-xl-10: .mx-3
+				// Owl Carousel
+				.owl-carousel.owl-visible(
+					data-owl={
+						margin: 20,
+						slideTransition: 'linear',
+						autoplayTimeout: 4500,
+						autoplaySpeed: 4500,
+						responsive: {
+							768: {
+								items: 2
+							}
+						}
+					}
+				)
+					+quote-boxed({
+						text:     'I have been here twice in the last month and your doctor diagnosed my problems immediately. Dr. Peters chose the right Doctor for this clinic and Dr. Adams is now my Primary Care physician and I am so happy to have found him!',
+						img:      'persons/person-02-60x60',
+						name:     'Roy Sanders',
+						position: 'Patient'
+					}).quote-boxed-2
+					+quote-boxed({
+						text:     'If you are looking for sound & qualified medical advice and treatment, Medical is definitely the place to go.',
+						img:      'persons/person-03-60x60',
+						name:     'Anna Robinson',
+						position: 'Patient'
+					}).quote-boxed-1
+					+quote-boxed({
+						text:     'Medical is the only place where you can get all healthcare services at once and without any unnecessary payments.',
+						img:      'persons/person-04-60x60',
+						name:     'Craig Edwards',
+						position: 'Patient'
+					})
+					+quote-boxed({
+						text:     'Thank you for providing special care to me & my relatives. You are the best!',
+						img:      'persons/person-05-60x60',
+						name:     'Judith Bell',
+						position: 'Patient'
+					}).quote-boxed-1
+					+quote-boxed({
+						text:     'I love the way doctors at Medical call with test results and talk in plain language that is  easy to understand. It gives me confidence in the care I’m getting. I also like the way I’m greeted each time, it feels like you are really cared of.',
+						img:      'persons/person-06-60x60',
+						name:     'Matthew Wood',
+						position: 'Patient'
+					}).quote-boxed-2
+					+quote-boxed({
+						text:     'The staff at Medical is always smiling and engages in conversation with a humor that makes me feel better.',
+						img:      'persons/person-07-60x60',
+						name:     'Denise Sanders',
+						position: 'Patient'
+					}).quote-boxed-1
+					+quote-boxed({
+						text:     'I have recommended this clinic to many people over the years. I feel like this team really cares for me & my family.',
+						img:      'persons/person-08-60x60',
+						name:     'Peter Morris',
+						position: 'Patient'
+					})
+					+quote-boxed({
+						text:     'The staff here is very thorough and caring, and they treat you like family.',
+						img:      'persons/person-09-60x60',
+						name:     'Janice Allen',
+						position: 'Patient'
+					}).quote-boxed-1

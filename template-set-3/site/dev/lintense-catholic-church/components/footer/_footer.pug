@@ -1,0 +1,37 @@
+include ../logo/_logo
+include ../rights/_rights
+include ../list/_list
+
+// Footer
+footer#contacts.section.footer.bg-default
+	.container
+		.row.row-40
+			.col-md-6( data-animate!={class: 'fadeInLeft'} )
+				+logo
+				.footer-contacts
+					p
+						span.text-primary-light Have questions? <br>
+						a( href='tel:#' ) 123-456-7890
+				.footer-contacts
+					p
+						a( href='#' ) 670 Lafayette Ave, Brooklyn, NY 11216 <br> Mon – Fri: 10am – 6pm
+				.footer-contacts
+					p
+						span.text-primary-light E-mail: <br>
+						a( href='mailto:#' ) mail@demolink.org
+			.col-md-6
+				.row
+					.col-6( data-animate!={class: 'fadeInRight'} )
+						ul.footer-nav-list
+							li: a( href='#' data-custom-scroll-to='#about' ) About
+							li: a( href='#' data-custom-scroll-to='#our-pastor' ) Our Pastor
+							li: a( href='#' data-custom-scroll-to='#join-us' ) Join us
+							li: a( href='#' data-custom-scroll-to='#events' ) Events
+							li: a( href='#' data-custom-scroll-to='#testimonials' ) Testimonials
+							li: a( href='#' data-custom-scroll-to='#contacts' ) Contacts
+					.col-6( data-animate!={class: 'fadeInRight'} )
+						ul.footer-nav-list
+							li: a( href='#' ) Facebook
+							li: a( href='#' ) Instagram
+							li: a( href='#' ) Twitter
+		+rights

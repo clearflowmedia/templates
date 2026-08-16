@@ -1,0 +1,54 @@
+// Base
+.thumbnail-video {
+	.thumbnail-media {
+		position: relative;
+
+		&::before {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: px-to-rem( 32px );
+			height: px-to-rem( 32px );
+			content: '';
+			background-color: $primary;
+		}
+	}
+
+	.thumbnail-icon {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: px-to-rem( 92px );
+		height: px-to-rem( 100px );
+		font-size: px-to-rem( 35px );
+		color: $white;
+		background-color: $secondary;
+		transition: $transition-base;
+
+		&::after {
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			content: '';
+			background: $primary;
+			transform: scale( .2 );
+			opacity: 0;
+			transition: $transition-base;
+		}
+
+		&:hover {
+			background-color: $primary;
+
+			&::after {
+				transform: scale( 1 );
+				opacity: 1;
+			}
+		}
+	}
+}

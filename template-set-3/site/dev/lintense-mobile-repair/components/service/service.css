@@ -1,0 +1,2 @@
+* + .service-title {	margin-top: 27px;}* + .service-text {	margin-top: 20px;}.service-text + * {	margin-top: 20px;}@media (min-width: 768px) {	.service {		max-width: 350px;	}}
+/*# sourceMappingURL=service.css.map */

@@ -1,0 +1,105 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.event {
+	text-align: left;
+	padding: px-to-rem( 35px, 20px );
+	background: $white;
+	box-shadow: $box-shadow;
+}
+
+.event-day {
+	color: $secondary;
+
+	> * {
+		color: inherit;
+	}
+}
+
+
+// Spacing
+* + .event-month {
+	margin-top: px-to-rem( 5px );
+}
+
+* + .event-list {
+	margin-top: px-to-rem( 20px );
+}
+
+
+// Media
+@include media-breakpoint-down(sm) {
+	.event-info {
+		@include group( 15px, 10px );
+
+		> * {
+			display: inline-block;
+		}
+	}
+}
+
+@include media-breakpoint-up(sm) {
+	.event {
+		padding: 5% 4%;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	.event-left {
+		position: relative;
+
+		&::before {
+			position: absolute;
+			content: '';
+			top: 50%;
+			right: 6%;
+			width: 0;
+			height: 86.6%;
+			border-left: 1px solid $gray-200;
+			transform: translateY(-50%);
+		}
+	}
+
+	.event-title {
+		margin-top: px-to-rem( 10px );
+	}
+
+	* + .event-time {
+		margin-top: px-to-rem( 50px );
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	* + .event-time {
+		margin-top: px-to-rem( 65px );
+	}
+}
+
+
+// Contexts
+.swiper-slider-1 {
+	.event {
+		display: flex;
+		align-items: center;
+		height: 330px;
+		width: 100%;
+
+		> * {
+			width: inherit;
+		}
+	}
+
+	.event-list .list-item,
+	.event-title {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		max-width: 100%;
+	}
+}

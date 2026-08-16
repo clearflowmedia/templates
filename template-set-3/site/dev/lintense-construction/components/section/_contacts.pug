@@ -1,0 +1,63 @@
+// Contact us
+section#contacts.section.section-lg.bg-transparent.text-center.text-md-start
+	.container
+		.row.row-30.justify-content-between.align-items-center
+			.col-xl-7
+				.title-custom Get a consultation
+				h2 Any questions you may #[br.d-none.d-xl-inline]have can be resolved here
+				p.lead
+					| Tell us everything about your problem, we'll be glad to help.
+					br
+					| Fill out the form, or if you prefer send us an email.
+		.row.row-40.justify-content-between.row-offset-1
+			.col-md-6.col-xl-5
+				.text-block
+					h5.text-block-title Find us
+					.text-block-text
+						| 2869 University Street
+						br
+						| Seattle, WA
+						br
+						| Washington 98101
+					.text-block-phonelink.h5
+						= 'P: '
+						a( href='tel:#' ) +1 (256) 1087 000
+					.text-block-maillink
+						a( href='mailto:#' ) lintense@demolink.org
+					.text-block-social
+						a.text-block-social-item.icomoon-facebook( href='#' )
+						a.text-block-social-item.icomoon-instagram( href='#' )
+						a.text-block-social-item.icomoon-youtube( href='#' )
+						a.text-block-social-item.icomoon-twitter( href='#' )
+				//Please, add the data attribute data-key="YOUR_API_KEY" in order to insert your own API key for the Google map.
+				//Please note that YOUR_API_KEY should replaced with your key.
+				//Example: <div class="google-map-container" data-key="YOUR_API_KEY">
+				.google-map-container( data-center='Columbus Park, Baxter Street, New York, United State', data-zoom='5', data-icon='images/gmap_marker.png', data-icon-active='images/gmap_marker_active.png', data-styles='[{"featureType":"all","elementType":"all","stylers":[{"hue":"#e7ecf0"}]},{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#636c81"}]},{"featureType":"administrative.neighborhood","elementType":"labels.text.fill","stylers":[{"color":"#636c81"}]},{"featureType":"administrative.land_parcel","elementType":"labels.text.fill","stylers":[{"color":"#ff0000"}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"color":"#f1f4f6"}]},{"featureType":"landscape","elementType":"labels.text.fill","stylers":[{"color":"#496271"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-70}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#c6d3dc"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#898e9b"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"visibility":"simplified"},{"saturation":-60}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#d3eaf8"}]}]' )
+					.google-map
+					ul.google-map-markers
+						li( data-location='Columbus Park, Baxter Street, New York, United State', data-description='Columbus Park, Baxter Street, New York, United State' )
+			.col-md-6
+				h5 Contact us
+				//RD Mailform
+				form.rd-mailform.rd-form( data-form-output='form-output-global', data-form-type='contact', method='post', action='components/rd-mailform/rd-mailform.php' )
+					.form-group( data-animate!={ class: 'fadeInRight', delay: '.1s' } )
+						input.form-control( type='text', name='name', placeholder='Write your name here*', data-constraints='@Required' )
+					.form-group( data-animate!={ class: 'fadeInRight', delay: '.15s' } )
+						input.form-control( type='email', name='email', placeholder='Enter your email*', data-constraints='@Email @Required' )
+					.form-group( data-animate!={ class: 'fadeInRight', delay: '.2s' } )
+						input.form-control( type='text', name='website', placeholder='Write your website here*', data-constraints='@Required' )
+					.form-group( data-animate!={ class: 'fadeInRight', delay: '.25s' } )
+						textarea.form-control( name='comment', placeholder='What would you like to tell us*', data-constraints='@Required' )
+					.form-privacy( data-animate!={ class: 'fadeInRight', delay: '.3s' } )
+						.form-check
+							input#flexCheck.form-check-input( type="checkbox" value="")
+							label.form-check-label( for="flexCheck" )
+								= 'I agree to the '
+								a( href="#" ) Privacy Policy
+								= ' and '
+								a( href='#' ) Terms of Use
+								= ', and want to receive news.'
+					button.form-btn.btn.btn-dark( type='submit', data-animate!={ class: 'fadeInRight', delay: '.35s' } )
+						span.btn-icon.icomoon-email
+						span Send Message
+				#form-output-global.form-output.snackbar.snackbar-primary

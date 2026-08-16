@@ -1,0 +1,43 @@
+include ../quote/_quote
+
+// Testimonials
+section#testimonials.section.section-md.novi-bg.novi-bg-image.bg-secondary
+	.container
+		.row.row-30.quote-wrapper
+			.col-sm-2
+				.quote-icon
+					svg(width='120', height='75', viewBox='0 0 120 75', xmlns='http://www.w3.org/2000/svg')
+						path(d='M120 75H66V33L87 -1.43051e-05H114L102 30H120V75ZM54 75H3.57628e-07V33L21 -1.43051e-05H48L36 30H54V75Z')
+			.col-xl-9.col-sm-10
+				.quote-carousel
+					.owl-carousel.owl-carousel-separate(
+						data-owl!= {
+							nav:          true,
+							autoHeight:   true,
+							navText:     [
+								'<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">\n' +
+									'<path d="M24 12.75H2.92969L12.1523 21.9727L11.0977 23.0273L0.0703125 12L11.0977 0.972656L12.1523 2.02734L2.92969 11.25H24V12.75Z"/>\n' +
+								'</svg>\n',
+								'<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">\n' +
+									'<path d="M23.9297 12L12.9023 23.0273L11.8477 21.9727L21.0703 12.75H0V11.25H21.0703L11.8477 2.02734L12.9023 0.972656L23.9297 12Z"/>\n' +
+								'</svg>\n'
+							]
+						},
+						data-items='1',
+						data-autoplay='false',
+						data-loop='false' )
+						+quote({
+							text: 'The Lintense team has helped turn our SEO around and we are finally seeing positive results. They serve as an extension to our digital marketing team and we have been really satisfied with the quality of their work.',
+							name: 'Peter Smith',
+							position: 'Co-founder, Digitex Ltd.'
+						})
+						+quote({
+							text: 'While we were used to working with a lot of advertising sgencies for different patrs of our campaigns, last year,  after a refgeshingly successful advertising campaign by these guys, we’ve decided to handle all our activities to them.',
+							name: 'Emma Adams',
+							position: 'PR manager, Adams Ltd.'
+						})
+						+quote({
+							text: 'Lintense has consistently provided our team with support that has driven results. This marketing agency has been nothing but professional in all my interactions and is committed to my success.  I look forward to working with them for a long time.',
+							name: 'Wade Warren',
+							position: 'CEO, GTM Technologies'
+						})

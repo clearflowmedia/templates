@@ -1,0 +1,36 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.counter-default {
+	.counter {
+
+	}
+}
+
+.counter-default-main {
+	color: $primary;
+}
+
+.counter-default-title {
+	font-family: $font-family-sec;
+	color: $gray-700;
+	margin-top: 0;
+	font-weight: 700;
+}
+
+.context-dark {
+	.counter-default-main,
+	.counter-default-title {
+		color: $white;
+	}
+}
+
+
+// Layouts
+@import "counter-boxed";

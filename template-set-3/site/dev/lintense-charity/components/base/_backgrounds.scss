@@ -1,0 +1,112 @@
+// Mixins
+@mixin bg-variant($parent, $color) {
+	#{$parent} {
+		background-color: $color;
+	}
+	a#{$parent},
+	button#{$parent} {
+		@include hover-focus {
+			background-color: darken($color, 10%);
+		}
+	}
+}
+
+@mixin bg-adjacent() {
+	&:not([style*='background-']) + &:not([style*='background-']) {
+		padding-top: 0;
+	}
+}
+
+// Bootstrap styles
+@each $color, $value in $theme-colors {
+	@include bg-variant(".bg-#{$color}", $value);
+}
+
+
+.bg-white {
+	background-color: $white;
+}
+
+.bg-transparent {
+	background-color: transparent;
+}
+
+.bg-primary-light {
+	background-color: rgba($primary-light, .6);
+}
+
+
+// Gray backgrounds
+@each $color, $value in $grays {
+	@include bg-variant(".bg-#{$color}", $value);
+
+	.bg-#{$color} {
+		@include bg-adjacent();
+	}
+}
+
+
+// Transparent background
+.bg-transparent {
+	@include bg-adjacent();
+}
+
+
+// Image background
+.bg-image {
+	background-position: center center;
+	background-size: cover;
+}
+
+
+// Colored overlay
+[class*='overlay-'] {
+	&,
+	.container {
+		position: relative;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		pointer-events: none;
+		opacity: .5;
+	}
+}
+
+.overlay {
+	&-08 {
+		&::before {
+			opacity: .8;
+		}
+	}
+
+	&-09 {
+		&::before {
+			opacity: .9;
+		}
+	}
+}
+
+@each $name, $color in $theme-colors {
+	[class*='overlay-#{$name}'] {
+		&::before {
+			background-color: $color;
+		}
+	}
+}
+
+
+// Background layer
+.bg-layer {
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 50%;
+}

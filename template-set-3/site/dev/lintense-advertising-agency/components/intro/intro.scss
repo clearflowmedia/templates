@@ -1,0 +1,75 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+
+// Base
+.intro {
+	position: relative;
+	overflow: hidden;
+}
+
+.intro-content {
+	padding: 150px 0 60px;
+
+	@include media-breakpoint-up(sm) {
+		padding: 250px 0 80px;
+	}
+
+	@include media-breakpoint-up(lg) {
+		padding: 300px 0 80px;
+	}
+
+	@include media-breakpoint-up(xl) {
+		padding: 480px 0 120px;
+	}
+
+	@include media-breakpoint-up(xxl) {
+		padding: 585px 0 173px;
+	}
+}
+
+.intro-figure {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: .25;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center top;
+
+	@include media-breakpoint-up(sm) {
+		left: 50%;
+		opacity: 1;
+	}
+
+	@include media-breakpoint-up(md) {
+		left: 45.5%;
+	}
+}
+
+.intro-link {
+	display: inline-block;
+	color: $gray-800;
+
+	&:hover {
+		color: $primary;
+	}
+
+	* + & {
+		margin-top: 40px;
+
+		@include media-breakpoint-up(xl) {
+			margin-top: 66px;
+		}
+	}
+
+	svg {
+		fill: currentColor;
+	}
+}

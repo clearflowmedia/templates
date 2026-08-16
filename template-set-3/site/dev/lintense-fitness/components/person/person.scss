@@ -1,0 +1,67 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+.person {
+  position: relative;
+	max-width: px-to-rem(390px);
+	margin-left: auto;
+	margin-right: auto;
+  .list-social {
+    display: flex;
+    padding: px-to-rem(10px, 20px);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    border-radius: $border-radius $border-radius 0 0;
+    transform: translateX(-50%);
+    background-color: $secondary;
+    transition: all .2s linear;
+  }
+}
+.person-figure {
+  position: relative;
+  border-radius: $border-radius;
+  box-shadow: -5px -5px 10px rgba($dark,.5), 5px 5px 10px rgba(#ccc,.1);
+  overflow: hidden;
+  & + * {
+    margin-top: px-to-rem(20px);
+  }
+}
+
+.person-img {
+	width: 100%;
+}
+
+.person-name {
+  text-align: center;
+}
+
+.person-position {
+	margin-top: px-to-rem(4px);
+	font-size: px-to-rem(16px);
+  text-align: center;
+	color: $primary;
+}
+
+@include media-breakpoint-up(md) {
+	.person-figure {
+		& + * {
+			margin-top: px-to-rem(20px);
+		}
+	}
+}
+
+.desktop {
+  .person {
+    .list-social {
+      transform: translateX(-50%) translateY(100%);
+    }
+    &:hover .list-social {
+      transform: translateX(-50%) translateY(0%);
+    }
+  }
+}

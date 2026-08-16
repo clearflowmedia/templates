@@ -1,0 +1,39 @@
+include  ../blurb/_blurb
+include  ../lin-icon/_lin-icon
+
+// Why Choose Our Clinic
+section#about.section.section-lg.bg-transparent.pt-md-0
+	.container
+		div( data-animate!={ class: 'fadeInUp' } )
+			h2 Why Choose Our Clinic
+			p.lead Here are a few reasons why Medical is the area's healthcare provider of choice.
+		.row.row-offset-lg.row-30
+			.col-sm-6.col-md-4( data-animate!={ class: 'fadeInUp' } )
+				+blurb({
+					media:      'media-md flex-column',
+					title:      'Professional Doctors',
+					titleClass: 'font-weight-normal text-secondary',
+					text:       'Our clinic hires experienced and nationally certified doctors and nurses.',
+					textClass:  'lead'
+				})
+					+lin-dentist.lin-lg.blurb-icon-svg
+
+			.col-sm-6.col-md-4( data-animate!={ class: 'fadeInUp' } )
+				+blurb({
+					media:      'media-md flex-column',
+					title:      'Family medicine',
+					titleClass: 'font-weight-normal text-secondary',
+					text:       'We provide a wide variety of family medicine services including hospital care.',
+					textClass:  'lead'
+				})
+					+lin-family.lin-lg.blurb-icon-svg
+
+			.col-sm-6.col-md-4( data-animate!={ class: 'fadeInUp' } )
+				+blurb({
+					media:      'media-md flex-column',
+					title:      '24/7 patient support',
+					titleClass: 'font-weight-normal text-secondary',
+					text:       'Our clinic provides extensive medical support and healthcare services 24/7.',
+					textClass:  'lead'
+				})
+					+lin-24-hours.lin-lg.blurb-icon-svg

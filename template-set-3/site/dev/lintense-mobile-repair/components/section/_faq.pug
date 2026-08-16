@@ -1,0 +1,33 @@
+include ../accordion/_accordion
+// FAQ
+section#faq.section.section-lg.bg-primary-light
+	.container
+		.row: .col
+			h2 Frequently asked questions
+			p.lead Here are some of the frequently asked questions submitted by our first-time and regular clients.
+		.row
+			.col: #accordion1.accordion.accordion-flush
+				+accordion-item({
+					parentId: 'accordion1',
+					title: 'How long will it take to fix my phone?',
+				})
+					p Turnaround time is 2-7 days after receiving the phone depending on job and availability of parts. Most jobs are completed within 2-3 days. This does depend on the fault, make of phone, and parts required.
+
+				+accordion-item({
+					parentId: 'accordion1',
+					title: 'Why do the charges differ?',
+				})
+					p Each repair is priced on time taken, type of damage, and any parts needed. Until we assess the damage, we can not know the true cost of repair. A deposit will be taken before we assess the damage.
+
+				+accordion-item({
+					parentId: 'accordion1',
+					title: 'Do I need an appointment?',
+				})
+					p We offer a drop-in service -- no appointments are necessary as we offer a drop-in service on a first come, first served basis. Please bring your phone in at your convenience. If you choose to book online, you can receive a $10 saving, but this does not guarantee you an appointment at this time-- we will advise you on the wait time when you arrive.
+
+				+accordion-item({
+					parentId: 'accordion1',
+					title: 'What happens if you can’t fix my device?',
+					show: true
+				})
+					p If we can't fix your device we will get in touch with you to discuss your options. We can either offer you a replacement device for a cost, or we can return the device to you and refund your service charge.

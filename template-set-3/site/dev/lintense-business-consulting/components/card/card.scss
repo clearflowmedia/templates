@@ -1,0 +1,82 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+// Local variables
+$accordion-default-color: $gray-900;
+$accordion-default-background: $white;
+$accordion-default-border: $gray-300;
+$accordion-default-content-color: $body-color;
+$accordion-default-arrow-color: $white;
+$accordion-default-arrow-background: $primary;
+$accordion-default-shadow: none;
+$accordion-default-border-radius: $border-radius;
+$accordion-default-header-padding: 25px 30px 25px 30px;
+$accordion-default-content-padding: 0 75px 25px nth($accordion-default-header-padding, 4);
+
+// Panel groups
+.card-group-custom {
+	margin-bottom: 0;
+
+	.card-header + .collapse > .card-body,
+	.card-header + .collapse > .list-group {
+		border-top: 0;
+	}
+
+	.card + .card {
+		margin-top: 0;
+	}
+}
+
+.card-group-custom {
+	.card + .card {
+		margin-top: 30px;
+	}
+}
+
+.card-custom {
+	display: block;
+	margin: 0;
+	background: inherit;
+	border: 0;
+	border-radius: 0;
+	box-shadow: none;
+	text-align: left;
+
+	a {
+		display: block;
+	}
+
+	// Panel heading
+	.card-header {
+		padding: 0;
+		border-bottom: 0;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+
+	// Panel contents
+	.card-body {
+		padding: 0;
+		border: 0;
+	}
+
+	.card-title {
+		margin-bottom: 0;
+	}
+}
+
+* + .card-group-custom {
+	margin-top: 35px;
+
+	@include media-breakpoint-up(md) {
+		margin-top: 50px;
+	}
+}
+
+
+// Layouts
+@import "card-default";

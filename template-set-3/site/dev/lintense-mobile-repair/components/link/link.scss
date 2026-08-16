@@ -1,0 +1,33 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+
+
+// Base
+.link-arrow {
+	display: inline-block;
+	font-size: px-to-rem(16px);
+	font-weight: 500;
+	color: $secondary;
+	svg {
+		margin-left: 10px;
+		fill: currentColor;
+	}
+	@include link($secondary, $primary);
+}
+
+.link-primary {
+	@include link($primary, $secondary);
+}
+
+.link-secondary {
+	@include link($secondary, $primary);
+}
+
+.footer-social-link {
+	font-size: px-to-rem(16px);
+	font-weight: 500;
+	@include link($secondary, $primary);
+}

@@ -1,0 +1,45 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+
+// Base
+.figure {
+	display: block;
+	overflow: hidden;
+	img {
+		will-change: transform;
+		transition: $transition-base;
+	}
+	figcaption {
+		text-transform: uppercase;
+		margin-top: 20px;
+		font-weight: 700;
+
+		@include media-breakpoint-up(xl) {
+			margin-top: 30px;
+		}
+	}
+}
+
+
+.figure-1 {
+	@include media-breakpoint-up(sm) {
+		margin-top: 60px;
+	}
+}
+
+.figure-2 {
+	@include media-breakpoint-up(sm) {
+		margin-top: 70px;
+	}
+}
+
+.desktop {
+	.figure:hover img{
+		transform: scale(1.1);
+	}
+}

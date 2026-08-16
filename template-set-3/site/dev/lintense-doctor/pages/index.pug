@@ -1,0 +1,13 @@
+extends ../components/base/_skeleton
+
+block variables
+	- pageName = 'Dr. Robert Thompson';
+
+block page
+	include ../components/rd-navbar/_rd-navbar-doctor
+	include ../components/section/_landing-doctor-intro
+	include ../components/section/_landing-doctor-about-me
+	include ../components/section/_landing-doctor-service
+	include ../components/section/_landing-doctor-testimonials
+	include ../components/section/_landing-doctor-make-an-appointment
+	include ../components/footer/_footer-doctor

@@ -1,0 +1,36 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+
+// Base
+.tab-nav {
+	padding: px-to-rem( 40px, 25px, 50px );
+}
+
+.tab-content {
+	padding: px-to-rem( 20px );
+}
+
+
+// Spacing
+* + .tab {
+	margin-top: px-to-rem( 30px );
+}
+
+
+// Media
+@include media-breakpoint-up(lg) {
+	* + .tab {
+		margin-top: px-to-rem( 40px );
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	* + .tab {
+		margin-top: px-to-rem( 56px );
+	}
+}

@@ -1,0 +1,2 @@
+.box-partner {	display: flex;	align-items: center;	justify-content: center;	height: 90px;	padding: 0 15px;}.box-partner img {	transition: all 0.2s ease-in-out;}.box-partner a {	display: inline-block;}.box-partner a:hover img {	transform: scale(0.95);	opacity: .9;}
+/*# sourceMappingURL=box-partner.css.map */

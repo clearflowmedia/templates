@@ -1,0 +1,24 @@
+// Base
+.btn-store {
+	padding: px-to-rem( 9px, 20px );
+}
+
+.btn-store-text-small {
+	display: block;
+	font-size: px-to-rem( 12px );
+}
+
+.btn-store-text {
+	display: block;
+	font-size: px-to-rem( 16px );
+	text-transform: uppercase;
+}
+
+
+// Media
+@include media-breakpoint-between(xl, xl) {
+	.btn-store {
+		padding-right: px-to-rem( 15px );
+		padding-left: px-to-rem( 15px );
+	}
+}

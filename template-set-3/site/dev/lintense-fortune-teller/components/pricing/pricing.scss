@@ -1,0 +1,54 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+// Base
+.pricing {
+	border: 1px solid $primary;
+	padding: 30px 15px;
+	text-align: center;
+	max-width: 390px;
+	margin-left: auto;
+	margin-right: auto;
+
+	@include media-breakpoint-up(xs) {
+		padding: 50px 30px;
+	}
+
+	@include media-breakpoint-up(xl) {
+		padding: 85px 70px;
+	}
+}
+
+.pricing-title {
+	color: $primary;
+}
+
+.pricing-text {
+	margin-top: 23px;
+}
+
+.pricing-price {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	font-family: $font-family-sec;
+	line-height: 1;
+	font-size: 50px;
+	font-weight: 600;
+	color: $primary;
+	margin-top: 44px;
+}
+
+.pricing-currency {
+	font-size: .4em;
+	margin-right: 5px;
+}
+
+
+.pricing-button {
+	margin-top: 40px;
+}

@@ -1,0 +1,44 @@
+include ../logo/_logo
+include _navigation
+include ../lin-icon/_lin-icon
+
+header.section.page-header
+	//RD Navbar
+	.rd-navbar-wrap
+		nav.rd-navbar.rd-navbar-absolute(
+			data-rd-navbar!={
+				responsive: {
+					1200: { autoHeight: false }
+				}
+			}
+		)
+			.rd-navbar-main-outer
+				.rd-navbar-main
+					//RD Navbar Panel
+					.rd-navbar-panel
+						//RD Navbar Toggle
+						button.rd-navbar-toggle( data-rd-navbar-toggle='.rd-navbar-nav-wrap' ): span
+
+						//RD Navbar Brand
+						.rd-navbar-brand
+							+logo
+
+					.rd-navbar-main-element
+						button.rd-navbar-nav-toggle( data-multitoggle='.rd-navbar-nav-wrap' )
+							svg.icon-fill(width='24' height='25' viewbox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg')
+								path(d='M4 13.7515C4.55228 13.7515 5 13.2995 5 12.7421C5 12.1846 4.55228 11.7327 4 11.7327C3.44772 11.7327 3 12.1846 3 12.7421C3 13.2995 3.44772 13.7515 4 13.7515Z')
+								path(d='M20.06 11.7327H7.94C7.42085 11.7327 7 12.1575 7 12.6815V12.8026C7 13.3267 7.42085 13.7515 7.94 13.7515H20.06C20.5791 13.7515 21 13.3267 21 12.8026V12.6815C21 12.1575 20.5791 11.7327 20.06 11.7327Z' )
+								path(d='M20.06 16.7798H3.94C3.42085 16.7798 3 17.2046 3 17.7286V17.8497C3 18.3738 3.42085 18.7986 3.94 18.7986H20.06C20.5791 18.7986 21 18.3738 21 17.8497V17.7286C21 17.2046 20.5791 16.7798 20.06 16.7798Z')
+								path(d='M20.06 6.68579H3.94C3.42085 6.68579 3 7.1106 3 7.63462V7.75575C3 8.27978 3.42085 8.70458 3.94 8.70458H20.06C20.5791 8.70458 21 8.27978 21 7.75575V7.63462C21 7.1106 20.5791 6.68579 20.06 6.68579Z' )
+
+						.rd-navbar-nav-wrap
+							+navigation( menu )
+						//RD Navbar Search
+						.rd-navbar-search
+							button.rd-navbar-search-toggle.rd-navbar-fixed-element-1( data-rd-navbar-toggle='.rd-navbar-search' ): span
+								+lin-search.rd-navbar-search-toggle-icon
+							form.rd-search( action='#' )
+								.form-group
+									input.form-control.rd-navbar-search-form-input( id='rd-navbar-search-form-input', type='text', name='s', placeholder='Enter search keyword', autocomplete='off' )
+									button.rd-search-form-submit( type='submit' )
+										+lin-search

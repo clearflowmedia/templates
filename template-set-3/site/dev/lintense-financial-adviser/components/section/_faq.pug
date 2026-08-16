@@ -1,0 +1,34 @@
+include ../card/_card
+
+// FAQ
+section.section.section-lg.bg-transparent
+	.container
+		h2 Frequently asked questions
+		h5 Here are some of the frequently asked questions #[br.d-none.d-xl-block] submitted by our first-time and regular clients.
+		#accordion1.accordion.card-group-custom( role='tablist' aria-multiselectable='false' )
+			+card({
+				show:     true,
+				parentId: 'accordion1',
+				title:    'Why should I hire a financial planner to manage my money?'
+			}).card-default( data-animate!={class: 'fadeInUp'} )
+				p A financial planner will be able to connect all of the financial dots in order to provide you with an overall plan to meet your financial goals. He or she should have training and experience in all kinds of financial products and financial aspects of your life – equities, bonds, insurance, taxes, and estate planning – in order to make the right recommendations for your personal situation. A financial planner can also save you thousands of dollars in tax deductions and find higher-yielding investment products at little or no extra risk.
+			+card({
+				parentId: 'accordion1',
+				title:    'How much does a financial planner cost?'
+			}).card-default( data-animate!={class: 'fadeInUp'} )
+				p The fees will vary depending on the education and experience level of the financial planner, and how the fees are assessed. In general, a financial planner will charge based on one of two ways: commission or fee-only. If the planner charges based on commission, the amount will usually be a percentage of each transaction or assets under management. If the compensation structure is fee-only, he or she will typically charge an hourly rate or will quote a specified fee for the services provided.
+			+card({
+				parentId: 'accordion1',
+				title:    'How can I pick a good financial planner?'
+			}).card-default( data-animate!={class: 'fadeInUp'} )
+				p Choose a financial planner who has experience dealing with clients in similar circumstances to yours. You'll also want to make sure that the financial planner has your best interests in mind, and that he or she isn't selling you products that are not suited to your needs. Interview prospective financial planners and ask them about credentials, management strategies, and history of performance. Call up past clients as references.
+			+card({
+				parentId: 'accordion1',
+				title:    'Which certifications should my financial planner have?'
+			}).card-default( data-animate!={class: 'fadeInUp'} )
+				p There are a number of different financial planning certifications. While a financial planning professional can have any of several designations or certifications, at the very least you should make sure that he or she is licensed and in good standing with the licensing authority. Three of the most common designations are:
+				ul.list.list-marked.ml-4.ml-xs-5
+					li.list-item Certified Financial Planner (CFP)
+					li.list-item Chartered Financial Consultant (ChFC)
+					li.list-item Registered Investment Advisor (RIA)
+				p The representatives of all these designations are implied to have proper knowledge & experience in financial planning & advisory.

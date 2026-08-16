@@ -1,0 +1,74 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.quote-body {
+	border-left: 5px solid $primary;
+	padding-left: px-to-rem( 20px );
+}
+
+.quote-text {
+	font-style: italic;
+	color: $secondary;
+}
+
+.quote-author-name {
+	font-weight: 500;
+	color: $gray-700;
+}
+
+.quote-author-position {
+	font-size: 16px;
+}
+
+
+// Spacing
+* + .quote {
+	margin-top: px-to-rem( 30px );
+}
+
+* + .quote-author {
+	margin-top: 50px;
+}
+
+
+// Quote boxed
+.quote-boxed {
+	text-align: left;
+	padding: 50px 25px;
+	background-color: $white;
+	box-shadow: $box-shadow-lg;
+	border-radius: 15px;
+
+	@include media-breakpoint-up(xl) {
+		padding: 60px 35px 54px 50px;
+	}
+
+	.owl-item.active & {
+		box-shadow: $box-shadow-lg;
+	}
+}
+
+.quote-boxed-text {
+	display: inline-block;
+	font-size: 18px;
+	line-height: 1.44;
+
+	@include media-breakpoint-up(xl) {
+		font-size: 22px;
+	}
+
+	&::before {
+		position: relative;
+		display: inline-block;
+		top: 5px;
+		font-size: 66px;
+		line-height: 20px;
+		color: $primary;
+	}
+}

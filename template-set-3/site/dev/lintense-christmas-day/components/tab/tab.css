@@ -1,0 +1,2 @@
+.tab-nav {	padding: 2.5rem 1.5625rem 3.125rem;}.tab-content {	padding: 1.25rem;}* + .tab {	margin-top: 1.875rem;}@media (min-width: 992px) {	* + .tab {		margin-top: 2.5rem;	}}@media (min-width: 1200px) {	* + .tab {		margin-top: 3.5rem;	}}
+/*# sourceMappingURL=tab.css.map */

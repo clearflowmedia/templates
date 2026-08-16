@@ -1,0 +1,65 @@
+// Base
+.quote-1 {
+	position: relative;
+	z-index: 0;
+	overflow: hidden;
+	padding: px-to-rem( 61px * $xs-multiplier, 40px * $xs-multiplier, 106px * $xs-multiplier );
+	background-color: $gray-100;
+	transition: $transition-base;
+	@include quote-author-side;
+
+	&::before {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		z-index: -1;
+		display: block;
+		content: '';
+		height: 100%;
+		background-color: $secondary;
+		transform: translateY( 96% );
+		transition: .6s;
+	}
+
+	&:hover {
+		&::before {
+			transform: translateY( -96% );
+		}
+	}
+
+	.quote-author-img {
+		border-radius: 50%;
+	}
+
+	.quote-text {
+		font-weight: 300;
+		font-style: italic;
+		line-height: 1.35;
+		letter-spacing: normal;
+	}
+
+	.quote-author-name {
+		color: $primary;
+	}
+
+	* + .quote-author { margin-top: px-to-rem( 47px * $xs-multiplier ) }
+}
+
+
+@include media-breakpoint-up( lg ) {
+	.quote-1 {
+		padding: px-to-rem( 61px * $lg-multiplier, 40px * $lg-multiplier, 106px * $lg-multiplier );
+
+		* + .quote-author { margin-top: px-to-rem( 47px * $lg-multiplier ) }
+	}
+}
+
+
+@include media-breakpoint-up( xxl ) {
+	.quote-1 {
+		padding: px-to-rem( 61px, 40px, 106px );
+
+		* + .quote-author { margin-top: px-to-rem( 47px ) }
+	}
+}

@@ -1,0 +1,9 @@
+//- service
+	@param {string} obj.title
+	@param {string} obj.text
+mixin service( obj )
+	article.service&attributes( attributes )
+		+img( obj.img )
+		.service-body
+			h4.service-title= obj.title
+			p.advatage-text= obj.text

@@ -1,0 +1,28 @@
+include ../lin-icon/_lin-icon
+
+// Modal
+#modal-contacts.modal.fade( tabindex='-1', role='dialog' )
+	.modal-dialog.modal-lg( role='document' )
+		.modal-content
+			.modal-body
+				.text-center
+					h6 Join Us
+					h3 Get in touch with us
+				p If you have a question or a testimonial for us, feel free to contact us using the form below.
+				form.rd-mailform.box-form( data-form-output='form-output-global', data-form-type='contact', method='post', action='components/rd-mailform/rd-mailform.php' )
+					.form-group(data-animate!={class: 'fadeInUp'} )
+						input.form-control( type='text', name='name', placeholder='First name', data-constraints='@Required' )
+					.form-group(data-animate!={class: 'fadeInUp'} )
+						input.form-control( type='text', name='lname', placeholder='Last name', data-constraints='@Required' )
+					.form-group(data-animate!={class: 'fadeInUp'} )
+						input.form-control( type='text', name='phone', placeholder='Phone', data-constraints='@Required @PhoneNumber' )
+					.form-group(data-animate!={class: 'fadeInUp'} )
+						input.form-control( type='email', name='email', placeholder='Email', data-constraints='@Required @Email' )
+					.box-btn(data-animate!={class: 'fadeInUp'} )
+						button.btn.btn-primary.btn-block( type='submit' ) register now
+							span.btn-overlay
+
+			button.btn-close( type='button', data-bs-dismiss='modal', aria-label='Close' )
+				span( aria-hidden='true' ) ×
+
+#form-output-global.form-output.snackbar.snackbar-primary

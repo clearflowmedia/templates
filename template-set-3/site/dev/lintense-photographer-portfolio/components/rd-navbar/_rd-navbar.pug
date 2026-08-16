@@ -1,0 +1,20 @@
+include ../logo/_logo
+include _navigation
+include ../lin-icon/_lin-icon
+include ../contacts/contacts
+
+header.section.page-header
+	//RD Navbar
+	.rd-navbar-wrap
+		nav.rd-navbar
+			.rd-navbar-main-outer
+				.rd-navbar-main
+					//RD Navbar Panel
+					.rd-navbar-panel
+						//RD Navbar Brand
+						.rd-navbar-brand
+							+logo
+					.rd-navbar-collapse
+						+contacts.text-right
+						
+			.rd-navbar-collapse-toggle.rd-navbar-fixed-element-1( data-rd-navbar-toggle='.rd-navbar-collapse' ): span

@@ -1,0 +1,29 @@
+include ../lin-icon/_lin-icon
+
+// Modal
+#modal.modal.fade.fadeInUp( tabindex='-1', role='dialog' )
+	.modal-dialog.modal-lg( role='document' )
+		.modal-content.text-center
+			.modal-body
+				+img( 'products/product-01-207x191.png' )
+				h3 Lintense: your #1
+					br
+					| landing page
+				p.lead Improve your business practice today. Enter your e-mail in the form below to download Lintense and discover what your business needs.
+				.offset-xs.block.block-1.block-center
+					form.rd-mailform.form-inline.justify-content-center.group-10( data-form-output='form-output-subscribe', data-form-type='subscribe', method='post', action='components/rd-mailform/rd-mailform.php' )
+						.form-inline-group
+							input.form-control.form-control-round( type='email', name='email', placeholder='Your email address *', data-constraints='@Email @Required' )
+						button.btn.btn-round.btn-primary.btn-nuka( type='submit' ) Download
+							span.btn-overlay
+
+				.offset-sm
+					p.rights
+						| By clicking the button you agree to the
+						| #[a.link.link-primary( href='#' ) Privacy Policy] and
+						| #[a.link.link-primary( href='#' ) Terms and Conditions]
+
+			button.close( type='button', data-dismiss='modal', aria-label='Close' )
+				span( aria-hidden='true' ) ×
+
+#form-output-subscribe.form-output.snackbar.snackbar-secondary

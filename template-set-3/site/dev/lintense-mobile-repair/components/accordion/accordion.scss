@@ -1,0 +1,38 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+@import "../bootstrap/scss/accordion";
+
+.accordion-button {
+	font-size: inherit;
+	font-weight: 500;
+	transition: $transition-base;
+	&:not(.collapsed) {
+		box-shadow: none;
+		padding-bottom: $accordion-padding-y - px-to-rem(10px);
+	}
+}
+.accordion-button::after {
+	display: none;
+}
+
+.accordion-body {
+	max-width: 970px;
+	padding-top: 0;
+}
+
+.accordion-collapse {
+	margin-top: 0;
+}
+
+.accordion-flush .accordion-item:first-child {
+	border-top: 0;
+	margin-top: -$accordion-button-padding-y;
+}
+.accordion-item:last-child {
+	margin-bottom: -$accordion-padding-y;
+}

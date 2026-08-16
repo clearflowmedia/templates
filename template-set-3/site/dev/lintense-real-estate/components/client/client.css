@@ -1,0 +1,2 @@
+.client-classic {	display: inline-block;	transition: .25s ease;}@media (min-width: 992px) {	.desktop .client-classic:hover {		transform: translateY(-10px);	}}
+/*# sourceMappingURL=client.css.map */

@@ -1,0 +1,52 @@
+include ../card/_card
+
+// FAQ
+section#faq.section.section-lg.bg-transparent
+	.container
+		.text-center( data-animate!={ class: 'fadeInUp' } )
+			h2 Answers to your
+				| #[br.d-none.d-xs-block]
+				| frequently asked questions
+			p.lead Take a look at our FAQ section to find answers to the most popular questions.
+		.row.justify-content-center
+			.col-lg-10.col-xl-8
+				#accordion1.accordion.card-group-custom( role='tablist' aria-multiselectable='false' )
+					+card({
+						parentId: 'accordion1',
+						title:    'Do I need multiple domain names?'
+					}).card-default( data-animate!={ class: 'fadeInUp' } )
+						p You usually want to focus your brand-building efforts on a single domain name. Especially if you’re just starting to build an online presence for yourself or your organization, trying to build on multiple domain names can spread your efforts too thin.
+						p However, it can be helpful to purchase additional domain names apart from your primary domain name. For example, if you have a .com, it’s usually a good idea to go ahead and buy the .org version if it is available (and vice versa). It’s also a good idea to buy common misspellings of your primary domain name, or other things people might accidentally type if they were looking for you.
+						p Generally, when you buy these additional domain names, you don’t want to set up whole sites on them — you just want to set up a simple 301 Redirect to your primary domain. (Make sure you set up wildcard redirects so that links to any URL with the wrong domain name will end up in the right place.)
+
+					+card({
+						parentId: 'accordion1',
+						title:    'What are different types of hosting?'
+					}).card-default( data-animate!={ class: 'fadeInUp' } )
+						p There are several general categories of web hosting:
+						ul.list.list-marked.ml-4.ml-xs-5
+							li.list-item Shared Hosting is the most common. This involves many customers sharing a single machine.
+							li.list-item Dedicated server hosting involves the customer having complete use of an actual server.
+							li.list-item Colocation hosting allows the customer to use their own server equipment, and the hosting company rents space in a data center, providing access to power and network connectivity.
+							li.list-item Cloud Hosting is a type of VPS hosting plan in which the Virtual Machines are running on large pools of computing power — dozens or hundreds of machines networked together into a “cloud.”
+
+					+card({
+						parentId: 'accordion1',
+						title:    'Can I host my website on shared hosting?'
+					}).card-default( data-animate!={ class: 'fadeInUp' } )
+						p Usually, yes. The question is whether you want to.
+						p If you are launching a more-or-less basic site which will have limited traffic — such as a personal blog, a homepage for a small offline business, or a website for local non-profit organization — then shared hosting is a great way to go. It will provide all the hosting power you need for up to several hundred visitors a day, for a reasonably low cost.
+						p If you need a website that will work with larger traffic numbers — several thousand a day, especially highly engaged visitors on an interactive site (like a store or web app) — then shared hosting is going to be a terrible experience for you. You would be better off, in that case, with a VPS hosting plan.
+
+					+card({
+						show:     true,
+						parentId: 'accordion1',
+						title:    'How to edit DNS?'
+					}).card-default( data-animate!={ class: 'fadeInUp' } )
+						p Your DNS records are usually managed at your domain registrar, unless you have changed the Name Servers to “point” them to your web hosting company (a common practice).
+						p It is easy to edit your DNS records. There’s usually a link to something like “DNS Records” or “DNS Zone Editor” on the control panel. A DNS record is of the following types:
+						ul.list.list-marked.ml-4.ml-xs-5
+							li.list-item A — the main record, used to identify the IP address that all requests should be sent to;
+							li.list-item CNAME — Used to map one domain onto another;
+							li.list-item MX — Mail exchange, used to identify the mail server for a domain.
+						p For more information on domain management and other questions, feel free to contact our support.

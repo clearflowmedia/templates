@@ -1,0 +1,44 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.footer {
+	.logo + * {
+		margin-top: px-to-rem(30px);
+		@include media-breakpoint-up(lg) {
+			margin-top: px-to-rem(50px);
+		}
+	}
+
+	a {
+		@include link( inherit, $primary );
+	}
+}
+
+.footer-contacts {
+	& + & {
+		margin-top: px-to-rem(31px);
+	}
+}
+
+.footer-nav-list {
+	li + li {
+		margin-top: px-to-rem(12px);
+	}
+}
+
+.footer-rights {
+	padding: px-to-rem(20px, 0);
+}
+
+// Media queries
+@include media-breakpoint-up(lg) {
+	.footer-rights {
+		padding: px-to-rem(35px, 0);
+	}
+}

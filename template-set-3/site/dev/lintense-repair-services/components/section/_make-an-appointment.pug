@@ -1,0 +1,39 @@
+include ../google-map/_google-map
+
+// Make an Appointment
+section#contacts.section.section-map.position-relative
+	//Please, add the data attribute data-key="YOUR_API_KEY" in order to insert your own API key for the Google map.
+	//Please note that YOUR_API_KEY should replaced with your key.
+	//Example: <div class="google-map-container" data-key="YOUR_API_KEY">
+	.google-map-container( data-center='Columbus Park, Baxter Street, New York, United State', data-zoom='5', data-icon='images/gmap_marker.png', data-icon-active='images/gmap_marker_active.png', data-styles='[{"featureType":"all","elementType":"all","stylers":[{"hue":"#e7ecf0"}]},{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#636c81"}]},{"featureType":"administrative.neighborhood","elementType":"labels.text.fill","stylers":[{"color":"#636c81"}]},{"featureType":"administrative.land_parcel","elementType":"labels.text.fill","stylers":[{"color":"#ff0000"}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"color":"#f1f4f6"}]},{"featureType":"landscape","elementType":"labels.text.fill","stylers":[{"color":"#496271"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-70}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#c6d3dc"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#898e9b"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"visibility":"simplified"},{"saturation":-60}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#d3eaf8"}]}]' )
+		.google-map
+		ul.google-map-markers
+			li( data-location='Columbus Park, Baxter Street, New York, United State', data-description='Columbus Park, Baxter Street, New York, United State' )
+	.container.pe-none
+		.row
+			.col-sm-7.col-md-6( data-animate!={ class: 'fadeInUp' } )
+				article.box.pe-auto
+					.box-header.bg-primary.context-dark
+						.box-subtitle.h6 Get a quote from our specialists
+						.box-title.h2 Make an Appointment
+					.box-body
+						.box-text Let’s discuss your remodeling project. Fill in the form to get in touch with us.
+						//RD Mailform
+						form.rd-mailform.box-form( data-form-output='form-output-global', data-form-type='contact', method='post', action='components/rd-mailform/rd-mailform.php' )
+							.form-group
+								input.form-control#contact-name( type='text', name='name', data-constraints='@Required' )
+								label.form-label( for="contact-name" ) Your name
+									span.text-primary &nbsp;*
+							.form-group
+								input.form-control#contact-email( type='email', name='email', data-constraints='@Email @Required' )
+								label.form-label( for="contact-email" ) Your email
+									span.text-primary &nbsp;*
+							.form-group
+								input.form-control#contact-phone( type='text', name='phone', data-constraints='@Required @PhoneNumber' )
+								label.form-label( for="contact-phone" ) Phone number
+									span.text-primary &nbsp;*
+							.box-btn
+								button.btn.btn-round.btn-primary.btn-nuka( type='submit' ) Submit!
+									span.btn-overlay
+
+			#form-output-global.form-output.snackbar.snackbar-secondary

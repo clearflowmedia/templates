@@ -1,0 +1,106 @@
+// Panel default
+.card-default {
+	text-align: left;
+	box-shadow: $accordion-default-shadow;
+	border: 1px solid $accordion-default-border;
+
+	.card-title a,
+	.card-body {
+		background: $accordion-default-background;
+	}
+
+	.card-title a {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+		z-index: 1;
+		padding: 25px 20px 20px;
+		font-size: 20px;
+		font-family: $font-family-sec;
+		line-height: 1.3;
+		color: $accordion-default-color;
+		transition: .3s all ease;
+		border-radius: $accordion-default-border-radius $accordion-default-border-radius 0 0;
+
+		@include media-breakpoint-up(md) {
+			padding: nth($accordion-default-header-padding, 1)  nth($accordion-default-header-padding, 2) 10px  nth($accordion-default-header-padding, 4);
+			font-size: 24px;
+		}
+
+		// Open state
+		.card-arrow {
+			&:after {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+
+		// Collapsed state
+		&.collapsed {
+			border-radius: $accordion-default-border-radius;
+			padding-bottom: 25px;
+			@include media-breakpoint-up(md) {
+				padding-bottom: nth($accordion-default-header-padding ,3);
+			}
+
+			.card-arrow {
+				border-radius: 0 $accordion-default-border-radius $accordion-default-border-radius 0;
+
+				&:after {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+	}
+
+	// Panel arrow
+	.card-arrow {
+		flex-shrink: 0;
+		position: relative;
+		width: 24px;
+		height: 24px;
+		margin-left: 20px;
+		background: $accordion-default-arrow-background;
+		border-radius: 0 $accordion-default-border-radius 0 0;
+		z-index: 2;
+		transition: .33s all ease;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			z-index: 4;
+			transform: translateY(-50%);
+			background: $accordion-default-arrow-color;
+		}
+
+		&::before {
+			width: 14px;
+			height: 2px;
+			right: 5px;
+		}
+
+		&::after {
+			width: 2px;
+			height: 14px;
+			right: 11px;
+		}
+	}
+
+	.collapse {
+		position: relative;
+		z-index: 1;
+		color: $accordion-default-content-color;
+		border-radius: 0 0 $accordion-default-border-radius $accordion-default-border-radius;
+	}
+
+	.card-body {
+		padding: 0 20px 25px;
+		@include media-breakpoint-up(md) {
+			padding: $accordion-default-content-padding;
+		}
+	}
+}

@@ -1,0 +1,67 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.person {}
+
+.person-position {
+	color: $headings-color;
+
+	* + & {
+		margin-top: 15px;
+	}
+}
+
+.person-text {
+	* + & {
+		margin-top: 12px;
+	}
+}
+
+.person-contacts {
+	* + & {
+		margin-top: 20px;
+	}
+}
+
+.person-contacts-link {
+	font-family: $font-family-sec;
+	color: $headings-color;
+
+	a {
+		@include link( inherit, $primary );
+	}
+}
+
+.person-contacts-socials {
+	* + & {
+		margin-top: 7px;
+	}
+}
+
+.person-figure {
+	position: relative;
+}
+
+.person-figure-object {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-52.5%, -9.3%);
+	pointer-events: none;
+	max-width: 127%;
+	display: none;
+
+	@include media-breakpoint-up(md) {
+		display: block;
+	}
+}
+
+.person-figure-img {
+	position: relative;
+}

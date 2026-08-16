@@ -1,0 +1,86 @@
+include ../event/_event
+
+// Event schedule
+section#schedule.section.section-lg.bg-100
+	.container
+		.group-20.d-xs-flex.justify-content-between( data-animate!={ class: 'fadeInUp' } )
+			h2 Event schedule
+			a.btn.btn-round.btn-dark.btn-outline( href='#registration', data-anchor-link ) Book now
+		.tab.bg-white.rounded-lg( data-animate!={ class: 'fadeInUp' } )
+			.row.no-gutters.justify-content-xl-between
+				.col-11.col-xs-10.col-sm-9.col-md-7.col-lg-4.col-xl-3.d-flex
+					#particles-js-2.particles-js
+					.tab-nav.bg-gradient-rose-primary.context-dark.rounded-lg
+						.media.media-xxs
+							.media-left
+								span.mdi-information-outline
+							.media-body
+								p Learn more about the detailed schedule & activities of our event.
+						//Nav tabs
+						ul.nav
+							li.nav-item( role='presentation' )
+								a.nav-link.h6.active.show( href='#tabs-1-1', data-toggle='tab' ) Dec 24
+							li.nav-item( role='presentation' )
+								a.nav-link.h6( href='#tabs-1-2', data-toggle='tab' )  Dec 25
+							li.nav-item( role='presentation' )
+								a.nav-link.h6( href='#tabs-1-3', data-toggle='tab' ) Dec 26
+				.col-lg-8
+					//Tab panes
+					.tab-content.pl-xl-0
+						#tabs-1-1.tab-pane.fade.active.show
+							+event({
+								img:   'image-06-165x166.jpg',
+								title: 'Cookies with Santa',
+								text:  'Bring the little ones for a personal visit with Santa and a professional photo. Warm up with hot chocolate and cookies, and kick off the holiday season with festive crafts.',
+								list:  [ 'New York', 'Dec 24, 2020', 'NYC Center' ]
+							})
+							+event({
+								img:   'image-07-165x166.jpg',
+								title: 'Visit Santa',
+								text:  'Let your children meet Santa and chat with him in the enchanted atmosphere at New York Entertainment Center.',
+								list:  [ 'New York', 'Dec 24, 2020', 'NYC Center' ]
+							})
+							+event({
+								img:   'image-08-165x166.jpg',
+								title: 'Christmas Raffle',
+								text:  'Take part in this year’s Christmas Raffle to win big prizes. There’s a wide range of prizes available for every participant.',
+								list:  [ 'New York', 'Dec 24, 2020', 'NYC Center' ]
+							})
+						#tabs-1-2.tab-pane.fade
+							+event({
+								img:   'image-09-165x166.jpg',
+								title: 'Christmas Festival',
+								text:  'Experience the timeless beauty of our city as you explore the traditional Christmas festival this winter.',
+								list:  [ 'New York', 'Dec 25, 2020', 'NYC Center' ]
+							})
+							+event({
+								img:   'image-10-165x166.jpg',
+								title: 'Christmas Decoration Workshop',
+								text:  'Make your own style of Christmas tree decoration at our workshop this holiday season.',
+								list:  [ 'New York', 'Dec 25, 2020', 'NYC Center' ]
+							})
+							+event({
+								img:   'image-11-165x166.jpg',
+								title: 'Christmas Tree Elegance',
+								text:  'Spectacular Christmas trees line the halls of NY entertainment Center this holiday season.',
+								list:  [ 'New York', 'Dec 25, 2020', 'NYC Center' ]
+							})
+						#tabs-1-3.tab-pane.fade
+							+event({
+								img:   'image-12-165x166.jpg',
+								title: 'Holiday Tasting Event',
+								text:  'Taste the best holiday dishes from cooks and chefs from all over New York at this one-day-only Holiday Tasting Event.',
+								list:  [ 'New York', 'Dec 26, 2020', 'NYC Center' ]
+							})
+							+event({
+								img:   'image-13-165x166.jpg',
+								title: 'Christmas Ice skating',
+								text:  'Bundle up and skate away! All experience levels are welcome at our ice skating rink so bring the entire family!',
+								list:  [ 'New York', 'Dec 26, 2020', 'NYC Center' ]
+							})
+							+event({
+								img:   'image-14-165x166.jpg',
+								title: 'Winter Holiday photo Shoot',
+								text:  'Take part in our annual photo shooting event and get your best holiday photos from professional photographers.',
+								list:  [ 'New York', 'Dec 26, 2020', 'NYC Center' ]
+							})

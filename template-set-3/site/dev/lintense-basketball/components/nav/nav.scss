@@ -1,0 +1,45 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+@import "../bootstrap/scss/nav";
+
+
+// Base
+.nav {
+	display: block;
+	margin-right: px-to-rem( -25px );
+	white-space: nowrap;
+}
+
+.nav-link {
+	font-size: 20px;
+	line-height: 1.2;
+	text-transform: uppercase;
+	padding: 0;
+
+	@include media-breakpoint-up(md) {
+		font-size: 28px;
+	}
+
+	@include media-breakpoint-up(xl) {
+		font-size: 36px;
+	}
+
+	&.active,
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.nav-item {
+	* + & {
+		margin-top: 20px;
+
+		@include media-breakpoint-up(xl) {
+			margin-top: 35px;
+		}
+	}
+}

@@ -1,0 +1,13 @@
+// Subscribe
+section.section.parallax-container( data-parallax-img='images/parallax.jpg' )
+	.parallax-content.section-lg.text-center
+		.container
+			.row: .col.text-center( data-animate!={class: 'fadeInUp'} )
+				h2.text-white Subscribe to our newsletter
+				p Sign up for our weekly newsletter to receive updates and news from our church.
+			.row.justify-content-center: .col-md-8( data-animate!={class: 'fadeInUp'} )
+				form.rd-form.rd-form-inline.rd-mailform( data-form-output='newsletter-sample', data-form-type='subscribe', method='post', action='components/rd-mailform/rd-mailform.php', data-animate!={class: 'fadeInUp'} )
+					.form-wrap
+						input.form-control( type='email', name='email', placeholder='E-mail', data-constraints='@Email @Required' )
+					button.btn.btn-primary( type='submit' ) Subscribe
+#newsletter-sample.form-output.snackbar.snackbar-primary

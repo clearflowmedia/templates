@@ -1,0 +1,45 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.service {
+	min-height: 100%;
+}
+
+.service-title {
+
+}
+
+.service-title-icon {
+	margin-right: px-to-rem( 15px );
+	font-weight: 700;
+	color: $black-2;
+}
+
+
+// Spacing
+* + .service-text {
+	margin-top: px-to-rem( 15px );
+}
+
+
+// Service boxed
+.service-boxed {
+	padding: px-to-rem( 30px );
+	border-radius: 0;
+	background: $white;
+	box-shadow: $box-shadow;
+}
+
+
+// Media
+@include media-breakpoint-up(md) {
+	.service {
+		padding: px-to-rem( 40px );
+	}
+}

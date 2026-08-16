@@ -1,0 +1,40 @@
+include  ../counter/_counter
+
+// Features
+section#features.section.section-md.bg-transparent
+	.container
+		.row.row-50.justify-content-between
+			.col-md-6
+				.box-decoration.box-decoration-2
+					+img( 'image-02-500x660' )
+					.decoration-1.bg-primary
+					.decoration-2
+						svg(viewbox="0 0 157 135" fill="none" xmlns="http://www.w3.org/2000/svg")
+							path(d="M78.5 0L156.009 134.25H0.990723L78.5 0Z" fill="#FFEFF2")
+					.decoration-3.bg-100
+			.col-md-6.col-xl-5
+				h5 Facts about us
+				h3 Details make the difference
+				+counter-default({
+					title:     'Fully completed projects <br class="d-none d-xl-block"> delivered by our specialists.',
+					value:     '1540',
+					postfix:   '+',
+					classMain: 'text-primary'
+				})
+				+counter-default({
+					title:     'A large team of the best specialists.',
+					value:     '56',
+					classMain: 'text-primary'
+				})
+				+counter-default({
+					title:     'Customers who were satisfied with <br class="d-none d-xl-block"> our work.',
+					value:     '2000',
+					postfix:   '+',
+					classMain: 'text-primary'
+				})
+				+counter-default({
+					title:     'Result-oriented, data-driven, and <br class="d-none d-xl-block"> qualified approach.',
+					value:     '100',
+					postfix:   '%',
+					classMain: 'text-primary'
+				})

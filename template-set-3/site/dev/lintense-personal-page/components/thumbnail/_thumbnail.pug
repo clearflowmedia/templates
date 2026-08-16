@@ -1,0 +1,46 @@
+//- Thumbnail
+	@param {object} data - data object
+	@param {string} data.img - thumbnail image
+	@param {string} data.title - thumbnail name
+	@param {string} data.meta - thumbnail meta
+	@param {string} data.text - thumbnail text
+mixin thumbnail( data )
+	// Thumbnail
+	.thumbnail&attributes( attributes )
+		.thumbnail-media
+			+img( data.img ).thumbnail-img
+			.thumbnail-tags
+				each tag in data.tags
+					a.tag( href='#' )= tag
+		if ( data.title )
+			.thumbnail-body
+				.thumbnail-title.h4: a( href='#' )= data.title
+				button.thumbnail-link.h5( data-toggle="modal", data-target= "#modal-project" ) Explore
+
+//- Thumbnail
+	@param {object} data - data object
+	@param {string} data.img - thumbnail image
+mixin thumbnail-video( data )
+	// Thumbnail
+	.thumbnail.thumbnail-video&attributes( attributes )
+		.thumbnail-media
+			+img( data.img ).thumbnail-img
+			a.thumbnail-icon.mdi-play.novi-icon( data-lightgallery!={ selector: 'this' }, href='https://www.youtube.com/embed/3Y_W7hF_J24' )
+
+//- Thumbnail boxed
+	@param {object} data - data object
+	@param {string} data.img - thumbnail image
+	@param {string} data.title - thumbnail name
+	@param {string} data.meta - thumbnail meta
+	@param {string} data.text - thumbnail text
+mixin thumbnail-boxed( data )
+	// Thumbnail
+	.thumbnail.thumbnail-boxed&attributes( attributes )
+		.thumbnail-media
+			+img( data.img ).thumbnail-img
+			.thumbnail-tags
+				each tag in data.tags
+					a.tag( href='#' )= tag
+		.thumbnail-body
+			.thumbnail-title.h5: a( href='#' )= data.title
+			.thumbnail-text= data.text

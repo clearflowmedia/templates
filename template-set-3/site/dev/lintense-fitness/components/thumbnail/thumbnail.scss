@@ -1,0 +1,43 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+
+// Layouts
+.thumbnail {
+
+}
+
+.thumbnail-figure {
+	display: block;
+  border-radius: $border-radius;
+	overflow: hidden;
+	max-height: px-to-rem(195px);
+
+	@include media-breakpoint-up(sm) {
+		max-height: px-to-rem(220px);
+	}
+
+	@include media-breakpoint-up(md) {
+		max-height: none;
+	}
+}
+
+.thumbnail-image {
+	width: 100%;
+	transition: .3s;
+	transform: scale(1.1);
+}
+
+
+// Contexts
+.desktop {
+	.thumbnail:hover {
+		.thumbnail-image {
+			transform: none;
+		}
+	}
+}

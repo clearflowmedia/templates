@@ -1,0 +1,2 @@
+.service {	background-color: #F9F8F6;	border-radius: 0rem;	padding: 30px 15px;}@media (min-width: 576px) {	.service {		padding: 30px 20px;	}}@media (min-width: 1200px) {	.service {		padding: 42px 60px 41px 45px;	}}* + .service-title {	margin-top: 21px;}* + .service-text {	margin-top: 22px;}
+/*# sourceMappingURL=service.css.map */

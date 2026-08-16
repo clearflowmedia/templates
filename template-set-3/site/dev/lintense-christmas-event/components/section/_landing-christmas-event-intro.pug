@@ -1,0 +1,60 @@
+include ../lin-icon/_lin-icon
+include ../countdown/_countdown
+
+// Intro
+section#home.section.swiper-container( style='min-height: 100vh' )
+	.swiper-wrapper
+		.swiper-slide.section-lg.section-lg-1( style='background-image: url( images/image-01-1920x1080.jpg )' )
+			#particles-js-1.particles-js
+			.container
+				.row.row-30.justify-content-between.flex-md-row-reverse
+					.col-xs-11.col-md-7.context-dark
+						h1
+							span.position-relative C
+								+img( 'image-02-195x182.png' ).position-absolute( style='top: -41%; left: -110%; width: 1.573em; max-width: none;' )
+							| hristmas Event for the Whole Family
+						p.lead Get unforgettable impressions from this year’s
+							| #[br.d-none.d-lg-block]
+							| Christmas Event at NY Entertainment Center.
+						+countdown({ from: '2020-03-20', to: '2020-12-01' })
+					.col-xs-9.col-md-5.col-xl-4
+						article.box.bg-primary.context-dark.mt-3
+							h4 Book Your Tickets
+							//RD Mailform
+							form.rd-mailform.box-form( data-form-output='form-output-global', data-form-type='contact', method='post', action='components/rd-mailform/rd-mailform.php' )
+								.form-group
+									input.form-control( type='text', name='first-name', placeholder='First name', data-constraints='@Required' )
+								.form-group
+									input.form-control( type='text', name='last-name', placeholder='Last name', data-constraints='@Required' )
+								.form-group
+									input.form-control( type='text', name='phone', placeholder='Phone number', data-constraints='@Required @PhoneNumber' )
+								.form-group
+									input.form-control( type='email', name='email', placeholder='Email address', data-constraints='@Email @Required' )
+								.box-btn
+									button.btn.btn-block.btn-lg.btn-secondary.btn-nuka( type='submit' ) Register Now!
+										span.btn-overlay
+							.box-text
+								.media.media-xxs.align-items-center
+									.media-left
+										+lin-information.icon.icon-md
+									.media-body.small We do not share your data with third parties and guarantee your privacy.
+		.swiper-slide.section-lg.section-lg-1.bg-primary.context-dark.text-center
+			#particles-js-2.particles-js
+			.container
+				.row.justify-content-center
+					.col-md-10.col-lg-9
+						+img( 'image-04-135x143.png' )
+						h1.mt-1 Best Christmas Experience
+						p.lead Get unforgettable impressions from this year’s
+							| #[br.d-none.d-md-block]
+							| Christmas Event at NY Entertainment Center.
+						a.btn.btn-lg.btn-secondary.btn-nuka( href='#book-tickets', data-anchor-link ) Register now!
+							span.btn-overlay
+
+	// Swiper pagination
+	.swiper-pagination
+	// Swiper navigation
+	.swiper-button-next.d-none.d-xl-block
+	.swiper-button-prev.d-none.d-xl-block
+
+#form-output-global.form-output.snackbar.snackbar-secondary

@@ -1,0 +1,24 @@
+// Get in touch
+section#contacts.section.section-xxl.bg-transparent
+	.container
+		.row.row-30.justify-content-between
+			.col-xl-3
+				h6 Get in touch
+			.col-xl-8
+				h2.text-uppercase Join our club
+				p.text-uppercase.offset-top-15 Feel free to contact us directly using the form below or call us #[br.d-none.d-xl-block] at any time. we are always happy to help you.
+				form.rd-form.rd-mailform( data-form-output='contact-form', data-form-type='contact', method='post', action='components/rd-mailform/rd-mailform.php', data-animate!={class: 'fadeInUp'} )
+					.row.row-30.row-xl-45.align-items-center.row-fix
+						.col-12
+								.form-control-wrap
+									input.form-control( type='text', name='name', placeholder='Your name', data-constraints='@Required' )
+						.col-md-6
+							.form-group
+								.form-control-wrap
+									input.form-control( type='text', name='phone', placeholder='Your phone', data-constraints='@Numeric @Required' )
+						.col-md-6
+							.form-group
+								.form-control-wrap
+									input.form-control( type='email', name='email', placeholder='Your email', data-constraints='@Email @Required' )
+					button.btn.btn-dot(type= 'submit') Send message
+	#contact-form.form-output.snackbar.snackbar-primary

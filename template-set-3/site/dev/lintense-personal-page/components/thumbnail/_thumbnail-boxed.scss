@@ -1,0 +1,57 @@
+// Base
+.thumbnail-boxed {
+	.thumbnail-body {
+		position: relative;
+		z-index: 0;
+		padding: px-to-rem( 30px * $xs-multiplier, 19px * $xs-multiplier );
+		color: rgba( $white, .7 );
+		background-color: $primary;
+		overflow: hidden;
+
+		&::before {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			z-index: -1;
+			display: block;
+			content: '';
+			height: 100%;
+			background-color: $secondary;
+			transform: translateY( 95% );
+			transition: .6s;
+			will-change: transform;
+		}
+
+		&:hover {
+			&::before {
+				transform: translateY( -95% );
+			}
+		}
+	}
+
+	.thumbnail-title {
+		color: $white;
+
+		a:hover {
+			color: $secondary;
+		}
+	}
+}
+
+// Media
+@include media-breakpoint-up( lg ) {
+	.thumbnail-boxed {
+		.thumbnail-body {
+			padding: px-to-rem( 30px * $lg-multiplier, 19px * $lg-multiplier );
+		}
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.thumbnail-boxed {
+		.thumbnail-body {
+			padding: px-to-rem( 30px, 19px, 43px );
+		}
+	}
+}

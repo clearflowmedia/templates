@@ -1,0 +1,26 @@
+include ../blurb/_blurb
+include ../lin-icon/_lin-icon
+
+// Who will benefit
+section.section.section-lg.bg-transparent
+	.container
+		h1( data-animate!={ class: 'fadeInUp' } ) Who will benefit
+		.row.row-offset-md.row-30
+			.col-xs-8.col-sm-6.col-md-4( data-animate!={ class: 'fadeInUp' } )
+				+blurb({
+					media: 'media-lg flex-column',
+					title: 'In-house SEO specialists <br class="d-none d-lg-block">working on large projects'
+				})
+					+lin-user.lin-lg
+			.col-xs-8.col-sm-6.col-md-4( data-animate!={ class: 'fadeInUp' } )
+				+blurb({
+					media: 'media-lg flex-column',
+					title: 'Licensed SEO experts and <br class="d-none d-lg-block">SEO enthusiasts'
+				})
+					+lin-target.lin-lg
+			.col-xs-8.col-sm-6.col-md-4( data-animate!={ class: 'fadeInUp' } )
+				+blurb({
+					media: 'media-lg flex-column',
+					title: 'SEO geeks'
+				})
+					+lin-analytics.lin-lg

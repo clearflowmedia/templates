@@ -1,0 +1,16 @@
+include ../material-parallax/_material-parallax
+include ../lin-icon/_lin-icon
+
+// Experienced Drivers & Quality Fleet
++parallax({
+	img:        'images/image-03-1900x1000.jpg',
+	innerClass: 'section-xl'
+}).context-dark.text-center
+	.container
+		.row.justify-content-center
+			.col-lg-10.col-xl-8( data-animate!={ class: 'fadeInUp' } )
+				+lin-checkbox-marked-outline
+				h1 Experienced Drivers & Quality Fleet
+				p.lead Our qualified drivers and best-in-class fleet are the reasons of our success and our customers’ satisfaction. They make us #1 logistic company worldwide.
+				a.btn.btn-lg.btn-primary.btn-nuka( href='#' ) Learn More About Lintense
+					span.btn-overlay

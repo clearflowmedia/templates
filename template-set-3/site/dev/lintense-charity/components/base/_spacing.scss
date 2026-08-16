@@ -1,0 +1,89 @@
+// Elements spacing
+* + p {
+	margin-top: 15px;
+}
+
+
+// Headings
+h1,
+.h1 {
+	& + * {
+		margin-top: 19px;
+	}
+}
+
+h2,
+.h2 {
+	* + & {
+		margin-top: 14px;
+	}
+}
+
+h3,
+.h3 {
+	* + & {
+		margin-top: 23px;
+	}
+
+	& + * {
+		margin-top: 25px;
+
+		@include media-breakpoint-up(xl) {
+			margin-top: 33px;
+		}
+	}
+}
+
+h4,
+.h4 {
+}
+
+h5,
+.h5 {
+	* + & {
+		margin-top: 9px;
+	}
+}
+
+h6,
+.h6 {
+}
+
+h6 + h3 + h5 {
+	margin-top: 36px;
+}
+
+// Group spacing
+html {
+	.group-5 {
+		@include group( px-to-rem( 5px ) );
+	}
+
+	.group-10 {
+		@include group( px-to-rem( 10px ) );
+	}
+
+	.group-y-10 {
+		@include groupY( px-to-rem( 10px ) );
+	}
+
+	.group-15 {
+		@include group( px-to-rem( 15px ) );
+	}
+
+	.group-20 {
+		@include group( px-to-rem( 20px ) );
+	}
+
+	.group-30 {
+		@include group( px-to-rem( 30px ) );
+	}
+
+	.group-x-30 {
+		@include groupX( px-to-rem( 30px ) );
+	}
+
+	.group-40 {
+		@include group( px-to-rem( 40px ) );
+	}
+}

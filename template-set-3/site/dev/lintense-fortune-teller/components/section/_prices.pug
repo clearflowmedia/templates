@@ -1,0 +1,28 @@
+include ../pricing/_pricing
+
+// Prices
+section#pricing.section.section-md.bg-transparent
+	.container
+		.row.justify-content-center
+			.col-xl-7.text-center
+				h2 Get personalized horoscope
+				p.big Discover your Horoscope for today and tomorrow. Our Daily Personalized Horoscope includes all the parameters of your natal chart, and not only of your Sun sign.
+		.row.row-30
+			.col-md-6.col-lg-4
+				+pricing({
+					title: 'Business <br> horoscope',
+					text: 'Get your personal guide for achieving corporate success with our regularly updated and affordable business horoscope.',
+					sum: '35.00'
+				})
+			.col-md-6.col-lg-4
+				+pricing({
+					title: 'Career <br> & job',
+					text: 'Your job career guide to help you take firm decision for future. Stay updated with daily job horoscope and grab the future opportunities.',
+					sum: '45.00'
+				})
+			.col-md-6.col-lg-4
+				+pricing({
+					title: 'Love <br> horoscope',
+					text: 'Our daily love horoscopes factor in current astrological transits and zodiac sign traits to provide you with the best & regular love advice.',
+					sum: '50.00'
+				})

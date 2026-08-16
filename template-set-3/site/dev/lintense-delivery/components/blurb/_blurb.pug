@@ -1,0 +1,37 @@
+//- Blurb
+	@param {object} data - data object
+	@param {string} data.media - media class
+	@param {string} data.title - blurb title
+	@param {string} data.titleClass - blurb title class
+	@param {string} data.text - blurb text
+	@param {string} data.textClass - blurb text class
+mixin blurb( data )
+	// Blurb
+	article.blurb&attributes( attributes )
+		.media( class= data.media )
+			.media-left
+				.blurb-icon
+					block
+			.media-body
+				.blurb-title.h1( class= data.titleClass )!= data.title
+				.blurb-text.lead( class= data.textClass )= data.text
+
+
+//- Blurb boxed
+	@param {object} data - data object
+	@param {string} data.media - media class
+	@param {string} data.title - blurb title
+	@param {string} data.text - blurb text
+	@param {string} data.textClass - blurb text class
+	@param {string} data.linkClass - blurb link class
+mixin blurb-boxed( data )
+	// Blurb boxed
+	article.blurb.blurb-boxed&attributes( attributes )
+		.media( class= data.media )
+			.media-body
+				block
+				.blurb-boxed-title.h2!= data.title
+				.blurb-boxed-text( class= data.textClass )= data.text
+			.media-right
+				a.icon.icon-xxs.icon-round.shadow-none( href='#', class= data.linkClass ? data.linkClass : 'icon-primary-filled' )
+					span.btn-icon.mdi-forward

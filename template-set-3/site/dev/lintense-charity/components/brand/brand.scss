@@ -1,0 +1,30 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+// Brand
+.brand {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 auto;
+	background-color: $white;
+	height: 150px;
+	box-shadow: $box-shadow;
+	transition: $transition-base;
+	padding: 15px;
+	border-radius: 15px;
+
+	&:hover {
+		box-shadow: $box-shadow-sm;
+	}
+
+	img {
+		width: auto;
+		height: auto;
+		max-height: 100%;
+	}
+}

@@ -1,0 +1,93 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.quote-text {
+	display: inline-block;
+	font-weight: 700;
+	color: $gray-700;
+
+	&::before {
+		display: inline-block;
+		padding-top: px-to-rem( 8px );
+		font-size: px-to-rem( 40px );
+		line-height: .8;
+		color: $secondary;
+	}
+}
+
+.quote-footer {
+	> * + * {
+		margin-left: 6px;
+	}
+}
+
+.quote-author {
+	font-weight: 500;
+	color: $gray-900;
+}
+
+.quote-date {
+	color: $gray-500;
+}
+
+
+// Spacing
+* + .quote {
+	margin-top: px-to-rem( 30px );
+}
+
+* + .quote-body {
+	margin-top: px-to-rem( 20px );
+}
+
+* + .quote-footer {
+	margin-top: px-to-rem( 40px );
+}
+
+
+
+// Quote boxed
+.quote-boxed {
+	text-align: left;
+	padding: px-to-rem( 30px );
+	border: $border-width solid $border-color;
+	background-color: $white;
+	box-shadow: $box-shadow;
+	transition: $transition-base;
+}
+
+
+// Contexts
+.desktop {
+	.quote-boxed:hover {
+		transform: translateY( -30px );
+		box-shadow: 11px 34px 14px rgba($gray-900, 0.05);
+	}
+}
+
+
+// Media
+@include media-breakpoint-up(xxl) {
+	.quote-boxed {
+		padding: px-to-rem( 40px );
+	}
+
+	.quote-text::before {
+		font-size: px-to-rem( 52px );
+	}
+
+	* + .quote {
+		margin-top: px-to-rem( 40px );
+	}
+
+	* + .quote-footer {
+		margin-top: px-to-rem( 55px );
+	}
+
+}

@@ -1,0 +1,43 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.product {
+	position: relative;
+}
+
+.product-image {
+	width: 100%;
+}
+
+.product-caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: px-to-rem( 20px );
+	background: rgba( $secondary, .9 );
+}
+
+.product-text {
+	color: $white;
+}
+
+
+// Media
+@include media-breakpoint-up(xs) {
+	.product-caption {
+		padding: px-to-rem( 30px );
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.product-caption {
+		padding: px-to-rem( 40px, 50px );
+	}
+}

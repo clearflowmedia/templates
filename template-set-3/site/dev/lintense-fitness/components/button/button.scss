@@ -1,0 +1,240 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+@import "../bootstrap/scss/buttons";
+
+
+// Base
+.btn {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border: $btn-border-width solid transparent;
+	font-weight: $btn-font-weight;
+	box-shadow: $btn-box-shadow;
+	background: $white;
+	transition: $transition-base;
+	line-height: $btn-line-height;
+
+	@include button-size(
+		$btn-padding-y,
+		$btn-padding-x,
+		$btn-font-size,
+		$btn-border-radius
+	);
+
+	&:hover,
+	&.hover,
+	&:active,
+	&.active {
+		box-shadow: $btn-focus-box-shadow;
+		text-decoration: none;
+		border-color: transparent;
+		background: $gray-100;
+	}
+
+	&:focus,
+	&.focus {
+		outline: 0;
+	}
+
+	&.disabled,
+	&:disabled {
+		opacity: $btn-disabled-opacity;
+		pointer-events: none;
+	}
+}
+
+
+// Icon
+.btn-icon {
+	font-size: 1em;
+	margin: 0 .47058em;
+
+	&:first-child {
+		margin-left: 0;
+	}
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+
+
+// Spacing
+* + .btn,
+* + .btns {
+	margin-top: px-to-rem( 30px );
+}
+
+.form-group + .btn {
+  margin-top: px-to-rem( 20px );
+}
+
+.row + .btn {
+	margin-top: px-to-rem( 40px );
+}
+
+
+// Modifying
+.btn-primary {
+  box-shadow: none;
+  border-color: $primary;
+  background: $primary;
+  color: $white;
+
+  &:hover {
+    border-color: $white;
+    background: $white;
+    color: $gray-900;
+  }
+}
+
+.btn-outline {
+	box-shadow: none;
+	border-color: $white;
+	background: transparent;
+	color: $white;
+
+	&:hover {
+		border-color: $white;
+		background: $white;
+		color: $gray-900;
+	}
+}
+
+.btn-outline-primary {
+	box-shadow: none;
+	border-color: $primary;
+	background: transparent;
+	color: $primary;
+
+	&:hover {
+		border-color: $primary;
+		background: $primary;
+		color: $white;
+	}
+}
+
+.btn-link-primary {
+	box-shadow: none;
+	border-color: transparent;
+	background: transparent;
+	color: $white;
+
+	&:hover {
+		border-color: $primary;
+		background: $primary;
+		color: $white;
+	}
+}
+
+.btn-block {
+	display: flex;
+	width: 100%;
+}
+
+.btn-rect {
+	&,
+	&.btn-sm,
+	&.btn-lg {
+		border-radius: 0;
+	}
+}
+
+.btn-round {
+	border-radius: $btn-padding-y * 2 + $btn-font-size * $btn-line-height;
+
+	&.btn-sm {
+		border-radius: $btn-padding-y-sm * 2 + $btn-font-size-sm * $btn-line-height-sm;
+	}
+
+	&.btn-lg {
+		border-radius: $btn-padding-y-lg * 2 + $btn-font-size-lg * $btn-line-height-lg;
+	}
+}
+
+
+// Sizing
+.btn-sm {
+	min-width: auto;
+	@include button-size(
+			$btn-padding-y-sm,
+			$btn-padding-x-sm,
+			$btn-font-size-sm,
+			$btn-border-radius-sm
+	);
+	line-height: $btn-line-height-sm;
+}
+
+.btn-lg {
+	@include button-size(
+			$btn-padding-y-lg,
+			$btn-padding-x-lg,
+			$btn-font-size-lg,
+			$btn-border-radius-lg
+	);
+	line-height: $btn-line-height-lg;
+}
+
+
+
+// Effects
+
+.btn-isi {
+  position: relative;
+  z-index: 0;
+  color: #fff;
+  background: $primary;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    background: $secondary;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin: -15px 0 0 1px;
+    width: 30px;
+    height: 30px;
+    z-index: -1;
+    border-radius: 50%;
+    transform-origin: 100% 50%;
+    transform: scale3d(1, 2, 1);
+    transition: transform 0.3s, opacity 0.3s;
+    transition-timing-function: cubic-bezier(0.7, 0, 0.9, 1);
+  }
+
+  .icon {
+    vertical-align: middle;
+    padding-right: 0.7em;
+  }
+  & > span {
+    vertical-align: middle;
+  }
+  &:hover {
+    color: #fff;
+    &:after {
+      opacity: 1;
+    }
+    &::before {
+      transform: scale3d(9, 9, 1);
+    }
+  }
+}
+
+.tablet{
+  .btn-isi {
+    &:after, &:before{
+      display: none;
+    }
+    &:hover {
+      background-color: #444351;
+    }
+  }
+}

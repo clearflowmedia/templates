@@ -1,0 +1,2 @@
+.services-item {	display: flex;	align-items: center;}.services-item + .services-item {	margin-top: 13px;}@media (min-width: 1200px) {	.services-text {		font-size: 18px;	}}* + .services-text {	margin-top: 5px;}
+/*# sourceMappingURL=services-list.css.map */

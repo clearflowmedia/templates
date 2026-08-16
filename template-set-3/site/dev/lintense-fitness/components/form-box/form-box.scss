@@ -1,0 +1,12 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+.form-box {
+  padding: px-to-rem(40px);
+  border-radius: $border-radius;
+  box-shadow: $shadow-area-1, $shadow-area-2;
+}

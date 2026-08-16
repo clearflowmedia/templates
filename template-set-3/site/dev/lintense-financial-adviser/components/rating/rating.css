@@ -1,0 +1,2 @@
+.rating {	font-size: 26px;	line-height: 1;	color: #10886F;}.rating-body {	position: relative;	display: inline-block;}.rating-empty > * + *,.rating-fill > * + * {	margin-left: 5px;}.rating-empty {	color: #E5EEE7;}.rating-fill {	position: absolute;	overflow: hidden;	top: 0;	left: 0;}* + .rating {	margin-top: 15px;}.rating-orange {	color: #F6CA67;}
+/*# sourceMappingURL=rating.css.map */

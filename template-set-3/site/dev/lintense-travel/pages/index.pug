@@ -1,0 +1,18 @@
+extends ../components/base/_skeleton
+
+include ../components/rights/_rights
+include ../components/google-map/_google-map
+
+block variables
+	- pageName = 'Lintense Travel';
+
+block page
+	include ../components/rd-navbar/_rd-navbar-travel
+	include ../components/section/_landing-travel-intro
+	include ../components/section/_landing-travel-about
+	include ../components/section/_landing-travel-what-can-offer-you
+	include ../components/section/_landing-travel-cta
+	include ../components/section/_landing-travel-book-your-tour
+	include ../components/section/_landing-travel-testimonials-and-gallery
+	include ../components/footer/_footer-travel
+	include ../components/section/_landing-travel-map

@@ -1,0 +1,37 @@
+include ../thumbnail/_thumbnail
+// Portfolio
+section#portfolio.section.section-lg.bg-transparent
+	.container
+		h2.text-primary( data-animate!={class: 'fadeInUp'} ) Our portfolio
+		.row.row-30.row-lg-50(data-lightgallery)
+			.col-md-6.col-lg-7.align-self-center.text-center( data-animate!={class: 'fadeInUp'} )
+				+thumbnail({
+					imgOriginal: 'portfolio-01-720x1079',
+					img: 'portfolio-01-720x720',
+				})
+			.col-md-6.col-lg-5.align-self-end.text-center( data-animate!={class: 'fadeInUp'} )
+				+thumbnail({
+					imgOriginal: 'portfolio-02-690x1039',
+					img: 'portfolio-02-500x500',
+				})
+			.col-12.align-self-center.text-center( data-animate!={class: 'fadeInUp'} )
+				+thumbnail({
+					imgOriginal: 'portfolio-03-1302x976',
+					img: 'portfolio-03-1270x600',
+				})
+			.col-md-6.col-xl-5.offset-xl-1.align-self-top( data-animate!={class: 'fadeInUp'} )
+				+thumbnail({
+					imgOriginal: 'portfolio-04-637x952',
+					img: 'portfolio-04-500x500',
+				})
+			.col-md-6.align-self-center.text-center( data-animate!={class: 'fadeInUp'} )
+				+thumbnail({
+					imgOriginal: 'portfolio-05-637x952',
+					img: 'portfolio-05-610x610',
+				})
+		.row.row-30.justify-content-center
+			.col-xl-10.text-center( data-animate!={class: 'fadeInUp'} )
+				p.h2.text-primary We are a leading expert when it comes to building or remodeling either residential houses or commercial buildings. Our company’s expertise includes skillfully blending new homes amongst established ones.
+				.offset-lg
+					a(href="#" data-custom-scroll-to='#contacts').btn.btn-round.btn-primary.btn-nuka Request a call
+						span.btn-overlay

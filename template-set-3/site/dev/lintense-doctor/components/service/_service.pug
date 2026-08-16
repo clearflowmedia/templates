@@ -1,0 +1,11 @@
+//- Service
+	@param {object} data - data object
+	@param {string} data.title - service title
+	@param {string} data.text - service text
+mixin service( data )
+	// Service
+	article.service&attributes( attributes )
+		.service-title.h4
+			span.mdi-check.service-title-icon
+			= data.title
+		.service-text.lead= data.text

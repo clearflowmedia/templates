@@ -1,0 +1,55 @@
+include ../blurb/_blurb
+include ../lin-icon/_lin-icon
+
+// Need help
+section.section.section-lg.bg-transparent.text-center
+	.container
+		div( data-animate!={ class: 'fadeInUp' } )
+			h2 Need help?
+			p.lead RightHost is always ready to provide you with information and consultations on our
+				| #[br.d-none.d-lg-block]
+				| services. We will gladly help you decide on what hosting solution to choose.
+		.row.row-offset-lg.row-20.gutters-20
+			.col-sm-6( data-animate!={ class: 'fadeInUp' } )
+				+blurb-boxed({
+					img:   'image-03-625x430',
+					title: 'Call us',
+					text:  'Our support team will be happy to answer all your questions abour RightHost hosting services and offers.',
+					link:  {
+						href: 'tel:#',
+						text: 'Give Us a Call'
+					}
+				}).bg-900.context-dark.bg-image( style='background-image: url(images/image-03-625x430.jpg);' )
+					+lin-phone.lin-lg.blurb-icon-svg
+			.col-sm-6( data-animate!={ class: 'fadeInUp' } )
+				+blurb-boxed({
+					title: 'Live chat',
+					text:  'You can always ask us directly through the chat what type of hosting will fit your website the best way.',
+					link:  {
+						text: 'Chat with Us'
+					}
+				}).bg-primary.context-dark
+					+lin-chat.lin-lg.blurb-icon-svg
+			.col-sm-6( data-animate!={ class: 'fadeInUp' } )
+				+blurb-boxed({
+					title: 'Email us',
+					text:  'Feel free to send us an e-mail to discuss various hosting options that we can offer you.',
+					link:  {
+						anchor: true,
+						href: '#newsletter',
+						text: 'Send an Email'
+					}
+				}).bg-900.context-dark
+					+lin-telegram.lin-lg.blurb-icon-svg
+			.col-sm-6( data-animate!={ class: 'fadeInUp' } )
+				+blurb-boxed({
+					img:   'image-03-625x430',
+					title: 'Real reviews',
+					text:  'All reviews and testimonials  left by our customers are 100% real and will help you choose the best hosting plan.',
+					link:  {
+						anchor: true,
+						href: '#testimonials',
+						text: 'Read Reviews'
+					}
+				}).bg-900.context-dark.bg-image( style='background-image: url(images/image-04-625x430.jpg);' )
+					+lin-review.lin-lg.blurb-icon-svg

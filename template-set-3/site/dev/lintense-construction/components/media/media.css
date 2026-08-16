@@ -1,0 +1,2 @@
+.media {	display: flex;	align-items: normal;}.media-body {	flex: 1;}.media-xs {	margin-bottom: -15px;	margin-left: -20px;}.media-xs:empty {	margin-bottom: 0;	margin-left: 0;}.media-xs > * {	margin-top: 0;	margin-bottom: 15px;	margin-left: 20px;}
+/*# sourceMappingURL=media.css.map */

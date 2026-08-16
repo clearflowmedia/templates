@@ -1,0 +1,70 @@
+include ../event/_event
+
+// Event Schedule
+section#schedule.section.section-lg.text-center.bg-transparent
+	.container
+		h2( data-animate!={ class: 'fadeInUp' } ) Event Schedule
+		.tab
+			ul.nav( data-animate!={ class: 'fadeInUp' } )
+				li.nav-item( role='presentation' )
+					a.nav-link.active.show( href='#tabs-1-1', data-toggle='tab' )
+						.h6 December 24
+						.small Tuesday
+				li.nav-item( role='presentation' )
+					a.nav-link( href='#tabs-1-2', data-toggle='tab' )
+						.h6 December 25
+						.small Wednesday
+				li.nav-item( role='presentation' )
+					a.nav-link( href='#tabs-1-3', data-toggle='tab' )
+						.h6 December 26
+						.small Thursday
+			//Tab panes
+			.tab-content
+				#tabs-1-1.tab-pane.fade.active.show
+					.row.row-40.row-xl-60.row-xxl-80
+						.col-sm-6.col-lg-12( data-animate!={ class: 'fadeInUp' } )
+							+event-full({
+								img:   'image-06-390x266',
+								title: 'Cookies with Santa',
+								text:  'Bring the little ones for a personal visit with Santa and a professional photo. Warm up with hot chocolate and cookies, and kick off the holiday season with festive crafts.',
+								time:  'Opening Hours: 11:00 am to 4:00 pm'
+							})
+						.col-sm-6.col-lg-12( data-animate!={ class: 'fadeInUp' } )
+							+event-full({
+								img:   'image-07-390x266',
+								title: 'Bring on the Holidays!',
+								text:  'Celebrate the official beginning of the holiday season with Santa at New York Entertainment Center with your family and friends. We guarantee lots of entertainment for all ages!',
+								time:  'Opening Hours: 4:00 pm to 8:00 pm'
+							})
+				#tabs-1-2.tab-pane.fade
+					.row.row-40.row-xl-60.row-xxl-80
+						.col-sm-6.col-lg-12
+							+event-full({
+								img:   'image-08-390x266',
+								title: 'Visit Santa',
+								text:  'Let your children meet Santa and chat with him in the enchanted atmosphere at New York Entertainment Center while our Christmas Event takes place.',
+								time:  'Opening Hours: 12:00 pm to 6:00 pm'
+							})
+						.col-sm-6.col-lg-12
+							+event-full({
+								img:   'image-09-390x266',
+								title: 'Christmas Shopping',
+								text:  'Enjoy special prices on all goods in NY Entertaiment Center only this Wednesday! From buying presents for your loved ones to enjoying the atmosphere, we have what to offer you!',
+								time:  'Opening Hours: 6:00 pm to 9:00 pm'
+							})
+				#tabs-1-3.tab-pane.fade
+					.row.row-40.row-xl-60.row-xxl-80
+						.col-sm-6.col-lg-12
+							+event-full({
+								img:   'image-10-390x266',
+								title: 'Reindeer Carriage Rides',
+								text:  'Bring the little ones for a personal visit with Santa and a professional photo. Warm up with hot chocolate and cookies, and kick off the holiday season with festive crafts.',
+								time:  'Opening Hours: 10:00 am to 3:00 pm'
+							})
+						.col-sm-6.col-lg-12
+							+event-full({
+								img:   'image-11-390x266',
+								title: 'Christmas Raffle',
+								text:  'Take part in this year’s Christmas Raffle to win big prizes. There’s a wide range of prizes available - from gift cards and certificates to home appliances and hot tours.',
+								time:  'Opening Hours: 3:00 pm to 7:00 pm'
+							})

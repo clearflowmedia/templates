@@ -1,0 +1,49 @@
+include ../material-parallax/_material-parallax
+include ../blurb/_blurb
+include ../lin-icon/_lin-icon
+
+section.section.section-lg.bg-transparent.text-center
+	.container
+		+parallax({
+			img:        'images/image-06-1270x1214.jpg',
+			innerClass: 'section-lg'
+		}).context-dark
+			.row.row-30.justify-content-center
+				.col-11.col-md-10.col-lg-8( data-animate!={ class: 'fadeInUp' } )
+					h2 The top hosted software, features, hardware & more!
+					p.lead All our hosting solutions use the best software and hardware to deliver the upmost level of services and top-notch features to our customers.
+					a.btn.btn-lg.btn-nuka( href='#' ) Sign Up
+						span.btn-overlay
+			.row.row-30.justify-content-center
+				.col-11.col-lg-12.text-xs-left( data-animate!={ class: 'fadeInUp' } )
+					.row.row-30.justify-content-lg-center
+						.col-xs-6.col-sm-4.col-lg-2
+							+blurb-mini({
+								title: 'SSD',
+								text:  'We use reliable solid state drives for all our hosting servers.'
+							})
+								+lin-server.lin-md.blurb-icon
+						.col-xs-6.col-sm-4.col-lg-2
+							+blurb-mini({
+								title: 'PHP 7',
+								text:  'Run your websites with the latest version of PHP.'
+							})
+								+lin-desktop-code.lin-md.blurb-icon
+						.col-xs-6.col-sm-4.col-lg-2
+							+blurb-mini({
+								title: 'Free SSL',
+								text:  'RightHost provides free SSL certificates for regular clients.'
+							})
+								+lin-secure-connection.lin-md.blurb-icon
+						.col-xs-6.col-sm-4.col-lg-2
+							+blurb-mini({
+								title: 'Fast servers',
+								text:  'Our servers are located worldwide to offer top speed.'
+							})
+								+lin-cloud-internet.lin-md.blurb-icon
+						.col-xs-6.col-sm-4.col-lg-2
+							+blurb-mini({
+								title: 'Free SSH',
+								text:  'We also provide  SSH certificates for better encryption.'
+							})
+								+lin-settings-code.lin-md.blurb-icon

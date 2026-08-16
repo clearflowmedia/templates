@@ -1,0 +1,25 @@
+include ../team/_team
+
+// Team
+section#team.section.section-lg.bg-transparent
+	.container
+		h2.text-center Our team
+		.row.row-40.justify-content-center
+			.col-sm-6.col-md-4
+				+team({
+					img: 'person-01-390x500',
+					name: 'Olivia Williams',
+					position: 'Founder, CEO'
+				})
+			.col-sm-6.col-md-4
+				+team({
+					img: 'person-02-390x500',
+					name: 'Oliver Evans',
+					position: 'Head of Consulting'
+				})
+			.col-sm-6.col-md-4
+				+team({
+					img: 'person-03-390x500',
+					name: 'Mia Taylor',
+					position: 'Customer Care Manager'
+				})

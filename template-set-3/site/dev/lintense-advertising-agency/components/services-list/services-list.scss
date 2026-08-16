@@ -1,0 +1,32 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+
+// Base
+.services-list {
+
+}
+
+.services-item {
+	display: flex;
+	align-items: center;
+
+	& + & {
+		margin-top: 13px;
+	}
+}
+
+.services-text {
+
+	@include media-breakpoint-up(xl) {
+		font-size: 18px;
+	}
+
+	* + & {
+		margin-top: 5px;
+	}
+}

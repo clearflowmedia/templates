@@ -1,0 +1,53 @@
+include ../quote/_quote
+include ../thumbnail/_thumbnail
+
+// What People Say
+section#testimonials.section.section-lg.bg-transparent.position-relative
+	.container
+		.row.row-50.justify-content-xl-between
+			.col-md-11.col-lg-6.col-xl-5( data-animate!={ class: 'fadeInUp' } )
+				h2 What People Say
+				// Owl Carousel
+				.owl-carousel.owl-dots-minimal.owl-style-2.mt-5(
+					data-owl={
+						dots: true,
+						dotsClass: 'owl-dots text-left'
+					}
+				)
+					+quote({
+						img:  'persons/person-01-68x68',
+						text: 'Thank you for organizing the best event for kids and adults! It has been a wonderful experience of decorating our personal Christmas tree and talking to Santa.',
+						name: 'Edward  Jackson'
+					})
+					+quote({
+						img:  'persons/person-02-68x68',
+						text: 'Christmas is a wonderful time of the year and your team just made it even better! Me and my family left the entertainment center with the best impressions and memories.',
+						name: 'Peter Adams'
+					})
+					+quote({
+						img:  'persons/person-03-68x68',
+						text: 'I rode reindeer for the first time in my life and it has been amazing! Moreover, I bought lots of presents for my family during this event and I will undoubtedly come back.',
+						name: 'Alice Smith'
+					})
+			.col-lg-6
+				.row.row-20.justify-content-xl-end( data-lightgallery )
+					.col-xs-6.col-xxl-auto( data-animate!={ class: 'fadeInUp' } )
+						+thumbnail({
+							imgOriginal: 'image-17-610x800',
+							img:         'image-17-287x194'
+						})
+					.col-xs-6.col-xxl-auto( data-animate!={ class: 'fadeInUp' } )
+						+thumbnail({
+							imgOriginal: 'image-18-1200x800',
+							img:         'image-18-287x194'
+						})
+					.col-xs-6.col-xxl-auto( data-animate!={ class: 'fadeInUp' } )
+						+thumbnail({
+							imgOriginal: 'image-19-1200x800',
+							img:         'image-19-287x194'
+						})
+					.col-xs-6.col-xxl-auto( data-animate!={ class: 'fadeInUp' } )
+						+thumbnail({
+							imgOriginal: 'image-20-1200x800',
+							img:         'image-20-287x194'
+						})

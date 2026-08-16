@@ -1,0 +1,45 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+// Thumbnail default
+.thumbnail-default {
+	display: inline-block;
+	width: 100%;
+	max-width: 320px;
+}
+
+.thumbnail-default-media {
+	overflow: hidden;
+	display: inline-block;
+
+	&:hover {
+		.thumbnail-default-image {
+			transform: scale( 1.1 );
+		}
+	}
+}
+
+.thumbnail-default-image {
+	transition: $transition-base;
+}
+
+* + .thumbnail-default-title { margin-top: px-to-rem( 29px * $xs-multiplier ) }
+* + .thumbnail-default-caption { margin-top: px-to-rem( 12px * $xs-multiplier ) }
+
+@include media-breakpoint-up( lg ) {
+	.thumbnail-default {
+		max-width: 100%;
+	}
+
+	* + .thumbnail-default-title { margin-top: px-to-rem( 29px * $lg-multiplier ) }
+	* + .thumbnail-default-caption { margin-top: px-to-rem( 12px * $lg-multiplier ) }
+}
+
+@include media-breakpoint-up( xxl ) {
+	* + .thumbnail-default-title { margin-top: px-to-rem( 29px ) }
+	* + .thumbnail-default-caption { margin-top: px-to-rem( 12px ) }
+}

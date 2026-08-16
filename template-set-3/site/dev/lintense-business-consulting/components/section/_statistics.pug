@@ -1,0 +1,34 @@
+include ../counter/_counter
+include ../material-parallax/_parallax
+
++parallax({
+	img: 'images/parallax-01.jpg',
+	innerClass: 'section-md overlay-gradient text-center'
+}).section
+	.container: .row.row-40
+		.col-sm-6.col-md-3
+			+counter-modern({
+				value: '150',
+				title: 'Projects annually',
+				iconClass: 'mdi-presentation'
+			})
+		.col-sm-6.col-md-3
+			+counter-modern({
+				value: '35',
+				title: 'Awards',
+				iconClass: 'mdi-trophy-outline'
+			})
+		.col-sm-6.col-md-3
+			+counter-modern({
+				value: '99',
+				postfix: '%',
+				title: 'Positive Reviews',
+				iconClass: 'mdi-pencil-box-outline'
+			})
+		.col-sm-6.col-md-3
+			+counter-modern({
+				value: '10',
+				postfix: 'K',
+				title: 'Happy Customers',
+				iconClass: 'mdi-emoticon-happy'
+			})

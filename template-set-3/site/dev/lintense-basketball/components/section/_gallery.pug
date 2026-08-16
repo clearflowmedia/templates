@@ -1,0 +1,31 @@
+include ../quote/_quote
+// Gallery
+section#gallery.section.section-xxl.bg-transparent.bg-image-2(style='background-image: url(images/bg-image-02.png);')
+	.container
+		h6 Gallery
+		.row.row-xl.row-30.row-xl-150(data-lightgallery)
+			.col-md-6.col-xl-4
+				a.thumbnail.thumbnail-1.lightgallery-item( href='images/originals/home-02-original.jpg')
+					+img( 'home-02-390x485' )
+			.col-md-6.col-xl-7.offset-xl-1
+				a.thumbnail.thumbnail-1.lightgallery-item( href='images/originals/home-03-original.jpg')
+					+img( 'home-03-720x575' )
+			.col-md-6.col-xl-5.offset-xl-1
+				a.thumbnail.thumbnail-1.lightgallery-item( href='images/originals/home-04-original.jpg')
+					+img( 'home-04-500x675' )
+			.col-md-6.col-xl-5.offset-xl-1.align-self-center
+				a.thumbnail.thumbnail-1.thumbnail-circle.lightgallery-item( href='images/originals/home-05-original.jpg')
+					+img( 'home-05-500x500.png' )
+
+	// Testimonials
+	section#testimonials.section.section-inner.section-xxl.bg-transparent
+		.container
+			.row.row-30
+				.col-xl-3
+					h6 testimonials
+				.col-xl-7.col-md-8
+					+quote({
+						text: 'What an amazing week it was for my daughter! Truly sore from all the workout but in her words it really has had a huge motivational impact on her training and am sure it will carry through to her games.',
+						name: 'Lisa Williams'
+					})
+

@@ -1,0 +1,37 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.blurb-head {
+	display: flex;
+	align-items: baseline;
+	@include group( 15px );
+	color: $secondary;
+
+	> .blurb-title {
+		color: inherit
+	}
+}
+
+
+// Spacing
+* + .blurb {
+	margin-top: px-to-rem( 30px );
+}
+
+* + .blurb-text {
+	margin-top: px-to-rem( 10px );
+}
+
+
+// Contexts
+.context-dark {
+	.blurb-head {
+		color: inherit;
+	}
+}

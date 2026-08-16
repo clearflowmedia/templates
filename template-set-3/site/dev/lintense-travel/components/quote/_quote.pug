@@ -1,0 +1,10 @@
+//- Quote
+	@param {object} data - data object
+	@param {string} data.text - quote text
+	@param {string} data.img - image of author
+	@param {string} data.name - name of author
+mixin quote( data )
+	// Quote
+	article.quote&attributes( attributes )
+		q.quote-text.h4= data.text
+		.quote-author-name.small= '— ' + data.name

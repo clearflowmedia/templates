@@ -1,0 +1,231 @@
+// Variables
+
+$white:    #FFF;
+$gray-100: #F5F5F6;
+$gray-200: #DADADA;
+$gray-300: #C4C4C4;
+$gray-400: #B7B7B7;
+$gray-500: #9BA0AC;
+$gray-600: #525252;
+$gray-700: #2F2F2F;
+$gray-800: #192031;
+$gray-900: #111111;
+$black:    #000;
+
+$primary:        #F34040;
+$secondary:      $primary;
+$success:        #77BA21;
+$info:           #138CE4;
+$warning:        #F19711;
+$danger:         #E72660;
+$light:          $gray-100;
+$dark:           $gray-700;
+
+$youtube:  #FE0000;
+$facebook: #4867AA;
+$twitter:  #1EA1F3;
+$linkedin: #3997D0;
+
+
+// Colors shade
+$primary-light: adjust-color( $primary, $hue: 0deg, $saturation: 12%, $lightness: 10% ); // FF6565
+
+
+// The yiq lightness value
+$yiq-contrasted-threshold:  200;
+
+
+// Body
+$body-color: $gray-600;
+
+
+// Grid breakpoints
+$grid-breakpoints: (
+	xxs: 0,
+	xs: 480px,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1600px
+);
+
+
+// Grid containers
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1200px,
+	xxl: 1300px
+);
+
+
+// Grid columns
+$grid-gutter-width: 20px;
+
+
+// Components
+$border-width:     1px;
+$border-color:     $gray-200;
+
+$border-radius:    px-to-rem( 15px );
+$border-radius-lg: px-to-rem( 25px );
+
+$box-shadow-sm:    6px 10px 10px rgba($black, 0.15);
+$box-shadow:       px-to-rem( 10px, 30px, 30px ) rgba($black, 0.15);
+$box-shadow-lg:    0 14px 36px rgba($gray-700, .25);
+
+
+// Fonts
+$font-family-base: 'Comfortaa', cursive;
+$font-family-sec:  'Fredoka One', cursive;
+$font-family-mono: 'IBM Plex Mono', monospace;
+$font-size-base: px-to-rem( 16px );
+$font-size-lg: px-to-rem( 18px );
+$font-size-sm: px-to-rem( 14px );
+$line-height-base: 1.6416;
+$line-height-lg: 1.6416;
+$line-height-sm: 1.6416;
+$font-weight-base: 400;
+
+$h1-font-size: px-to-rem( 60px );
+$h2-font-size: px-to-rem( 44px );
+$h3-font-size: px-to-rem( 28px );
+$h4-font-size: px-to-rem( 22px );
+$h5-font-size: px-to-rem( 22px );
+$h6-font-size: px-to-rem( 20px );
+
+$h5-line-height: 1.4;
+$h6-line-height: 1.4;
+
+$headings-font-weight: 400;
+$headings-color:       $gray-700;
+
+$lead-font-size: $font-size-lg;
+$lead-font-weight: inherit;
+
+$small-font-size: $font-size-sm;
+
+$mark-padding: 0 .1em;
+$mark-bg: $secondary;
+
+$hr-border-color:             rgba($black, .1);
+$hr-border-width:             1px;
+$hr-margin-y: 0;
+
+
+// Links
+$link-color:       $secondary;
+
+
+// Buttons
+$btn-padding-y:        px-to-rem( 18px );
+$btn-padding-x:        px-to-rem( 30px );
+$btn-font-family:      $font-family-sec;
+$btn-font-size:        $font-size-sm;
+$btn-line-height:      1.125;
+
+$btn-padding-y-sm:     px-to-rem( 13px );
+$btn-padding-x-sm:     px-to-rem( 20px );
+$btn-font-size-sm:     $font-size-sm;
+$btn-line-height-sm:   1.125;
+
+$btn-padding-y-lg:     px-to-rem( 21px );
+$btn-padding-x-lg:     px-to-rem( 40px );
+$btn-font-size-lg:     $font-size-base;
+$btn-line-height-lg:   1.2;
+
+$btn-border-width:     2px;
+
+$btn-font-weight:      400;
+$btn-box-shadow:       none;
+$btn-focus-box-shadow: none;
+$btn-disabled-opacity: .4;
+
+$btn-border-radius:    px-to-rem( 4px );
+$btn-border-radius-sm: $btn-border-radius;
+$btn-border-radius-lg: $btn-border-radius;
+
+
+// Forms
+$label-margin-bottom: .5rem;
+$label-font-size: $font-size-base;
+
+$input-padding-y: px-to-rem( 18px );
+$input-padding-x: px-to-rem( 22px );
+$input-font-size: $font-size-base;
+$input-font-weight: 400;
+$input-line-height: 1.18;
+
+$input-padding-y-lg: px-to-rem( 18px );
+$input-padding-x-lg: px-to-rem( 30px );
+$input-font-size-lg: $input-font-size;
+$input-line-height-lg: $input-line-height;
+
+$input-bg: $gray-100;
+$input-disabled-bg: rgba( $gray-100, .8 );
+
+$input-color: $gray-700;
+$input-border-color: $input-bg;
+$input-border-width: px-to-rem( 2px );
+
+$input-border-radius: $input-padding-y * 2 + $input-font-size * $input-line-height;
+$input-border-radius-lg: $input-border-radius;
+
+$input-focus-bg: $white;
+$input-focus-color: $gray-700;
+$input-focus-border-color: $gray-200;
+$input-focus-box-shadow: none;
+
+$input-height-border: $input-border-width * 2;
+$input-height: #{$input-font-size * $input-line-height + $input-padding-y * 2 + px-to-rem($input-height-border)};
+$input-height-lg: #{$input-font-size-lg * $input-line-height-lg + $input-padding-y-lg * 2 + px-to-rem($input-height-border)};
+
+$form-grid-gutter-width: 30px;
+
+$input-group-addon-color: $input-focus-color;
+$input-group-addon-bg: $input-bg;
+
+
+// Z-index master list
+$zindex-dropdown:       10;
+$zindex-sticky:         11;
+$zindex-popover:        12;
+$zindex-tooltip:        13;
+$zindex-fixed:          14;
+$zindex-modal-backdrop: 15;
+$zindex-modal:          16;
+
+
+// Badges
+$badge-font-size: px-to-rem(18px);
+$badge-font-weight: 700;
+$badge-padding-y: px-to-rem( 10px );
+$badge-padding-x: px-to-rem( 11px );
+$badge-border-radius: 0;
+
+
+// Tables
+$table-cell-padding: 19px 20px;
+$table-color:        $gray-900;
+$table-accent-bg:    $gray-200;
+
+
+// Modals
+$modal-inner-padding:         px-to-rem( 50px );
+
+$modal-content-border-radius: 0;
+
+$modal-backdrop-bg:           $gray-700;
+$modal-backdrop-opacity:      .4;
+
+$modal-xl:                    px-to-rem( 1140px );
+$modal-lg:                    px-to-rem( 730px );
+$modal-md:                    px-to-rem( 490px );
+
+$modal-fade-transform:        none;
+
+
+// Popups
+$popup-border-radius: px-to-rem( 12px );

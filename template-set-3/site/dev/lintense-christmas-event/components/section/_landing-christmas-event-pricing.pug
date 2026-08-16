@@ -1,0 +1,40 @@
+include ../pricing/_pricing
+
+// Event Pricing
+section#pricing.section.section-lg.bg-transparent.text-center
+	.container
+		h2( data-animate!={ class: 'fadeInUp' } ) Event Pricing
+		.row.row-offset-md.row-30
+			.col-sm-6.col-lg-4( data-animate!={ class: 'fadeInUp' } )
+				+pricing({
+					title: 'Kids',
+					price: '39',
+					items: [
+						'Visiting Santa',
+						'Dining',
+						'Ice Skating',
+						'Christmas Tree'
+					]
+				})
+			.col-sm-6.col-lg-4( data-animate!={ class: 'fadeInUp' } )
+				+pricing({
+					title: 'Adults',
+					price: '49',
+					items: [
+						'Ice Zone',
+						'Christmas Shopping',
+						'Workshops',
+						'Live Music'
+					]
+				})
+			.col-sm-6.col-lg-4( data-animate!={ class: 'fadeInUp' } )
+				+pricing({
+					title: 'Family',
+					price: '69',
+					items: [
+						'Chat with Santa',
+						'Christmas Decorations',
+						'Ice Carvers',
+						'Raffle'
+					]
+				})

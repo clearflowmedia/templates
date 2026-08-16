@@ -1,0 +1,43 @@
+include ../service/_service
+
+// Services
+section#services.section.section-lg.bg-transparent
+	.container
+		h2.text-center Our services
+		.row.row-40.row-xl-50
+			.col-md-6.col-xl-4
+				+service({
+					title: 'Consulting',
+					text: 'Our management consulting services focus on our clients\' most critical issues and opportunities for their business and its success.',
+					iconClass: 'mdi-account-multiple'
+				})
+			.col-md-6.col-xl-4
+				+service({
+					title: 'Accounting',
+					text: 'Our company also provides a wide range of accounting and bookkeeping services for startups and small & medium businesses worldwide.',
+					iconClass: 'mdi-calculator'
+				})
+			.col-md-6.col-xl-4
+				+service({
+					title: 'Audit',
+					text: 'We offer efficient audit solutions to business owners. Our services are designed to increase the quality and productivity of your company’s work.',
+					iconClass: 'mdi-file-find'
+				})
+			.col-md-6.col-xl-4
+				+service({
+					title: 'Business planning',
+					text: 'Our business consulting services help you refine your vision, research your markets and competitors, and develop a customized business plan.',
+					iconClass: 'mdi-format-list-bulleted'
+				})
+			.col-md-6.col-xl-4
+				+service({
+					title: 'Customer care',
+					text: 'Customer care services we provide are offered to help your customers and make their experience with your company one of a kind.',
+					iconClass: 'mdi-heart'
+				})
+			.col-md-6.col-xl-4
+				+service({
+					title: 'Online marketing',
+					text: 'Online marketing is the key business tool for enterprises today as it to take their business to the next level using the power of the Internet.',
+					iconClass: 'mdi-shopping'
+				})

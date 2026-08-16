@@ -1,0 +1,36 @@
+include ../logo/_logo
+include _navigation
+include ../lin-icon/_lin-icon
+
+header.section.page-header
+	//RD Navbar
+	.rd-navbar-wrap
+		nav.rd-navbar(
+			data-rd-navbar!={
+				responsive: {
+					1200: { autoHeight: false }
+				}
+			}
+		)
+			.rd-navbar-main-outer
+				.rd-navbar-main.position-relative
+					//RD Navbar Panel
+					.rd-navbar-panel
+						//RD Navbar Toggle
+						button.rd-navbar-toggle( data-rd-navbar-toggle='.rd-navbar-nav-wrap' ): span
+
+						//RD Navbar Brand
+						.rd-navbar-brand
+							+logo
+
+					.rd-navbar-main-element
+						button.rd-navbar-nav-toggle( data-multitoggle='.rd-navbar-nav-wrap' )
+							svg(width='20' height='20' viewbox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg')
+								rect(y='11.4285' width='8.57143' height='8.57143' rx='4.28571' fill='#222222')
+								rect(width='8.57143' height='8.57143' rx='4.28571' fill='#222222')
+								rect(x='11.4286' y='11.4285' width='8.57143' height='8.57143' rx='4.28571' fill='#FFB72B')
+								rect(x='11.4286' width='8.57143' height='8.57143' rx='4.28571' fill='#222222')
+
+						.rd-navbar-nav-wrap
+							+navigation( menu )
+

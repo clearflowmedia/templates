@@ -1,0 +1,24 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+
+$modal-lg: 760px;
+$modal-content-border-radius: 0;
+
+@import "../bootstrap/scss/mixins";
+@import "../bootstrap/scss/modal";
+@import "../base/mixins";
+
+
+// Base
+.modal {
+
+}
+
+@include media-breakpoint-up( xxl ) {
+
+}
+
+// Layouts
+@import "modal-project";

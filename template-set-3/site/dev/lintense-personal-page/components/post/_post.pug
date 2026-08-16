@@ -1,0 +1,17 @@
+//- Post side
+	@param {object} data - data object
+	@param {string} data.img - post image
+	@param {string} data.title - post title
+	@param {string} data.text - post text
+mixin post-side( data )
+	// Post side
+	.post.post-side&attributes( attributes )
+		a.post-media( href='#' )
+			+img( data.img ).post-img
+		.post-body
+			.post-meta
+				.post-meta-item
+					.post-date.h5= data.date
+			.post-title.h4
+				a( href='#' )= data.title
+			.post-text= data.text

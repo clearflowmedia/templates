@@ -1,0 +1,52 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.footer {
+	padding: px-to-rem( 60px, 0 );
+}
+
+.footer-link {
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.footer-row {
+	color: $gray-500;
+}
+
+// Spacing
+* + .footer-row { margin-top: px-to-rem( 100px * $lg-multiplier ); }
+
+.context-dark {
+	.footer-link {
+		color: $white;
+
+		&:hover {
+			color: $gray-500;
+		}
+	}
+}
+
+// Media
+@include media-breakpoint-up(lg) {
+	.footer {
+		padding: px-to-rem( 100px, 0 );
+	}
+
+	* + .footer-row { margin-top: px-to-rem( 100px * $lg-multiplier ); }
+}
+
+@include media-breakpoint-up(xxl) {
+	.footer {
+		padding: px-to-rem( 150px, 0 );
+	}
+
+	* + .footer-row { margin-top: px-to-rem( 100px ); }
+}

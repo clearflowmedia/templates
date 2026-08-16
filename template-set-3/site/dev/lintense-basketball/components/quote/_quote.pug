@@ -1,0 +1,15 @@
+//- Quote
+	@param {object} data - data object
+	@param {string} data.text - quote text
+	@param {string} data.img - quote img
+	@param {string} data.name - name of author
+	@param {string} data.position - position of author
+mixin quote( data )
+	// Quote
+	.quote
+		.quote-icon
+			svg(width='30' height='22' viewBox='0 0 30 22' fill='none')
+				path(d='M0 21.408L8.64 0H14.4L9.024 21.408H0ZM14.976 21.408L23.712 0H29.472L24 21.408H14.976Z' fill='#FFB72B')
+		.quote-body
+			q.quote-text= data.text
+			.quote-author= data.name

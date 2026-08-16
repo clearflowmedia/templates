@@ -1,0 +1,36 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+p.rights {
+	font-size: 16px;
+	color: $gray-700;
+
+	* + & {
+		margin-top: 40px;
+
+		@include media-breakpoint-up(md) {
+			margin-top: 60px;
+		}
+
+		@include media-breakpoint-up(xl) {
+			margin-top: 85px;
+		}
+	}
+
+	a {
+		color: inherit;
+		&:hover { color: $primary; }
+	}
+}
+
+.context-dark {
+	p.rights {
+		color: $white;
+	}
+}

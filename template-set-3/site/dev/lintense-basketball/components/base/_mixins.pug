@@ -1,0 +1,36 @@
+//- Image
+	@param {string} name
+	@param {object} options
+	@param {boolean} options.retina
+mixin img( name, options )
+	-
+		var
+			isExt = /(.jpg|.png|.gif|.svg)$/i.test( name ),
+			isLink = /^(\/\/|http:\/\/|https:\/\/)/.test( name ),
+			size = name.match( /(\d+)x(\d+)/i );
+
+		if ( options && options.retina && size && size.length ) {
+			size[1] = ~~(size[1]/2);
+			size[2] = ~~(size[2]/2);
+		}
+
+		if ( !isLink && !isExt ) {
+			name += '.jpg';
+		}
+
+		if ( !isLink ) {
+			name = 'images/'+ name;
+		}
+
+	img( src= name, alt='', width= size ? size[1] : null, height= size ? size[2] : null )&attributes( attributes )
+
+
+//- Loop without indexing mixin
+	@param {number} iterations - number of iterations
+mixin loop( iterations )
+	- for ( let i = 0; i < iterations; i++ )
+		block
+
+mixin arrow
+	svg(width='21' height='21' viewBox='0 0 21 21' fill='none')
+		path(d='M18.9 10.4999L13.3 4.8999M18.9 10.4999L13.3 16.0999M18.9 10.4999H1.39999')

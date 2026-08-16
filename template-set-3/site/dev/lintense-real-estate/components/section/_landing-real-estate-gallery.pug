@@ -1,0 +1,35 @@
+include ../thumbnail/_thumbnail
+
+// Gallery
+section#gallery.section
+	.row.no-gutters( data-lightgallery )
+		.col-xs-6.col-md-4( data-animate!={ class: 'fadeIn' } )
+			+thumbnail({
+				imgOriginal: 'image-06-533x800',
+				img:         'image-06-640x462'
+			})
+		.col-xs-6.col-md-4( data-animate!={ class: 'fadeIn' } )
+			+thumbnail({
+				imgOriginal: 'image-07-1200x800',
+				img:         'image-07-640x462'
+			})
+		.col-xs-6.col-md-4( data-animate!={ class: 'fadeIn' } )
+			+thumbnail({
+				imgOriginal: 'image-08-1200x800',
+				img:         'image-08-640x462'
+			})
+		.col-xs-6.col-md-4( data-animate!={ class: 'fadeIn' } )
+			+thumbnail({
+				imgOriginal: 'image-09-1200x800',
+				img:         'image-09-640x462'
+			})
+		.col-xs-6.col-md-4( data-animate!={ class: 'fadeIn' } )
+			+thumbnail({
+				imgOriginal: 'image-10-640x800',
+				img:         'image-10-640x462'
+			})
+		.col-xs-6.col-md-4( data-animate!={ class: 'fadeIn' } )
+			+thumbnail({
+				imgOriginal: 'image-11-1200x800',
+				img:         'image-11-640x462'
+			})

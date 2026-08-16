@@ -1,0 +1,47 @@
+include ../quote/_quote
+
+// Testimonials
+section#testimonials.section.section-md.position-relative.pb-0
+	.bg-layer.bg-primary-light
+	.container
+		.row.justify-content-center.text-center
+			.col-xl-6.col-md-10
+				h3 Don’t take our word for it — #[br.d-none.d-xl-block] hear what our customers are saying
+				h5 What clients say about us
+		// Owl Carousel
+		.owl-carousel.owl-style-1(
+			data-owl={
+				items: 1,
+				margin: 30,
+				responsive: {
+					768: {
+						items: 2
+					},
+					992: {
+						items: 3
+					},
+					1600: {
+						items: 3,
+						margin: 50
+					}
+				}
+			}
+		)
+			+quote-boxed({
+				text:     'Thanks to Lintense, I applied and instantly received an interview opportunity. Within a few days, I was hired. This was the easiest experience I had.',
+				img:      'persons/person-01-60x60',
+				name:     'Adam Smith',
+				position: 'Client'
+			})
+			+quote-boxed({
+				text:     'I found a job as a Web Developer and applied through my iPhone with the Lintense app! Very easy to search for jobs and apply in one tap.',
+				img:      'persons/person-02-60x60',
+				name:     'Emma Fox',
+				position: 'Client'
+			})
+			+quote-boxed({
+				text:     'After only 3 weeks of becoming a member at Lintense, I received 4 job offers. I am now utilizing my skills at a job that fits me well.',
+				img:      'persons/person-03-60x60',
+				name:     'Jane Cooper',
+				position: 'Client'
+			})

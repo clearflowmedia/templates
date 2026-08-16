@@ -1,0 +1,30 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+
+.box {}
+
+
+
+@include media-breakpoint-up(xxl) {
+	.box-img,.box-img-1 {
+		img {
+			max-width: none;
+			width: auto;
+		}
+	}
+	.box-img {
+		position: absolute;
+		top: -29%;
+		left: -22%;
+	}
+	.box-img-1 {
+		position: absolute;
+		top: -45%;
+		left: -7%;
+	}
+}

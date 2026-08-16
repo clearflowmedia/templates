@@ -1,0 +1,67 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.lin-icon {
+	width: auto;
+	height: 1em;
+	fill: currentColor;
+}
+
+.lin-path-primary {
+	fill: $primary
+}
+
+.lin-path-secondary {
+	fill: $secondary;
+}
+
+.lin-path-color {
+	fill: currentColor;
+}
+
+.lin-rect-primary {
+	stroke: $primary
+}
+
+
+// Modifying
+.lin-md {
+	width: px-to-rem( 60px );
+	height: px-to-rem( 60px );
+}
+
+.lin-lg {
+	width: px-to-rem( 70px );
+	height: px-to-rem( 70px );
+}
+
+
+.lin-calledMe {
+	animation: ease-out calledMe 5s infinite;
+}
+
+
+// Animation
+@keyframes calledMe {
+	10% {
+		transform: rotate( 420deg );
+	}
+	15% {
+		transform: rotate( 300deg );
+	}
+	20% {
+		transform: rotate( 390deg );
+	}
+	25% {
+		transform: rotate( 330deg );
+	}
+	30%, 100% {
+		transform: rotate( 360deg );
+	}
+}

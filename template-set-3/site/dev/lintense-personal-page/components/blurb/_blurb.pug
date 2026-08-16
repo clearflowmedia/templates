@@ -1,0 +1,10 @@
+//- Blurb
+	@param {object} data - data object
+	@param {string} data.iconClass - class for icon
+	@param {string} data.title - blurb title
+	@param {string} [data.text] - blurb text
+mixin blurb( data )
+	// Blurb
+	article.blurb&attributes( attributes )
+		.icon.blurb-icon.novi-icon( class= data.iconClass )
+		.blurb-title.h4= data.title

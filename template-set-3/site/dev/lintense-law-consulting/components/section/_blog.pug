@@ -1,0 +1,24 @@
+include ../post/_post
+// Blog
+section#blog.section.section-xl.bg-default
+	.container
+		h6 our blog
+		h3 Latest news
+		.row.row-lg.row-50
+			.col-md-6
+				+post({
+					img: 'post-01-611x415',
+					date: 'May 20, 2021',
+					title: 'Top 10 Tips for Managing Workers’ Compensation Claims if You Run Your Own Business',
+					text: 'Workers’ compensation claims are always time-consuming and stressful. Not only do employers need to ensure their employees are...'
+				})
+			.col-md-6.col-lg-4.offset-lg-1
+				+post({
+					img: 'post-02-390x565',
+					date: 'May 20, 2021',
+					title: 'Pitfalls of Dismissing',
+					text: 'It is always a good idea to call your employment lawyer before an employee’s...'
+				}).post-figure-sm
+
+
+

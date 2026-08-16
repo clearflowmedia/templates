@@ -1,0 +1,32 @@
+include ../rights/_rights
+include ../list/_list
+
+// Footer
+footer#contacts.section.footer.section-xl.bg-additional
+	.container
+		.row.row-50
+			.col-md-12.col-xl-5
+				h6 Get in Touch
+				h3.pr-xl-5 Have a project in mind? Let’s get to work.
+				a.btn.btn-primary.btn-round(href='#') Request consultation
+
+			.col-md-6.col-xl-4.col-xxl-3.offset-xxl-1
+				h4.footer-title Contact Us
+				.h4: a(href='tel:#')
+					span.icon.icomoon-phone.mr-3.text-primary
+					| +1 (800) 756-32-56
+				h5: a.link.link-primary.footer-mail-link(href= 'mailto:#') mail@demolink.org
+				p.footer-address.pr-xl-5 2099 Walnut Hill Ln Lafayette, CA
+					br.d-none.d-xl-block
+					|55262
+
+			.col-md-6.col-xl-2.offset-xl-1
+				ul.footer-social
+					li.h5: a(href='#') Facebook
+					li.h5: a(href='#') Twitter
+					li.h5: a(href='#') Medium
+					li.h5: a(href='#') Instagram
+
+		+rights
+
+

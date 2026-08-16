@@ -1,0 +1,64 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+// Blurb boxed
+.blurb-boxed {
+	display: inline-block;
+	max-width: 320px;
+	width: 100%;
+	padding: px-to-rem( 25px, 15px );
+	background: $white;
+	border: $border-width solid $border-color;
+	transition: $transition-base;
+
+	&:hover {
+		border-color: $white;
+		box-shadow: $box-shadow;
+		transform: translateY( -10px );
+	}
+}
+
+.blurb-boxed-list {
+	color: $gray-500;
+}
+
+// Spacing
+* + .blurb-boxed-text { margin-top: px-to-rem( 21px * $xs-multiplier ) }
+* + .blurb-boxed-list { margin-top: px-to-rem( 14px * $xs-multiplier ) }
+
+// Media
+@include media-breakpoint-up(lg) {
+	.blurb-boxed {
+		padding: px-to-rem(30px, 15px);
+	}
+
+	* + .blurb-boxed-text { margin-top: px-to-rem( 21px * $lg-multiplier ) }
+	* + .blurb-boxed-list { margin-top: px-to-rem( 14px * $lg-multiplier ) }
+}
+
+@include media-breakpoint-up(xxl) {
+	.blurb-boxed {
+		padding: px-to-rem(38px, 30px, 28px);
+	}
+
+	* + .blurb-boxed-text { margin-top: px-to-rem( 21px ) }
+	* + .blurb-boxed-list { margin-top: px-to-rem( 14px ) }
+}
+
+// Blurb default
+* + .blurb-default-title { margin-top: px-to-rem( 39px * $xs-multiplier ) }
+* + .blurb-default-text { margin-top: px-to-rem( 12px * $xs-multiplier ) }
+
+@include media-breakpoint-up(lg){
+	* + .blurb-default-title { margin-top: px-to-rem( 39px * $lg-multiplier ) }
+	* + .blurb-default-text { margin-top: px-to-rem( 12px * $lg-multiplier ) }
+}
+
+@include media-breakpoint-up(xxl){
+	* + .blurb-default-title { margin-top: px-to-rem( 39px ) }
+	* + .blurb-default-text { margin-top: px-to-rem( 12px ) }
+}

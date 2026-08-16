@@ -1,0 +1,27 @@
+//- Blurb boxed
+	@param {object} data - data object
+	@param {string} data.title - blurb title
+	@param {string} data.titleClass - blurb title class
+	@param {string} data.text - blurb text
+	@param {string} data.textClass - blurb textclass
+mixin blurb-boxed( data )
+	// Blurb boxed
+	article.blurb.blurb-boxed&attributes( attributes )
+		.blurb-boxed-title.h4= data.title
+		.blurb-boxed-text= data.text
+		ul.blurb-boxed-list.list.list-marked
+			each item in data.list
+				li.list-item= item
+
+//- Blurb default
+	@param {object} data - data object
+	@param {string} data.title - blurb title
+	@param {string} data.titleClass - blurb title class
+	@param {string} data.text - blurb text
+	@param {string} data.textClass - blurb textclass
+mixin blurb-default( data )
+	// Blurb default
+	article.blurb.blurb-default&attributes( attributes )
+		+img( data.img ).blurb-default-icon( class= data.iconClass )
+		.blurb-default-title.h4!= data.title
+		.blurb-default-text= data.text

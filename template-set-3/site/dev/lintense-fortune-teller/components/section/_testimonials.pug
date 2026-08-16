@@ -1,0 +1,22 @@
+include ../quote/_quote
+
+// Testimonials
+section#testimonials.section.section-md.bg-transparent.pb-0
+	.container
+		.row.justify-content-center
+			.col-xl-7.text-center
+				h2 What clients say about us
+				p.big Take a second to read the latest testimonials submitted by our clients to find out more about the quality of our readings and horoscopes we provide to our clients.
+		.row.row-40.row-xxl-60
+			.col-12
+				+quote({
+					img:      'user-01-100x100',
+					text:     'Emma has this ability to make me feel like a super human, every time! Her readings are unique, focused and empowering. I always walk away feeling like I can take on the world. With her readings I have a clear and direct plan on how to tackle whatever is in my way. The information that she relays and the guidance that she provides is one of a kind. I’m so grateful for you, Emma. Thank you!',
+					name:     'Ronald Richards'
+				})
+			.col-12
+				+quote({
+					img:      'user-02-100x100',
+					text:     'You provided me with a big picture overview of everything that has happened in my life in the past and everything that is currently happening based on my natal chart. And with that insight, you empowered me to take the next right step in my future. The experience was clarifying and transformative. I truly appreciate your help.',
+					name:     'Kathryn Murphy'
+				})

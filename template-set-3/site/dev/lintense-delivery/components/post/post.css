@@ -1,0 +1,2 @@
+.post-figure {	display: block;}.post-img {	width: 100%;}* + .post-title,* + .post-btn {	margin-top: 1.25rem;}* + .post-text {	margin-top: 0.75rem;}.desktop .post-figure {	overflow: hidden;}.desktop .post-img {	transition: all 0.2s ease-in-out;}.desktop .post:hover .post-img {	transform: scale(1.05);}@media (min-width: 1600px) {	* + .post-title,	* + .post-btn {		margin-top: 1.875rem;	}}
+/*# sourceMappingURL=post.css.map */

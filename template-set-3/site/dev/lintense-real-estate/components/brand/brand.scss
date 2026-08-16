@@ -1,0 +1,21 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Brand minimal
+.brand-minimal {
+	display: inline-block;
+	transition: $transition-base;
+}
+
+
+// Contexts
+.desktop {
+	.brand-minimal:hover {
+		transform: translateY(-10px);
+	}
+}

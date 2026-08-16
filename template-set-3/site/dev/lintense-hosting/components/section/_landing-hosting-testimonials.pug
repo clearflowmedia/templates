@@ -1,0 +1,54 @@
+include ../quote/_quote
+
+section#testimonials.section.section-lg.bg-transparent.text-center
+	.container
+		h2( data-animate!={ class: 'fadeInUp' } ) What our customers
+			br
+			| have to say
+		.owl-carousel.owl-style-1(
+			data-owl={
+				dots: true,
+				responsive: {
+					576: {
+						items: 2
+					},
+					992: {
+						items: 3
+					},
+					1600: {
+						items: 3,
+						margin: 50
+					}
+				}
+			}
+		)
+			+quote-boxed({
+				text:   'I just want to say thank you for the best hosting service I have ever had! With your  Support Team, I am sure I’ll be your customer for life.',
+				author: 'Adam Smith',
+				date:   'October 8, 2020'
+			})
+			+quote-boxed({
+				text:   'With RightHost Reliable Uptime, Great Tracking and Admin Controls, I don’t have to waste my time anymore. Their customer service is great!',
+				author: 'Debra Adams',
+				date:   'October 10, 2020'
+			})
+			+quote-boxed({
+				text:   'I’d like to thank you for a long partnership with outstanding customer service every time I deal with you. This is why I choose RightHost.',
+				author: 'Bobby Moore',
+				date:   'October 12, 2020'
+			})
+			+quote-boxed({
+				text:   'RightHost offers excellent service with prompt reaction and high patience. Their prices are also very reasonable. I highly recommend them.',
+				author: 'Ashley Morgan',
+				date:   'October 16, 2020'
+			})
+			+quote-boxed({
+				text:   'I am blessed with having found the best Web Hosting company ever. Great service, great hosting, and the staff are amazing. Thank you!',
+				author: 'Anthony Edwards',
+				date:   'October 17, 2020'
+			})
+			+quote-boxed({
+				text:   'I’m speechless. I want to thank you for your well wishes and your kind words. Its so hard to find good service these days but you guys are great!',
+				author: 'Irene Powell',
+				date:   'October 18, 2020'
+			})

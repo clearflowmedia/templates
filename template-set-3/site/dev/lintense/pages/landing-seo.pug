@@ -1,0 +1,26 @@
+extends ../components/base/_skeleton
+include ../components/wave/_wave
+
+
+block variables
+	-
+		pageName = 'Lintense SEO Agency'
+		logo.default = 'logo-default-seo-306x106.png'
+		logo.inverse = 'logo-inverse-seo-306x106.png';
+
+block page
+	include ../components/rd-navbar/_rd-navbar-seo
+	include ../components/section/_landing-seo-intro
+	.position-relative
+		+wave-light( style="top: 58%" )
+		include ../components/section/_landing-seo-why-choose-us
+		include ../components/section/_landing-seo-about-us
+		include ../components/section/_landing-seo-clients
+		include ../components/section/_landing-seo-what-we-do
+	include ../components/section/_landing-seo-cta
+	.position-relative.overflow-hidden
+		+wave-light( style='top: 85%' )
+		include ../components/section/_landing-seo-advantages
+		include ../components/section/_landing-seo-testimonials
+	include ../components/section/_landing-seo-get-in-touch
+	include ../components/footer/_footer-seo

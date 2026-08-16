@@ -1,0 +1,44 @@
+include ../lin-icon/_lin-icon
+
+//- Event full
+	@param {object} data - data object
+	@param {string} data.title - event title
+	@param {string} data.text - event text
+	@param {string} data.time - event time
+mixin event-full( data )
+	// Event full
+	article.event&attributes( attributes )
+		.media.media-xl.flex-column.flex-lg-row
+			.media-left
+				a.event-figure( href='#' )
+					+img( data.img ).event-image.event-image-1
+			.media-body
+				.event-title.h4
+					a( href='#' )= data.title
+				.event-text.lead= data.text
+				.event-time
+					+lin-clock.icon.icon-sm
+					span= data.time
+			.media-right
+				a.btn.btn-lg.btn-primary.btn-nuka( href='#' ) Learn more
+					span.btn-overlay
+
+//- Event
+	@param {object} data - data object
+	@param {string} data.title - event title
+	@param {string} data.text - event text
+	@param {string} data.time - event time
+mixin event( data )
+	// Event
+	article.event&attributes( attributes )
+		.row.row-30.align-items-center( class= data.rowClass )
+			.col-lg-6
+				a.event-figure( href='#' )
+					+img( data.img ).event-image
+			.col-lg-6.col-xl-5( class= data.colClass )
+				.event-title.h4
+					a( href='#' )= data.title
+				.event-text.lead= data.text
+				.event-time
+					+lin-clock.icon.icon-sm
+					span= data.time

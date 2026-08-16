@@ -1,0 +1,29 @@
+include ../logo/_logo
+include _navigation
+
+header.section.page-header
+	//RD Navbar
+	.rd-navbar-wrap
+		nav.rd-navbar
+			.rd-navbar-main-outer
+				.rd-navbar-main
+					.rd-navbar-main-element
+						//RD Navbar Panel
+						.rd-navbar-panel
+							//RD Navbar Toggle
+							button.rd-navbar-toggle( data-rd-navbar-toggle='.rd-navbar-nav-wrap' ): span
+
+							//RD Navbar Brand
+							.rd-navbar-brand
+								+logo
+
+						.rd-navbar-nav-wrap
+							+navigation( menu )
+
+					.rd-navbar-collapse
+						ul.list.text-xl-right
+							li.list-item.h4.text-secondary P:
+								=' '
+								a( href='tel:#' ) +1 234 567 8901
+							li.list-item.small 178 West 27th Street, Suite 527, New York NY 10012
+			.rd-navbar-collapse-toggle.rd-navbar-fixed-element-1( data-rd-navbar-toggle='.rd-navbar-collapse' ): span

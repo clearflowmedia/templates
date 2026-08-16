@@ -1,0 +1,95 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.benefits {
+	margin-top: 50px;
+}
+
+html {
+	.benefit + .benefit {
+		margin-top: 50px;
+
+		@include media-breakpoint-up(md) {
+			margin-top: 60px;
+		}
+
+		@include media-breakpoint-up(lg) {
+			margin-top: 80px;
+		}
+
+		@include media-breakpoint-up(xl) {
+			margin-top: 110px;
+		}
+
+		@include media-breakpoint-up(xxl) {
+			margin-top: 150px;
+		}
+	}
+}
+
+.benefit-figure {
+	position: relative;
+
+	img {
+		position: relative;
+	}
+}
+
+.benefit-figure-object {
+	position: absolute;
+}
+
+.benefit-1 {
+	.benefit-figure-object {
+		max-width: 92%;
+		top: 50%;
+		right: 0;
+		transform: translate(15%, -50%);
+
+		@include media-breakpoint-up(lg) {
+			transform: translate(21%, -50%);
+		}
+	}
+}
+
+.benefit-2 {
+	.benefit-figure-object {
+		max-width: 79%;
+		top: 0;
+		left: 0;
+		transform: translate(-13%, -27%);
+	}
+}
+
+.benefit-3 {
+	.benefit-figure-object {
+		max-width: 79%;
+		top: 0;
+		left: 0;
+		transform: translate(15%, -27%);
+	}
+}
+
+.benefit-description {
+	* + & {
+		margin-top: 20px;
+
+		@include media-breakpoint-up(xl) {
+			margin-top: 30px;
+		}
+	}
+
+	& + .list-marked {
+		margin-top: 15px;
+
+		@include media-breakpoint-up(xl) {
+			margin-top: 26px;
+		}
+	}
+}

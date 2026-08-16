@@ -1,0 +1,202 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Box Call
+.box-call {
+  padding: px-to-rem(20px);
+  border-radius: $border-radius;
+  color: $body-color;
+  box-shadow: $box-shadow;
+  height: 100%;
+  @include media-breakpoint-up(md) {
+	padding: px-to-rem(50px, 60px, 50px);
+  }
+}
+
+.box-call-header {
+  & + .box-call-body {
+	margin-top: px-to-rem(18px);
+  }
+}
+
+.box-call-body {
+  display: flex;
+  flex-wrap: wrap;
+
+  > .btn {
+	margin-right: px-to-rem(27px);
+  }
+}
+
+// Box Feature card
+.box-feature-card {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  @include media-breakpoint-up(md) {
+	max-width: 100%;
+  }
+}
+
+.box-feature-card-body {
+  display: flex;
+  position: relative;
+  perspective: 1000px;
+  height: 100%;
+}
+.box-feature-card-text {
+  flex-grow: 1;
+}
+
+.box-feature-card-front, .box-feature-card-back {
+  width: 100%;
+  height: 100%;
+  padding: px-to-rem(55px, 36px, 61px);
+  transition: .6s;
+  backface-visibility: hidden;
+  border-radius: $border-radius;
+  border: 1px solid #CCD8DC;
+}
+
+
+.box-feature-card-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: px-to-rem(55px, 36px, 61px);
+  background-color: $white;
+}
+
+.box-feature-card-back {
+  display: flex;
+  flex-direction: column;
+  padding: px-to-rem(55px, 26px, 42px, 36px);
+  background-color: $white;
+}
+
+.box-feature-card-title + * {
+  margin-top: px-to-rem(24px);
+}
+
+
+.box-feature-card-back {
+  transform: rotateY(360deg);
+}
+
+.desktop {
+  .box-feature-card:hover {
+
+  }
+  .box-feature-card-back {
+	transform: rotateY(180deg);
+  }
+
+  .box-feature-card-body:hover .box-feature-card-front {
+	transform: rotateY(180deg);
+	box-shadow: $box-shadow;
+  }
+
+  .box-feature-card-body:hover .box-feature-card-back {
+	transform: rotateY(360deg);
+	box-shadow: $box-shadow;
+
+  }
+}
+
+// Box Images
+.box-images {
+  display: inline-block;
+  position: relative;
+
+  > .box-images-2 {
+	display: none;
+
+	@include media-breakpoint-up(xl) {
+	  position: absolute;
+	  display: block;
+	  bottom: px-to-rem(-100px);
+	  right: px-to-rem(-160px)
+	}
+  }
+}
+
+// Box Service
+.box-service {
+  max-width: px-to-rem(330px);
+  margin-left: auto;
+  margin-right: auto;
+  @include media-breakpoint-up(sm) {
+	margin-left: 0;
+  }
+}
+
+.box-service-number {
+  font-size: px-to-rem(30px);
+  line-height: 1.2;
+  font-weight: 700;
+  color: $primary;
+
+}
+
+.box-service-header {
+  margin-top: px-to-rem(10px);
+  @include media-breakpoint-up(md) {
+	margin-top: px-to-rem(21px);
+
+  }
+}
+
+.box-service-text {
+  margin-top: px-to-rem(15px);
+
+  & + * {
+	margin-top: px-to-rem(15px);
+  }
+  @include media-breakpoint-up(md) {
+	margin-top: px-to-rem(24px);
+	& + * {
+	  margin-top: px-to-rem(30px);
+	}
+  }
+}
+
+// Box Award
+.box-award {
+  max-width: px-to-rem(220px);
+  height: 100%;
+  padding: px-to-rem(15px, 15px);
+  border-radius:  $border-radius;
+  font-size: px-to-rem(14px);
+  margin-left: auto;
+  margin-right: auto;
+  &.bordered {
+	border: 1px solid #CCD8DC;
+  }
+  @include media-breakpoint-up(sm) {
+	margin-left: 0;
+  }
+  @include media-breakpoint-up(lg) {
+	padding: px-to-rem(28px, 20px, 18px);
+  }
+}
+
+.box-award-title {
+  margin-top: px-to-rem(7px);
+  color: $secondary;
+}
+
+.context-dark .box-award-title {
+  color: $white;
+}

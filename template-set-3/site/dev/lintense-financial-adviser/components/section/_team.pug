@@ -1,0 +1,39 @@
+include ../person/_person
+
+// Team
+section#team.section.section-lg.bg-transparent
+	.container
+		h2 Meet our team
+		h5.text-primary.font-weight-medium We are a team of experienced financial advisors
+		p.mt-3 Lintense is a team of seasoned and dedicated financial experts who aim to help you improve your #[br.d-none.d-xl-block] business. We are ready to help you make smart decisions with your money.
+		.row.row-30.row-xl-50
+			.col-lg-4.col-sm-6
+				+persone({
+					img: 'persons/person-01-390x425',
+					name:     'Kathryn Murphy',
+					position: 'Co-Founder, Business Analyst'
+				})
+			.col-lg-4.col-sm-6
+				+persone({
+					img: 'persons/person-02-390x425',
+					name:     'Jacob Jones',
+					position: 'Co-Founder, Financial Consultant'
+				})
+			.col-lg-4.col-sm-6
+				+persone({
+					img: 'persons/person-03-390x425',
+					name:     'Emma Warren',
+					position: 'Tax Manager'
+				})
+			.col-lg-4.col-sm-6
+				+persone({
+					img: 'persons/person-04-390x425',
+					name:     'Marvin McKinney',
+					position: 'Executive Planner'
+				})
+			.col-lg-4.col-sm-6
+				+persone({
+					img: 'persons/person-05-390x425',
+					name:     'Jane Cooper',
+					position: 'Audit Consultant'
+				})

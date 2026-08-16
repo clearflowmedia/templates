@@ -1,0 +1,84 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.event {
+	text-align: left;
+	padding: 10px;
+	background: $gray-100;
+	border-radius: $border-radius;
+	border: $border-width solid $border-color;
+}
+
+.event-image {
+	border-radius: $border-radius;
+}
+
+.event-title {
+	color: $primary;
+
+	.event-title-link:hover {
+		color: $black;
+	}
+}
+
+.event-list {
+	@include group( 25px, 10px );
+	color: $gray-700;
+}
+
+.event-list-item {
+	display: inline-block;
+}
+
+.event-list-item-icon {
+	margin-right: px-to-rem( 6px );
+	color: $primary;
+}
+
+
+// Spacing
+* + .event {
+	margin-top: px-to-rem( 20px );
+}
+
+* + .event-text {
+	margin-top: px-to-rem( 10px );
+}
+
+* + .event-list {
+	margin-top: px-to-rem( 15px );
+}
+
+
+// Contexts
+.desktop {
+	.event-figure {
+		display: block;
+		overflow: hidden;
+		border-radius: $border-radius;
+	}
+
+	.event-image {
+		transition: $transition-base;
+	}
+
+	.event:hover {
+		.event-image {
+			transform: scale( 1.05 );
+		}
+	}
+}
+
+
+// Media
+@include media-breakpoint-down(sm) {
+	.event-image {
+		width: 100px;
+	}
+}

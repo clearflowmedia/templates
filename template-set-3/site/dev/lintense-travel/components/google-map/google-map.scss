@@ -1,0 +1,21 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.google-map {
+	height: 250px;
+	width: 100%;
+
+	@include media-breakpoint-up(md) {
+		height: 350px;
+	}
+
+	@include media-breakpoint-up(lg) {
+		height: 444px;
+	}
+}

@@ -1,0 +1,63 @@
+include ../post/_post
+
+// News
+section#news.section.section-lg.bg-transparent
+	.container
+		h2.text-center Recent news
+		.owl-carousel.owl-style-1(
+			data-owl={
+				dots: true,
+				items: 1,
+				margin: 30,
+				responsive: {
+					576: {
+						items: 2
+					},
+					768: {
+						items: 2
+					},
+					992: {
+						items: 3
+					},
+					1600: {
+						items: 3,
+						margin: 50
+					}
+				}
+			}
+		)
+			+post({
+				img: 'post-01-390x250',
+				title: 'How brands can stay relevant in the digital age',
+				author: 'Brian Williamson',
+				date: 'October 24, 2022'
+			})
+				p.post-text Branding has become an almost mystical concept. Companies know brands are immensely valuable, but have only a slippery grasp on how they work. This is quite...
+			+post({
+				img: 'post-02-390x250',
+				title: 'Why business planning is important',
+				author: 'Robert Green',
+				date: 'December 20, 2022'
+			})
+				p.post-text A business plan is an important tool for managing and growing your business. A well-designed plan lays out a vision of growth and the steps needed to get there. A plan is also…
+			+post({
+				img: 'post-03-390x250',
+				title: 'Hiring a business consultant',
+				author: 'Anna Brown',
+				date: 'December 23, 2022'
+			})
+				p.post-text Business consultants are just like doctors, they identify the problem and find a solution to alleviate the pain. A business consultant can help organizations save time and money, provide professional advice, navigate their...
+			+post({
+				img: 'post-04-390x250',
+				title: 'Achieving small business success',
+				author: 'Brian Williamson',
+				date: 'December 25, 2022'
+			})
+				p.post-text To a small business owner, success could mean a double-digit growth rate, opening a second location, taking a vacation, or simply making payroll. There is no one single answer. Or is there?
+			+post({
+				img: 'post-05-390x250',
+				title: 'How to make an effective business plan',
+				author: 'Robert Green',
+				date: 'December 29, 2022'
+			})
+				p.post-text Every successful business must start with a business plan. That’s because a business plan is the blueprint that gives your company direction and focus. It basically acts as...

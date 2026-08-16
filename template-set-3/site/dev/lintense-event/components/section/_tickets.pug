@@ -1,0 +1,25 @@
+// Tickets
+section#tickets.section.section-xl.bg-secondary-light
+    .container
+        .row.row-30.justify-content-center
+            .col-lg-8.text-center
+                .h5.sup.text-primary Register now for the best prices!
+                h2.h3 Get your tickets
+                p.lead.pl-lg-5.pr-lg-5 Are you bold enough to take a step into the unknown? Join us and experience it yourself.
+                h2.h3.mt-5 New Jersey, June 5, 2021
+                .box-price
+                    span.lead from
+                    span $150
+                form.rd-mailform.box-form( data-form-output='form-output-global', data-form-type='contact', method='post', action='components/rd-mailform/rd-mailform.php' )
+                    .form-group(data-animate!={class: 'fadeInUp'} )
+                        input.form-control( type='text', name='name', placeholder='First name', data-constraints='@Required' )
+                    .form-group(data-animate!={class: 'fadeInUp'} )
+                        input.form-control( type='text', name='lname', placeholder='Last name', data-constraints='@Required' )
+                    .form-group(data-animate!={class: 'fadeInUp'} )
+                        input.form-control( type='text', name='phone', placeholder='Phone', data-constraints='@Required @PhoneNumber' )
+                    .form-group(data-animate!={class: 'fadeInUp'} )
+                        input.form-control( type='email', name='email', placeholder='Email', data-constraints='@Required @Email' )
+                    .box-btn(data-animate!={class: 'fadeInUp'} )
+                        button.btn.btn-secondary.btn-round.btn-block( type='submit' ) register now
+                            span.btn-overlay
+                    #form-output-global.form-output.snackbar.snackbar-secondary

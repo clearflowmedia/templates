@@ -1,0 +1,25 @@
+include ../quote/_quote
+// Testimonials
+section#testimonials.section.section-lg.bg-default
+	.container
+		.row.justify-content-center: .col-md-10.col-xl-8.text-center
+			h2 Don’t take our word for it —&nbsp;
+				br.d-none.d-xl-block
+				| hear what our customers are saying
+			p.lead Recent testimonials
+		.row.row-md.row-50
+			.col-lg-4
+				+quote-simple({
+					text: 'Friendly, fast, and definitely exceeded my expectations. It was hard to find a repair center that services Huawei so I was glad I found Lintense repair company.',
+					author: 'Emma Williamson'
+				})
+			.col-lg-4
+				+quote-simple({
+					text: 'Excellent service. These guys always pick up the phone and work with you. I dropped my tablet about a year ago and had to get the screen replaced. They were on it. The people were super quick to help, after ordering the screen it only took 1 hour to get everything fixed up.',
+					author: 'Peter Adams'
+				})
+			.col-lg-4
+				+quote-simple({
+					text: 'Great place! They’re super quick and efficient. Definitely recommend coming here to get your phone fixed.',
+					author: 'Ann Smith'
+				})

@@ -1,0 +1,134 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins/breakpoints";
+@import "../bootstrap/scss/mixins/grid-framework";
+@import "../bootstrap/scss/mixins/grid";
+@import "../bootstrap/scss/grid";
+@import "grid-spacing";
+
+// Base
+.row-15 {
+	@include grid-spacing( px-to-rem( 15px ) );
+}
+
+.row-20 {
+	@include grid-spacing( px-to-rem( 20px ) );
+}
+
+.row-30 {
+	@include grid-spacing( px-to-rem( 30px ) );
+}
+
+.row-40 {
+	@include grid-spacing( px-to-rem( 40px ) );
+}
+
+.row-50 {
+	@include grid-spacing( px-to-rem( 50px ) );
+}
+
+
+// Spacing
+* + .row { margin-top: px-to-rem( 40px ); }
+* + .row-content { margin-top: px-to-rem( 56px * $xs-multiplier ) }
+* + .row-content-2 { margin-top: px-to-rem( 70px * $xs-multiplier ) }
+* + .row-content-3 { margin-top: px-to-rem( 39px * $xs-multiplier ) }
+
+
+// Modifying
+.row-bordered {
+	overflow: hidden;
+
+	.row {
+		margin: -1px 0 -1px -1px;
+
+		> [class*="col-"] {
+			border-left: 1px solid $border-color;
+			border-bottom: 1px solid $border-color;
+		}
+	}
+}
+
+.row-gutters-20 {
+	margin-right: -10px;
+	margin-left: -10px;
+
+	> [ class*='col-' ] {
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+}
+
+
+// Context dark
+.context-dark {
+	.row-bordered {
+		.row {
+			> [class*="col-"] {
+				border-left-color: rgba( $secondary, .2 );
+				border-bottom-color: rgba( $secondary, .2 );
+			}
+		}
+	}
+}
+
+// Novi context
+[data-x-mode='true'] {
+	.row-bordered {
+		.row {
+			margin: 0;
+		}
+	}
+}
+
+
+@include media-breakpoint-up( lg ) {
+	.row-lg-50 {
+		@include grid-spacing( px-to-rem( 50px ) );
+	}
+
+	* + .row-content { margin-top: px-to-rem( 56px * $lg-multiplier ) }
+	* + .row-content-2 { margin-top: px-to-rem( 70px * $lg-multiplier ) }
+	* + .row-content-3 { margin-top: px-to-rem( 39px * $lg-multiplier ) }
+}
+
+@include media-breakpoint-up( xl ) {
+	.row-xl-46 {
+		@include grid-spacing( px-to-rem( 46px ) );
+	}
+
+	.row-xl-70 {
+		@include grid-spacing( px-to-rem( 70px ) );
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.row-xxl-40 {
+		@include grid-spacing( px-to-rem( 40px ) );
+	}
+
+	.row-xxl-50 {
+		@include grid-spacing( px-to-rem( 50px ) );
+	}
+
+	* + .row-content { margin-top: px-to-rem( 56px ) }
+	* + .row-content-2 { margin-top: px-to-rem( 70px ) }
+	* + .row-content-3 { margin-top: px-to-rem( 39px ) }
+
+	.row {
+		margin-left: -25px;
+		margin-right: -25px;
+	}
+
+	.col,
+	[class*='col-'] {
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+
+	.container-wide {
+		max-width: 1800px;
+	}
+}

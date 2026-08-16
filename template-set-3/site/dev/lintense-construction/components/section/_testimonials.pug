@@ -1,0 +1,52 @@
+include ../quote/_quote
+
+// Testimonials
+section#testimonials.section.section-lg.bg-100.text-center.text-md-start
+	.container
+		.row.row-30.justify-content-between.align-items-center
+			.col-md-9.col-xl-4.col-xxl-5
+				.title-custom Reviews
+				h2 What our customers have to say
+				p.lead Here are the recent testimonials and opinions from our clients.
+		.row.row-30.row-offset-1
+			.col-md-4
+				+quote-boxed({
+					text: 'We have been tremendously impressed with your team’s professionalism, workmanship, and timeliness. You did a great job on our store’s renovation and totally transformed it in the best possible way.',
+					img: 'user-01-64x64',
+					name: 'Frances Pruyn,',
+					position: 'January 15, 2023',
+				})( data-animate!={ class: 'fadeInUp', delay: '.1s' } )
+				+quote-boxed({
+					text: 'Thank you for guiding us through the construction process, while being kind and understanding.',
+					img: 'user-04-64x64',
+					name: 'Eleanor Pena,',
+					position: 'January 15, 2023',
+				})( data-animate!={ class: 'fadeInUp', delay: '.2s' } )
+
+			.col-md-4
+				+quote-boxed({
+					text: 'Your organization has performed professionally. Your commitment to quality and your efforts in ensuring the ultimate success of this project was wonderful.',
+					img: 'user-02-64x64',
+					name: 'Esther Howard,',
+					position: 'January 15, 2023',
+				})( data-animate!={ class: 'fadeInUp', delay: '.2s' } )
+				+quote-boxed({
+					text: 'We appreciate your services a lot! You managed to complete the renovation project in just a week which is incredibly fast compared to other studios we have worked with. Thank you for your work!',
+					img: 'user-05-64x64',
+					name: 'Ralph Edwards,',
+					position: 'January 15, 2023',
+				})( data-animate!={ class: 'fadeInUp', delay: '.3s' } )
+
+			.col-md-4
+				+quote-boxed({
+					text: 'The team of Lintense did a fantastic job managing our transition into the new office and renovating it.',
+					img: 'user-03-64x64',
+					name: 'William Brown,',
+					position: 'January 15, 2023',
+				})( data-animate!={ class: 'fadeInUp', delay: '.3s' } )
+				+quote-boxed({
+					text: 'It is very enjoyable to work with Lintense. They are consistently courteous and friendly, respond and solve problems quickly, and are very knowledgeable.',
+					img: 'user-06-64x64',
+					name: 'Robert Fox,',
+					position: 'January 15, 2023',
+				})( data-animate!={ class: 'fadeInUp', delay: '.4s' } )

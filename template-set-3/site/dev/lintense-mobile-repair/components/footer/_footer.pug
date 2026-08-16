@@ -1,0 +1,28 @@
+include ../rights/_rights
+include ../list/_list
+
+// Footer
+footer#contacts.section.footer.bg-primary-light
+	.container
+		.row.row-50
+			.col-md-12.col-xl-5
+				h2 Find out more about  our repair services
+				p.lead Get Your Quote or Call: +1 (800) 756-32-56
+				button.btn.btn-lg.btn-primary( data-bs-toggle="modal", data-bs-target= "#consultation" )  Request consultation
+
+			.col-md-6.col-xl-4.col-xxl-3.offset-xxl-1
+				h4.footer-title.mt-xl-3 Contact Us
+				a.footer-phone-link(href='tel:#') +1 (800) 756-32-56
+				a.link-secondary.footer-mail-link(href= 'mailto:#') mail@demolink.org
+				p.footer-address 2099 Walnut Hill Ln Lafayette, CA 55262
+
+			.col-md-6.col-xl-2.offset-xl-1
+				ul.footer-social.mt-xl-3
+					li: a.footer-social-link(href='#') Facebook
+					li: a.footer-social-link(href='#') Twitter
+					li: a.footer-social-link(href='#') Medium
+					li: a.footer-social-link(href='#') Instagram
+
+		+rights
+
+

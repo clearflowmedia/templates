@@ -1,0 +1,93 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+
+// Base
+.box-decoration {
+	position: relative;
+}
+
+.box-decoration-1 {
+	max-width: 280px;
+
+	.decoration-1 {
+		width: 61%;
+
+		&::before {
+			content: '';
+			display: block;
+			padding-bottom: 100%;
+		}
+	}
+
+	.decoration-2 {
+		width: 30.4%;
+		border-radius: 50%;
+		margin-left: 56%;
+		margin-top: -4%;
+
+		&::before {
+			content: '';
+			display: block;
+			padding-bottom: 100%;
+		}
+	}
+}
+
+.box-decoration-2 {
+	max-width: 82%;
+
+	[class*='decoration-'] {
+		position: absolute;
+	}
+
+	.decoration-1 {
+		right: -24%;
+		bottom: 16.5%;
+		width: 30%;
+
+		&::before {
+			content: '';
+			display: block;
+			padding-bottom: 100%;
+		}
+	}
+
+	.decoration-2 {
+		right: -24.6%;
+		bottom: 4.8%;
+		width: 31.4%;
+	}
+
+	.decoration-3 {
+		left: 0;
+		bottom: 0;
+		transform: translateY(50%);
+		width: 30%;
+		border-radius: 50%;
+
+		&::before {
+			content: '';
+			display: block;
+			padding-bottom: 100%;
+		}
+	}
+}
+
+.box-decoration-3 {
+	margin-top: 180px;
+
+	.decoration-1 {
+		width: 54%;
+
+		&::before {
+			content: '';
+			display: block;
+			padding-bottom: 100%;
+		}
+	}
+}

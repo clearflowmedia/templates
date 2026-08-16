@@ -1,0 +1,35 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.counter-default-main {
+	color: $primary;
+}
+.counter-default {
+	& + & {
+		margin-top: 30px;
+
+		@include media-breakpoint-up(xl) {
+			margin-top: 55px;
+		}
+	}
+}
+
+.counter-default-title {
+	margin-top: 10px;
+	font-weight: 500;
+}
+
+@include media-breakpoint-up(xl) {
+	.counter-default-main {
+		letter-spacing: -1px;
+	}
+	.counter-default + .counter-default {
+			margin-top: 55px;
+	}
+}

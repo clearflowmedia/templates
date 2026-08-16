@@ -1,0 +1,106 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+
+
+// Modifying
+.desktop {
+	.section-one-screen {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+}
+
+
+// Sizing
+.section-sm,
+.section-lg {
+	padding: 70px 0;
+}
+
+
+// Media
+@include media-breakpoint-up(md) {
+	.section-lg {
+		padding: 100px 0;
+	}
+}
+
+@include media-breakpoint-up( lg ) {
+	.section-lg {
+		padding: 120px 0;
+	}
+}
+
+@include media-breakpoint-up( xl ) {
+	.section-lg {
+		padding: 140px 0;
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.section-lg {
+		padding: 190px 0;
+	}
+}
+
+
+// Section Column
+.section-column {
+	position: relative;
+}
+
+.section-column-title {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding-top: 100px;
+	z-index: 1;
+}
+
+.section-column-item {
+	padding: 100px 30px 170vw;
+	background-position-y: bottom;
+}
+
+.section-column-item-first {
+	padding-top: 280px;
+}
+
+// Media
+@include media-breakpoint-up(lg) {
+	.section-column-title {
+		padding-top: 120px;
+	}
+
+	.section-column-item {
+		padding-top: 360px;
+		padding-bottom: 55vw;
+		background-position-y: center;
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.section-column-title {
+		padding-top: 140px;
+	}
+
+	.section-column-item {
+		padding-top: 390px;
+	}
+}
+
+@include media-breakpoint-up(xxl) {
+	.section-column-title {
+		padding-top: 190px;
+	}
+
+	.section-column-item {
+		padding-top: 445px;
+	}
+}

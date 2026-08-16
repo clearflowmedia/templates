@@ -1,0 +1,52 @@
+include ../logo/_logo
+include ../rights/_rights
+include ../list/_list
+
+// Footer
+footer#contacts.section.footer
+	.container
+		.row.row-30.justify-content-between
+			.col-md-7
+				h2 Subscribe to our newsletter
+				p Enter your e-mail address to receive fresh and spam-free updates and tips.
+				form.rd-form.rd-form-inline.rd-mailform.mr-xl-5( data-form-output='newsletter-sample', data-form-type='subscribe', method='post', action='components/rd-mailform/rd-mailform.php', data-animate!={class: 'fadeInUp'} )
+					.form-group
+						input.form-control.form-control-lg( type='email', name='email', placeholder='mail@demolink.org', data-constraints='@Email @Required' )
+					button.btn.btn-primary-light.btn-lg.icon.novi-icon.btn-icon-next.int-arrow-right( type='submit' )
+				#newsletter-sample.form-output.snackbar.snackbar-primary
+			
+			.col-md-4
+				+logo
+				p We are ready to provide you with any financial, legal and auditing help.
+				.footer-contacts
+					p
+						span Have questions? <br>
+						a.h5.font-weight-bold( href='tel:#' ) 123-456-7890
+				.footer-contacts
+					p
+						a( href='#' ) 670 Lafayette Ave, Brooklyn, NY 11216 <br> Mon – Fri: 10am – 6pm
+		
+		.row.row-30.justify-content-between
+			.col-md-6
+				.row
+					.col-6
+						h5.footer-heading Navigation
+						ul.footer-nav-list
+							li: a( href='#' ) Partners
+							li: a( href='#' ) Services
+							li: a( href='#' ) About
+							li: a( href='#' ) Team
+							li: a( href='#' ) Stats
+							li: a( href='#' ) FAQs
+							li: a( href='#' ) Testimonials
+							li: a( href='#' ) Contacts
+					.col-6
+						h5.footer-heading Socials
+						ul.footer-nav-list
+							li: a( href='#' ) Facebook
+							li: a( href='#' ) Instagram
+							li: a( href='#' ) Twitter
+			.col-md-4
+				.footer-bottom-box
+					p: a( href='mailto:#' ) mail@demolink.org
+					+rights

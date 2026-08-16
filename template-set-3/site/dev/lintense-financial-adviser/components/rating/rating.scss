@@ -1,0 +1,49 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.rating {
+	font-size: 26px;
+	line-height: 1;
+	color: $primary;
+}
+
+.rating-body {
+	position: relative;
+	display: inline-block;
+}
+
+.rating-empty,
+.rating-fill {
+	> * + * {
+		margin-left: 5px;
+	}
+}
+
+.rating-empty {
+	color: $primary-light-2;
+}
+
+.rating-fill {
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+}
+
+
+// Spacing
+* + .rating {
+	margin-top: 15px;
+}
+
+
+// Modifying
+.rating-orange {
+	color: #F6CA67;
+}

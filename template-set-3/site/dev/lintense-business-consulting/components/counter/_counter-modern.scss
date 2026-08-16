@@ -1,0 +1,35 @@
+// Counter modern
+.counter-modern {
+	text-align: center;
+	color: $dark;
+}
+
+.counter-modern-icon {
+	font-size: px-to-rem(48px);
+	line-height: 1;
+}
+
+.counter-modern-title {
+	text-transform: capitalize;
+}
+
+// Spacing
+* + .counter-modern-main,
+* + .counter-modern-title {
+	margin-top: px-to-rem(10px);
+	@include media-breakpoint-up(md) {
+		margin-top: px-to-rem(15px);
+	}
+}
+
+// Contexts
+.context-dark {
+
+	.counter-modern-main {
+		color: inherit;
+	}
+
+	.counter-modern-icon {
+		color: inherit;
+	}
+}

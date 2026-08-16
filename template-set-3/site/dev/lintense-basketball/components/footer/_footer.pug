@@ -1,0 +1,30 @@
+include ../logo/_logo
+include ../rights/_rights
+include ../list/_list
+
+// Footer
+footer.section.section-lg.footer.bg-transparent
+	.container
+		.row.row-40
+			.col-md-4
+				+logo
+			.col-md-3.col-xs-6
+				h6 menu
+				ul.footer-nav-list
+					li: a( href='#about' ) About
+					li: a( href='#why-us' ) Why us
+					li: a( href='#staff' ) COACHING STAFF
+					li: a( href='#facts' ) facts & numbers
+					li: a( href='#gallery' ) gallery
+					li: a( href='#testimonials' ) Testimonials
+					li: a( href='#contacts' ) Contacts
+			.col-md-5.col-xs-6
+				h6 contacts
+				.contacts
+					.contacts-address
+						a( href='#' ) 72 Laurel Court <br> San Francisco, CA <br> 94122
+					.contacts-phone
+						span P:
+						span &nbsp;&nbsp;
+						a( href='tel:#' ) +1 (256) 10 87 000
+				+rights

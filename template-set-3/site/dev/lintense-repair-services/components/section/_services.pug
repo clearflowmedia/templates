@@ -1,0 +1,41 @@
+include ../service/_service
+
+// Services
+section#services.section.section-lg.bg-transparent
+	.container
+		h2.text-primary( data-animate!={ class: 'fadeInUp' } ) Our services
+		.row.row-30
+			.col-xs-6.col-lg-4.align-self-center( data-animate!={ class: 'fadeInUp' } )
+				+img( 'service-1-390x240' )
+			.col-xs-6.col-lg-4( data-animate!={ class: 'fadeInUp' } )
+				+service({
+					title: 'Home Remodeling',
+					text:  'Our trusted and insured handymen can help with any part of your home remodeling project. Whatever you need to install, we can easily help you.'
+				})
+			.col-xs-6.col-lg-4( data-animate!={ class: 'fadeInUp' } )
+				+service({
+					title: 'Home Additions',
+					text:  'More living space means more warm, lasting memories. With countless options to choose from, we’ll help you get the extra room you need.'
+				})
+			.col-xs-6.col-lg-4( data-animate!={ class: 'fadeInUp' } )
+				+service({
+					title: 'Flooring',
+					text:  'We offer a variety of professional flooring services, including flooring installation, floor care and maintenance.'
+				})
+			.col-xs-6.col-lg-4( data-animate!={ class: 'fadeInUp' } )
+				+service({
+					title: 'Painting services',
+					text:  'Whether it\'s an entire house, a room, or a wall, our professional & qualified team can get it painted to your satisfaction.'
+				}).service-boxed
+			.col-xs-6.col-lg-4.align-self-center( data-animate!={ class: 'fadeInUp' } )
+				+img( 'service-2-390x240' )
+			.col-xs-6.col-lg-4( data-animate!={ class: 'fadeInUp' } )
+				+service({
+					title: 'Exterior renovation',
+					text:  'Whether you need a basic siding replacement or a full-home makeover, Lintense is your partner for any kind of exterior renovations.'
+				}).service-boxed
+			.col-xs-6.col-lg-4( data-animate!={ class: 'fadeInUp' } )
+				+service({
+					title: 'Electrical services',
+					text:  'Our team of electricians is ready to provide you with a reliable and cost efficient solution that your house needs.'
+				})

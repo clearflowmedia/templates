@@ -1,0 +1,54 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+// Layout
+.footer-top {
+	p {
+		color: rgba( $white, .6 );
+	}
+
+	a {
+		color: inherit;
+
+		&:hover {
+			color: $primary;
+		}
+	}
+
+	.footer-inner {
+		padding: px-to-rem( 40px, 15px, 10px );
+	}
+}
+
+.footer-bottom {
+	padding: px-to-rem( 40px, 15px );
+	color: rgba( $white, .3 );
+}
+
+@include media-breakpoint-up( xl ) {
+	.footer-top {
+		.footer-inner {
+			padding: px-to-rem( 60px, 15px, 15px );
+		}
+	}
+
+	.footer-bottom {
+		padding: px-to-rem( 60px, 15px, 80px );
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.footer-top {
+		.footer-inner {
+			padding: px-to-rem( 106px, 0, 30px );
+		}
+	}
+
+	.footer-bottom {
+		padding: px-to-rem( 103px, 15px, 140px );
+	}
+}

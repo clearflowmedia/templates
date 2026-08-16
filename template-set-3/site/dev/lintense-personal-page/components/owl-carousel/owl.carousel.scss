@@ -1,0 +1,141 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+@import "default";
+
+// TODO просмотреть стандартную стилизацию
+// Variables
+$owl-primary: $primary;
+$owl-dot-color: $gray-300;
+
+
+// Dots
+.owl-carousel {
+	.owl-dots {
+		margin-top: px-to-rem( 20px );
+		font-size: 0;
+		line-height: 0;
+		text-align: center;
+		@include group( px-to-rem( 20px ) );
+	}
+
+	.owl-dot {
+		position: relative;
+		width: 10px;
+		height: 10px;
+		display: inline-block;
+		border-radius: 50%;
+		background-color: $owl-dot-color;
+		transition: all .3s ease;
+
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 110%;
+			height: 110%;
+			content: '';
+			transform: translate( -50%, -50% ) scale( 0 );
+			background-color: $owl-primary;
+			border-radius: inherit;
+			transition: inherit;
+		}
+
+		&:hover,
+		&.active {
+			border-color: $owl-primary;
+
+			&::before {
+				transform: translate( -50%, -50% ) scale( 1 );
+			}
+		}
+	}
+
+	.owl-nav {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		transform: translateY( -50% );
+		pointer-events: none;
+	}
+
+	.owl-prev,
+	.owl-next {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		font-family: "Material Design Icons";
+		font-size: px-to-rem( 24px );
+		line-height: 1;
+		cursor: pointer;
+		pointer-events: auto;
+		transition: $transition-base;
+
+		&.disabled {
+			color: $dark;
+			opacity: .3;
+			cursor: default;
+			pointer-events: none;
+		}
+	}
+
+	.owl-prev {
+		&::before {
+			content: '\f14a';
+		}
+	}
+
+	.owl-next {
+		&::before {
+			content: '\f14f';
+		}
+	}
+}
+
+
+// Spacing
+* + .owl-content-1 { margin-top: px-to-rem( 26px ) }
+
+
+// Modifying
+.owl-vertical-center {
+	.owl-stage {
+		display: flex;
+		align-items: center;
+	}
+}
+
+// Owl carousel context
+.owl-carousel-shadow {
+	.owl-stage-outer {
+		margin: -25px -28px -30px;
+		padding: 25px 28px 30px;
+	}
+
+	.owl-item:not(.active) {
+		> * {
+			box-shadow: none;
+		}
+	}
+}
+
+
+// Media
+@include media-breakpoint-up( lg ) {
+	.owl-carousel {
+		.owl-dots {
+			margin-top: px-to-rem( 53px );
+		}
+	}
+}
+
+
+// Layout
+@import "owl-carousel-separate";
+@import "owl-carousel-1";

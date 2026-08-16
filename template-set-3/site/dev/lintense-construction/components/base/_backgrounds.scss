@@ -1,0 +1,37 @@
+// Mixins
+@mixin bg-variant($parent, $color) {
+	#{$parent} {
+		background-color: $color;
+	}
+	a#{$parent},
+	button#{$parent} {
+		&:hover,
+		&:focus {
+			background-color: darken($color, 10%);
+		}
+	}
+}
+
+@mixin bg-adjacent() {
+	&:not([style*='background-']) + &:not([style*='background-']) {
+		padding-top: 0;
+	}
+}
+
+.bg-100 {
+	background-color: $gray-100;
+	@include bg-adjacent();
+}
+
+// Transparent background
+.bg-transparent {
+	background-color: transparent;
+	@include bg-adjacent();
+}
+
+
+// Image background
+.bg-image {
+	background-position: center center;
+	background-size: cover;
+}

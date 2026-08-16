@@ -1,0 +1,26 @@
+include ../person/_person
+// Team
+section#team.section.section-lg.bg-default
+	.container
+		.row: .col-md-10.col-xl-8
+			h2 Meet our team members
+			p.lead The people of Lintense are the reason of our success. They are the faces of our repair company who take every step to ensure you are satisfied with the result of our services at all times.
+		.row.row-sm.row-30
+			.col-md-4
+				+person({
+					img: 'home-02-390x265',
+					name: 'Marvin McKinney',
+					position: 'Head of Repairs, Founder'
+				})
+			.col-md-4
+				+person({
+					img: 'home-03-390x575',
+					name: 'Jenny Wilson',
+					position: 'Repair Technician'
+				})
+			.col-md-4
+				+person({
+					img: 'home-04-390x390',
+					name: 'Jerome Bell',
+					position: 'Quality Control specialist'
+				})

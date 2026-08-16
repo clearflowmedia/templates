@@ -1,0 +1,70 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+
+// Sizing
+.section-sm,
+.section-md {
+	padding: 65px 0;
+}
+
+
+// Media
+@include media-breakpoint-up( lg ) {
+	.section-sm {
+		padding: 90px 0;
+	}
+
+	.section-md {
+		padding: ( 150px * $lg-multiplier ) 0;
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.section-sm {
+		padding: 120px 0;
+	}
+
+	.section-md {
+		padding: 180px 0;
+	}
+}
+
+
+// Section decor 1
+.section-decor-1 {
+	position: relative;
+	overflow: hidden;
+
+	.section-decor-item {
+		position: absolute;
+		bottom: 0;
+		left: 20vw;
+		width: px-to-rem( 188px );
+		height: px-to-rem( 188px );
+		background-color: $primary;
+		transform: translateX( -100% );
+	}
+}
+
+
+// Novi sections
+[data-x-mode='true'] {
+	.novi-section-no-padding {
+		position: relative;
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 1;
+			height: 30px;
+			content: '';
+		}
+	}
+}

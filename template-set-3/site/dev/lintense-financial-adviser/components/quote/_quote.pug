@@ -1,0 +1,8 @@
+include ../rating/_rating
+
+mixin quote( obj )
+	// Quote boxed
+	article.quote&attributes( attributes )
+		+rating
+		.quote-text: q= obj.text
+		.quote-name= obj.name

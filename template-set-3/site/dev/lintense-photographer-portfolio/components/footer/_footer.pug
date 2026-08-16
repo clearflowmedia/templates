@@ -1,0 +1,24 @@
+include ../logo/_logo
+include ../rights/_rights
+include ../list/_list
+
+// Footer
+footer.section.section-lg.footer.bg-transparent
+	.container
+		.row.row-40
+			.col-md-4
+				+logo
+			.col-md-3.col-xs-6
+				h6 menu
+				ul.footer-nav-list
+					li: a( href='#' ) About
+					li: a( href='#' ) What I Offer
+					li: a( href='#' ) Portfolio
+					li: a( href='#' ) Facts & numbers
+					li: a( href='#' ) pricing
+					li: a( href='#' ) Testimonials
+					li: a( href='#' ) Contacts
+			.col-md-5.col-xs-6
+				h6 contacts
+				+contacts
+				+rights

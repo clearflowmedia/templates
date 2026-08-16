@@ -1,0 +1,41 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins/breakpoints";
+
+// Service
+.service {
+	background-color: $white;
+	box-shadow: $box-shadow-lg;
+	border-radius: $border-radius;
+	padding: 30px 15px;
+
+	@include media-breakpoint-up(sm) {
+		padding: 50px 30px;
+	}
+
+	@include media-breakpoint-up(xl) {
+		padding: 60px 37px 57px;
+	}
+}
+
+.service-title {
+	* + & {
+		margin-top: 27px;
+
+		@include media-breakpoint-up(xl) {
+			margin-top: 50px;
+		}
+	}
+}
+
+.service-text {
+	* + & {
+		margin-top: 22px;
+
+		@include media-breakpoint-up(xl) {
+			margin-top: 27px;
+		}
+	}
+}

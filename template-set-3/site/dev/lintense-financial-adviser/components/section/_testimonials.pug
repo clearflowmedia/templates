@@ -1,0 +1,31 @@
+include ../quote/_quote
+
+// Testimonials
+section#testimonials.section.section-sm.bg-primary-lighten
+	.container
+		.row.row-50.justify-content-between.align-items-center
+			.col-md-5.d-none.d-md-block
+				+img( 'home-03-475x640.svg' )
+			.col-md-6
+				h2 What clients say about us
+				h5.text-primary.font-weight-medium Don’t take our word for it — hear what our customers are saying
+				// Owl Carousel
+				.owl-carousel(
+					data-owl={
+						items: 1,
+						margin: 30,
+						dots: true
+					}
+				)
+					+quote({
+						text: 'I am absolutely delighted with your service. It is really refreshing to work with a financial advisor who is truly interested in their client’s needs, circumstances and preferences.',
+						name: 'Adam Smith'
+					})
+					+quote({
+						text: 'Passion, knowledge and a genuine interest in achieving the best for clients is what makes a truly professional Financial Advisor. Your staff has this and more.',
+						name: 'Samuel Johnson'
+					})
+					+quote({
+						text: 'I would like to express my thanks for the work you have done for me over the past years. The expertise and attention to detail with which you have handled my financial affairs could not be faulted.',
+						name: 'Marvin McKinney'
+					})

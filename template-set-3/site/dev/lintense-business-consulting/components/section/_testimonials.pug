@@ -1,0 +1,56 @@
+include ../quote/_quote
+
+// Testimonials
+section#testimonials.section.section-lg.bg-transparent
+	.container
+		h2.text-center What people say
+		// Owl Carousel
+		.owl-carousel.owl-style-1(
+			data-owl={
+				dots: true,
+				items: 1,
+				margin: 30,
+				responsive: {
+					768: {
+						items: 2
+					},
+					992: {
+						items: 3
+					},
+					1600: {
+						items: 3,
+						margin: 50
+					}
+				}
+			}
+		)
+			+quote-boxed({
+				text:     'The guys at Lintense consult impeccably to understand organisational needs and bring innovative business relevant ideas to the table. They will easily provide you with alternative business perspectives.',
+				img:      'persons/person-04-60x60',
+				name:     'Sam Adams',
+				position: 'Client'
+			})
+			+quote-boxed({
+				text:     'My cooperation with your team helped me understand that you really care about your clients – it has already been proven by a lot of positive reviews – and that\'s why I chose you.',
+				img:      'persons/person-05-60x60',
+				name:     'Jane Smith',
+				position: 'Client'
+			})
+			+quote-boxed({
+				text:     'The team of Lintense has an incredible gift for making the complex appear simple and without being simplistic. They are a pleasure to work with and always deliver to an exceptionally high standard.',
+				img:      'persons/person-06-60x60',
+				name:     'Emma Wilson',
+				position: 'Client'
+			})
+			+quote-boxed({
+				text:     'I appreciate what you’ve done to help my small company develop and thrive in that market niche that we specialize in. Your experience and unique approach to your clients are exceptional.',
+				img:      'persons/person-08-60x60',
+				name:     'Ann Williams',
+				position: 'Client'
+			})
+			+quote-boxed({
+				text:     'I was impressed by the quality of what your specialists did. They quickly found out what was the main problem of my company and helped me form a correct strategy for my business.',
+				img:      'persons/person-07-60x60',
+				name:     'Peter Morris',
+				position: 'Client'
+			})

@@ -1,0 +1,45 @@
+include ../logo/_logo
+include ../lin-icon/_lin-icon
+include _navigation
+
+header.section.page-header
+	//RD Navbar
+	.rd-navbar-wrap
+		nav.rd-navbar
+			.rd-navbar-aside-outer.bg-900.context-dark
+				.rd-navbar-aside.rd-navbar-collapse
+					.rd-navbar-aside-element
+						+lin-user.mr-2
+						a.link-inherit( href='#' ) Sales & Support
+					.rd-navbar-aside-element
+						+lin-comment.mr-2
+						a.link-inherit( href='#' ) Chat
+					.rd-navbar-aside-element
+						a.link-inherit( href='#' ) Log In
+						+lin-login.ml-2
+
+			.rd-navbar-main-outer
+				.rd-navbar-main
+					//RD Navbar Panel
+					.rd-navbar-panel
+						//RD Navbar Toggle
+						button.rd-navbar-toggle( data-rd-navbar-toggle='.rd-navbar-nav-wrap' ): span
+
+						//RD Navbar Brand
+						.rd-navbar-brand
+							+logo
+
+					.rd-navbar-main-element
+						.rd-navbar-nav-wrap
+							+navigation( menu )
+
+						//RD Navbar Search
+						.rd-navbar-search
+							button.rd-navbar-search-toggle.rd-navbar-fixed-element-2( data-rd-navbar-toggle='.rd-navbar-search' ): span
+								+lin-search.rd-navbar-search-toggle-icon
+							form.rd-search( action='#' )
+								.form-group
+									input.form-control.rd-navbar-search-form-input( id='rd-navbar-search-form-input', type='text', name='s', placeholder='Enter search keyword', autocomplete='off' )
+									button.rd-search-form-submit( type='submit' )
+										+lin-search
+			.rd-navbar-collapse-toggle.rd-navbar-fixed-element-1( data-rd-navbar-toggle='.rd-navbar-collapse' ): span

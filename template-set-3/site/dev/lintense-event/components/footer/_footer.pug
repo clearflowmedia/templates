@@ -1,0 +1,18 @@
+include ../rights/_rights
+include ../list/_list
+
+// Footer
+footer#contacts.section.footer.section-xl.bg-secondary-light
+    .container.text-center
+        .row
+            .col
+                .h5.sup.text-primary contacts
+                h2.h3 Give us a call at:
+                p.lead Contact number:
+                a.d-block.h3.mt-md-4(href="tel:#") 800 1234 5678
+                p.lead Please email us at
+                    br.d-block.d-md-none
+                    a.link.link-mail.ml-md-4( href='mailto:#' ) mail@demolink.org
+                p.lead 2464 Royal Ln. Mesa, New Jersey 45463
+                +list-social
+        +rights

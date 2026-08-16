@@ -1,0 +1,41 @@
+include ../card/_card
+
+// FAQ
+section#faq.section.section-lg.bg-transparent
+	.container
+		.text-center
+			h2 Answers to your frequently asked questions
+			p.lead Take a look at our FAQ section to find answers to the most popular questions.
+		.row.justify-content-center
+			.col-lg-10
+				#accordion1.accordion.card-group-custom( aria-multiselectable='false' )
+					+card({
+						show: true,
+						parentId: 'accordion1',
+						title: 'How is the scope of a consulting project determined?'
+					}).card-default
+						p Depending on the business goals, challenges and size of the organization, a project scope is typically determined during the initial consultation sessions. For complex challenges and enterprise clients, we typically recommend an assessment phase at the beginning of the project.
+
+					+card({
+						parentId: 'accordion1',
+						title: 'How long does a business consulting project last?'
+					}).card-default
+						p Ab accusantium autem blanditiis consequatur consequuntur dicta dolor doloremque eaque eligendi est eveniet exercitationem explicabo fugiat in itaque iure laborum maiores minus mollitia necessitatibus nesciunt, nihil, odio officia perferendis placeat praesentium quibusdam quos reiciendis, reprehenderit rerum saepe similique sunt ut voluptas voluptatibus?
+
+					+card({
+						parentId: 'accordion1',
+						title: 'What problems does business consulting typically solve?'
+					}).card-default
+						p A amet debitis ducimus eligendi esse est et excepturi facilis inventore laboriosam, molestias quibusdam? Dolorem eveniet iusto, odit perspiciatis possimus quibusdam reiciendis suscipit. Alias aspernatur atque blanditiis commodi consequatur doloremque id illum libero mollitia nostrum officia pariatur quo similique sit soluta, tempore veritatis vitae voluptatem.
+
+					+card({
+						parentId: 'accordion1',
+						title: 'Do you offer volume or loyalty discounts?'
+					}).card-default
+						p Debitis dolorem exercitationem illo, maiores minus natus necessitatibus nihil repudiandae tenetur vitae? Amet at corporis dolores doloribus enim itaque magnam minima molestiae, nam rem repellat saepe sunt. Aperiam commodi cumque dolores eligendi, illo illum, mollitia nisi nulla obcaecati quod sed sit tempora.
+
+					+card({
+						parentId: 'accordion1',
+						title: 'Do you do fixed price or time and materials contracts?'
+					}).card-default
+						p Nihil, nisi.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci dolore doloremque hic optio quae qui quibusdam quo ullam velit voluptates! Aliquid cum dicta, ea eveniet explicabo illum laudantium magni, maiores modi, nemo neque odio omnis porro ratione sapiente unde velit.

@@ -1,0 +1,20 @@
+include ../lin-icon/_lin-icon
+
+// Intro
+section.section.section-lg.section-one-screen.overlay-black.overlay-07.position-relative.bg-image( style='background-image: url("images/top-banner-1920x990.jpg"); background-position-x: right;' )
+	.container
+		.row.justify-content-center
+			.text-center
+				div( data-animate!={ class: 'fadeInUp' } )
+					h1.text-white
+						| Home renovations.
+						br.d-none.d-xl-block
+						= ' Progressive. Personal. Professional.'
+					.offset-xl
+						.group-40
+							a(href="#").btn.btn-round.btn-primary.btn-nuka More about
+								span.btn-overlay
+							a(href="#" data-custom-scroll-to='#contacts').btn.btn-round.btn-white.btn-nuka Request a call
+								span.btn-overlay
+	.way-point.d-none.d-xl-block(data-custom-scroll-to='#about')
+			img(src="images/arrow-down.svg" alt="")

@@ -1,0 +1,46 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+// Thumbnail
+.thumbnail-img {
+	width: 100%;
+}
+
+.thumbnail-link {
+	display: inline-block;
+	color: $primary;
+	transition: $transition-base;
+
+	&:hover {
+		color: rgba( $primary, .6 );
+	}
+}
+
+.thumbnail-media {
+	position: relative;
+}
+
+.thumbnail-tags {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	padding: px-to-rem( 16px, 14px );
+	@include group( px-to-rem( 4px ) )
+}
+
+
+// Media
+@include media-breakpoint-up( xxl ) {
+	* + .thumbnail-link { margin-top: px-to-rem( 5px ) }
+}
+
+
+// Layouts
+@import "thumbnail-1";
+@import "thumbnail-video";
+@import "thumbnail-boxed";

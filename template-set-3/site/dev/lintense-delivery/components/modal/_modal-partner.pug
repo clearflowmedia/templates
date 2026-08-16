@@ -1,0 +1,34 @@
+include ../lin-icon/_lin-icon
+
+// Modal
+#become-a-partner.modal.fade( tabindex='-1', role='dialog' )
+	.modal-dialog.modal-lg( role='document' )
+		.modal-content
+			.modal-body
+				h2 Become a partner
+				//RD Mailform
+				form.rd-mailform( data-form-output='form-output-global-2', data-form-type='contact', method='post', action='components/rd-mailform/rd-mailform.php' )
+					.row.row-20.gutters-20
+						.col-xs-6
+							.form-group
+								input.form-control( type='text', name='name', placeholder='Your name *', data-constraints='@Required' )
+						.col-xs-6
+							.form-group
+								input.form-control( type='text', name='company', placeholder='Company *', data-constraints='@Required' )
+						.col-xs-6
+							.form-group
+								input.form-control( type='text', name='phone', placeholder='Phone *', data-constraints='@Required @PhoneNumber' )
+						.col-xs-6
+							.form-group
+								input.form-control( type='email', name='email', placeholder='Your e-mail address *', data-constraints='@Email @Required' )
+						.col-12
+							.form-group
+								textarea.form-control( name='question', placeholder='Your question', rows='5', data-constraints='@Required' )
+					.offset-xs
+						button.btn.btn-primary.btn-nuka( type='submit' ) Send
+							span.btn-overlay
+
+			button.close( type='button', data-dismiss='modal', aria-label='Close' )
+				span( aria-hidden='true' ) ×
+
+#form-output-global-2.form-output.snackbar.snackbar-secondary

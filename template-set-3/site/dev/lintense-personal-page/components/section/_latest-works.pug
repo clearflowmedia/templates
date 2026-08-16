@@ -1,0 +1,43 @@
+include ../thumbnail/_thumbnail
+
+// Latest works
+section#portfolio.section.section-md.bg-100.overflow-hidden.novi-bg.novi-bg-image
+	.container
+		.row.row-30.row-lg-50.justify-content-md-between.align-items-center.row-fix
+			.col-sm-8.col-md-7.col-xxl-5
+				h2.text-decoration( data-animate!={ class: 'fadeIn' } ) Latest works
+				h5( data-animate!={ class: 'fadeIn' } ) Check out my recent and popular design & branding projects I have worked on.
+			.col-sm-4.col-md-5.col-xxl-3.text-sm-right.text-lg-center( data-animate!={ class: 'fadeInRight' } )
+				#separate-owl-nav.separate-owl-nav
+			.col-12( data-animate!={ class: 'fadeIn' } )
+				.owl-carousel.owl-carousel-separate( data-owl!= { nav:true, autoHeight:true, navContainer:'#separate-owl-nav',navClass:['owl-prev mdi-arrow-left','owl-next mdi-arrow-right']}, data-items='1', data-sm-items='2', data-md-items='3', data-autoplay='false', data-loop='false', data-xxl-margin='54' )
+					+thumbnail({
+						img: 'image-02-432x228',
+						tags: [ 'Design', 'Branding' ],
+						title: 'Donut Country'
+					}).thumbnail-1
+					+thumbnail({
+						img: 'image-03-432x238',
+						tags: [ 'Design' ],
+						title: 'Furni'
+					}).thumbnail-1
+					+thumbnail({
+						img: 'image-04-432x228',
+						tags: [ 'Design', 'Branding', 'Logo' ],
+						title: 'uDesign'
+					}).thumbnail-1
+					+thumbnail({
+						img: 'image-05-432x238',
+						tags: [ 'Design', 'Branding' ],
+						title: 'ProKnife'
+					}).thumbnail-1
+					+thumbnail({
+						img: 'image-06-432x228',
+						tags: [ 'Design', 'Branding' ],
+						title: 'Floral Paradise'
+					}).thumbnail-1
+					+thumbnail({
+						img: 'image-07-432x238',
+						tags: [ 'Design' ],
+						title: 'Poultrix'
+					}).thumbnail-1

@@ -1,0 +1,66 @@
+@import "../bootstrap/scss/functions";
+@import "../bootstrap/scss/mixins";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+
+
+// Base
+.link {
+	position: relative;
+	display: inline-block;
+	border: none;
+	background: none;
+	transition: .25s;
+	color: inherit;
+	&:hover {
+		color: inherit;
+
+		&::before {
+			width: 100%;
+			opacity: 1;
+		}
+	}
+}
+
+.link-img {
+  display: inline-block;
+  overflow: hidden;
+  img {
+	transition: $transition-base;
+  }
+
+  &:hover {
+	img {
+	  transform: scale(1.05);
+	  opacity: .9;
+	}
+  }
+}
+
+.link-mail {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: $font-family-sec;
+  font-weight: 600;
+  color: $body-color;
+  @include media-breakpoint-up(sm) {
+    font-size: 20px;
+  }
+}
+
+.link-primary {
+  color: $primary;
+  &:hover {
+	color: $secondary;
+  }
+}
+.link-arrow {
+  margin-top: px-to-rem(50px);
+  font-size: 20px;
+  display: inline-block;
+  > span { margin-right: px-to-rem(12px); }
+  &:hover {
+	color: $primary;
+  }
+}

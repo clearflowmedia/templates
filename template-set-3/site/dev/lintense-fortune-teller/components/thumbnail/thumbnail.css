@@ -1,0 +1,2 @@
+.thumbnail-figure {	display: block;	overflow: hidden;	max-height: 195px;}@media (min-width: 576px) {	.thumbnail-figure {		max-height: 220px;	}}@media (min-width: 768px) {	.thumbnail-figure {		max-height: none;	}}.thumbnail-image {	width: 100%;	transition: .3s;	transform: scale(1.1);}.desktop .thumbnail:hover .thumbnail-image {	transform: none;}
+/*# sourceMappingURL=thumbnail.css.map */

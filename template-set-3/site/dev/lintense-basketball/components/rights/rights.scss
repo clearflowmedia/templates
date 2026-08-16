@@ -1,0 +1,21 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+p.rights {
+	font-size: 14px;
+	text-transform: uppercase;
+
+	* + & {
+		margin-top: 40px;
+
+		@include media-breakpoint-up(md) {
+			margin-top: 105px;
+		}
+	}
+}

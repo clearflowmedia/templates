@@ -1,0 +1,25 @@
+include ../person/_person
+// Team
+section#team.section.section-xl.bg-additional
+	.container
+		h6 team members
+		h3 Meet our team
+		.row.row-lg.row-50.row-lg-85
+			.col-md-4
+				+person({
+					img: 'person-01-390x265',
+					name: 'Jenny Wilson',
+					position: 'Founding Partner'
+				})
+			.col-md-4
+				+person({
+					img: 'person-02-390x575',
+					name: 'Marvin McKinney',
+					position: 'Attorney'
+				})
+			.col-md-4
+				+person({
+					img: 'person-03-390x390',
+					name: 'Jerome Bell',
+					position: 'Paralegal'
+				})

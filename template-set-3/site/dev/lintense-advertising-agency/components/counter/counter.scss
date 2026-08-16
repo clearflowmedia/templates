@@ -1,0 +1,36 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.counter-default {
+
+	* + & {
+		margin-top: 30px;
+
+		@include media-breakpoint-up(xl) {
+			margin-top: 50px;
+		}
+	}
+
+	& + & {
+		margin-top: 20px;
+
+		@include media-breakpoint-up(xl) {
+			margin-top: 35px;
+		}
+	}
+}
+
+.counter-default-main {
+	font-size: 40px;
+	font-weight: 900;
+	line-height: 1.2;
+}
+
+// Layouts
+@import "counter-boxed";

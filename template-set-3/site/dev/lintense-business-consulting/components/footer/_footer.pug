@@ -1,0 +1,41 @@
+include ../logo/_logo
+include ../rights/_rights
+include ../list/_list
+
+// Footer
+footer#contact-us.footer
+	.footer-main.section.section-lg.bg-transparent
+		.container
+			.row.row-40
+				.col-md-6
+					div
+						+logo
+						ul.list.footer-contact-list
+							li.list-item.text-dark
+								a.link-inherit( href='#' ) 72 Laurel CourtSan Francisco,
+									| #[br]
+									| CA94122
+							li.list-item.text-dark
+								a.link-inherit( href='tel:#' ) P: +1 (256) 10 87 000
+							li.list-item.text-dark
+								a.link-inherit( href='mailto:#' ) mail@demolink.org
+						+list-social
+
+				.col-md-6
+					h2 Contact us
+					//RD Mailform
+					form.rd-mailform( data-form-output='form-output-global-1', data-form-type='contact', method='post', action='components/rd-mailform/rd-mailform.php' )
+						.form-group
+							input.form-control#contact-name( type='text', name='name', data-constraints='@Required' )
+							label.form-label( for="contact-name" ) Your name *
+						.form-group
+							input.form-control#contact-email( type='email', name='email', data-constraints='@Email @Required' )
+							label.form-label( for="contact-email" ) Your email *
+						.form-group
+							textarea.form-control#contact-message( name='message', data-constraints='@Required' )
+							label.form-label( for="contact-message" ) Message *
+						button.btn.btn-block.btn-primary.btn-shine( type="submit" )
+							span Contact us
+					#form-output-global-1.form-output.snackbar.snackbar-primary
+	.footer-rights.section.bg-100: .container.text-center
+		+rights

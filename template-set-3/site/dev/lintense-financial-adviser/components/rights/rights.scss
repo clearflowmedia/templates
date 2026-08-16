@@ -1,0 +1,20 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+p.rights {
+	color: $gray-800;
+
+	* + & {
+		margin-top: 25px;
+	}
+
+	a {
+		@include link( inherit, $primary );
+	}
+}

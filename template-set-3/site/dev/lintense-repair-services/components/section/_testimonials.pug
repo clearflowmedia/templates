@@ -1,0 +1,40 @@
+include ../quote/_quote
+
+// Testimonials
+section.section.section-inset-2.bg-transparent#testimonials
+	.container
+		h2.text-primary.text-center( data-animate!={ class: 'fadeInUp' } ) What Our Clients Say
+		.row.justify-content-center
+			.col-xl-10
+				// Owl Carousel
+				.owl-carousel.owl-style-3(
+					data-items= "1", data-md-items="2", data-margin="40", data-xxl-margin="50",
+					data-owl={
+						nav: true,
+						dots: true,
+					}
+				)
+					+quote-boxed({
+						text:     'I would strongly recommend Lintense. Our project was not the largest, but you wouldn’t have known that from their level of service.',
+						img:      'persons/client-1-60x60',
+						name:     'Kate Williams',
+						position: 'Client'
+					})
+					+quote-boxed({
+						text:     'While the process of remodeling was indeed daunting, your team did everything they could to minimize the disruption to our lives.',
+						img:      'persons/client-2-60x60',
+						name:     'Adam Smith',
+						position: 'Client'
+					})
+					+quote-boxed({
+						text:     'I would strongly recommend Lintense. Our project was not the largest, but you wouldn’t have known that from their level of service.',
+						img:      'persons/client-1-60x60',
+						name:     'Kate Williams',
+						position: 'Client'
+					})
+					+quote-boxed({
+						text:     'While the process of remodeling was indeed daunting, your team did everything they could to minimize the disruption to our lives.',
+						img:      'persons/client-2-60x60',
+						name:     'Adam Smith',
+						position: 'Client'
+					})

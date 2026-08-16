@@ -1,0 +1,43 @@
+extends ../components/base/_skeleton
+include ../components/box/_box
+
+block variables
+	- pageName = 'Lintense Law Consulting';
+
+block page
+	include ../components/rd-navbar/_rd-navbar
+	include ../components/section/_intro
+	include ../components/section/_features
+	include ../components/section/_statistics
+	include ../components/section/_services
+	include ../components/section/_team
+	include ../components/section/_award
+	include ../components/section/_pricing
+	include ../components/section/_blog
+	include ../components/section/_testimonials
+	include ../components/section/_partners
+	include ../components/section/_faq
+	include ../components/footer/_footer
+
+	#appointment.modal.modal-book.fade.text-left(role='dialog')
+		.modal-dialog.modal-lg.modal-dialog-centered
+			// Modal content
+			.modal-content
+				.modal-header
+					h4.modal-title Make an appointment
+					button.close(type='button', data-dismiss='modal'): span.icon.mdi.mdi-close
+				.modal-body
+					p.small Enter your contacts below to schedule an appointment or discuss it with us in details.
+					form.rd-mailform.form-modal( data-form-output="form-output-global", data-form-type='forms', method='post', action='components/rd-mailform/rd-mailform.php' )
+						.form-group
+							.form-control-wrap
+								input.form-control( type='text', name='name', placeholder='Name *', data-constraints='@Required' )
+						.form-group
+							.form-control-wrap
+								input.form-control( type='email', name='email', placeholder='Email *', data-constraints='@Email @Required' )
+						.form-group
+							.form-control-wrap
+								input.form-control( type='text', name='phone', placeholder='Phone *', data-constraints='@PhoneNumber @Required' )
+
+						button.btn.btn-primary( type='submit' ) Book now
+	#form-output-global.form-output.snackbar.snackbar-secondary

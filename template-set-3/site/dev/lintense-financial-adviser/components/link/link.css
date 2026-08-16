@@ -1,0 +1,2 @@
+.link-arrow {	font-size: 16px;	font-weight: 700;}.link-arrow svg {	margin-left: 6px;	fill: currentColor;}.link-arrow, .link-arrow:active, .link-arrow:focus {	color: #00234B;}.link-arrow:hover {	color: #10886F;}.link-img {	display: inline-block;	position: relative;	overflow: hidden;	background-color: #10886F;}.link-img img {	transition: all 0.2s ease-in-out;}.link-img:hover img {	transform: scale(1.05);	opacity: .9;}
+/*# sourceMappingURL=link.css.map */

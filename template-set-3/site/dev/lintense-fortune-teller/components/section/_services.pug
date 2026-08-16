@@ -1,0 +1,46 @@
+include ../service/_service
+
+// Our services
+section#services.section.section-md.bg-transparent
+	.container
+		.row.justify-content-center
+			.col-xl-6.text-center
+				h2 Our services
+				p.big At Lintense, we provide consultations and various services by experienced fortune tellers, psychics, and astrologers. Read on to find out more.
+		.row.row-xxl-40.row-30
+			.col-xl-4.col-md-6
+				+service({
+					img: 'service-01-154x130.svg',
+					title: 'Personal consultation',
+					text: 'Get a confidence boost and solid advice with a personal consultations from the best fortune tellers at Lintense.'
+				})
+			.col-xl-4.col-md-6
+				+service({
+					img: 'service-02-189x130.svg',
+					title: 'Face reading',
+					text: 'Let your face be read in a private face reading session! Learn what your face tells about your personality, talents, health, nutrition, etc.'
+				})
+			.col-xl-4.col-md-6
+				+service({
+					img: 'service-03-156x130.svg',
+					title: 'Kundli Dosha',
+					text: 'Discover the impact of Kundli Doshas on various aspects of your life and how to avoid afflictions and unpleasant experiences.'
+				})
+			.col-xl-4.col-md-6
+				+service({
+					img: 'service-04-125x130.svg',
+					title: 'Daily horoscope',
+					text: 'We provide daily horoscope readings and predictions to our clients and subscribers. Browse our website to find out more.'
+				})
+			.col-xl-4.col-md-6
+				+service({
+					img: 'service-05-135x130.svg',
+					title: 'Talismans & Amulets',
+					text: 'Our experts will help you choose amulets and talismans to protect you against evil & danger and bring you luck.'
+				})
+			.col-xl-4.col-md-6
+				+service({
+					img: 'service-06-130x130.svg',
+					title: 'Manglik Dosha',
+					text: 'Our Vedic astrologers will evaluate your Mangal Dosha and provide advice in addition to your birth horoscope.'
+				})

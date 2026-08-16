@@ -1,0 +1,15 @@
+// Popup cta
+#popup-cta-2.popup.text-center.modal( tabindex='-1', role='dialog' )
+	.modal-dialog( role='document' )
+		.modal-content.flipInY.text-800
+			button.close( type='button', data-dismiss='modal', aria-label='Close' )
+				span( aria-hidden='true' ) ×
+			.modal-header.overflow-hidden.border-bottom-0.p-0
+				+img( 'real-estate-popup/image-04-460x270' ).w-100
+			.modal-body
+				h5 Contact Our Team
+				h4.text-secondary.mt-1 Get in Touch with Us
+				p.mt-2 If you have a question or a testimonial for us, feel free to contact us right now.
+				.offset-xxs
+					a.btn.btn-rect.btn-primary.btn-nuka( href='#' ) Send a message
+						span.btn-overlay

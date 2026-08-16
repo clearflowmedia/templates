@@ -1,0 +1,2 @@
+* + .blurb-title {	margin-top: 1.875rem;}* + .blurb-list,* + .blurb-text {	margin-top: 0.625rem;}@media (min-width: 1200px) {	* + .blurb-list,	* + .blurb-text {		margin-top: 1.25rem;	}}@media (min-width: 1600px) {	* + .blurb-title {		margin-top: 3.5rem;	}}
+/*# sourceMappingURL=blurb.css.map */

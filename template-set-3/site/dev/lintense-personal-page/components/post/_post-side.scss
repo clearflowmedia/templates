@@ -1,0 +1,109 @@
+// Base
+.post-side {
+	max-width: px-to-rem( 365px );
+	margin-left: auto;
+	margin-right: auto;
+
+	.post-media {
+		position: relative;
+		z-index: 0;
+		transition: $transition-base;
+
+		&::before {
+			position: absolute;
+			top: -18px;
+			right: -18px;
+			z-index: -1;
+			width: px-to-rem( 200px );
+			height: px-to-rem( 200px );
+			content: '';
+			border: 1px solid $gray-200;
+		}
+
+		&:hover {
+			opacity: .8;
+		}
+	}
+
+	.post-body {
+		position: relative;
+		padding-top: px-to-rem( 25px );
+	}
+
+	.post-meta {
+		font-style: italic;
+	}
+
+	* + .post-title { margin-top: px-to-rem( 8px * $xs-multiplier ) }
+	* + .post-text { margin-top: px-to-rem( 17px * $xs-multiplier ) }
+}
+
+* + .post-side,
+* + .post-container { margin-top: px-to-rem( 104px * $xs-multiplier ); }
+
+// Media
+@include media-breakpoint-up( sm ) {
+	.post-side {
+		display: flex;
+		align-items: center;
+		max-width: inherit;
+		@include group( 40px );
+
+		.post-media {
+			flex-shrink: 0;
+			max-width: 38%;
+		}
+
+		.post-body {
+			flex-grow: 1;
+			max-width: 400px;
+			padding-top: 0;
+			padding-bottom: 1%;
+		}
+
+		&:nth-child(even) {
+			flex-direction: row-reverse;
+
+			.post-media {
+				&::before {
+					top: auto;
+					right: auto;
+					left: -18px;
+					bottom: -18px;
+				}
+			}
+		}
+	}
+}
+
+@include media-breakpoint-up( lg ) {
+	.post-side {
+		@include group( 80px );
+
+		* + .post-title { margin-top: px-to-rem( 8px * $lg-multiplier ) }
+		* + .post-text { margin-top: px-to-rem( 17px * $lg-multiplier ) }
+	}
+
+	* + .post-side,
+	* + .post-container { margin-top: px-to-rem( 104px * $lg-multiplier ); }
+}
+
+@include media-breakpoint-up( xxl ) {
+	.post-side {
+		@include group( px-to-rem( 130px ) );
+
+		&:nth-child(even) {
+			@include group( px-to-rem( 80px ) );
+		}
+
+		* + .post-title { margin-top: px-to-rem( 8px ) }
+		* + .post-text { margin-top: px-to-rem( 17px ) }
+	}
+
+	.post-container {
+		padding-right: px-to-rem( 180px );
+	}
+
+	* + .post-side,
+	* + .post-container { margin-top: px-to-rem( 104px ); }
+}

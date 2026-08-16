@@ -1,0 +1,51 @@
+//- Quote author
+	@param {object} data - data object
+	@param {string} data.img - image name or path
+	@param {string} data.name - name of author
+	@param {string} data.date - date of quote
+mixin quote-author( data )
+	// Quote author
+	.quote-author&attributes( attributes )
+		.media.media-xs.align-items-center
+			.media-left
+				+img( data.img ).quote-author-image.rounded-circle
+			.media-body
+				.quote-author-name.h6= data.name
+				.quote-author-date.small
+					time( datetime='2020' )= data.date
+
+//- Quote
+	@param {object} data - data object
+	@param {string} data.text - quote text
+	@param {string} data.img - quote img
+	@param {string} data.name - name of author
+	@param {string} data.date - date of quote
+mixin quote( data )
+	// Quote
+	article.quote&attributes( attributes )
+		.quote-body
+			q.quote-text.h4= data.text
+		+quote-author({
+			img: data.img,
+			name: data.name,
+			date: data.date
+		})
+
+
+//- Quote boxed
+	@param {object} data - data object
+	@param {string} data.text - quote text
+	@param {string} data.name - name of author
+	@param {string} data.date - date of quote
+mixin quote-boxed( data )
+	// Quote boxed
+	article.quote.quote-boxed&attributes( attributes )
+		.quote-boxed-body
+			q.quote-boxed-text.h6= data.text
+			svg.quote-boxed-decor(width='20', height='21', viewBox='0 0 20 21', fill='none')
+				path(d='M0.374058 18.9575C2.79449 15.5941 3.65893 7.64416 1.06561 1.22307L19.7376 0C20.3715 1.12114 20.2562 5.25918 14.7237 12.8422C7.80824 22.321 -2.04637 22.321 0.374058 18.9575Z')
+		+quote-author({
+			img: data.img,
+			name: data.name,
+			date: data.date
+		}).quote-boxed-author

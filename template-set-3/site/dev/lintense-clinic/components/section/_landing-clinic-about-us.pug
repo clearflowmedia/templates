@@ -1,0 +1,13 @@
+include  ../video/_video
+
+// Watch This Video
+section.section.section-lg.bg-transparent
+	.container
+		.row.row-30.align-items-center.flex-sm-row-reverse.justify-content-lg-between
+			.col-sm-6.col-md-5.col-xl-4( data-animate!={ class: 'fadeInUp' } )
+				h2 Watch This Video
+				p.lead Find out more about our clinic by watching this video presentation of Medical.
+			.col-xs-8.col-sm-6.col-md-7.col-xxl-8( data-animate!={ class: 'fadeInUp' } )
+				+video({
+					img: 'image-14-770x474'
+				})

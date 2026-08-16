@@ -1,0 +1,52 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.quote {
+
+}
+
+.quote-author-image {
+	border-radius: 50%;
+}
+
+.quote-text {
+	line-height: 1.485;
+	color: inherit;
+}
+
+
+// Spacing
+* + .quote {
+	margin-top: px-to-rem( 30px );
+}
+
+* + .quote-author-name {
+	margin-top: px-to-rem( 30px );
+}
+
+
+// Quote minimal
+.quote-minimal-laquo {
+	color: $primary;
+	width: auto;
+	height: 1em;
+	font-size: px-to-rem( 29px );
+
+	path {
+		fill: currentColor;
+	}
+}
+
+
+// Media
+@include media-breakpoint-up(xxl) {
+	* + .quote {
+		margin-top: px-to-rem( 40px );
+	}
+}

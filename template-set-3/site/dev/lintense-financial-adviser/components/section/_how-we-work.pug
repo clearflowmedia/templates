@@ -1,0 +1,27 @@
+include ../counter/_counter
+
+// How We Work
+section.section.section-lg.bg-100
+	.container
+		.row.row-30.justify-content-between
+			.col-lg-6
+				h2 Lintense provides solutions that support businesses
+				h5 Take a look at the recent facts and numbers to find out more about Lintense and how we help companies.
+			.col-md-10.col-lg-6
+				.row.row-30.row-xl-50
+					.col-xs-6
+						+counter-default({
+							value: '35',
+							postfix: '+',
+							title: 'Skilled professionals'
+						}).bg-primary.context-dark
+					.col-xs-6
+						+counter-default({
+							value: '1596',
+							title: 'Happy clients'
+						}).bg-primary-light.context-dark
+					.col-xs-6
+						+counter-default({
+							value: '17',
+							title: 'Years of experience'
+						})

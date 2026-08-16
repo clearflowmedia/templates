@@ -1,0 +1,2 @@
+.link-arrow {	font-size: 18px;	line-height: 1.3;	text-transform: uppercase;	display: inline-block;}.link-arrow:hover {	text-decoration: underline;}@media (min-width: 1200px) {	.link-arrow {		font-size: 20px;	}}.link-arrow svg {	margin-left: 15px;	transform: translateY(-2px);	stroke: currentColor;}* + .link-arrow {	margin-top: 20px;}@media (min-width: 1200px) {	* + .link-arrow {		margin-top: 35px;	}}
+/*# sourceMappingURL=link.css.map */

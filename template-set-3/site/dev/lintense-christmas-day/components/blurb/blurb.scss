@@ -1,0 +1,30 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.blurb {
+	color: $black;
+}
+
+.blurb-title {
+	color: $primary;
+}
+
+
+// Spacing
+* + .blurb {
+	margin-top: px-to-rem( 30px );
+}
+
+* + .blurb-title {
+	margin-top: px-to-rem( 20px );
+}
+
+* + .blurb-text {
+	margin-top: 0;
+}

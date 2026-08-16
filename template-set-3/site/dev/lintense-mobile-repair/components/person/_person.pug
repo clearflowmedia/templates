@@ -1,0 +1,11 @@
+//- Person
+mixin person( data )
+	article.person&attributes( attributes )
+		+img(data.img).person-img
+		h4.person-name: a(href='#')= data.name
+		p.person-position= data.position
+		ul.list.list-inline.list-social
+			li.list-social-item: a.icon.icon-secondary.icon-sm.icosocial-twitter(href='#')
+			li.list-social-item: a.icon.icon-secondary.icon-sm.icosocial-facebook(href='#')
+			li.list-social-item: a.icon.icon-secondary.icon-sm.icosocial-instagram(href='#')
+			li.list-social-item: a.icon.icon-secondary.icon-sm.icosocial-telegram(href='#')

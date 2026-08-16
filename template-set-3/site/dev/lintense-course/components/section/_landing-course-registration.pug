@@ -1,0 +1,31 @@
+// Registration
+section#registration.section.section-lg.position-relative.pb-1
+	.bg-layer.bg-primary( style='bottom: 25%' )
+	.container
+		.row.row-30
+			.col-xs-5.col-xl-4( data-animate!={ class: 'fadeInUp' } )
+				h1 Registration
+				ul.list.list-lg.h5.mt-xl-5
+					li.list-item P.:
+						=' '
+						a.link( href='tel:#' ) +1 234 567 8901
+					li.list-item E.:
+						=' '
+						a.link( href='mailto:' ) info@demolink.org
+			.col-xs-7.col-xl-8.mt-xl-3( data-animate!={ class: 'fadeInUp' } )
+				article.box
+					//RD Mailform
+					form.rd-mailform.box-form( data-form-output='form-output-global', data-form-type='contact', method='post', action='components/rd-mailform/rd-mailform.php' )
+						.form-group
+							input.form-control( type='text', name='first-name', placeholder='First name *', data-constraints='@Required' )
+						.form-group
+							input.form-control( type='text', name='last-name', placeholder='Last name *', data-constraints='@Required' )
+						.form-group
+							input.form-control( type='email', name='email', placeholder='Email address *', data-constraints='@Email @Required' )
+						.form-group
+							input.form-control( type='text', name='phone', placeholder='Phone *', data-constraints='@Required @PhoneNumber' )
+						.box-btn
+							button.btn.btn-round.btn-primary.btn-nuka( type='submit' ) Register now!
+								span.btn-overlay
+
+			#form-output-global.form-output.snackbar.snackbar-secondary

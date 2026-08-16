@@ -1,0 +1,25 @@
+include ../lin-icon/_lin-icon
+include ../blurb/_blurb
+
+// About Our Event
+section#about.section.section-lg.bg-transparent
+	.container
+		.row.row-40
+			.col-xs-10.col-md-7.col-lg-5( data-animate!={ class: 'fadeInUp' } )
+				h2 About Our Event
+				p.lead Learn more about where and when this year’s Christmas Event will take place.
+				.row.row-30.row-lg-40
+					.col-12
+						+blurb({
+							title: 'Location: New York, NY',
+							text:  '178 West 27th Street, Suite 527, New York NY 10012'
+						})
+							+lin-map-marker.icon.icon-lg.blurb-icon
+					.col-12
+						+blurb({
+							title: 'Date: December 24-26',
+							text:  'December 24-26, open from 9:00 am to 9:00 pm'
+						})
+							+lin-calendar-check.icon.icon-lg.blurb-icon
+			.col-md-5.col-lg-7( data-animate!={ class: 'fadeInUp' } )
+				+img( 'image-05-720x490' ).rounded

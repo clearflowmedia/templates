@@ -1,0 +1,36 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+// Base
+.blurb {
+
+}
+
+// Spacing
+* + .blurb-title {
+	margin-top: px-to-rem( 30px );
+}
+
+* + .blurb-list,
+* + .blurb-text {
+	margin-top: px-to-rem( 10px );
+}
+
+
+// Media
+@include media-breakpoint-up(xl){
+	* + .blurb-list,
+	* + .blurb-text {
+		margin-top: px-to-rem( 20px );
+	}
+}
+
+@include media-breakpoint-up(xxl) {
+	* + .blurb-title {
+		margin-top: px-to-rem( 56px );
+	}
+} 

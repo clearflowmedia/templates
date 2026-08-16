@@ -1,0 +1,19 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+
+
+// Base
+.link-arrow {
+	font-size: 16px;
+	font-weight: 700;
+
+	svg {
+		margin-left: 6px;
+		fill: currentColor;
+	}
+
+	@include link($gray-700, $primary);
+}

@@ -1,0 +1,2 @@
+.counter-default-main {	color: #FFB72B;}.counter-default + .counter-default {	margin-top: 30px;}@media (min-width: 1200px) {	.counter-default + .counter-default {		margin-top: 55px;	}}.counter-default-title {	margin-top: 10px;	font-weight: 500;}@media (min-width: 1200px) {	.counter-default-main {		letter-spacing: -1px;	}	.counter-default + .counter-default {		margin-top: 55px;	}}
+/*# sourceMappingURL=counter.css.map */

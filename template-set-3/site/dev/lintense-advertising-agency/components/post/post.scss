@@ -1,0 +1,105 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+// Post
+.post {
+	* + & {
+		margin-top: 30px;
+
+		@include media-breakpoint-up(md) {
+			margin-top: 50px;
+		}
+
+		@include media-breakpoint-up(xl) {
+			margin-top: 75px;
+		}
+	}
+}
+
+.post-figure {
+	position: relative;
+	overflow: hidden;
+
+	img {
+		transition: $transition-base;
+	}
+
+	a {
+		&:hover {
+			img {
+				opacity: .8;
+				transform: scale(1.05);
+			}
+		}
+	}
+}
+
+.post-title {
+	font-size: 18px;
+	line-height: 1.2;
+	font-weight: 500;
+	color: $primary;
+
+	* + & {
+		margin-top: 15px;
+
+		@include media-breakpoint-up(xl) {
+			margin-top: 40px;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+		font-size: 20px;
+	}
+}
+
+.post-text {
+	font-weight: 500;
+	line-height: 1.2;
+
+	* + & {
+		margin-top: 12px;
+
+		@include media-breakpoint-up(xl) {
+			margin-top: 16px;
+		}
+	}
+}
+
+.post-link {
+	text-decoration: underline;
+	font-weight: 700;
+	line-height: 1.2;
+
+	* + & {
+		margin-top: 15px;
+
+		@include media-breakpoint-up(xl) {
+			margin-top: 35px;
+		}
+	}
+}
+
+.post-link-big {
+	text-transform: uppercase;
+	font-weight: 900;
+	letter-spacing: .1em;
+	text-decoration: underline;
+	line-height: 1.2;
+
+	* + & {
+		margin-top: 35px;
+
+		@include media-breakpoint-up(md) {
+			margin-top: 55px;
+		}
+
+		@include media-breakpoint-up(xl) {
+			margin-top: 80px;
+		}
+	}
+}

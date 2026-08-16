@@ -1,0 +1,78 @@
+// Base
+.card-default {
+	text-align: left;
+	border-bottom: $border-width solid $border-color;
+
+	&:last-child {
+		border-bottom-color: transparent;
+	}
+
+	.card-title a {
+		position: relative;
+		z-index: 1;
+		padding: $accordion-default-header-padding;
+		transition: $transition-base;
+		font-weight: 500;
+		color: $primary;
+
+		// Open state
+		.card-arrow {
+			color: $gray-700;
+
+			&:before {
+				content: '\f239';
+			}
+		}
+
+		// Collapsed state
+		&.collapsed {
+			color: $gray-800;
+
+			&:hover {
+				color: $primary;
+			}
+
+			.card-arrow {
+				color: rgba($gray-700, .4);
+
+				&:before {
+					content: '\f236';
+				}
+			}
+		}
+	}
+
+	// Panel arrow
+	.card-arrow {
+		position: absolute;
+		display: inline-flex;
+		display: none;
+		align-items: center;
+		justify-content: center;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		width: px-to-rem( 52px );
+		transition: .3s ease;
+		z-index: 2;
+
+		&::before {
+			position: absolute;
+			top: 50%;
+			z-index: 4;
+			transform: translateY(-50%);
+			font-family: 'Material Design Icons';
+		}
+	}
+
+	.collapse {
+		position: relative;
+		z-index: 1;
+		color: $accordion-default-content-color;
+	}
+
+	.card-body {
+		padding: $accordion-default-content-padding;
+		background: transparent;
+	}
+}

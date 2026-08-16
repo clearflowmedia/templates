@@ -1,0 +1,29 @@
+//- Quote
+	@param {object} data - data object
+	@param {string} data.iconClass - class for icon
+	@param {string} data.quote - quote text
+	@param {string} data.authorName - quote cite
+	@param {string} data.authorImg - quote author image
+	@param {string} data.authorMeta - quote authorMeta
+mixin quote-simple( data )
+	// Quote
+	blockquote.quote.quote-simple&attributes( attributes )
+		q.quote-text.h3= data.quote
+
+
+//- Quote
+	@param {object} data - data object
+	@param {string} data.iconClass - class for icon
+	@param {string} data.quote - quote text
+	@param {string} data.authorName - quote cite
+	@param {string} data.authorImg - quote author image
+	@param {string} data.authorMeta - quote authorMeta
+mixin quote( data )
+	// Quote
+	blockquote.quote.quote-1&attributes( attributes )
+		q.quote-text.h4= data.quote
+		.quote-author
+			+img( data.authorImg ).quote-author-img
+			.quote-author-body
+				.quote-author-name.h4: cite.quote-cite= data.authorName
+				.quote-author-meta.h6= data.authorMeta

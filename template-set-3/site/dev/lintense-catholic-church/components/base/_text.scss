@@ -1,0 +1,58 @@
+// Text styling
+
+
+.text-primary {
+	color: $primary;
+	> a {
+		color: inherit;
+
+		&:hover {
+			color: $primary-light
+		}
+	}
+}
+
+.text-primary-light {
+	color: $primary-light;
+	> a {
+		color: inherit;
+
+		&:hover {
+			color: $white;
+		}
+	}
+}
+
+.text-black {
+  color: $black-2;
+  > a {
+	color: inherit;
+
+	&:hover {
+	  color: $primary;
+	}
+  }
+}
+
+.text-white {
+  color: $white;
+  > a {
+	color: inherit;
+
+	&:hover {
+	  color: $primary;
+	}
+  }
+}
+
+// Font family
+.font-family-base {
+	font-family: $font-family-base;
+}
+
+// Context dark
+.context-dark {
+	.text-contrast {
+		color: $gray-400;
+	}
+}

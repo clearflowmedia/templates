@@ -1,0 +1,48 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.list-marked {
+	> .list-item {
+		padding-left: px-to-rem( 24px );
+
+		&::before {
+			display: inline-block;
+			margin-top: -1px;
+			margin-left: px-to-rem( -26px );
+			min-width: px-to-rem( 26px );
+			font-family: "Material Design Icons";
+			font-size: .9em;
+			content: '\f222';
+			vertical-align: middle;
+			color: $primary;
+		}
+	}
+
+	.list-item + .list-item {
+		margin-top: px-to-rem( 15px )
+	}
+
+	&.h5 {
+		line-height: 1.2;
+	}
+}
+
+
+// Spacing
+* + .list {
+	margin-top: 15px;
+}
+
+
+// Media
+@include media-breakpoint-up( lg ) {
+	* + .list {
+		margin-top: px-to-rem( 30px );
+	}
+}

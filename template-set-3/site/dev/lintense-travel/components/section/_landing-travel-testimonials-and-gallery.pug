@@ -1,0 +1,82 @@
+include ../quote/_quote
+include ../thumbnail/_thumbnail
+
+// Testimonials and gallery
+section.section.section-lg.bg-gray-1.context-dark.text-center.pb-1.bg-image( style='background-image: url("images/image-07-1920x2491.jpg");' )
+	.container
+		.row.justify-content-center
+			.col-md-11.col-lg-9.col-xl-8( data-animate!={ class: 'fadeInUp' } )
+				h6.text-primary Testimonials
+				h3 What People Say
+				// Owl Carousel
+				.owl-carousel(
+					data-owl!={
+						dots: true
+					}
+				)
+					+quote({
+						text: 'The best 3 days in Fiji! I have done almost 10 tours and out of all of them, this was the best tour. I recommend this to anyone wanting a traditional Fijian experience.',
+						name: 'Katherine Williams'
+					})
+					+quote({
+						text: 'This is one of my all time favorite tours. I was a little worried as I am in my sixties. However, everything was spectacular and went well thanks to Lintense team.',
+						name: 'Peter Adams'
+					})
+					+quote({
+						text: 'We chose the Lower Navua River Whitewater Rafting trip offered by Lintense. It was a truly unforgettable experience. Thank you!',
+						name: 'Adam & Jane Smiths'
+					})
+	#gallery.container( style='margin-top: 49%' )
+		h2( data-animate!={ class: 'fadeInUp' } ) Our Gallery
+		h6.text-primary( data-animate!={ class: 'fadeInUp' } ) Take a look at the best views of Fiji Islands
+		.row.row-offset-xl.no-gutters.justify-content-center( data-lightgallery )
+			.col-6.col-xs-4.col-md-3.col-lg-20-percent( data-animate!={ class: 'fadeIn' } )
+				+thumbnail({
+					img:         'image-08-254x254',
+					imgOriginal: 'image-08-800x1200'
+				})
+			.col-6.col-xs-4.col-md-3.col-lg-20-percent( data-animate!={ class: 'fadeIn' } )
+				+thumbnail({
+					img:         'image-09-254x254',
+					imgOriginal: 'image-09-1200x800'
+				})
+			.col-6.col-xs-4.col-md-3.col-lg-20-percent( data-animate!={ class: 'fadeIn' } )
+				+thumbnail({
+					img:         'image-10-254x254',
+					imgOriginal: 'image-10-1200x800'
+				})
+			.col-6.col-xs-4.col-md-3.col-lg-20-percent( data-animate!={ class: 'fadeIn' } )
+				+thumbnail({
+					img:         'image-11-254x254',
+					imgOriginal: 'image-11-800x1200'
+				})
+			.col-6.col-xs-4.col-md-3.col-lg-20-percent( data-animate!={ class: 'fadeIn' } )
+				+thumbnail({
+					img:         'image-12-254x254',
+					imgOriginal: 'image-12-800x1200'
+				})
+			.col-6.col-xs-4.col-md-3.col-lg-20-percent( data-animate!={ class: 'fadeIn' } )
+				+thumbnail({
+					img:         'image-13-254x254',
+					imgOriginal: 'image-13-1200x800'
+				})
+			.col-6.col-xs-4.col-md-3.col-lg-20-percent( data-animate!={ class: 'fadeIn' } )
+				+thumbnail({
+					img:         'image-14-254x254',
+					imgOriginal: 'image-14-800x1200'
+				})
+			.col-6.col-xs-4.col-md-3.col-lg-20-percent( data-animate!={ class: 'fadeIn' } )
+				+thumbnail({
+					img:         'image-15-254x254',
+					imgOriginal: 'image-15-800x1200'
+				})
+			.col-6.col-xs-4.col-md-3.col-lg-20-percent( data-animate!={ class: 'fadeIn' } )
+				+thumbnail({
+					img:         'image-16-254x254',
+					imgOriginal: 'image-16-1200x800'
+				})
+			.col-6.col-xs-4.col-md-3.col-lg-20-percent( data-animate!={ class: 'fadeIn' } )
+				+thumbnail({
+					img:         'image-17-254x254',
+					imgOriginal: 'image-17-800x1200'
+				})

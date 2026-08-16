@@ -1,0 +1,16 @@
+//- Blurb
+	@param {object} data - data object
+	@param {string} data.title - blurb title
+	@param {string} data.titleClass - blurb title class
+	@param {string} data.text - blurb text
+	@param {string} data.textClass - blurb textclass
+mixin blurb( data )
+	// Blurb
+	article.blurb&attributes( attributes )
+		.media( class= data.media )
+			.media-left
+				.blurb-icon
+					block
+			.media-body
+				.blurb-title.h3( class= data.titleClass )!= data.title
+				.blurb-text( class= data.textClass )= data.text

@@ -1,0 +1,44 @@
+include ../lin-icon/_lin-icon
+include ../blurb/_blurb
+include ../list/_list
+include ../rights/_rights
+
+// Footer
+footer#contacts.section.footer.bg-primary.context-dark.position-relative
+	#particles-js-6.particles-js
+	.container
+		.row.row-40.flex-md-row-reverse.justify-content-lg-between
+			.col-md-6.col-lg-5.pt-md-3.pt-lg-4
+				h4 Want to ask a question?
+				//RD Mailform
+				form.rd-mailform( data-form-output='form-output-global-3', data-form-type='contact', method='post', action='components/rd-mailform/rd-mailform.php' )
+					.form-group
+						input.form-control( type='text', name='first-name', placeholder='First name', data-constraints='@Required' )
+					.form-group
+						input.form-control( type='text', name='last-name', placeholder='Last name', data-constraints='@Required' )
+					.form-group
+						input.form-control( type='email', name='email', placeholder='Email address', data-constraints='@Email @Required' )
+					.form-group
+						textarea.form-control( name='question', placeholder='Your question', rows='8', data-constraints='@Required' )
+					button.btn.btn-lg.btn-secondary.btn-nuka( type='submit' ) Submit
+						span.btn-overlay
+				#form-output-global-3.form-output.snackbar.snackbar-secondary
+			.col-md-6.d-md-flex.flex-md-column.justify-content-md-between
+				div
+					h2 Contact Us
+					p.lead Feel free to get in touch with us to ask a question or leave a testimonial about our Christmas event.
+					.row.row-offset-sm.row-30.row-lg-40
+						.col-12
+							+blurb({
+								title: 'Location: New York, NY',
+								text: '178 West 27th Street, Suite 527, New York NY 10012'
+							})
+								+lin-map-marker.icon.icon-lg.blurb-icon
+						.col-12
+							+blurb({
+								title: 'Date: December 24-26'
+							})
+								+lin-calendar-check.icon.icon-lg.blurb-icon
+					.offset-lg
+						+list-social({ iconClass: 'icon-lg' }).list-social-lg
+				+rights

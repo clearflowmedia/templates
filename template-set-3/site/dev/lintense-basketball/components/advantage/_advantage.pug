@@ -1,0 +1,15 @@
+//- Advantage
+	@param {object} data - advantage data object
+	@param {string} img - image title
+	@param {string} title - advantage title
+	@param {string} text - advantage description
+
+mixin advantage( data )
+	// Counter default
+	article.advantage&attributes(attributes)
+		figure
+			+img(data.img)
+		h4.advantage-title: a(href='#')= data.title
+		p.advantage-text= data.text
+		.advantage-shape
+			+img('ball-140x140.svg')

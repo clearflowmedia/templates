@@ -1,0 +1,34 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+// Form boxed
+
+// Form inline
+.rd-form-inline {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	@include groupY( px-to-rem( 15px ) );
+
+	* + & {
+		margin-top: 30px;
+
+		@include media-breakpoint-up(xl) {
+			margin-top: 54px;
+		}
+	}
+
+	.form-group {
+		flex-grow: 1;
+	}
+
+	.btn {
+		flex-shrink: 0;
+		margin-top: 0;
+		padding: 10px;
+	}
+}

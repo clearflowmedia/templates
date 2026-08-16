@@ -1,0 +1,12 @@
+//- Blurb
+	@param {object} data - data object
+	@param {string} data.title - blurb title
+	@param {string} data.text - blurb text
+mixin blurb( data )
+	// Blurb
+	article.blurb&attributes( attributes )
+		.blurb-head
+			block
+			.blurb-title.h5= data.title
+		if( data.text )
+			.blurb-text= data.text

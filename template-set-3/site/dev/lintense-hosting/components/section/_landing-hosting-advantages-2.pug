@@ -1,0 +1,40 @@
+include ../blurb/_blurb
+include ../lin-icon/_lin-icon
+
+section#features.section.section-lg.bg-transparent
+	.container
+		.section-lg.context-dark.overlay-dark.overlay-md-none.bg-image( style='padding-bottom: 25%; background-image: url(images/image-05-1270x1423.jpg);' )
+			.row.row-40.row-xl-70.justify-content-center
+				.col-11.col-md-10.col-lg-8.text-center( data-animate!={ class: 'fadeInUp' } )
+					h2 Experience The Hosting
+						| #[d-none.d-xs-block]
+						| difference today!
+					p.lead As one of the nations’ leading hosting providers, RightHost guarantees outstanding performance of our solutions. With us,  your website will be fast and secure!
+					a.btn.btn-lg.btn-primary.btn-nuka( href='#' ) Sign Up
+						span.btn-overlay
+				.col-11.col-lg-10
+					.row.row-30.row-xl-60
+						.col-md-6( data-animate!={ class: 'fadeInUp' } )
+							+blurb({
+								title: 'Up to 20X faster servers',
+								text:  'Compared to other popular hosting providers, our servers are 20 times faster and make RightHost one of the best choices for hosting websites of any complexity.'
+							})
+								+lin-speed.lin-lg.blurb-icon
+						.col-md-6( data-animate!={ class: 'fadeInUp' } )
+							+blurb({
+								title: 'Crew support',
+								text:  'If your website needs additional support, our team will gladly help you solve any technical issues and make your website work incredibly fast on our servers.'
+							})
+								+lin-wrench.lin-lg.blurb-icon
+						.col-md-6( data-animate!={ class: 'fadeInUp' } )
+							+blurb({
+								title: 'Free account migration',
+								text:  'You can easily transfer your website from other hosting provider with free account migration service. The website transfer is performed within 24 hours after your signup.'
+							})
+								+lin-folder-plus.lin-lg.blurb-icon
+						.col-md-6( data-animate!={ class: 'fadeInUp' } )
+							+blurb({
+								title: '99.9% uptime commitment',
+								text:  'At RightHost, we guarantee full committment to delivering 99.9% uptime. This is true not only for our network but also for all your sites and other solutions provided by our team.'
+							})
+								+lin-access-point.lin-lg.blurb-icon

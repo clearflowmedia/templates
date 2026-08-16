@@ -1,0 +1,25 @@
+include ../event/_event
+
+// Event Activities
+section#activities.section.section-lg.bg-100
+	.container
+		.text-center( data-animate!={ class: 'fadeInUp' } )
+			h2 Event Activities
+			p.lead Take a more detailed look at what will happen at this year’s Christmas Event
+		.row.row-offset-md.row-40.row-xl-60
+			.col-sm-6.col-lg-12( data-animate!={ class: 'fadeInUp' } )
+				+event({
+					colClass: 'ml-xl-4',
+					img:      'image-12-610x415',
+					title:    'Kids visit Santa',
+					text:     'Our Christmas Event gives kids a unique opportunity to enjoy the holidays to the fullest. They can chat with Santa and have a great Christmas time at our event.',
+					time:     'Opening Hours: 7:00 pm to 9:00 pm'
+				})
+			.col-sm-6.col-lg-12( data-animate!={ class: 'fadeInUp' } )
+				+event({
+					rowClass: 'flex-md-row-reverse justify-content-xl-between',
+					img:      'image-13-610x415',
+					title:    'Decorating a Christmas tree',
+					text:     'Make your own personal decorations for our event’s Christmas Tree. We even have a soecial workshop for kids and parents available throughout the event.',
+					time:     'Opening Hours: 3:00 pm to 6:00 pm'
+				})

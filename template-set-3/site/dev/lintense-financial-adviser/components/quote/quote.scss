@@ -1,0 +1,24 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.quote-text {
+	* + & {
+		margin-top: 12px;
+	}
+}
+
+.quote-name {
+	font-family: $font-family-sec;
+	font-weight: 500;
+	color: $primary;
+
+	* + & {
+		margin-top: 10px;
+	}
+}

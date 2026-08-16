@@ -1,0 +1,2 @@
+p.rights {	font-size: 14px;	text-transform: uppercase;}* + p.rights {	margin-top: 40px;}@media (min-width: 768px) {	* + p.rights {		margin-top: 110px;	}}
+/*# sourceMappingURL=rights.css.map */

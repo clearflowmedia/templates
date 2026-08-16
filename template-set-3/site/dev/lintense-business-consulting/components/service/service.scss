@@ -1,0 +1,33 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins/breakpoints";
+
+// Service
+.service { }
+
+.service-title {
+	* + & { margin-top: px-to-rem(25px); }
+}
+
+.service-text {
+	* + & { margin-top: px-to-rem(10px); }
+}
+
+
+// Media queries
+@include media-breakpoint-up(lg) {
+	.service-title {
+		* + & { margin-top: px-to-rem(30px); }
+	}
+	.service-text {
+		* + & { margin-top: px-to-rem(15px);}
+	}
+}
+
+@include media-breakpoint-up(xxl) {
+	.service {
+		padding-right: 	px-to-rem(30px);
+	}
+}

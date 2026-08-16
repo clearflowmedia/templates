@@ -1,0 +1,38 @@
+include ../logo/_logo
+include ../rights/_rights
+include ../list/_list
+
+// Footer
+footer#contacts.section.footer.bg-primary.context-dark
+	.container
+		.row.row-40
+			.col-md-6
+				+logo
+				.footer-contacts
+					p
+						span Have questions? <br>
+						a( href='tel:#' ) 123-456-7890
+				.footer-contacts
+					p
+						a( href='#' ) 670 Lafayette Ave, Brooklyn, NY 11216 <br> Mon – Fri: 10am – 6pm
+				.footer-contacts
+					p
+						span E-mail: <br>
+						a( href='mailto:#' ) mail@demolink.org
+			.col-md-6
+				.row
+					.col-6
+						ul.footer-nav-list
+							li: a( href='#' ) Who we are
+							li: a( href='#' ) Our mission
+							li: a( href='#' ) Join us
+							li: a( href='#' ) How we work
+							li: a( href='#' ) Programs
+							li: a( href='#' ) Testimonials
+							li: a( href='#' ) Contacts
+					.col-6
+						ul.footer-nav-list
+							li: a( href='#' ) Facebook
+							li: a( href='#' ) Instagram
+							li: a( href='#' ) Twitter
+		+rights

@@ -1,0 +1,15 @@
+//- Service
+	@param {object} data - data object
+	@param {string} data.img - service image
+	@param {string} data.bodyClass - service body class
+	@param {string} data.title - service title
+	@param {string} data.titleClass - service title class
+	@param {string} data.text - service text
+
+mixin service( data )
+	// Service
+	article.service&attributes( attributes )
+		+img( data.img ).service-image
+		.service-body( class= data.bodyClass )
+			.service-title.h4( class= data.titleClass )!= data.title
+			.service-text= data.text

@@ -1,0 +1,178 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import '../base/mixins';
+
+//{DEL DIST BUILDER}
+// TODO Local variables
+//{DEL}
+
+// Variables
+$navbar-color: $gray-800;
+$navbar-hover: $primary;
+$navbar-background: $white;
+$navbar-zindex: $zindex-fixed;
+$navbar-shadow: 0 0 28px rgba( $gray-600, 0.1 );
+
+
+// Base
+.rd-navbar {
+	position: relative;
+	z-index: $navbar-zindex;
+	color: $gray-800;
+
+	li {
+		list-style: none;
+	}
+}
+
+
+.navbar-button {
+	position: relative;
+	display: block;
+	border: none;
+	width: 30px;
+	height: 30px;
+	line-height: 1;
+	opacity: 1;
+	visibility: visible;
+	background: none;
+	color: inherit;
+	transition: .25s ease-in-out;
+
+	svg {
+		fill: currentColor;
+	}
+
+	svg,
+	&::before,
+	&::after {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transition: .25s, color 0s;
+	}
+
+	.navbar-button-icon-open,
+	&::before {
+		transform: translate( -50%, -50% ) rotate(0) scale(1);
+		opacity: 1;
+	}
+
+	.navbar-button-icon-close,
+	&::after {
+		content: '\e90c';
+		transform: translate( -50%, -50% ) rotate(90deg)  scale(0);
+		font-family: 'Intense Icons';
+		opacity: 0;
+	}
+
+	&:hover {
+		color: $navbar-hover;
+	}
+
+	&.navbar-sidebar-active,
+	&.navbar-info-active,
+	&.navbar-search-active,
+	&.navbar-cart-active,
+	&.active {
+		.navbar-button-icon-open,
+		&::before {
+			transform: translate( -50%, -50% ) rotate(-90deg)  scale(0);
+			opacity: 0;
+		}
+
+		.navbar-button-icon-close,
+		&::after {
+			transform: translate( -50%, -50% ) rotate(0deg)  scale(1);
+			opacity: 1;
+		}
+	}
+}
+
+.navbar-button-search,
+.navbar-button-sidebar {
+	&::before,
+	&::after {
+		display: none;
+	}
+}
+
+.navbar-button-sidebar {
+	z-index: 1;
+}
+
+
+// Logo
+.navbar-logo {
+	//padding: 10px;
+}
+
+.navbar-logo-link {
+	display: block;
+}
+
+.navbar-logo-default,
+.navbar-logo-inverse {
+	margin: 0;
+}
+
+.navbar-logo-inverse {
+	display: none;
+}
+
+
+// Search
+.rd-search-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.rd-search {
+	right: 0;
+	width: 320px;
+	background-color: $white;
+	padding: 5px 10px;
+	opacity: 0;
+	transition: $transition-base;
+	transform: translateY(-10px);
+	pointer-events: none;
+	box-shadow: $box-shadow;
+}
+
+.navbar-search-active {
+	.rd-search {
+		opacity: 1;
+		transform: translateY(0);
+		pointer-events: auto;
+	}
+}
+
+.rd-navbar-search-form-input {
+	border: 0;
+	padding-right: 30px;
+}
+
+.rd-search-form-submit {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+
+	svg {
+		fill: currentColor;
+	}
+
+	&:hover {
+		color: $primary;
+	}
+}
+
+
+// Layouts
+@import 'rd-navbar-fixed';
+@import 'rd-navbar-fullwidth';

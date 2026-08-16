@@ -1,0 +1,216 @@
+// Variables
+
+$white:    #fff;
+$gray-100: #fdf7f1;
+$gray-200: #f1dfce;
+$gray-500: #939399;
+$gray-600: #535372;
+$gray-800: #111235;
+$gray-900: #0d0e2e;
+$black:    #000;
+
+$primary:          #ee6451;
+$secondary:        #b9e1d7;
+$secondary-dark:   #538074;
+$light:            $gray-200;
+$dark:             $gray-800;
+
+// Gradients
+$gradients: (
+	primary: linear-gradient( 45deg, $primary 0%, $secondary 100% )
+);
+
+
+// The yiq lightness value
+$yiq-contrasted-threshold:  160;
+
+
+// Body
+$body-color: $gray-600;
+$body-letter-spacing: -.02em;
+
+
+// Grid breakpoints
+$grid-breakpoints: (
+	xxs: 0,
+	xs: 480px,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1600px
+);
+
+
+// Grid containers
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1200px,
+	xxl: 1300px
+);
+
+
+// Grid columns
+$grid-gutter-width: px-to-rem( 30px );
+
+
+// Resize multiplier
+$xs-multiplier: .5;
+$lg-multiplier: .7;
+
+// Components
+$border-width:     1px;
+$border-color:     $gray-200;
+
+$border-radius-sm: 6px;
+$border-radius:    8px;
+$border-radius-lg: 15px;
+
+$box-shadow:       0px 10px 10px rgba( $black, 0.15 );
+$box-shadow-lg:    30px 60px 50px rgba( $gray-800, 0.08 );
+
+
+// Fonts
+$font-family-base: 'Formular', sans-serif;
+$font-family-mono: 'IBM Plex Mono', monospace;
+$font-size-base: px-to-rem( 16px );
+$font-size-lg: px-to-rem( 20px );
+$font-size-sm: px-to-rem( 14px );
+$font-weight-base: 400;
+$line-height-base: 1.75;
+$line-height-lg: 1.55;
+$line-height-sm: 1.214;
+
+$h1-font-size: px-to-rem( 80px );
+$h2-font-size: px-to-rem( 65px );
+$h3-font-size: px-to-rem( 39px );
+$h4-font-size: px-to-rem( 30px );
+$h5-font-size: px-to-rem( 20px );
+$h6-font-size: px-to-rem( 16px );
+
+$h1-line-height: 1;
+$h2-line-height: 1.15;
+$h3-line-height: 1.2;
+$h4-line-height: 1.33;
+$h5-line-height: 2;
+$h6-line-height: 1.75;
+
+$headings-color: $gray-800;
+$headings-font-weight: 400;
+
+$lead-font-size: $font-size-base * 1.15; // ~21px
+
+$small-font-size: 80%;  // ~17px
+
+$font-weight-bolder:          600;
+
+$mark-padding: 0 .1em;
+$mark-bg: $secondary;
+
+$hr-border-color:             $gray-200;
+$hr-border-width:             2px;
+$hr-margin-y: 0;
+
+
+// Links
+$link-color:       $primary;
+$link-hover-color: $secondary;
+
+
+// Buttons
+$btn-padding-y:        px-to-rem( 21px );
+$btn-padding-x:        px-to-rem( 31px );
+$btn-font-size:        px-to-rem( 18px );
+$btn-line-height:      1.2;
+
+$btn-padding-y-sm:     px-to-rem( 17px );
+$btn-padding-x-sm:     px-to-rem( 22px );
+$btn-font-size-sm:     $h6-font-size;
+$btn-line-height-sm:   1.2;
+
+$btn-padding-y-lg:     px-to-rem( 24px );
+$btn-padding-x-lg:     px-to-rem( 45px );
+$btn-font-size-lg:     $btn-font-size;
+$btn-line-height-lg:   $btn-line-height;
+
+$btn-border-width:     1px;
+
+$btn-font-weight:      500;
+$btn-box-shadow:       $box-shadow;
+$btn-focus-box-shadow: none;
+
+$btn-border-radius:    0;
+$btn-border-radius-sm: $btn-border-radius;
+$btn-border-radius-lg: $btn-border-radius;
+
+
+// Forms
+$label-margin-bottom: .5rem;
+$label-font-size: $h6-font-size;
+
+$input-padding-y: px-to-rem( 14px );
+$input-padding-x: px-to-rem( 19px );
+$input-font-size: $font-size-base;
+$input-line-height: 1.225;
+$input-font-weight: 300;
+$input-border-width: $border-width;
+$input-border-radius: 0;
+
+$input-padding-y-sm: px-to-rem( 17px );
+$input-padding-x-sm: px-to-rem( 17px );
+$input-font-size-sm: $font-size-base;
+$input-line-height-sm: 1.2;
+$input-border-radius-sm: 0;
+
+$input-padding-y-lg: $input-padding-y * 1.1;
+$input-padding-x-lg: $input-padding-x * 1.1;
+$input-font-size-lg: $input-font-size * 1.1;
+$input-line-height-lg: $input-line-height;
+
+$input-bg: $gray-100;
+$input-color: $gray-800;
+$input-disabled-bg: rgba( $gray-100, .8 );
+$input-border-color: $gray-200;
+$input-placeholder-color: rgba( $input-color, .5 );
+
+$input-focus-bg: $white;
+$input-focus-color: $input-color;
+$input-focus-border-color: $gray-200;
+$input-focus-box-shadow: none;
+
+$input-height-border: $input-border-width * 2;
+$input-height: #{$input-font-size * $input-line-height + $input-padding-y * 2 + px-to-rem($input-height-border)};
+$input-height-sm: #{$input-font-size-sm * $input-line-height-sm + $input-padding-y-sm * 2 + px-to-rem($input-height-border)};
+$input-height-lg: #{$input-font-size-lg * $input-line-height-lg + $input-padding-y-lg * 2 + px-to-rem($input-height-border)};
+
+$form-grid-gutter-width: $grid-gutter-width;
+
+$input-group-addon-color: $input-focus-color;
+$input-group-addon-bg: $input-bg;
+
+
+// Z-index master list
+$zindex-dropdown:       10;
+$zindex-sticky:         11;
+$zindex-popover:        12;
+$zindex-tooltip:        13;
+$zindex-fixed:          14;
+$zindex-modal-backdrop: 15;
+$zindex-modal:          16;
+$zindex-loader:         17;
+
+
+// Badges
+$badge-font-size: px-to-rem(15px);
+$badge-font-weight: 500;
+$badge-padding-y: 5px;
+$badge-padding-x: 9px;
+$badge-border-radius: 2px;
+
+
+// Tables
+$table-cell-padding: 19px 20px;
+$table-color:        $gray-900;
+$table-accent-bg:    $gray-200;

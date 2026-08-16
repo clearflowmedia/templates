@@ -1,0 +1,25 @@
+include ../material-parallax/_material-parallax
+
+// CTA
++parallax({
+	img:        'images/image-15-1920x1000.jpg',
+	innerClass: 'section-lg section-lg-2'
+})#registration.context-dark
+	.container( data-animate!={ class: 'fadeInUp' } )
+		.row.row-20.align-items-baseline
+			.col-md-5.col-lg-4
+				h2 Register Now
+			.col-md-7.col-lg-8
+				h5 Are you ready to join our event?
+		.offset-sm
+			//RD Mailform
+			form.rd-mailform.form-inline.group-20( data-form-output='form-output-global', data-form-type='contact', method='post', action='components/rd-mailform/rd-mailform.php' )
+				.form-inline-group
+					input.form-control( type='text', name='first-name', placeholder='Name', data-constraints='@Required' )
+				.form-inline-group
+					input.form-control( type='text', name='phone', placeholder='Phone', data-constraints='@Required @PhoneNumber' )
+				.form-inline-group
+					input.form-control( type='email', name='email', placeholder='Email', data-constraints='@Email @Required' )
+				button.btn.btn-round.btn-nuka.text-primary( type='submit' ) Register Now!
+					span.btn-overlay
+		#form-output-global.form-output.snackbar.snackbar-secondary

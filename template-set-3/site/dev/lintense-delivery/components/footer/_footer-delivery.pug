@@ -1,0 +1,70 @@
+include ../button/_button
+include ../rights/_rights
+include ../list/_list
+
+// Footer
+footer.section.footer.footer-sm.bg-800.context-dark
+	.container
+		.row.row-30
+			.col-6.col-xs-4.col-lg-3
+				.footer-title.h4 About us
+				ul.list.list-lg
+					li.list-item
+						a( href='#' ) News
+					li.list-item
+						a( href='#' ) Branch news
+					li.list-item
+						a( href='#' ) Contacts
+					li.list-item
+						a( href='#' ) Vacancies
+					li.list-item
+						a( href='#' ) About the Company
+			.col-6.col-xs-4.col-lg-3
+				.footer-title.h4 Services
+				ul.list.list-lg
+					li.list-item
+						a( href='#' ) Track a shipment
+					li.list-item
+						a( href='#' ) Calculate the cost
+					li.list-item
+						a( href='#' ) Find the nearest offic
+					li.list-item
+						a( href='#' ) Call the courier
+					li.list-item
+						a( href='#' ) API
+					li.list-item
+						a( href='#' ) Rates
+					li.list-item
+						a( href='#' ) Documents
+			.col-6.col-xs-4.col-lg-2
+				.footer-title.h4 Help
+				ul.list.list-lg
+					li.list-item
+						a( href='#' ) FAQ
+					li.list-item
+						a( href='#' ) Write to chat
+					li.list-item
+						a( href='#' ) Privacy policy
+			.col-lg-4
+				.row.row-30.row-xl-50
+					.col-md-7.col-lg-12
+						.footer-title.h4 Download Lintense mobile app
+						+button-store
+					.col-md-5.col-lg-12
+						.footer-title.h4 Follow Us
+						+list-social({ iconClass: 'icon-lg' }).list-social-lg.text-primary
+
+		hr.divider.divider-sm.footer-divider
+		.footer-panel
+			ul.list.footer-list
+				li.list-item
+					a.list-link( href='#' ) Delivery
+				li.list-item
+					a.list-link( href='#' ) For business
+				li.list-item
+					a.list-link( href='#' ) Rates
+				li.list-item
+					a.list-link( href='#' ) Become a Partner
+				li.list-item
+					a.list-link( href='#' ) Contacts
+			+rights.text-500.mt-2

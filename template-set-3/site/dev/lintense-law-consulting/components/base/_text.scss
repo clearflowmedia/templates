@@ -1,0 +1,38 @@
+// Text styling
+
+// Gray colors
+@each $color, $value in $grays {
+	@include text-emphasis-variant(".text-#{$color}", $value);
+}
+
+.text-primary {
+	> a {
+		color: inherit;
+
+		&:hover {
+			color: $link-hover-color
+		}
+	}
+}
+.text-black {
+  color: $black-2;
+  > a {
+	color: inherit;
+
+	&:hover {
+	  color: $link-hover-color
+	}
+  }
+}
+
+// Font family
+.font-family-base {
+	font-family: $font-family-base;
+}
+
+// Context dark
+.context-dark {
+	.text-contrast {
+		color: $gray-400;
+	}
+}

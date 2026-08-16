@@ -1,0 +1,27 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins/breakpoints";
+
+// Service
+.service {
+	text-align: center;
+	border: 1px solid $primary;
+	padding: 35px;
+	padding-bottom: 40px;
+}
+
+.service-title {
+	color: $primary;
+
+	a {
+		&:hover {
+			color: $white;
+		}
+	}
+
+	* + & {
+		margin-top: 27px;
+	}
+}

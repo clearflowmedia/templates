@@ -1,0 +1,54 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+// Brand
+.brands {
+	display: flex;
+	flex-wrap: wrap;
+	@include group(10px);
+
+	@include media-breakpoint-up(sm) {
+		@include group(20px);
+	}
+
+	@include media-breakpoint-up(md) {
+		justify-content: flex-end;
+	}
+}
+
+.brand {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 auto;
+	background-color: $white;
+	width: 90px;
+	height: 90px;
+	box-shadow: $box-shadow;
+	transition: $transition-base;
+	padding: 15px;
+
+	@include media-breakpoint-up(sm) {
+		width: 112px;
+		height: 112px;
+	}
+
+	@include media-breakpoint-up(lg) {
+		width: 150px;
+		height: 150px;
+	}
+
+	&:hover {
+		box-shadow: $box-shadow-sm;
+	}
+
+	img {
+		width: auto;
+		height: auto;
+		max-height: 100%;
+	}
+}

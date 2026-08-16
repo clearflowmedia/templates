@@ -1,0 +1,34 @@
+include ../counter/_counter
+
+// FACTS ABOUT
+section#facts.section.section-inset-1.bg-transparent.bg-image
+	.container
+		.row.row-30
+			.col-md-6.col-xl-7.order-1.order-md-0.position-relative
+				.box.box-img
+					+img('home-06-900x850.png')
+			.col-md-6.col-xl-5.order-0.order-md-1
+				.row
+					.col
+						h3 Grow your skill and
+							br
+							| rise with us
+						p Join our club and find out why Lintense is chosen by many basketball players throughout the US.
+				.row.row-50
+					.col-md-6
+						+counter-default({
+							value:   '350',
+							postfix: '+',
+							title:   'Active members'
+						})
+					.col-md-6
+						+counter-default({
+							value: '12',
+							title: 'Coaches'
+						}).ms-md-5
+					.col-md-6
+						+counter-default({
+							value:   '25',
+							title:   'Awards'
+						})
+

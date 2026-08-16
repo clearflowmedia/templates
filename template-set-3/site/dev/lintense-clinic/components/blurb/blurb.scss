@@ -1,0 +1,25 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+// Base
+.blurb-icon {
+	color: $gray-700;
+}
+
+
+// Spacing
+* + .blurb-text {
+	margin-top: px-to-rem( 10px );
+}
+
+
+// Media
+@include media-breakpoint-up(xxl){
+	* + .blurb-text {
+		margin-top: px-to-rem( 20px );
+	}
+}

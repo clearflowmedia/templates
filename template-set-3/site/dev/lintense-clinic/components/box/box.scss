@@ -1,0 +1,71 @@
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.box {
+	border-radius: $border-radius;
+	color: $body-color;
+	background-color: $white;
+	box-shadow: $box-shadow;
+}
+
+.box-header {
+	padding: px-to-rem( 30px );
+	border-top-left-radius: $border-radius;
+	border-top-right-radius: $border-radius;
+}
+
+.box-body {
+	padding: px-to-rem( 30px );
+}
+
+
+// Spacing
+* + .box-title {
+	margin-top: px-to-rem( 6px )
+}
+
+* + .box-text {
+	margin-top: px-to-rem( 20px )
+}
+
+* + .box-btn {
+	margin-top: px-to-rem( 20px )
+}
+
+
+// Media
+@include media-breakpoint-up(md) {
+	.box-header {
+		padding: px-to-rem( 30px, 40px );
+	}
+
+	.box-body {
+		padding: px-to-rem( 40px );
+	}
+
+	* + .box-btn {
+		margin-top: px-to-rem( 30px )
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.box-header {
+		padding: px-to-rem( 40px, 50px );
+	}
+
+	.box-body {
+		padding: px-to-rem( 40px, 50px, 50px );
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	* + .box-text {
+		margin-top: px-to-rem( 30px )
+	}
+}
