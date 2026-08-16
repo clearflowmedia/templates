@@ -40,4 +40,4 @@ template-set-3/   Lintense — Bootstrap + Novi Builder, 24+ niche variants
 - **template-set-2/techno-digital-agency** is also directly usable static HTML, and simplest to hand-edit (no Pug, no builder app).
 - Avoid `template-set-3/builders/*` (Novi Builder packages/zips) unless the Novi Builder desktop app is actually available — the loose `index.html` files there won't render meaningful content on their own.
 - When adapting a template for a client site: copy the relevant variant folder out, strip vendor branding/demo content (`demolink.org` placeholder emails/phones, stock imagery, "coded by kraken" comments), and re-point asset paths as needed since each template assumes it's the site root.
-- No template here includes a license file — confirm usage rights before reusing in a paid client deliverable.
+- **Licensing:** all templates were acquired via a MonsterOne unlimited/lifetime subscription — full usage rights are already cleared, including for paid client deliverables. No per-template license file check needed.
