@@ -1,0 +1,110 @@
+extends  ../_skeleton
+
+//- Includes
+
+block variables
+	- pageName = 'Tabs'
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title(pageName, 'bg-image-1')
+
+	//- Horizontal Tabs
+	section.section.section-md.bg-default
+		.container
+			h3.text-center Horizontal Tabs
+			.row.justify-content-md-center
+				.col-xl-10
+					//- Bootstrap tabs
+					#tabs-1.tabs-custom.tabs-horizontal.tabs-corporate
+						//- Nav tabs
+						ul.nav.nav-tabs
+							li: a.nav-link.active(href='#tabs-1-1' data-bs-toggle='tab') Tab 1
+							li: a.nav-link(href='#tabs-1-2' data-bs-toggle='tab') Tab 2
+							li: a.nav-link(href='#tabs-1-3' data-bs-toggle='tab') Tab 3
+							li: a.nav-link(href='#tabs-1-4' data-bs-toggle='tab') Tab 4
+							li: a.nav-link(href='#tabs-1-5' data-bs-toggle='tab') Tab 5
+
+						//- Tab panes
+						.tab-content.text-secondary
+							div#tabs-1-1.tab-pane.fade.show.active: p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem deleniti explicabo minus soluta voluptatibus! Ab alias aliquam cumque doloremque enim, eum id itaque minus, officia, rerum sint tempora unde vero. Aliquam aperiam autem facere neque numquam officiis quod rem soluta?
+							div#tabs-1-2.tab-pane.fade: p Consectetur adipisicing elit. Ipsam neque obcaecati repudiandae? Dolorum error maxime mollitia neque sequi? Accusantium animi asperiores consequuntur cupiditate dolorem, esse eum expedita fuga fugit illo in minima molestias nobis nulla officia placeat provident quos rerum saepe suscipit temporibus velit?.
+							div#tabs-1-3.tab-pane.fade: p Dolor sit amet, consectetur adipisicing elit. Architecto assumenda dicta dolorem fugiat inventore officia officiis provident quae quia ratione, rem sapiente velit veniam. Aperiam aut corporis eaque impedit labore odit perferendis perspiciatis! Amet animi error fugit quo similique, sint sunt tempora unde vero!
+							div#tabs-1-4.tab-pane.fade: p Consectetur adipisicing elit. Accusamus atque consequuntur corporis ex incidunt ipsa modi qui ratione? Architecto aut beatae, consectetur consequatur debitis delectus deleniti distinctio dolor dolores facilis, fugit hic iure natus nemo possimus quae quidem sequi veniam. Assumenda autem expedita minus modi nostrum optio provident sit voluptatum?
+							div#tabs-1-5.tab-pane.fade: p Sit amet, consectetur adipisicing elit. Accusamus autem cum debitis deserunt excepturi exercitationem id in laboriosam nesciunt, nihil odio provident quis quisquam ratione sequi sunt tempore unde vel? Ab debitis eius ex fuga fugit illum minus, molestiae nobis quasi, repudiandae sunt, veniam!
+
+
+	//- Vertical Tabs
+	section.section.section-md.bg-default
+		.container
+			h3.text-center Vertical Tabs
+			.row.justify-content-md-center
+				.col-xl-10
+					//- Bootstrap tabs
+					#tabs-2.tabs-custom.tabs-vertical.tabs-corporate
+						//- Nav tabs
+						ul.nav.nav-tabs
+							li: a.nav-link.active(href='#tabs-2-1' data-bs-toggle='tab') Tab 1
+							li: a.nav-link(href='#tabs-2-2' data-bs-toggle='tab') Tab 2
+							li: a.nav-link(href='#tabs-2-3' data-bs-toggle='tab') Tab 3
+							li: a.nav-link(href='#tabs-2-4' data-bs-toggle='tab') Tab 4
+
+						//- Tab panes
+						.tab-content.text-secondary
+							div#tabs-2-1.tab-pane.fade.show.active: p Lorem ipsum dolor sit amet Ipsam neque obcaecati repudiandae? Dolorum error maxime mollitia neque sequi? Accusantium animi asperiores consequuntur cupiditate dolorem, esse eum expedita fuga fugit illo in minima molestias nobis nulla officia placeat provident quos rerum saepe suscipit temporibus velit?.
+							div#tabs-2-2.tab-pane.fade: p Dolor sit amet, consectetur adipisicing elit. Architecto assumenda dicta dolorem fugiat inventore officia officiis provident quae quia ratione, rem sapiente velit veniam. Aperiam aut corporis eaque impedit labore odit perferendis perspiciatis! Amet animi error fugit quo similique, sint sunt tempora unde vero!
+							div#tabs-2-3.tab-pane.fade: p Consectetur adipisicing elit. Accusamus atque consequuntur corporis ex incidunt ipsa modi qui ratione? Architecto aut beatae, consectetur consequatur debitis delectus deleniti distinctio dolor dolores facilis, fugit hic iure natus nemo possimus quae quidem sequi veniam. Assumenda autem expedita minus modi nostrum optio provident sit voluptatum?
+							div#tabs-2-4.tab-pane.fade: p Consectetur adipisicing elit. Consectetur adipisicing elit. Aliquid cum facilis hic id ipsam iusto, modi perspiciatis porro quidem similique? Aspernatur exercitationem fugit incidunt magni nostrum reprehenderit rerum, temporibus. Eos.
+
+
+	//- Tabs Line
+	section.section.section-md.bg-default
+		.container
+			h3.text-center Tabs Line
+			.row.justify-content-md-center
+				.col-md-10.col-lg-8.col-xl-6
+					//- Bootstrap tabs
+					#tabs-3.tabs-custom.tabs-horizontal.tabs-line
+						//- Nav tabs
+						ul.nav.nav-tabs
+							li: a.nav-link.active(href='#tabs-3-1' data-bs-toggle='tab') Tab 1
+							li: a.nav-link(href='#tabs-3-2' data-bs-toggle='tab') Tab 2
+							li: a.nav-link(href='#tabs-3-3' data-bs-toggle='tab') Tab 3
+							li: a.nav-link(href='#tabs-3-4' data-bs-toggle='tab') Tab 4
+
+						//- Tab panes
+						.tab-content.text-secondary
+							div#tabs-3-1.tab-pane.fade.show.active: p Lorem ipsum dolor sit amet Ipsam neque obcaecati repudiandae? Dolorum error maxime mollitia neque sequi? Accusantium animi asperiores consequuntur cupiditate dolorem, esse eum expedita fuga fugit illo in minima molestias nobis nulla officia placeat provident quos rerum saepe suscipit temporibus velit?.
+							div#tabs-3-2.tab-pane.fade: p Dolor sit amet, consectetur adipisicing elit. Architecto assumenda dicta dolorem fugiat inventore officia officiis provident quae quia ratione, rem sapiente velit veniam. Aperiam aut corporis eaque impedit labore odit perferendis perspiciatis! Amet animi error fugit quo similique, sint sunt tempora unde vero!
+							div#tabs-3-3.tab-pane.fade: p Consectetur adipisicing elit. Accusamus atque consequuntur corporis ex incidunt ipsa modi qui ratione? Architecto aut beatae, consectetur consequatur debitis delectus deleniti distinctio dolor dolores facilis, fugit hic iure natus nemo possimus quae quidem sequi veniam. Assumenda autem expedita minus modi nostrum optio provident sit voluptatum?
+							div#tabs-3-4.tab-pane.fade: p Consectetur adipisicing elit. Consectetur adipisicing elit. Aliquid cum facilis hic id ipsam iusto, modi perspiciatis porro quidem similique? Aspernatur exercitationem fugit incidunt magni nostrum reprehenderit rerum, temporibus. Eos.
+
+
+	//- Tabs Gallery
+	section.section.section-md.bg-default
+		.container
+			h3.text-center Tabs Gallery
+			.row.justify-content-md-center
+				.col-md-10.col-lg-8.col-xl-6
+					//- Bootstrap tabs
+					#tabs-4.tabs-custom.tabs-horizontal.tabs-minimal
+						//- Nav tabs
+						ul.nav.nav-tabs.text-center
+							li: a.nav-link.active(href='#tabs-4-1' data-bs-toggle='tab') Tab 1
+							li: a.nav-link(href='#tabs-4-2' data-bs-toggle='tab') Tab 2
+							li: a.nav-link(href='#tabs-4-3' data-bs-toggle='tab') Tab 3
+							li: a.nav-link(href='#tabs-4-4' data-bs-toggle='tab') Tab 4
+
+						//- Tab panes
+						.tab-content.text-secondary
+							div#tabs-4-1.tab-pane.fade.show.active: p Lorem ipsum dolor sit amet Ipsam neque obcaecati repudiandae? Dolorum error maxime mollitia neque sequi? Accusantium animi asperiores consequuntur cupiditate dolorem, esse eum expedita fuga fugit illo in minima molestias nobis nulla officia placeat provident quos rerum saepe suscipit temporibus velit?.
+							div#tabs-4-2.tab-pane.fade: p Dolor sit amet, consectetur adipisicing elit. Architecto assumenda dicta dolorem fugiat inventore officia officiis provident quae quia ratione, rem sapiente velit veniam. Aperiam aut corporis eaque impedit labore odit perferendis perspiciatis! Amet animi error fugit quo similique, sint sunt tempora unde vero!
+							div#tabs-4-3.tab-pane.fade: p Consectetur adipisicing elit. Accusamus atque consequuntur corporis ex incidunt ipsa modi qui ratione? Architecto aut beatae, consectetur consequatur debitis delectus deleniti distinctio dolor dolores facilis, fugit hic iure natus nemo possimus quae quidem sequi veniam. Assumenda autem expedita minus modi nostrum optio provident sit voluptatum?
+							div#tabs-4-4.tab-pane.fade: p Consectetur adipisicing elit. Consectetur adipisicing elit. Aliquid cum facilis hic id ipsam iusto, modi perspiciatis porro quidem similique? Aspernatur exercitationem fugit incidunt magni nostrum reprehenderit rerum, temporibus. Eos.
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

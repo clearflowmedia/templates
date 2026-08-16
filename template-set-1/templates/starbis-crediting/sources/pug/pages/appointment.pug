@@ -1,0 +1,65 @@
+extends  ../_skeleton
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Appointment'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title('Appointment', 'bg-image-1', {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Pages",
+      "href": "#"
+    },
+    2: {
+      "title": pageName
+    }
+  })
+
+  section.section-75.section-lg-100.bg-default
+    .container
+      .row.justify-content-sm-center
+        .col-lg-6
+          h3.text-spacing Make an Appointment
+          // RD Mailform
+          form.rd-mailform.text-start(data-form-output="form-output-global", data-form-type='forms', method='post', action='bat/rd-mailform.php')
+            .row.row-22.justify-content-sm-center
+              .col-md-6
+                .form-wrap
+                  label.form-label(for="forms-name") Your Name
+                  input#forms-name.form-input(type="text" name="name" data-constraints='@Required')
+              .col-md-6
+                .form-wrap
+                  label.form-label(for="forms-phone") Phone
+                  input#forms-phone.form-input(type="text" name="phone" data-constraints="@Numeric @Required")
+              .col-md-6
+                .form-wrap
+                  label.form-label(for="appointment-date") Date
+                  input#appointment-date.form-input(type="text" name="date" data-constraints="@Required", data-time-picker='date')
+              .col-md-6
+                .form-wrap
+                  label.form-label(for="appointment-time") Time Interval
+                  input#appointment-time.form-input(type="text" name="time" data-constraints="@Required", data-time-picker='time')
+              .col-12
+                .form-wrap
+                  label.form-label(for="forms-message") Your Message
+                  textarea#forms-message.form-input(name="message" data-constraints="@Required")
+              .col-md-6
+                .form-btn
+                  button(type="submit").btn.btn-block.btn-primary send message
+              .col-md-6
+                .form-btn
+                  button(type="reset").btn.btn-black-outline.btn-block Reset
+
+  //- Page Footer
+  include ../sections/_section-footer-default

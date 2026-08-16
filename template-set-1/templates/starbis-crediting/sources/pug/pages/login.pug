@@ -1,0 +1,46 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-post-minimal
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Login'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title(pageName, 'bg-image-1', {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Pages",
+      "href": "#"
+    },
+    2: {
+      "title": pageName
+    }
+  })
+
+  section.section-75.section-md-75.section-xl-100.bg-default
+    .container
+      .row.justify-content-sm-center
+        .col-md-10.col-lg-8.col-xl-6
+          h3 Login Form
+
+          include ../sections/_section-login-form
+          p='Don`t have an account? '
+            a(href='register.html').link-primary Sign up here
+            |.
+
+  ='\n'
+
+  //- Page Footer
+  include ../sections/_section-footer-default

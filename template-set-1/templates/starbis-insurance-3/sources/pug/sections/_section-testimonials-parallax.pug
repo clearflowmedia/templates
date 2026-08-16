@@ -1,0 +1,43 @@
+//- Include
+include ../elements/_ui-quote-minimal
+
+//- RD Parallax
+section.section.parallax-container.context-dark.bg-black.bg-image(data-parallax-img='images/clients-testimonials-parallax-1.jpg')
+  .parallax-content
+    .section-60.section-md-90.section-xl-120
+      .container.text-center
+        .row.justify-content-lg-center
+          .col-sm-12
+            h3 What People Say
+          .col-lg-11.col-xl-9.offset-top-40
+            //- Owl Carousel
+            .owl-carousel-inverse
+              .owl-carousel.owl-nav-position-numbering(data-items='1', data-stage-padding='0', data-loop='false', data-margin='30', data-nav='true', data-numbering='#owl-numbering-1', data-animation-in='fadeIn', data-animation-out='fadeOut')
+                .item
+                  +quote-minimal({
+                    mod: "quote-minimal-inverse",
+                    text: "I love working with everyone here. Our underwriters have been fantastic and are so willing to help and figure out solutions if there are problems. I love that if my underwriter doesn’t know the answer to a question nothing is made up—she finds the answer. ",
+                    cite: "Kate Smith",
+                    caption: "Freelancer"
+                  })
+
+                .item
+                  +quote-minimal({
+                    mod: "quote-minimal-inverse",
+                    text: "My wife and I want to express our thanks and gratitude for your work on our claim. The claim was handled with great care and sensitivity. Your agent deserves a commendation for your great team work. It made a terrible time in our lives go smoothly and quickly. ",
+                    cite: "Mark Wilson",
+                    caption: "Freelancer"
+                  })
+
+                .item
+                  +quote-minimal({
+                    mod: "quote-minimal-inverse",
+                    text: "I wanted to take a moment and tell you what a fantastic employee you have. She treated me with the up most professionalism and was a calming voice that alleviated my stress during a stressful situation. She is an absolute pleasure to work with.",
+                    cite: "Alan Smith",
+                    caption: "Freelancer"
+                  })
+              #owl-numbering-1.owl-numbering.owl-numbering-default
+                .numbering-current
+                .numbering-separator
+                .numbering-count
+='\n'

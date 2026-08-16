@@ -1,0 +1,72 @@
+//- Footer Corporate
+footer.page-foot.bg-cod-gray
+  section.section-40.section-md-60
+    .container
+      .row.justify-content-sm-center
+        .col-sm-10.col-md-11.col-lg-12
+          .row
+            .col-md-6.col-lg-4
+              .inset-lg-right-30
+                h6.text-uppercase About us
+                p.offset-top-22.
+                  TemplateMonster is an A-size depot of website templates - more than 46,000 designs to choose from.
+
+              .offset-top-22
+                .group-md.group-top
+                  div
+                    .unit.unit-horizontal.unit-spacing-xs
+                      .unit-left
+                        span.icon.icon-xs-smaller.icon-primary.fa-phone
+
+                      .unit-body
+                        a.link.link-bold.link-white-v2(href='tel:#') +1 (232) 349–8447
+                    .inset-left-30
+                      a.link-white-v2.font-italic(href='mailto:#') info@demolink.org
+                  div
+                    ul.list-inline.list-inline-reset
+                      li: a.icon.icon-round.icon-gray-dark-filled.icon-xxs-smallest.fa.fa-facebook(href='#')
+                      li: a.icon.icon-round.icon-gray-dark-filled.icon-xxs-smallest.fa.fa-twitter(href='#')
+                      li: a.icon.icon-round.icon-gray-dark-filled.icon-xxs-smallest.fa.fa-google-plus(href='#')
+
+
+            .col-md-6.col-lg-4.offset-top-50.offset-sm-top-0
+              h6.text-uppercase Quick links
+              .row.offset-top-22.offset-md-top-30(style='max-width: 340px;')
+                .col-6
+                  ul.list-marked-variant-2
+                    li: a(href='index.html') Home
+                    li: a(href='services.html') Services
+                    li: a(href='careers.html') Careers
+                    li: a(href='classic-blog.html') Blog
+
+                .col-6
+                  ul.list-marked-variant-2
+                    li: a(href='about-us.html') About us
+                    li: a(href='contacts-us.html') Contacts
+                    li: a(href='appointment.html') Appointment
+
+            .col-md-6.col-lg-4.offset-top-50.offset-md-top-0
+              h6.text-uppercase Subscribe
+              .offset-top-22.offset-md-top-30
+                p Get latest updates and offers.
+                //- RD Mailform
+                form.rd-mailform.form-classic.form-inline.offset-top-15(data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+                  .form-wrap
+                    input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+                    label.form-label(for="contact-email") Enter Your E-mail
+                  button(type="submit" aria-label='Subscribe').btn.btn-icon-only.btn-primary
+                    span.icon.icon-xs.icon-white.fa-envelope-o
+  ='\n'
+
+  section.section-15.bg-black
+    .container.text-center
+      .row
+        .col-md-12
+          p.rights.text-white-03
+            span &#169;&nbsp;
+            span(id='copyright-year')
+            span Shelter.&nbsp;
+            a.link-white-03(href='privacy.html') Privacy Policy
+            if footerlink === 0
+              //- {%FOOTER_LINK}
+='\n'

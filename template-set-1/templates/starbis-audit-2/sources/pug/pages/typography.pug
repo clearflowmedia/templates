@@ -1,0 +1,122 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-quote-default
+include ../elements/_ui-placeholders
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Typography'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title(pageName, 'bg-image-1')
+
+  //- Typography
+  section.section-60.section-md-top-75.section-md-bottom-50
+    .container
+      .row.row-30
+        .col-md-6
+          h1 Heading 1
+          +text-placeholder
+
+        .col-md-6
+          h2 Heading 2
+          +text-placeholder
+
+      .row.row-30
+        .col-md-6
+          h3 Heading 3
+          +text-placeholder
+
+        .col-md-6
+          h4 Heading 4
+          +text-placeholder
+
+      .row.row-30
+        .col-md-6
+          h5 Heading 5
+          +text-placeholder
+
+        .col-md-6
+          h6 Heading 6
+          +text-placeholder
+
+  //- Blockquote
+  section.section-30
+    .container
+      .row
+        .col-sm-12
+          h3 Blockquote
+          div(style='max-width: 530px;')
+            +quote-default('The role of internal audit is to provide independent assurance to various businesses.')
+
+  //- Text Formatting
+  section.section-md-50
+    .container
+      .row
+        .col-sm-12
+          h3 Text #[span.fw-thin Formatting]
+          
+          .box-text
+            a(href='#').link.link-primary-inline Link text
+            a(href='#').link.link-primary-inline Hover link text
+            a(href='#').link.link-primary-inline.active Press link
+            span.mark highlighted text
+            span.text-strike.text-tundora strickethrough text
+            span.text-underline.text-tundora underlined text.
+
+
+  //- Image Centered
+  section.section-30
+    .container
+      .row
+        .col-sm-12
+          h3 Image #[span.fw-thin Centered]
+          figure
+            +jpg('typography-1-1169x610')
+          p.text-black When it comes to external auditing, there are two different categories of auditors. First, there is an external or statutory auditor who works independently to evaluate financial reporting...
+
+  //- Image Right
+  section.section-35.section-md-50
+    .container
+      .row
+        .col-sm-12
+          h3 Image #[span.fw-thin Right]
+      .row.flex-md-row-reverse.justify-content-lg-between.row-30
+        .col-md-6
+          figure
+            +jpg('typography-2-570x386')
+        .col-md-6
+          .inset-lg-right-40.inset-xl-right-85.text-black
+            p.
+              When it comes to external auditing, there are two different categories of auditors. First, there is an external or statutory auditor who works independently to evaluate financial reporting, and then there are external cost auditors who evaluate cost statements and sheets to see if they’re free of misstatements or fraud.
+            p.
+              Both of these types of auditors follow a set of standards different from that of the company or organization hiring them to do the work. Internal auditors, as the name implies, are employed by the company or organization for whom they are performing the audit. To the best of their ability, internal auditors provide information to the board, managers, and other stakeholders on the accuracy of their books and the efficacy of their internal systems. Consultant auditors, while not working internally, use the standards of the company they are auditing as opposed to a separate set of standards.
+
+  //- Image Left
+  section.section-40.section-md-bottom-100.section-xl-bottom-165.section-md-top-50
+    .container
+      .row
+        .col-sm-12
+          h3 Image #[span.fw-thin Left]
+      .row.justify-content-lg-between.row-30
+        .col-md-6
+          figure
+            +jpg('typography-3-570x386')
+        .col-md-6
+          .inset-lg-left-40.inset-xl-left-85.text-black
+            p.
+              When it comes to external auditing, there are two different categories of auditors. First, there is an external or statutory auditor who works independently to evaluate financial reporting, and then there are external cost auditors who evaluate cost statements and sheets to see if they’re free of misstatements or fraud.
+            p.
+              Both of these types of auditors follow a set of standards different from that of the company or organization hiring them to do the work.Internal auditors, as the name implies, are employed by the company or organization for whom they are performing the audit. To the best of their ability, internal auditors provide information to the board, managers, and other stakeholders on the accuracy of their books and the efficacy of their internal systems. Consultant auditors, while not working internally, use the standards of the company they are auditing as opposed to a separate set of standards.
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

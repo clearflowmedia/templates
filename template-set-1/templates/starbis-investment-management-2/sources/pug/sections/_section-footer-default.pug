@@ -1,0 +1,97 @@
+//- Includes
+include ../elements/_ui-post-preview
+
+//-Footer Widget
+footer.page-foot.bg-ebony-clay.context-dark
+  .section-40.section-md-75
+    .container
+      .row.justify-content-sm-center
+        .col-sm-9.col-md-11.col-xl-12
+          .row.row-50
+            .col-md-6.col-lg-10.col-xl-3.wow.fadeInUp(data-wow-delay='0s')
+              .inset-xl-right-20(style='max-width: 510px;')
+                //-Brand
+                a.brand.brand-inverse(href='index.html')
+                  +png('logo-white-135x45')
+                p.text-shuttle-gray.
+                  InvestPlus leads the industry in wealth management. Our independent RIA and broker services have over 20 years of industry experience.
+                a.link.link-group.link-group-animated.link-bold.link-white(href=globals.getTemplateLink)
+                  span Free Consultation
+                  span.icon.icon-xxs.icon-primary.fa.fa-angle-right
+
+            .col-md-6.col-lg-4.col-xl-3.wow.fadeInUp(data-wow-delay='.1s')
+              h6.text-uppercase Recent Posts
+              +post-preview({
+                classes: ['post-preview-inverse'],
+                img: 'post-preview-1-70x70',
+                header: 'What’s the Right Asset Allocation For Investors? ',
+                time: ['2021-02-04', 'Feb 4, 2021']
+              })
+
+              +post-preview({
+                classes: ['post-preview-inverse'],
+                img: 'post-preview-2-70x70',
+                header: 'How Return Assumptions Affect Investor Behavior ',
+                time: ['2021-02-04', 'Feb 4, 2021']
+              })
+
+            .col-md-6.col-lg-4.col-xl-3.wow.fadeInUp(data-wow-delay='.2s')
+              h6.text-uppercase Quick links
+              .row(style='max-width: 270px;')
+                .col-6
+                  ul.list-marked-variant-2
+                    li: a(href='index.html') Home
+                    li: a(href='services.html') Services
+                    li: a(href='careers.html') Cases
+                    li: a(href='blog-classic.html') Blog
+
+                .col-6
+                  ul.list-marked-variant-2
+                    li: a(href='about.html') About us
+                    li: a(href='contacts.html') Contacts
+                    li: a(href='appointment.html') Appointment
+
+            .col-md-6.col-lg-4.col-xl-3.wow.fadeInUp(data-wow-delay='.3s')
+              h6.text-uppercase Contact us
+              address.contact-info.text-start
+                .unit.flex-row.unit-spacing-md.align-items-center
+                  .unit-left
+                    span.icon.icon-xs.text-primary.fa-phone
+                  .unit-body
+                    a.link-white(href='callto:#') +1 (409) 987–5874
+
+                .unit.flex-row.unit-spacing-md.align-items-center
+                  .unit-left
+                    span.icon.icon-xs.text-primary.fa.fa-envelope-o
+                  .unit-body
+                    a.link-white(href='mailto:#') info@demolink.org
+
+                .unit.flex-row.unit-spacing-md
+                  .unit-left
+                    span.icon.icon-xs.text-primary.fa-map-marker
+                  .unit-body
+                    a.link-white.d-inline(href='#')
+                      | 6036 Richmond hwy,
+                      br
+                      | Alexandria, VA USA 22303
+  .container
+    hr
+
+  .page-foot.section.section-35.bg-ebony-clay.context-dark
+    .container.text-center.wow.fadeInUp(data-wow-delay='0s')
+      .row.row-15.flex-row-md-reverse.justify-content-md-between.align-items-md-center
+        .col-md-6.text-md-end
+          .group-sm.group-middle
+            p.font-italic.text-white Follow Us:
+            ul.list-inline.list-inline-reset
+              li: a.icon.icon-round.icon-pciked-bluewood.icon-xxs-smallest.fa.fa-facebook(href='#')
+              li: a.icon.icon-round.icon-pciked-bluewood.icon-xxs-smallest.fa.fa-twitter(href='#')
+              li: a.icon.icon-round.icon-pciked-bluewood.icon-xxs-smallest.fa.fa-google-plus(href='#')
+
+        .col-md-6.text-md-start
+          p.rights.text-white
+            span.copyright-year
+            span &nbsp;&#169;&nbsp;
+            span InvestPlus.&nbsp;
+            a.link-white-v2(href='privacy-policy.html') Privacy Policy
+='\n'

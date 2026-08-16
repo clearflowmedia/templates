@@ -1,0 +1,74 @@
+-
+	var
+		htmlClass = "wide wow-animation",
+		fonts = "https://fonts.googleapis.com/css2?family=Oranienbaum&family=Trispace:wght@200;400;500;600&display=swap",
+		logo = {
+			default: 'logo-default-87x24.svg',
+			inverse: 'logo-inverse-87x24.svg',
+			name: 'Meate'
+		},
+		links = {
+			getTemplate: 'https://www.templatemonster.com/website-templates/starbis.html',
+			address: '9784 Bear Hill Drive Brooklyn, NY 11228',
+			soundcloud: '<iframe height="166" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/149065581&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>',
+			video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/VrLSBsOkP6k" allowfullscreen></iframe>'
+		},
+		colors = {
+			primary: '#4D4034'
+		},
+		menu = [
+			{ title: 'About Us' },
+			{
+				title: 'Pages',
+				link: '#',
+				megamenu: [
+					{
+						title: 'Pages',
+						link: null,
+						list: [
+							{ title: '404 Page' },
+							{ title: 'Coming soon' },
+							{ title: 'Privacy Policy' },
+							{ title: 'Search Results' }
+						]
+					},
+					{
+						title: 'Components',
+						link: null,
+						list: [
+							{ title: 'Accordion' },
+							{ title: 'Buttons' },
+							{ title: 'Forms' },
+							{ title: 'Progress bars' },
+							{ title: 'Tabs' },
+							{ title: 'Typography' }
+						]
+					},
+					{
+						title: 'Shop',
+						link: null,
+						list: [
+							{ title: 'Grid Shop' },
+							{ title: 'Single Product' },
+							{ title: 'Shop Cart' },
+							{ title: 'Shop Checkout' },
+						]
+					}
+				]
+			},
+			{
+				title: 'Reservation'
+			},
+			{
+				title: 'News',
+				dropdown: [{
+					title: 'News Post',
+					link: 'news-post.html'
+				}]
+			},
+			{ title: 'Contacts' }
+		],
+
+		// Predefined variables
+		breadcrumbs = [],
+		pageName = 'Home'

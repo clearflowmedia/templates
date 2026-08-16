@@ -1,0 +1,268 @@
+-
+  var menu = {
+    "home": {
+      index: 0,
+      title: 'Home',
+      link: 'index.html'
+    },
+
+    "about": {
+      index: 1,
+      title: 'About Us',
+      link: 'about-us.html'
+    },
+
+    "services": {
+      index: 2,
+      title: 'Services',
+      link: 'services.html'
+    },
+
+    "cases": {
+      index: 3,
+      title: 'Cases',
+      link: '#',
+      dropdown: [
+        {
+          title: 'Gallery grid',
+          link: 'gallery-grid.html'
+        },
+        {
+          title: 'Gallery masonry',
+          link: 'gallery-masonry.html'
+        },
+        {
+          title: 'Gallery cobbles',
+          link: 'gallery-cobbles.html'
+        },
+        {
+          title: 'Gallery item',
+          link: 'gallery-item.html'
+        }
+      ]
+    },
+
+    "blog": {
+      index: 4,
+      title: 'Blog',
+      link: '#',
+      dropdown: [
+        {
+          title: 'Blog classic',
+          link: 'blog-classic.html'
+        },
+        {
+          title: 'Blog grid',
+          link: 'blog-grid.html'
+        },
+        {
+          title: 'Blog line',
+          link: 'blog-line.html'
+        },
+        {
+          title: 'Blog masonry',
+          link: 'blog-masonry.html'
+        },
+        {
+          title: 'Blog post',
+          link: 'blog-post.html'
+        }
+      ]
+    },
+
+    "pages": {
+      index: 5,
+      title: 'Pages',
+      link: '#',
+      megamenu: [
+        [
+          {
+            title: 'Cases',
+            link: '#',
+            list: [
+              {
+                title: 'Gallery grid',
+                link: 'gallery-grid.html'
+              },
+              {
+                title: 'Gallery masonry',
+                link: 'gallery-masonry.html'
+              },
+              {
+                title: 'Gallery cobbles',
+                link: 'gallery-cobbles.html'
+              },
+              {
+                title: 'Gallery item',
+                link: 'gallery-item.html'
+              }
+            ]
+          },
+          {
+            title: 'Pages',
+            list: [
+              {
+                title: 'About us',
+                link: 'about-us.html'
+              },
+              {
+                title: 'Services',
+                link: 'services.html'
+              }
+            ]
+          }
+        ],
+        [
+          {
+            title: "Pages",
+            list: [
+              {
+                title: 'Appointment',
+                link: 'appointment.html'
+              },
+              {
+                title: 'Clients',
+                link: 'clients.html'
+              },
+              {
+                title: 'Clients testimonials',
+                link: 'clients-testimonials.html'
+              },
+              {
+                title: 'Our team',
+                link: 'our-team.html'
+              },
+              {
+                title: 'Team member profile',
+                link: 'team-member-profile.html'
+              },
+              {
+                title: 'Careers',
+                link: 'careers.html'
+              },
+              {
+                title: 'Pricing',
+                link: 'pricing.html'
+              },
+              {
+                title: 'FAQ',
+                link: 'faq.html'
+              }
+            ]
+          }
+        ],
+        [
+          {
+            title: 'Extras',
+            link: '#',
+            list: [
+              {
+                title: '404 page',
+                link: '404-page.html'
+              },
+              {
+                title: '503 page',
+                link: '503-page.html'
+              },
+              {
+                title: 'Maintenance',
+                link: 'maintenance.html'
+              },
+              {
+                title: 'Coming soon',
+                link: 'coming-soon.html'
+              },
+              {
+                title: 'Login',
+                link: 'login.html'
+              },
+              {
+                title: 'Register',
+                link: 'register.html'
+              },
+              {
+                title: 'Search results',
+                link: 'search-results.html'
+              },
+              {
+                title: 'Privacy policy',
+                link: 'privacy-policy.html'
+              }
+            ]
+          }
+        ],
+        [
+          {
+            title: 'Components',
+            link: '#',
+            list: [
+              {
+                title: 'Accordion',
+                link: 'accordion.html'
+              },
+              {
+                title: 'Buttons',
+                link: 'buttons.html'
+              },
+              {
+                title: 'Grid',
+                link: 'grid.html'
+              },
+              {
+                title: 'Forms',
+                link: 'forms.html'
+              },
+              {
+                title: 'Icons',
+                link: 'icons.html'
+              },
+              {
+                title: 'Icon lists',
+                link: 'icon-lists.html'
+              },
+              {
+                title: 'Progress bars',
+                link: 'progress-bars.html'
+              },
+              {
+                title: 'Tabs',
+                link: 'tabs.html'
+              },
+              {
+                title: 'Table styles',
+                link: 'table-styles.html'
+              },
+              {
+                title: 'Typography',
+                link: 'typography.html'
+              }
+            ]
+          }
+        ]
+      ]
+    },
+
+    "Contacts": {
+      index: 6,
+      title: 'Contacts',
+      link: 'contact-us.html'
+    }
+  },
+
+  globals = {
+    getTemplateLink: 'https://www.templatemonster.com/website-templates/starbis.html',
+    address: '6036 Richmond hwy, Alexandria, VA USA 22303',
+    soundcloud: '<iframe height="166" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/149065581&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>',
+    video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/VrLSBsOkP6k" allowfullscreen></iframe>'
+  },
+
+  pageName,
+  bodyClass = [],
+
+  tabs = [
+    ["Sure. We offer many different packages: Corporate Website development Package, Mobile Website development Package, Micro sites, Small Business Websites and even Custom Website Programming Package."],
+    ["Web packages are there as a guideline and we can customize them so that they can fit your needs perfectly. We can either include or remove some functions and features. Just let us know what you need and we will give you the best solution."],
+    ["There are two ways to look at this question. If you are looking to cut the costs you can do the updates yourself. The website will be in CMS and you will get the instructions on how you can update it by yourself. If you would like us to do the updates for you, we will do it and not only will we update the content, but also work on search engine optimization. That way your website will be up to date, and you will get more visitors over time."],
+    ["Yes, we do. We can redesign your website so that it follows the latest trends. Redesign is less expensive than making a whole new website."],
+    ["Of course! Website is one of the things that have to be alive, therefore develop and change over time. We are there to help you make changes any time you need them. We offer website maintenance service with no monthly nor upfront fee. You will tell us what you need and we will give you our quote with estimated work time. After you consider our offer you will decide if you want to take it. There are no hidden costs and no possibility that we are too busy when you need us the most. We are prompt and professional. Once you decide to update or simply maintain your website, you will know that it will be in good hands."]
+  ]

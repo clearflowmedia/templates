@@ -1,0 +1,30 @@
+extends  ../_skeleton
+
+//- Includes
+
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Clients Testimonials'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title('Clients', 'bg-image-2')
+
+  include ../sections/_section-quotes-bordered
+
+  include ../sections/_section-testimonials-parallax
+
+  include ../sections/_section-testimonials-complex
+
+  include ../sections/_section-testimonials-vertical-dark
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

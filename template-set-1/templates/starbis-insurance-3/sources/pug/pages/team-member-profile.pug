@@ -1,0 +1,127 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-thumbnail-3
+include ../elements/_ui-quote-default
+include ../elements/_ui-progress-linear
+
+block variables
+	- var activeIndex = 5
+	- var pageName = 'Team member profile'
+
+block title
+	title=pageName
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+
+	+page-title('Our team', 'bg-image-7')
+
+	//- Jack Richards
+	section.section-50.section-md-75.section-xl-100
+		.container
+			.row.justify-content-md-center.justify-content-lg-start.row-40
+				.col-md-6.col-lg-6
+					.thumbnail.thumbnail-profile
+						.thumbnail-image
+							+jpg('profile-1-570x570')
+						.thumbnail-caption
+							.thumbnail-caption-inner
+								ul
+									li
+										.unit.unit-horizontal.unit-spacing-xs.align-items-center
+											.unit-left
+												span.icon.icon-xxs.icon-primary.material-icons-phone
+											.unit-body
+												a.link-tuatara(href='tel:#') +1 (232) 349–8447
+									li
+										.unit.unit-horizontal.unit-spacing-xs.align-items-center
+											.unit-left
+												span.icon.icon-xxs.icon-primary.fa-envelope-o
+											.unit-body
+												a.link-tuatara(href='mailto:#') info@demolink.org
+								.btn-wrap
+									a.btn.btn-small.btn-tuatara-outline(href='contacts-us.html') get in touch
+
+				.col-md-6.col-lg-6.col-xl-5
+					.block-info
+						.inset-md-left-50.inset-lg-left-40.inset-xl-left-100
+							h4 Chris Johnson
+							p.block-info-subtitle.text-tuatara Executive Vice President/Sales Manager
+
+							p Chris Johnson is our Executive Vice President and a soul of our agency. He is a member of the fourth generation of the agency family to become a vital member of the agency’s staff.
+
+						.block-info-quote
+							+quote-default('I am really happy to work with the highly experienced team to help people protect them!')
+
+						.inset-md-left-50.inset-lg-left-40.inset-xl-left-100
+							p After attending De La Salle High School, Chris graduated from Louisiana State University with a major in Business Administration and a minor in Finance.  He has over 20 years of experience in the insurance industry.
+							.block-info-progress
+							+progress-linear({
+								title: 'Life Insurance',
+								value: '70'
+							}).progress-linear-red-orange-1
+							+progress-linear({
+								title: 'Car Insurance',
+								value: '54'
+							}).progress-linear-gold
+							+progress-linear({
+								title: 'Business Insurance',
+								value: '87'
+							}).progress-linear-secondary
+							+progress-linear({
+								title: 'Travel Insurance',
+								value: '90'
+							}).progress-linear-primary
+	='\n'
+
+	//- Portfolio
+	section.section-50.section-md-90.section-xl-top-120.section-xl-bottom-145.bg-mine-shaft.bg-mine-shaft-varinat-1
+		.container.isotope-wrap
+			.row.row-40
+				.col-sm-12.text-center
+					h3.text-spacing--25 Check Out Chris’s Work
+					p.d-inline-block(style='max-width: 650px;') Our fully licensed and professional insurance agency is an Independent Professional company that works for you to make sure you get the right coverage at the right price.
+				.col-12
+					//- Isotope Filters
+					ul.isotope-filters-responsive
+						li: p Choose your category:
+						li.block-top-level
+							//- Isotope Filters
+							button.isotope-filters-toggle.btn.btn-sm.btn-default(data-custom-toggle='#isotope-1', data-custom-toggle-hide-on-blur='true')
+								| Filter
+								span.caret
+
+							#isotope-1.isotope-filters.isotope-filters-minimal.isotope-filters-horizontal
+								ul.list-inline
+									li: a.active(data-isotope-filter='*', data-isotope-group='gallery', href='#') All
+									li: a(data-isotope-filter='Category 1', data-isotope-group='gallery', href='#') Life Insurance
+									li: a(data-isotope-filter='Category 2', data-isotope-group='gallery', href='#') Business Insurance
+									li: a(data-isotope-filter='Category 3', data-isotope-group='gallery', href='#') House Insurance
+
+
+				.col-sm-12
+					.row.isotope.isotope-gutter-default(data-isotope-layout='fitRows', data-isotope-group='gallery', data-lightgallery='group')
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 3')
+							+thumbnail-3({img: 'gallery-grid-1-370x278', original: 'gallery-1-800x1200_original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+							+thumbnail-3({img: 'gallery-grid-2-370x278', original: 'gallery-2-1200x800_original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+							+thumbnail-3({img: 'gallery-grid-3-370x278', original: 'gallery-3-1200x797_original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+							+thumbnail-3({img: 'gallery-grid-4-370x278', original: 'gallery-4-1200x797_original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+							+thumbnail-3({img: 'gallery-grid-5-370x278', original: 'gallery-5-1200x800_original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+							+thumbnail-3({img: 'gallery-grid-6-370x278', original: 'gallery-6-1200x800_original'})
+	='\n'
+
+	//- Page Footer
+	include ../sections/_section-footer-default

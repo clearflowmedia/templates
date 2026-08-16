@@ -1,0 +1,16 @@
+//- Post minimal
+mixin post-minimal(obj)
+  //- Post minimal
+  article.post-minimal
+    .post-left
+      figure.post-image
+        +jpg(obj.img)
+
+    .post-body
+      h5: a(href='blog-post.html')=obj.header
+      .post-meta
+        .object-inline
+          span.novi-icon.icon.icon-xs-smaller.icon-primary.material-icons-event_available
+          time(datetime=obj.time[0])=obj.time[1]
+      p=obj.text
+

@@ -1,0 +1,76 @@
+/*
+* @Section   Progress Bar
+*/
+
+.progress-linear-group {
+	* + & { margin-top: 30px; }
+}
+.progress-linear {
+	position: relative;
+	font-family: $font-family-base;
+	font-weight: 700;
+	text-align: left;
+	color: $secondary;
+}
+
+.progress-linear-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	@include spacing(10px);
+}
+
+.progress-linear-body {
+	height: 4px;
+	border-radius: 3px;
+	background: $gray-100;
+}
+
+.progress-linear-title {
+	color: $dusty-gray;
+}
+
+.progress-linear-bar {
+	width: 0;
+	height: inherit;
+	background: $primary;
+	transition: 1s all ease-in-out;
+	border-radius: 3px 0  0 3px;
+}
+
+.progress-linear-primary .progress-linear-bar {
+	background: $primary;
+}
+.progress-linear-red-orange-1 .progress-linear-bar {
+	background: $red-orange-1;
+}
+.progress-linear-dodger-blue .progress-linear-bar {
+	background: $dodger-blue;
+}
+.progress-linear-gorse .progress-linear-bar {
+	background: $gorse;
+}
+
+
+.progress-linear-counter {
+	&::after {
+		content: "%";
+	}
+}
+
+* + .progress-linear-body {
+	margin-top: 3px;
+}
+
+.progress-linear + .progress-linear {
+	margin-top: 15px;
+}
+
+@include media-breakpoint-up(lg) {
+	.progress-linear + .progress-linear {
+		margin-top: 23px;
+	}
+}
+
+
+

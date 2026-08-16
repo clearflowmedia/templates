@@ -1,0 +1,11 @@
+//- Thumbnail variant 1
+mixin thumbnail-1(obj)
+  .thumbnail.thumbnail-variant-1
+    .thumbnail-image
+      +img(obj.img)
+      .thumbnail-image-inner
+        a.novi-icon.icon.icon-md.material-icons-local_phone.link-primary-inverse-v2(href='callto:#')
+        a.novi-icon.icon.icon-md-smaller.fa-envelope-o.link-white(href='mailto:#')
+    .thumbnail-caption
+      h5.header: a(href='team-member-profile.html')=obj.header
+      p=obj.caption

@@ -1,0 +1,88 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-post-modern
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Blog Masonry'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title('Blog', 'bg-image-1')
+
+  //- Blog masonry
+  section.section-50.section-md-75.section-xl-100.bg-athens-lighten
+    .container
+      .row.justify-content-md-center.justify-content-lg-start.row-30
+        .col-md-9.col-lg-6
+          +post-modern({
+            type: 'material-icons-videocam',
+            header: 'Choosing the Strategy',
+            content: [
+              {type: 'image', data: 'blog-masonry-3-570x321'},
+              {
+                type: 'text',
+                data: ['Perhaps you are a new entrepreneur about to launch a business or innovation you have been dreaming about for years. Or maybe you have an established business and things are going well, or maybe even too well. In both instances you are...']
+              }
+            ],
+            time: ['2021-01-01', '2 days ago'],
+            tags: ['Strategy', 'Capital']
+          })
+
+          +post-modern({
+            type: 'material-icons-local_see',
+            header: '8 Tips for Building a Bankable Business',
+            content: [
+                {type: 'image', data: 'blog-masonry-1-570x321'}
+            ],
+            time: ['2021-01-01', '7 days ago'],
+            tags: ['Business', 'Plan']
+          })
+
+        .col-md-9.col-lg-6
+          +post-modern({
+            type: 'material-icons-library_books',
+            header: 'Your Business Model is the Foundation of Your Business Plan',
+            content: [
+              {type: 'text', data: ['The report of the death of the business plan has been an exaggeration, to paraphrase Mark Twain. Yet, we often read opinions in popular business press that the business plan is no longer relevant. All you need is a business model, we are told by business gurus. While there is no consensus on the definition of a...']}
+            ],
+            time: ['2021-01-01', '3 days ago'],
+            tags: ['Business', 'Plan']
+          })
+
+          +post-modern({
+            type: 'material-icons-audiotrack',
+            header: 'New HMRC Offshore Disclosure Facility',
+            content: [
+              {type: 'audio', data: globals.soundcloud}
+            ],
+            time: ['2021-01-01', '4 days ago'],
+            tags: ['Facility', 'Opportunity']
+          })
+
+          +post-modern({
+            type: 'material-icons-videocam',
+            header: 'Narrow Your Focus to Prevent Overanalysis',
+            content: [
+              {type: 'image', data: 'blog-masonry-2-570x321'},
+              {type: 'text', data: ['Entrepreneurs come up with new business ideas all the time. Often, they just plunge ahead to develop the product or service without really taking the time to 1) determine if market conditions are favorable, and, if they are favorable...']}
+            ],
+            time: ['2021-01-01', '2 days ago'],
+            tags: ['Idea', 'Business']
+          })
+
+
+      .row.text-center
+        .col-sm-12
+          +pagination
+  ='\n'
+
+  //- Page Footer
+  include ../sections/_section-footer-default

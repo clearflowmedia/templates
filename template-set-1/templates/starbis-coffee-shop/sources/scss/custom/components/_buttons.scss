@@ -1,0 +1,270 @@
+//
+// Custom Buttons Styles
+// --------------------------------------------------
+
+// Base styles
+// --------------------------------------------------
+
+.btn {
+	display: inline-block;
+	padding: $input-btn-padding-y $input-btn-padding-x;
+	max-width: 100%;
+	font-family: $btn-font-family;
+	font-size: $input-btn-font-size;
+	font-weight: $btn-font-weight;
+	border-radius: $btn-border-radius;
+	border: 2px solid;
+	text-transform: $btn-text-transform;
+	transition: .3s ease-out;
+	cursor: pointer;
+	text-align: center;
+	letter-spacing: -.02em;
+
+	&:focus,
+	&:active,
+	&:active:focus {
+		outline: none;
+	}
+
+	&:active,
+	&.active {
+		box-shadow: none;
+	}
+
+	&-smaller {
+		padding: 8px 25px;
+		line-height: 1.7;
+	}
+
+	&-small {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	&:not([class*='shadow']) {
+		box-shadow: none;
+	}
+
+	&:not(:disabled):not(.disabled):active:focus,
+	&:not(:disabled):not(.disabled).active:focus{
+		&:not([class*='shadow']) {
+			box-shadow: none;
+		}
+	}
+}
+
+// Alternate buttons
+// --------------------------------------------------
+html {
+	.btn-default {
+		@include button-variant-custom($white, $abbey, $abbey, $white, $primary, $primary);
+	}
+
+	.btn-primary {
+		@include button-variant-custom($white, $primary, $primary, $white, $gray-700, $gray-700);
+	}
+
+	.btn-red-orange {
+		@include button-variant-custom($white, $red-orange, $red-orange, $white, $gray-dark, $gray-dark);
+	}
+
+	.btn-primary-contrast {
+		@include button-variant-custom($white, $primary, $primary, $white, $keppel, $keppel);
+	}
+
+	.btn-primary-outline {
+		@include button-variant-custom($primary, transparent, $primary, $white, $primary, $primary);
+	}
+
+	.btn-white-outline-variant-1 {
+		@include button-variant-custom($white, transparent, $white, $white, $primary, $primary);
+	}
+
+	.btn-silver-outline {
+		@include button-variant-custom($black, transparent, $silver, $white, $silver, $silver);
+	}
+
+	.btn-black-outline {
+		@include button-variant-custom($black, transparent, $black, $white, $black, $black);
+	}
+}
+
+%context-dark {
+	.btn-black-outline {
+		@include button-variant-custom($white, transparent, $white, $tundora, $white, $white);
+	}
+}
+
+
+// Button Sizes
+// --------------------------------------------------
+
+.btn-xs {
+	min-width: 100px;
+	line-height: $line-height-base;
+	@include button-size($input-btn-padding-y-xs, $input-btn-padding-x-xs, 11px, $border-radius-lg);
+}
+
+.btn-sm {
+	min-width: 120px;
+	line-height: $line-height-base;
+	@include button-size($input-btn-padding-y-sm, $input-btn-padding-x-sm, 11px, $border-radius-lg);
+}
+
+.btn-lg {
+	line-height: $line-height-base;
+	@include button-size($input-btn-padding-y-lg, $input-btn-padding-x-lg, $input-btn-font-size, $btn-border-radius );
+}
+
+.btn-xl {
+	line-height: $line-height-base;
+	@include button-size($input-btn-padding-y-xl, $input-btn-padding-x-xl, $input-btn-font-size, $btn-border-radius);
+
+	// Variants
+	@include media-breakpoint-up(lg) {
+		min-width: 370px ;
+		&-bigger {
+			padding-top: 28px;
+			padding-bottom: 28px;
+		}
+	}
+}
+
+// Button Shapes
+// --------------------------------------------------
+
+.btn-block {
+	display: block;
+	min-width: 30px;
+	width: 100%;
+}
+
+.btn-rect {
+	border-radius: 0;
+}
+
+.btn-round {
+	border-radius: 12px;
+}
+
+.btn-circle {
+	border-radius: 35px;
+}
+
+.btn-round-bottom {
+	border-radius: 0 0 5px 5px;
+}
+
+// Button Modifiers
+// --------------------------------------------------
+.btn-shadow {
+	box-shadow: -3px 3px 3px 0 rgba($black, .14);
+}
+
+// Button Icon styles
+// --------------------------------------------------
+.btn-transform{
+	.icon {
+		transform: rotate(0);
+		transition: transform .1s linear;
+		will-change: transform;
+	}
+	&:hover span {
+		transform: rotate(45deg);
+	}
+}
+.btn {
+	&.btn-icon {
+		@include display-inline-flex;
+		@include flex-direction(row);
+		@include flex-wrap(nowrap);
+		@include align-items(center);
+		@include justify-content(center);
+		vertical-align: middle;
+
+		.icon {
+			position: relative;
+			display: inline-block;
+			width: auto;
+			height: auto;
+			line-height: 0;
+			vertical-align: middle;
+
+		}
+		&-left {
+			.icon {
+				margin-right: 8px;
+			}
+		}
+
+		&-right {
+			@include flex-direction(row-reverse);
+
+			.icon {
+				margin-left: 8px;
+			}
+		}
+	}
+}
+
+.btn-icon-only {
+	@include reset-button;
+	font-size: 0;
+	line-height: 0;
+	transition: .33s all ease;
+
+	&.btn-icon-only-primary {
+		@include link($primary, $black);
+	}
+}
+
+.btn-icon-only {
+	padding: 9px 18px;
+}
+
+.btn {
+	@extend .btn;
+}
+
+.btn-sm {
+	@extend .btn-xs;
+}
+
+.btn-primary {
+	@extend .btn-primary;
+
+	&:active,
+	&:focus {
+		box-shadow: none;
+	}
+}
+
+.btn-link {
+	font-size: 15px;
+	line-height: 18px;
+	font-weight: 600;
+	letter-spacing: -0.02em;
+	text-transform: uppercase;
+	overflow: hidden;
+	color: $body-color;
+	transition: .1s all linear;
+
+	&:hover,
+	&:focus {
+		color: inherit;
+	}
+	span {
+		display: inline-block;
+		margin-left: 10px;
+		font-weight: inherit;
+		line-height: 18px;
+		font-size: 16px;
+		vertical-align: bottom;
+		transition: inherit;
+
+	}
+
+	&:hover span {
+		transform: rotate(45deg);
+	}
+}
+

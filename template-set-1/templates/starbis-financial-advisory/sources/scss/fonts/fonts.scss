@@ -1,0 +1,24 @@
+/*
+*
+* Fonts
+*
+*/
+
+
+$icon-font-path: "../fonts/";
+
+//** File name for all font files.
+$icon-font-awesome:        "fontawesome-webfont";
+$icon-material-design:     "materialdesignicons-webfont";
+
+//** Element ID within SVG icon file.
+$icon-font-awesome-id:     "fontawesomeregular";
+$icon-material-design-id:  "materialdesigniconsregular";
+
+@import "../fonts/font-awesome";
+@import "../fonts/material-icons";
+@import "../fonts/materialdesignicons";
+@import "../fonts/fl-flat-icons-set-2";
+@import "../fonts/fl-bigmug-line";
+@import "../fonts/fl-36-slim-icons";
+@import "../fonts/fl-puppets"; 

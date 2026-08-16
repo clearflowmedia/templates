@@ -1,0 +1,554 @@
+//
+// Custom typography
+// --------------------------------------------------
+
+// Page header
+// -------------------------
+
+.page-header {
+}
+
+// Fonts
+// -------------------------
+
+.font-default {
+  font-family: $font-family-base;
+}
+
+@mixin font-size-default {
+  font-size: $font-size-body;
+  line-height: $line-height-base;
+}
+
+.font-size-default {
+  @include font-size-default;
+}
+
+// Basic Typography
+// -------------------------
+
+#{headings()} {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  color: $headings-color;
+
+  > span {
+    display: inline-block;
+    font-size: inherit;
+  }
+
+  a {
+    display: inline;
+    font: inherit;
+    letter-spacing: inherit;
+    transition: .33s all ease;
+    &, &:active, &:focus {
+      color: inherit;
+    }
+
+    &:hover {
+      color: $link-hover-color;
+    }
+  }
+
+  > * {
+    margin-right: .25em;
+  }
+}
+
+h1,
+.h1 {
+  //{0 - 768px} <= 40px
+  //{768px - 992px} <= 62px
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: -.025em;
+
+  @include media-breakpoint-up(md) {
+    font-size: 40px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 70px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    line-height: $h1-line-height;
+    font-size: $h1-font-size;
+  }
+}
+
+h2,
+.h2 {
+  //{0 - 768px} <= 36px
+  //{768px - 992px} <= 52px
+  font-size: 32px;
+  line-height: 1.4;
+  letter-spacing: -.025em;
+  font-style: italic;
+
+  @include media-breakpoint-up(md) {
+    font-size: 32px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 40px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    line-height: $h2-line-height;
+    font-size: $h2-font-size;
+  }
+}
+
+h3,
+.h3 {
+  //{0 - 768px} <= 32px
+  //{768px - 992px} <= 44px
+  font-size: 24px;
+  line-height: 1.35;
+
+  @include media-breakpoint-up(md) {
+    font-size: 26px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 30px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    line-height: $h3-line-height;
+    font-size: $h3-font-size;
+  }
+
+  &.smaller {
+    @include media-breakpoint-up(xl) {
+      font-size: $h3-font-size * .96;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    &.medium {
+      font-size: 33px;
+    }
+  }
+}
+
+h4,
+.h4 {
+  //{0 - 768px} <= 26px
+  //{768px - 992px} <= 36px
+  font-size: 20px;
+  line-height: 1.35;
+
+  @include media-breakpoint-up(md) {
+    font-size: 24px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 26px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    line-height: $h4-line-height;
+    font-size: $h4-font-size;
+  }
+}
+
+h5,
+.h5 {
+  //{0 - 768px} <= 22px
+  //{768px - 992px} <= 28px
+  font-size: 16px;
+  line-height: 1.35;
+
+  @include media-breakpoint-up(xl) {
+    line-height: $h5-line-height;
+    font-size: $h5-font-size;
+  }
+
+  &.h5-smaller {
+    font-weight: 400;
+    @include media-breakpoint-up(xl) {
+      font-size: 18px;
+    }
+  }
+}
+
+h6,
+.h6 {
+  //{0 - 768px} <= 18px
+  //{768px - 992px} <= 22px
+  font-size: 15px;
+  line-height: 1.2;
+
+  @include media-breakpoint-up(sm) {
+    line-height: $h6-line-height;
+    font-size: $h6-font-size;
+  }
+}
+
+.h7 {
+  font: 700 16px/24px $font-family-base;
+  text-transform: uppercase;
+}
+
+%text-bigger {
+  font-family: $font-family-sec;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: (36 / 25);
+
+  @include media-breakpoint-up(lg) {
+    font-size: 22px;
+  }
+}
+
+.text-bigger {
+  @extend %text-bigger;
+}
+
+.text-large {
+  font: 700 38px/42px $font-family-sec;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 48px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 55px;
+  }
+}
+
+.text-extra-large-bordered {
+  display: inline-block;
+  padding: .07em .13em;
+  font: 700 120px $font-family-sec;
+  line-height: .8;
+  border: .075em solid;
+  text-align: center;
+
+  @include media-breakpoint-up(md) {
+    font-size: 220px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 272px;
+  }
+}
+
+.big {
+  letter-spacing: .025em;
+}
+
+@include media-breakpoint-up(sm) {
+  .big {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .big {
+    font-size: $font-size-lg;
+    line-height: floor(($font-size-lg * $line-height-large));
+  }
+}
+
+small,
+.small {
+  font-size: $font-size-sm;
+  line-height: floor(($font-size-sm * $line-height-small));
+}
+
+code {
+  padding: 5px 7px;
+  font-size: 75%;
+  color: $brand-danger;
+  background-color: $gray-lighter;
+  border-radius: 2px;
+}
+
+em {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+mark,
+.mark {
+  color: $white;
+  background-color: $primary;
+  padding: .2em .3em;
+}
+
+.text-style-1 {
+  font-family: $font-family-sec;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.text-style-2 {
+  font-family: $font-family-sec;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.text-style-3 {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $abbey;
+}
+
+.text-style-4 {
+  font-weight: 400;
+  font-style: italic;
+  color: $secondary;
+}
+
+.text-style-lighter {
+  font-weight: 400;
+  font-style: normal;
+}
+
+.header-decorated {
+  @include media-breakpoint-up(md) {
+    > * {
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+
+      &:before,
+      &:after {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        width: 44px;
+        opacity: .36;
+        border-bottom: 1px solid;
+      }
+
+      &:before {
+        margin-right: 12px;
+      }
+
+      &:after {
+        margin-left: 12px;
+      }
+    }
+  }
+}
+
+// Misc
+// -------------------------
+
+// Addresses
+address {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+// Backgrounds
+// -------------------------
+
+// Contextual backgrounds
+//
+%context-dark {
+  color: $dusty-gray;
+
+  #{headings()} {
+    color: $white;
+  }
+
+  a {
+    @include link($white, $primary);
+  }
+
+  .big,
+  .text-bigger,
+  .text-extra-large-bordered {
+    color: $white;
+  }
+}
+
+.context-dark {
+  @extend %context-dark;
+}
+
+// Colors
+.bg-black {
+  @extend %context-dark;
+  @include bg-variant-custom(#{$black});
+}
+
+.bg-gray-darker {
+  @extend %context-dark;
+  @include bg-variant-custom(#{$gray-darker});
+}
+
+.bg-gray-dark {
+  @extend %context-dark;
+  @include bg-variant-custom(#{$gray-dark});
+}
+
+.bg-mine-shaft {
+  @extend %context-dark;
+  @include bg-variant-custom(#{$mine-shaft});
+}
+
+.bg-teak {
+  @extend %context-dark;
+  @include bg-variant-custom(#{$teak});
+}
+
+.bg-cod-gray {
+  @extend %context-dark;
+  @include bg-variant-custom(#{$cod-gray});
+}
+
+.bg-ebony-clay {
+  @extend %context-dark;
+  @include bg-variant-custom(#{$ebony-clay});
+  color: $storm-gray;
+
+  &.rd-parallax {
+    color: rgba($white, .5);
+  }
+}
+
+.bg-gray {
+  @include bg-variant-custom(#{$gray});
+}
+
+.bg-accent {
+  &, #{headings()} {
+    color: $white;
+  }
+
+  @include bg-variant-custom(#{$primary});
+}
+
+.bg-gray-light {
+  @include bg-variant-custom(#{$gray-light});
+}
+
+.bg-gray-lighter {
+  @include bg-variant-custom(#{$gray-lighter});
+}
+
+.bg-whisper {
+  @include bg-variant-custom(#{$whisper});
+}
+
+.bg-athens-gray {
+  @include bg-variant-custom(#{$athens-gray});
+}
+
+.bg-iron {
+  @include bg-variant-custom(#{$iron});
+}
+
+// Bg image
+.bg-image {
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.bg-image-centered {
+  -webkit-background-size: auto;
+  background-size: auto;
+}
+
+.bg-fixed {
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.bg-image-1 {
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+
+  @include media-breakpoint-down(sm) {
+    background-image: none !important;
+  }
+}
+
+// Colors
+// -------------------------
+
+// Contextual colors
+//
+
+.page {
+	.text-primary {
+		color: $primary!important;
+		a:hover { color: darken($primary, 10%); }
+	}
+
+	.text-gray {
+		color: $gray;
+		a:hover { color: darken($gray, 10%); }
+	}
+
+	.text-secondary {
+		color: $secondary;
+		a:hover { color: darken($secondary, 10%); }
+	}
+
+	.text-black {
+		color: $black;
+		a:hover { color: darken($black, 10%); }
+	}
+
+	.text-silver {
+		color: $silver;
+		a:hover { color: darken($silver, 10%); }
+	}
+
+	.text-dark {
+		color: $gray-800;
+		a:hover { color: lighten($gray-800, 10%); }
+	}
+
+	.text-white {
+		color: $white;
+		a:hover { color: darken($white, 20%); }
+	}
+
+	.text-white-05 {
+		color: rgba($white, .5);
+		a:hover { color: darken(rgba($white, .5), 10%); }
+	}
+
+	.text-white-03 {
+		color: rgba($white, .3);
+		a:hover { color: darken(rgba($white, .3), 10%); }
+	}
+
+	.context-dark {
+		@extend %context-dark;
+	}
+}
+
+.bg-default {
+  @include bg-behaviour($white);
+}
+
+// Large ≥992px
+@include media-breakpoint-up(lg) {
+  .shift-top-1 {
+    margin-top: -33px;
+  } 
+}
+
+// Extra large ≥1200px
+@include media-breakpoint-up(xl) {
+  .shift-top-1 {
+    margin-top: -43px;
+  } 
+} 

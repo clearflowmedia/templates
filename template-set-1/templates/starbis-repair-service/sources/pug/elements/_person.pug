@@ -1,0 +1,8 @@
+//- Team member
+mixin person(obj)
+	.box-team.block-sm&attributes(attributes)
+		a.figure( href='team-member-profile.html' )
+			+img(obj.img)
+		.box-team-body
+			h4.box-team-title: a(href='team-member-profile.html')= obj.name
+			p.box-team-text= obj.position

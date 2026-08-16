@@ -1,0 +1,163 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-icon-box
+include ../elements/_ui-icon-box-vertical
+include ../elements/_ui-icon-box-horizontal
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Icon lists'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title(pageName, 'bg-image-2')
+
+  //- Lists
+  section.section-40.section-md-top-75.section-md-bottom-50.section-xl-top-90
+    .container
+      .row
+        .col-sm-12
+          h3 Lists
+      .row.row-40
+        .col-sm-6.col-md-4.col-xl-3
+          h5 Unordered List
+          ul.list-marked
+            li Responsive & Retina
+            li Extensive docs
+            li Powerful Navigation
+            li Video Backgrounds
+            li Social Plugins 
+
+        .col-sm-6.col-md-4.col-xl-3
+          h5 Ordered List
+          ul.list-ordered
+            li Responsive & Retina
+            li Extensive docs
+            li Powerful Navigation
+            li Video Backgrounds
+            li Social Plugins
+  ='\n'
+
+  //- Icon Left List
+  section.section-40
+    .container
+      .row
+        .col-sm-12
+          h3 Icon Left List
+      .row
+        .col-lg-9.col-xl-12
+          .row.row-40
+            .col-md-6.col-xl-3
+              +icon-box-left({
+                icon: ['icon-lg', 'fl-puppets-users30'],
+                header: 'Tax Consultancy',
+                text: 'We provide a comprehensive range of specialist tax and advisory support across all of the major taxes. '
+              })
+
+            .col-md-6.col-xl-3
+              +icon-box-left({
+                icon: ['icon-lg', 'fl-puppets-calendar184'],
+                header: 'Tax Training',
+                text: 'Our team deliveres training for a significant number of firms, providing tax updates and courses on key tax issues. '
+              })
+
+            .col-md-6.col-xl-3
+              +icon-box-left({
+                icon: ['icon-lg', 'fl-puppets-profiles-avatar'],
+                header: 'Private Consultation',
+                text: 'Get more than a collection of records and reports. Get the benefit of our skills, experience, and expertise. '
+              })
+
+            .col-md-6.col-xl-3
+              +icon-box-left({
+                icon: ['icon-lg', 'fl-puppets-chart5'],
+                header: 'Tax Preparation',
+                text: 'Are you anxious about filing your on tax returns? There’s no substitute for the quality of service and advice you’ll get.'
+              })
+  ='\n'
+
+  //- Icon Top List
+  section.section-60
+    .container
+      .row
+        .col-sm-12
+          h3 Icon Top List
+      .row
+        .col-lg-9.col-xl-12
+          .row.row-50
+            .col-sm-6.col-xl-3
+              +icon-box-vertical({
+                icon: ['icon-lg', 'icon-secondary', 'fl-puppets-users30'],
+                header: 'Tax Consultancy',
+                text: 'We provide a comprehensive range of specialist tax and advisory support across all of the major taxes. '
+              })
+
+            .col-sm-6.col-xl-3
+              +icon-box-vertical({
+                icon: ['icon-lg', 'icon-secondary', 'fl-puppets-calendar184'],
+                header: 'Tax Training',
+                text: 'Our team deliveres training for a significant number of firms across the area, providing tax updates and courses on key tax issues.'
+              })
+
+            .col-sm-6.col-xl-3
+              +icon-box-vertical({
+                icon: ['icon-lg', 'icon-secondary', 'fl-puppets-profiles-avatar'],
+                header: 'Private Consultation',
+                text: 'Get more than a collection of records and reports. Get the benefit of our skills, experience, and expertise. '
+              })
+
+            .col-sm-6.col-xl-3
+              +icon-box-vertical({
+                icon: ['icon-lg', 'icon-secondary', 'fl-puppets-chart5'],
+                header: 'Tax Preparation',
+                text: 'Are you anxious about filing your on tax returns? There’s no substitute for the quality of service and advice you’ll get.'
+              })
+  ='\n'
+
+  //- Icon Box
+  section.section-top-35.section-bottom-60.section-md-bottom-100
+    .container
+      .row
+        .col-sm-12
+          h3 Icon Box
+
+      .row.row-40
+        .col-sm-6.col-md-3
+          +icon-box({
+            icon: ['icon-lg', 'fl-puppets-maths26'],
+            header: 'Bookkeeping',
+            text: 'We’ll create a chart of accounts to capture all your financial transactions.'
+          })
+
+        .col-sm-6.col-md-3
+          +icon-box({
+            icon: ['icon-lg', 'fl-puppets-chart6'],
+            header: 'Tax Planning',
+            text: 'Planning is the key to successfully and legally reducing your tax liability.'
+          })
+
+        .col-sm-6.col-md-3
+          +icon-box({
+            icon: ['icon-lg', 'fl-puppets-bank17'],
+            header: 'Bank Reconciliation',
+            text: 'Every deposit and withdrawal aligns with entries into your accounting records. '
+          })
+
+        .col-sm-6.col-md-3
+          +icon-box({
+            icon: ['icon-lg', 'fl-puppets-savings3'],
+            header: 'Property Taxes',
+            text: 'If you need help paying property tax, our tax specialists are here for you. '
+          })
+  ='\n'
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

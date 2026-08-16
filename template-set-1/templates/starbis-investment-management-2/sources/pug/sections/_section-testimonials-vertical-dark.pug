@@ -1,0 +1,65 @@
+//- Includes
+include ../elements/_ui-quote-vertical
+
+//-What Clients Say?
++parallax({
+  img: 'bg-image-5',
+  addClass: 'bg-black bg-overlay-dark-2'
+})
+  .container.section-60.section-md-90.section-lg-bottom-120.text-center
+    h3 What Clients Say?
+    .row.row-60.justify-content-sm-center.justify-content-md-start
+      .col-md-4
+        +quote-vertical({
+          mod: 'quote-vertical-inverse',
+          img: 'clients-testimonials-7-113x113',
+          text: "We recommend InvestPlus for their vision, reliability and leadership in the field of investment management.",
+          cite: "Alex Murphy",
+          caption: 'Freelance developer'
+        })
+
+      .col-md-4
+        +quote-vertical({
+          mod: 'quote-vertical-inverse',
+          img: 'clients-testimonials-8-113x113',
+          text: "They have created tremendous value for me and my clients. Definitely recommendable!",
+          cite: "Amelia Lee",
+          caption: 'Sales, demolink.org'
+        })
+
+      .col-md-4
+        +quote-vertical({
+          mod: 'quote-vertical-inverse',
+          img: 'clients-testimonials-9-113x113',
+          text: "They provide ultimate solutions on all aspects of fund management and administration.",
+          cite: "Jack McGee",
+          caption: 'Founder, The Therapy'
+        })
+
+      .col-md-4
+        +quote-vertical({
+          mod: 'quote-vertical-inverse',
+          img: 'clients-testimonials-10-113x113',
+          text: "I would highly recommend InvestPlus to all of our existing and prospective FX fund managers.",
+          cite: "John Davis",
+          caption: 'Writer'
+        })
+
+      .col-md-4
+        +quote-vertical({
+          mod: 'quote-vertical-inverse',
+          img: 'clients-testimonials-11-113x113',
+          text: "You always have my best interest at the forefront of your decision making. Thanks for your attention.",
+          cite: "Jill Miller",
+          caption: 'Artist'
+        })
+
+      .col-md-4
+        +quote-vertical({
+          mod: 'quote-vertical-inverse',
+          img: 'clients-testimonials-12-113x113',
+          text: "If you are lucky to work with InvestPlus, consider yourself in good hands with one of the best.",
+          cite: "Christopher Taylor",
+          caption: 'Financial Consultant'
+        })
+='\n'

@@ -1,0 +1,114 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-accordion
+
+block variables
+	- var activeIndex = 5
+	- var pageName = 'FAQ'
+
+block title
+	title=pageName
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title(pageName, 'bg-image-1')
+
+	//- FAQ
+	section.section-60.section-md-90.section-xl-bottom-120.bg-whisper
+		.container
+			.row.justify-content-md-center
+				.col-md-10.col-lg-12
+					.row.row-50
+						.col-lg-6
+							h3 General Questions
+							p.text-secondary All you need to know about LawExpert Firm and how to get Support.
+							//- Bootstrap collapse
+							#accordionOne.accordion.accordion-group.accordion-group-corporate
+								+accordion-item({
+									show: true,
+									cardClass: 'card-corporate',
+									parentId: 'accordionOne',
+									number: '1',
+									header: 'Why choose a law firm?'
+								}).accordion-corporate
+									p We are in an age of specialization. As times have changed, no attorney can possibly keep up with all areas and complexities of the law, and that is why our team is comprised of the top legal minds, each with their own area of practice. Our firm is also unique in that while we all specialize in various aspects.
+
+								+accordion-item({
+									cardClass: 'card-corporate',
+									parentId: 'accordionOne',
+									number: '2',
+									header: 'How will I know which attorney is best for me?'
+								}).accordion-corporate
+									p Our leadership team at the LawExpert will determine which attorney can best represent you in handling your case. It may not be possible, or advantageous, to have one attorney handle all of your legal matters. One lawyer will be responsible for the overall progress of the case, but from time to time, another attorney may perform certain duties within the case itself. Please do not be concerned if your case is handled by a different attorney within our firm, as ‘your attorney’ will still be your attorney. This is merely another sign to you that we are doing our best to handle your case as professionally and efficiently as possible.
+
+								+accordion-item({
+									cardClass: 'card-corporate',
+									parentId: 'accordionOne',
+									number: '3',
+									header: 'What do you get for your attorney’s fee?'
+								}).accordion-corporate
+									p Simply stated, you will receive superior service through careful consideration, confident counsel and unprecedented knowledge by the regions top legal team that is both efficient and effective.
+
+								+accordion-item({
+									cardClass: 'card-corporate',
+									parentId: 'accordionOne',
+									number: '4',
+									header: 'Do I need an attorney?'
+								}).accordion-corporate
+									p When searching for a lawyer, you may wonder if you even need an attorney. It is important to ask yourself... for something this important, is it smart to try to go it alone? LawExpert knows the pros and cons of hiring an attorney.
+
+						.col-lg-6
+							h3 Other Questions
+							p.text-secondary The answers on most common questions are described bellow.
+							//- Bootstrap collapse
+							#accordionTwo.accordion.accordion-group.accordion-group-corporate
+								+accordion-item({
+									show: true,
+									parentId: 'accordionTwo',
+									header: 'What types of cases does your law firm handle?'
+								}).accordion-corporate
+									p We represent employees in disputes against their current or former employers for most claims of wrongful conduct that occur in the workplace. Most of our practice is devoted to pursuing claims of discrimination, harassment, wrongful termination, retaliation, and wage & hour violations on behalf of employees against their current or former employers.
+
+								+accordion-item({
+									parentId: 'accordionTwo',
+									header: 'What types of cases does your law firm not handle?'
+								}).accordion-corporate
+									p We do not handle worker's compensation cases, legal malpractice or personal injury cases, traffic or parking matters or fines, and landlord-tenant disputes. If you have questions whether we can handle your case or dispute, please contact us.
+
+								+accordion-item({
+									parentId: 'accordionTwo',
+									header: 'How can I become a client of your firm?'
+								}).accordion-corporate
+									p Please call the firm and identify yourself as a potential client. A member of our staff will speak to you and obtain information regarding your employment with your current or former employer or your civil litigation, white collar criminal defense or tax needs. We will try to determine why you believe you have been wronged by an employer or determine what your civil litigation, criminal defense and/or tax needs are.
+
+								+accordion-item({
+									parentId: 'accordionTwo',
+									header: 'What is expected of me as a client of your firm?'
+								}).accordion-corporate
+									p We expect you to be honest, responsive, and diligent throughout the litigation process. We want you to ask us any questions and inform us of any concerns you have. You will ordinarily be deposed at some point in the litigation and we expect you to prepare for that deposition diligently by meeting with us and reviewing key facts in the case.
+
+								+accordion-item({
+									parentId: 'accordionTwo',
+									header: 'What can I expect to receive if my case settles?'
+								}).accordion-corporate
+									p Although most cases settle, the settlement amount varies based on a number of factors. The overwhelming majority of our plaintiff clients are satisfied with the settlement amount we have obtained on their behalf.
+
+								+accordion-item({
+									parentId: 'accordionTwo',
+									header: 'Why should I trust your firm with my case?'
+								}).accordion-corporate
+									p We understand that your case is very important to you and the decision of whom you will hire as your attorney is a difficult one. There are several reasons why we believe you can trust our firm with your case. More than 90% of our practice is employment cases. We have been in business continuously since 1994. We have secured many favorable results for many of our clients. We are a small firm with the time and ability to dedicate appropriate resource’s and time to your case.
+
+								+accordion-item({
+									parentId: 'accordionTwo',
+									header: 'How long have you been in business?'
+								}).accordion-corporate
+									p The LawExpert Law Firm was founded in 1994 and has been operating continuously since that time. We have been in practice since 1978.
+	='\n'
+
+	//- Page Footer
+	include ../sections/_section-footer-default

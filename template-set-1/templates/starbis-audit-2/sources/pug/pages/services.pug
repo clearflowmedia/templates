@@ -1,0 +1,171 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-icon-box-vertical
+include ../elements/_ui-link-image
+
+block variables
+  - var activeIndex = 2
+  - var pageName = 'Services'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title(pageName, 'bg-image-1')
+
+  //- Services Overview
+  section.section-60.section-md-90
+    .container
+      .row.row-40
+        .col-12
+          h3.text-center Services #[span.fw-thin Overview]
+          p.text-center Finance Group offers a variety of services covering almost every need of modern #[br.d-none.d-xl-inline-block] businesses. Learn more about our services below.
+        .col-12
+          .row.justify-content-sm-center.text-center.text-lg-start.row-60
+            .col-md-10.col-lg-4
+              .thumbnail-with-img
+                +jpg('services-6-370x220')
+ 
+                h6.thumbnail-title Audit & Accounting
+          
+                p.text-black-05 Audit & accounting services assure your company’s compliance with requirements of applicable laws, financial reporting standards, regulations, rules, contracts, or grants, and can pave a road to your company’s success.
+    
+            .col-md-10.col-lg-4
+              .thumbnail-with-img
+                +jpg('services-7-370x220')
+  
+                h6.thumbnail-title Tax Planning
+
+                p.text-black-05 Proactive planning is the key to minimizing your tax liability. We work with businesses and individuals to pay the least amount of tax required by law. Your unique circumstances will determine the strategies...
+    
+            .col-md-10.col-lg-4
+              .thumbnail-with-img
+                +jpg('services-8-370x220')
+                
+                h6.thumbnail-title Consulting & Advisory
+                
+                p.text-black-05 Consulting & advisory services provide strategic thinking and advice on the most valuable ways to enhance your business effectiveness that Finance Group can offer to its clients (including business advisory and consulting).
+
+  ='\n'
+
+  //- Our Clients
+  section.section-60.section-md-90.bg-whisper-lighten
+    .container
+      .row
+        .col-sm-12
+          h3 Our Clients
+      .row.row-40
+        .col-md-7.col-lg-5.col-xl-4
+          //- Owl Carousel
+          .owl-carousel-dark
+            .owl-carousel.owl-nav-bottom-left(data-items='1', data-stage-padding='0', data-loop='true', data-margin='30', data-mouse-drag="false", data-nav="true")
+              .item
+                p Among our clients, there are many world-renowned industry leaders. Their companies are now ranked as the most successful companies – thanks to us.
+              .item
+                p Got really enjoyable experience with your product. Easy set up is a huge plus. I even didn’t turn to support service.
+              .item
+                p I’m extremely satisfied with their work. My new website looks great and runs smoothly. The support is excellent too.
+
+        .col-lg-7.col-xl-8
+          .row.shift-md-top-1.row-30
+            .col-sm-6.col-md-3
+              +link-image({img: 'services-2-132x83'})
+
+            .col-sm-6.col-md-3
+              +link-image({img: 'services-3-169x68'})
+
+            .col-sm-6.col-md-3
+              +link-image({img: 'services-4-141x88'})
+
+            .col-sm-6.col-md-3
+              +link-image({img: 'services-5-138x55'})
+  ='\n'
+
+  //- What We Do
+
+  section.section.parallax-container.bg-black.bg-image.context-dark(data-parallax-img='images/bg-image-7.jpg')
+    .parallax-content
+      .section-60.section-md-90.bg-overlay-cello
+        .container
+          .row
+            .col-sm-12.text-center
+              h3 What #[span.fw-thin We Do]
+              p.text-white Finance Group provides unparalleled guidance on audit, review, and other financial assurance #[br.d-none.d-xl-inline-block] and attestations matter in a cost effective way without draining your internal resources.
+
+          .row.row-50
+            .col-sm-6.col-lg-4
+              +icon-box-vertical({
+                mod: 'icon-box-vertical-sm',
+                icon: ['icon-lg', 'thin-icon-document-edit'],
+                header: 'Advisory',
+                text: 'From strategy through execution, Finance Group’s Advisory practice helps clients build their next competitive advantage.',
+                descStyle: "text-white-05"
+              })
+
+            .col-sm-6.col-lg-4
+              +icon-box-vertical({
+                mod: 'icon-box-vertical-sm',
+                icon: ['icon-lg', 'thin-icon-user'],
+                header: 'Assurance',
+                text: 'Working closely with public and private companies, we help solve complex business issues that our clients face.',
+                descStyle: "text-white-05"
+              })
+
+            .col-sm-6.col-lg-4
+              +icon-box-vertical({
+                mod: 'icon-box-vertical-sm',
+                icon: ['icon-lg', 'thin-icon-planet'],
+                header: 'Tax Services',
+                text: 'Our Tax professionals are problem solvers, providing value to their clients through analyzing and interpreting tax policy, advising on intricate tax matters.',
+                descStyle: "text-white-05"
+              })
+
+            .col-sm-6.col-lg-4
+              +icon-box-vertical({
+                mod: 'icon-box-vertical-sm',
+                icon: ['icon-lg', 'thin-icon-money'],
+                header: 'Public Sector Practice',
+                text: 'We often help federal, state & local and multilateral development agencies address complex business issues; manage risk; and improve financial measures.',
+                descStyle: "text-white-05"
+              })
+
+            .col-sm-6.col-lg-4
+              +icon-box-vertical({
+                mod: 'icon-box-vertical-sm',
+                icon: ['icon-lg', 'thin-icon-thumb-up'],
+                header: 'Business Management',
+                text: 'Our business management services provide companies and the individuals who run them with tools and strategies to improve operations and plan for the future.',
+                descStyle: "text-white-05"
+              })
+
+            .col-sm-6.col-lg-4
+              +icon-box-vertical({
+                mod: 'icon-box-vertical-sm',
+                icon: ['icon-lg', 'thin-icon-clock'],
+                header: 'Financial Planning',
+                text: 'We help you build and maintain a desirable position on the market through a combination of financial planning services.',
+                descStyle: "text-white-05"
+              })
+
+  include ../sections/_section-why-choose-us
+  ='\n'
+
+  //- Starbis Is Exactly What You Need
+  section.parallax-container.bg-accent(data-parallax-img='images/parallax-bg.jpg')
+    .parallax-content
+      .section-60.section-md-100.context-dark
+        .container.text-center.text-lg-start
+          .row.justify-content-sm-center.align-items-lg-center.justify-content-lg-start.row-30
+            .col-lg-8.text-center
+              h3 affordable business advice
+            .col-lg-4.col-xl-3
+              a.btn.btn-xl.btn-white-outline(href=globals.getTemplateLink) Learn more
+  ='\n'
+
+  //- Page Footer
+  include ../sections/_section-footer-default

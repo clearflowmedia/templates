@@ -1,0 +1,162 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_comment
+include ../elements/_post-preview
+
+block variables
+	- pageName = 'Blog post'
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title('Blog', 'bg-blog')
+
+	//- Blog post
+	section.section.section-md.bg-default
+		.container
+			.row.row-50
+				.col-lg-8.col-xl-9
+					article.post.post-single
+						.post-image
+							figure: +img('post-1-870x412')
+						.post-header
+							h4 Controlling the Final Cost of Your Renovation
+
+						.post-meta
+							ul.list-bordered-horizontal
+								li
+									dl.list-terms-inline
+										dt Date
+										dd: time(datetime='2021-01-22') January 22, 2021
+								li
+									dl.list-terms-inline
+										dt Posted by
+										dd Amelia Lee
+								li
+									dl.list-terms-inline
+										dt Comments
+										dd 3
+								li
+									dl.list-terms-inline
+										dt Category
+										dd Marketing
+
+						.divider-fullwidth.bg-gray-light
+
+						.post-body
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi beatae consequuntur corporis dignissimos ex maiores nisi, nostrum pariatur quaerat quidem quis quisquam tempore totam ullam ut velit voluptates voluptatum? Assumenda atque consequuntur ducimus enim exercitationem facilis minus modi natus nesciunt nihil, nulla perferendis praesentium provident quam quisquam ratione vel velit!
+							p  Accusamus ad aut consequuntur distinctio et harum hic laborum minima neque nesciunt officiis omnis perferendis, perspiciatis quam quisquam unde voluptas. Ad alias consequatur, deleniti distinctio dolor, dolorum eaque earum eos facilis fugiat illum in ipsa labore, libero molestias necessitatibus nulla officiis possimus praesentium quaerat qui quia tempore! Alias aliquam amet autem ex excepturi itaque, mollitia nihil nostrum quisquam vel.
+							.quote-wrap-1
+								blockquote.quote-minimal-bordered
+									p: q Not only should you post interesting content, you should try to blog at least three times a week as a business.
+							p Consectetur adipisicing elit. Animi commodi culpa eius eligendi eveniet iste magnam, quo sequi similique sint. A amet animi asperiores assumenda autem cumque distinctio dolore eligendi eos esse est eveniet ex excepturi, expedita facere illum in iure minima molestias mollitia neque nulla odio praesentium quia repudiandae, sint soluta unde vitae voluptatibus?
+
+						.post-footer
+							h5 Share this post:
+							ul.list-inline.list-inline-xs
+								li: a.icon.icon-xxs-small.link-tundora.fa-facebook(href='#')
+								li: a.icon.icon-xxs-small.link-tundora.fa-twitter(href='#')
+								li: a.icon.icon-xxs-small.link-tundora.fa-google-plus(href='#')
+								li: a.icon.icon-xxs-small.link-tundora.fa-pinterest-p(href='#')
+
+					.divider-fullwidth.bg-gray-lighter
+
+					//- Comments
+					.comment-list-wrap
+						h4 3 Comments
+						.comment-list.inset-md-right-60.inset-lg-right-30.inset-xl-right-100
+							.comment-group
+								+comment({
+									img: 'post-2-70x71',
+									user: 'July Mao',
+									text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias explicabo incidunt libero non vitae.'
+								})
+
+								.comment-group-reply
+									+comment({
+										img: 'post-3-70x71',
+										user: 'John doe',
+										text: 'Ab architecto asperiores aspernatur cumque doloremque enim eum fuga illum maiores natus, non nostrum.'
+									})
+
+							.comment-group
+								+comment({
+									img: 'post-4-70x71',
+									user: 'Mila MOa',
+									text: 'Atque molestias necessitatibus numquam reprehenderit sit, suscipit! Ab consequatur excepturi facere minima nemo, quidem saepe sed ut? Obcaecati, totam!'
+								})
+
+					//- Leave a comment
+					.offset-top-1
+						h4 Leave a comment
+						.form-classic-wrap
+							//- RD Mailform
+							form.rd-mailform.form-classic.form-classic-bordered.label-outside
+								.form-wrap
+									label.form-label-outside(for="comment-message") Message:
+									textarea#comment-message.form-input(name="message" data-constraints="@Required")
+
+								button(type="submit" style='min-width: 200px;').btn.btn-lg.btn-circle.btn-primary Submit
+
+				//- Aside
+				.col-lg-4.col-xl-3
+					.blog-aside
+						.blog-aside-item
+							form.rd-search.rd-search-classic(action="search-results.html", method="GET")
+								.form-wrap
+									label.form-label(for="rd-search-form-input-1") Search...
+									input.form-input(id="rd-search-form-input-1" type="text" name="s" autocomplete="off")
+								button.rd-search-submit(type='submit')
+
+						.blog-aside-item
+							h6 Categories
+							ul.list-marked-bordered
+								li: a(href='#')
+									span Marketing
+									span.list-counter (4)
+								li: a(href='#')
+									span Events
+									span.list-counter (4)
+								li: a(href='#')
+									span Design
+									span.list-counter (4)
+
+						.blog-aside-item
+							h6 Popular posts
+							.post-preview-wrap
+								+post-preview({
+									small: true,
+									img: 'post-preview-1-70x70',
+									header: 'Electrical Safety Tips For Home Renovation',
+									time: ['2021-02-04', 'Feb 4, 2021']
+								})
+
+								+post-preview({
+									small: true,
+									img: 'post-preview-2-70x70',
+									header: 'Standard Dimensions for Interior Design',
+									time: ['2021-02-04', 'Feb 4, 2021']
+								})
+
+								+post-preview({
+									small: true,
+									img: 'post-preview-3-70x70',
+									header: 'Proper Color Solutions For The Office',
+									time: ['2021-02-04', 'Feb 4, 2021']
+								})
+
+						.blog-aside-item
+							h6 Tags
+							ul.list-tag-blocks
+								li: a(href='#') Marketing
+								li: a(href='#') Design
+								li: a(href='#') Events
+								li: a(href='#') office
+
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

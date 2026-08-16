@@ -1,0 +1,51 @@
+//- Include
+include ../elements/_ui-quote-minimal
+
+// Material Parallax
++parallax({
+  img: 'clients-testimonials-parallax-1',
+  addClass: 'bg-black'
+})
+  .section-60.section-md-90.section-xl-120
+    .container.text-center
+      h2 What People Say
+      .row.justify-content-lg-center
+        .col-lg-11.col-xl-9
+          //- Owl Carousel
+          .owl-carousel-inverse
+            .owl-carousel.owl-nav-position-numbering(data-items='1', data-stage-padding='0', data-loop='false', data-margin='30', data-numbering='#owl-numbering-1', data-animation-in='fadeIn', data-animation-out='fadeOut',
+              data-owl= {
+                nav: true,
+                autoplayTimeout: 3500
+              })
+              .item
+                +quote-minimal({
+                  mod: "quote-minimal-inverse",
+                  title: 'I’m recommending you to all my colleagues ',
+                  text: "I recently closed a mortgage loan through FastCredit and I was extremely pleased with the procedure. This company has the most experienced loan experts.",
+                  cite: "Susan Bennett",
+                  caption: "Manager"
+                })
+
+              .item
+                +quote-minimal({
+                  mod: "quote-minimal-inverse",
+                  title: 'I got a loan quickly and I felt like they really cared about me',
+                  text: "All went well at the closing of my mortgage last week. FastCredit made the process as painless as possible and did everything in a professional and timely manner.",
+                  cite: "Jeffrey Neddery",
+                  caption: "Student"
+                })
+
+              .item
+                +quote-minimal({
+                  mod: "quote-minimal-inverse",
+                  title: 'FastCredit cared and did everything to make the process fast and simple!',
+                  text: " I just wanted to thank you and your                     colleagues                    for the                    role you                    played                    in my                    apartment closing,                    which occurred                    yesterday without                    a hitch. You are real professionals!",
+                  cite: "Amanda smith ",
+                  caption: "Sales Manager"
+                })
+            #owl-numbering-1.owl-numbering.owl-numbering-default
+              .numbering-current
+              .numbering-separator
+              .numbering-count
+='\n'

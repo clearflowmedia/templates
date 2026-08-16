@@ -1,0 +1,96 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_product-item-fullwidth
+
+block variables
+	-
+		pageName = 'Shop list',
+		activeShopLayout = 1;
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title('Shop', 'bg-shop')
+
+	include ../sections/_section-shop-panel
+
+	//- List shop
+	section.section.section-50.section-md-bottom-75.section-xl-bottom-100.bg-whisper.novi-background
+		.container
+			+product-item-fullwidth({
+				brand: 'Tommy Hilfiger',
+				header: 'Engineered Rib Cashmere',
+				rating: {
+					count: 4,
+					half: true
+				},
+				reviewCount: 4,
+				text: 'Rely on this gorgeous Engineered Rib Cashmere from Tommy Hilfiger to keep you cosy for years to come. An essential wardrobe investment, this timeless design adds a new texture to your winter layers. ',
+				price: {
+					current: '35',
+					irrelevant: '49.99'
+				},
+				badge: {
+					elClass: 'badge-danger',
+					text: 'Sale'
+				},
+				slider: [
+					"product-01-270x360.png",
+					"product-01-270x360-2.png",
+					"product-01-270x360-3.png"
+				]
+			})
+
+			+product-item-fullwidth({
+				brand: 'Diesel',
+				header: 'Collar Leather Jacket',
+				rating: {
+					count: 4,
+					half: true
+				},
+				reviewCount: 17,
+				text: "At last, a slim-fitting leather jacket that doesn't make you look like you're ready to rumble. We kept some traditional motorcycle jacket details—like quilted patches along the sleeves and asymmetrical zip pockets.",
+				price: {
+					current: '95',
+					irrelevant: '149.99'
+				},
+				slider: [
+					"product-05-270x360.png",
+					"product-05-270x360-2.png",
+					"product-05-270x360-3.png"
+				]
+			})
+
+			+product-item-fullwidth({
+				brand: 'Zara',
+				header: 'Marbled Sweater',
+				rating: {
+					count: 3,
+					half: true
+				},
+				reviewCount: 4,
+				text: "Take your fall layering skills out of hibernation with a cozy, marbled sweater fit for the chilly season ahead. You can wear it for almost any occassion. Available in black, burgundy, white, mint, and in a variety of other colors.",
+				price: {
+					current: '27',
+					irrelevant: '89.00'
+				},
+				badge: {
+					elClass: 'badge-info',
+					text: 'new'
+				},
+				slider: [
+					"product-02-270x360.png",
+					"product-02-270x360-2.png",
+					"product-02-270x360-3.png"
+				]
+			})
+
+		.pagination-custom-wrap.text-center.offset-top-4
+			+pagination
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

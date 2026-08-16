@@ -1,0 +1,143 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_icon-box
+include ../elements/_icon-box-vertical
+include ../elements/_icon-box-horizontal
+
+block variables
+	- pageName = 'Icon lists'
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title(pageName, 'bg-image-1')
+
+	//- Lists
+	section.section.section-md.bg-default
+		.container
+			h3 Lists
+			.row.row-40
+				.col-sm-6.col-md-4.col-xl-3
+					h5 Unordered List
+					ul.list-marked
+						li Responsive & Retina-ready
+						li Extensive docs
+						li Powerful Navigation
+						li Video Backgrounds
+						li Social Plugins
+
+				.col-sm-6.col-md-4.col-xl-3
+					h5 Ordered List
+					ul.list-ordered
+						li Responsive & Retina-ready
+						li Extensive docs
+						li Powerful Navigation
+						li Video Backgrounds
+						li Social Plugins
+
+	//- Icon Left List
+	section.section.section-md.bg-default
+		.container
+			h3 Icon Left List
+			.row
+				.col-lg-9.col-xl-12
+					.row.row-40
+						.col-md-6.col-xl-3
+							+icon-box-left({
+								icon: ['icon-lg-variant-1', 'material-icons-device_hub'],
+								header: 'Professionalism',
+								text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu quam ex. Donec nisl risus, viverra ut felis vitae, ultricies venenatis nisi. Donec libero nibh.'
+							})
+
+						.col-md-6.col-xl-3
+							+icon-box-left({
+								icon: ['icon-lg', 'material-icons-filter'],
+								header: 'High Quality',
+								text: 'Suspendisse libero sem, finibus eu tincidunt vehicula, malesuada et elit. Nullam vitae sapien interdum, bibendum libero varius, suscipit arcu. Sed sit amet leo.'
+							})
+
+						.col-md-6.col-xl-3
+							+icon-box-left({
+								icon: ['icon-lg-variant-1', 'material-icons-build'],
+								header: 'Resilience',
+								text: 'Proin odio velit, posuere a felis commodo, ullamcorper feugiat elit. Mauris hendrerit libero metus, facilisis pulvinar ante iaculis eget. Ut non porttitor est.'
+							})
+
+						.col-md-6.col-xl-3
+							+icon-box-left({
+								icon: ['icon-lg', 'material-icons-av_timer'],
+								header: 'Experience',
+								text: 'Donec quis arcu in libero maximus vestibulum. Aenean blandit malesuada mauris, nec bibendum mauris egestas in. Vivamus ipsum erat, mollis sit amet ullamcorper at.'
+							})
+
+
+	//- Icon Top List
+	section.section.section-md.bg-default
+		.container
+			h3 Icon Top List
+			.row
+				.col-lg-9.col-xl-12
+					.row.row-30
+						.col-sm-6.col-xl-3
+							+icon-box-vertical({
+								icon: ['icon-md', 'material-icons-device_hub'],
+								header: 'Professionalism',
+								text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu quam ex. Donec nisl risus, viverra ut felis vitae, ultricies venenatis nisi. Donec libero nibh.'
+							})
+
+						.col-sm-6.col-xl-3
+							+icon-box-vertical({
+								icon: ['icon-md', 'material-icons-filter'],
+								header: 'High Quality',
+								text: 'Suspendisse libero sem, finibus eu tincidunt vehicula, malesuada et elit. Nullam vitae sapien interdum, bibendum libero varius, suscipit arcu. Sed sit amet leo.'
+							})
+
+						.col-sm-6.col-xl-3
+							+icon-box-vertical({
+								icon: ['icon-md', 'material-icons-build'],
+								header: 'Resilience',
+								text: 'Proin odio velit, posuere a felis commodo, ullamcorper feugiat elit. Mauris hendrerit libero metus, facilisis pulvinar ante iaculis eget. Ut non porttitor est.'
+							})
+
+						.col-sm-6.col-xl-3
+							+icon-box-vertical({
+								icon: ['icon-md', 'material-icons-av_timer'],
+								header: 'Experience',
+								text: 'Donec quis arcu in libero maximus vestibulum. Aenean blandit malesuada mauris, nec bibendum mauris egestas in. Vivamus ipsum erat, mollis sit amet ullamcorper at.'
+							})
+
+
+	//- Icon Box
+	section.section.section-md.bg-default
+		.container
+			h3 Icon Box
+
+			.row.row-40
+				.col-md-6.col-lg-4.height-fill
+					+icon-box({
+						icon: ['icon-lg-variant-2', 'material-icons-device_hub'],
+						header: 'Professionalism',
+						text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu quam ex. Donec nisl risus, viverra ut felis vitae, ultricies venenatis nisi. Donec libero nibh.'
+					})
+
+				.col-md-6.col-lg-4.height-fill
+					+icon-box({
+						icon: ['icon-md', 'material-icons-filter'],
+						header: 'High Quality',
+						text: 'Suspendisse libero sem, finibus eu tincidunt vehicula, malesuada et elit. Nullam vitae sapien interdum, bibendum libero varius, suscipit arcu. Sed sit amet leo.'
+					})
+
+				.col-md-6.col-lg-4.height-fill
+					+icon-box({
+						icon: ['icon-md', 'material-icons-build'],
+						header: 'Resilience',
+						text: 'Proin odio velit, posuere a felis commodo, ullamcorper feugiat elit. Mauris hendrerit libero metus, facilisis pulvinar ante iaculis eget. Ut non porttitor est.'
+					})
+
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

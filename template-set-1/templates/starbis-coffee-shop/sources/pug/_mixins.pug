@@ -1,0 +1,192 @@
+//- Image
+	@param {string} name
+mixin img( name, options )
+	-
+		var size = getImageSize( name );
+		if( options && options.retina ) { size[0] = ~~(size[0]/2); size[1] = ~~(size[1]/2); }
+	img( src= procImg( name ), alt='', width= size[0], height= size[1] )&attributes( attributes )
+
+
+//- Loop without indexing mixin
+	@param {number} iterations - number of iterations
+mixin loop( iterations )
+	- for ( var i = 0; i < iterations; i++ )
+		block
+
+
+//- Parallax Section
+	@param {object} obj - parameters storage
+	@param {string} obj.img - image path
+	@param {string} obj.innerClass - content wrapper class
+mixin parallax( obj )
+	section.parallax-container( data-parallax-img= procImg( obj.img ) )&attributes( attributes )
+		.parallax-content( class= obj.innerClass )
+			block
+
+
+//- Main Navigation
+mixin navigation( menu, type )
+	if( !type )
+		ul.rd-navbar-nav&attributes( attributes )
+			each item in menu
+				li.rd-nav-item( class= { active: item.active } )
+					a.rd-nav-link( href= item.link )= item.title
+					if( item.dropdown )
+						+navigation( item.dropdown, 'dropdown' )
+					if( item.megamenu )
+						+navigation( item.megamenu, 'megamenu' )
+
+	else if( type === 'dropdown' )
+		ul.rd-menu.rd-navbar-dropdown
+			each item in menu
+				li.rd-dropdown-item( class= { active: item.active } )
+					a.rd-dropdown-link( href= item.link )= item.title
+					if( item.dropdown )
+						+navigation( item.dropdown, 'dropdown' )
+
+	else if( type === 'megamenu' )
+		ul.rd-menu.rd-navbar-megamenu
+			each item in menu
+				li.rd-megamenu-item
+					if ( item instanceof Array )
+						+navigation( item, 'column' )
+					else
+						+navigation( item, 'block' )
+
+	else if( type === 'column' )
+		each item in menu
+			+navigation( item, 'block' )
+
+	else if( type === 'block' )
+		if (menu.title && menu.link)
+			h5.rd-megamenu-title: a( href= menu.link )= menu.title
+		else if (menu.title)
+			h5.rd-megamenu-title= menu.title
+		if (menu.list)
+			+navigation( menu.list, 'list' )
+
+	else if( type === 'list' )
+		ul.rd-megamenu-list
+			each item in menu
+				li.rd-megamenu-list-item
+					a.rd-megamenu-list-link( href= item.link )= item.title
+
+
+//- Logo
+mixin logo(isWhite)
+	if(isWhite)
+		+img( logo.inverse )
+	else
+		+img( logo.default )
+
+
+//- Copyright
+mixin rights
+	p.rights.small&attributes( attributes )
+		span &copy;&nbsp;
+		span.copyright-year
+		span .&nbsp;
+		span= logo.name
+		span .&nbsp;
+		span All Rights Reserved.&nbsp;
+
+
+
+//- Page title
+mixin page-title(title, bg)
+	//- Page title
+	section.section.section-30.section-xxl-40.section-xxl-66.section-xxl-bottom-90.novi-background.bg-gray-dark.page-title-wrap(style='background-image: url(images/' + bg + '.jpg);')
+		.container
+			.page-title
+				h2=title
+
+
+mixin table(classes)
+	.table-custom-responsive
+		table.table-custom(class=classes)
+			thead
+				tr
+					th( style='min-width: 140px' ) Column 1
+					th( style='min-width: 140px' ) Column 2
+					th( style='min-width: 140px' ) Column 3
+					th( style='min-width: 140px' ) Column 4
+
+			tbody
+				tr
+					td Item #1
+					td Description
+					td Subtotal
+					td $3.00
+				tr
+					td Item #2
+					td Description
+					td Discount
+					td $3.00
+				tr
+					td Item #3
+					td Description
+					td Shipping
+					td $3.00
+
+				tr
+					td Item #4
+					td Description
+					td Tax
+					td $4.00
+
+			tfoot
+				tr
+					td All Items
+					td Description
+					td Your Total
+					td $13.00
+
+//- Breadcrumbs
+	@param {Array}  [path] - other navigation path
+	@example +breadcrumbs([ { title:'About Us', link:'about-us.html' }, { title:'Team member' } ])
+mixin breadcrumbs( path )
+	-
+		if (!path) {
+			if (breadcrumbs && breadcrumbs.length) path = breadcrumbs;
+			else path = [{title: pageName}];
+		}
+
+	// Breadcrumbs
+	section.breadcrumbs-custom( data-preset!={
+		title: 'Breadcrumbs',
+		category: 'header',
+		reload: false,
+		id: 'breadcrumbs'
+	} )
+		if (path[0].title.toLowerCase() !== 'home')
+			ul.breadcrumbs-custom-path
+				li: a( href='index.html' ) Home
+				- for ( let i = 0; i < path.length; i++ )
+					if (i === path.length - 1)
+						li.active= path[i].title
+					else
+						li: a( href= path[i].link )= path[i].title
+
+//- Pagination
+mixin pagination(modClass)
+	ul.pagination-custom(class=modClass)
+		li: a(href='#') Prev
+		li: a(href='#') 1
+		li: a(href='#') 2
+		li.active: a(href='#') 3
+		li: a(href='#') 4
+		li: a(href='#') Next
+
+mixin map
+	section.section.bg-transparent&attributes(attributes)
+		.container
+			.row.justify-content-center
+				.col-md-10.col-xl-8
+					//Please, add the data attribute data-key="YOUR_API_KEY" in order to insert your own API key for the Google map.
+					//Please note that YOUR_API_KEY should replaced with your key.
+					//Example: <div class="google-map-container" data-key="YOUR_API_KEY">
+					.google-map-container( data-center='9870 St Vincent Place, Glasgow, DC 45 Fr 45.', data-zoom='5', data-icon='images/gmap_marker.png', data-icon-active='images/gmap_marker_active.png', data-styles='[{"elementType":"geometry","stylers":[{"color":"#f5f5f5"}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"elementType":"labels.text.fill","stylers":[{"color":"#616161"}]},{"elementType":"labels.text.stroke","stylers":[{"color":"#f5f5f5"}]},{"featureType":"administrative.land_parcel","elementType":"labels.text.fill","stylers":[{"color":"#bdbdbd"}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#f4f2ef"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#eeeeee"}]},{"featureType":"poi","elementType":"labels.text.fill","stylers":[{"color":"#757575"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#e5e5e5"}]},{"featureType":"poi.park","elementType":"labels.text.fill","stylers":[{"color":"#9e9e9e"}]},{"featureType":"road","elementType":"geometry","stylers":[{"color":"#ffffff"}]},{"featureType":"road.arterial","elementType":"labels.text.fill","stylers":[{"color":"#757575"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#dadada"}]},{"featureType":"road.highway","elementType":"labels.text.fill","stylers":[{"color":"#616161"}]},{"featureType":"road.local","elementType":"labels.text.fill","stylers":[{"color":"#9e9e9e"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"color":"#e5e5e5"}]},{"featureType":"transit.station","elementType":"geometry","stylers":[{"color":"#eeeeee"}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#c9c9c9"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#e0e5e4"}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"color":"#9e9e9e"}]}]' )
+						.google-map
+						ul.google-map-markers
+							li( data-location='9870 St Vincent Place, Glasgow, DC 45 Fr 45.', data-description='9870 St Vincent Place, Glasgow' )
+

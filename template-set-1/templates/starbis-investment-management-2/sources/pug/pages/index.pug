@@ -1,0 +1,417 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-icon-box-vertical
+include ../elements/_ui-thumbnail-1
+include ../elements/_ui-thumbnail-3
+include ../elements/_ui-link-image
+include ../elements/_ui-thumbnail-2
+include ../elements/_ui-quote-bordered
+include ../elements/_ui-icon-box
+
+block variables
+	- var activeIndex = 0
+	- var footerLink = true
+	- var footerlink = 0
+
+block title
+	title Home
+
+block page
+	//-Page Header
+	include ../sections/_section-header-default
+	include ../sections/_section-slider
+
+	//-Main content
+
+	//-Our Services
+	section.section-50.section-md-90
+		.container.text-center
+			h3 Our Services
+
+			include ../sections/_section-icon-box
+	='\n'
+
+	//-Why Choose Us
+	section.bg-whisperapprox
+		.container
+			.row.justify-content-sm-center.justify-content-md-start
+				.col-sm-10.col-md-6.text-start.section-60.section-md-75
+					div.inset-right-30
+						.box-photo-frame.d-block.wow.fadeIn(data-wow-delay='0s')
+							.ratio
+								iframe.ratio-item(src="//www.youtube.com/embed/rpOwTspdwkI" allowfullscreen)
+
+						.row.wow.fadeInUp(data-wow-delay='.1s')
+							.col-lg-1.d-none.d-lg-inline-block
+							.col-lg-10
+								blockquote.quote-simple.inset-lg-left-15 Why Choose Us
+									.quote-body
+										q Together, we can enable your business to achieve even more.
+								p.text-dusty-gray InvestPlus leads the industry in wealth management. Our independent RIA and broker services have over 20 years of industry experience.
+
+				.col-md-6.context-dark.section-image-aside.section-image-aside-right.pos-relative-before-sm.section-60.section-md-0.d-md-flex
+					.section-image-aside-img(style='background-image: url(images/bg-image-9.jpg)')
+						.section-bordered-inside
+					.row.align-items-md-center.offset-top-0
+						.col-lg-10.col-xl-9.to-front.offset-md-1.offset-lg-2
+							.inset-lg-left-15
+								h3.wow.fadeIn(data-wow-delay='0s') Why Choose Us
+								.unit.unit-spacing-md.flex-sm-row.wow.fadeInRight(data-wow-delay='.1s')
+									.unit-left
+										span.icon.icon-7
+									.unit-body
+										h6 Competent Professionals
+										p.text-white-05 We work in an atmosphere of trust and camaraderie, where partners help each other.
+
+								.unit.unit-spacing-md.flex-sm-row.wow.fadeInRight(data-wow-delay='.2s')
+									.unit-left
+										span.icon.icon-8
+									.unit-body
+										h6 Superior Service
+										p.text-white-05 We are committed to providing clients with the best value and service in the industry.
+
+								.unit.unit-spacing-md.flex-sm-row.wow.fadeInRight(data-wow-delay='.3s')
+									.unit-left
+										span.icon.icon-9
+									.unit-body
+										h6 Competitive Pricing
+										p.text-white-05 Providing value through straightforward commissions and added services.
+								a.btn.btn-icon.btn-icon-right.btn-primary.btn-nuka.big.btns-inset-horizontal-15.wow.fadeInUp(href='appointment.html' data-wow-delay='.1s')
+									span.icon.icon-xs.fa-angle-right
+									| Make an Appointment
+
+	//-Meet Our Team
+	section.section-50.section-md-100
+		include ../sections/_section-team
+
+	include ../sections/_section-testimonials-parallax
+
+	//-Meet Our Team
+	section.section-50.section-md-100.bg-whisperapprox
+		.container
+			.row.justify-content-sm-center
+				.col-sm-10.col-lg-12
+					.text-center
+						h3 Investment Calculator
+						//-Responsive tabs
+						#tabs-4.tabs-custom.tabs-horizontal.tabs-minimal.tabs-custom-variant-1
+							//-Nav tabs
+							.nav-tabs-wrap
+								ul.nav-tabs.text-center
+									li: a.active(href='#tabs-4-1' data-bs-toggle='tab') Contribution Amount
+									li: a(href='#' ) Starting Amount
+
+							//-Tab panes
+							.tab-content
+								div#tabs-4-1.tab-pane.fade.show.active.text-start
+									.row.row-50
+										.col-lg-7
+											.inset-xl-left-45.inset-xl-right-45
+												.row.row-30
+													.col-md-6
+														p
+															span.fw-extra-bold='Results: '
+															| You will need to contribute
+															span.text-primary.fw-extra-bold=' $3,318.33 '
+															| at the end of each month to reach the target of $1,000,000.00.
+
+													.col-md-6.text-start
+														dl.list-terms-inline.list-terms-inline-half
+															dt
+																span.fw-extra-bold End Balance
+															dd
+																| $999,999.80
+														dl.list-terms-inline.list-terms-inline-half
+															dt
+																| Total Interest
+															dd
+																| $382,700.24
+														dl.list-terms-inline.list-terms-inline-half
+															dt
+																| Total Principal
+															dd
+																| $617,299,56
+
+												hr.divider-fullwidth.bg-iron
+												form.rd-mailform(data-form-output="form-output-global",  method='post', action='bat/rd-mailform.php')
+													.row.row-22.align-items-md-end
+														.col-md-6
+															.form-wrap.form-wrap-outside
+																label.text-black.form-label.form-label-outside(for='fist-name') Your Target ($)
+																input#fist-name.form-input.bg-whisper-lighten(type='text', name='name', placeholder="1000000")
+
+														.col-md-6
+															.form-wrap.form-wrap-outside
+																label.text-black.form-label.form-label-outside(for='duration') Duration (years)
+																input#duration.form-input.bg-whisper-lighten(type='text', name='name', placeholder="15")
+
+														.col-md-6
+															.form-wrap.form-wrap-outside
+																label.text-black.form-label.form-label-outside(for='s1') Starting Principal ($)
+																input#s1.form-input.bg-whisper-lighten(type='text', name='name', placeholder="20000")
+
+														.col-md-6
+															.form-wrap.form-wrap-outside
+																label.text-black.form-label.form-label-outside(for='average') Average Return (%)
+																input#average.form-input.bg-whisper-lighten(type='text', name='name', placeholder="6")
+
+														.col-md-6
+															.form-wrap.form-wrap-outside
+																label.text-black.form-label.form-label-outside(for='s2') Invest at the end of each
+																//Select 2
+																select#s2.form-input.select-filter(data-minimum-results-for-search="Infinity")
+																	option(value="0") Select an option
+																	option(value="2") Month
+																	option(value="3") Year
+
+														.col-md-6
+															button.btn.btn-block.btn-icon.btn-icon-right.btn-ebony-clay.big(type='submit')
+																span.icon.icon-xs.fa-angle-right
+																| Calculate
+
+										.col-lg-5
+											//-Define Colors for higcharts graph
+											- var highColors = ['#4685b1', '#25313d', '#cfaa45'];
+											//- Define object for "Basic Column Chart"
+											-
+												var highBaseChartObject = {
+													credits: false,
+													colors: highColors,
+													chart: {
+														backgroundColor: 'transparent',
+														className: '',
+														'type': 'spline',
+														zoomType: 'x',
+														panning: true,
+														panKey: 'shift',
+														marginTop: 10,
+														marginRight: 1,
+													},
+													title: {
+														text: null
+													},
+													xAxis: {
+														'min': 0,
+														gridLineColor: 'rgba(155, 155, 155, 0)',
+														lineColor: 'rgba(155, 155, 155, 1)',
+														tickColor: 'rgba(155, 155, 155, 1)',
+														categories: ['0yr', '2.5yr', '5yr', '7.5yr',
+															'10yr', '12.5yr', '15yr']
+													},
+													yAxis: {
+														'lineWidth': 1,
+														'tickLength': 10,
+														'tickWidth': 1,
+														'min': 0,
+														'tickInterval': 250,
+														gridLineColor: 'rgba(155, 155, 155, 0)',
+														lineColor: 'rgba(155, 155, 155, 1)',
+														tickColor: 'rgba(155, 155, 155, 1)',
+														title: {
+															text: null,
+														}
+													},
+													plotOptions: {
+														spline: {
+															lineWidth: 2
+														},
+														series: {
+															marker: {
+																enabled: true,
+																symbol: 'circle',
+																radius: 5,
+																lineColor: 'rgba(1,1,1,0)',
+																lineWidth: 2
+															}
+														},
+														line: {
+															lineWidth: 2,
+															marker: {
+																enabled: true,
+																symbol: 'circle',
+																radius: 5,
+																states: {
+																	hover: {
+																		enabled: true
+																	}
+																}
+															},
+															states: {
+																hover: {
+																	lineWidth: 2
+																}
+															},
+															threshold: null
+														}
+													},
+													legend: {
+														enabled: true,
+														floating: true,
+														symbol: 'circle',
+														align: 'right',
+														verticalAlign: 'top',
+														padding: 10,
+														x: 0,
+														y: 0,
+														itemStyle: {
+															color: '#9b9b9b',
+															fontWeight: 'normal',
+															fontFamily: 'Open Sans',
+															fontSize: '14px',
+															hover: {
+																enabled: false,
+																fill: '#a288d5'
+															}
+														},
+													},
+													series: [{
+														name: 'Balance',
+														data: [50, 220, 300, 540, 750, 1000]
+													}, {
+														name: 'Principal',
+														data: [35, 150, 220, 400, 600]
+													}, {
+														name: 'Interest',
+														data: [10, 90, 145, 250, 400]
+													}
+													]
+												};
+
+											h6.font-default.text-center Balance Accumulation Graph
+											.higchart#high-column2(data-graph-object= highBaseChartObject, style='width: 100%; height: 400px; margin: 0 auto')
+
+	section.section-50.section-md-90.section-lg-bottom-120.section-xl-bottom-165
+		.container.isotope-wrap
+			.row.row-40.text-center
+				.col-12
+					h3 Our Cases
+					//-Isotope Filters
+					ul.isotope-filters-responsive
+						li: p Choose your category:
+						li.block-top-level
+							//-Isotope Filters
+							button.isotope-filters-toggle.btn.btn-sm.btn-default(data-custom-toggle='#isotope-1', data-custom-toggle-hide-on-blur='true')
+								| Filter
+								span.caret
+
+							#isotope-1.isotope-filters.isotope-filters-minimal.isotope-filters-horizontal
+								ul.list-inline
+									li
+										a.active(data-isotope-filter='*', data-isotope-group='gallery', href='#') All
+									li
+										a(data-isotope-filter='Category 1', data-isotope-group='gallery', href='#') Retirement & College Savings
+									li
+										a(data-isotope-filter='Category 2', data-isotope-group='gallery', href='#') Insurance & Annuities
+									li
+										a(data-isotope-filter='Category 3', data-isotope-group='gallery', href='#') Cash & Credit
+
+				//-Isotope Content
+				.col-12
+					.row.isotope.isotope-gutter-default(data-isotope-layout='fitRows', data-isotope-group='gallery', data-lightgallery='group')
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+							+thumbnail-3({img: 'gallery-grid-1-370x247', original: 'gallery-1-1200x800_original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+							+thumbnail-3({img: 'gallery-grid-2-370x247', original: 'gallery-2-1200x800_original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 3')
+							+thumbnail-3({img: 'gallery-grid-3-370x247', original: 'gallery-3-1200x800_original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+							+thumbnail-3({img: 'gallery-grid-4-370x247', original: 'gallery-4-1200x800_original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+							+thumbnail-3({img: 'gallery-grid-5-370x247', original: 'gallery-5-1200x800_original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 3')
+							+thumbnail-3({img: 'gallery-grid-6-370x247', original: 'gallery-6-1200x800_original'})
+
+	include ../sections/_section-counters-black
+
+	//-Latest News
+	section.section-50.section-md-90.section-md-bottom-100
+		.container.text-center
+			h3 Latest News
+
+			.row.row-40.row-offset-6.justify-content-sm-center
+				.col-sm-8.col-md-5.col-xl-3.wow.fadeInUp(data-wow-delay='0s')
+					//-Post Boxed
+					.post-boxed.d-xl-inline-block
+						.post-boxed-img-wrap
+							a(href="blog-post.html")
+								+jpg("home-1-268x179")
+						.post-boxed-caption
+							.post-boxed-title.fw-bold
+								a(href="blog-post.html") What’s the Right Asset Allocation For Investors?
+
+							.offset-top-5
+								//-List Inline
+								ul.list-inline.list-inline-dashed.text-uppercase.font-accent
+									li JUNE 14, 2021
+									li
+										span by #[a.link-primary(href="#") ADMIN]
+
+				.col-sm-8.col-md-5.col-xl-3.wow.fadeInUp(data-wow-delay='.1s')
+					//-Post Boxed
+					.post-boxed.d-xl-inline-block
+						.post-boxed-img-wrap
+							a(href="blog-post.html")
+								+jpg("home-2-268x179")
+						.post-boxed-caption
+							.post-boxed-title.fw-bold
+								a(href="blog-post.html") How Return Assumptions Affect Investor Behavior
+
+							//-List Inline
+							ul.list-inline.list-inline-dashed.text-uppercase.font-accent
+								li JUNE 20, 2021
+								li
+									span by #[a.link-primary(href="#") ADMIN]
+
+				.col-sm-8.col-md-5.col-xl-3.wow.fadeInUp(data-wow-delay='.2s')
+					//-Post Boxed
+					.post-boxed.d-xl-inline-block
+						.post-boxed-img-wrap
+							a(href="blog-post.html")
+								+jpg("home-3-268x179")
+						.post-boxed-caption
+							.post-boxed-title.fw-bold
+								a(href="blog-post.html") Deconstructing 30 Year Stock Market Returns
+
+							//-List Inline
+							ul.list-inline.list-inline-dashed.text-uppercase.font-accent
+								li JUNE 23, 2021
+								li
+									span by #[a.link-primary(href="#") ADMIN]
+
+				.col-sm-8.col-md-5.col-xl-3.wow.fadeInUp(data-wow-delay='.3s')
+					//-Post Boxed
+					.post-boxed.d-xl-inline-block
+						.post-boxed-img-wrap
+							a(href="blog-post.html")
+								+jpg("home-4-268x179")
+						.post-boxed-caption
+							.post-boxed-title.fw-bold
+								a(href="blog-post.html") Why Money Manager Due Diligence is so Difficult
+
+							//-List Inline
+							ul.list-inline.list-inline-dashed.text-uppercase.font-accent
+								li JUNE 12, 2021
+								li
+									span by #[a.link-primary(href="#") ADMIN]
+
+	//-Our Partners
+	section.section-50.section-md-90.bg-whisperapprox
+		.container
+			.row.row-40.text-center.text-md-start
+				.col-6.col-md-3.wow.fadeInUp(data-wow-delay='0s')
+					+link-image({img: 'clients-5-141x88'})
+				.col-6.col-md-3.wow.fadeInUp(data-wow-delay='.1s')
+					+link-image({img: 'clients-6-152x64'})
+				.col-6.col-md-3.wow.fadeInUp(data-wow-delay='.2s')
+					+link-image({img: 'clients-7-104x84'})
+				.col-6.col-md-3.wow.fadeInUp(data-wow-delay='.3s')
+					+link-image({img: 'clients-8-144x68'})
+
+	//-Page Footer
+	include ../sections/_section-footer-default

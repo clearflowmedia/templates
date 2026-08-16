@@ -1,0 +1,116 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-thumbnail-1
+include ../elements/_ui-quote-vertical
+include ../elements/_ui-icon-box-horizontal
+
+block variables
+  - var activeIndex = 1
+  - var pageName = 'About'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title(pageName, 'bg-image-1', {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": pageName
+    }
+  })
+
+  //- Who we are?
+  section
+    .container
+      .row.align-items-sm-center
+        .col-lg-6
+          img(src="images/about-01.jpg", width="570", height="611", alt="").img-responsive.d-none.d-lg-block
+
+        .col-lg-6.text-lg-start.section-66.section-lg-0
+          h2 What We Do
+          p FastCredit provides clients throughout the area with the best possible financing solutions by leveraging our experience and extensive network of lending partners. We offer a full portfolio of mortgage products available on the market today.
+          include ../_includes/_progress-list
+  ='\n'
+
+  // Material Parallax
+  +parallax({
+    img: 'bg-about',
+    addClass: 'bg-black'
+  })
+    .section-75.section-lg-100.context-dark
+      .container
+        h2 Our Shared Values
+
+        ul.row.row-30.row-offset-1.list-index
+          li.col-sm-6.col-lg-4
+            .box-outline
+              .list-index-counter
+              h5 Integrity
+              p.text-spacing-50 Business integrity inspires trust in our company, products and services.
+          li.col-sm-6.col-lg-4
+            .box-outline
+              .list-index-counter
+              h5 Responsible Growth
+              p.text-spacing-50 We continue to grow our business for the betterment of our employees and clients.
+          li.col-sm-6.col-lg-4
+            .box-outline
+              .list-index-counter
+              h5 Collaboration
+              p.text-spacing-50 Working together with our partners and clients energizes and unifies us.
+
+  section.section-75.section-lg-100
+    .container
+      .row.row-30.align-items-lg-end
+        .col-lg-6.order-lg-1
+          img(src="images/about-02.jpg", width="570", height="355", alt="").img-responsive.center-block
+        .col-lg-6.text-lg-start
+          h2 Who We Are
+          h5.text-spacing-50 Ready to pay off your student loans? We can help you.
+          p.text-spacing-50.text-gray We have been providing clients with leading mortgage solutions since 2001.  Our commitment to your overall financial wellness is evidenced by the vast number of services and exclusive programs we offer.
+
+          p.text-spacing-50.text-gray When looking for the best interest rate and product it is important to work with a company with significant buying power.  We are an independent member of the USA Mortgage Network and our experience is confirmed by numerous awards.
+
+          a(href='#').btn.btn-primary read more
+
+  section.section-75.section-md-90.bg-lizar
+    .container
+      .row.row-60
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-1({
+            img: 'team-1-189x189.png',
+            header: "Kate Williams",
+            caption: "Mortgage planner"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-1({
+            img: 'team-2-189x189.png',
+            header: "Mark Peters",
+            caption: "Loan processor"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-1({
+            img: 'team-3-189x189.png',
+            header: "Jill McMillan",
+            caption: "Office assistant"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-1({
+            img: 'team-4-189x189.png',
+            header: "Peter Harrison",
+            caption: "Mortgage Underwriter"
+          })
+  ='\n'
+
+  //- Page Footer
+  include ../sections/_section-footer-default

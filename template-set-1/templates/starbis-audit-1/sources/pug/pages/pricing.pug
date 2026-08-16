@@ -1,0 +1,96 @@
+extends  ../_skeleton
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Pricing'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title(pageName, 'bg-image-1')
+
+  //- Choose your plan
+  section.section-60.section-md-90.section-xl-bottom-15.bg-athens-gray
+    .container
+      .row.row-40
+        .col-md-6.col-lg-9
+          .row.row-30
+            .col-lg-6
+              h3
+                | Choose
+                =' '
+                span.text-thin Your Plan
+
+            .col-lg-6
+              p.text-black-05.
+                Pick the best plan that meets your business needs. A free trial is available to help you with the decision-making.
+
+        .col-md-5.col-lg-4.col-xl-3
+          a.btn.btn-primary.btn-block(href='#') Learn more
+
+  ='\n'
+
+  //- Pricing tables
+  section.bg-decoration-wrap.bg-decoration-bottom.section-bottom-60.section-xl-top-100.section-xl-bottom-100.bg-athens-gray
+    .container.bg-decoration-content
+      .row.justify-content-md-center
+        .col-lg-10.col-xl-12
+          include ../_includes/_pricing-tables-range
+    .bg-decoration-object.bg-whisper-lighten
+  ='\n'
+
+  //- Questions & Answers
+  section.section-60.section-md-90
+    .container
+      .row.justify-content-lg-center.row-40
+        .col-sm-12
+          h3
+            | Questions
+            =' '
+            span.text-thin & Answers
+
+        .col-lg-11.col-xl-10
+          .row.row-40
+            .col-md-6
+              dl.list-terms-variant-1
+                dt How do auditors charge audit fees?
+                dd.text-black-05 Auditors are advised by the Code of Ethics for Assurance Practitioners that when charging fees they should ensure that their objectivity is not impaired by the hope of financial gain, and that such fees are proportional with the responsibilities they assume.
+
+                dt What do these fees include?
+                dd.text-black-05 A substantial proportion of the costs of providing audit services, both mandatiry and voluntary, are salary related. Auditors are justified in increasing their audit fees to ensure their remuneration is competitive, particularly considering the auditor’s responsibility.
+
+                dt When can audit fees increase?
+                dd.text-black-05 Clients should expect fees to go up so that auditors can cover the increasing overhead costs, and to recognize that audits are becoming more complex, requiring further involvement from the more experienced members of the audit team.
+
+            .col-md-6
+              dl.list-terms-variant-1
+                dt Can I request an audit?
+                dd.text-black-05 Yes! We will consider all requests from management; however, our ability to accept the project is dependent upon the risk/urgency of the request as compared to currently scheduled audits, staffing levels/workload, and other potential factors.
+
+                dt When will my company be audited?
+                dd.text-black-05 With the exception of audits that require no prior notification to be effective, such as cash counts, the customers are contacted shortly before the start of any audit. An entrance conference is held to discuss the audit and address any concerns management may have.
+
+                dt How should I prepare for an audit?
+                dd.text-black-05 The auditor will contact you to schedule a mutually convenient date and time for the audit. You will receive written correspondence confirming the details of the appointment. Audits are usually performed at the business location; however, an alternate off-site location may be chosen.
+  ='\n'
+
+  //- Not Sure Which Plan is Right For You?
+  section.section-60.section-md-90.bg-accent.bg-image
+    .container
+      .row.justify-content-lg-center.row-30.align-items-lg-center
+        .col-lg-8.col-xl-7
+          h5 Not Sure Which Plan is Right For You?
+          p.text-white(style='max-width: 420px;').
+            If you are in doubt of which plan to opt for, contact our managers, and we will try to help you make the right decision.
+        .col-lg-4.col-xl-3
+          a.btn.btn-lg.btn-lg-bigger.btn-white-outline(href='contact-us.html') Send us a letter
+  ='\n'
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

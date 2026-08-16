@@ -1,0 +1,12 @@
+//- Icon box
+mixin icon-box(obj)
+  //- Icon box
+  article.icon-box(class=obj.mod)
+    .box-top
+      .box-icon
+        block
+      .box-header
+        h5: a(href='#')=obj.header
+    .box-body
+      p.text-gray.text-spacing-50=obj.text
+

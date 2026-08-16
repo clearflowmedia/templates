@@ -1,0 +1,100 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-post-classic-minimal
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Blog Line'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title('Blog', 'bg-image-3')
+
+  //- Blog line
+  section.section-50.section-md-75.section-xl-100
+    .container
+      .row.justify-content-md-center.row-40.row-md-60.row-xl-100
+        .col-xl-10
+          dl.blog-timeline
+            dt 2021
+            dd
+              +post-classic-minimal({
+                header: 'The Importance of Paperwork',
+                text: [
+                  'Most of us will implement some tax planning on behalf of a client which requires some paperwork to support the actions which have been taken. The incorporation of a business requires an issue of shares ,if appropriate a changing of the name of a PAYE scheme, the setting up of a company bank account and new headed notepaper and invoice books to reflect the change to a company...'
+                ],
+                tags: ["Planning", "Support"],
+                user: 'Joan Williams',
+                time: ['2021-06-17', 'Jun 17'],
+                media : {
+                  type: "image",
+                  data: 'blog-line-1-771x515'
+                }
+              })
+
+              +post-classic-minimal({
+                offset: "offset-top-5",
+                header: 'Reforms to the taxation of non-doms',
+                text: ["The 2015 Budget announced proposals to radically reform the taxation of non-doms from April 2017 and this was followed in September 2015 by the first of the consultation documents. The September 2015 consultant focused on the introduction of a deemed domicile status for long-term resident non-doms and the introduction of the ‘returning UK dom’ status relevant for individuals born in the UK with a UK domicile of origin, who have subsequently taken..."],
+                tags: ["Reforms", "Taxation"],
+                user: 'Tom Park',
+                time: ['2021-05-23', 'May 23']
+              })
+
+              +post-classic-minimal({
+                header: 'New HMRC Offshore Disclosure Facility',
+                text: [
+                  "After much speculation, ‘Son of LDF’ has now been launched by HMRC in order to give individuals and entities the opportunity to correct their UK tax position if they have previously made errors or omissions in declaring overseas income and gains. The new Worldwide Disclosure Facility (WDF), launched on 5 September 2021, replaces the Liechtenstein Disclosure Facility and 3 British Crown Dependencies Facility that came to an end on..."
+                ],
+                tags: ["Facility", "Opportunity"],
+                user: 'John Miller',
+                time: ['2021-04-14', 'Apr 14'],
+                media: {
+                  type: "image",
+                  data: 'blog-line-5-772x435'
+                }
+              })
+
+              +post-classic-minimal({
+                header: 'Tax Investigations by HMRC',
+                text: [
+                  "In the past an investigation by HMRC into a tax avoidance scheme was conducted under Code of Practice (COP) 8. Under such circumstances there is no question of tax fraud having taken place and a prosecution is not on the agenda. Recently there have been a number of cases involving tax avoidance schemes where COP9 has replaced the existing COP8 enquiry. This is a very strong indicator that HMRC considers serious fraud to be involved and that... "
+                ],
+                tags: ["Tax", "Investigations"],
+                user: 'Julien Miro',
+                time: ['2021-03-02', 'Mar 2'],
+                media: {
+                  type: "gallery",
+                  data: [
+                    "blog-line-2-770x433",
+                    "blog-line-5-772x435",
+                    "blog-line-4-770x433"
+                  ]
+                }
+              })
+
+              +post-classic-minimal({
+                header: 'HMRC – The Standard for Agents',
+                text: ["There has been some discussion over the last couple of years concerning a desire by HMRC to regulate tax advisors. This appears to have gone quiet for now but on 3rd August HMRC published a report outlining the standard it expects/requires from agents. The basic requirement is that HMRC expects agents to be honest and straightforward with them. This means quite simply that an agent should always disclose all relevant information to HMRC and not..."],
+                tags: ["Agents", "Advisors"],
+                user: 'Amelia Anderson',
+                time: ['2021-02-16', 'Feb 16'],
+                media: {
+                  type: "audio",
+                  data: globals.soundcloud
+                }
+              })
+        .col-12    
+          .text-center
+            +pagination
+  ='\n'
+
+  //- Page Footer
+  include ../sections/_section-footer-default

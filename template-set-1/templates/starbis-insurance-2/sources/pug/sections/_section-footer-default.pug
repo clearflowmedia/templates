@@ -1,0 +1,98 @@
+//- Includes
+include ../elements/_ui-post-preview
+//- Default footer
+section.section-40.section-md-75.bg-cello.footer-section
+	.container
+		.row.justify-content-sm-center
+			.col-sm-9.col-md-11.col-xl-12
+				.row.row-50
+					.col-md-6.col-lg-10.col-xl-3
+						.inset-xl-right-20(style='max-width: 510px;')
+							//- Brand
+							a.brand.brand-inverse(href='index.html')
+								img(src="images/logo-inverse-128x46.png", width="128", height="46", alt="")
+							p.text-spacing--30.text-kashmir-blue.
+								Shelter has been a trusted name in insurance for more than 15 years. Today, we proudly serve more than 16 million customers nationwide.
+							a.link.link-group.link-group-animated.link-black.link-white(href=globals.getTemplateLink)
+								span Free Consultation
+								span.icon.icon-xxs.icon-primary.fa.fa-angle-right
+
+					.col-md-6.col-lg-4.col-xl-3
+						h6.h6.footer-title Recent Posts
+
+						+post-preview({
+							classes: ['post-preview-inverse', 'offset-top-22'],
+							img: 'post-preview-7-70x70',
+							header: 'A Look into Nonprofit Risk Management',
+							time: ['2021-02-04', 'June 23, 2021 ']
+						})
+
+						+post-preview({
+							classes: ['post-preview-inverse', 'offset-top-22'],
+							img: 'post-preview-8-70x70',
+							header: 'Workers’ Compensation: Combinability of Insureds',
+							time: ['2021-02-04', 'June 20, 2021']
+						})
+
+					.col-md-6.col-lg-4.col-xl-3
+						h6.h6.footer-title Quick links
+						.row(style='max-width: 270px;')
+							.col-6
+								ul.list-marked-variant-2
+									li: a(href='index.html') Home
+									li: a(href='services.html') Services
+									li: a(href='gallery-item.html') Cases
+									li: a(href='classic-blog.html') Blog
+
+							.col-6
+								ul.list-marked-variant-2
+									li: a(href='about-us.html') About us
+									li: a(href='contacts-us.html') Contacts
+									li: a(href='appointment.html') Appointment
+
+					.col-md-6.col-lg-4.col-xl-3
+						h6.h6.footer-title Contact us
+						address.contact-info.text-start
+							.unit.unit-horizontal.unit-spacing-xs.align-items-center
+								.unit-left
+									span.icon.icon-xs.icon-primary.material-icons-phone
+								.unit-body
+									a.link-white(href='tel:#') +1 (409) 987–5874
+							.unit.unit-horizontal.unit-spacing-xs.align-items-center
+								.unit-left
+									span.icon.icon-xs.icon-primary.fa.fa-envelope-o
+								.unit-body
+									a.link-white(href='mailto:#') info@demolink.org
+
+							.unit.unit-horizontal.unit-spacing-xs
+								.unit-left
+									span.icon.icon-xs.icon-primary.material-icons-place
+								.unit-body
+									a.link-white.d-inline(href='#')
+										| 6036 Richmond hwy,
+										br
+										| Alexandria, VA USA 22303
+footer.page-foot.bg-cello
+
+	.container
+		hr.divider-bismark-04
+
+	section.section-35
+		.container.text-center
+			.row.flex-row-md-reverse.justify-content-md-between.align-items-md-center.row-15
+				.col-md-6.text-md-end
+					.group-sm.group-middle
+						p.font-italic.text-white Follow Us:
+						ul.list-inline.list-inline-reset
+							li: a.icon.icon-circle.icon-blue-bayoux.icon-xxs-smallest.fa.fa-facebook(href='#')
+							li: a.icon.icon-circle.icon-blue-bayoux.icon-xxs-smallest.fa.fa-twitter(href='#')
+							li: a.icon.icon-circle.icon-blue-bayoux.icon-xxs-smallest.fa.fa-google-plus(href='#')
+
+				.col-md-6.text-md-start
+					p.rights.text-white
+						span.copyright-year
+						span &nbsp;&#169;&nbsp;
+						span Shelter.&nbsp;
+						a.link-white-v2(href='privacy.html') Privacy Policy
+
+='\n'

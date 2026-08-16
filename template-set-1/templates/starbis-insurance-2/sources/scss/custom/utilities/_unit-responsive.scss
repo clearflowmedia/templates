@@ -1,0 +1,33 @@
+//
+// Responsive unit
+// --------------------------------------------------
+
+@include unit-responsive($grid-breakpoints, 20px, 30px);
+
+// Unit Spacing
+//
+
+.unit-spacing-xs {
+  @include unit-spacing($grid-breakpoints, 8px);
+}
+
+.unit-spacing-sm {
+  @include unit-spacing($grid-breakpoints, 15px);
+}
+
+.unit-spacing-md {
+  @include unit-spacing($grid-breakpoints, 22px);
+}
+
+.unit-spacing-lg {
+  @include unit-spacing($grid-breakpoints, 30px);
+}
+
+.unit-middle {
+  .unit-left {
+    @include display-flex;
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(center);
+  }
+}

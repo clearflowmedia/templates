@@ -1,0 +1,100 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-post-classic
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Classic Blog'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title(pageName, 'bg-image-1', {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Blog",
+      "href": "#"
+    },
+    2: {
+      "title": pageName
+    }
+  })
+
+  //- Blog classic
+  section.section-50.section-md-75.section-xl-100.text-start.bg-default
+    .container
+      .row.justify-content-md-center
+        .col-xl-10
+          +post-classic({
+            img: 'blog-classic-2-113x113',
+            header: 'Common Home Selling Mistakes',
+            text: [
+              'Preparing to sell a home often comes with many major changes, such as a new career or long-distance relocation. During this busy time, avoiding common seller mistakes will reduce stress and could add thousands more to your bottom line when your home sells. In this article, we will discuss what home selling mistakes are the most popular ones. The two most important decisions you will make when selling your home are which agent to work with...',
+            ],
+            tags: ["Mortgage", "Home", "Selling"],
+            user: 'Amelia Condon',
+            time: ['2021-06-17', '05/14/2021'],
+            media : {
+              type: "image",
+              data: 'blog-classic-1-971x649'
+            }
+          })
+
+          +post-classic({
+            img: 'blog-classic-3-113x113',
+            header: 'A Few Steps to Financing Your Future',
+            text: ["Building financial strategies to support your goals is the best way to live a financially healthy life. If you only focus your finances on the short-term, it can make things difficult for your future. There are some steps you can take to ensure you and your family enjoy a secure financial life, both now and into your retirement. First, establish your goals. Then, follow these steps to see them become a reality..."],
+            tags: ["Tips", "Loans"],
+            user: 'Jack Wright',
+            time: ['2021-05-23', '05/17/2021']
+          })
+
+          +post-classic({
+            img: 'blog-classic-4-113x113',
+            header: 'Getting a Loan to Build a House',
+            text: [
+              "Instead of buying an existing house for your next home, have you considered building? There can be many advantages to owning a brand-new house, such as higher energy efficiency, lower repair costs, and the opportunity to customize many features.The first step is determining how to get a loan to build.The initial steps of obtaining a construction loan are similar to buying an existing house include...",
+            ],
+            tags: ["Build", "Home", "Loans"],
+            user: 'Alex Murphy',
+            time: ['2021-04-14', '04/10/2021'],
+            media: {
+              type: "video",
+              data: globals.video
+            }
+          })
+
+          +post-classic({
+            img: 'blog-classic-8-113x113',
+            header: 'Selling or Leasing Your Home',
+            text: [
+              "Buying a home to live in involves different priorities from investing in real estate or converting a primary residence into a rental property. When you are moving out of your current home, you need to think about both financial and personal needs to decide if it is better to sell your house or lease it out. First, look at what homes are selling for in your neighborhood and how long they are listed before they sell. Compare...",
+            ],
+            tags: ["Selling", "Home"],
+            user: 'Karen Green',
+            time: ['2021-03-02', '04/3/2021'],
+            media: {
+              type: "gallery",
+              data: [
+                "blog-classic-5-970x546",
+                "blog-classic-6-970x546",
+                "blog-classic-7-970x546"
+              ]
+            }
+          })
+
+          .pagination-custom-wrap.text-center
+            +pagination
+  ='\n'
+
+  //- Page Footer
+  include ../sections/_section-footer-default

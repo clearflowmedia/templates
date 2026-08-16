@@ -1,0 +1,126 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-thumbnail-1
+include ../elements/_ui-thumbnail-2
+
+block variables
+  - var activeIndex = 5
+  - var pageName = 'Our team'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title('Our Team Memeber', 'bg-image-1')
+
+  //- Team
+  section.section-66.section-md-75.section-xl-top-100.bg-default
+    .container.text-center
+      h3 Team
+      .row.row-60.row-offset-1
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-1({
+            img: 'team-1-189x189.jpg',
+            header: "Julien Miro",
+            caption: "Software Developer"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-1({
+            img: 'team-2-189x189.jpg',
+            header: "Joan Williams",
+            caption: "Support Operator"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-1({
+            img: 'team-3-189x189.jpg',
+            header: "Benedict Smith",
+            caption: "Creative Director"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-1({
+            img: 'team-4-189x189.jpg',
+            header: "Madlen Green",
+            caption: "Sales Manager"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-1({
+            img: 'team-5-189x189.jpg',
+            header: "Hannah Lamb",
+            caption: "Graphic Designer"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-1({
+            img: 'team-6-189x189.jpg',
+            header: "John Miller",
+            caption: "Junior UX Designer"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-1({
+            img: 'team-7-189x189.jpg',
+            header: "Tom Park",
+            caption: "Executive Director"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-1({
+            img: 'team-8-189x189.jpg',
+            header: "Nora Russell",
+            caption: "Account Manager"
+          })
+
+
+  section.section-66.section-md-90.section-xl-bottom-145.bg-default
+    //- Our Professionals
+    .container.text-center
+      h3 Our Professionals
+      .row.row-40.row-offset-1
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-2({
+            img: 'team-9-246x300',
+            header: "Amanda Smith",
+            caption: "Business Expert",
+            phone: "+1 (409) 987–5874",
+            email: "info@demolink.org"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-2({
+            img: 'team-10-246x300',
+            header: "John Doe",
+            caption: "PR-Manager",
+            phone: "+1 (409) 987–5874",
+            email: "info@demolink.org"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-2({
+            img: 'team-11-246x300',
+            header: "Vanessa Ives",
+            caption: "Marketing Expert",
+            phone: "+1 (409) 987–5874",
+            email: "info@demolink.org"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-2({
+            img: 'team-12-246x300',
+            header: "David Nicholson",
+            caption: "Senior HR Manager",
+            phone: "+1 (409) 987–5874",
+            email: "info@demolink.org"
+          })
+  ='\n'
+
+  //- Page Footer
+  include ../sections/_section-footer-default

@@ -1,0 +1,65 @@
+extends  ../_skeleton
+include  ../elements/_ui-progress-linear
+include  ../elements/_ui-countdown
+
+block variables
+	- var activeIndex = 2
+	- var pageName = 'Progress Bars'
+
+block title
+	title=pageName
+
+block page
+	//-Page Header
+	include ../sections/_section-header-default
+
+
+	+page-title(pageName, 'bg-image-2')
+
+	//-Skills Bars
+	section.section-60.section-md-75.section-xl-bottom-120
+		.container
+			h3.text-center Skills Bars
+			.row.row-offset-2.justify-content-lg-between.align-items-center
+				.col-md-6.col-xl-5
+					p.
+						Our Investment Company, located in Rockville, Maryland, is a full service real estate company that provides acquisition, development and finance expertise for both commercial and multi-family projects.
+					p.
+						Our experience in structuring complicated financial transactions while accommodating diverse partnership interests, has allowed it to achieve over $1 Billion in acquisitions and financing.
+
+				.col-md-6
+					.progress-linear-group
+						+progress-linear({
+							title: 'Wealth Management',
+							value: '70'
+						}).progress-linear-primary
+						+progress-linear({
+							title: 'Business Owners',
+							value: '54'
+						}).progress-linear-khaki
+						+progress-linear({
+							title: 'Insurance & Annuities',
+							value: '87'
+						}).progress-linear-navy
+						+progress-linear({
+							title: 'Cash & Credit',
+							value: '90'
+						}).progress-linear-dark-orange
+	='\n'
+
+
+	include ../sections/_section-counters-black
+
+
+	//-Progress Bars
+	section.section-60.section-md-75.section-lg-top-100.section-lg-bottom-120
+		.container.text-center
+			h3 Progress Bars
+			.countdown-box.block-centered
+				//- Countdown
+				+countdown({to: '2024-01-22'})
+
+	='\n'
+
+	//-Page Footer
+	include ../sections/_section-footer-default

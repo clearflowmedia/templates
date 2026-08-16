@@ -1,0 +1,88 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-post-classic
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Blog classic'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title('Blog', 'bg-image-1')
+
+  //- Blog classic
+  section.section-50.section-md-75.section-xl-100
+    .container
+      .row.justify-content-md-center
+        .col-xl-10
+          +post-classic({
+            img: 'blog-classic-2-113x113',
+            header: 'Pitfalls of Dismissing',
+            text: [
+              'It is always a good idea to call your employment lawyer before an employee’s dismissal even if the employee has signed an iron clad termination clause. Most of my clients do so and sometimes the call helps the client save thousands of dollars. This past week – like most weeks – I had a number of calls from clients who wanted to terminate an employee.In one case, the employer wanted to terminate a poor performer without just cause... '
+            ],
+            tags: ["Clients", "Employer"],
+            user: 'Joan Williams',
+            time: ['2021-06-17', '05/14/2021'],
+            media : {
+              type: "image",
+              data: 'blog-classic-1-971x649'
+            }
+          })
+
+          +post-classic({
+            img: 'blog-classic-3-113x113',
+            header: 'Tips for Managing Workers’ Compensation Claims',
+            text: ["Workers’ compensation claims are always time-consuming and stressful. Not only do employers need to ensure their employees are treated fairly and properly, but they also must make sure the business is able to function correctly while the employee is being cared for medically. To help make sure the process moves smoothly and efficiently, you should first make sure you are..."],
+            tags: ["Claims", "Business"],
+            user: 'Tom Park',
+            time: ['2021-05-23', '05/17/2021']
+          })
+
+          +post-classic({
+            img: 'blog-classic-5-113x113',
+            header: 'What Do I Do About Medical Bills from My Car Accident?',
+            text: [
+              "For car accident victims who sustain injuries, medical bills are often a dreaded reality. Attorney Ken Harrell of Joye Law Firm provides some insight regarding what he believes clients should do about medical bills from a car accident. Seek the Medical Care You Need. “Medical costs are another issue. Our goal for every client that we represent is that we want to make sure that you get full, appropriate medical care. We do not want there to be shortcuts just because you happen to be involved in an...",
+            ],
+            tags: ["Law Firm", "Attorney"],
+            user: 'John Miller',
+            time: ['2021-04-14', '04/10/2021'],
+            media: {
+              type: "image",
+              data: 'blog-classic-4-970x545'
+            }
+          })
+
+          +post-classic({
+            img: 'blog-classic-9-113x113',
+            header: 'Tips for Social Security Disability Process',
+            text: [
+              "Most people never think that they are going to become disabled, but unfortunately, some do. However, if you become disabled, you may qualify for Social Security Disability benefits. An illness or injury complicates the already frustrating process of filing for Social Security Disability benefits; however, these tips may help you navigate this often stressful situation. Your first thought might be..."
+            ],
+            tags: ["Security", "People"],
+            user: 'Julien Miro',
+            time: ['2021-03-02', '04/3/2021'],
+            media: {
+              type: "gallery",
+              data: [
+                "blog-classic-6-970x545",
+                "blog-classic-7-970x545",
+                "blog-classic-8-970x545"
+              ]
+            }
+          })
+
+          .pagination-custom-wrap.text-center
+            +pagination
+    ='\n'
+
+  //- Page Footer
+  include ../sections/_section-footer-default

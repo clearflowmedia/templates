@@ -1,0 +1,70 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_post-block
+
+block variables
+	- pageName = 'Grid blog'
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title('Blog', 'bg-blog')
+
+	//- Grid blog
+	section.section.section-lg.bg-default
+		.container
+			.row.row-30.justify-content-md-center.justify-content-lg-start
+				.col-md-9.col-lg-6.height-fill
+					+post-block({
+						img: 'blog-grid-1-570x253',
+						header: 'Controlling the Final Cost of Your Renovation',
+						user: 'Joan Williams',
+						time: ['2021-01-01', '5 days ago'],
+						tags: ['News']
+					})
+
+				.col-md-9.col-lg-6.height-fill
+					+post-block({
+						img: 'blog-grid-2-570x253',
+						header: 'Electrical Safety Tips For Home Renovation',
+						user: 'Tom Park',
+						time: ['2021-01-01', '5 days ago'],
+						tags: ['News']
+					})
+
+				.col-md-9.col-lg-6.height-fill
+					+post-block({
+						img: 'blog-grid-3-570x253',
+						header: 'Standard Dimensions for Interior Design',
+						user: 'John Miller',
+						time: ['2021-01-01', '5 days ago'],
+						tags: ['News']
+					})
+
+				.col-md-9.col-lg-6.height-fill
+					+post-block({
+						img: 'blog-grid-4-570x253',
+						header: 'How to Create Perfect Color Combinations',
+						user: 'Julien Miro',
+						time: ['2021-01-01', '5 days ago'],
+						tags: ['News']
+					})
+
+				.col-md-9.col-lg-6.height-fill
+					+post-block({
+						img: 'blog-grid-5-570x253',
+						header: 'Planning Your First Renovation',
+						user: 'Amelia Anderson',
+						time: ['2021-01-01', '5 days ago'],
+						tags: ['News']
+					})
+
+			.pagination-custom-wrap.text-center
+				+pagination
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

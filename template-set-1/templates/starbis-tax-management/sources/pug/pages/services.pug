@@ -1,0 +1,166 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-icon-box-vertical
+include ../elements/_ui-link-image
+
+block variables
+  - var activeIndex = 2
+  - var pageName = 'Services'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title(pageName, 'bg-image-2')
+
+  include ../sections/_section-why-choose-us
+  ='\n'
+
+  //- Our Clients
+  section.section-60.section-md-90.bg-cello
+    .container
+      .row
+        .col-sm-12
+          h3 Our Clients
+      .row.row-40
+        .col-md-7.col-lg-5.col-xl-4
+          //- Owl Carousel
+          .owl-carousel-inverse
+            .owl-carousel.owl-nav-bottom-left(data-autoplay='true', data-items='1', data-stage-padding='0', data-loop='true', data-margin='30', data-mouse-drag="false", data-nav='true')
+              .item
+                p.text-white-05 We work closely with our diverse client base to provide exceptional one-on-one service. Among our clients there are many world-renowned industry leaders.
+              .item
+                p.text-white-05 Got really enjoyable experience with your product. Easy set up is a huge plus. I even didn’t turn to support service.
+              .item
+                p.text-white-05 I’m extremely satisfied with their work. My new website looks great and runs smoothly. The support is excellent too.
+
+        .col-lg-7.col-xl-8
+          .row.row-30.shift-md-top-1
+            .col-sm-6.col-md-3
+              +link-image({img: 'services-2-132x83'})
+
+            .col-sm-6.col-md-3
+              +link-image({img: 'services-3-169x68'})
+
+            .col-sm-6.col-md-3
+              +link-image({img: 'services-4-141x88'})
+
+            .col-sm-6.col-md-3
+              +link-image({img: 'services-5-138x55'})
+  ='\n'
+
+  //- Tax Services
+  section.section-60.section-md-90
+    .container
+      h3.text-center Tax Services
+      p.text-center.text-big We offer a full range of tax planning, preparation and support services.
+
+      .row.row-60.justify-content-sm-center.text-center.text-lg-start
+        .col-md-10.col-lg-4
+          .thumbnail-classic
+            +jpg('services-6-370x220')
+            
+            h5.thumbnail-title Tax Preparation
+           
+            p.text-gray-base-05 Are you anxious about filing your on tax returns? While a computer software program may help, there’s no substitute for the quality of service and advice you’ll receive from an experienced tax...
+
+        .col-md-10.col-lg-4
+          .thumbnail-classic
+            +jpg('services-7-370x220')
+            
+            h5.thumbnail-title Tax Planning
+           
+            p.text-gray-base-05 Proactive planning is the key to minimizing your tax liability. We work with businesses and individuals to pay the least amount of tax required by law. Your unique circumstances will determine the strategies...
+
+        .col-md-10.col-lg-4
+          .thumbnail-classic
+            +jpg('services-8-370x220')
+            
+            h5.thumbnail-title IRS Audit Representation
+           
+            p.text-gray-base-05 If you have been selected for an IRS audit, professional representation can set your mind at ease. We’ll take the lead in dealing with the tax authorities based on our familiarity with their...
+
+  ='\n'
+
+  //- Starbis Is Exactly What You Need
+  section.section-60.section-md-100.bg-athens-gray
+    .container.text-center.text-lg-start
+      .row.row-30.align-items-lg-center.justify-content-xl-center
+        .col-lg-8.col-xl-7
+          h3.h3-variant-2 How to Choose the Right Tax Advisor
+        .col-lg-4.col-xl-3
+          a.btn.btn-lg.btn-primary(href=globals.getTemplateLink) find now
+  ='\n'
+
+  //- What We Do
+  section.section.parallax-container.bg-gray-base.bg-image.context-dark(data-parallax-img='images/clients-testimonials-parallax-1.jpg')
+    .parallax-content
+      .section-60.section-md-90.bg-overlay-cello
+        .container
+          .row
+            .col-sm-12.text-center
+              h3 What We Offer
+              p.text-white.text-big Tax consultancy services for businesses and individuals.
+
+          .row.row-50
+            .col-sm-6.col-lg-4
+              +icon-box-vertical({
+                mod: 'icon-box-vertical-sm',
+                icon: ['icon-lg', 'fl-puppets-users30'],
+                header: 'Tax Consultancy Services',
+                text: 'We provide a comprehensive range of specialist tax and advisory support across all of the major taxes. ',
+                descStyle: "text-white-05"
+              })
+
+            .col-sm-6.col-lg-4
+              +icon-box-vertical({
+                mod: 'icon-box-vertical-sm',
+                icon: ['icon-lg', 'fl-puppets-maths26'],
+                header: 'Bookkeeping',
+                text: 'We’ll create and maintain a chart of accounts to capture all of your financial transactions, provide the right information to manage your business.',
+                descStyle: "text-white-05"
+              })
+
+            .col-sm-6.col-lg-4
+              +icon-box-vertical({
+                mod: 'icon-box-vertical-sm',
+                icon: ['icon-lg', 'fl-puppets-money163'],
+                header: 'Tax Enquiry Fee Protection Insurance',
+                text: 'The cost of a tax investigation can be very expensive and thus the advantage of being adequately covered for this is more important now than ever.',
+                descStyle: "text-white-05"
+              })
+
+            .col-sm-6.col-lg-4
+              +icon-box-vertical({
+                mod: 'icon-box-vertical-sm',
+                icon: ['icon-lg', 'fl-puppets-calendar184'],
+                header: 'Tax Training',
+                text: 'Our team deliveres training for a significant number of firms across the area, providing tax updates and courses on key tax issues. ',
+                descStyle: "text-white-05"
+              })
+
+            .col-sm-6.col-lg-4
+              +icon-box-vertical({
+                mod: 'icon-box-vertical-sm',
+                icon: ['icon-lg', 'fl-puppets-bank17'],
+                header: 'Bank Reconciliation',
+                text: 'Our bank reconciliation services ensure that every deposit and withdrawal aligns with entries into your accounting records. ',
+                descStyle: "text-white-05"
+              })
+
+            .col-sm-6.col-lg-4
+              +icon-box-vertical({
+                mod: 'icon-box-vertical-sm',
+                icon: ['icon-lg', 'fl-puppets-profiles-avatar'],
+                header: 'Individual Consultation',
+                text: 'When you use our professional accounting services, you get more than a collection of records and reports. You get the benefit of our skills, experience, and expertise. ',
+                descStyle: "text-white-05"
+              })
+
+  //- Page Footer
+  include ../sections/_section-footer-default

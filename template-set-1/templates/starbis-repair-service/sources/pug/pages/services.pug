@@ -1,0 +1,109 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_icon-box-vertical
+include ../elements/_link-image
+
+block variables
+	- pageName = 'Services'
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title(pageName, 'bg-image-8')
+
+	//- What We Do
+	section.section.section-lg.bg-sky-blue
+		.container
+			.row.justify-content-center
+				.col-md-8
+					h3.text-center What We Do
+					p.block-centered.text-center We will take care of your web design project regardless of its level of complexity. We are not afraid of difficult tasks – hundreds of our satisfied clients can prove that.
+
+			.row.row-50.row-xl-60
+				.col-sm-6.col-lg-4
+					+icon-box-vertical({
+						mod: 'icon-box-vertical-sm',
+						icon: ['icon-md', 'material-icons-phonelink'],
+						header: 'Interior Renovation',
+						text: 'Elit. Commodi eveniet itaque libero nesciunt perferendis rerum sint sunt unde velit voluptatem!'
+					})
+
+				.col-sm-6.col-lg-4
+					+icon-box-vertical({
+						mod: 'icon-box-vertical-sm',
+						icon: ['icon-md', 'material-icons-thumb_up'],
+						header: 'Home Remodeling',
+						text: 'A dolore, in laborum nemo neque omnis quam quasi sapiente sequi sint vel exercitationem velit.'
+					})
+
+				.col-sm-6.col-lg-4
+					+icon-box-vertical({
+						mod: 'icon-box-vertical-sm',
+						icon: ['icon-md', 'material-icons-collections'],
+						header: 'Home Additions',
+						text: 'Placeat quia repellendus sapiente sed sunt tempora totam ut. Animi dolores laudantium pariatur.'
+					})
+
+				.col-sm-6.col-lg-4
+					+icon-box-vertical({
+						mod: 'icon-box-vertical-sm',
+						icon: ['icon-md', 'material-icons-loop'],
+						header: 'Property Maintenance',
+						text: 'Doloremque eum incidunt ipsam iste iusto laboriosam magnam maiores minima molestias nam numquam.'
+					})
+
+				.col-sm-6.col-lg-4
+					+icon-box-vertical({
+						mod: 'icon-box-vertical-sm',
+						icon: ['icon-md', 'material-icons-layers'],
+						header: 'Renovation Services',
+						text: 'Expedita ipsum laborum magni neque omnis quod, ut? Amet animi aut debitis earum minus rerum, sus.'
+					})
+
+				.col-sm-6.col-lg-4
+					+icon-box-vertical({
+						mod: 'icon-box-vertical-sm',
+						icon: ['icon-md', 'material-icons-note_add'],
+						header: 'Project Management',
+						text: 'Doloremque eius eligendi laborum molestiae nam nesciunt officia porro praesentium sapiente sequi.'
+					})
+
+
+
+	include ../sections/_section-why-choose-us
+
+	//- Our Clients
+	section.section.section-lg.bg-mine-shaft
+		.container
+			h3 Our Clients
+			.row.row-40.offset-top-2
+				.col-md-7.col-lg-5.col-xl-4
+					//- Owl Carousel
+					.owl-carousel-wrap
+						.owl-carousel.owl-theme-3.owl-nav-bottom-left(data-autoplay='true', data-items='1', data-stage-padding='0', data-loop='true', data-margin='30', data-mouse-drag="false", data-nav='true')
+							.item
+								p Alias ipsum dolor sit amet, consectetur adipisicing elit. Alias, aliquam blanditiis consequatur debitis dignissimos.
+							.item
+								p Enim exercitationem expedita illum, ipsa ipsam ipsum nobis officiis, quae quisquam rerum similique soluta tenetur ullam.
+							.item
+								p Consectetur maxime officia quidem rerum voluptatem? Animi modi, nam pariatur placeat quos similique. Distinctio, pariatur.
+
+				.col-lg-7.col-xl-8
+					.row.row-30.shift-md-top-1
+						.col-sm-6.col-md-3
+							+link-image({img: 'services-2-132x83.png'})
+
+						.col-sm-6.col-md-3
+							+link-image({img: 'services-3-169x68.png'})
+
+						.col-sm-6.col-md-3
+							+link-image({img: 'services-4-141x88.png'})
+
+						.col-sm-6.col-md-3
+							+link-image({img: 'services-5-138x55.png'})
+
+	//- Page Footer
+	include ../sections/_section-footer-default

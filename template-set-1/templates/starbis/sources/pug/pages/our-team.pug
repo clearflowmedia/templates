@@ -1,0 +1,120 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_thumbnail-1
+include ../elements/_thumbnail-2
+
+block variables
+	- pageName = 'Our team'
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title(pageName, 'bg-image-6')
+
+	//- Team
+	section.section.section-66.section-md-bottom-90.section-xl-bottom-120
+		.container
+			h3.text-center Team
+			.row.row-40.row-lg-60.offset-lg-top-60
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-1({
+						img: 'team-1-189x189.png',
+						header: "Julien Miro",
+						caption: "Software Developer"
+					})
+
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-1({
+						img: 'team-2-189x189.png',
+						header: "Joan Williams",
+						caption: "Support Operator"
+					})
+
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-1({
+						img: 'team-3-189x189.png',
+						header: "Benedict Smith",
+						caption: "Creative Director"
+					})
+
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-1({
+						img: 'team-4-189x189.png',
+						header: "Madlen Green",
+						caption: "Sales Manager"
+					})
+
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-1({
+						img: 'team-5-189x189.png',
+						header: "Hannah Lamb",
+						caption: "Graphic Designer"
+					})
+
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-1({
+						img: 'team-6-189x189.png',
+						header: "John Miller",
+						caption: "Junior UX Designer"
+					})
+
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-1({
+						img: 'team-7-189x189.png',
+						header: "Tom Park",
+						caption: "Executive Director"
+					})
+
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-1({
+						img: 'team-8-189x189.png',
+						header: "Nora Russell",
+						caption: "Account Manager"
+					})
+
+		//- Starbis Team
+		.container.offset-top-8
+			h3.text-center Starbis Team
+			.row.row-40
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-2({
+						img: 'team-9-246x300',
+						header: "Amanda Smith",
+						caption: "Business Expert",
+						phone: "+1 (409) 987–5874",
+						email: "info@demolink.org"
+					})
+
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-2({
+						img: 'team-10-246x300',
+						header: "John Doe",
+						caption: "PR-Manager",
+						phone: "+1 (409) 987–5874",
+						email: "info@demolink.org"
+					})
+
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-2({
+						img: 'team-11-246x300',
+						header: "Vanessa Ives",
+						caption: "Marketing Expert",
+						phone: "+1 (409) 987–5874",
+						email: "info@demolink.org"
+					})
+
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-2({
+						img: 'team-12-246x300',
+						header: "David Nicholson",
+						caption: "Senior HR Manager",
+						phone: "+1 (409) 987–5874",
+						email: "info@demolink.org"
+					})
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

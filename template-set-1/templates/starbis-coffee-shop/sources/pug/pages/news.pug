@@ -1,0 +1,90 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_post-modern
+include ../sections/_section-header-default
+
+block variables
+	- pageName = 'News'
+
+block page
+	//- Page Header
+	+header-default
+
+	//- Page Content
+	+breadcrumbs
+
+	//- News
+	section.section.section-md.bg-transparent
+		.container
+			.row.row-30.justify-content-md-center.justify-content-lg-start
+				.col-md-9.col-lg-6
+					+post-modern({
+						type: 'material-icons-videocam',
+						header: '5 Steps to Blog’s Success',
+						content: [
+							{type: 'video', data: links.video},
+							{
+								type: 'text',
+								data: ['Unfortunately people will not come to your blog just to see what you have published on it. To make sure that your blog becomes a successful one, you have to work on it to attract visitors interested in your content.']
+							}
+						],
+						time: ['2021-01-01', '2 days ago'],
+						tags: ['Business', 'Marketing']
+					})
+
+					+post-modern({
+						type: 'material-icons-local_see',
+						header: 'Making Money Online with Your Computer Only',
+						content: [
+							{type: 'image', data: 'blog-masonry-1-570x321'}
+						],
+						time: ['2021-01-01', '7 days ago'],
+						tags: ['Lifestyle']
+					})
+
+				.col-md-9.col-lg-6
+					+post-modern({
+						type: 'material-icons-library_books',
+						header: 'How to Create Perfect Color Combinations',
+						content: [
+							{
+								type: 'text',
+								data: ['One of the most challenging and tricky parts of the design process can be choosing a color palette that represents your brand or message, while creating an amazing base for the design. Creating perfect color combinations is more than just picking two colors and running with it.']
+							}
+						],
+						time: ['2021-01-01', '3 days ago'],
+						tags: ['Tips']
+					})
+
+					+post-modern({
+						type: 'material-icons-audiotrack',
+						header: '5 Most Common Mistakes New Developers Make',
+						content: [
+							{type: 'audio', data: links.soundcloud}
+						],
+						time: ['2021-01-01', '4 days ago'],
+						tags: ['News']
+					})
+
+					+post-modern({
+						type: 'material-icons-videocam',
+						header: '10 Type Rules for an Excellent User Experience',
+						content: [
+							{type: 'image', data: 'blog-masonry-2-570x321'},
+							{
+								type: 'text',
+								data: ['When it comes to websites and apps, good typography is more than just a pretty typeface. Letting has to be highly readable – and scannable – while providing a solid visual connection to the content. It’s a pretty tall order, but something most designers can do with a little practice.']
+							}
+						],
+						time: ['2021-01-01', '2 days ago'],
+						tags: ['Design']
+					})
+
+
+			.pagination-custom-wrap.text-center
+				+pagination
+
+	+map.section-sm
+	//- Page Footer
+	include ../sections/_section-footer-default

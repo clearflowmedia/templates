@@ -1,0 +1,261 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-icon-box
+include ../elements/_ui-quote-bordered
+
+block variables
+  - var activeIndex = 0
+  - var footerLink = true
+
+block title
+  title Home
+
+block page
+  //- Page Header
+  header.page-head
+    //- RD Navbar
+    .rd-navbar-wrap
+      nav.rd-navbar.rd-navbar-default(
+        data-body-class='rd-navbar-static-smooth',
+        data-layout=                'rd-navbar-fixed'
+        data-sm-layout=             'rd-navbar-fixed'
+        data-md-layout=             'rd-navbar-fixed'
+        data-md-device-layout=      'rd-navbar-fixed'
+        data-lg-layout=             'rd-navbar-static'
+        data-lg-device-layout=      'rd-navbar-static'
+        data-xl-layout=             'rd-navbar-static'
+        data-xl-device-layout=      'rd-navbar-static'
+        data-xxl-layout=            'rd-navbar-static'
+        data-xxl-device-layout=     'rd-navbar-static'
+        data-lg-stick-up-offset=    '60px'
+        data-xl-stick-up-offset=    '60px'
+        data-xxl-stick-up-offset=   '60px'
+        data-lg-stick-up=           'true'
+        data-xl-stick-up=           'true'
+        data-xxl-stick-up=          'true'
+      )
+        .rd-navbar-inner
+
+          //- RD Navbar Panel
+          .rd-navbar-panel
+            //- RD Navbar Toggle
+            button.rd-navbar-toggle(data-custom-toggle='.rd-navbar-nav-wrap', data-custom-toggle-disable-on-blur='true')
+              span
+
+            //- RD Navbar Brand
+            a.rd-navbar-brand.brand(href='index.html')
+              +logo
+
+          .rd-navbar-nav-wrap
+            .rd-navbar-nav-inner
+              include ../_includes/navbar/_nav
+
+          .rd-navbar-contact
+            .unit.flex-row.align-items-center
+              .unit-left
+                svg(version='1.1', fill='none', stroke='#6bcad2'  x='0px', y='0px', width='32px', height='32px', viewbox='0 0 54 53.948').icon
+                  g
+                    path(style='stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', d='\
+                    M43.557,51.564l4.269-4.269c1.704-1.704,1.529-4.514-0.372-5.994l-6.683-5.202c-1.456-1.133-3.497-1.125-4.944,0.018l-1.486,1.174\
+                    c-1.594,1.26-3.879,1.126-5.316-0.31L17.07,25.026c-1.436-1.437-1.57-3.722-0.31-5.316l1.174-1.486\
+                    c1.143-1.448,1.151-3.488,0.018-4.944L12.75,6.597c-1.48-1.901-4.29-2.076-5.994-0.372l-4.269,4.269\
+                    c-2.942,2.942-2.93,11.19,13.475,27.595C32.366,54.493,40.851,54.27,43.557,51.564z')
+                    path(style='stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', d='\
+                    M53,26C53,12.193,41.807,1,28,1')
+                    path(style='stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', d='\
+                    M28,7c10.493,0,19,8.507,19,19')
+                    path(style='stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', d='\
+                    M28,13c7.18,0,13,5.82,13,13')
+                    path(style='stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', d='\
+                    M28,19c3.866,0,7,3.134,7,7')
+              .unit-body
+                p Customer Service
+                a(href='tel:+14099875874') +1 (409) 987–5874
+  ='\n'
+
+  include ../sections/_section-slider
+
+  //- Page Content
+  section.section-transform.bg-transform.bg-transform-first
+    .bg-transform-inner.bg-wasip
+    .container.section-relative
+      .row.row-40(style='transform: translateY(-15px);')
+        .col-md-6.col-xl-3.height-fill
+          +icon-box({
+            header: 'Quick and Easy',
+            text: 'We offer lots of ways to quickly pay off your loans.'
+          })
+            svg(version='1.1', x='0px', y='0px', width='52', height='52', viewbox='0 0 43.598 44', style='stroke: #6bcad2; enable-background:new 0 0 43.598 44;')
+              polyline(style='fill:none;;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', points='\
+                                                            30.598,16 21.598,24 15.598,21 ')
+              g
+                path(style='clip-path:url(#SVGID_2_);fill:none;;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', d='\
+                                                              M42.598,22c0-11.598-9.402-21-21-21S1,10.402,1,22s9.402,21,21.402,21v-4C12.402,39,5,31.389,5,22S12.41,5,21.799,5\
+                                                              s16.899,7.611,16.899,17c0,6.893-4.152,12.828-10.049,15.496')
+
+        .col-md-6.col-xl-3.height-fill
+          +icon-box({
+            header: 'No Penalties',
+            text: 'Our clients are free of any prepayment penalties.'
+          })
+            svg(version='1.1',   x='0px', y='0px', width='52', height='48', viewbox='0 0 45 42', style='fill: #6bcad2; enable-background:new 0 0 45 42;')
+              g
+                path(style='clip-path:url(#SVGID_2_);', d='M36.562,42H5.439C2.439,42,0,39.561,0,36.562V5.438C0,2.439,2.439,0,5.439,0h31.123\
+                                                                              C39.559,0,41.998,2.439,42,5.437c0,0.553-0.447,1.001-1,1.001c-0.551,0-1-0.447-1-1C40,3.542,38.458,2,36.562,2H5.439\
+                                                                              C3.542,2,2,3.542,2,5.438v31.124C2,38.458,3.542,40,5.439,40h31.123C38.458,40,40,38.458,40,36.562V21c0-0.552,0.448-1,1-1\
+                                                                              c0.553,0,1,0.448,1,1v15.562C42,39.561,39.56,42,36.562,42')
+                path(style='clip-path:url(#SVGID_2_);', d='M5,36c-0.553,0-1-0.448-1-1V8.037C4,5.811,5.811,4,8.036,4H35c0.553,0,1,0.448,1,1\
+                                                                              c0,0.552-0.447,1-1,1H8.036C6.913,6,6,6.914,6,8.037V35C6,35.552,5.553,36,5,36')
+                path(style='clip-path:url(#SVGID_2_);', d='M21,32c-0.033,0-0.067-0.001-0.101-0.005c-0.283-0.029-0.541-0.177-0.708-0.407l-8-11\
+                                                                              c-0.325-0.446-0.226-1.072,0.221-1.397c0.447-0.325,1.072-0.226,1.397,0.221l7.342,10.096L43.326,9.262\
+                                                                              c0.406-0.372,1.039-0.345,1.412,0.064c0.373,0.407,0.344,1.04-0.064,1.412l-23,21C21.489,31.908,21.248,32,21,32')
+
+        .col-md-6.col-xl-3.height-fill
+          +icon-box({
+            header: 'Lower Rates',
+            text: 'We have lower rates than most of our competitors.'
+          })
+            img(src="images/icon-01.png", alt="")
+
+        .col-md-6.col-xl-3.height-fill
+          +icon-box({
+            header: 'Secure Process',
+            text: 'Complete loans on our site quickly and securely.'
+          })
+            svg(version='1.1',  x='0px', y='0px', width='37', height='58', viewbox='0 0 30 45.016', style='stroke: #6bcad2; enable-background:new 0 0 30 45.016;')
+              g
+                path(style='clip-path:url(#SVGID_2_);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', d='\
+                                                                              M26.417,11.984C26.417,5.909,21.701,1,15.626,1S4.803,5.94,4.803,12.078v4.937')
+                line(style='clip-path:url(#SVGID_2_);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', x1='11.804', y1='29.016', x2='19.804', y2='29.016')
+                line(style='clip-path:url(#SVGID_2_);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', x1='9.804', y1='25.016', x2='21.804', y2='25.016')
+                line(style='clip-path:url(#SVGID_2_);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', x1='13.804', y1='33.016', x2='17.804', y2='33.016')
+                path(style='clip-path:url(#SVGID_2_);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', d='\
+                                                                              M20,17.016H4.366C2.507,17.016,1,18.523,1,20.382V38.65c0,1.859,1.507,2.366,3.366,2.366h21.267c1.86,0,3.367-0.507,3.367-2.366\
+                                                                              V20.382c0-1.859-1.507-3.366-3.367-3.366H25H20z')
+                line(style='clip-path:url(#SVGID_2_);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', x1='5.804', y1='44.016', x2='25.804', y2='44.016')
+    .container.container-top-0.section-60.section-lg-top-80.section-lg-bottom-100
+      h2.text-spacing-50 About Us
+      a.video-cover(style='background: url(images/home-1-1169x524.jpg) center top; background-size: cover;' data-lightbox='iframe', href='https://www.youtube.com/watch?v=1UWpbtUupQQ')
+        span.link-circle.link-white: span.icon.icon-xl.mdi.mdi-play
+  ='\n'
+
+  section.section-60.section-lg-100.section-transform.bg-transform.context-dark
+    .container.text-lg-start
+      .row.row-30.justify-content-lg-between
+        .col-lg-5
+          h2 Better Rates
+          h5.offset-top-15 By using better data
+          p.text-spacing-50.inset-xl-right-50 There's more to you than your credit score. Your education and job history help us understand more about your future.
+          //Select 2
+          form(action='#').rd-mailform-inline
+            .select-2-white.form-wrap
+              select.form-input.select-filter(data-placeholder="I would like to", data-minimum-results-for-search="Infinity", data-constraints="@Required")
+                option(value="2") Demo Item 1-1
+                option(value="3") Demo Item 1-2
+                option(value="4") Demo Item 1-2
+                option(value="5") Demo Item 2-1
+                option(value="6") Demo Item 2-2
+                option(value="7") Demo Item 2-3
+            button.btn.btn-link.btn-link-white(style='min-width: 174px;') Check Your Rate
+        .col-lg-6.col-lg-divider
+          table.table-transparent
+            tr
+              th
+              th
+                img(src="images/logo-white.png", width="104", height="37", alt="logo")
+              th
+                .h6 Other Lenders
+            tr
+              td FICO score
+              td: span.icon.icon-primary.mdi.mdi-check.icon-md-smaller
+              td: span.icon.icon-dust.mdi.mdi-check.icon-md-smaller
+            tr
+              td Years of credit
+              td: span.icon.icon-primary.mdi.mdi-check.icon-md-smaller
+              td: span.icon.icon-dust.mdi.mdi-check.icon-md-smaller
+            tr
+              td Education
+              td: span.icon.icon-primary.mdi.mdi-check.icon-md-smaller
+              td: span.icon.icon-dust.mdi.mdi-check.icon-md-smaller
+            tr
+              td Area of study
+              td: span.icon.icon-primary.mdi.mdi-check.icon-md-smaller
+              td
+            tr
+              td Job history
+              td: span.icon.icon-primary.mdi.mdi-check.icon-md-smaller
+              td
+    .bg-transform-inner.bg-colin
+  //- Team
+  section.section-75.section-lg-100.text-start.bg-default
+    .container
+      include ../sections/_section-testimonials
+
+  // Material Parallax
+  +parallax({
+    img: 'bg-index',
+    addClass: 'bg-black'
+  })
+    .section-75.section-lg-100.context-dark
+      .container
+        h2 Get a Loan In 3 Quick Steps
+
+        ul.row.row-30.row-offset-1.list-index
+          li.col-sm-6.col-lg-4
+            .box-outline
+              .list-index-counter
+              h5 Check your rate in 2 minutes
+              p.text-spacing-50 Just answer a few quick questions about your education and employment.
+          li.col-sm-6.col-lg-4
+            .box-outline
+              .list-index-counter
+              h5 Get your money the next day
+              p.text-spacing-50 After your application is approved, you'll have a chance to review your loan.
+          li.col-sm-6.col-lg-4
+            .box-outline
+              .list-index-counter
+              h5 Repay: set it and forget it
+              p.text-spacing-50 It's easy to set up automated monthly payments without any penalties.
+
+  include ../sections/_section-user-tabs
+
+  section.section-75.section-lg-100.bg-porcelain
+    .container
+      .row.row-50.align-items-sm-center.justify-content-lg-between
+        .col-lg-6.col-xl-5.text-lg-start
+          h2 Get Your Rate in
+            br.d-none.d-lg-blcok
+            =' Just 2 Minutes'
+          h5.offset-top-15.text-spacing-50 It won't affect your credit score!
+          form(action='#').rd-mailform-inline
+            .form-wrap
+              //Select 2
+              select.form-input.select-filter(data-placeholder="I would like to", data-minimum-results-for-search="Infinity", data-constraints="@Required")
+                option(value="2") Demo Item 1-1
+                option(value="3") Demo Item 1-2
+                option(value="4") Demo Item 1-2
+                option(value="5") Demo Item 2-1
+                option(value="6") Demo Item 2-2
+                option(value="7") Demo Item 2-3
+            button.btn.btn-link.btn-link-primary(style='min-width: 174px;') Check Your Rate
+        .col-lg-5
+          .section-dividers-white
+            .row.row-30
+              .col-sm-6
+                a(href='#').thumbnail-grayscale
+                  img(src="images/clients-3.png", alt="")
+              .col-sm-6
+                a(href='#').thumbnail-grayscale
+                  img(src="images/clients-4.png", alt="")
+            .row.row-30.row-offset-5
+              .col-sm-6
+                a(href='#').thumbnail-grayscale
+                  img(src="images/clients-7.png", alt="")
+              .col-sm-6
+                a(href='#').thumbnail-grayscale
+                  img(src="images/clients-8.png", alt="")
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

@@ -1,0 +1,20 @@
+//- Twitter widget
+mixin twitter-widget(obj)
+  //- Twitter widget
+  article.twitter-widget
+    a(data-twitter-type='tweet')
+      .twitter-widget-header
+        .unit.unit-horizontal.unit-spacing-md.align-items-center
+          .unit-left
+            img.tweet-avatar(data-avatar='src', src='images/_blank.png', alt='')
+          .unit-body.twitter-widget-meta
+            h5(data-user_name='text')
+            p(data-screen_name='text')
+
+      .twiter-widget-body
+        .twitter-widget-inset
+          p.tweet-text(data-tweet='text')
+        figure.twitter-widget-media: img(data-media_url='src', src='images/_blank.png', alt='')
+
+      .twitter-widget-footer
+        .twitter-widget-time(data-date='text', data-datetime='datetime')

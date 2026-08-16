@@ -1,0 +1,138 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-icon-box-vertical
+include ../elements/_ui-link-image
+
+block variables
+	- var activeIndex = 2
+	- var pageName = 'Services'
+
+block title
+	title=pageName
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+
+
+	+page-title(pageName, 'bg-image-7')
+
+	include ../sections/_section-why-choose-us
+
+	//- What We Do
+	.divider-primary
+	section.section-66.section-md-90.bg-black.bg-image.bg-image-center.bg-image-white.context-dark.overlay-8(style='background-image: url(images/bg-image-12.jpg);')
+		.container.position-relative
+			.row.row-60.row-xl-90
+				.col-sm-12.text-center
+					h3 Our Services
+					p.block-centered.text-white(style='max-width: 540px;').
+						Every policy is designed to offer you affordable coverage and flexible payment options, and you can file claims anytime with 24/7 customer service.
+
+			.row.row-50
+				.col-sm-6.col-lg-4
+					+icon-box-vertical({
+						mod: 'icon-box-vertical-sm',
+						icon: ['icon-md', 'material-design-clipboard99'],
+						header: 'Condo Insurance',
+						text: 'Get dependable condo insurance to protect your personal belongings..'
+					})
+
+				.col-sm-6.col-lg-4
+					+icon-box-vertical({
+						mod: 'icon-box-vertical-sm',
+						icon: ['icon-md', 'material-design-city24'],
+						header: 'Flood Insurance',
+						text: 'Safeguard your home and the stuff inside and don’t worry about damages.'
+					})
+
+				.col-sm-6.col-lg-4
+					+icon-box-vertical({
+						mod: 'icon-box-vertical-sm',
+						icon: ['icon-md', 'material-design-bookmark48'],
+						header: 'Law Insurance ',
+						text: 'Insurance policies sold to corporate policyholders protect against a wide variety of risks.'
+					})
+
+				.col-sm-6.col-lg-4
+					+icon-box-vertical({
+						mod: 'icon-box-vertical-sm',
+						icon: ['icon-md', 'material-design-man460'],
+						header: 'Golf Cart Insurance',
+						text: 'You can get reliable coverage from us to protect your golf cart.'
+					})
+
+				.col-sm-6.col-lg-4
+					+icon-box-vertical({
+						mod: 'icon-box-vertical-sm',
+						icon: ['icon-md', 'material-design-earth205'],
+						header: 'Umbrella Insurance',
+						text: 'Get the extra layer of coverage you need with umbrella insurance..'
+					})
+
+				.col-sm-6.col-lg-4
+					+icon-box-vertical({
+						mod: 'icon-box-vertical-sm',
+						icon: ['icon-md', 'material-design-briefcase50'],
+						header: 'Travel Insurance',
+						text: 'Travel insurance provides cover if you require medical attention, lose any belongings or other complications.'
+					})
+	.divider-primary
+	='\n'
+
+	//- Pricing tables
+	section.bg-decoration-wrap.bg-decoration-bottom.bg-decoration-bottom-mod.section-60.section-md-100.bg-default(style='background: #fafbfe')
+		.container.bg-decoration-content
+			.row.justify-content-md-center.row-40
+				.col-lg-10.col-xl-12
+					h3.text-spacing--25 Choose Your Plan
+				.col-lg-10.col-xl-12
+					include ../_includes/_pricing-tables-range
+		.bg-decoration-object.bg-iron.bg-iron-custom
+	='\n'
+
+	include ../sections/_section-default-cta
+
+
+
+	//- Our Clients
+	section.section-60.section-md-90.section-xl-bottom-120.bg-mine-shaft.bg-mine-shaft-varinat-1
+		.container
+			.row.row-15
+				.col-sm-12
+					h3.text-spacing--25 Our Clients
+				.col-12
+					.row.row-40
+						.col-md-7.col-lg-5.col-xl-4
+							//- Owl Carousel
+							.owl-carousel-inverse
+								.owl-carousel.owl-nav-bottom-left(data-autoplay='true', data-items='1', data-stage-padding='0', data-loop='true', data-margin='30', data-mouse-drag="false", data-nav='true')
+									.item
+										p We’ve built our reputation on partnering with agents all around the world to provide comprehensive insurance for their clients.
+									.item
+										p All our clients receive full support throughout our cooperation process. It allows them to avoid any unnecessary insurance troubles.
+									.item
+										p Hundreds of small and big businesses, as well as international companies, have already benefited from working with us. Now it’s your time!
+
+						.col-lg-7.col-xl-8
+							.row.shift-md-top-1.row-30
+								.col-sm-6.col-md-3
+									+link-image({img: 'services-2-166x76'})
+
+								.col-sm-6.col-md-3
+									+link-image({img: 'services-3-152x67'})
+
+								.col-sm-6.col-md-3
+									+link-image({img: 'services-3-131x68'})
+
+								.col-sm-6.col-md-3
+									+link-image({img: 'services-4-145x58'})
+	='\n'
+
+
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

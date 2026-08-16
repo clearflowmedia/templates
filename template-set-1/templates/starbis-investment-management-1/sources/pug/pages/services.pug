@@ -1,0 +1,175 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-icon-box-vertical
+include ../elements/_ui-link-image
+
+block variables
+  - var activeIndex = 8
+  - var pageName = 'Services'
+
+block title
+  title=pageName
+
+block page
+  //-Page Header
+  include ../sections/_section-header-default
+
+
+  +page-title(pageName, 'bg-image-4')
+
+  //-You Can Trust Us
+  section
+    .container
+      .row.flex-lg-row-reverse.align-items-lg-end.justify-content-lg-end
+        .col-md-11.col-lg-6.col-xl-5
+          .section-60.section-md-90.section-md-top-130
+            h3 Management Services
+            p Engaging  the services of Investment Company can bring you the peace of mind that comes with knowing you've planned prudently for your future. We are committed to providing you with superior wealth management services. We can offer advice and comprehensive solutions for all of your financial planning needs. We are dedicated to placing your best interests first. Our entire investment philosophy and delivery of services to our clients begins with our core principle to operate in a conflict-free environment.
+            a.btn.btn-ebony-clay-outline(href='about.html') Read More
+
+        .col-lg-6.col-xl-6.d-none.d-lg-block
+          .image-wrap-2
+            +jpg('services-1-461x514')
+  ='\n'
+
+  //-What We Do
+  +parallax({
+    img: 'clients-parallax-1',
+    addClass: 'bg-black'
+  })
+    .section-60.section-md-90.context-dark.section-bordered-inside
+      .container
+        .text-center
+          h3 Investment Help
+          p.block-centered.text-white-05(style='max-width: 540px;').
+            Managing capital for institutions and private investors all over the world. Let investment professionals help you.
+
+        .row.row-50
+          .col-sm-6.col-lg-4
+            +icon-box-vertical({
+              mod: 'icon-box-vertical-sm',
+              icon: ['icon-lg-bigger', 'mercury-icon-chart-up-2'],
+              header: 'Wealth Management',
+              textClass: "text-white-05",
+              text: 'Wealth management is the ability of an advisor or advisory team to deliver a full range of financial services and products to an affluent client in a consultative way.'
+            })
+
+          .col-sm-6.col-lg-4
+            +icon-box-vertical({
+              mod: 'icon-box-vertical-sm',
+              icon: ['icon-lg-bigger', 'mercury-icon-group'],
+              header: 'Stocks, Bonds & Mutual Funds',
+              textClass: "text-white-05",
+              text: 'While stocks typically are higher risk investments due to market volatility, they offer potentially high returns. Let us help you manage your portfolio and offer financial advice. '
+            })
+
+          .col-sm-6.col-lg-4
+            +icon-box-vertical({
+              mod: 'icon-box-vertical-sm',
+              icon: ['icon-lg-bigger', 'mercury-icon-screen'],
+              header: 'Insurance & Annuities',
+              textClass: "text-white-05",
+              text: 'We offer a variety of solutions from leading financial service providers, so you have many options when deciding what type of annuity is right for you.'
+            })
+
+          .col-sm-6.col-lg-4
+            +icon-box-vertical({
+              mod: 'icon-box-vertical-sm',
+              icon: ['icon-lg-bigger', 'mercury-icon-briefcase'],
+              header: 'Retirement & College Savings',
+              textClass: "text-white-05",
+              text: 'Finding a balance with your money is a crucial part of personal finance. Saving for retirement does not have to be mutually exclusive from saving for college.'
+            })
+
+          .col-sm-6.col-lg-4
+            +icon-box-vertical({
+              mod: 'icon-box-vertical-sm',
+              icon: ['icon-lg-bigger', 'mercury-icon-presentation-3'],
+              header: 'Business Owners',
+              textClass: "text-white-05",
+              text: 'You need a financial plan — one that addresses financial needs for every stage of your business life cycle and takes into account your personal financial goals and dreams.'
+            })
+
+          .col-sm-6.col-lg-4
+            +icon-box-vertical({
+              mod: 'icon-box-vertical-sm',
+              icon: ['icon-lg-bigger', 'mercury-icon-money'],
+              header: 'Cash & Credit',
+              textClass: "text-white-05",
+              text: 'You may select from our comprehensive suite of managed account programs, which are designed for various levels of investment experience and sophistication.'
+            })
+  ='\n'
+
+  //-Our Clients
+  section.section-60.section-md-90.section-xl-bottom-120.bg-whisperapprox
+    .container
+      h3 Our Clients
+      .row.row-40
+        .col-md-7.col-lg-5.col-xl-4
+          //-Owl Carousel
+          .owl-carousel.owl-nav-bottom-left(data-autoplay='true', data-items='1', data-stage-padding='0', data-loop='true', data-margin='30', data-mouse-drag="false", data-nav='true', data-animation-in='fadeIn', data-animation-out='fadeOut')
+            .item
+              p We work closely with our diverse client base to provide the exceptional service. Among our clients there are many world-renowned industry leaders.
+            .item
+              p Our firm is like family. We truly believe that each case is someone’s life and we need to treat it as such.
+            .item
+              p Results are only successful when we  make a difference in your life. We’ll help you get the money and benefits.
+
+        .col-lg-7.col-xl-8
+          .row.row-30.shift-lg-top-1
+            .col-sm-6.col-md-3
+              +link-image({img: 'clients-3-132x83'})
+
+            .col-sm-6.col-md-3
+              +link-image({img: 'clients-4-134x77'})
+
+            .col-sm-6.col-md-3
+              +link-image({img: 'clients-5-141x88'})
+
+            .col-sm-6.col-md-3
+              +link-image({img: 'clients-6-152x64'})
+  ='\n'
+
+
+  //-Pricing tables
+  section.section-60.section-md-100.bg-gray-lighter
+    .container
+      h3.text-lg-center Services Overview
+      .row.justify-content-lg-center
+        .col-lg-8.col-xl-6
+          p.text-lg-center We offer a comprehensive portfolio management, IRA, annuity, non-retirement, and other investment accounts and manage a portfolio designed to meet your needs.
+      .row.row-60
+        .col-md-6.col-lg-4
+          .post
+            +jpg('services-6-370x220')
+            h5
+              a(href="blog-post.html") Account Management
+            p.text-gray-05 Because we recognize that saving and investing for retirement is so important, we have made a special commitment to retirement investors. We will help you make the most of your plan to achieve your retirement savings.
+        .col-md-6.col-lg-4
+          .post
+            +jpg('services-7-370x220')
+            h5
+              a(href="blog-post.html") Rollover IRA
+            p.text-gray-05 When you rollover retirement plan assets to an IRA managed by our Investment Company, we’ll implement an optimal investment strategy to suit your individual needs and help ensure you enjoy a satisfying retirement.
+        .col-md-6.col-lg-4
+          .post
+            +jpg('services-8-370x220')
+            h5
+              a(href="blog-post.html") Other Services
+            p.text-gray-05 Our Investment Company’s primary focus is investment management, retirement planning, and financial planning. However, our goal is to be able to advise, counsel and offer solutions for all of our clients' financial service needs.
+
+  //-The Law Firm You Can Trust!
+  section.section-60.section-md-100.bg-whisperapprox
+    .container.text-center.text-lg-start
+      .row.row-30.align-items-md-center.justify-content-md-center
+        .col-lg-8.col-xl-7
+          h3.medium We Make Wise Investments
+        .col-lg-4.col-xl-3
+          a.btn.btn-xl.btn-ebony-clay-outline(href='appointment.html', style='min-width: 270px;') Learn More
+  ='\n'
+
+
+
+  //-Page Footer
+  include ../sections/_section-footer-default

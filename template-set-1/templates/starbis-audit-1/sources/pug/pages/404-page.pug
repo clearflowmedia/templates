@@ -1,0 +1,32 @@
+extends  ../_skeleton
+
+block variables
+  - var pageName = '404 Page'
+  - var bodyClass = ['one-screen-page', 'bg-gray-darker', 'bg-image'];
+  - var bodyImage = 'bg-image-5'
+
+block title
+  title=pageName
+
+block page
+  .page-inner
+    //- Page Header
+    include ../sections/_section-header-base-transparent
+
+    //- Page Content
+    section.text-center.one-page-section
+      .container
+        .row.justify-content-md-center
+          .col-md-9.col-lg-8
+            h6 Sorry, but page was not found
+            .text-extra-large-bordered
+              p 404
+            p.text-white.
+              You may have mistyped the address or the page may have moved.
+            .group-xl
+              a.btn.btn-primary(href='index.html') Back to home
+              a.btn.btn-white-outline(href='contact-us.html') contact us
+    ='\n'
+
+    //- Page Footer
+    include ../sections/_section-footer-base-transparent

@@ -1,0 +1,59 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_product-cart-item
+
+block variables
+	- pageName = 'Shop cart'
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title('Shop', 'bg-shop')
+
+	//- 2 Items in your cart
+	section.section.section-50.section-md-bottom-75.section-xl-top-90.section-xl-bottom-100.bg-whisper.novi-background
+		.container
+			.row.row-40
+				.col-sm-12
+					h3 2 Items in your cart
+
+				.col-sm-12
+					+product-cart-item({
+						img: 'product-01-146x152.png',
+						header: 'Engineered Rib Cashmere',
+						brand: 'Tommy Hilfiger',
+						color: '#1b3164',
+						size: 'XXL',
+						count: '1',
+						price: '19.89'
+					})
+
+					+product-cart-item({
+						img: 'product-05-146x152.png',
+						header: 'Collar Leather Jacket',
+						brand: 'Paco Rabane',
+						color: '#1b3164',
+						size: 'XXL',
+						count: '1',
+						price: '145'
+					})
+
+			.row.row-30.text-end
+				.col-md-11
+					dl.dl-inline
+						dt Total
+						dd
+							.pricing-object.pricing-object-sm
+								span.small.small-top $
+								span 164
+								span.small.small-bottom .89
+				.col-sm-12
+					a.btn.btn-xl.btn-red-orange(href='shop-checkout.html') proceed to checkout
+
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

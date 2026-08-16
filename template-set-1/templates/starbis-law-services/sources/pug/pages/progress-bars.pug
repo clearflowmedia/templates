@@ -1,0 +1,73 @@
+extends  ../_skeleton
+
+include ../_includes/_countdown
+include ../_includes/_progress-list
+
+//- Includes
+include ../elements/_section-counters-default
+
+block variables
+	- var activeIndex = 5
+	- var pageName = 'Progress bars'
+
+block title
+	title=pageName
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title(pageName, 'bg-image-1')
+
+	//- Skills Bars
+	section.section-60.section-md-75.section-xl-bottom-120
+		.container
+			h3.text-center Skills Bars
+			.row.row-40.row-offset-2.align-items-center.justify-content-lg-between
+				.col-md-6.col-xl-5.text-secondary
+					p.
+						We do not see ourselves simply as 'lawyers' but will always strive to be our clients' trusted adviser whether that be in a commercial or personal context. We provide additional services well beyond those that might be expected of a law firm.
+
+					p.
+						Our core values are integrity and trust, the encouragement of innovation, teamwork and the continuing personal development of everyone at the firm.
+				.col-md-6
+					.progress-linear-group
+						+progress-linear({
+							title: 'Adoption Law',
+							value: '70'
+						})
+
+						+progress-linear({
+							title: 'Family Law',
+							value: '54'
+						})
+
+						+progress-linear({
+							title: 'Real Estate Law',
+							value: '87'
+						})
+
+						+progress-linear({
+							title: 'Personal Injury Law',
+							value: '90'
+						})
+	='\n'
+
+	+counter-default({
+		title: 'Counter'
+	})
+
+	//- Progress Bars
+	section.section-60.section-md-75.section-lg-top-100.section-lg-bottom-120
+		.container
+			h3.text-center Progress Bars
+			.row
+				.col-sm-12
+					.countdown-box.block-centered
+						//- Countdown
+						+countdown({to: '2024-01-22'})
+	='\n'
+
+	//- Page Footer
+	include ../sections/_section-footer-default

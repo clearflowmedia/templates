@@ -1,0 +1,83 @@
+extends  ../_skeleton
+
+block variables
+  - var activeIndex = 2
+  - var pageName = 'Forms'
+
+block title
+  title=pageName
+
+block page
+  //-Page Header
+  include ../sections/_section-header-default
+
+  +page-title(pageName, 'bg-image-1')
+
+  //-Forms
+  section.section-top-60.section-md-top-90
+    .container
+      .row
+        //-Login Form
+        .col-md-7.col-lg-5.col-xl-4.text-center.text-md-start
+          h3 Login Form
+
+          include ../sections/_section-form-login
+
+  section.section-top-60.section-md-top-90.section-md-bottom-100
+    .container
+      //-Feedback Form
+      .row
+        .col-lg-9.col-xl-7
+          h3 Feedback Form
+          include ../sections/_section-form-feedback
+  ='\n'
+
+  //-Feedback Form 2
+  section.section-35.section-md-75.section-xl-100.bg-whisperapprox
+    .container
+      .row
+        .col-lg-9.col-xl-6
+          h3 Feedback Form 2
+          //- RD Mailform
+          form.rd-mailform(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+            .row.row-30
+              .col-md-6
+                .form-wrap
+                  input#feedback-2-first-name.form-input(type="text" name="first-name" data-constraints="@Required")
+                  label.form-label(for="feedback-2-first-name") First Name
+              .col-md-6
+                .form-wrap
+                  input#feedback-2-last-name.form-input(type="text" name="last-name" data-constraints="@Required")
+                  label.form-label(for="feedback-2-last-name") Last Name
+              .col-md-6
+                .form-wrap
+                  input#feedback-2-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+                  label.form-label(for="feedback-2-email") Email
+              .col-md-6
+                .form-wrap
+                  input#feedback-2-phone.form-input(type="text" name="phone" data-constraints="@Numeric @Required")
+                  label.form-label(for="feedback-2-phone") Phone
+              .col-12
+                .form-wrap
+                  textarea#feedback-2-message.form-input(name="message" data-constraints="@Required")
+                  label.form-label(for="feedback-2-message") Message
+            .row.row-offset-5: .col-md-6
+              button(type="submit").btn.btn-ebony-clay-outline.btn-block Send
+  ='\n'
+
+  //-Newsletter
+  section.section-40.section-md-75
+    .container
+      .row
+        .col-md-6.col-lg-5.col-xl-4
+          h3 Newsletter
+          //-RD Mailform
+          form.rd-mailform.form-modern(data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+            .form-wrap
+              input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+              label.form-label(for="contact-email") Email
+            button(type="submit").btn.btn-primary.btn-block Subscribe
+  ='\n'
+
+  //-Page Footer
+  include ../sections/_section-footer-default

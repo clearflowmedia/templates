@@ -1,0 +1,86 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-post-minimal
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Gallery Item'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title('Gallery', 'bg-image-2')
+
+  //- The Importance of Paperwork
+  section.section-60.section-md-75.section-xl-90
+    .container
+      h3 The Importance of Paperwork
+      article.post-info
+        .post-image
+          +jpg('gallery-item-1-1171x884')
+        .post-main
+          .post-left
+            ul.post-meta
+              li: time(datetime='2021-05-01') May 2021
+              li by Julien Miro
+              li
+                ul.list-hashtags
+                  li: a(href='#') web
+                  li: a(href='#') design
+                  li: a(href='#') project
+                  li: a(href='#') tips
+
+          .post-body
+            p Most of us will implement some tax planning on behalf of a client which requires some paperwork to support the actions which have been taken. The incorporation of a business requires an issue of shares ,if appropriate a changing of the name of a PAYE scheme, the setting up of a company bank account and new headed notepaper and invoice books to reflect the change to a company.
+  ='\n'
+
+  //- Related Posts
+  section.section-35.section-md-75.section-xl-90.bg-athens-gray
+    .container.text-center.text-sm-start
+      .row
+        .col-sm-12
+          h4 Related Posts
+
+      .row.row-30 
+        .col-md-10.col-lg-6
+          +post-minimal({
+            img: 'gallery-item-2-220x224',
+            header: 'Making Tax Digital',
+            time: ['2021-03-14', 'March 14'],
+            text: 'It was announced back in March 2015 that annual tax returns would be scrapped. You can view my immediate...'
+          })
+
+        .col-md-10.col-lg-6
+          +post-minimal({
+            img: 'gallery-item-3-220x224',
+            header: 'Who Is In Control?!',
+            time: ['2021-03-13', 'March 18'],
+            text: 'From 6 April 2021 unlisted UK companies must take reasonable steps to ascertain and record in a dedicated... '
+          })
+
+        .col-md-10.col-lg-6
+          +post-minimal({
+            img: 'gallery-item-4-220x224',
+            header: 'As Predicted…',
+            time: ['2021-03-12', 'March 16'],
+            text: 'As those who read my blog of last week looking at the details behind the PSC register, I predicted that the UK would... '
+          })
+
+        .col-md-10.col-lg-6
+          +post-minimal({
+            img: 'gallery-item-5-220x224',
+            header: 'Capital Gains Tax Changes',
+            time: ['2021-03-11', 'March 22'],
+            text: 'For a budget that was pretty boring, there was a fair amount in it about capital gains tax. Given I had clients...'
+          })
+    ='\n'
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

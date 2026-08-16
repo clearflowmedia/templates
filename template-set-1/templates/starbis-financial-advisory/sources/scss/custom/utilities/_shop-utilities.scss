@@ -1,0 +1,200 @@
+//
+// Shop utilities
+// --------------------------------------------------
+
+// Pricing tables
+// ----------------
+.pricing-table {
+  overflow: hidden;
+  border-radius: 5px;
+  background: $white;
+  text-align: center;
+  box-shadow: -1px 0 5px 0 rgba($tundora, 0.12);
+
+  &-header {
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: $abbey;
+  }
+
+  &-body {
+    padding: 35px 30px;
+  }
+
+  &-label {
+    padding: 17px 15px;
+    text-align: center;
+    background: $primary;
+
+    p {
+      font: 700 14px $font-family-sec;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      color: $white;
+    }
+  }
+
+  .pricing-list {
+    font-size: 16px;
+    font-weight: 300;
+    color: $black;
+
+    span {
+      display: inline-block;
+      margin-right: .25em;
+    }
+
+    // Offsets
+    > li + li {
+      margin-top: 12px;
+    }
+  }
+
+  // Offsets
+  * + .price-object {
+    margin-top: 22px;
+  }
+
+  * + .pricing-list {
+    margin-top: 22px;
+  }
+}
+
+// Price
+// ----------------
+.pricing-object {
+  font-family: $font-family-sec;
+  font-weight: 900;
+  font-size: 0;
+  line-height: 0;
+  color: $black;
+
+  > * {
+    margin-top: 0;
+  }
+
+  .small {
+    position: relative;
+    font: 700 10px $font-family-sec;
+    color: inherit;
+    text-transform: uppercase;
+  }
+
+  .small-middle {
+    vertical-align: middle;
+  }
+
+  .small-bottom {
+    vertical-align: bottom;
+  }
+}
+
+.pricing-object-sm {
+  font-size: 32px;
+  line-height: .8;
+
+  .small {
+    font-size: 12px;
+  }
+
+  .small-middle {
+    margin-right: 3px;
+  }
+
+  .small-bottom {
+    margin-left: 1px;
+    vertical-align: bottom;
+  }
+}
+
+.price-irrelevant {
+  color: $body-color;
+  text-decoration: line-through;
+}
+
+.pricing-object-md {
+  font-size: 53px;
+  line-height: 1;
+
+  .price {
+    line-height: .5;
+  }
+
+  .small {
+    font-size: 17px;
+    font-weight: 400;
+  }
+
+  .small-middle {
+    font-size: 23px;
+  }
+
+  .small-bottom {
+    bottom: -.25em;
+  }
+}
+
+.pricing-object-lg,
+.pricing-object-xl {
+  font-size: 64px;
+  line-height: .7;
+
+  .small {
+    font-size: 9px;
+  }
+
+  .small-top {
+    top: 11px;
+    margin-right: 5px;
+    font-size: 14px;
+    vertical-align: top;
+  }
+
+  .small-bottom {
+    bottom: -10px;
+    margin-left: -2px;
+    vertical-align: bottom;
+    font-style: italic;
+  }
+}
+
+.price-current {
+  .small {
+    position: relative;
+    font-family: $font-family-sec;
+    font-weight: 400;
+  }
+
+  .small-middle {
+    vertical-align: middle;
+    top: -.3em;
+  }
+
+  .small-bottom {
+    top: .3em;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .pricing-object-lg {
+    font-size: 72px;
+  }
+
+  .pricing-object-xl {
+    font-size: 54px;
+    .small-middle {
+      font-size: 30px;
+    }
+
+    .small-bottom {
+      font-size: 25px;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .pricing-object-xl {
+    font-size: 76px;
+  }
+}

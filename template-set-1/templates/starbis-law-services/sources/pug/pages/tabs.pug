@@ -1,0 +1,137 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-quote-default
+
+block variables
+  - var activeIndex = 5
+  - var pageName = 'Tabs'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title(pageName, 'bg-image-1')
+
+  //- Horizontal Tabs
+  section.section-top-60.section-md-top-90
+    .container
+      h3.text-center Horizontal Tabs
+      .row.justify-content-md-center
+        .col-xl-10
+          //- Bootstrap tabs
+          #tabs-1.tabs-custom.tabs-horizontal.tabs-corporate
+            //- Nav tabs
+            ul.nav.nav-tabs
+              li: a.active(href='#tabs-1-1' data-bs-toggle='tab') Tab 1
+              li: a(href='#tabs-1-2' data-bs-toggle='tab') Tab 2
+              li: a(href='#tabs-1-3' data-bs-toggle='tab') Tab 3
+              li: a(href='#tabs-1-4' data-bs-toggle='tab') Tab 4
+              li: a(href='#tabs-1-5' data-bs-toggle='tab') Tab 5
+            //- Tab panes
+            .tab-content.text-secondary
+              div#tabs-1-1.tab-pane.fade.show.active
+                p Our approach is practical and client-oriented, and we are committed to providing efficient, effective, and top-quality legal services. Other firms measure success by their growth in size. Our priority is to measure our success based on the growth in the quality of our work and the complexity of our legal services. We endeavour to establish long-lasting relationships with our clients.
+                p Every assignment is preceded by a careful assessment of the work, costs and realistic results. We carry out our assignments in close consultation with the client. This goes some way to explaining why we are justifiably proud of our many long-standing and close client relationships. In the course of long-term engagements, each client has a specific contact attorney within the firm who is familiar with the client's business operations and maintains close communication with the client.
+              div#tabs-1-2.tab-pane.fade
+                p Our approach is practical and client-oriented, and we are committed to providing efficient, effective, and top-quality legal services. Other firms measure success by their growth in size. Our priority is to measure our success based on the growth in the quality of our work and the complexity of our legal services. We endeavour to establish long-lasting relationships with our clients.
+                p Every assignment is preceded by a careful assessment of the work, costs and realistic results. We carry out our assignments in close consultation with the client. This goes some way to explaining why we are justifiably proud of our many long-standing and close client relationships. In the course of long-term engagements, each client has a specific contact attorney within the firm who is familiar with the client's business operations and maintains close communication with the client.
+              div#tabs-1-3.tab-pane.fade
+                p Our approach is practical and client-oriented, and we are committed to providing efficient, effective, and top-quality legal services. Other firms measure success by their growth in size. Our priority is to measure our success based on the growth in the quality of our work and the complexity of our legal services. We endeavour to establish long-lasting relationships with our clients.
+                p Every assignment is preceded by a careful assessment of the work, costs and realistic results. We carry out our assignments in close consultation with the client. This goes some way to explaining why we are justifiably proud of our many long-standing and close client relationships. In the course of long-term engagements, each client has a specific contact attorney within the firm who is familiar with the client's business operations and maintains close communication with the client.
+              div#tabs-1-4.tab-pane.fade
+                p Our approach is practical and client-oriented, and we are committed to providing efficient, effective, and top-quality legal services. Other firms measure success by their growth in size. Our priority is to measure our success based on the growth in the quality of our work and the complexity of our legal services. We endeavour to establish long-lasting relationships with our clients.
+                p Every assignment is preceded by a careful assessment of the work, costs and realistic results. We carry out our assignments in close consultation with the client. This goes some way to explaining why we are justifiably proud of our many long-standing and close client relationships. In the course of long-term engagements, each client has a specific contact attorney within the firm who is familiar with the client's business operations and maintains close communication with the client.
+              div#tabs-1-5.tab-pane.fade
+                p Our approach is practical and client-oriented, and we are committed to providing efficient, effective, and top-quality legal services. Other firms measure success by their growth in size. Our priority is to measure our success based on the growth in the quality of our work and the complexity of our legal services. We endeavour to establish long-lasting relationships with our clients.
+                p Every assignment is preceded by a careful assessment of the work, costs and realistic results. We carry out our assignments in close consultation with the client. This goes some way to explaining why we are justifiably proud of our many long-standing and close client relationships. In the course of long-term engagements, each client has a specific contact attorney within the firm who is familiar with the client's business operations and maintains close communication with the client.
+  ='\n'
+
+  //- Vertical Tabs
+  section.section-top-60.section-md-top-90
+    .container
+      h3.text-center Vertical Tabs
+      .row.justify-content-md-center
+        .col-xl-10
+          //- Bootstrap tabs
+          #tabs-2.tabs-custom.tabs-vertical.tabs-corporate
+            //- Nav tabs
+            ul.nav.nav-tabs
+              li: a.active(href='#tabs-2-1' data-bs-toggle='tab') Tab 1
+              li: a(href='#tabs-2-2' data-bs-toggle='tab') Tab 2
+              li: a(href='#tabs-2-3' data-bs-toggle='tab') Tab 3
+              li: a(href='#tabs-2-4' data-bs-toggle='tab') Tab 4
+
+            //- Tab panes
+            .tab-content.text-secondary
+              div#tabs-2-1.tab-pane.fade.show.active
+                p Our approach is practical and client-oriented, and we are committed to providing efficient, effective, and top-quality legal services. Other firms measure success by their growth in size. Our priority is to measure our success based on the growth in the quality of our work and the complexity of our legal services. We endeavour to establish long-lasting relationships with our clients. Every assignment is preceded by a careful assessment of the work, costs and realistic results. We carry out our assignments in close consultation with the client. This goes some way to explaining why we are justifiably proud of our many long-standing and close client relationships.
+                p In the course of long-term engagements, each client has a specific contact attorney within the firm who is familiar with the client's business operations and maintains close communication with the client.
+              div#tabs-2-2.tab-pane.fade
+                p Our approach is practical and client-oriented, and we are committed to providing efficient, effective, and top-quality legal services. Other firms measure success by their growth in size. Our priority is to measure our success based on the growth in the quality of our work and the complexity of our legal services. We endeavour to establish long-lasting relationships with our clients. Every assignment is preceded by a careful assessment of the work, costs and realistic results. We carry out our assignments in close consultation with the client. This goes some way to explaining why we are justifiably proud of our many long-standing and close client relationships.
+                p In the course of long-term engagements, each client has a specific contact attorney within the firm who is familiar with the client's business operations and maintains close communication with the client.
+              div#tabs-2-3.tab-pane.fade
+                p Our approach is practical and client-oriented, and we are committed to providing efficient, effective, and top-quality legal services. Other firms measure success by their growth in size. Our priority is to measure our success based on the growth in the quality of our work and the complexity of our legal services. We endeavour to establish long-lasting relationships with our clients. Every assignment is preceded by a careful assessment of the work, costs and realistic results. We carry out our assignments in close consultation with the client. This goes some way to explaining why we are justifiably proud of our many long-standing and close client relationships.
+                p In the course of long-term engagements, each client has a specific contact attorney within the firm who is familiar with the client's business operations and maintains close communication with the client.
+              div#tabs-2-4.tab-pane.fade
+                p Our approach is practical and client-oriented, and we are committed to providing efficient, effective, and top-quality legal services. Other firms measure success by their growth in size. Our priority is to measure our success based on the growth in the quality of our work and the complexity of our legal services. We endeavour to establish long-lasting relationships with our clients. Every assignment is preceded by a careful assessment of the work, costs and realistic results. We carry out our assignments in close consultation with the client. This goes some way to explaining why we are justifiably proud of our many long-standing and close client relationships.
+                p In the course of long-term engagements, each client has a specific contact attorney within the firm who is familiar with the client's business operations and maintains close communication with the client.
+  ='\n'
+
+  //- Tabs Line
+  section.section-top-60.section-md-top-90
+    .container
+      h3.text-center Tabs Line
+      .row.justify-content-md-center
+        .col-md-10.col-lg-8.col-xl-6
+          //- Bootstrap tabs
+          #tabs-3.tabs-custom.tabs-horizontal.tabs-line
+            //- Nav tabs
+            ul.nav.nav-tabs
+              li: a.active(href='#tabs-3-1' data-bs-toggle='tab') Tab 1
+              li: a(href='#tabs-3-2' data-bs-toggle='tab') Tab 2
+              li: a(href='#tabs-3-3' data-bs-toggle='tab') Tab 3
+              li: a(href='#tabs-3-4' data-bs-toggle='tab') Tab 4
+
+            //- Tab panes
+            .tab-content.text-secondary
+              div#tabs-3-1.tab-pane.fade.show.active
+                p Our approach is practical and client-oriented, and we are committed to providing efficient, effective, and top-quality legal services. Other firms measure success by their growth in size. Our priority is to measure our success based on the growth in the quality of our work and the complexity of our legal services. We endeavour to establish long-lasting relationships with our clients. Every assignment is preceded by a careful assessment of the work, costs and realistic results. We carry out our assignments in close consultation with the client. This goes some way to explaining why we are justifiably proud of our many long-standing.
+              div#tabs-3-2.tab-pane.fade
+                p Our approach is practical and client-oriented, and we are committed to providing efficient, effective, and top-quality legal services. Other firms measure success by their growth in size. Our priority is to measure our success based on the growth in the quality of our work and the complexity of our legal services. We endeavour to establish long-lasting relationships with our clients. Every assignment is preceded by a careful assessment of the work, costs and realistic results. We carry out our assignments in close consultation with the client. This goes some way to explaining why we are justifiably proud of our many long-standing.
+              div#tabs-3-3.tab-pane.fade
+                p Our approach is practical and client-oriented, and we are committed to providing efficient, effective, and top-quality legal services. Other firms measure success by their growth in size. Our priority is to measure our success based on the growth in the quality of our work and the complexity of our legal services. We endeavour to establish long-lasting relationships with our clients. Every assignment is preceded by a careful assessment of the work, costs and realistic results. We carry out our assignments in close consultation with the client. This goes some way to explaining why we are justifiably proud of our many long-standing.
+              div#tabs-3-4.tab-pane.fade
+                p Our approach is practical and client-oriented, and we are committed to providing efficient, effective, and top-quality legal services. Other firms measure success by their growth in size. Our priority is to measure our success based on the growth in the quality of our work and the complexity of our legal services. We endeavour to establish long-lasting relationships with our clients. Every assignment is preceded by a careful assessment of the work, costs and realistic results. We carry out our assignments in close consultation with the client. This goes some way to explaining why we are justifiably proud of our many long-standing.
+  ='\n'
+
+  //- Tabs Gallery
+  section.section-60.section-md-90.section-xl-bottom-120
+    .container
+      h3.text-center Tabs Gallery
+      .row.justify-content-md-center
+        .col-md-10.col-lg-8.col-xl-6
+          //- Bootstrap tabs
+          #tabs-4.tabs-custom.tabs-horizontal.tabs-minimal
+            //- Nav tabs
+            ul.nav.nav-tabs.justify-content-center.text-center
+              li: a.active(href='#tabs-4-1' data-bs-toggle='tab') Tab 1
+              li: a(href='#tabs-4-2' data-bs-toggle='tab') Tab 2
+              li: a(href='#tabs-4-3' data-bs-toggle='tab') Tab 3
+              li: a(href='#tabs-4-4' data-bs-toggle='tab') Tab 4
+
+            //- Tab panes
+            .tab-content.text-secondary
+              div#tabs-4-1.tab-pane.fade.show.active: p Our approach is practical and client-oriented, and we are committed to providing efficient, effective, and top-quality legal services. Other firms measure success by their growth in size. Our priority is to measure our success based on the growth in the quality of our work and the complexity of our legal services. We endeavour to establish long-lasting relationships with our clients. Every assignment is preceded by a careful assessment of the work, costs and realistic results. We carry out our assignments in close consultation with the client. This goes some way to explaining why we are justifiably proud of our many long-standing.
+              div#tabs-4-2.tab-pane.fade: p Our approach is practical and client-oriented, and we are committed to providing efficient, effective, and top-quality legal services. Other firms measure success by their growth in size. Our priority is to measure our success based on the growth in the quality of our work and the complexity of our legal services. We endeavour to establish long-lasting relationships with our clients. Every assignment is preceded by a careful assessment of the work, costs and realistic results. We carry out our assignments in close consultation with the client. This goes some way to explaining why we are justifiably proud of our many long-standing.
+              div#tabs-4-3.tab-pane.fade: p Our approach is practical and client-oriented, and we are committed to providing efficient, effective, and top-quality legal services. Other firms measure success by their growth in size. Our priority is to measure our success based on the growth in the quality of our work and the complexity of our legal services. We endeavour to establish long-lasting relationships with our clients. Every assignment is preceded by a careful assessment of the work, costs and realistic results. We carry out our assignments in close consultation with the client. This goes some way to explaining why we are justifiably proud of our many long-standing.
+              div#tabs-4-4.tab-pane.fade: p Our approach is practical and client-oriented, and we are committed to providing efficient, effective, and top-quality legal services. Other firms measure success by their growth in size. Our priority is to measure our success based on the growth in the quality of our work and the complexity of our legal services. We endeavour to establish long-lasting relationships with our clients. Every assignment is preceded by a careful assessment of the work, costs and realistic results. We carry out our assignments in close consultation with the client. This goes some way to explaining why we are justifiably proud of our many long-standing.
+  ='\n'
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

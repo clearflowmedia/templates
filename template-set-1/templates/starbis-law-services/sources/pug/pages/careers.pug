@@ -1,0 +1,141 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-career-block
+include ../elements/_ui-block-vacation
+
+block variables
+  - var activeIndex = 5
+  - var pageName = 'Careers'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title(pageName, 'bg-image-1')
+
+  //- Join Our Team
+  section.section-60.section-md-90.bg-whisper
+    .container
+      h3 Join Our Team
+      .row.row-40.justify-content-xl-between
+        .col-md-10.col-lg-7
+          .inset-lg-right-15.inset-xl-right-0
+            p Take a job opportunity of a lifetime – join the team of LawExpert. We cherish active tech savvies willing to work on projects of any type and complexity. If you are enthusiastic about tech innovations and ready to make impactful decisions, feel free to send us your CV. We are interested in hiring professionals for a long term and also provide an opportunity for remote work.
+
+        .col-md-6.col-lg-4
+          a.btn.btn-primary.btn-block(href='our-team.html') Get Started Now
+
+  ='\n'
+
+  //- Explore Our Corporate Culture
+  section.section-66.section-md-90
+    .container
+      h3 Explore Our Corporate Culture
+      p(style='max-width: 600px;') At LawExpert, we provide career solutions to people interested in conducting broad-scale research and making technological breakthroughs based on them. If you are one of them, learn more about the main points of our corporate culture below.
+
+      ul.list-blocks
+        +block-career({
+          img: 'careers-1-1171x519',
+          header: 'The Main Corporate Values of LawExpert',
+          text: [
+            "The corporate culture of LawExpert is based on openness, respect and equality regardless of the religion, sex, race, age, etc. These core values help us build a friendly working environment, where all the employees can feel comfortable and significant. We believe that the more comfort you get, the better results you’ll produce.",
+            "Members of our staff are free to choose working hours themselves, without any limitations. Such a strategy allows us to make the most of each employee’s potential, as they work when they are maximally productive.",
+            "What you may also find attractive about our corporation is a competitive benefits package. It includes a paid vacation, sick leave and national holidays, medical insurance, gym and swimming pool, parking and mobile phone reimbursement. Our corporate fridge is also full of free snacks and drinks."
+          ]
+        })
+
+        +block-career({
+          img: 'careers-2-1171x519',
+          header: 'A Diversity of Learning Opportunities at LawExpert',
+          text: [
+            "When you join our team, you’ll dive into a knowledge-sharing environment. We encourage our employees to attend multiple conferences and workshops held both inside the company and on the outside. Keep in mind that you can take part in conferences as both a listener and speaker.",
+            "As a part of our benefits package, we also offer multiple courses for you to master new subjects. Our working environment is full of learning opportunities, which can’t help motivating for a steady professional growth.",
+            "Offices of Intense are located in different corners of the globe, so be ready to travel around the world. To save your budget, we cover all the travel costs including transportation, accommodation, food, and even some leisure activities. Our company gives you a perfect chance to explore the world and immerse in different cultures."
+          ]
+        })
+
+        +block-career({
+          img: 'careers-3-1171x519',
+          header: 'Top Qualities We Are Looking For',
+          text: [
+            "Searching for candidates, our HR managers prioritize a number of qualities. To get a job at Intense, you must be a self-motivated person who isn’t afraid of challenges and is ready to work overtime. As we work with multiple innovative technologies, you must be a quick learner. Attention to detail is also important for us, as it is a solid prerequisite for fewer bugs.",
+            "Our company consists of many teams, that’s why you must be a team player and excellent communicator both in writing and oral speech. Our work is also based on mutual assistance, so be ready to lend a helping hand whenever you’re asked.",
+            "You are unlikely to find a project manager who wouldn’t appreciate punctuality and discipline. The same goes for PMs of Intense. If you want to build a long-term career at our company, you will have to avoid late arrivals, unnecessary breaks and hanging out in social networks. Also be polite not only with your boss, but also with colleagues and newcomers."
+          ]
+        })
+
+        +block-career({
+          img: 'careers-4-1171x519',
+          header: 'Check Interview Stages at LawExpert',
+          text: [
+            "Whenever you decide to send us your CV, be ready for a job interview that goes in several stages. At the first stage, we’d like to learn about your experience, interests, and expectations. At the end of the interview, you will need to undergo a test allowing us to evaluate your skills.",
+            "After successful completion of the test, you’ll be invited to the second interview stage. We will arrange a meeting with your future PM to give you a detailed overview of your project and key responsibilities.",
+            "Next, our team will make a final decision on your joining us. At the last stage of the interview, we will discuss your salary, benefits package, and some legal issues. If we reach an agreement, our HR will take you on an excursion through our office premises."
+          ]
+        })
+  ='\n'
+
+  //- Your Career Starts Here
+  section.section-66.section-md-90.bg-whisper
+    .container
+      h3 Your Career Starts Here
+      p(style='max-width: 440px;') Can't find the job you want? Send your resume to info@demolink.org, and we'll contact you when a new position will be open.
+
+      .row.row-30
+        .col-md-6
+          +block-vacation({
+            header: 'Office Assistant',
+            location: 'London',
+            employment: 'Full Time',
+            time: ['2021-01-01', '6 hours ago']
+          })
+
+        .col-md-6
+          +block-vacation({
+            header: 'Office Manager',
+            location: 'Athlanta',
+            employment: 'Freelance',
+            time: ['2021-01-01', '3 day ago']
+          })
+
+        .col-md-6
+          +block-vacation({
+            header: 'Senior Paralegal',
+            location: 'Oakland',
+            employment: 'Full Time',
+            time: ['2021-01-01', '4 days ago']
+          })
+
+        .col-md-6
+          +block-vacation({
+            header: 'Client and Public Relations Coordinator',
+            location: 'New York',
+            employment: 'Full Time',
+            time: ['2021-01-01', '1 week ago']
+          })
+
+        .col-md-6
+          +block-vacation({
+            header: 'Legal Assistant',
+            location: 'Bristol',
+            employment: 'Freelance',
+            time: ['2021-01-01', '1 month ago']
+          })
+
+        .col-md-6
+          +block-vacation({
+            header: 'Paralegal',
+            location: 'Tampa',
+            employment: 'Full Time',
+            time: ['2021-01-01', 'May 12, 2021']
+          })
+  ='\n'
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

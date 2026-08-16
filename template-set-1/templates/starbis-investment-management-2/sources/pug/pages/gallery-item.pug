@@ -1,0 +1,85 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-post-minimal
+
+block variables
+  - var activeIndex = 7
+  - var pageName = 'Gallery Item'
+
+block title
+  title=pageName
+
+block page
+  //-Page Header
+  include ../sections/_section-header-default
+
+
+  +page-title('Gallery', 'bg-gallery')
+
+  //-Starting a Web Design Project
+  section.section-60.section-md-75.section-xl-90
+    .container
+      h3 Leave your Legacy through Planned Giving
+      article.post-info
+        .post-image
+          +jpg('gallery-item-1-1170x780')
+        .post-main
+          .post-left
+            ul.post-meta
+              li: time.text-gray-05(datetime='2021-05-01') May 2021
+              li.text-gray-05 by Julien Miro
+              li
+                ul.list-hashtags
+                  li: a(href='#').text-gray-05 Legacy
+                  li: a(href='#').text-gray-05 Plan
+                  li: a(href='#').text-gray-05 Finance
+                  li: a(href='#').text-gray-05 Money
+
+          .post-body
+            p.text-gray-05 There comes a point in life where you want to begin sharing or gifting all the things you’ve collected over the years—stories, wisdom, financial wealth. And unlike the Ancient Egyptians believed, you cannot take your worldly goods with you when your light goes out. You can share your stories wisdom in a manifesto or through funny tales to your family, but what about the money? Like the most, you have (or should have) a will and most of your assets are likely going to friends and family. But, what...
+
+
+  ='\n'
+
+  //-Related posts
+  section.section-35.section-md-75.section-xl-90.bg-whisperapprox
+    .container.text-center.text-sm-start
+      h4 Related posts
+      .row.row-30.align-items-stretch
+        .col-md-10.col-lg-6
+          +post-minimal({
+            img: 'gallery-item-2-220x224',
+            header: 'The Value of Your Money',
+            time: ['2021-03-14', 'March 14'],
+            text: 'In the realm of financial planning, time is our most valuable asset.  '
+          })
+
+        .col-md-10.col-lg-6
+          +post-minimal({
+            img: 'gallery-item-3-220x224',
+            header: 'Monitoring Your Credit',
+            time: ['2021-03-13', 'March 18'],
+            text: 'Let’s state up front that you don’t need a credit monitoring service to stay on top of your credit status. For people who are... '
+          })
+
+        .col-md-10.col-lg-6
+          +post-minimal({
+            img: 'gallery-item-4-220x224',
+            header: 'Estate Plan Goals',
+            time: ['2021-03-12', 'March 16'],
+            text: 'Most people think estate planning is only for wealthy people.  Certainly, the 55% of Americans who died without a will... '
+          })
+
+        .col-md-10.col-lg-6
+          +post-minimal({
+            img: 'gallery-item-5-220x224',
+            header: 'Social Security Benefits Tax',
+            time: ['2021-03-11', 'March 20'],
+            text: 'Do your Social Security Benefits need to be taxed? The actual answer is “it depends”.'
+          })
+  ='\n'
+
+
+  //-Page Footer
+  include ../sections/_section-footer-default

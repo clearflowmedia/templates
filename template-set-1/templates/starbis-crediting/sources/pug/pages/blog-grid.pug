@@ -1,0 +1,86 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-post-block
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Grid Blog'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title(pageName, 'bg-image-1', {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Blog",
+      "href": "#"
+    },
+    2: {
+      "title": pageName
+    }
+  })
+
+  //- Blog Grid
+  section.section-50.section-md-75.section-xl-100.bg-default
+    .container
+      .row.row-30.justify-content-md-center.justify-content-lg-start
+        .col-md-9.col-lg-6.height-fill
+          +post-block({
+            img: 'blog-grid-1-570x253',
+            header: 'Common Home Selling Mistakes',
+            user: 'Joan Williams',
+            time: ['2021-01-01', '5 days ago'],
+            tags: ['Mortgage', 'Home', 'Selling']
+          })
+
+        .col-md-9.col-lg-6.height-fill
+          +post-block({
+            img: 'blog-grid-2-570x253',
+            header: 'Selling or Leasing Your Home',
+            user: 'Tom Park',
+            time: ['2021-01-01', '5 days ago'],
+            tags: ['Selling', 'Home']
+          })
+
+        .col-md-9.col-lg-6.height-fill
+          +post-block({
+            img: 'blog-grid-3-570x253',
+            header: 'Financing Your Future',
+            user: 'John Miller',
+            time: ['2021-01-01', '5 days ago'],
+            tags: ['Tips', 'Loans']
+          })
+
+        .col-md-9.col-lg-6.height-fill
+          +post-block({
+            img: 'blog-grid-4-570x253',
+            header: 'Refinancing Your Home',
+            user: 'Julien Miro',
+            time: ['2021-01-01', '5 days ago'],
+            tags: ['Tips']
+          })
+
+        .col-md-9.col-lg-6.height-fill
+          +post-block({
+            img: 'blog-grid-5-570x253',
+            header: 'Getting a Loan to Build a House',
+            user: 'Amelia Anderson',
+            time: ['2021-01-01', '5 days ago'],
+            tags: ['Build', 'Home', "Loans"]
+          })
+
+      .pagination-custom-wrap.text-center
+        +pagination
+  ='\n'
+
+  //- Page Footer
+  include ../sections/_section-footer-default

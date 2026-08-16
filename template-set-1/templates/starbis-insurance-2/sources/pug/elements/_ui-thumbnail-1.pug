@@ -1,0 +1,12 @@
+//- Thumbnail variant 1
+mixin thumbnail-1(obj)
+  //- Thumbnail variant 1
+  .thumbnail.thumbnail-variant-1
+    .thumbnail-image
+      +img(obj.img)
+      .thumbnail-image-inner
+        a.link-icon.link-primary-inverse-v2(href='tel:#').icon.icon-md.material-icons-local_phone
+        a.link-icon.link-icon-mod.link-white(href='mailto:#').icon.icon-md-smaller.fa-envelope-o
+    .thumbnail-caption
+      h5.header: a(href='team-member-profile.html')=obj.header
+      p=obj.caption

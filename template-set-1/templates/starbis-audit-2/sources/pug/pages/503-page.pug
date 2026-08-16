@@ -1,0 +1,36 @@
+extends  ../_skeleton
+
+block variables
+  - var pageName = '503 Page'
+  - var bodyClass = ['one-screen-page', 'bg-gray-darker', 'bg-image'];
+  - var bodyImage = 'bg-image-6'
+
+block title
+  title=pageName
+
+block page
+  .page-inner
+    //- Page Header
+    include ../sections/_section-header-base-transparent
+
+    //- Page Content
+    section.text-center.one-page-section
+      .container
+        .row.justify-content-md-center
+          .col-md-9.col-lg-8
+            h6 Service is temporary unavailable
+            .text-extra-large-bordered
+              p 503
+
+            p.text-white
+              | Sorry, we're offline right now to make our site even better.
+              br.d-none.d-sm-block
+              |  Please, come back later and check what we've been up to.
+
+            .group-xl
+              a.btn.btn-primary(href='index.html') Back to home
+              a.btn.btn-white-outline(href='contact-us.html') contact us
+    ='\n'
+
+    //- Page Footer
+    include ../sections/_section-footer-base-transparent

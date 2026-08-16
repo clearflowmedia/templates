@@ -1,0 +1,49 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-quote-bordered
+
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Testimonials'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title(pageName, 'bg-image-1', {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Pages",
+      "href": "#"
+    },
+    2: {
+      "title": pageName
+    }
+  })
+
+  //- Team
+  section.section-75.section-lg-100.text-start.bg-default
+    .container
+      h2.text-center Testimonials
+      include ../sections/_section-testimonials
+
+  ='\n'
+
+  include ../sections/_section-testimonials-parallax
+
+  include ../sections/_section-testimonials-complex
+
+  include ../sections/_section-testimonials-carousel
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

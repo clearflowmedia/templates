@@ -1,0 +1,83 @@
+extends  ../_skeleton
+include ../elements/_pricing
+
+block variables
+	- pageName = 'Pricing'
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title(pageName, 'bg-image-2')
+
+	//- Choose your package
+	section.section.section-md.bg-sky-blue
+		.container
+			.row.row-30
+				.col-md-6.col-lg-4
+					+pricing({
+						title: 'Basic',
+						subtitle: 'Perfect for Simple Repair',
+						price: '65',
+						options: ['Repairs', 'Maintenance'],
+						info: 'Other services can be ordered <br> at an extra rate.'
+					})
+				.col-md-6.col-lg-4
+					+pricing({
+						title: 'Standard',
+						subtitle: 'Most popular',
+						price: '120',
+						options: ['Repairs', 'Maintenance', 'Refinishing'],
+						info: 'Cleaning work are available <br> for additional $20.'
+					})
+				.col-md-6.col-lg-4
+					+pricing({
+						title: 'Ultimate',
+						subtitle: 'All services are included',
+						price: '250',
+						options: ['Repairs', 'Maintenance', 'Refinishing', 'Custom design work', 'Cleaning']
+					})
+	//- Questions & Answers
+	section.section.section-md.bg-default
+		.container
+			h3.text-center Questions & Answers
+			.row.row-40.row-lg
+				.col-md-6
+					dl.list-terms-variant-1
+						dt How does the 14-day trial work?
+						dd Nullam gravida urna nisl, vitae mollis augue finibus nec. Ut id eleifend massa. Mauris porta quis tellus eget venenatis. Cras tortor purus, pulvinar a magna ac, dignissim tincidunt justo. Phasellus vulputate congue massa non commodo. Aliquam id nibh lorem. Vestibulum non congue felis.
+
+						dt My account has expired, can I recover it?
+						dd Morbi molestie rutrum convallis. Maecenas sollicitudin neque ac vehicula gravida. Vestibulum posuere tortor lacus, at hendrerit nisl consectetur et. Nunc semper euismod lacus. Etiam dapibus erat purus, a malesuada turpis rutrum vel. In rutrum porta ante, ut finibus turpis lobortis at.
+
+						dt Do you offer discounts for students?
+						dd Sed condimentum risus dignissim eros lobortis, in molestie ipsum euismod. In tristique risus tortor, in molestie lectus accumsan vel. Aenean et nunc metus. Nullam iaculis pellentesque dolor, nec ultricies lectus gravida id. Integer id est nec dolor faucibus pharetra nec et nulla. Fusce.
+
+				.col-md-6
+					dl.list-terms-variant-1
+						dt What happens at the end of my trial?
+						dd Fusce vulputate non eros et lobortis. Aliquam facilisis odio ut magna congue rhoncus id fermentum urna. Integer scelerisque ipsum nec est viverra, tincidunt euismod magna iaculis. In luctus consectetur dui sit amet lobortis. Pellentesque id vestibulum eros. Phasellus luctus pretium risus.
+
+						dt Can I change/cancel plans anytime?
+						dd Aliquam purus mauris, gravida mollis quam quis, pharetra malesuada nulla. Quisque a ornare mi. Nulla in felis vel quam imperdiet consequat eget ac ipsum. Aliquam ac dapibus sem. Quisque dignissim egestas pellentesque. Mauris dapibus rhoncus nunc, in varius nisi egestas in vulputate non.
+
+						dt How do I access my account?
+						dd Aliquam facilisis odio ut magna congue rhoncus id fermentum urna. Integer scelerisque ipsum nec est viverra, tincidunt euismod magna iaculis. In luctus consectetur dui sit amet lobortis. Pellentesque id vestibulum eros. Phasellus luctus pretium risus, sit amet auctor ante congue quis.
+
+
+	//- Not Sure Which Plan is Right For You?
+	section.section.section-md.bg-gray-dark.bg-image(style='background-image: url(images/bg-gradient-1.png);')
+		.container
+			.row.row-30
+				.col-lg-8.col-xl-7
+					h3 Not Sure Which Package is Right For You?
+					p(style='max-width: 420px;').
+						If you are in doubt of which package to opt for, subscribe to our newsletter and we will try to help you make the right decision.
+				.col-lg-4.col-xl-3
+					a.btn.btn-circle.btn-xl.btn-xl-bigger.btn-black-outline(href='contact-us.html') Send us a letter
+
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

@@ -1,0 +1,88 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-post-modern
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Blog Masonry'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title('Blog', 'bg-image-3')
+
+  //- Blog masonry
+  section.section-50.section-md-75.section-xl-100.bg-athens-lighten
+    .container
+      .row.justify-content-md-center.justify-content-lg-start.row-30
+        .col-md-9.col-lg-6
+          +post-modern({
+            type: 'material-icons-videocam',
+            header: 'The Importance of Paperwork',
+            content: [
+              {type: 'image', data: 'blog-masonry-3-570x321'},
+              {
+                type: 'text',
+                data: ['Most of us will implement some tax planning on behalf of a client which requires some paperwork to support the actions which have been taken. The incorporation of a business requires an issue of shares ,if appropriate a...']
+              }
+            ],
+            time: ['2021-01-01', '2 days ago'],
+            tags: ['Business', 'Marketing']
+          })
+
+          +post-modern({
+            type: 'material-icons-local_see',
+            header: 'Reforms to the taxation of non-doms',
+            content: [
+                {type: 'image', data: 'blog-masonry-1-570x321'}
+            ],
+            time: ['2021-01-01', '7 days ago'],
+            tags: ['Reforms', 'Taxation']
+          })
+
+        .col-md-9.col-lg-6
+          +post-modern({
+            type: 'material-icons-library_books',
+            header: 'New HMRC Offshore Disclosure Facility',
+            content: [
+              {type: 'text', data: ['After much speculation, ‘Son of LDF’ has now been launched by HMRC in order to give individuals and entities the opportunity to correct their UK tax position if they have previously made errors or omissions in declaring overseas income and gains. The new Worldwide Disclosure Facility (WDF)...']}
+            ],
+            time: ['2021-01-01', '3 days ago'],
+            tags: ['Facility', 'Opportunity']
+          })
+
+          +post-modern({
+            type: 'material-icons-audiotrack',
+            header: 'HMRC – The Standard for Agents',
+            content: [
+              {type: 'audio', data: globals.soundcloud}
+            ],
+            time: ['2021-01-01', '4 days ago'],
+            tags: ['Agents', 'Advisors']
+          })
+
+          +post-modern({
+            type: 'material-icons-videocam',
+            header: 'Tax Investigations by HMRC',
+            content: [
+              {type: 'image', data: 'blog-masonry-2-570x321'},
+              {type: 'text', data: ['In the past an investigation by HMRC into a tax avoidance scheme was conducted under Code of Practice (COP) 8. Under such circumstances there is no question of tax fraud having taken place and a prosecution is not on the...']}
+            ],
+            time: ['2021-01-01', '2 days ago'],
+            tags: ['Tax', 'Investigations']
+          })
+
+
+      .row.text-center.offset-top-40.offset-sm-top-60.offset-lg-top-100
+        .col-sm-12
+          +pagination
+  ='\n'
+
+  //- Page Footer
+  include ../sections/_section-footer-default

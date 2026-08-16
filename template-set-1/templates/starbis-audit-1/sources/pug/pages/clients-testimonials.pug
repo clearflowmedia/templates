@@ -1,0 +1,57 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-quote-bordered
+
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Clients Testimonials'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title('Clients', 'bg-image-1')
+
+  //- Team
+  section.section-60.section-md-90.bg-overlay-cello
+    .container.text-center
+      .row
+        .col-sm-12
+          h3 Testimonials
+
+      .row.text-start.row-40
+        .col-lg-6
+          +quote-bordered({
+            img: 'clients-testimonials-1-68x68',
+            class: 'quote-bordered-inverse',
+            header: 'Very professional team',
+            text: 'Easy Audit filed my tax returns for this year. They were very complicated as compared to any other due to a host of reasons. They handled my tax returns very professionally and accurately. I am pleased to recommend Easy Audit.',
+            cite: 'Mark Wilson',
+            caption: 'Top Manager'
+          })
+        .col-lg-6
+          +quote-bordered({
+            img: 'clients-testimonials-2-68x68',
+            class: 'quote-bordered-inverse',
+            header: 'Very knowledgeable tax accountants',
+            text: "The services they offered me for this year's tax filing has been exemplary and of the highest class. I would recommend them for doing taxes. The service that they rendered was very timely and the fees for the service were reasonable. ",
+            cite: 'Amanda Eberson',
+            caption: 'CEO, Eberson Co.'
+          })
+  ='\n'
+
+  include ../sections/_section-testimonials-parallax
+
+  include ../sections/_section-testimonials-complex
+
+  include ../sections/_section-testimonials-vertical-dark
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

@@ -1,0 +1,11 @@
+mixin thumbnail-modern(obj)
+	// Thumbnail Modern
+	a.thumbnail.thumbnail-modern.context-dark(href='images/originals/' + obj.imgOriginal + '.jpg',  data-lightgallery='item')&attributes(attributes)
+		.thumbnail-modern-figure
+			+img(obj.img)
+		.thumbnail-modern-caption
+			.thumbnail-modern-icon
+				svg(width='40' height='32' viewBox='0 0 40 32' fill='none' xmlns='http://www.w3.org/2000/svg')
+					path(opacity='0.25' d='M17.601 -1.95818e-06L17.601 9.62601C17.601 19.2231 13.8526 26.421 6.35591 31.2195L4.85208e-07 26.4499C2.67274 24.6576 4.53062 22.7498 5.57364 20.7263C6.61666 18.7606 7.13817 16.1301 7.13817 12.8347L0.293348 12.8347L0.293349 -3.47127e-06L17.601 -1.95818e-06ZM40 0L40 9.62602C40 19.7435 36.2516 27.2014 28.7549 32L22.399 27.2304C25.0066 25.4959 26.8645 23.5014 27.9727 21.2466C29.0809 18.9919 29.635 16.1879 29.635 12.8347L22.7902 12.8347L22.7902 -1.50453e-06L40 0Z' fill='white')
+			p.thumbnail-modern-text= obj.text
+			p.thumbnail-modern-author= '- ' + obj.authorName + ', ' + obj.authorPosition

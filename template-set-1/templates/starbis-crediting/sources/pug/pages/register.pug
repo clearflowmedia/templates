@@ -1,0 +1,78 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-post-minimal
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Register'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title(pageName, 'bg-image-1', {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Pages",
+      "href": "#"
+    },
+    2: {
+      "title": pageName
+    }
+  })
+
+  section.section-75.section-md-75.section-xl-100.bg-default
+    .container
+      .row.justify-content-sm-center
+        .col-md-10.col-lg-8.col-xl-6
+          h3 Create Your Account
+
+          ul.group-sm
+            li
+              a(href='#' style='padding: 11px 27px;').btn-round-sm.btn.btn-steel-blue.btn-icon.btn-icon-left
+                span.icon.icon-xs.fa.fa-facebook
+                span.btn-text Facebook
+            li
+              a(href='#' style='padding: 11px 27px;').btn-round-sm.btn.btn-cerulean.btn-icon.btn-icon-left
+                span.icon.icon-xs.fa.fa-twitter
+                span.btn-text Twitter
+            li
+              a(href='#' style='padding: 11px 27px;').btn-round-sm.btn.btn-mandy.btn-icon.btn-icon-left
+                span.icon.icon-xs.fa.fa-google-plus
+                span.btn-text Google
+
+          p.divider-text
+            span or
+
+          // RD Mailform
+          form(action='#').rd-mailform
+            .form-wrap
+              label.form-label.form-label-outside(for="forms-register-name") Username or e-mail
+              input#forms-register-name.form-input(type="text" name="name" data-constraints='@Required')
+            .form-wrap
+              label.form-label.form-label-outside(for="forms-register-password") Password
+              input#forms-register-password.form-input(type="password" name="password" data-constraints="@Required")
+            .form-wrap
+              label.form-label.form-label-outside(for="forms-register-password-rep") Repeat a password
+              input#forms-register-password-rep.form-input(type="password" name="password-repeat" data-constraints="@Required")
+            .form-wrap-checkbox
+              label.checkbox-inline.checkbox-small.position-relative
+                input(name="input-group-radio", value="privacy", type="checkbox")
+              p.d-inline-block='I agree with the '
+                a(href='privacy-policy.html').link-primary Terms of use
+                | .
+
+            button(type="submit" style='padding-top: 11px; padding-bottom: 11px;').btn.btn-sm.btn-block.btn-primary Sign In
+
+  ='\n'
+
+  //- Page Footer
+  include ../sections/_section-footer-default

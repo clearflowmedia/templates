@@ -1,0 +1,71 @@
+extends  ../_skeleton
+
+block variables
+	- var activeIndex = 3
+	- var pageName = 'Contact us'
+
+block title
+	title=pageName
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title(pageName, 'bg-image-1', {
+        0: {
+            "title": "Home",
+            "href": "./"
+        },
+        1: {
+            "title": "Pages",
+            "href": "#"
+        },
+        2: {
+            "title": 'Contact Us'
+        }
+    })
+
+	//- Get in Touch
+	section.section-75.section-lg-100.bg-default
+		.container
+			.row.justify-content-sm-center
+				.col-lg-6
+					h3.text-spacing-0 Get in Touch
+					include ../sections/_section-contacts-form
+
+	section.bg-lizar.section-75.section-lg-100
+		.container
+			.row.row-30.justify-content-sm-center.text-lg-start
+				.col-lg-4
+					h5 Contact Info
+					p If you have any questions, just fill in the contact form, and we will answer you shortly. If you are living nearby, come visit FastCredit in one of our comfortable offices.
+				.col-lg-4
+					h5 Headquarters
+					span.d-inline-block 9863 - 9867 MILL ROAD, CAMBRIDGE, MG09 99HT.
+					div
+						p='Telephone: '
+						a(href='callto:#') +1 800 603 6035
+					p.offset-top-0='E-mail: '
+					a(href='mailto:#') mail@demolink.org
+				.col-lg-4
+					h5 Support Center
+					span.d-inline-block 9863 - 9867 MILL ROAD, CAMBRIDGE, MG09 99HT.
+					div
+						p='Telephone: '
+						a(href='callto:#') +1 800 603 6035
+					p.offset-top-0='E-mail: '
+					a(href='mailto:#') mail@demolink.org
+
+	//- Google map
+	section
+		.google-map-container(data-zoom='5', data-center='2130 Fulton Street San Francisco, CA 94117-1080 USA', data-styles='[{"featureType":"administrative","elementType":"all","stylers":[{"visibility":"on"},{"lightness":33}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2e5d4"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#c5dac6"}]},{"featureType":"poi.park","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":20}]},{"featureType":"road","elementType":"all","stylers":[{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#c5c6c6"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#e4d7c6"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#fbfaf7"}]},{"featureType":"water","elementType":"all","stylers":[{"visibility":"on"},{"color":"#acbcc9"}]}]')
+			.google-map
+			ul.google-map-markers
+				li( data-location='2130 Fulton Street San Francisco, CA 94117-1080 USA', data-description='2130 Fulton Street San Francisco', data-icon='images/gmap_marker.png', data-icon-active='images/gmap_marker_active.png' )
+
+	='\n'
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

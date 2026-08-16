@@ -1,0 +1,135 @@
+//-
+//- Common usage mixins
+//- --------------------------------------------------
+
+//- Img image
+mixin img(name, className)
+  - var size = name.match('[0-9]+(x)[0-9]+')[0].split('x');
+  - var ext = name.split('.')[1];
+
+  img(src='images/' + name, alt='', width=size[0], height=size[1], class=className)
+
+//- Jpg image
+mixin jpg(name, className)
+  - var size = name.match('[0-9]+(x)[0-9]+')[0].split('x');
+  img(src='images/' + name + '.jpg', alt='', width=size[0], height=size[1], class=className)
+
+//- Png image
+mixin png(name, className)
+  - var size = name.match('[0-9]+(x)[0-9]+')[0].split('x');
+  img(src='images/' + name + '.png', alt='', width=size[0], height=size[1], class=className)
+
+
+//-
+//- Specific usage mixins
+//- --------------------------------------------------
+
+//- Page title
+mixin page-title(title, bg, breadcrumbs)
+  //- Page title
+  section.section-30.section-md-40.section-lg-66.section-xl-top-100.section-xl-bottom-120.bg-gray-dark.page-title-wrap(style='background-image: url(images/' + bg + '.jpg); background-size: cover;')
+    .container
+      .page-title
+        h2=title
+        ol.breadcrumb-custom
+          each link, index in breadcrumbs
+            if (breadcrumbs[parseInt(index) + 1] )
+              li
+                a(href=link.href)= link.title
+            else
+              li
+                = link.title
+  ='\n'
+
+
+//- Logo
+mixin logo(isWhite)
+  if(isWhite)
+    img(src="images/logo-white.png", width="115", height="42", alt="logo")
+  else
+    img(src="images/logo-dark.png", width="103", height="37", alt="logo")
+
+//- Default owl pagination
+mixin default-owl-pagination(paginationId, count)
+  if (typeof(count) == 'undefined')
+    -var count = 3
+
+  //- Owl controls custom
+  .owl-controls-custom
+    ul.owl-custom-pagination.owl-dots(id=paginationId)
+      - for (var i = 0; i < count; i++)
+      li.owl-dot(data-owl-item=i)
+
+
+//- Thumbnail flickr
+mixin flickr-item
+  .flickr-item(data-type="flickr-item")
+    a.thumbnail.thumbnail-flickr(data-image_b="href", data-lightgallery='item')
+      figure
+        img(src='images/_blank.png', data-image_z="src" data-title="alt", width='165', height='165', alt='')
+      .thumbnail-overlay
+
+//- Pagination
+mixin pagination
+  ul.pagination-custom
+    li: a(href='#') Prev
+    li: a(href='#') 1
+    li: a(href='#') 2
+    li.active: a(href='#') 3
+    li: a(href='#') 4
+    li: a(href='#') Next
+
+//- Social list
+mixin social-links
+  ul.list-inline
+    li: a(href='#'): span.icon.icon-xs.icon-default.fa-facebook
+    li: a(href='#'): span.icon.icon-xs.icon-default.fa-twitter
+    li: a(href='#'): span.icon.icon-xs.icon-default.fa-pinterest
+    li: a(href='#'): span.icon.icon-xs.icon-default.fa-instagram
+
+mixin table(classes)
+  .table-responsive
+    table.table-custom(class=classes)
+      thead
+        tr
+          th Column 1
+          th Column 2
+          th Column 3
+          th Column 4
+
+      tbody
+        tr
+          td Item #1
+          td Description
+          td Subtotal
+          td $3.00
+        tr
+          td Item #2
+          td Description
+          td Discount
+          td $3.00
+        tr
+          td Item #3
+          td Description
+          td Shipping
+          td $3.00
+
+        tr
+          td Item #4
+          td Description
+          td Tax
+          td $4.00
+
+      tfoot
+        tr
+          td All Items
+          td Description
+          td Your Total
+          td $13.00
+
+//- Parallax Section
+mixin parallax(obj)
+  section.section.parallax-container(data-parallax-img='images/' + obj.img + '.jpg' class=obj.addClass)
+    .parallax-content
+      block
+  ="\n"

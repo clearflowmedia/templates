@@ -1,0 +1,87 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-post-modern
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Blog Masonry'
+
+block title
+  title=pageName
+
+block page
+  //-Page Header
+  include ../sections/_section-header-default
+
+
+  +page-title('Blog', 'bg-blog')
+
+  //-Blog masonry
+  section.section-50.section-md-75.section-xl-100.bg-whisperapprox
+    .container
+      .row.row-30.justify-content-md-center.justify-content-lg-start
+        .col-md-9.col-lg-6
+          +post-modern({
+            type: 'material-icons-videocam',
+            header: 'Leave your Legacy through Planned Giving',
+            content: [
+              {type: 'image', data: 'blog-masonry-1-570x321'},
+              {
+                type: 'text',
+                data: ['There comes a point in life where you want to begin sharing or gifting all the things you’ve collected over the years—stories, wisdom, financial wealth. And unlike the Ancient Egyptians believed, you cannot take your worldly goods with you when...']
+              }
+            ],
+            time: ['2021-01-01', '2 days ago'],
+            tags: ['Legacy', 'Plan']
+          })
+
+          +post-modern({
+            type: 'material-icons-local_see',
+            header: 'Protecting Your Biggest Asset',
+            content: [
+                {type: 'image', data: 'blog-masonry-2-570x321'}
+            ],
+            time: ['2021-01-01', '7 days ago'],
+            tags: ['Protecting', 'Insurance']
+          })
+
+        .col-md-9.col-lg-6
+          +post-modern({
+            type: 'material-icons-library_books',
+            header: 'A Lesson in Helping your Student Pay for College',
+            content: [
+              {type: 'text', data: ['You think back fondly on those halcyon collegiate days--studying in the quad, late-night pizza, tailgating for the big tailgating game, dorm living, tossing your graduation cap in the air...beyond the lifelong friends and the parties and fun, college helped you get to where you are today. Looking ahead, your student is...']}
+            ],
+            time: ['2021-01-01', '3 days ago'],
+            tags: ['Lesson', 'Student']
+          })
+
+          +post-modern({
+            type: 'material-icons-audiotrack',
+            header: 'How to Purchase the Right Amount of Life Insurance',
+            content: [
+              {type: 'audio', data: globals.soundcloud}
+            ],
+            time: ['2021-01-01', '4 days ago'],
+            tags: ['Insurance', 'Financial']
+          })
+
+          +post-modern({
+            type: 'material-icons-videocam',
+            header: 'Debt After Death – Do You Have it Covered?',
+            content: [
+              {type: 'image', data: 'blog-masonry-3-570x321'},
+              {type: 'text', data: ['Many people deal with credit card debt all of their lives with most of them giving little or no thought to what happens with their debt after they die. The fact that nearly 60% die without a will is a strong indication that they’ve given absolutely...']}
+            ],
+            time: ['2021-01-01', '2 days ago'],
+            tags: ['Debt', 'Credit Card']
+          })
+
+
+      .pagination-custom-wrap.text-center
+        +pagination
+  ='\n'
+
+  //-Page Footer
+  include ../sections/_section-footer-default

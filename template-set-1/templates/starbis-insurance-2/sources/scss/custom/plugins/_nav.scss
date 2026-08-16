@@ -1,0 +1,804 @@
+//
+// Nav custom
+// --------------------------------------------------
+
+// Tabs
+//--------------------------------------
+// Corporate style
+$tabs-corporate-color: $cello;
+$tabs-corporate-background: transparent;
+$tabs-corporate-active-color: $white;
+$tabs-corporate-active-background: $cello;
+$tabs-corporate-border: #d9d9d9;
+$tabs-corporate-arrow-color: $white;
+
+// Line style
+$tabs-line-color: $dusty-gray;
+$tabs-line-background: transparent;
+$tabs-line-active-color: $primary;
+$tabs-line-active-background: transparent;
+$tabs-line-active-border: $primary;
+$tabs-line-line: $porcelain;
+
+// Minimal style
+$tabs-minimal-color: $cello;
+$tabs-minimal-background: transparent;
+$tabs-minimal-active-color: $cello;
+$tabs-minimal-active-background: transparent;
+$tabs-minimal-active-border: $primary;
+
+$vertical-tab-offset: 10px;
+
+// Base styles
+.tabs-custom {
+  .nav-tabs {
+    display: block;
+    word-spacing: 0;
+    border: 0;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+
+    .nav-item {
+      float: none;
+      border: 0;
+      cursor: pointer;
+      transition: .33s all ease;
+    }
+
+    .nav-item {
+      .nav-link.active {
+        cursor: default;
+        border: 0;
+      }
+    }
+
+    .nav-link {
+      margin: 0;
+      border: 0;
+    }
+  }
+}
+
+// Offsets
+* + .tabs-custom {
+  margin-top: 35px;
+
+  @include media-breakpoint-up(lg) {
+    margin-top: 50px;
+  }
+}
+
+.tabs-custom {
+  &.tabs-corporate,
+  &.tabs-line,
+  &.tabs-minimal {
+    .nav-tabs {
+      font-size: 0;
+      line-height: 0;
+    }
+  }
+
+  // Tabs corporate style
+  &.tabs-corporate {
+    .nav-tabs {
+      border: 1px solid $tabs-corporate-border;
+      .nav-item {
+        margin: -1px 0;
+      }
+
+      .nav-item .nav-link {
+        padding: 8px 10px;
+        font: 700 11px/18px $font-family-sec;
+        color: $tabs-corporate-color;
+        background: $tabs-corporate-background;
+        border-bottom: 1px solid $tabs-corporate-border;
+        text-align: center;
+        vertical-align: middle;
+
+        &:after {
+          font: 400 17px 'Material Design Icons';
+          color: transparent;
+          position: relative;
+          top: -12px;
+          display: inline-block;
+          margin-left: 5px;
+          content: '\f236';
+          vertical-align: middle;
+          transition: .33s all ease;
+        }
+
+        &:first-child {
+          border-top: 1px solid $tabs-corporate-border;
+        }
+      }
+
+      .nav-item .nav-link:hover,
+      .nav-item .active.nav-link {
+        color: $tabs-corporate-active-color;
+        background: $tabs-corporate-active-background;
+        border-color: $tabs-corporate-active-background;
+
+        &:after {
+          top: -1px;
+          color: $tabs-corporate-arrow-color;
+        }
+      }
+    }
+
+    .tab-content {
+      padding: 22px 0 0;
+      color: $black;
+    }
+  }
+
+  // Tabs line style & Tabs minimal style
+  &.tabs-line,
+  &.tabs-minimal {
+    .nav-tabs {
+      .nav-item {
+        margin: 0;
+      }
+
+      .nav-item + .nav-item {
+        margin-top: -1px;
+      }
+    }
+
+    .tab-content {
+      padding: 22px 0 0;
+    }
+  }
+
+  // Tabs line style
+  &.tabs-line {
+    .nav-tabs {
+      .nav-item .nav-link {
+        font: 400 11px/16px $font-family-base;
+        letter-spacing: .05em;
+        text-transform: uppercase;
+        color: $tabs-line-color;
+      }
+
+      .nav-item .nav-link:hover,
+      .nav-item .active.nav-link {
+        color: $tabs-line-active-color;
+      }
+    }
+  }
+
+  // Tabs minimal style
+  &.tabs-minimal {
+    .nav-tabs {
+      .nav-item .nav-link {
+        font: 700 11px/24px $font-family-base;
+        color: $tabs-minimal-color;
+      }
+
+      .nav-item .nav-link:hover,
+      .nav-item .active.nav-link {
+        color: $tabs-minimal-active-color;
+      }
+    }
+  }
+}
+
+// Horizontal tabs
+// ----------------------
+.tabs-custom {
+  // Tabs line style
+  &.tabs-line {
+    .nav-tabs {
+      text-align: center;
+
+      .nav-item {
+        display: block;
+        margin: 0 -1px;
+      }
+
+      .nav-item .nav-link {
+        padding: 8px 15px;
+        border: 1px solid $tabs-line-line;
+
+        &:last-child {
+          margin-right: 0;
+          border-bottom-width: 1px;
+        }
+      }
+
+      .nav-item .nav-link:hover,
+      .nav-item .active.nav-link {
+        color: $white;
+        background: $primary;
+        border-color: $primary;
+      }
+    }
+  }
+
+  // Tabs minimal style
+  &.tabs-minimal {
+    .nav-tabs {
+      text-align: center;
+
+      .nav-item {
+        display: block;
+      }
+
+      .nav-item .nav-link {
+        padding: 7px 15px;
+        border: 1px solid $tabs-line-line;
+
+        &:last-child {
+          border-bottom-width: 1px;
+        }
+      }
+
+      .nav-item .nav-link:hover,
+      .nav-item .active.nav-link {
+        color: $white;
+        background: $primary;
+        border-color: $primary;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .tabs-custom {
+
+    // Tabs line style & Tabs minimal style
+    &.tabs-line,
+    &.tabs-minimal {
+      .nav-item {
+        margin: 0;
+      }
+    }
+
+    &.tabs-line {
+      .nav-tabs {
+        .nav-item .nav-link {
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+    }
+
+    &.tabs-minimal {
+      .nav-tabs {
+        .nav-item .nav-link {
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+    }
+
+    // Horizontal tabs
+    // ----------------------
+    &.tabs-horizontal {
+      // Tabs corporate style & Tabs line style
+      &.tabs-corporate,
+      &.tabs-line {
+        .nav-tabs {
+          @include display-flex;
+          @include flex-direction(row);
+          @include align-items(center);
+          width: 100%;
+          text-align: left;
+        }
+      }
+
+      // Tabs line style & Tabs minimal style
+      &.tabs-line,
+      &.tabs-minimal {
+        .nav-tabs {
+          .nav-item .nav-link {
+            position: relative;
+            z-index: 10;
+            display: inline-block;
+            border: 0;
+          }
+
+          .nav-item + .nav-item {
+            margin-top: 0;
+          }
+        }
+
+        .tab-content {
+          padding: 40px 0 0;
+        }
+      }
+
+      // Tabs corporate style
+      &.tabs-corporate {
+        .nav-tabs {
+          .nav-item, .nav-link {
+            display: block;
+            border: 0;
+          }
+        }
+      }
+
+      // Tabs line style
+      &.tabs-line {
+        .nav-tabs {
+          @include justify-content(space-between);
+          border-bottom: 2px solid $tabs-line-line;
+
+          .nav-item .nav-link {
+            padding: 8px 0 8px 0;
+            margin: 0 30px 0 0;
+            background: $tabs-line-background;
+
+            &:after {
+              content: '';
+              position: absolute;
+              left: 0;
+              right: 100%;
+              bottom: -1px;
+              border-bottom: 2px solid $tabs-line-active-border;
+              opacity: 0;
+              visibility: hidden;
+              transition: .33s all ease;
+            }
+          }
+
+          .nav-item .nav-link:hover,
+          .nav-item .active.nav-link {
+            color: $tabs-line-active-color;
+            background: $tabs-line-active-background;
+          }
+
+          .nav-item .active.nav-link {
+            &:after {
+              right: 0;
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+      }
+
+      // Tabs minimal style
+      &.tabs-minimal {
+        .nav-tabs {
+          margin-top: -$vertical-tab-offset;
+
+          .nav-item {
+            display: inline-block;
+            margin: $vertical-tab-offset 35px 0 0;
+          }
+
+          .nav-item .nav-link {
+            position: relative;
+            bottom: -1px;
+            z-index: 10;
+            display: inline-block;
+            padding: 0 0 5px 0;
+
+            &:after {
+              content: '';
+              position: absolute;
+              left: 0;
+              right: 100%;
+              bottom: 0;
+              border-bottom: 2px solid $tabs-line-active-border;
+              opacity: 0;
+              visibility: hidden;
+              transition: .33s all ease;
+            }
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+
+          .nav-item .nav-link:hover,
+          .nav-item .active.nav-link {
+            color: $tabs-minimal-active-color;
+            background: $tabs-minimal-active-background;
+          }
+
+          .nav-item .active.nav-link {
+            &:after {
+              right: 0;
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Vertical tabs
+// ----------------------
+.tabs-vertical {
+
+  // Common styles
+  .nav-tabs {
+    position: relative;
+
+    > .nav-item {
+      z-index: 10;
+      display: block;
+      @include flex-grow(1);
+      .nav-link {
+      }
+    }
+  }
+
+  // Tabs corporate style
+  &.tabs-corporate {
+    .nav-tabs {
+      width: 100%;
+
+      .nav-item {
+        display: block;
+      }
+
+      .nav-item .nav-link {
+        position: relative;
+        padding: 8px 10px;
+      }
+
+      .nav-item .nav-link:hover,
+      .nav-item .active.nav-link {
+        border-color: $tabs-corporate-active-background;
+      }
+    }
+
+    .tab-content {
+      padding: 30px 10px 30px;
+    }
+  }
+
+  &.tabs-vertical-reverse {
+    .nav.nav-tabs {
+      .nav-item {
+        .nav-link {
+          font: 700 12px $font-family-base;
+          text-transform: uppercase;
+          color: $gray-500;
+          background-color: transparent;
+          border-color: $porcelain;
+          &:after {
+            display: none;
+          }
+        }
+        .nav-link:hover,
+        .nav-link.active {
+            color: $primary;
+            fill: $primary;
+            background-color: transparent;
+            border-color: $porcelain;
+        }
+      }
+      svg {
+        display: none;
+        line, path, circle {
+          @include transition(.3s ease-out all);
+        }
+        &.stroke {
+          transition: 0s;
+          path, line {
+            transition: 0s;
+            stroke: none;
+          }
+        }
+      }
+    }
+    .tab-content {
+      padding: 20px;
+    }
+  }
+
+  // Tabs minimal style
+  &.tabs-minimal {
+    .nav-tabs {
+      border-right: 1px solid $alto;
+      .nav-item .nav-link {
+        position: relative;
+        right: -1px;
+        padding: 0 16px 0 0;
+        text-align: right;
+        border-right: 1px solid transparent;
+        background-color: transparent;
+
+        &:hover,
+        &.resp-tab-active {
+          border-right-color: $secondary;
+        }
+      }
+
+      .nav-item + .nav-item {
+        margin-top: 16px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .tabs-custom {
+    // Tabs corporate style
+    &.tabs-corporate {
+      .nav-tabs {
+        .nav-item .nav-link {
+          font-size: 16px;
+          line-height: 26px;
+
+          &:after {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+
+    // Horizontal tabs
+    // ----------------------
+    &.tabs-horizontal {
+
+      // Tabs corporate style
+      &.tabs-corporate {
+        .nav-tabs {
+          position: relative;
+          @include justify-content(center);
+
+          .nav-item {
+            @include flex-grow(1);
+            @include flex-shrink(0);
+          }
+
+          .nav-item .nav-link {
+            display: block;
+            padding: 21px 10px 19px;
+          }
+        }
+
+        .tab-content {
+          padding: 30px 0 0;
+        }
+      }
+    }
+
+    // Vertical tabs
+    // ----------------------
+    &.tabs-vertical {
+      @include display-flex;
+      @include flex-direction(row);
+      @include flex-wrap(nowrap);
+      @include align-items(flex-start);
+
+      .nav-tabs {
+        @include display-flex;
+        @include flex-direction(column);
+        @include flex-wrap(nowrap);
+        @include align-items(stretch);
+        @include flex-shrink(0);
+        max-width: 50%;
+
+        .nav-item {
+          width: 100%;
+        }
+
+        .nav-item .nav-link {
+          text-align: left;
+        }
+
+        .nav-item .nav-link:hover,
+        .nav-item .active.nav-link {
+          border-color: $tabs-corporate-active-background;
+
+          &:after {
+            right: 15px;
+          }
+        }
+      }
+
+      .tab-content {
+        @include flex-grow(1);
+      }
+
+      &.tabs-corporate {
+        .nav-tabs {
+          width: auto;
+          min-width: 240px;
+          border-width: 0 0 1px 0;
+
+          .nav-item {
+            margin: 0;
+          }
+
+          .nav-item .nav-link {
+            padding: 23px 45px 22px 55px;
+            border-width: 1px 0 0 0;
+            text-align: left;
+            display: block;
+            &:after {
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              right: 26px;
+              content: '\f238';
+              transition: .33s all ease;
+            }
+          }
+
+          .nav-item .nav-link:hover,
+          .nav-item .active.nav-link {
+            &:after {
+              right: 15px;
+              top: 50%;
+            }
+          }
+        }
+
+        .tab-content {
+          padding: 0 0 0 30px;
+          margin-top: -5px;
+        }
+      }
+      &.tabs-vertical-reverse {
+        @include flex-direction(row-reverse);
+        .nav-tabs {
+          border: 0;
+          .nav-item {
+            &:first-child {
+              .nav-link {
+                border-top: 0;
+              }
+            }
+            .nav-link {
+              padding: 25px 17px 25px 0;
+              text-transform: uppercase;
+              color: $gray-500;
+              fill: $gray-500;
+              path, line, circle {
+                stroke: $gray-500;
+              }
+              .fill {
+                path, line {
+                  fill: $gray-500;
+                  stroke: none;
+                }
+              }
+              background-color: transparent;
+              border-color: $porcelain;
+              &:after {
+                display: none;
+              }
+              svg {
+                display: block;
+              }
+              > span {
+                &:first-child {
+                  @include display-flex;
+                  @include flex-direction(row);
+                  @include align-items(center);
+                  @include justify-content(space-between);
+                }
+              }
+            }
+            .nav-link:hover,
+            .nav-link.active {
+                color: $primary;
+                fill: $primary;
+                path, line, circle {
+                  stroke: $primary;
+                }
+                .fill {
+                  path, line {
+                    fill: $primary;
+                    stroke: none;
+                  }
+                }
+                .stroke {
+                  path, line {
+                    stroke: none;
+                  }
+                }
+                background-color: transparent;
+                border-color: $porcelain;
+            }
+          }
+        }
+
+        .tab-content {
+          padding: 0 30px 0 0;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .tabs-custom {
+
+    // Vertical tabs
+    // ----------------------
+    &.tabs-vertical {
+
+      // Tabs corporate style
+      &.tabs-corporate {
+        .nav-tabs {
+          min-width: 300px;
+        }
+
+        .tab-content {
+          padding: 0 0 0 44px;
+        }
+      }
+      &.tabs-vertical-reverse {
+        .nav-tabs {
+          min-width: 224px;
+        }
+        .tab-content {
+          padding: 0 44px 0 0;
+        }
+      }
+    }
+  }
+}
+
+.tab-content-inner {
+  display: table;
+  table-layout: fixed;
+  max-width: 724px;
+  > div {
+    &:first-child,
+    &:last-child {
+      max-width: 541px;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    > div {
+      display: table-cell;
+      vertical-align: middle;
+      &:first-child {
+        width: 40%;
+        > div {
+          max-width: 216px;
+        }
+      }
+      &:last-child {
+        max-width: 431px;
+        min-width: 431px;
+      }
+    }
+  }
+}
+
+.tabs-custom.tabs-horizontal.tabs-line.tabs-custom-horizontal {
+  .nav-item {
+    .nav-link {
+      font: 700 12px $font-family-base;
+      letter-spacing: 0.05em;
+    }
+    &:last-child {
+      .nav-link {
+        margin-right: 0;
+      }
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    .nav.nav-tabs {
+      width: calc(100% - 50px);
+    }
+  }
+}
+
+.tab-content {
+  * + .img-box, * + .btn-custom {
+    margin-top: 30px;
+  }
+
+  .rd-range-wrap + h6 {
+    margin-top: 40px;
+  }
+  
+  * + .rd-mailform {
+    margin-top: 20px;
+  }
+}

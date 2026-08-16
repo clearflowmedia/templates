@@ -1,0 +1,161 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_product-order-item
+
+block variables
+	- pageName = 'Shop checkout'
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title(pageName, 'bg-shop')
+
+	//- Addresses
+	section.section.section-50.section-md-top-75.section-xl-top-90
+		.container
+			.row.row-40.justify-content-md-center
+				.col-md-10.col-lg-6
+					h3 Billing Address
+					//- RD Mailform
+					form.rd-mailform.form-modern.form-disabled.offset-top-5
+						.row.row-30.row-md-40
+							.col-md-6
+								.form-wrap
+									label.form-label(for="billing-first-name") First Name
+									input#billing-first-name.form-input(type="text" name="first-name" data-constraints="@Required")
+
+							.col-md-6
+								.form-wrap
+									label.form-label(for="billing-last-name") Last Name
+									input#billing-last-name.form-input(type="text" name="last-name" data-constraints="@Required")
+
+							.col-sm-12
+								.form-wrap
+									label.form-label(for="billing-company") Company
+									input#billing-company.form-input(type="text" name="company" data-constraints="@Required")
+
+							.col-sm-12
+								.form-wrap
+									.textarea-lined-wrap.textarea-lined-wrap-xs
+										label.form-label(for="billing-address") Address
+										textarea#billing-address.form-input(name="address" data-constraints="@Required")
+
+							.col-sm-12
+								.form-wrap
+									label.form-label(for="billing-city-town") City/Town
+									input#billing-city-town.form-input(type="text" name="company" data-constraints="@Required")
+
+							.col-md-6
+								.form-wrap
+									label.form-label(for="billing-email") Email
+									input#billing-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+
+							.col-md-6
+								.form-wrap
+									label.form-label(for="billing-phone") Phone
+									input#billing-phone.form-input(type="text" name="phone" data-constraints="@Numeric @Required")
+
+				.col-md-10.col-lg-6
+					h3 Shipping Address
+					//- RD Mailform
+					form.rd-mailform.form-modern.form-disabled.offset-top-5
+						.row.row-30.row-md-40
+							.col-md-6
+								.form-wrap
+									label.form-label(for="shipping-first-name") First Name
+									input#shipping-first-name.form-input(type="text" name="first-name" data-constraints="@Required")
+
+							.col-md-6
+								.form-wrap
+									label.form-label(for="shipping-last-name") Last Name
+									input#shipping-last-name.form-input(type="text" name="last-name" data-constraints="@Required")
+
+							.col-sm-12
+								.form-wrap
+									label.form-label(for="shipping-company") Company
+									input#shipping-company.form-input(type="text" name="company" data-constraints="@Required")
+
+							.col-sm-12
+								.form-wrap
+									.textarea-lined-wrap.textarea-lined-wrap-xs
+										label.form-label(for="shipping-address") Address
+										textarea#shipping-address.form-input(name="address" data-constraints="@Required")
+
+							.col-sm-12
+								.form-wrap
+									label.form-label(for="shipping-city-town") City/Town
+									input#shipping-city-town.form-input(type="text" name="company" data-constraints="@Required")
+
+							.col-md-6
+								.form-wrap
+									label.form-label(for="shipping-email") Email
+									input#shipping-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+
+							.col-md-6
+								.form-wrap
+									label.form-label(for="shipping-phone") Phone
+									input#shipping-phone.form-input(type="text" name="phone" data-constraints="@Numeric @Required")
+
+				.col-md-10.col-xl-12
+					//- Checkbox
+					label.checkbox-inline
+						input.checkbox-custom(type='checkbox')
+						|  My billing address and shipping address are the same
+
+
+	//- Your order & Cart Totals
+	section.section.section-35.section-md-bottom-60.section-xl-bottom-100.bg-whisper.novi-background
+		.container
+			.row.row-40.justify-content-md-center
+				.col-md-10.col-lg-6
+					h3 Your order
+					.product-order-item-wrap
+						+product-order-item({
+							img: 'product-01-170x122.png',
+							header: 'Engineered Rib Cashmere',
+							count: '2',
+							price: '41.06'
+						})
+
+						+product-order-item({
+							img: 'product-05-170x122.png',
+							header: 'Collar Leather Jacket',
+							count: '1',
+							price: '145'
+						})
+
+				.col-md-10.col-lg-6
+					h3 Cart Totals
+					ul.list-wide-bordered
+						li: dl
+							dt Cart Subtotal
+							dd $ 186.06
+						li: dl
+							dt Shipping
+							dd Free Delivery
+
+						li: dl
+							dt Total
+							dd $ 186.06
+
+					//- Radio
+					ul.list-wide-bordered
+						li: label.radio-inline
+							input.radio-custom#option1(type='radio' name='options' checked='')
+							| Direct Bank Transfer
+						li: label.radio-inline
+							input.radio-custom#option2(type='radio' name='options')
+							| Cheque Payment
+						li: label.radio-inline
+							input.radio-custom#option3(type='radio' name='options')
+							| PayPal
+
+				.col-sm-12.text-center
+					a.btn.btn-xl.btn-red-orange(href='#') Place order
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

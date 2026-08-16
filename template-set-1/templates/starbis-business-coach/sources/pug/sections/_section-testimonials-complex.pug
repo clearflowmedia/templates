@@ -1,0 +1,44 @@
+//- Include
+include ../elements/_quote-strict
+
+//- Testimonials
+section.section.section-top-60.section-md-top-90
+	.container.text-center
+		h3 Testimonials
+		.row.justify-content-md-center
+			.col-md-11.col-lg-10.col-xl-8
+				//- Slick Carousel
+				.slick-carousel-complex-variant-1
+					.slick-slider.slick-slider-images.slick-slider#child-carousel(data-for=".carousel-parent", data-arrows="false", data-loop="true", data-dots="false", data-swipe="true", data-items="1", data-xs-items='3', data-sm-items='3', data-md-items='3', data-lg-items='3', data-xl-items='3', data-slide-to-scroll="1", data-center-mode="true", data-center-padding='0')
+						.item: +img('clients-testimonials-3-153x153')
+						.item: +img('clients-testimonials-4-153x153')
+						.item: +img('clients-testimonials-5-153x153')
+						.item: +img('clients-testimonials-6-153x153')
+
+					.slick-slider.carousel-parent.slick-dots-variant-1(data-arrows="false", data-loop="true", data-dots="true", data-swipe="true", data-child="#child-carousel", data-for="#child-carousel", data-items="1", data-xs-items='1', data-sm-items='1', data-md-items='1', data-lg-items='1', data-slide-to-scroll="1", data-center-mode='true')
+						.item
+							+quote-strict({
+								mod: 'quote-strict-inverse',
+								text: "It took me a while to find someone who could accomplish what I needed for my website. I have to say it was well worth the wait. Everybody at Starbis showed their hard work, patience, and professionalism, they far exceeded my expectations.",
+								cite: "Ann Williams"
+							})
+						.item
+							+quote-strict({
+								mod: 'quote-strict-inverse',
+								text: "Guys at Starbis really know how to create attractive designs! Though I don’t know much about them, the first prpoject they did for my company impressed me a lot. I think I will cooperate with them again in the nearest future.",
+								cite: "Mark Wilson"
+							})
+
+						.item
+							+quote-strict({
+								mod: 'quote-strict-inverse',
+								text: "I've worked with Starbis for over 7 years and in that time I have always been impressed by their combination of impressive backend technical expertise, buttoned-down process and great UX/design. Thank you guys, keep up going this way!",
+								cite: "Gregory Smith"
+							})
+
+						.item
+							+quote-strict({
+								mod: 'quote-strict-inverse',
+								text: "It has been a pleasure to work with Starbis team of professional designers. The Reactive team was quick studies who learned about our complex business and market and created a web presence that we are all proud to call our own. Many thanks to all of you!",
+								cite: "Jane Miller"
+							})

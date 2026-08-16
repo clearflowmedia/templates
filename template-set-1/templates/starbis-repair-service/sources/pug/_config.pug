@@ -1,0 +1,100 @@
+-
+	var
+		htmlClass = "wide wow-animation",
+		fonts = "//fonts.googleapis.com/css2?family=Gothic+A1:wght@300;500;700&display=swap",
+		logo = {
+			default: 'logo-default-124x30.svg',
+			inverse: 'logo-inverse-124x30.svg',
+			name: 'Stract'
+		},
+		links = {
+			post: 'blog-post.html',
+			getTemplate: 'https://www.templatemonster.com/website-templates/starbis.html',
+			address: '9784 Bear Hill Drive Brooklyn, NY 11228',
+			soundcloud: '<iframe height="166" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/149065581&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>',
+			video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/VrLSBsOkP6k" allowfullscreen></iframe>'
+		},
+		colors = {
+			primary: '#2d527c'
+		},
+		menu = [
+			{
+				title: 'Home',
+				link: 'index.html'
+			},
+			{
+				title: 'About',
+			},
+			{
+				title: 'Services',
+			},
+			{
+				title: 'Pricing',
+			},
+			{
+				title: 'News',
+				link: null,
+				dropdown: [
+					{ title: 'Classic Blog' },
+					{ title: 'Grid Blog' },
+					{ title: 'Blog Post' },
+				],
+
+			},
+			{
+				title: 'Pages',
+				link: '#',
+				megamenu: [
+
+					{
+						title: 'Pages',
+						link: null,
+						list: [
+							{ title: 'Appointment' },
+							{ title: 'Clients' },
+							{ title: 'Client testimonials' },
+							{ title: 'Our team' },
+							{ title: 'Team member profile' },
+							{ title: 'Careers' },
+							{ title: 'Contact us' },
+							{ title: 'Grid gallery' },
+							{ title: 'Masonry gallery' },
+						]
+					},
+					{
+						title: 'Extras',
+						link: null,
+						list: [
+							{ title: '404 Page' },
+							{ title: '503 Page' },
+							{ title: 'Maintenance' },
+							{ title: 'Coming soon' },
+							{ title: 'Login' },
+							{ title: 'Registration' },
+							{ title: 'Search results' },
+							{ title: 'Privacy Policy' }
+						]
+					},
+				]
+			},
+			{
+				title: 'Elements',
+				link: '#',
+				dropdown: [
+					{ title: 'Accordion' },
+					{ title: 'Buttons' },
+					{ title: 'Grid' },
+					{ title: 'Forms' },
+					{ title: 'Icons' },
+					{ title: 'Icon lists' },
+					{ title: 'Progress bars' },
+					{ title: 'Tabs' },
+					{ title: 'Table styles' },
+					{ title: 'Typography' }
+				]
+			}
+		],
+
+		// Predefined variables
+		breadcrumbs = [],
+		pageName = 'Home'

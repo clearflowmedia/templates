@@ -1,0 +1,40 @@
+extends  ../_skeleton
+
+//- Includes
+
+block variables
+  - var activeIndex = 2
+  - var pageName = 'Search results'
+
+block title
+  title=pageName
+
+block page
+  //-Page Header
+  include ../sections/_section-header-default
+
+
+  +page-title(pageName, 'bg-gallery')
+
+  //- Search results
+  section.section-60.section-md-90.section-xl-bottom-120
+    .container
+      .row.row-40.row-md-60.justify-content-lg-center
+        .col-lg-10
+          //- RD Search
+          form.rd-search.rd-search-minimal(action="search-results.html", method="GET", data-search-live-count='15')
+            .form-wrap
+              label(for="rd-search-form-input-1" class="form-label")
+                span.text-mobile search...
+                span.text-default start typing and hit enter
+              input.form-input(class="form-control" id="rd-search-form-input-1" type="text" name="s" autocomplete="off")
+            button.btn-icon-only.btn-icon-only-primary(type='submit')
+              span.novi-icon.icon.icon-sm.material-icons-keyboard_return
+
+        .col-md-11
+          .rd-search-results
+  ='\n'
+
+
+  //-Page Footer
+  include ../sections/_section-footer-default

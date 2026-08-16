@@ -1,0 +1,73 @@
+extends  ../_skeleton
+
+//- Includes
+include ../sections/_section-header-default
+include ../elements/_thumbnail-3
+
+block variables
+	- var activeIndex = 5
+	- pageName = 'Grid gallery'
+
+block page
+	//- Page Header
+	+header-default
+
+	//- Page Content
+	+page-title('Gallery', 'bg-gallery')
+
+	//- Grid gallery
+	section.section.section-50.section-md-90.section-lg-bottom-120.section-xl-bottom-165
+		.container.isotope-wrap.text-center
+			.row.row-40
+				.col-sm-12
+					//- Isotope Filters
+					ul.isotope-filters-responsive
+						li: p Choose your category:
+						li.block-top-level
+							//- Isotope Filters
+							button.isotope-filters-toggle.btn.btn-sm.btn-default(data-custom-toggle='#isotope-1', data-custom-toggle-hide-on-blur='true', data-custom-toggle-disable-on-blur='true')
+								| Filter
+								span.caret
+
+							#isotope-1.isotope-filters.isotope-filters-minimal.isotope-filters-horizontal
+								ul.list-inline
+									li: a.active(data-isotope-filter='*', href='#') All
+									li: a(data-isotope-filter='Category 1', href='#') Air Force
+									li: a(data-isotope-filter='Category 2', href='#') Army
+									li: a(data-isotope-filter='Category 3', href='#') Other
+
+				//- Isotope Content
+				.col-sm-12
+					.row.isotope.isotope-gutter-default(data-lightgallery='group', data-lg-thumbnail='false')
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+							+thumbnail-3({img: 'gallery-grid-1-370x278.jpg', original: 'gallery-1-1200x900_original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+							+thumbnail-3({img: 'gallery-grid-2-370x278.jpg', original: 'gallery-2-1200x800_original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 3')
+							+thumbnail-3({img: 'gallery-grid-3-370x278.jpg', original: 'gallery-3-1200x800_original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+							+thumbnail-3({img: 'gallery-grid-4-370x278.jpg', original: 'gallery-4-1200x800_original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+							+thumbnail-3({img: 'gallery-grid-5-370x278.jpg', original: 'gallery-5-1200x800_original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 3')
+							+thumbnail-3({img: 'gallery-grid-6-370x278.jpg', original: 'gallery-6-1200x800_original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+							+thumbnail-3({img: 'gallery-grid-7-370x278.jpg', original: 'gallery-7-1200x800_original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+							+thumbnail-3({img: 'gallery-grid-8-370x278.jpg', original: 'gallery-8-1200x800_original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 3')
+							+thumbnail-3({img: 'gallery-grid-9-370x278.jpg', original: 'gallery-9-1200x800_original'})
+
+
+	.divider
+
+	//- Page Footer
+	include ../sections/_section-footer-default

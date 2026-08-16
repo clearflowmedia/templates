@@ -1,0 +1,48 @@
+extends  ../_skeleton
+
+block variables
+	- var pageName = 'Login'
+	- var bodyClass = ['one-screen-page', 'bg-gray-darker', 'bg-image'];
+	- var bodyImage = 'bg-login'
+
+block title
+	title=pageName
+
+block page
+	section.section.section-single.novi-background.bg-gray-darker.bg-image(style='background-image: url(images/bg-404.jpg);')
+		.section-single-inner
+			//- Page Header
+			include ../sections/_section-header-base-transparent
+
+			.section-single-main
+				.container
+					.row.justify-content-md-center
+						//- Login Form
+						.col-md-7.col-lg-5.col-xl-4
+							//- Block shadow
+							.block-shadow.text-center
+								.block-inner
+									p.h7.text-abbey.fw-bold Login to your account
+									.icon-block
+										span.icon.icon-xl.icon-black.material-icons-lock_open
+								//- RD Mailform
+								form.rd-mailform.form-modern.form-darker
+									.block-inner
+										.form-wrap
+											input#login-form-login.form-input(type="text" name="login" data-constraints="@Required")
+											label.form-label(for="login-form-login") Login
+										.form-wrap
+											input#login-form-password.form-input(type="password" name="pass" data-constraints="@Required")
+											label.form-label(for="login-form-password") Password
+										.info-text
+											a.link-default(href='#') Forgot your password?
+
+									button(type="submit").btn.btn-primary.btn-block Sign in
+
+							.group-inline.text-center
+								span.text-white Don’t have an account?
+								a.link.link-primary-inverse(href='register.html') Sign up here.
+
+
+			//- Page Footer
+			include ../sections/_section-footer-base-transparent

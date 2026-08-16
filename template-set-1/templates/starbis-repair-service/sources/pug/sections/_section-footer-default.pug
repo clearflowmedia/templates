@@ -1,0 +1,57 @@
+//- Footer default
+footer.footer.section-footer.bg-primary
+	.container
+		.row.row-50
+			.col-lg-6
+				a.brand(href='index.html')
+					+logo(true)
+				p.footer-suptitle Call Us for any question:
+				a.h3.footer-phone(href='tel:#') +1 (800) 123 1234
+				address.footer-address 2972 Westheimer Rd. Santa Ana,
+					br
+					| Illinois 85486
+				a.footer-mail-link(href='mailto:#') info@demolink.org
+				ul.list-footer.list-inline.list-inline-md
+					li: a.icon.icon-md.fa-facebook(href='#')
+					li: a.icon.icon-md.fa-twitter(href='#')
+					li: a.icon.icon-md.fa-instagram(href='#')
+					li: a.icon.icon-md.fa-youtube-play(href='#')
+			.col-lg-6
+				h3 Subscribe to newsletter
+				p Sign up for our e-mail and be the first to know about our special offers!
+				form.rd-form.mailchimp-mailform.rd-form-inline.rd-mailform(data-form-output='form-output-global' action='https://templatemonster.us1.list-manage.com/subscribe/post?u=1e39a6d114a4cc130a4edbe43&id=9fc9ef194a' method='post')
+						.form-wrap
+							.form-input-icon.text-body
+								+icon-letter
+							input.form-input.form-input-extended.form-input-lg(id="subscribe-form-email" type="email" name="email" data-constraints="@Email @Required")
+							label.form-label.form-label-lg.form-label-extended(for="subscribe-form-email") Type your email
+						.form-button
+							button.btn.btn-lg.footer-button.mt-0(type='submit') Subscribe
+				.row.row-30.row-lg
+					.col-sm-4
+						ul.list.fw-medium
+							li: a(href='about.html') Who We Are
+							li: a(href='services.html') Services
+							li: a(href='pricing.html') Pricing
+							li: a(href='grid-blog.html') News
+							li: a(href='contact-us.html') Contacts
+					.col-sm-8
+						ul.list.fw-medium
+							li: a(href='#') Repairs/Renovation
+							li: a(href='#') Maintenance
+							li: a(href='#') Refinishing
+							li: a(href='#') Custom design work
+							li: a(href='#') Cleaning
+
+
+		.row.row-lg
+			p.rights
+				span &copy;&nbsp;
+				span.copyright-year
+				span .&nbsp;
+				span= logo.name
+				span .&nbsp;
+				span All rights reserved
+				span .&nbsp;
+				a( href='privacy-policy.html' ) Privacy Policy
+

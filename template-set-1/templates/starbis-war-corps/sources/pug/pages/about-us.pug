@@ -1,0 +1,120 @@
+extends  ../_skeleton
+include ../elements/_progress-linear
+
+//- Includes
+include ../sections/_section-header-default
+include ../elements/_thumbnail-1
+include ../elements/_quote-vertical
+include ../elements/_icon-box-horizontal
+
+block variables
+	- var activeIndex = 1
+	- pageName = 'About us'
+
+block page
+	// Page Header
+	+header-default
+
+	//- Page Content
+	+page-title(pageName, 'bg-image-1')
+
+	//- Who we are?
+	section.section.section-66.section-md-90.section-xl-bottom-120.novi-background
+		.container
+			h3 Who we are
+			.row.row-40.justify-content-lg-between
+				.col-md-6.col-xl-5.text-primary
+					.inset-md-right-15.inset-xl-right-0
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam autem cumque cupiditate deleniti dolor dolore eaque eligendi eum explicabo fuga in ipsam ipsum iure labore.
+						p libero molestiae necessitatibus nisi nostrum quam quas quasi, quidem ratione recusandae rerum sapiente sit veritatis voluptatum. Autem consequatur dignissimos distinctio dolore dolorum ea eius eum ex harum minima modi molestias nemo odit, officiis ullam! Sed!
+
+				.col-md-6
+					.shift-sm-top-1
+						+progress-linear({
+							title: 'Experience',
+							value: '70'
+						}).progress-linear-red
+						+progress-linear({
+							title: 'Professionalism',
+							value: '54'
+						}).progress-linear-blue
+						+progress-linear({
+							title: 'Reliability',
+							value: '87'
+						}).progress-linear-yellow
+						+progress-linear({
+							title: 'Resilience',
+							value: '90'
+						}).progress-linear-green
+
+
+	//- Team members
+	section.section.section-60.section-md-90.bg-gray-lighter.novi-background
+		.container
+			.row.row-40.row-lg-60
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-1({
+						img: 'team-6-189x189.png',
+						header: "Sam Adams",
+						caption: "Founder"
+					})
+
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-1({
+						img: 'team-2-189x189.png',
+						header: "Joan Williams",
+						caption: "Customer Service Manager"
+					})
+
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-1({
+						img: 'team-7-189x189.png',
+						header: "Benedict Smith",
+						caption: "System Administrator"
+					})
+
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-1({
+						img: 'team-5-189x189.png',
+						header: "Jane Green",
+						caption: "HR Manager"
+					})
+
+
+	include ../sections/_section-counters-black
+
+	//- Why Choose Us
+	section.section.section-60.section-md-90.bg-athens-gray.bg-image.novi-background(style='background-image: url(images/about-1.jpg);')
+		.container
+			.row
+				.offset-md-4.col-md-8.offset-lg-5.col-lg-7.offset-xl-6.col-xl-5
+					.inset-md-left-100
+						h3 Why Choose Us
+					.inset-md-left-30.inset-md-right-30
+						ul.list-xl
+							li
+								+icon-box-left({
+									icon: ['icon-md', 'material-icons-phonelink'],
+									header: 'Supporting veterans',
+									text: 'Amet animi consectetur consequuntur cum deserunt dignissimos dolorem ea earum eius eveniet expedita.'
+								})
+							li
+								+icon-box-left({
+									icon: ['icon-md', 'material-icons-av_timer'],
+									header: 'Meeting your needs',
+									text: 'Facilis hic, illo ipsa iste itaque labore minus modi nobis odio optio pariatur perferendis praesentium, quae quam quas quisquam quod.'
+								})
+
+							li
+								+icon-box-left({
+									icon: ['icon-md', 'material-icons-headset_mic'],
+									header: 'Helping military families',
+									text: 'Reprehenderit sed sint sunt suscipit ullam unde ut velit veniam voluptates! Consectetur illum impedit ipsum? Commodi impedit iure quae.'
+								})
+
+
+
+	include ../sections/_section-testimonials-vertical-dark-small
+
+	// Page Footer
+	include ../sections/_section-footer-default

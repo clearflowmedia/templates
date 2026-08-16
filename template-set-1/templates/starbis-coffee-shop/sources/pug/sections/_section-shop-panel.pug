@@ -1,0 +1,15 @@
+//- Shop panel
+section.section.shop-panel
+	.container.text-center
+		.row.row-15.justify-content-end
+			.col-sm-8.text-sm-end
+				.shop-panel-controls
+					span Show
+					//- Select 2
+					select.form-input.select-filter(data-minimum-results-for-search="Infinity", data-custom-theme='modern')
+						option(value="3") 8
+						option(value="4") 16
+						option(value="5") 24
+						option(value="6") 32
+
+					span items per page

@@ -1,0 +1,170 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-comment
+include ../elements/_ui-post-preview
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Blog post'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  main.page-content
+    +page-title('Blog', 'bg-image-1')
+
+    //- Blog post
+    section.section-60.section-md-75.section-xl-90
+      .container
+        .row.row-50
+          .col-lg-8.col-xl-9
+            article.post.post-single
+              .post-image
+                figure
+                  +jpg('post-1-870x412')
+              .post-header
+                h4 Pitfalls of Dismissing
+
+              .post-meta
+                ul.list-bordered-horizontal
+                  li
+                    dl.list-terms-inline
+                      dt Date
+                      dd: time(datetime='2021-01-22') January 22, 2021
+                  li
+                    dl.list-terms-inline
+                      dt Posted by
+                      dd Amelia Lee
+                  li
+                    dl.list-terms-inline
+                      dt Comments
+                      dd 3
+                  li
+                    dl.list-terms-inline
+                      dt Category
+                      dd Insurance Law
+
+              .divider-fullwidth.bg-gray-light
+
+              .post-body
+                p It is always a good idea to call your employment lawyer before an employee’s dismissal even if the employee has signed an iron clad termination clause. Most of my clients do so and sometimes the call helps the client save thousands of dollars. This past week – like most weeks – I had a number of calls from clients who wanted to terminate an employee.
+                p
+                  | In one case, the employer wanted to terminate a poor performer without just cause.  For various reasons, I always want to know the backstory to a potential dismissal so I started asking questions. It turns out the employee was disabled and had very recently requested accommodation. Although I have no doubt the disability had nothing to do with the desire to terminate, the employer had not done a good job of documenting several bona fide performance concerns, had not warned the employee that his employment was at risk. Lessons to be learned:
+                  br
+                  | 1) Make sure every employee signs an employment contract with a legally enforceable termination clause.
+                .quote-wrap-1
+                  blockquote.quote-minimal-bordered
+                    p: q Not only should you post interesting content, you should try to blog at least three times a week as a business.
+                p 2) Always call your employment lawyer before terminating an employee even if the employee has signed a legally enforceable termination clause. 3) To avoid additional legal liability, it is sometimes necessary to delay an employee termination. Damages for human rights violations, punitive damages, and the intentional infliction of mental stress can far exceed the termination pay an employee is owed under an employment contract. For blogs discussing non-termination pay damages.
+
+              .post-footer
+                h5 Share this post:
+                ul.list-inline.list-inline-xs
+                  li: a.novi-icon.icon.icon-xxs-small.link-primary.fa-facebook(href='#')
+                  li: a.novi-icon.icon.icon-xxs-small.link-primary.fa-twitter(href='#')
+                  li: a.novi-icon.icon.icon-xxs-small.link-primary.fa-google-plus(href='#')
+                  li: a.novi-icon.icon.icon-xxs-small.link-primary.fa-pinterest-p(href='#')
+
+            .divider-fullwidth.bg-gray-lighter
+
+            //- Comments
+            .comment-list-wrap
+              h4 3 Comments
+              .comment-list.inset-md-right-60.inset-lg-right-30.inset-xl-right-100
+                .comment-group
+                  +comment({
+                    img: 'post-2-70x71',
+                    user: 'July Mao',
+                    text: 'Oh, thank you, it is really a good idea to call your employment lawyer before an employee’s dismissal to avoid any problems.'
+                  })
+
+                  .comment-group-reply
+                    +comment({
+                      img: 'post-3-70x71',
+                      user: 'John doe',
+                      text: 'You are absolutely right! We know all the aspects of the employment relationship. If you have any questions, you can contact us via phone or email.'
+                    })
+
+                .comment-group
+                  +comment({
+                    img: 'post-4-70x71',
+                    user: 'Mila MOa',
+                    text: 'Very useful post! Thanks for sharing! Now I know that the employment law really matters for the employers!Your legal advice is great!'
+                  })
+
+            //- Leave a comment
+            .comments-wrap
+              h4 Leave a comment
+              .form-classic-wrap
+                //- RD Mailform
+                form.rd-mailform.form-classic.form-classic-bordered.label-outside
+                  .form-wrap
+                    label.form-label-outside.fw-bold(for="comment-message") Message:
+                    textarea#comment-message.form-input(name="message" data-constraints="@Required")
+                  .form-wrap
+                    button(type="submit" style='min-width: 200px;').btn.btn-primary Submit
+
+          //- Aside
+          .col-lg-4.col-xl-3
+            .blog-aside
+              .blog-aside-item
+                form.rd-search.rd-search-classic(action="search-results.html", method="GET")
+                  .form-wrap
+                    label.form-label(for="rd-search-form-input-1") Search...
+                    input.form-input(id="rd-search-form-input-1" type="text" name="s" autocomplete="off")
+                  button.rd-search-submit(type='submit')
+
+              .blog-aside-item
+                p.h7 Categories
+                ul.list-marked-bordered
+                  li: a(href='#')
+                    span Advertising Law
+                    span.text-dusty-gray (2)
+                  li: a(href='#')
+                    span Insurance Law
+                    span.text-dusty-gray (2)
+                  li: a(href='#')
+                    span Education Law
+                    span.text-dusty-gray (4)
+
+              .blog-aside-item
+                p.h7 Popular posts
+                +post-preview({
+                  small: true,
+                  img: 'post-preview-1-70x70',
+                  header: 'Securing a Judgment by way of a Charging Order',
+                  time: ['2021-02-04', 'Feb 4, 2021']
+                })
+
+                +post-preview({
+                  small: true,
+                  img: 'post-preview-2-70x70',
+                  header: 'Are the Family Courts Getting Tougher?',
+                  time: ['2021-02-04', 'Feb 4, 2021']
+                })
+
+                +post-preview({
+                  small: true,
+                  img: 'post-preview-3-70x70',
+                  header: 'Update on Code of Fundraising Practice',
+                  time: ['2021-02-04', 'Feb 4, 2021']
+                })
+
+              .blog-aside-item
+                p.h7 Tags
+                ul.list-tag-blocks
+                  li: a(href='#') Attorneys
+                  li: a(href='#') Practice
+                  li: a(href='#') Events
+                  li: a(href='#') Law
+    ='\n'
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

@@ -1,0 +1,39 @@
+// Custom CSS Vendors
+
+@mixin transform($trfm) {
+  -webkit-transform: $trfm;
+  transform: $trfm;
+}
+
+@mixin animation($anim) {
+  -webkit-animation: $anim;
+  animation: $anim;
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin sprite-animation() {
+  @include keyframes(sprite-animation) {
+    from {
+      background-position: 0 0;
+    }
+  }
+}
+
+// Placeholder text
+@mixin placeholder($color: $input-color-placeholder) {
+  // Firefox
+  &::-moz-placeholder {
+    color: $color;
+    opacity: 1; // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
+  }
+  &:-ms-input-placeholder { color: $color; } // Internet Explorer 10+
+  &::-webkit-input-placeholder  { color: $color; } // Safari and Chrome
+}

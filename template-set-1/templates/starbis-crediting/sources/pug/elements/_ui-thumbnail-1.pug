@@ -1,0 +1,16 @@
+//- Thumbnail variant 1
+mixin thumbnail-1(obj)
+  .thumbnail.thumbnail-variant-1
+    .thumbnail-image
+      +img(obj.img)
+      .thumbnail-image-inner
+        a.icon.icon-md.material-icons-local_phone.link-primary-inverse-v2(href='callto:#')
+        a.icon.icon-md-smaller.fa-envelope-o.link-white(href='mailto:#')
+    .thumbnail-caption
+      h4.header: a(href='team-member-profile.html')=obj.header
+      p.sub-header=obj.caption
+      hr.thumbnail-divider
+      ul.list-inline.list-inline-reset
+        li: a.icon.icon-gray.icon-xs.icon-xs-smallest.fa.fa-facebook(href='#')
+        li: a.icon.icon-gray.icon-xs.icon-xs-smallest.fa.fa-twitter(href='#')
+        li: a.icon.icon-gray.icon-xs.icon-xs-smallest.fa.fa-instagram(href='#')

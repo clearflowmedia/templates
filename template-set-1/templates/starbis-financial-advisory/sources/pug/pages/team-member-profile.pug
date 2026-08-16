@@ -1,0 +1,122 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-thumbnail-3
+include ../elements/_ui-quote-default
+include ../elements/_ui-pogress-linear
+
+block variables
+	- var activeIndex = 4
+	- var pageName = 'Team Member Profile'
+
+block title
+	title=pageName
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title('Our team', 'bg-image-7')
+
+	//- Julien Miro
+	section.section-50.section-md-75.section-xl-100
+		.container
+			.row.justify-content-md-center.justify-content-lg-start.row-40
+				.col-md-6.col-lg-6
+					.thumbnail.thumbnail-profile
+						.thumbnail-image
+							+jpg('profile-1-570x570')
+						.thumbnail-caption
+							.thumbnail-caption-inner
+								ul
+									li
+										.unit.unit-horizontal.unit-spacing-xs.align-items-center
+											.unit-left.unit-left-icon: span.icon.icon-xxs.icon-secondary.material-icons-phone
+											.unit-body: a.link-black(href='tel:#') + 123 098 890 76 56
+									li
+										.unit.unit-horizontal.unit-spacing-xs.align-items-center
+											.unit-left.unit-left-icon: span.icon.icon-xxs.icon-secondary.material-icons-mail
+											.unit-body: a.link-black(href='mailto:#') jm@demolink.com
+								.btn-wrap
+									a.btn.btn-small.btn-min-width-0.btn-cello-outline(href='contact-us.html') get in touch
+
+				.col-md-6.col-lg-6.col-xl-5
+					.inset-md-left-50.inset-lg-left-40.inset-xl-left-100
+						div
+							h4 Julien Miro
+						p.offset-top-0.text-gray-base-05 BS, EA, Realtor®, GRI, MBA (Tax)
+						p.text-gray-base-05 Over 30 years experience in tax preparation and representation before the Internal Revenue Service and other Governmental agencies.
+
+					+quote-default('We must have a fair tax. We have to re-adjust it, we must be fiscally responsible!')
+
+					.inset-md-left-50.inset-lg-left-40.inset-xl-left-100
+						p.text-gray-base-05 Served as an Auditor for the Internal Revenue Service for over six years, auditing individuals and small businesses to Fortune 500 Companies. Graduated in 1972 from California State University, Hayward.
+						.row
+							.col-12
+								+progress-linear({
+									title: 'Tax Consultancy Services',
+									value: '70'
+								})
+								+progress-linear({
+									title: 'Tax Training',
+									value: '54'
+								})
+								+progress-linear({
+									title: 'Bookkeeping',
+									value: '87'
+								})
+								+progress-linear({
+									title: 'Bank Reconciliation',
+									value: '90'
+								})
+	='\n'
+
+	//- Portfolio
+	section.section-50.section-md-90.section-xl-top-90.section-xl-bottom-100.bg-athens-gray
+		.container.isotope-wrap
+			.row.row-40
+				.col-12.text-center
+					h3 Check out My Works
+				.col-sm-12.text-center
+
+
+					//- Isotope Filters
+					ul.isotope-filters-responsive
+						li: p Choose your category:
+						li.block-top-level
+							//- Isotope Filters
+							button.isotope-filters-toggle.btn.btn-sm.btn-default(data-custom-toggle='#isotope-1', data-custom-toggle-hide-on-blur='true')
+								| Filter
+								span.caret
+
+							#isotope-1.isotope-filters.isotope-filters-minimal.isotope-filters-horizontal
+								ul.list-inline
+									li: a.active(data-isotope-filter='*', data-isotope-group='gallery', href='#') All
+									li: a(data-isotope-filter='Category 1', data-isotope-group='gallery', href='#') Consultancy Services
+									li: a(data-isotope-filter='Category 2', data-isotope-group='gallery', href='#') Bookkeeping
+									li: a(data-isotope-filter='Category 3', data-isotope-group='gallery', href='#') Bank Reconciliation
+
+				.col-sm-12
+					.row.isotope.isotope-gutter-default(data-isotope-layout='fitRows', data-isotope-group='gallery', data-lightgallery='group')
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+							+thumbnail-3({img: 'gallery-grid-1-370x278', original: 'gallery-1-1200x801_original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+							+thumbnail-3({img: 'gallery-grid-2-370x278', original: 'gallery-2-1200x798_original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 3')
+							+thumbnail-3({img: 'gallery-grid-3-370x278', original: 'gallery-3-1200x800_original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+							+thumbnail-3({img: 'gallery-grid-4-370x278', original: 'gallery-4-1200x800_original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+							+thumbnail-3({img: 'gallery-grid-5-370x278', original: 'gallery-5-801x1200_original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 3')
+							+thumbnail-3({img: 'gallery-grid-6-370x278', original: 'gallery-6-1200x858_original'})
+	='\n'
+
+	//- Page Footer
+	include ../sections/_section-footer-default

@@ -1,0 +1,45 @@
+// Base
+.media {
+	display: flex;
+	align-items: flex-start;
+}
+
+.media-body {
+	flex: 1;
+}
+
+.media {
+	align-items: normal;
+}
+
+
+// Modifying
+.media-xxs {
+	@include group(10px);
+}
+
+.media-xs {
+	@include group(15px);
+}
+
+.media-sm {
+	@include group(20px);
+}
+
+.media-md,
+.media-lg,
+.media-xl {
+	@include group(30px, 20px);
+}
+
+
+// Media
+@include media-breakpoint-up(md) {
+	.media-lg {
+		@include group-media(40px, 30px);
+	}
+	
+	.media-xl {
+		@include group-media(50px, 30px);
+	}
+}

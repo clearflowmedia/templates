@@ -1,0 +1,91 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-post-classic
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Blog Classic'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title('Blog', 'bg-image-3')
+
+
+  //- Blog classic
+  section.section-50.section-md-75.section-xl-100
+    .container
+      .row.justify-content-md-center.row-40.row-md-60.row-xl-100
+        .col-xl-10
+          +post-classic({
+            img: 'blog-classic-2-113x113',
+            header: 'The Importance of Paperwork',
+            text: [
+              'Most of us will implement some tax planning on behalf of a client which requires some paperwork to support the actions which have been taken. The incorporation of a business requires an issue of shares ,if appropriate a changing of the name of a PAYE scheme, the setting up of a company bank account and new headed notepaper and invoice books to reflect the change to a company...'
+            ],
+            tags: ["Planning", "Support"],
+            user: 'Joan Williams',
+            time: ['2021-06-17', '05/14/2021'],
+            media : {
+              type: "image",
+              data: 'blog-classic-1-971x649'
+            }
+          })
+
+          +post-classic({
+            img: 'blog-classic-3-113x113',
+            header: 'Reforms to the taxation of non-doms',
+            text: ["After much speculation, ‘Son of LDF’ has now been launched by HMRC in order to give individuals and entities the opportunity to correct their UK tax position if they have previously made errors or omissions in declaring overseas income and gains. The new Worldwide Disclosure Facility (WDF), launched on 5 September 2021, replaces the Liechtenstein Disclosure Facility and 3 British Crown Dependencies Facility that came to an end on..."],
+            tags: ["Reforms", "Taxation"],
+            user: 'Tom Park',
+            time: ['2021-05-23', '05/17/2021']
+          })
+
+          +post-classic({
+            img: 'blog-classic-4-113x113',
+            header: 'New HMRC Offshore Disclosure Facility',
+            text: [
+              "One of the most challenging and tricky parts of the design process can be choosing a color palette that represents your brand or message, while creating an amazing base for the design.",
+              "Creating perfect color combinations is more than just picking two colors and running with it. There’s actually quite a bit of science and design color theory behind it. Today, we’ll look at nine ways to help you create a more perfect color palette."
+            ],
+            tags: ["Facility", "Opportunity"],
+            user: 'John Miller',
+            time: ['2021-04-14', '04/10/2021'],
+            media: {
+              type: "image",
+              data: 'blog-classic-6-970x546'
+            }
+          })
+
+          +post-classic({
+            img: 'blog-classic-8-113x113',
+            header: 'Tax Investigations by HMRC',
+            text: [
+              "In the past an investigation by HMRC into a tax avoidance scheme was conducted under Code of Practice (COP) 8. Under such circumstances there is no question of tax fraud having taken place and a prosecution is not on the agenda. Recently there have been a number of cases involving tax avoidance schemes where COP9 has replaced the existing COP8 enquiry. This is a very strong indicator that HMRC considers serious fraud to be involved and that... "
+            ],
+            tags: ["Tax", "Investigations"],
+            user: 'Julien Miro',
+            time: ['2021-03-02', '04/3/2021'],
+            media: {
+              type: "gallery",
+              data: [
+                "blog-classic-5-970x546",
+                "blog-classic-6-970x546",
+                "blog-classic-7-970x546"
+              ]
+            }
+          })
+
+        .col-sm-12  
+          .text-center
+            +pagination
+  ='\n'
+
+  //- Page Footer
+  include ../sections/_section-footer-default

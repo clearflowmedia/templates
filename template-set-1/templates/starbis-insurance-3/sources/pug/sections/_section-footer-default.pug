@@ -1,0 +1,94 @@
+//- Includes
+include ../elements/_ui-post-preview
+//- Default footer
+section.section-40.section-md-75.bg-tuatara.footer-section
+  .container
+    .row.justify-content-sm-center
+      .col-sm-9.col-md-11.col-xl-12
+        .row.row-50
+          .col-md-6.col-lg-10.col-xl-3
+            .inset-xl-right-20(style='max-width: 510px;')
+              //- Brand
+              a.brand.brand-inverse(href='index.html')
+                img(src="images/brand-inverse.png", alt="")
+              p.text-spacing--30.text-star-dust.
+                InsuranceGroup has been a trusted name in insurance for more than 15 years. Today, we proudly serve more than 16 million customers nationwide.
+              a.link.link-group.link-group-animated.link-black.link-white(href='#')
+                span About Us
+                span.icon.icon-xxs.icon-primary.fa.fa-angle-right
+
+          .col-md-6.col-lg-4.col-xl-3
+            h6.h6.footer-title Recent Posts
+
+            +post-preview({
+              classes: ['post-preview-inverse', 'offset-top-22'],
+              img: 'post-preview-7-70x70',
+              header: 'A Look into Nonprofit Risk Management',
+              time: ['2021-02-04', 'June 23, 2021 ']
+            })
+
+            +post-preview({
+              classes: ['post-preview-inverse', 'offset-top-22'],
+              img: 'post-preview-8-70x70',
+              header: 'Workers’ Compensation: Combinability of Insureds',
+              time: ['2021-02-04', 'June 20, 2021']
+            })
+
+          .col-md-6.col-lg-4.col-xl-3
+            h6.h6.footer-title Get a Quote
+            //- RD Mailform
+            form.rd-mailform.form-sm(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+              .form-wrap
+                input#footer-form-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+                label.form-label(for="footer-form-email") Email
+              .form-wrap
+                textarea#footer-form-message.form-input(name="message" data-constraints="@Required")
+                label.form-label(for="footer-form-message") Message
+              .form-wrap
+                button(type="submit").btn.btn-sm.btn-primary.btn-block Send
+
+          .col-md-6.col-lg-4.col-xl-3
+            h6.h6.footer-title Contact us
+            address.contact-info.text-start
+              .unit.unit-horizontal.unit-spacing-xs.align-items-center
+                .unit-left
+                  span.icon.icon-xs.icon-primary.material-icons-phone
+                .unit-body
+                  a.link-white(href='tel:#') +1 (409) 987–5874
+              .unit.unit-horizontal.unit-spacing-xs.align-items-center
+                .unit-left
+                  span.icon.icon-xs.icon-primary.fa.fa-envelope-o
+                .unit-body
+                  a.link-white(href='mailto:#') info@demolink.org
+
+              .unit.unit-horizontal.unit-spacing-xs
+                .unit-left
+                  span.icon.icon-xs.icon-primary.material-icons-place
+                .unit-body
+                  a.link-white.d-inline(href='#')
+                    | 6036 Richmond hwy,
+                    br
+                    | Alexandria, VA USA 22303
+                  
+footer.page-foot.bg-tuatara
+  .container
+    hr.divider-bismark-04
+
+  .section-35
+    .container.text-center
+      .row.flex-md-row-reverse.justify-content-md-between.align-items-md-center.row-15
+        .col-md-6.text-md-end
+          .group-sm.group-middle
+            p.font-italic.text-white Follow Us:
+            ul.list-inline.list-inline-reset
+              li: a.icon.icon-square.icon-secondary.icon-xxs-smallest.fa.fa-facebook(href='#')
+              li: a.icon.icon-square.icon-secondary.icon-xxs-smallest.fa.fa-twitter(href='#')
+              li: a.icon.icon-square.icon-secondary.icon-xxs-smallest.fa.fa-google-plus(href='#')
+
+        .col-md-6.text-md-start
+          p.rights.text-white
+            span(class='copyright-year')
+            span &nbsp;&#169;&nbsp;
+            span InsuranceGroup.&nbsp;
+            a.link-white-v2(href='privacy.html') Privacy Policy
+='\n'

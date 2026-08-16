@@ -1,0 +1,101 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-thumbnail-1
+include ../elements/_ui-thumbnail-2
+
+block variables
+  - var activeIndex = 1
+  - var pageName = 'Our team'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title(pageName, 'bg-image-1', {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "About",
+      "href": "about.html"
+    },
+    2: {
+      "title": pageName
+    }
+  })
+
+  include ../sections/_section-user-tabs
+
+  //- Team
+  section.section-75.section-lg-100.bg-lizar
+    .container
+      h2 Your Personal Managers
+
+      .row.row-60.row-offset-1
+        .col-sm-6.col-md-4
+          .thumbnail-wrapper
+            +thumbnail-1({
+              img: 'team-5-138x138.png',
+              header: "Ann Perkins",
+              caption: "Mortgage expert"
+            })
+
+        .col-sm-6.col-md-4
+          .thumbnail-wrapper
+            +thumbnail-1({
+              img: 'team-6-138x138.png',
+              header: "Martha Graham",
+              caption: "Operations manager"
+            })
+
+        .col-sm-6.col-md-4
+          .thumbnail-wrapper
+            +thumbnail-1({
+              img: 'team-7-138x138.png',
+              header: "Jane Smith",
+              caption: "Loan consultant"
+            })
+  ='\n'
+
+  section.section-75.section-md-90.bg-default
+    .container
+      h2 Our Team
+
+      .row.row-60.row-offset-1
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-1({
+            img: 'team-1-189x189.png',
+            header: "Kate Williams",
+            caption: "Mortgage planner"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-1({
+            img: 'team-2-189x189.png',
+            header: "Mark Peters",
+            caption: "Loan processor"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-1({
+            img: 'team-3-189x189.png',
+            header: "Jill McMillan",
+            caption: "Office assistant"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-1({
+            img: 'team-4-189x189.png',
+            header: "Peter Harrison",
+            caption: "Mortgage Underwriter"
+          })
+  ='\n'
+
+  //- Page Footer
+  include ../sections/_section-footer-default

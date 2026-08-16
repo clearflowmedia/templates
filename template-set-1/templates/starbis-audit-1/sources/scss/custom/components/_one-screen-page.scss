@@ -1,0 +1,87 @@
+//
+// One screen page
+// --------------------------------------------------
+.one-screen-page {
+  .page {
+    @include display-flex;
+  }
+  .page-inner {
+    &,
+    > * {
+      width: 100%;
+    }
+
+    @include display-flex;
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(space-between);
+    min-height: 100vh;
+    text-align: center;
+  }
+
+  .page-head,
+  .page-foot {
+    padding: 0;
+    background: transparent;
+  }
+
+  .page-head-inner {
+    padding: calc(1em + 4vh) 0 calc(1em + 2vh);
+  }
+
+  .page-content {
+    padding: calc(1em + 4vh) 0;
+  }
+
+  .page-foot-inner {
+    padding: calc(1em + 2vh) 0 calc(1em + 4vh);
+  }
+
+  .rights {
+    color: $white;
+
+    a {
+      &,
+      &:active,
+      &:focus {
+        color: $primary;
+      }
+
+      &:hover {
+        color: $silver-chalice;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .one-screen-page {
+    .page-inner {
+      text-align: left;
+    }
+  }
+}
+
+@include media-breakpoint-up(xxl) {
+  .one-screen-page {
+    .page-head-inner {
+      padding: 50px 0 10px;
+    }
+
+    .page-content {
+      padding: 30px 0;
+    }
+
+    .page-foot-inner {
+      padding: 50px 0 23px;
+    }
+  }
+}
+
+.ie-10,
+.ie-11 {
+  .one-screen-page {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}

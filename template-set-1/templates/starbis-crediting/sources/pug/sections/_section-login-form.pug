@@ -1,0 +1,26 @@
+ul.group-sm
+  li
+    a(href='#' style='padding: 11px 27px;').btn-round-sm.btn.btn-steel-blue.btn-icon.btn-icon-left
+      span.icon.icon-xs.fa.fa-facebook
+      span.btn-text Facebook
+  li
+    a(href='#' style='padding: 11px 27px;').btn-round-sm.btn.btn-cerulean.btn-icon.btn-icon-left
+      span.icon.icon-xs.fa.fa-twitter
+      span.btn-text Twitter
+  li
+    a(href='#' style='padding: 11px 27px;').btn-round-sm.btn.btn-mandy.btn-icon.btn-icon-left
+      span.icon.icon-xs.fa.fa-google-plus
+      span.btn-text Google
+
+p.divider-text
+  span or
+
+// RD Mailform
+form.rd-mailform
+  .form-wrap
+    label.form-label.form-label-outside(for="forms-login-name") Username or e-mail
+    input#forms-login-name.form-input(type="text" name="name" data-constraints='@Required')
+  .form-wrap
+    label.form-label.form-label-outside(for="forms-login-password") Password
+    input#forms-login-password.form-input(type="password" name="password" data-constraints="@Required")
+  button(type="submit" style='padding-top: 11px; padding-bottom: 11px;').btn.btn-sm.btn-block.btn-primary Sign In

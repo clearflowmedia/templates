@@ -1,0 +1,84 @@
+- var searchTemplate = '<h5 class="search_title"><a target="_top" href="#{href}" class="search_link" > #{title}</a> </h5><p>...#{token}...</p>'
+
+header.page-head
+  //-RD Navbar
+  .rd-navbar-wrap
+    nav.rd-navbar.rd-navbar-corporate-light(
+      data-layout=                'rd-navbar-fixed'
+      data-sm-layout=             'rd-navbar-fixed'
+      data-md-layout=             'rd-navbar-fixed'
+      data-md-device-layout=      'rd-navbar-fixed'
+      data-lg-layout=             'rd-navbar-static'
+      data-lg-device-layout=      'rd-navbar-static'
+      data-xl-layout=             'rd-navbar-static'
+      data-xl-device-layout=      'rd-navbar-static'
+      data-xxl-layout=            'rd-navbar-static'
+      data-xxl-device-layout=     'rd-navbar-static'
+      data-lg-stick-up-offset=    '53px'
+      data-xl-stick-up-offset=    '53px'
+      data-xxl-stick-up-offset=   '53px'
+      data-lg-stick-up=           'true'
+      data-xl-stick-up=           'true'
+      data-xxl-stick-up=          'true'
+    )
+      .bg-ebony-clay.context-dark
+        .rd-navbar-inner
+          .rd-navbar-aside-wrap
+            .rd-navbar-aside
+              .rd-navbar-aside-toggle(data-rd-navbar-toggle='.rd-navbar-aside')
+                span
+              .rd-navbar-aside-content
+                ul.rd-navbar-aside-group.list-units
+                  li
+                    .unit.flex-row.unit-spacing-xs.align-items-center
+                      .unit-left
+                        span.icon.icon-xxs.icon-primary.fa-map-marker
+                      .unit-body
+                        a.link-secondary(href='#') 267 Park Avenue New York, NY 90210
+                  li
+                    .unit.flex-row.unit-spacing-xs.align-items-center
+                      .unit-left
+                        span.icon.icon-xxs.icon-primary.fa-clock-o
+                      .unit-body
+                        span.time Mon – Sat: 9:00am–18:00pm. Sunday CLOSED
+                  li
+                    .unit.flex-row.unit-spacing-xs.align-items-center
+                      .unit-left
+                        span.icon.icon-xxs.icon-primary.fa-phone
+                      .unit-body
+                        a.link-secondary(href='callto:#') +1 (409) 987–5874
+
+                .rd-navbar-aside-group
+                  ul.list-inline.list-inline-reset
+                    li: a.icon.icon-round.icon-pciked-bluewood.icon-xxs-smallest.fa.fa-facebook(href='#')
+                    li: a.icon.icon-round.icon-pciked-bluewood.icon-xxs-smallest.fa.fa-twitter(href='#')
+                    li: a.icon.icon-round.icon-pciked-bluewood.icon-xxs-smallest.fa.fa-google-plus(href='#')
+
+      .rd-navbar-inner
+        .rd-navbar-group
+          //-RD Navbar Panel
+          .rd-navbar-panel
+            //-RD Navbar Toggle
+            button.rd-navbar-toggle(data-rd-navbar-toggle='.rd-navbar-nav-wrap')
+              span
+
+            //-RD Navbar Brand
+            a.rd-navbar-brand.brand(href='index.html')
+              include ../_includes/_logo
+
+          div.rd-navbar-group-asside
+            .rd-navbar-nav-wrap
+              .rd-navbar-nav-inner
+                include ../_includes/navbar/_nav
+
+            //-RD Navbar Search
+            .rd-navbar-search
+              form.rd-search(action="search-results.html", method="GET", data-search-live="rd-search-results-live", data-search-template=!{searchTemplate}, data-search-live-count='6')
+                .rd-search-inner
+                  .form-wrap
+                    label.form-label(for="rd-search-form-input") Search...
+                    input(class="form-input" id="rd-search-form-input" type="text" name="s" autocomplete="off")
+                  button.rd-search-submit(type='submit')
+                #rd-search-results-live.rd-search-results-live
+              button.rd-navbar-search-toggle(data-rd-navbar-toggle='.rd-navbar-search, .rd-navbar-search-wrap' )
+='\n'

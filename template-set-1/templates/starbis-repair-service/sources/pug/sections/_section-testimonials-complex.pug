@@ -1,0 +1,44 @@
+//- Include
+include ../elements/_quote-strict
+
+//- Testimonials
+section.section.section-lg.bg-default
+	.container.text-center
+		h3 Testimonials
+		.row.justify-content-md-center
+			.col-md-11.col-lg-10.col-xl-8
+				//- Slick Carousel
+				.slick-carousel-complex-variant-1
+					.slick-slider.slick-slider-images.slick-slider#child-carousel(data-for=".carousel-parent", data-arrows="false", data-loop="true", data-dots="false", data-swipe="true", data-items="1", data-xs-items='3', data-sm-items='3', data-md-items='3', data-lg-items='3', data-xl-items='3', data-slide-to-scroll="1", data-center-mode="true", data-center-padding='0')
+						.item: +img('clients-testimonials-3-153x153')
+						.item: +img('clients-testimonials-4-153x153')
+						.item: +img('clients-testimonials-5-153x153')
+						.item: +img('clients-testimonials-6-153x153')
+
+					.slick-slider.carousel-parent.slick-dots-variant-1(data-arrows="false", data-loop="true", data-dots="true", data-swipe="true", data-child="#child-carousel", data-for="#child-carousel", data-items="1", data-xs-items='1', data-sm-items='1', data-md-items='1', data-lg-items='1', data-slide-to-scroll="1", data-center-mode='true')
+						.item
+							+quote-strict({
+								mod: 'quote-strict-inverse',
+								text: 'Nulla lacinia eget tellus eget facilisis. Aliquam at lorem in sem semper faucibus. Nunc dignissim tempor sapien, ac rhoncus dui rhoncus id. Praesent vitae scelerisque mauris. Suspendisse maximus risus at dui tristique, sit amet finibus erat interdum. ',
+								cite: "Ann Williams"
+							})
+						.item
+							+quote-strict({
+								mod: 'quote-strict-inverse',
+								text: 'Maecenas convallis odio sed neque pulvinar iaculis. Etiam venenatis, mauris at varius tempor, nunc nisi placerat turpis, porta ullamcorper quam magna vitae eros. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+								cite: "Mark Wilson"
+							})
+
+						.item
+							+quote-strict({
+								mod: 'quote-strict-inverse',
+								text: 'Nunc in dictum purus. Duis faucibus et risus vitae mattis. Suspendisse lobortis ex elit, et pellentesque mi porttitor vitae. Nunc facilisis tortor vel quam aliquet, sed vulputate odio viverra. Duis in turpis tincidunt, lacinia mi eget, hendrerit nisi.',
+								cite: "Gregory Smith"
+							})
+
+						.item
+							+quote-strict({
+								mod: 'quote-strict-inverse',
+								text: 'Pellentesque faucibus viverra est. Suspendisse ut tempus tellus. Mauris fermentum purus id quam blandit, non semper ex vulputate. Phasellus condimentum bibendum nibh, vel blandit nulla volutpat vel. Etiam dapibus vestibulum dapibus.',
+								cite: "Jane Miller"
+							})

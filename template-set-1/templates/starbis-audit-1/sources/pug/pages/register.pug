@@ -1,0 +1,53 @@
+extends  ../_skeleton
+
+block variables
+	- var pageName = 'Register'
+	- var bodyClass = ['one-screen-page', 'bg-gray-darker', 'bg-image'];
+	- var bodyImage = 'bg-image-3'
+
+block title
+	title=pageName
+
+block page
+	.page-inner
+		//- Page Header
+		include ../sections/_section-header-base-transparent
+
+		//- Page Content
+		section
+			.container
+				.row.justify-content-md-center
+					.col-md-7.col-lg-5.col-xl-4
+						//- Block shadow
+						.block-shadow.text-center
+							.block-inner
+								p.text-uppercase.text-abbey.fw-bold Create your account
+								.icon-block
+									span.icon.icon-xl.icon-black.material-icons-face
+							//- RD Mailform
+							form.rd-mailform.form-modern.form-darker.form-login
+								.block-inner
+									.form-wrap
+										input#register-form-name.form-input(type="text" name="name" data-constraints="@Required")
+										label.form-label(for="register-form-name") Username
+									.form-wrap
+										input#feedback-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+										label.form-label(for="feedback-email") Email
+									.form-wrap
+										input#register-form-password.form-input(type="password" name="pass" data-constraints="@Required")
+										label.form-label(for="register-form-password") Password
+									.form-wrap
+										input#register-form-password-confirm.form-input(type="password" name="pass-confirm" data-constraints="@Required")
+										label.form-label(for="register-form-password-confirm") Repeat your password
+									.info-text.text-start
+										label.checkbox-inline.checkbox-small.text-gray.position-relative
+											input(name='input-checkbox', value='checkbox-1', type='checkbox')
+											| I agree with the&nbsp;
+											a.link-primary-inline(href='privacy-policy.html') Terms of use
+											| .
+
+								button(type="submit").btn.btn-primary.btn-block Sign up
+
+
+		//- Page Footer
+		include ../sections/_section-footer-base-transparent

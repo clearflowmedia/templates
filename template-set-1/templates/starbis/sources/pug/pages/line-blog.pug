@@ -1,0 +1,99 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_post-classic-minimal
+
+block variables
+	- pageName = 'Line blog'
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title('Blog', 'bg-blog')
+
+	//- Line blog
+	section.section.section-50.section-md-75.section-xl-100
+		.container
+			.row.justify-content-md-center
+				.col-xl-10
+					dl.blog-timeline
+						dt 2024
+						dd
+							+post-classic-minimal({
+								header: '5 Steps to Blog’s Success',
+								text: [
+									'Unfortunately people will not come to your blog just to see what you have published on it. To make sure that your blog becomes a successful one, you have to work on it to attract visitors interested in your content.',
+									"This can be achieved by serious work on some important aspects. In a word, give people the reason to see what you have to say or offer."
+								],
+								tags: ["Business", "Blog"],
+								user: 'Joan Williams',
+								time: ['2023-01-11', 'Jan 11'],
+								media: {
+									type: "image",
+									data: 'blog-line-1-771x515'
+								}
+							})
+
+							+post-classic-minimal({
+								header: 'Making Money Online with Your Computer Only',
+								text: ["Making money online is a kind of everyone’s dream job. No investments are needed and you can do whatever you need to do when you are in the mood or have free time.Flexible work schedule is something you’ll hardly get working at the office. However, online business rarely starts to bring you money from the very first day. It takes some time as a rule. But once you understand the whole process (like what are your abilities, where to work, for whom to work and so on) you'll be earning money in no time."],
+								tags: ["Business", "Startup"],
+								user: 'Tom Park',
+								time: ['2023-01-08', 'Jan 8']
+							})
+
+							+post-classic-minimal({
+								header: 'How to Create Perfect Color Combinations',
+								text: [
+									"One of the most challenging and tricky parts of the design process can be choosing a color palette that represents your brand or message, while creating an amazing base for the design.",
+									"Creating perfect color combinations is more than just picking two colors and running with it. There’s actually quite a bit of science and design color theory behind it. Today, we’ll look at nine ways to help you create a more perfect color palette."
+								],
+								tags: ["Design", "Color"],
+								user: 'John Miller',
+								time: ['2023-01-06', 'Jan 6'],
+								media: {
+									type: "video",
+									data: links.video
+								}
+							})
+
+							+post-classic-minimal({
+								header: '10 Type Rules for an Excellent User Experience',
+								text: [
+									"When it comes to websites and apps, good typography is more than just a pretty typeface. Letting has to be highly readable – and scannable – while providing a solid visual connection to the content.",
+									"It’s a pretty tall order, but something most designers can do with a little practice.",
+									"Today, we’re going to look at 10 “rules” you can follow to help create an awesome typographic user experience."
+								],
+								tags: ["Type", "Tips"],
+								user: 'Julien Miro',
+								time: ['2023-01-01', 'Jan 1'],
+								media: {
+									type: "gallery",
+									data: [
+										"blog-line-2-770x433",
+										"blog-line-3-770x433",
+										"blog-line-4-770x433"
+									]
+								}
+							})
+
+							+post-classic-minimal({
+								header: 'What Design Thinking is',
+								text: ["Although Design is most often used to describe an object or end result, Design in its most effective form is a process, an action, a verb not a noun. A protocol for solving problems and discovering new opportunities. Techniques and tools differ and their effectiveness are arguable but the core of the process stays the same. It's taken years of slogging through Design. It’s a high style to bring us full circle to the simple truth about design thinking. That it is a most powerful tool if you use it effectively."],
+								tags: ["Website", "Design"],
+								user: 'Amelia Anderson',
+								time: ['2024-01-16', 'Jan 16'],
+								media: {
+									type: "audio",
+									data: links.soundcloud
+								}
+							})
+
+							.pagination-custom-wrap.text-center
+								+pagination
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

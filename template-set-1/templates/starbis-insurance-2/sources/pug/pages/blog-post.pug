@@ -1,0 +1,173 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-comment
+include ../elements/_ui-post-preview
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Blog post'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  +page-title('Blog', 'bg-blog')
+
+  //- Blog post
+  section.section-60.section-md-75.section-xl-90
+    .container
+      .row.row-50
+        .col-lg-8.col-xl-9
+          article.post.post-single
+            .post-image
+              figure
+                +jpg('post-1-870x412')
+            .post-header
+              h4.text-spacing--25 Smart Travel
+
+            .post-meta
+              ul.list-bordered-horizontal
+                li
+                  dl.list-terms-inline
+                    dt Date
+                    dd: time(datetime='2021-01-22') January 22, 2021
+                li
+                  dl.list-terms-inline
+                    dt Posted by
+                    dd Amelia Condon
+                li
+                  dl.list-terms-inline
+                    dt Comments
+                    dd 3
+                li
+                  dl.list-terms-inline
+                    dt Category
+                    dd Travel Insurance
+
+            .divider-fullwidth.bg-gray-light
+
+            .post-body
+              p.text-black Whether you’re planning a trip to the beach in Florida this summer, or headed all the way across the country, you want your vacation to be relaxing. It’s a getaway from work, not to mention your day-to-day life. So we’ve got some tips – from packing smart to protecting yourself from pickpockets – to make your trip the best it can be.
+
+              p.text-black Even if you’re only headed across the state, a packing list is a must. How many times have you left your home and arrived at your destination, only to find that you forgot your most comfortable walking shoes? Or your swimsuit? Put everything on this list, even if you think you would never forget it. A toothbrush is easy to replace when you get there – your prescription medication isn’t. David gave me my first bakery job, and I like to think Seven Stars wouldn’t be what it is without his influence over 20 years ago. Be sure that you have printed itineraries for everyone in your party, and make color copies of important ID documents as well.
+
+              .inset-md-right-70.inset-xl-left-50.inset-xl-right-120.post-blockquote
+                blockquote.quote-minimal-bordered
+                  p: q Besides planning your trip, it is also important to take care of proper travel insurance regardless of your traveling purpose.
+              p.text-black Keep the copies in your bag, separate from your passport and other IDs. It’s also a great idea for each person to have a list of emergency numbers, either for them to call or for someone else providing assistance. Of course, packing light can make travel a lot more enjoyable. Who wants to lug 100 pounds of luggage through the airport? Not us.
+
+
+            .post-footer
+              h5 Share this post:
+              ul.list-inline.list-inline-xs
+                li: a.icon.icon-xxs-small.link-tundora.fa-facebook(href='#')
+                li: a.icon.icon-xxs-small.link-tundora.fa-twitter(href='#')
+                li: a.icon.icon-xxs-small.link-tundora.fa-google-plus(href='#')
+                li: a.icon.icon-xxs-small.link-tundora.fa-pinterest-p(href='#')
+
+          .divider-fullwidth.bg-gray-lighter
+
+          //- Comments
+          .post-comment-block
+            h4 3 Comments
+            .comment-list.inset-md-right-60.inset-lg-right-30.inset-xl-right-100.offset-top-30
+              .comment-group
+                +comment({
+                  img: 'post-2-70x71',
+                  user: 'Jill Peterson',
+                  text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima tempora id labore obcaecati facilis eveniet, earum, temporibus reiciendis sed sapiente nemo, nulla itaque voluptatem repellat et in ipsam neque a!'
+                })
+
+                .comment-group-reply
+                  +comment({
+                    img: 'post-3-70x71',
+                    user: 'John doe',
+                    text: 'Beatae voluptatum nihil, praesentium, fugiat tempore accusamus distinctio explicabo numquam molestias sit est assumenda laudantium dignissimos ullam labore quae repudiandae sint, omnis, voluptatem deserunt alias temporibus. Neque, exercitationem minus enim!'
+                  })
+
+              .comment-group
+                +comment({
+                  img: 'post-4-70x71',
+                  user: 'Kate Smith',
+                  text: 'Sequi qui itaque est eligendi ea, error deserunt sed! Itaque ipsum, in beatae unde ullam iste aut. Beatae distinctio sed voluptatum reiciendis nam facere maxime sunt voluptatibus, saepe ad alias.'
+                })
+
+          //- Leave a comment
+          .post-comment-form.offset-top-40.offset-sm-top-60
+            h4 Leave a comment
+            .inset-md-right-60.inset-lg-right-30.inset-xl-right-100.offset-top-15
+              //- RD Mailform
+              form.rd-mailform.form-classic.form-classic-bordered.label-outside
+                .form-wrap
+                  label.form-label-outside.text-black(for="comment-message") Message:
+                  textarea#comment-message.form-input(name="message" data-constraints="@Required")
+                
+                button(type="submit" style='min-width: 200px;').btn.btn-primary Submit
+
+        //- Aside
+        .col-lg-4.col-xl-3
+          .inset-lg-left-15.inset-lg-right-10
+            .row
+              .col-md-6.col-lg-12
+                form.rd-search.rd-search-classic(action="search-results.html", method="GET")
+                  .form-wrap
+                    label(for="rd-search-form-input-1" class="form-label") Search...
+                    input(class="form-input" id="rd-search-form-input-1" type="text" name="s" autocomplete="off")
+                  button.rd-search-submit(type='submit')
+
+                .offset-top-50
+                  h6.text-uppercase Categories
+                  ul.list-marked-bordered.offset-top-15
+                    li: a(href='#')
+                      span Travel Insurance
+                      span.text-dusty-gray (2)
+                    li: a(href='#')
+                      span Wedding Insurance
+                      span.text-dusty-gray (2)
+                    li: a(href='#')
+                      span Boat Insurance
+                      span.text-dusty-gray (4)
+
+                .offset-top-50
+                  h6.text-uppercase Popular posts
+                  .offset-top-30
+                    +post-preview({
+                      classes: ['offset-top-15'],
+                      small: true,
+                      img: 'post-preview-1-70x70',
+                      header: 'A Guide to Boat Insurance Coverage',
+                      time: ['2021-02-04', 'Feb 4, 2021']
+                    })
+
+                    +post-preview({
+                      classes: ['offset-top-15'],
+                      small: true,
+                      img: 'post-preview-2-70x70',
+                      header: 'What Wedding Insurance Do I Need?',
+                      time: ['2021-02-04', 'Feb 4, 2021']
+                    })
+
+                    +post-preview({
+                      classes: ['offset-top-15'],
+                      small: true,
+                      img: 'post-preview-3-70x70',
+                      header: 'Business Insurance for Festivals, Fairs & Parties',
+                      time: ['2021-02-04', 'Feb 4, 2021']
+                    })
+
+              .col-md-6.col-lg-12.offset-top-50.sideber-cus
+                h6.text-uppercase Tags
+                ul.list-tag-blocks.offset-top-22
+                  li: a(href='#') Insurance
+                  li: a(href='#') travel
+                  li: a(href='#') boat
+                  li: a(href='#') life
+  ='\n'
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

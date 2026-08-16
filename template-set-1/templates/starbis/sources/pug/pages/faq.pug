@@ -1,0 +1,97 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_accordion
+
+block variables
+	- pageName = 'FAQ'
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title(pageName, 'bg-image-10')
+
+	//- FAQ
+	section.section.section-60.section-md-90.section-xl-bottom-120.bg-gray-lighter.novi-background
+		.container
+			.row.justify-content-md-center
+				.col-md-10.col-lg-12
+					.row.row-50
+						.col-lg-6
+							h3 General Questions
+							p All you need to know about Starbis design studio and how to get Support.
+							//- Bootstrap collapse
+							#accordionOne.accordion.accordion-group.accordion-group-corporate
+								+accordion-item({
+									show: true,
+									parentId: 'accordionOne',
+									title: 'Are there different web packages and development plans that you offer?',
+								}).accordion-corporate
+									p Sure. We offer many different packages: Corporate Website development Package, Mobile Website development Package, Micro sites, Small Business Websites and even Custom Website Programming Package.
+
+								+accordion-item({
+									parentId: 'accordionOne',
+									title: 'Can web packages be customized?',
+								}).accordion-corporate
+									p Web packages are there as a guideline and we can customize them so that they can fit your needs perfectly. We can either include or remove some functions and features. Just let us know what you need and we will give you the best solution.
+
+								+accordion-item({
+									parentId: 'accordionOne',
+									title: 'Can I rely on you to do my website updates or should I do them myself?',
+								}).accordion-corporate
+									p There are two ways to look at this question. If you are looking to cut the costs you can do the updates yourself. The website will be in CMS and you will get the instructions on how you can update it by yourself. If you would like us to do the updates for you, we will do it and not only will we update the content, but also work on search engine optimization. That way your website will be up to date, and you will get more visitors over time.
+
+								+accordion-item({
+									parentId: 'accordionOne',
+									title: 'I already have a website, but I would like to redesign it. Do you redesign websites?',
+								}).accordion-corporate
+									p Yes, we do. We can redesign your website so that it follows the latest trends. Redesign is less expensive than making a whole new website.
+
+						.col-lg-6
+							h3 Other Questions
+							p The answers on most common questions are described bellow.
+							//- Bootstrap collapse
+							#accordionTwo.accordion.accordion-group.accordion-group-corporate
+								+accordion-item({
+									show: true,
+									parentId: 'accordionTwo',
+									title: 'Can you maintain my website?',
+								}).accordion-corporate
+									p Of course! Website is one of the things that have to be alive, therefore develop and change over time. We are there to help you make changes any time you need them. We offer website maintenance service with no monthly nor upfront fee. You will tell us what you need and we will give you our quote with estimated work time. After you consider our offer you will decide if you want to take it. There are no hidden costs and no possibility that we are too busy when you need us the most. We are prompt and professional. Once you decide to update or simply maintain your website, you will know that it will be in good hands.
+
+								+accordion-item({
+									parentId: 'accordionTwo',
+									title: 'Will my website be easily found through search engines?',
+								}).accordion-corporate
+									p Of course. The whole idea of having a website wouldn’t be complete without search engine optimization. It is the key thing when it comes to attracting more quality traffic to your website. Search engines change their rules and regulations from time to time and we are up to date with the latest trends. The best way to keep your website trendy is to re-evaluate it from time to time. That way it will be in sync with the latest rules and trends.
+
+								+accordion-item({
+									parentId: 'accordionTwo',
+									title: 'Can you do SEO for my website?',
+								}).accordion-corporate
+									p Of course we can. We will help you get a better position on search result lists for all major search engines. Contact us for details.
+
+								+accordion-item({
+									parentId: 'accordionTwo',
+									title: 'Can you guarantee a certain ranking?',
+								}).accordion-corporate
+									p What we can guarantee is a better ranking than the one you had before. But, how good your ranking will be depends on a lot of factors, of which many are unknown. The truth is that no one knows all the factors, and therefore we cannot guarantee where you will rank. All we can do is promise you a better position from the one you have now.
+
+								+accordion-item({
+									parentId: 'accordionTwo',
+									title: 'What is the difference between SEO and SEM?',
+								}).accordion-corporate
+									p SEM is a much wider concept than SEO. SEM stands for Search Engine Marketing and SEO is only a part of it. Other than SEO, parts of SEM are also PPC, affiliate programs, social media campaigns...
+
+								+accordion-item({
+									parentId: 'accordionTwo',
+									title: 'How will you find the best keywords for my website?',
+								}).accordion-corporate
+									p First we will talk a bit about your business. You will tell us what your business is about and which keywords you think are significant for your business. Then we will take these keywords and analyze them using our database tools. We will find out how many people use them and how many websites already used these keywords. That way we will know how many companies you are competing with. Also, we will get information on similar search terms that can be used and that can help us make changes and get better solutions for you. We will tailor the key phrases to fit your needs, taking your goals and budget into account. This first part of our cooperation will be a bit intense in communication. After the first few rounds of calls and e-mails we won’t be bugging you as much and will have enough info to finish the work ourselves.
+
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

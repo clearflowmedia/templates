@@ -1,0 +1,12 @@
+//- Thumbnail 3
+//- Original image naming format: pagename-{X}-1200x600_original.jpg
+mixin thumbnail-3(obj)
+  .thumbnail.thumbnail-variant-3(class=obj.mod)
+    a.link.link-external(href='gallery-item.html')
+      span.novi-icon.icon.icon-sm.fa.fa-link
+    figure
+      +jpg(obj.img)
+    .caption
+      a.link.link-original(href='images/' + obj.original + '.jpg', data-lightgallery='item')
+
+

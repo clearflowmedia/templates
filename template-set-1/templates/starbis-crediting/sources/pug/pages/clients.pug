@@ -1,0 +1,74 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-link-image
+
+block variables
+  - var activeIndex = 1
+  - var pageName = 'Clients'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title(pageName, 'bg-image-1', {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "About",
+      "href": "#"
+    },
+    2: {
+      "title": pageName
+    }
+  })
+
+  //- Our Partners
+  section.section-75.section-lg-100.text-lg-start.bg-lizar
+    .container
+      h3 All Our Partners
+      p.text-gray Become our partner and gain access to the best loans and mortgage deals instantly! Our Partner
+        br.d-none.d-lg-block
+        | Program is opened to all companies officially registered in the USA.
+
+      .section-dividers-white.text-center.offset-top-30.offset-md-top-60
+        .row.row-30
+          .col-sm-3
+            a(href='#').thumbnail-grayscale
+              img(src="images/clients-1.png", alt="")
+          .col-sm-3
+            a(href='#').thumbnail-grayscale
+              img(src="images/clients-2.png", alt="")
+          .col-sm-3
+            a(href='#').thumbnail-grayscale
+              img(src="images/clients-3.png", alt="")
+          .col-sm-3
+            a(href='#').thumbnail-grayscale
+              img(src="images/clients-4.png", alt="")
+
+        .row.row-30.row-offset-5
+          .col-sm-3
+            a(href='#').thumbnail-grayscale
+              img(src="images/clients-5.png", alt="")
+          .col-sm-3
+            a(href='#').thumbnail-grayscale
+              img(src="images/clients-6.png", alt="")
+          .col-sm-3
+            a(href='#').thumbnail-grayscale
+              img(src="images/clients-7.png", alt="")
+          .col-sm-3
+            a(href='#').thumbnail-grayscale
+              img(src="images/clients-8.png", alt="")
+
+  ='\n'
+
+  include ../sections/_section-testimonials-carousel
+
+  //- Page Footer
+  include ../sections/_section-footer-default

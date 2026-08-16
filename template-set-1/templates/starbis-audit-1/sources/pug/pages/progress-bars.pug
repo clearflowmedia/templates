@@ -1,0 +1,106 @@
+extends  ../_skeleton
+
+include ../_includes/_countdown
+
+block variables
+	- var activeIndex = 4
+	- var pageName = 'Progress Bars'
+
+block title
+	title=pageName
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title(pageName, 'bg-image-1')
+
+	//- Skills Bars
+	section.section-60.section-md-90.section-xl-bottom-100
+		.container
+			h3.text-center
+				| Skills
+				=' '
+				span.text-thin Bars
+
+			.row.justify-content-lg-between.row-40
+				.col-md-6.text-secondary
+					.inset-lg-right-100
+						p.
+							Easy Audit provides progressively minded, growing businesses with a single source of strategic solutions that span the full range of their needs – from tax, assurance, accounting and advisory to hands-on business consulting.
+						p.
+							We have built our firm on a solid foundation of knowledge, a forward-looking vision and a belief in doing business differently. Our goal is to empower you – wherever you are based – to navigate your complex business challenges with confidence.
+				.col-md-6
+					include ../_includes/_progress-list
+					.progress-linear-group
+						+progress-linear({
+							title: 'Tax Consultancy Services',
+							value: '70'
+						})
+
+						+progress-linear({
+							title: 'Tax Training',
+							value: '54'
+						})
+
+						+progress-linear({
+							title: 'Bookkeeping',
+							value: '87'
+						})
+
+						+progress-linear({
+							title: 'Bank Reconciliation',
+							value: '90'
+						})
+	='\n'
+
+	section.section-with-counters.bg-accent.text-center
+		.container.bg-cape-cod.context-dark.section-60.section-lg-90
+			h4.text-rolling-stone.fw-bold.text-uppercase Looking for
+			h3.section-title
+				span.text-thin a First-Class
+				=' '
+				| auditor?
+			p.text-white With a lot of experience in audit, hiring us will become a proper solution for your business!
+
+			.row.list-md-dashed.row-40
+				.col-md-3
+					.h1.small.counter-bold.counter 850
+					.counter-title.fw-bold.text-white.text-uppercase Trusted Clients
+				.col-md-3
+					.h1.small.counter-bold.counter 18
+					.counter-title.fw-bold.text-white.text-uppercase Awards
+				.col-md-3
+					.h1.small.counter-bold.counter 21
+					.counter-title.fw-bold.text-white.text-uppercase Years of Experience
+				.col-md-3
+					.h1.small.counter-bold.counter 16
+					.counter-title.fw-bold.text-white.text-uppercase Experts
+
+			.button-block.inset-sm-left-60.inset-sm-right-60
+				.d-md-flex.justify-content-md-center.align-items-md-center
+					a(href="appointment.html").btn.btn-rect.btn-primary.d-block.d-md-inline-block Make an Appointment
+					span.font-italic.text-white.inset-md-left-20.inset-md-right-20.d-block.d-md-inline-block.text-big-18 or
+					a(href="services.html" style="min-width:236px;").btn.btn-rect.btn-white-outline.d-block.d-md-inline-block See All services
+
+
+	='\n'
+
+	//- Progress Bars
+	section.section-60.section-md-90.section-xl-bottom-130
+		.container
+			.row
+				.col-sm-12.text-center
+					h3.text-center
+						| Progress
+						=' '
+						span.text-thin Bars
+			.row
+				.col-sm-12
+					.countdown-box.block-centered
+						+countdown({to: '2021-12-31'})
+	='\n'
+
+	//- Page Footer
+	include ../sections/_section-footer-default

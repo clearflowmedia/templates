@@ -1,0 +1,11 @@
+.counter{
+  font: 900 45px/45px $font-family-sec;
+  margin-bottom: 0;
+  color: $white;
+}
+
+.counter-k {
+  &:after {
+    content: 'k';
+  }
+}

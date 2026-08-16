@@ -1,0 +1,54 @@
+/** @section Accordion custom */
+.accordion-classic{
+
+	.accordion-item {
+		border: none;
+	}
+
+	.accordion-button {
+		font-size: 20px;
+		font-weight: 500;
+		padding-left: 2.2rem;
+	}
+
+	.accordion-button:focus{
+		border: none;
+		box-shadow: none;
+		outline: none;
+	}
+
+	.accordion-button:not(.collapsed) {
+		color: inherit;
+		background: none;
+		box-shadow: none;
+	}
+
+	.accordion-button::after{
+		position: absolute;
+		width: 24px;
+		height: 24px;
+		left: 0;
+		top: 15px;
+		flex-shrink: 0;
+		margin-right: auto;
+		content: "\f238";
+		font-family: "Material Design Icons";
+		font-size: 24px;
+		font-weight: 700;
+		background-image: none;
+		color: $primary;
+	}
+
+	.accordion-button:not(.collapsed)::after {
+		background-image: none;
+		transform: rotate(90deg);
+	}
+
+	.accordion-body {
+		padding-left: 2.2rem;
+		padding-top: 0;
+	}
+	.accordion-collapse {
+		margin-top: 0;
+	}
+}

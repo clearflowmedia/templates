@@ -1,0 +1,43 @@
+extends  ../_skeleton
+include  ../elements/_ui-countdown
+
+block variables
+	- var activeIndex = 4
+	- var pageName = 'Maintenance'
+
+block title
+	title=pageName
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title(pageName, 'bg-image-7')
+
+	//- We are currently working on.
+	section.section-60.section-md-top-90.section-md-bottom-100
+		.container.text-center
+			.row.justify-content-md-center.row-40
+				.col-sm-12
+					h3 We are currently working on.
+					p.h5.text-silver This page will appear in
+
+				.col-sm-12
+					.countdown-box.block-centered
+						//- Countdown
+						+countdown({to: '2024-01-22', mod: 'countdown-secondary'})
+
+				.col-12
+					h5.text-spacing-inverse-20 Stay tuned and subscribe to our newsletter
+					//- RD Mailform
+					.block-centered(style='max-width: 370px;')
+						form.rd-mailform.form-modern(data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+							.form-wrap
+								label.form-label(for="maintenance-email") Email
+								input#maintenance-email.form-input(type="email" name="maintenance-email" data-constraints="@Email @Required")
+							button(type="submit").btn.btn-primary.btn-block Subscribe
+	='\n'
+
+	//- Page Footer
+	include ../sections/_section-footer-default

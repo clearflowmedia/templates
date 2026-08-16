@@ -1,0 +1,88 @@
+extends  ../_skeleton
+
+block variables
+  - var activeIndex = 5
+  - var pageName = 'Pricing'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title(pageName, 'bg-image-1')
+
+  //- Choose your plan
+  section.section-60.section-md-90.section-xl-top-100.section-xl-bottom-15.bg-gray-lighter
+    .container
+      .row.row-40
+        .col-md-6.col-lg-8
+          .row.row-30
+            .col-lg-6
+              h3.smaller Choose Your Plan
+
+            .col-lg-6
+              p.
+                Pick the best plan that meets your legal needs. A free trial is available to help you with the decision-making.
+
+        .col-md-5.col-lg-4.col-xl-3.offset-xl-1
+          a.btn.btn-primary.btn-block(href='#') Download Free Trial
+
+  ='\n'
+
+  //- Pricing tables
+  section.bg-decoration-wrap.bg-decoration-bottom.section-bottom-60.section-xl-top-100.section-xl-bottom-100.bg-gray-lighter
+    .container.bg-decoration-content
+      .row.justify-content-md-center
+        .col-lg-10.col-xl-12
+          include ../_includes/_pricing-tables-range
+    .bg-decoration-object.bg-whisper
+  ='\n'
+
+  //- Questions & Answers
+  section.section-60.section-md-90
+    .container
+      h3 Questions & Answers
+      .row.row-offset-3.justify-content-lg-center
+        .col-lg-11.col-xl-10
+          .row.row-40
+            .col-md-6
+              dl.list-terms-variant-1
+                dt Why choose a law firm?
+                dd We are in an age of specialization. As times have changed, no attorney can possibly keep up with all areas and complexities of the law, and that is why our team is comprised of the top legal minds, each with their own area of practice. Our firm is also unique in that while we all specialize in various aspects.
+
+                dt How will I know which attorney is best for me?
+                dd Our leadership team at the LawExpert will determine which attorney can best represent you in handling your case. It may not be possible, or advantageous, to have one attorney handle all of your legal matters. One lawyer will be responsible for the overall progress of the case.
+
+                dt What types of cases does your law firm not handle?
+                dd We do not handle worker's compensation cases, legal malpractice or personal injury cases, traffic or parking matters or fines, and landlord-tenant disputes. If you have questions whether we can handle your case or dispute, please contact us.
+
+            .col-md-6
+              dl.list-terms-variant-1
+                dt How can I become a client of your firm?
+                dd Please call the firm and identify yourself as a potential client. A member of our staff will speak to you and obtain information regarding your employment with your current or former employer or your civil litigation, white collar criminal defense or tax needs.
+
+                dt What is expected of me as a client of your firm?
+                dd We expect you to be honest, responsive, and diligent throughout the litigation process. We want you to ask us any questions and inform us of any concerns you have. You will ordinarily be deposed at some point in the litigation and we expect you to prepare for that deposition diligently by meeting with us.
+
+                dt What can I expect to receive if my case settles?
+                dd The overwhelming majority of our plaintiff clients are satisfied with the settlement amount we have obtained on their behalf. Some of the factors include the strength of the evidence in your case, your performance at your deposition, the financial resource of your employer.
+  ='\n'
+
+  //- Not Sure Which Plan is Right For You?
+  section.section-60.section-md-100.bg-accent
+    .container.text-center.text-lg-start
+      .row.row-30.justify-content-md-center
+        .col-lg-8.col-xl-7
+          h3.medium Not Sure Which Plan is Right For You?
+          p.d-inline-block(style='max-width: 435px;').
+            If you are in doubt of which plan to opt for, subscribe to our newsletter and we will try to help you make the right decision.
+        .col-lg-4.col-xl-3
+          a.btn.btn-xl.btn-xl-bigger.btn-white-outline(href='contact-us.html') Send Us a Letter
+  ='\n'
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

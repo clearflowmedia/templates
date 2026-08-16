@@ -1,0 +1,193 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-comment
+include ../elements/_ui-post-preview
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Blog post'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title(pageName, 'bg-image-1', {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Blog",
+      "href": "#"
+    },
+    2: {
+      "title": pageName
+    }
+  })
+
+  //- Blog post
+  section.section-60.section-md-75.section-xl-100.text-start.bg-default
+    .container
+      .row.row-50
+        .col-lg-8.col-xl-9
+          article.post.post-single
+            .post-image
+              figure
+                +jpg('post-1-870x412')
+            .post-header
+              h4 Common Home Selling Mistakes
+
+            .post-meta
+              ul.list-bordered-horizontal
+                li
+                  dl.list-terms-inline
+                    dt Date
+                    dd: time(datetime='2021-01-22') January 22, 2021
+                li
+                  dl.list-terms-inline
+                    dt Posted by
+                    dd Amelia Lee
+                li
+                  dl.list-terms-inline
+                    dt Comments
+                    dd 3
+                li
+                  dl.list-terms-inline
+                    dt Category
+                    dd Marketing
+
+            .divider-fullwidth.bg-gray-light
+
+            .post-body
+              p Preparing to sell a home often comes with many major changes, such as a new career or long-distance relocation. During this busy time, avoiding common seller mistakes will reduce stress and could add thousands more to your bottom line when your home sells. In this article, we will discuss what home selling mistakes are the most popular ones.
+              p The two most important decisions you will make when selling your home are which agent to work with and what price to list—and the two go hand in hand. Too often, sellers select an agent based on the sale price they recommend, or because they are a friend or family member. Selecting an experienced agent who understands current market conditions is critical to success. A good agent will help you select an appropriate price that will generate buyers. An agent who simply tells you what you want to hear is doing you a disservice, likely resulting in a longer sales cycle and lower price.
+              .quote-wrap-1
+                .unit.flex-sm-row
+                  .unit-left
+                    svg(version='1.1' x='0px', y='0px', width='49', height='42', viewbox='0 0 60.96 53', style='fill: #e9e9e9; enable-background:new 0 0 60.96 53; transform: rotate(180deg);')
+                      g
+                        defs
+                          rect(x='0', width='60.96', height='53')
+                        path(style='clip-path:url(#SVGID_2_);', d='M11.664,0C5.223,0,0,5.371,0,12s5.223,12,11.664,12C23.324,24,15.551,47.199,0,47.199\
+                                                                              v5.602C27.754,52.801,38.629,0,11.664,0L11.664,0z M45.262,0c-6.442,0-11.66,5.371-11.66,12s5.218,12,11.66,12\
+                                                                              c11.664,0,3.89,23.199-11.66,23.199v5.602C61.352,52.801,72.23,0,45.262,0L45.262,0z M45.262,0')
+
+                  .unit-body.quote-body
+                    p.text-gray: q Good agents are worth the value of their commissions. Before insisting on the lowest possible commission, consider the value the agent is offering in terms of marketing strategy, expert guidance and other services.
+              p Negotiation is also an important part of selling a home. Although real estate agents handle the actual negotiations, sellers can lose a deal if they are unwilling to compromise. The first rule of effective negotiation is taking the emotion out of the deal. it’s important to remember that this is a business transaction. With these simple rules, you’ll easily complete your deal.
+
+            .post-footer
+              h5 Share this post:
+              ul.list-inline.list-inline-xs
+                li: a.icon.icon-xxs-small.link-tundora.fa-facebook(href='#')
+                li: a.icon.icon-xxs-small.link-tundora.fa-twitter(href='#')
+                li: a.icon.icon-xxs-small.link-tundora.fa-google-plus(href='#')
+                li: a.icon.icon-xxs-small.link-tundora.fa-pinterest-p(href='#')
+
+          .divider-fullwidth.bg-gray-lighter
+
+          //- Comments
+          .comment-list-wrap
+            h4 3 Comments
+            .comment-list.inset-md-right-60.inset-lg-right-30.inset-xl-right-100
+              .comment-group
+                +comment({
+                  img: 'post-2-70x71',
+                  user: 'July Mao',
+                  text: 'The topic you describe here is really important. However, every deal can be personal so there’s no unified guide for selling a home.But anyway, this article is useful.'
+                })
+
+                .comment-group-reply
+                  +comment({
+                    img: 'post-3-70x71',
+                    user: 'John doe',
+                    text: 'You are absolutely right! However, it is always important to remember that the less emotions you show during the negotiation process, the better your deal will be.'
+                  })
+
+              .comment-group
+                +comment({
+                  img: 'post-4-70x71',
+                  user: 'Mila MOa',
+                  text: 'Thanks for sharing! I’m looking forward to your further articles on this topic because I believe there is more for sellers to know about their own mistakes during the home selling process.'
+                })
+
+          //- Leave a comment
+          .comments-wrap
+            h4.fw-normal Leave a Comment
+            .form-classic-wrap
+              //- RD Mailform
+              form.rd-mailform
+                .form-wrap
+                  label.form-label(for="comment-message") Message:
+                  textarea#comment-message.form-input(name="message" data-constraints="@Required")
+                .btn-wrap
+                  button(type="submit" style='min-width: 280px;').btn.btn-primary Submit comment
+
+        //- Aside
+        .col-lg-4.col-xl-3
+          .blog-aside
+            .blog-aside-item
+              form.rd-search.rd-search-classic(action="search-results.html", method="GET")
+                .form-wrap
+                  label.form-label(for="rd-search-form-input-1") Search...
+                  input.form-input(id="rd-search-form-input-1" type="text" name="s" autocomplete="off")
+                button.rd-search-submit(type='submit')
+
+            .blog-aside-item
+              h5 Categories
+              ul.list-no-padding.list-marked
+                li: a(href='#')
+                  span Fixed rate Mortgages
+                  span.text-dusty-gray=' (4)'
+                li: a(href='#')
+                  span Discount Mortgages
+                  span.text-dusty-gray=' (4)'
+                li: a(href='#')
+                  span Standard variable rate
+                  span.text-dusty-gray=' (4)'
+
+            .blog-aside-item
+              h5 Popular posts
+              +post-preview({
+                small: true,
+                img: 'post-preview-1-70x70',
+                header: 'Selling or Leasing Your Home',
+                time: ['2021-02-04', 'Feb 4, 2021']
+              })
+
+              +post-preview({
+                small: true,
+                img: 'post-preview-2-70x70',
+                header: 'Refinancing Your Home for Cost Savings',
+                time: ['2021-02-04', 'Feb 4, 2021']
+              })
+
+              +post-preview({
+                small: true,
+                img: 'post-preview-3-70x70',
+                header: 'Getting a Loan to Build a House',
+                time: ['2021-02-04', 'Feb 4, 2021']
+              })
+
+            
+            .blog-aside-item
+              h5 Tags
+              ul.list-tag-blocks
+                li: a(href='#') Mortgage
+                li: a(href='#') Bank
+                li: a(href='#') Credit
+                li: a(href='#') News
+                li: a(href='#') Debt
+                li: a(href='#') Appreciation
+                li: a(href='#') Respect
+                li: a(href='#') Honor
+  ='\n'
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

@@ -1,0 +1,40 @@
+mixin counter-default(obj)
+  //- Parallax
+  +parallax({
+    img: 'progress-bars-parallax-1',
+    addClass: 'bg-black'
+  })
+    .section-50.section-md-90
+      //- Counters
+      .container
+        if(obj.title)
+          h3.text-center=obj.title
+        .row.row-40
+          .col-sm-6.col-md-3
+            .box-counter.box-counter-inverse
+              span.novi-icon.icon.icon-lg.icon-primary.mercury-icon-group
+              //- CountTo
+              .text-large.counter 1450
+              p.box-header Happy Clients
+
+          .col-sm-6.col-md-3
+            .box-counter.box-counter-inverse
+              span.novi-icon.icon.icon-lg-smaller.icon-primary.mercury-icon-scales
+              //- CountTo
+              .text-large.counter 23
+              p.box-header Years of Experience
+
+          .col-sm-6.col-md-3
+            .box-counter.box-counter-inverse
+              span.novi-icon.icon.icon-lg-smaller.icon-primary.mercury-icon-partners
+              //- CountTo
+              .text-large.counter.counter-percent 98
+              p.box-header Successful Cases
+
+          .col-sm-6.col-md-3
+            .box-counter.box-counter-inverse
+              span.novi-icon.icon.icon-lg.icon-primary.mercury-icon-case
+              //- CountTo
+              .text-large.counter 7500
+              p.box-header Personal Injury Cases
+  ='\n'

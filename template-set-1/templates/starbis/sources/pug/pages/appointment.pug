@@ -1,0 +1,51 @@
+extends  ../_skeleton
+
+block variables
+	- pageName = 'Appointment'
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title(pageName, 'bg-image-3')
+
+	//- Make an Appointment
+	section.section.section-60.section-md-top-90.section-md-bottom-100
+		.container
+			.row
+				.col-lg-9.col-xl-7
+					h3 Make an Appointment
+					//- RD Mailform
+					form.rd-mailform.form-modern(data-form-output="form-output-global", data-form-type='order', method='post', action='bat/rd-mailform.php')
+						.row.row-seven.row-30
+							.col-md-3
+								.form-wrap
+									input#appointment-name.form-input(type="text" name="name" data-constraints="@Required")
+									label.form-label(for="appointment-name") Name
+							.col-md-4
+								.form-wrap
+									input#appointment-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+									label.form-label(for="appointment-email") Email
+							.col-md-3
+								.form-wrap
+									input#appointment-date.form-input(type="text" name="date" data-constraints="@Required", data-time-picker='date')
+									label.form-label(for="appointment-date") Date
+							.col-md-4
+								.form-wrap
+									input#appointment-time.form-input(type="text" name="time" data-constraints="@Required", data-time-picker='time')
+									label.form-label(for="appointment-time") Time Interval
+							.col-sm-7
+								.form-wrap
+									.textarea-lined-wrap
+										textarea#appointment-message.form-input(name="message" data-constraints="@Required")
+										label.form-label(for="appointment-message") Message
+
+							.col-7
+								.row.row-seven.row-15
+									.col-4.col-md-5: button(type="submit").btn.btn-primary.btn-block Send
+									.col-3.col-md-2: button(type="reset").btn.btn-silver-outline.btn-block Reset
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

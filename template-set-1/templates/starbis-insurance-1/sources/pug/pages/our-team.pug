@@ -1,0 +1,167 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-thumbnail-1
+include ../elements/_ui-thumbnail-2
+
+block variables
+  - var activeIndex = 5
+  - var pageName = 'Our Team'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+
+  +page-title(pageName, 'bg-image-1')
+
+  //- Team
+  section.section-66
+    .container
+      .row
+        .col-sm-12.text-center
+          h3 Team
+      .row.row-60
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-1({
+            img: 'team-1-189x189.png',
+            header: "Julien Miro",
+            caption: "Chief Executive Officer"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-1({
+            img: 'team-2-189x189.png',
+            header: "Joan Cucumber",
+            caption: "Executive Vice President"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-1({
+            img: 'team-3-189x189.png',
+            header: "Benedict Dulittle",
+            caption: "Chief Financial Officer"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-1({
+            img: 'team-4-189x189.png',
+            header: "Madlen Yellow",
+            caption: "Vice President of Claims"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-1({
+            img: 'team-5-189x189.png',
+            header: "Hanna Bella",
+            caption: "Insurance Defense Trial Attorney"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-1({
+            img: 'team-6-189x189.png',
+            header: "Oleg Bartion",
+            caption: "Safety and Health Manager"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-1({
+            img: 'team-7-189x189.png',
+            header: "Benjamine Dross",
+            caption: "Chief Executive Officer"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-1({
+            img: 'team-8-189x189.png',
+            header: "Nataly Dropper",
+            caption: "Trade Credit Insurance"
+          })
+
+    //- AllRisk Team
+  section.section-66.section-md-bottom-90.section-xl-bottom-120    
+    .container
+      .row
+        .col-sm-12.text-center
+          h3 Meet Our Team
+      .row.row-40
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-2({
+            img: 'team-9-246x300',
+            header: "Amanda Smith",
+            caption: "Chief Executive Officer",
+            phone: "+1 (409) 987–5874",
+            email: "info@demolink.org"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-2({
+            img: 'team-10-246x300',
+            header: "John Doe",
+            caption: "Executive Vice President",
+            phone: "+1 (409) 987–5874",
+            email: "info@demolink.org"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-2({
+            img: 'team-11-246x300',
+            header: "Vanessa Ives",
+            caption: "Chief Financial Officer",
+            phone: "+1 (409) 987–5874",
+            email: "info@demolink.org"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-2({
+            img: 'team-12-246x300',
+            header: "David Nicholson",
+            caption: "Vice President of Claims",
+            phone: "+1 (409) 987–5874",
+            email: "info@demolink.org"
+          })
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-2({
+            img: 'team-13-246x300',
+            header: "Amanda Smith",
+            caption: "Credit Insurance",
+            phone: "+1 (409) 987–5874",
+            email: "info@demolink.org"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-2({
+            img: 'team-14-246x300',
+            header: "John Doe",
+            caption: "Travel Insurance",
+            phone: "+1 (409) 987–5874",
+            email: "info@demolink.org"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-2({
+            img: 'team-15-246x300',
+            header: "Vanessa Ives",
+            caption: "Casualty Insurance",
+            phone: "+1 (409) 987–5874",
+            email: "info@demolink.org"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-2({
+            img: 'team-16-246x300',
+            header: "David Nicholson",
+            caption: "Agricultural Insurance",
+            phone: "+1 (409) 987–5874",
+            email: "info@demolink.org"
+          })
+
+  ='\n'
+
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

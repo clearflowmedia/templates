@@ -1,0 +1,167 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-comment
+include ../elements/_ui-post-preview
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Blog post'
+
+block title
+  title=pageName
+
+block page
+  //-Page Header
+  include ../sections/_section-header-default
+
+
+  +page-title('Blog', 'bg-blog')
+
+  //-Blog post
+  section.section-60.section-md-75.section-xl-90
+    .container
+      .row.row-50
+        .col-lg-8.col-xl-9
+          article.post.post-single
+            .post-image
+              figure
+                +jpg('post-1-870x412')
+            .post-header
+              h4 Leave your Legacy through Planned Giving
+
+            .post-meta
+              ul.list-bordered-horizontal
+                li
+                  dl.list-terms-inline
+                    dt Date
+                    dd: time(datetime='2021-01-22') January 22, 2021
+                li
+                  dl.list-terms-inline
+                    dt Posted by
+                    dd Amelia Condon
+                li
+                  dl.list-terms-inline
+                    dt Comments
+                    dd 3
+                li
+                  dl.list-terms-inline
+                    dt Category
+                    dd Wealth Management
+
+            .divider-fullwidth.bg-gray-light
+
+            .post-body
+              p There comes a point in life where you want to begin sharing or gifting all the things you’ve collected over the years—stories, wisdom, financial wealth. And unlike the Ancient Egyptians believed, you cannot take your worldly goods with you when your light goes out. You can share your stories wisdom in a manifesto or through funny tales to your family, but what about the money?
+              p Like most, you have (or should have) a will and most of your assets are likely going to friends and family. But, what about the causes and organizations you care about the 501(c)(3)s that depend on kind donations to continue doing the greatest good than you could do as an individual? Who is going to make your annual donation when you’re gone? Planned giving is the answer. Just like it sounds, planned giving is the act of creating a contribution of non-probate transfer vehicles (such as savings and checking accounts, investment funds, real estate), real property, or non-cash assets (like securities or retirement accounts), that is usually dispersed after an individual’s passing.
+
+              .quote-wrap-1
+                blockquote.quote-minimal-bordered
+                  p: q Not only should you post interesting content, you should try to blog at least three times a week as a business.
+              p Giving to the annual campaign is great and attending the big events is important, but there’s always this sense that your money isn’t going exactly where you would choose it to go. For example, you may be fully vested in one specific youth program at the local YMCA, but when you support the YMCA generally, your money is also going to other operations.
+
+            .post-footer
+              h5 Share this post:
+              ul.list-inline.list-inline-xs
+                li: a.icon.icon-xxs-small.link-tundora.fa-facebook(href='#')
+                li: a.icon.icon-xxs-small.link-tundora.fa-twitter(href='#')
+                li: a.icon.icon-xxs-small.link-tundora.fa-google-plus(href='#')
+                li: a.icon.icon-xxs-small.link-tundora.fa-pinterest-p(href='#')
+
+          .divider-fullwidth.bg-gray-lighter
+
+          //-Comments
+          .comment-list-wrap
+            h4 3 Comments
+            .comment-list.inset-md-right-60.inset-lg-right-30.inset-xl-right-100
+              .comment-group
+                +comment({
+                  img: 'post-2-70x71',
+                  user: 'July Mao',
+                  text: 'The topic you describe here is really important. However, the mentioned type of training cannot be applied to anyone.'
+                })
+
+                .comment-group-reply
+                  +comment({
+                    img: 'post-3-70x71',
+                    user: 'John doe',
+                    text: 'You are absolutely right! But here, we have everything necessary to prepare even the pre - beginners to extensive physical training.'
+                  })
+
+              .comment-group
+                +comment({
+                  img: 'post-4-70x71',
+                  user: 'Mila MOa',
+                  text: 'Very useful post! Thanks for sharing! Now I’ll be planning my visit to your gym to take part in some fitness classes. '
+                })
+
+          //-Leave a comment
+          .comments-wrap
+            h4 Leave a comment
+            .form-classic-wrap
+              //-RD Mailform
+              form.rd-mailform.form-classic.form-classic-bordered.label-outside
+                .form-wrap
+                  label.form-label-outside.fw-bold(for="comment-message") Message:
+                  textarea#comment-message.form-input(name="message" data-constraints="@Required")
+                .form-wrap
+                  button(type="submit" style='min-width: 200px;').btn.btn-primary Submit
+
+        //-Aside
+        .col-lg-4.col-xl-3
+          .blog-aside
+            .blog-aside-item
+              form.rd-search.rd-search-classic(action="search-results.html", method="GET")
+                .form-wrap
+                  label.form-label(for="rd-search-form-input-1") Search...
+                  input.form-input(id="rd-search-form-input-1" type="text" name="s" autocomplete="off")
+                button.rd-search-submit(type='submit')
+
+            .blog-aside-item
+              h6.text-uppercase Categories
+              ul.list-marked-bordered
+                li: a(href='#')
+                  span Wealth Management
+                  span.text-dusty-gray (3)
+                li: a(href='#')
+                  span Business Owners
+                  span.text-dusty-gray (4)
+                li: a(href='#')
+                  span Cash & Credit
+                  span.text-dusty-gray (4)
+
+            .blog-aside-item
+              h6.text-uppercase Popular posts
+              +post-preview({
+                small: true,
+                img: 'post-preview-1-70x70',
+                header: 'Your Credit Card Security Code is the Key to Fraud',
+                time: ['2021-02-04', 'Feb 4, 2021']
+              })
+
+              +post-preview({
+                small: true,
+                img: 'post-preview-2-70x70',
+                header: 'Are Investors Their Own Worst Enemy ?',
+                time: ['2021-02-04', 'Feb 4, 2021']
+              })
+
+              +post-preview({
+                small: true,
+                img: 'post-preview-3-70x70',
+                header: 'Understanding the Money Value of Time',
+                time: ['2021-02-04', 'Feb 4, 2021']
+              })
+
+            .blog-aside-item
+              h6.text-uppercase Tags
+              ul.list-tag-blocks
+                li: a(href='#') Legacy
+                li: a(href='#') Plan
+                li: a(href='#') Finance
+                li: a(href='#') Money
+  ='\n'
+
+
+  //-Page Footer
+  include ../sections/_section-footer-default

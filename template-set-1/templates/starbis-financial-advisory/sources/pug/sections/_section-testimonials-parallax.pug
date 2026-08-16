@@ -1,0 +1,43 @@
+//- Include
+include ../elements/_ui-quote-minimal
+
+//- RD Parallax
+section.section.parallax-container.context-dark(data-parallax-img='images/clients-testimonials-parallax-1.jpg')
+  .parallax-content
+    .section-60.section-md-90.section-xl-120.bg-overlay-cello
+      .container.text-center
+        .row.row-40.justify-content-lg-center
+          .col-sm-12
+            h3 What People Say
+          .col-lg-11.col-xl-10
+            //- Owl Carousel
+            .owl-carousel-inverse
+              .owl-carousel.owl-nav-position-numbering(data-items='1', data-stage-padding='0', data-loop='false', data-margin='30', data-nav='true', data-numbering='#owl-numbering-1', data-animation-in='fadeIn', data-animation-out='fadeOut')
+                .item
+                  +quote-minimal({
+                    mod: "quote-minimal-inverse",
+                    text: "Highly experienced team of tax advisors! Tom was a tremendous asset to me in sorting out my tax affairs. His excellent advice helped me to make a complicated situation straightforward. I would recommend him to anyone.",
+                    cite: "Jane Wilson",
+                    caption: "Freelancer"
+                  })
+
+                .item
+                  +quote-minimal({
+                    mod: "quote-minimal-inverse",
+                    text: "As part of brief interaction, have noticed a very high professionalism on TaxAdvisor’s part! They are very prompt and have managed to keep their word as part of process. Will be glad to work with them in future as well. Thank you very much!",
+                    cite: "Amanda Smith",
+                    caption: "Sales, at Themes.com"
+                  })
+
+                .item
+                  +quote-minimal({
+                    mod: "quote-minimal-inverse",
+                    text: "TaxAdvisor’s expertise and knowledge of USA and Indian Tax law assisted me in answering tricky tax questions and being able to better understand the tax implications of various financial transactions internationally. Very professional team!",
+                    cite: "Sam Cole",
+                    caption: "Founder, at Yourtax.com"
+                  })
+              #owl-numbering-1.owl-numbering.owl-numbering-default
+                .numbering-current
+                .numbering-separator
+                .numbering-count
+='\n'

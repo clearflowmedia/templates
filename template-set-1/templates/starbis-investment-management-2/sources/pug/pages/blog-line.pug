@@ -1,0 +1,99 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-post-classic-minimal
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Blog Line'
+
+block title
+  title=pageName
+
+block page
+  //-Page Header
+  include ../sections/_section-header-default
+
+
+  +page-title('Blog', 'bg-blog')
+
+  //-Blog line
+  section.section-50.section-md-75.section-xl-100
+    .container
+      .row.justify-content-md-center
+        .col-xl-10
+          dl.blog-timeline
+            dt 2021
+            dd
+              +post-classic-minimal({
+                header: 'Leave your Legacy through Planned Giving',
+                text: [
+                  'There comes a point in life where you want to begin sharing or gifting all the things you’ve collected over the years—stories, wisdom, financial wealth. And unlike the Ancient Egyptians believed, you cannot take your worldly goods with you when your light goes out. You can share your stories wisdom in a manifesto or through funny tales to your family, but what about the money? Like most, you have (or should have) a will and most of your assets are likely going to friends and family. But, what...'
+                ],
+                tags: ["Legacy", "Plan"],
+                user: 'Amelia Condon',
+                time: ['2021-06-17', 'Jun 17'],
+                media : {
+                  type: "image",
+                  data: 'blog-line-1-770x500'
+                }
+              })
+
+              +post-classic-minimal({
+                header: 'Protecting Your Biggest Asset',
+                text: ["Life is full of risks, and people make decisions everyday that require weighing those risks against their ability to protect themselves using their own resources or by transferring the risk to an insurance company. Most people realize that they couldn’t afford to rebuild a damaged home or buy a new car without insurance. While these are important and expensive assets, the actual risk of loss pales next to the loss of their biggest asset, their ability to earn an income..."],
+                tags: ["Protecting", "Insurance"],
+                user: 'Jack Smith',
+                time: ['2021-05-23', 'May 23']
+              })
+
+
+              +post-classic-minimal({
+                header: 'A Lesson in Helping your Student Pay for College',
+                text: [
+                  "You think back fondly on those halcyon collegiate days--studying in the quad, late-night pizza, tailgating for the big tailgating game, dorm living, tossing your graduation cap in the air...beyond the lifelong friends and the parties and fun, college helped you get to where you are today. Looking ahead, your student is planning on following in your footsteps and will be receiving that admissions letter of acceptance sooner than you think..."
+                ],
+                tags: ["Lesson", "Student"],
+                user: 'Amelia Condon',
+                time: ['2021-03-02', 'Apr 14'],
+                media: {
+                  type: "image",
+                  data: 'blog-line-2-770x500',
+                }
+              })
+
+              +post-classic-minimal({
+                header: 'Debt After Death – Do You Have it Covered?',
+                text: [
+                  "Many people deal with credit card debt all of their lives with most of them giving little or no thought to what happens with their debt after they die. The fact that nearly 60% die without a will is a strong indication that they’ve given absolutely no thought to it. As a consequence, those that survive the debt holder are often left to deal with a myriad of issues that can be time-consuming and unpleasant. Credit card debt doesn’t simply evaporate when someone dies. In fact, creditors will actually... ",
+                ],
+                tags: ["Debt", "Credit Card"],
+                user: 'Amelia Condon',
+                time: ['2021-03-02', 'Mar 2'],
+                media: {
+                  type: "gallery",
+                  data: [
+                    'blog-line-3-770x500',
+                    'blog-line-4-770x500',
+                  ]
+                }
+              })
+
+              +post-classic-minimal({
+                header: 'How to Purchase the Right Amount of Life Insurance',
+                text: ["Anyone with a family to protect understands the critical role life insurance plays in their financial plan However,  in determining the actual amount of coverage to provide essential protection needs, many people tend to adhere to simplistic rules-of-thumb, such as a “multiple of income,” which may leave them wondering if they own too much or too little coverage. That’s not exactly the “peace-of-mind” we hope for when buying life insurance. With your family’s financial future at stake, wouldn’t it be... "],
+                tags: ["Insurance", "Financial"],
+                user: 'Amelia Anderson',
+                time: ['2021-02-16', 'Feb 16'],
+                media: {
+                  type: "audio",
+                  data: globals.soundcloud
+                }
+              })
+
+              .pagination-custom-wrap.text-center
+                +pagination
+  ='\n'
+
+  //-Page Footer
+  include ../sections/_section-footer-default

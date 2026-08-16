@@ -1,0 +1,43 @@
+//- Include
+include ../elements/_ui-quote-minimal
+
++parallax({
+  img: 'clients-testimonials-parallax-1',
+  addClass: 'bg-black bg-overlay-dark-2'
+})
+  .section-60.section-md-90.section-xl-120
+    .container.text-center
+      h3 What People Say
+      .row.justify-content-lg-center
+        .col-lg-11.col-xl-9
+          //-Owl Carousel
+          .owl-carousel-inverse
+            .owl-carousel.owl-nav-position-numbering(data-items='1', data-stage-padding='0', data-loop='false', data-margin='30', data-nav='true', data-numbering='#owl-numbering-1', data-animation-in='fadeIn', data-animation-out='fadeOut', data-mouse-drag='false')
+              .item
+                +quote-minimal({
+                  mod: "quote-minimal-inverse",
+                  text: "The team at InvestPlus can identify issues and try to provide solutions on all aspects of fund management and administration and will guide you with their in-depth knowledge whenever they are asked. Keep going this way!",
+                  cite: "Jane Wilson",
+                  caption: "Freelancer"
+                })
+
+              .item
+                +quote-minimal({
+                  mod: "quote-minimal-inverse",
+                  text: "They are keeping their deadlines – often beating them – and are always available for advice. Their pricing is very attractive and their after sales service is second-to-none. They have created tremendous value for me and my clients. Definitely recommendable!",
+                  cite: "Amanda Smith",
+                  caption: "Sales Manager"
+                })
+
+              .item
+                +quote-minimal({
+                  mod: "quote-minimal-inverse",
+                  text: "I have enjoyed a professional and fruitful relationship with InvestPlus for almost 6 years during which time, their knowledge, diligence, and focus to detail, has added greatly to my own company’s bottom-line, allowing me to offer enhanced benefits to my investors.",
+                  cite: "Sam Cole",
+                  caption: "Regional Manager"
+                })
+            #owl-numbering-1.owl-numbering.owl-numbering-default
+              .numbering-current
+              .numbering-separator
+              .numbering-count
+='\n'

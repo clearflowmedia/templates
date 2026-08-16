@@ -1,0 +1,108 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-quote-default
+include ../elements/_ui-accordion
+
+block variables
+	- var activeIndex = 4
+	- var pageName = 'FAQ'
+
+block title
+	title=pageName
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title(pageName, 'bg-image-6')
+
+	//- FAQ
+	section.section-60.section-md-90.section-xl-bottom-120.bg-athens-lighten
+		.container
+			.row.justify-content-md-center
+				.col-md-10.col-lg-12
+					.row.row-60
+						.col-lg-6
+							h3 General Questions
+							p.text-big.font-accent All you need to know about TaxAdvisor design studio and how to get Support.
+							//- Bootstrap collapse
+							#accordionOne.accordion.accordion-group.accordion-group-corporate
+								+accordion-item({
+									show: true,
+									parentId: 'accordionOne',
+									header: 'What is a taxable sale?',
+									text: "A taxable sale includes any transaction in which title or possession of tangible personal property or the benefit of certain services is, or will be, transferred or provided for a price. All retail sales are subject to the tax unless they are specifically excepted or exempted in sales tax law."
+								}).accordion-corporate
+
+								+accordion-item({
+									parentId: 'accordionOne',
+									header: 'What services are not taxable?',
+									text: "The charges for Internet service (on-line access to information stored in a computer) for use in business are subject to Ohio sales or use tax. The charges for Internet service for individuals are not subject to Ohio sales or use tax."
+								}).accordion-corporate
+
+								+accordion-item({
+									parentId: 'accordionOne',
+									header: 'Are delivery costs taxable?',
+									text: "Yes. Effective Aug. 1, 2003 delivery charges by a vendor for preparation and delivery to a location designated by the consumer of tangible personal property or a service, including transportation, shipping, postage, handling, crating, and packing are taxable."
+								}).accordion-corporate
+
+								+accordion-item({
+									parentId: 'accordionOne',
+									header: 'What is sales tax?',
+									text: 'Sales tax is a "trust" tax that is to be collected by all retailers and certain service providers when they make taxable retail sales. It is called a "trust" tax because the consumer has entrusted this tax to retailers and certain service providers with the understanding that it will be reported and paid to the State of Ohio in a timely manner.'
+								}).accordion-corporate
+
+						.col-lg-6
+							h3 Other Questions
+							p.text-big.font-accent The answers on most common questions are described below.
+
+							//- Bootstrap collapse
+							#accordionTwo.accordion.accordion-group.accordion-group-corporate
+								+accordion-item({
+									parentId: 'accordionTwo',
+									header: 'What are the local tax rates?',
+									text: "Counties and regional transit authorities may each levy sales tax in multiples of .25 percent up to 3 percent. The total combined rate - state, county and transit authority - may not exceed 8 3/4 percent. "
+								}).accordion-corporate
+
+								+accordion-item({
+									parentId: 'accordionTwo',
+									header: 'What is personal property? ',
+									text: "TaxAdvisor is a universal solution for professional developers, designers and end users. This powerful HTML template can be used to build sites of any type, be it a blogger’s resource or professional portfolio. Intense meets all the modern quality standards, which will give you a solid basis to compete with rivals on the web."
+								}).accordion-corporate
+
+								+accordion-item({
+									parentId: 'accordionTwo',
+									header: 'Do businesses need to be concerned with use tax?',
+									text: "A business is no different than any other Ohio consumer when it comes to possible use tax liability. For example, if a business buys a taxable item from out-of-state, such as office equipment or supplies, the business owes use tax. The tax must be paid to the seller."
+								}).accordion-corporate
+
+								+accordion-item({
+									parentId: 'accordionTwo',
+									header: 'Can I get a refund if I overpay my tax?',
+									text: "Every State retailer (vendor) and certain service providers making taxable retail sales must obtain a vendor's license, collect the proper amount of sales tax, file tax returns with payment of tax collected, and maintain complete records of transactions."
+								}).accordion-corporate
+
+								+accordion-item({
+									parentId: 'accordionTwo',
+									header: 'What is the tax base?',
+									text: "Any Ohio vendor who makes taxable sales that are delivered to purchasers in another state should register with that state and collect that state’s use tax. If the vendor has nexus with that state, the vendor is subject to its tax laws, including possible audit and assessment."
+								}).accordion-corporate
+
+								+accordion-item({
+									parentId: 'accordionTwo',
+									header: "Do I have to collect another state's use tax?",
+									text: "First we will talk a bit about your business. You will tell us what your business is about and which keywords you think are significant for your business. Then we will take these keywords and analyze them using our database tools. We will find out how many people use them and how many websites already used these keywords. That way we will know how many companies you are competing with. Also, we will get information on similar search terms that can be used and that can help us make changes and get better solutions for you. We will tailor the key phrases to fit your needs, taking your goals and budget into account. This first part of our cooperation will be a bit intense in communication. After the first few rounds of calls and e-mails we won’t be bugging you as much and will have enough info to finish the work ourselves."
+								}).accordion-corporate
+
+								+accordion-item({
+									parentId: 'accordionTwo',
+									header: "What must I do to make taxable retail sales?",
+									text: "Every State retailer (vendor) and certain service providers making taxable retail sales must obtain a vendor's license, collect the proper amount of sales tax, file tax returns with payment of tax collected, and maintain complete records of transactions."
+								}).accordion-corporate
+	='\n'
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

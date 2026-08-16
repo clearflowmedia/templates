@@ -1,0 +1,52 @@
+/*
+*
+* Grid Modules
+*/
+
+@mixin make-grid-columns-custom($columns: $grid-columns, $gutter: $grid-gutter-width, $breakpoints: $grid-breakpoints) {
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      @for $i from 1 through $columns {
+        > .col#{$infix}-#{$i} {
+          @include make-col($i, $columns);
+        }
+      }
+    }
+  }
+}
+
+.row-seven {
+  @include make-grid-columns-custom(7);
+}
+
+.flex-row-md-reverse {
+  // Medium ≥768px
+  @include media-breakpoint-up(md) {
+    flex-direction: row-reverse; 
+  }
+}
+
+
+@include media-breakpoint-up(xl) {
+	.row-collapse {
+		position: absolute;
+		width: 100%;
+	}
+}
+@include media-breakpoint-up( xxl ) {
+	.container {
+		padding-right: $grid-gutter-width-wide / 2;
+		padding-left: $grid-gutter-width-wide / 2;
+	}
+	.row {
+		margin-left: -$grid-gutter-width-wide / 2;
+		margin-right: -$grid-gutter-width-wide / 2;
+
+		> [class*='col'] {
+			padding-left: $grid-gutter-width-wide / 2;
+			padding-right: $grid-gutter-width-wide / 2;
+		}
+	}
+}

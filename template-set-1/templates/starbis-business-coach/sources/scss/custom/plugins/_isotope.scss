@@ -1,0 +1,316 @@
+/** @section Isotope */
+
+$isotope-default-color: $black;
+$isotope-default-color-active: $primary;
+$isotope-default-border: $isotope-default-color-active;
+$isotope-nav-spacing: 35px;
+
+$isotope-default-item-offset: 30px;
+
+$isotope-inverse-color: $white;
+$isotope-inverse-color-active: $primary;
+$isotope-inverse-border: $isotope-inverse-color-active;
+
+// Mixin for isotope elements spacing
+@mixin isotope-gutter($isotope-gutter) {
+  @include groupY($isotope-gutter);
+}
+
+// Isotope Layout
+.isotope {
+  z-index: 0;
+  display: block;
+  transition: .3s ease;
+}
+
+.isotope-item {
+  display: block;
+  will-change: transform;
+  backface-visibility: hidden;
+  transition: .1s opacity ease-in;
+}
+
+// Isotope gutters
+.isotope-gutter-default {
+  @include isotope-gutter($isotope-default-item-offset);
+}
+
+// Isotope filters common styles
+.isotope-filters {
+  $value: 10px;
+
+  > * {
+    margin-top: 0;
+    vertical-align: middle;
+  }
+
+  .list-inline {
+    position: relative;
+    transform: translateY(-$value);
+    margin: 0;
+    margin-bottom: -$value;
+
+    li {
+      display: inline-block;
+      margin-top: $value;
+    }
+
+    a {
+      position: relative;
+      transition: .3s;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .isotope-filters-trigger {
+      display: none;
+    }
+  }
+}
+
+// Isotope filters minimal
+.isotope-filters-minimal {
+  .list-inline {
+    > li {
+      padding: 0;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    .list-inline {
+      word-spacing: 0;
+
+      > li:not(:last-child) {
+        margin-right: $isotope-nav-spacing;
+      }
+
+      a {
+        position: relative;
+        padding-bottom: 5px;
+        font: 500 14px/24px $font-family-base;
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 100%;
+          height: 2px;
+          transition: .33s all ease;
+          background: $isotope-default-border;
+        }
+
+        &,
+        &:active,
+        &:focus {
+          color: $isotope-default-color;
+        }
+
+        &:hover,
+        &.active {
+          color: $isotope-default-color-active;
+        }
+
+        &.active {
+          &:after {
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Mobile version of filters
+.isotope-filters-responsive {
+  position: relative;
+  z-index: 10;
+
+  *:focus {
+    outline: none;
+  }
+
+  @include media-breakpoint-down(md) {
+    max-width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include media-breakpoint-down(lg) {
+    vertical-align: middle;
+
+    .isotope-filters-toggle {
+      padding-left: 10px;
+      padding-right: 10px;
+
+      .caret {
+        margin-left: 5px;
+      }
+    }
+
+    > li {
+      vertical-align: middle;
+      padding: 0;
+    }
+
+    > li:first-child {
+      margin-right: 8px;
+    }
+
+    > li + li {
+      margin-top: 8px;
+    }
+
+    .isotope-filters {
+      position: absolute;
+      top: 49px;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      min-width: 210px;
+      padding: 15px;
+      background: $white;
+      border-radius: 3px;
+      text-align: left;
+      visibility: hidden;
+      opacity: 0;
+      transition: .33s all ease;
+      border: 1px solid darken($white, 5%);
+
+      &.active {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .list-inline {
+        width: 100%;
+      }
+
+      .list-inline a {
+        display: inline-block;
+        width: 100%;
+        padding: 3px 8px;
+        font-size: 12px;
+        border-radius: 2px;
+        color: $black;
+        border: 0;
+        background-color: transparent;
+
+        &.active,
+        &:hover {
+          color: $primary;
+          background-color: rgba($primary, .1);
+        }
+      }
+
+      li {
+        display: block;
+        width: 100%;
+      }
+
+      li + li {
+        margin-top: 6px;
+      }
+    }
+
+    @include media-breakpoint-up(sm) {
+      > li {
+        display: inline-block;
+        margin: 0;
+      }
+
+      > li + li {
+        margin-top: 0;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      .isotope-filters {
+        min-width: 250px;
+        .list-inline a {
+          padding: 5px 10px;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    > li:first-child {
+      display: none;
+    }
+  }
+}
+
+* + .isotope-filters-responsive { margin-top: 40px; }
+
+.isotope-filters-toggle {
+  display: block;
+  border: 0;
+  outline: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media-breakpoint-up(lg) {
+    display: none;
+  }
+}
+
+// Style: inverse
+.isotope-style-inverse {
+  @include media-breakpoint-up(lg) {
+    .list-inline {
+      > li > a {
+        &:after {
+          background: $isotope-inverse-border;
+        }
+
+        &,
+        &:active,
+        &:focus {
+          color: $isotope-inverse-color;
+        }
+
+        &:hover,
+        &.active {
+          color: $isotope-inverse-color-active;
+        }
+      }
+    }
+  }
+}
+
+// Cobbles items
+.isotope-item-width-33p,
+.isotope-item-width-66p {
+  width: 100%;
+
+  > * {
+    position: relative;
+    transform: scale(1.002);
+  }
+
+  @include media-breakpoint-up(md) {
+    width: 50%;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .isotope-item-width-33p {
+    width: 33.33333%;
+  }
+
+  .isotope-item-width-66p {
+    width: 66.66666%;
+  }
+}
+
+.isotope-condensed {
+  .isotope-item {
+    overflow: hidden;
+  }
+
+  @include media-breakpoint-up(lg) {
+    .isotope-item {
+      margin: -1px;
+    }
+  }
+}

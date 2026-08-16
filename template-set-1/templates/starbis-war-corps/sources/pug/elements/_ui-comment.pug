@@ -1,0 +1,29 @@
+//- Comment
+mixin comment(obj)
+  //- Comment
+  article.comment
+    .unit.unit-spacing-md.unit-xs-horizontal
+      .unit-left
+        figure
+          +jpg(obj.img)
+
+      .unit-body
+        .comment-body
+          .comment-body-header
+            .comment-meta
+              p.user=obj.user
+
+              ul.list-inline.list-icon-meta
+                li: a.link-group.link-group-baseline(href='#')
+                  span.icon.icon-xxs-smaller.icon-dusty-gray.mdi.mdi-thumb-up-outline
+                  span Like
+
+                li: a.link-group(href='#')
+                  span.icon.icon-xxs-smaller.icon-dusty-gray.mdi.mdi-comment-outline
+                  span Reply
+
+            .comment-time: .object-inline
+              time(datetime='2016-02-16') Feb 16, 7:42 PM
+              span.icon.icon-xxs-smaller.icon-dusty-gray.mdi.mdi-clock
+
+          .comment-body-text: p.text-black=obj.text

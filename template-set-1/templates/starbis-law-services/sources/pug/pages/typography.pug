@@ -1,0 +1,114 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-quote-default
+include ../elements/_ui-placeholders
+
+block variables
+  - var activeIndex = 5
+  - var pageName = 'Typography'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title(pageName, 'bg-image-1')
+
+  //- Typography
+  section.section-35.section-md-top-75.section-md-bottom-50
+    .container
+      .row.row-40
+        .col-md-6
+          h1 Heading 1
+          +text-placeholder
+
+        .col-md-6
+          h2 Heading 2
+          +text-placeholder
+
+        .col-md-6
+          h3 Heading 3
+          +text-placeholder
+
+        .col-md-6
+          h4 Heading 4
+          +text-placeholder
+
+        .col-md-6
+          h5 Heading 5
+          +text-placeholder
+
+        .col-md-6
+          h6 Heading 6
+          +text-placeholder
+  ='\n'
+
+  //- Blockquote
+  section.section-35
+    .container
+      h3 Blockquote
+      .quote-wrap(style='max-width: 530px;')
+        +quote-default("It has been a pleasure doing business with you, keep up the exceptional work that you are doing!")
+  ='\n'
+
+  //- Text Formatting
+  section.section-md-50
+    .container
+      h3 Text Formatting
+      .box-text
+        a(href='#').link.link-primary-inline Link text
+        a(href='#').link.link-primary-inline.hover Hover link text
+        a(href='#').link.link-primary-inline.active Press link
+        span.mark highlighted text
+        span.text-strike strickethrough text
+        span.text-underline underlined text.
+  ='\n'
+
+  //- Image Centered
+  section.section-35
+    .container
+      h3 Image Centered
+      figure
+        +jpg('typography-1-1169x610')
+      p.text-secondary Our priority is to measure our success based on the growth in the quality of our work and the complexity of our legal services.
+  ='\n'
+
+  //- Image Right
+  section.section-35.section-md-50
+    .container
+      h3 Image Right
+      .row.row-30.flex-row-md-reverse.justify-content-lg-between
+        .col-md-6
+          figure
+            +jpg('typography-2-570x386')
+        .col-md-6
+          .inset-lg-right-40.inset-xl-right-85.text-secondary
+            p.
+              Our approach is practical and client-oriented, and we are committed to providing efficient, effective, and top-quality legal services. Other firms measure success by their growth in size. Our priority is to measure our success based on the growth in the quality of our work and the complexity of our legal services.
+            p.
+              We endeavour to establish long-lasting relationships with our clients. Every assignment is preceded by a careful assessment of the work, costs and realistic results. We carry out our assignments in close consultation with the client. This goes some way to explaining why we are justifiably proud of our many long-standing and close client relationships. In the course of long-term engagements, each client has a specific contact attorney within the firm who is familiar with the client's business operations and maintains close communication with the client.
+  ='\n'
+
+  //- Image Left
+  section.section-40.section-md-bottom-100.section-xl-bottom-165
+    .container
+      h3 Image Left
+      .row.row-30.justify-content-lg-between
+        .col-md-6
+          figure
+            +jpg('typography-3-570x386')
+        .col-md-6
+          .inset-lg-left-40.inset-xl-left-70.text-secondary
+            p.
+              Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company.
+            p.
+              We endeavour to establish long-lasting relationships with our clients. Every assignment is preceded by a careful assessment of the work, costs and realistic results. We carry out our assignments in close consultation with the client. This goes some way to explaining why we are justifiably proud of our many long-standing and close client relationships. In the course of long-term engagements, each client has a specific contact attorney within the firm who is familiar with the client's business operations and maintains close communication with the client.
+  ='\n'
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

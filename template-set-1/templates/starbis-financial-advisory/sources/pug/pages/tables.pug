@@ -1,0 +1,37 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-quote-default
+include ../elements/_ui-placeholders
+
+block variables
+	- var activeIndex = 4
+	- var pageName = 'Tables'
+
+block title
+	title=pageName
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title(pageName, 'bg-image-2')
+
+	//- Tables
+	section.section-60.section-md-100
+		.container
+			.row.row-60.row-xl-100
+				.col-sm-12
+					+table('table-custom-primary')
+
+				.col-sm-12
+					+table
+
+				.col-sm-12
+					+table(['table-custom-primary', 'table-custom-striped'])
+	='\n'
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

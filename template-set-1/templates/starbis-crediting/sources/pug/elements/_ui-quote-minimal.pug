@@ -1,0 +1,15 @@
+//- Quote minimal
+mixin quote-minimal(obj)
+  //- Quote minimal
+  blockquote.quote-minimal(class=obj.mod)
+    .quote-skew-inner
+    .quote-body
+      if obj.img
+        +jpg(obj.img, 'img-circle')
+      h5=obj.title
+      p: q=obj.text
+
+    .quote-meta
+      cite=obj.cite
+      p.caption=obj.caption
+

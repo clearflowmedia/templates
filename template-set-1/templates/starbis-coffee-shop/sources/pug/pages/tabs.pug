@@ -1,0 +1,111 @@
+extends  ../_skeleton
+
+//- Includes
+include ../sections/_section-header-default
+
+block variables
+	- pageName = 'Tabs'
+
+block page
+	//- Page Header
+	+header-default
+
+	//- Page Content
+	+breadcrumbs
+
+	//- Horizontal Tabs
+	section.section.section-sm.bg-transparent
+		.container
+			h3.text-center Horizontal Tabs
+			.row.justify-content-md-center
+				.col-xl-10
+					//- Bootstrap tabs
+					#tabs-1.tabs-custom.tabs-horizontal.tabs-corporate
+						//- Nav tabs
+						ul.nav.nav-tabs
+							li: a.nav-link.active(href='#tabs-1-1' data-bs-toggle='tab') Tab 1
+							li: a.nav-link(href='#tabs-1-2' data-bs-toggle='tab') Tab 2
+							li: a.nav-link(href='#tabs-1-3' data-bs-toggle='tab') Tab 3
+							li: a.nav-link(href='#tabs-1-4' data-bs-toggle='tab') Tab 4
+							li: a.nav-link(href='#tabs-1-5' data-bs-toggle='tab') Tab 5
+
+						//- Tab panes
+						.tab-content.text-primary
+							div#tabs-1-1.tab-pane.fade.show.active: p Consectetur culpa cum cumque delectus ducimus earum est eveniet ex fugiat harum impedit in iste iure laudantium maxime modi non odit officiis omnis possimus quaerat recusandae, repellat similique unde ut vel veniam voluptates? At ex illo illum minus molestiae recusandae!
+							div#tabs-1-2.tab-pane.fade: p Amet consequuntur, eligendi eum fuga laboriosam libero, magni odio pariatur quae quia ratione rem reprehenderit sit temporibus veritatis voluptatem voluptatibus. Aut eos excepturi ipsum numquam provident sequi sunt. Dolor ea harum laudantium quas. Minima non possimus quam voluptates.
+							div#tabs-1-3.tab-pane.fade: p Assumenda autem beatae doloremque earum enim illo magnam quod reprehenderit totam. Aut doloribus ea exercitationem incidunt, minima mollitia numquam porro quo, rerum suscipit, ullam velit?
+							div#tabs-1-4.tab-pane.fade: p Aperiam aspernatur at aut beatae blanditiis expedita in incidunt, ipsum iusto nobis nostrum obcaecati optio, praesentium quas quidem quis quisquam quo ratione reprehenderit similique tempore velit voluptatum!
+							div#tabs-1-5.tab-pane.fade: p A ab at corporis culpa, doloribus ducimus eius eligendi esse facere harum illo iusto modi nesciunt omnis, placeat possimus quas ratione sequi sint vel vero vitae voluptas.
+
+
+	//- Vertical Tabs
+	section.section-sm.bg-transparent
+		.container
+			h3.text-center Vertical Tabs
+			.row.justify-content-md-center
+				.col-xl-10
+					//- Bootstrap tabs
+					#tabs-2.tabs-custom.tabs-vertical.tabs-corporate
+						//- Nav tabs
+						ul.nav.nav-tabs
+							li: a.nav-link.active(href='#tabs-2-1' data-bs-toggle='tab') Tab 1
+							li: a.nav-link(href='#tabs-2-2' data-bs-toggle='tab') Tab 2
+							li: a.nav-link(href='#tabs-2-3' data-bs-toggle='tab') Tab 3
+							li: a.nav-link(href='#tabs-2-4' data-bs-toggle='tab') Tab 4
+
+						//- Tab panes
+						.tab-content.text-primary
+							div#tabs-2-1.tab-pane.fade.show.active: p A at cupiditate ducimus eius fuga, laborum neque nobis perspiciatis quae quasi repellat reprehenderit saepe similique sint ullam unde ut!
+							div#tabs-2-2.tab-pane.fade: p Adipisci amet at atque autem consequatur cum delectus deleniti distinctio dolore dolorum ducimus, ea eaque eos esse et eum eveniet exercitationem explicabo impedit ipsum iusto laboriosam, magnam nihil non omnis perferendis placeat porro quam reiciendis soluta temporibus ut vero voluptatum.
+							div#tabs-2-3.tab-pane.fade: p At perspiciatis sint veritatis? Debitis distinctio eius, iusto nihil nulla perferendis praesentium reprehenderit veritatis? Aperiam aspernatur cupiditate, distinctio eius eligendi et eveniet, expedita facilis iure laudantium libero modi nam nihil nisi obcaecati, odit reprehenderit tenetur vel veniam voluptates!
+							div#tabs-2-4.tab-pane.fade: p Consequatur in ipsa natus necessitatibus non odit perferendis recusandae repellendus sed, veniam veritatis voluptate voluptatem? Beatae blanditiis corporis debitis deserunt illum nemo, sit. Consequatur id illo iste nemo, officia quidem quis rerum unde vero. Consectetur error, rerum!
+
+
+	//- Tabs Line
+	section.section.section-sm.bg-transparent
+		.container
+			h3.text-center Tabs Line
+			.row.justify-content-md-center
+				.col-md-10.col-lg-8.col-xl-6
+					//- Bootstrap tabs
+					#tabs-3.tabs-custom.tabs-horizontal.tabs-line
+						//- Nav tabs
+						ul.nav.nav-tabs
+							li: a.nav-link.active(href='#tabs-3-1' data-bs-toggle='tab') Tab 1
+							li: a.nav-link(href='#tabs-3-2' data-bs-toggle='tab') Tab 2
+							li: a.nav-link(href='#tabs-3-3' data-bs-toggle='tab') Tab 3
+							li: a.nav-link(href='#tabs-3-4' data-bs-toggle='tab') Tab 4
+
+						//- Tab panes
+						.tab-content.text-primary
+							div#tabs-3-1.tab-pane.fade.show.active: p A ab at corporis culpa, doloribus ducimus eius eligendi esse facere harum illo iusto modi nesciunt omnis, placeat possimus quas ratione sequi sint vel vero vitae voluptas.
+							div#tabs-3-2.tab-pane.fade: p Aperiam aspernatur at aut beatae blanditiis expedita in incidunt, ipsum iusto nobis nostrum obcaecati optio, praesentium quas quidem quis quisquam quo ratione reprehenderit similique tempore velit voluptatum!
+							div#tabs-3-3.tab-pane.fade: p Assumenda autem beatae doloremque earum enim illo magnam quod reprehenderit totam. Aut doloribus ea exercitationem incidunt, minima mollitia numquam porro quo, rerum suscipit, ullam velit?
+							div#tabs-3-4.tab-pane.fade: p Amet consequuntur, eligendi eum fuga laboriosam libero, magni odio pariatur quae quia ratione rem reprehenderit sit temporibus veritatis voluptatem voluptatibus. Aut eos excepturi ipsum numquam provident sequi sunt. Dolor ea harum laudantium quas. Minima non possimus quam voluptates.
+
+
+	//- Tabs Gallery
+	section.section.section-sm.bg-transparent
+		.container
+			h3.text-center Tabs Gallery
+			.row.justify-content-md-center
+				.col-md-10.col-lg-8.col-xl-6
+					//- Bootstrap tabs
+					#tabs-4.tabs-custom.tabs-horizontal.tabs-minimal
+						//- Nav tabs
+						ul.nav.nav-tabs.text-center
+							li: a.nav-link.active(href='#tabs-4-1' data-bs-toggle='tab') Tab 1
+							li: a.nav-link(href='#tabs-4-2' data-bs-toggle='tab') Tab 2
+							li: a.nav-link(href='#tabs-4-3' data-bs-toggle='tab') Tab 3
+							li: a.nav-link(href='#tabs-4-4' data-bs-toggle='tab') Tab 4
+
+						//- Tab panes
+						.tab-content.text-primary
+							div#tabs-4-1.tab-pane.fade.show.active: p Consequatur in ipsa natus necessitatibus non odit perferendis recusandae repellendus sed, veniam veritatis voluptate voluptatem? Beatae blanditiis corporis debitis deserunt illum nemo, sit. Consequatur id illo iste nemo, officia quidem quis rerum unde vero. Consectetur error, rerum!
+							div#tabs-4-2.tab-pane.fade: p At perspiciatis sint veritatis? Debitis distinctio eius, iusto nihil nulla perferendis praesentium reprehenderit veritatis? Aperiam aspernatur cupiditate, distinctio eius eligendi et eveniet, expedita facilis iure laudantium libero modi nam nihil nisi obcaecati, odit reprehenderit tenetur vel veniam voluptates!
+							div#tabs-4-3.tab-pane.fade: p Adipisci amet at atque autem consequatur cum delectus deleniti distinctio dolore dolorum ducimus, ea eaque eos esse et eum eveniet exercitationem explicabo impedit ipsum iusto laboriosam, magnam nihil non omnis perferendis placeat porro quam reiciendis soluta temporibus ut vero voluptatum.
+							div#tabs-4-4.tab-pane.fade: p Consectetur culpa cum cumque delectus ducimus earum est eveniet ex fugiat harum impedit in iste iure laudantium maxime modi non odit officiis omnis possimus quaerat recusandae, repellat similique unde ut vel veniam voluptates? At ex illo illum minus molestiae recusandae!
+
+	+map.section-sm
+	//- Page Footer
+	include ../sections/_section-footer-default

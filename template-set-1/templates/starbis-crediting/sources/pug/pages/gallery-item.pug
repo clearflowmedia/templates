@@ -1,0 +1,94 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-post-minimal
+
+block variables
+  - var activeIndex = 2
+  - var pageName = 'Gallery item'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title(pageName, 'bg-image-1', {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Products",
+      "href": "#"
+    },
+    2: {
+      "title": pageName
+    }
+  })
+
+  //- Starting a Web Design Project
+  section.section-60.section-md-75.section-xl-90.text-md-start.bg-default
+    .container
+      h3 Paying Back a Mortgage
+      article.post-info
+        .post-image
+          +jpg('gallery-item-1-1171x884')
+        .post-main
+          .post-left
+            ul.post-meta
+              li: time(datetime='2021-05-01') May 15, 2021
+              li by Jack Wright
+              li
+                ul.list-hashtags
+                  li: a(href='#') paying
+                  li: a(href='#') mortgage
+                  li: a(href='#') basics
+
+          .post-body.text-spacing-50
+            p.text-gray You pay back your loan by making a payment every month.  At closing you'll usually have the opportunity to sign a form which lets the bank draft the payment automatically from your bank account each month, which is very convenient.  If you decline to do the auto-draft, then it's your responsibility to make your payment each month on your own initiative.  The bank won't send you a monthly bill.
+  ='\n'
+
+  //- Related posts
+  section.section-35.section-md-75.section-xl-90.bg-wasip
+    .container.text-center.text-sm-start
+      h4.fw-normal Related posts
+
+      .row.row-30
+        .col-md-10.col-lg-6
+          +post-minimal({
+            img: 'gallery-item-2-220x224',
+            header: 'Buying and Selling a Home',
+            time: ['2021-03-14', 'March 14'],
+            text: 'Buying and selling a home at the same time can be more complex and challenging than doing just one...'
+          })
+
+        .col-md-10.col-lg-6
+          +post-minimal({
+            img: 'gallery-item-3-220x224',
+            header: 'Basic Saving Rules',
+            time: ['2021-03-13', 'March 13'],
+            text: 'Establishing a regular savings routine can be a challenge for many people. To save for a large purchase, like the...'
+          })
+
+        .col-md-10.col-lg-6
+          +post-minimal({
+            img: 'gallery-item-4-220x224',
+            header: 'Finding a Mortgage Lender',
+            time: ['2021-03-12', 'March 12'],
+            text: 'When you buy a home, you’re in it for the long haul. You’ll have a mortgage payment for 15, 20 or 30 years, after...'
+          })
+
+        .col-md-10.col-lg-6
+          +post-minimal({
+            img: 'gallery-item-5-220x224',
+            header: 'Being a Landlord',
+            time: ['2021-03-11', 'March 11'],
+            text: 'Being a landlord may seem like a great way to pay the mortgage, especially if the rental unit is in a different section...'
+          })
+  ='\n'
+
+  //- Page Footer
+  include ../sections/_section-footer-default

@@ -1,0 +1,11 @@
+/*
+ * Modal
+*/
+
+.modal-header .btn-close {
+	align-self: flex-start;
+	background-size: .7em;
+	&:active,&.active {
+		box-shadow: none;
+	}
+}

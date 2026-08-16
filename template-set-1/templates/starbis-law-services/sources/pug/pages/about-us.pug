@@ -1,0 +1,103 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-thumbnail-2
+include ../elements/_ui-quote-vertical
+include ../elements/_ui-icon-box-horizontal
+include ../elements/_section-counters-default
+include ../_includes/_progress-list
+
+block variables
+	- var activeIndex = 1
+	- var pageName = 'About Us'
+
+block title
+	title=pageName
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title(pageName, 'bg-image-1')
+
+	//- Who we are?
+	section.section-66.section-md-90.section-xl-bottom-120
+		.container
+			h3 Who We Are?
+			.row.row-40.justify-content-xl-between.align-items-lg-center
+				.col-md-6.col-xl-5.text-secondary
+					.inset-md-right-15.inset-xl-right-0
+						p.
+							We do not see ourselves simply as 'lawyers' but will always strive to be our clients' trusted adviser whether that be in a commercial or personal context. We provide additional services well beyond those that might be expected of a law firm.
+						p.
+							Our core values are integrity and trust, the encouragement of innovation, teamwork and the continuing personal development of everyone at the firm.
+
+				.col-md-6
+					.progress-linear-group
+						+progress-linear({
+							title: 'Adoption Law',
+							value: '70'
+						})
+
+						+progress-linear({
+							title: 'Family Law',
+							value: '54'
+						})
+
+						+progress-linear({
+							title: 'Real Estate Law',
+							value: '87'
+						})
+
+						+progress-linear({
+							title: 'Personal Injury Law',
+							value: '90'
+						})
+
+	='\n'
+
+	section.section-60.section-lg-90.bg-whisper
+		include ../sections/_section-experts
+	='\n'
+	include ../sections/_section-testimonials-parallax
+
+	//- Why Choose Us
+	section.bg-whisper
+		.container
+			.row.align-items-lg-end
+				.offset-md-1.offset-lg-0.col-md-8.col-lg-6.col-xl-5
+					.section-60.section-md-90
+						.inset-md-left-100
+							h3 Why Choose Us
+						.inset-md-left-30.inset-md-right-30
+							ul.list-xl
+								li
+									+icon-box-left({
+										icon: ['icon-lg', 'mercury-icon-users'],
+										header: 'Our Beliefs',
+										text: 'Our firm is like family. We truly believe that each case is someone’s life and we need to treat it as such.'
+									})
+								li
+									+icon-box-left({
+										icon: ['icon-lg', 'mercury-icon-lib'],
+										header: 'Rich Experience',
+										text: 'Experience gets the job done. LawExpert’s attorneys have more than 150 years of combined legal practice.'
+									})
+
+								li
+									+icon-box-left({
+										icon: ['icon-lg', 'mercury-icon-briefcase'],
+										header: 'Great Results',
+										text: 'Results are only successful when we  make a difference in your life. We’ll help you get the money and benefits.'
+									})
+
+				.col-md-9.col-lg-6.col-xl-7.offset-top-30.offset-md-top-0.d-none.d-lg-block
+					.image-wrap-1
+						+png('about-1-670x578')
+	='\n'
+
+	+counter-default({})
+
+	//- Page Footer
+	include ../sections/_section-footer-default

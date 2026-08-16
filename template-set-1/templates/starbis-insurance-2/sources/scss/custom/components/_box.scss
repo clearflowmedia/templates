@@ -1,0 +1,478 @@
+//
+// Box custom
+// --------------------------------------------------
+.page {
+  .box-text {
+    > * {
+      display: inline;
+      margin: 0 .25em 0 0;
+    }
+  }
+}
+
+// Icon box horizontal
+// ------------------
+.icon-box-horizontal {
+  .unit-left {
+    min-width: 48px;
+  }
+
+  [class*='icon-md'] {
+    margin-top: -2px;
+  }
+
+  [class*='icon-lg'] {
+    margin-top: -5px;
+  }
+
+  * + p {
+    margin-top: 9px;
+  }
+}
+
+// Icon box vertical
+// ------------------
+.icon-box-vertical {
+  * + p {
+    margin-top: 9px;
+  }
+}
+
+// Mods
+.icon-box-vertical-sm {
+  max-width: 330px;
+
+  @include media-breakpoint-down(sm){
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// Icon box
+// ------------------
+.icon-box {
+  position: relative;
+  @include display-flex;
+  @include flex-direction(column);
+  @include flex-wrap(nowrap);
+  @include align-items(center);
+  @include justify-content(center);
+  max-width: 400px;
+  padding: 35px 30px;
+  text-align: center;
+  cursor: default;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    width: calc(100% - 35px);
+    height: calc(100% - 35px);
+    border: 1px solid $porcelain;
+    pointer-events: none;
+    transition: .33s all ease;
+  }
+
+  &:before {
+    top: 0;
+    left: 0;
+    border-width: 1px 0 0 1px;
+  }
+
+  &:after {
+    bottom: 0;
+    right: 0;
+    border-width: 0 1px 1px 0;
+  }
+
+  // Elements
+  .divider {
+    max-width: 100%;
+    margin: 13px auto;
+    transition: .33s all ease;
+  }
+
+  .box-top,
+  .box-body {
+    position: relative;
+    will-change: transform;
+    transition: .33s all ease;
+    -webkit-filter: blur(0);
+  }
+
+  .box-top {
+    top: 0;
+  }
+
+  .box-body {
+    max-width: 100%;
+  }
+
+  .box-header {
+    bottom: 0;
+  }
+
+  .box-icon {
+    min-height: 46px;
+    @include display-inline-flex;
+    @include flex-direction(row);
+    @include flex-wrap(nowrap);
+    @include align-items(center);
+    @include justify-content(center);
+  }
+
+  // Offsets
+  * + .box-header {
+    margin-top: 5px;
+  }
+
+  // States
+  &.hover,
+  &:hover {
+    &:before,
+    &:after {
+      width: 100%;
+      height: 100%;
+      border-color: $primary;
+    }
+
+    .box-top {
+      @include transform(translateY(-9px))
+    }
+
+    .box-body {
+      @include transform(translateY(9px))
+    }
+
+    .divider {
+      width: 168px;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .icon-box {
+    max-width: 308px;
+    padding: 67px 40px 61px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// Block image plate
+// ------------------
+.list-blocks {
+  counter-reset: li;
+
+  > li {
+    display: block;
+  }
+
+  .block-list-counter {
+    &:before {
+      position: relative;
+      content: counter(li, decimal-leading-zero);
+      counter-increment: li;
+      font: 400 30px $font-family-base;
+      line-height: 1;
+      letter-spacing: -.025em;
+      color: $primary;
+    }
+  }
+
+  // Offsets
+  > li + li {
+    margin-top: 50px;
+  }
+
+  // Resize
+  @include media-breakpoint-up(md) {
+    .block-list-counter {
+      &:before {
+        top: -2px;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .block-list-counter {
+      &:before {
+        top: -4px;
+        font-size: 30px;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    .block-list-counter {
+      &:before {
+        top: -5px;
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+.block-image-plate {
+  display: block;
+  width: 100%;
+
+  .block-header {
+    max-width: 400px;
+  }
+
+  .block-inner {
+    position: relative;
+    padding: 45px 30px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 0;
+      background: rgba($black, .8);
+    }
+
+    > * {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  // Offsets
+  * + .block-text {
+    margin-top: 18px;
+  }
+
+  * + .block-body {
+    margin-top: 12px;
+  }
+
+  // Resize
+  @include media-breakpoint-down(md){
+    margin-left: -16px;
+    margin-right: -15px;
+    width: calc(100% + 32px);
+  }
+
+  @include media-breakpoint-up(md) {
+    .block-header {
+      max-width: 340px;
+    }
+
+    .block-inner {
+      padding: 60px (100% * 1.5 / 12) 60px (100% * 1 / 12);
+    }
+
+    .block-body {
+      @include display-flex;
+      @include flex-direction(row);
+      @include flex-wrap(nowrap);
+      @include align-items(flex-start);
+      @include justify-content(center);
+    }
+
+    .block-left {
+      @include flex-shrink(0);
+      @include flex-basis(1 / 9 * 100%);
+      max-width: 100px;
+    }
+
+    .block-body {
+      @include flex-grow(1);
+    }
+
+    // Offsets
+    * + .block-text {
+      margin-top: 0;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .block-header {
+      max-width: 400px;
+    }
+
+    .block-inner {
+      padding-right: (100% * 2 / 12);
+      padding-top: 90px;
+      padding-bottom: 95px;
+    }
+  }
+}
+
+// Block vacation
+// ------------------
+.block-vacation {
+  position: relative;
+  width: 100%;
+  padding: 39px 9% 45px;
+  border-radius: 4px;
+  background: $white;
+  box-shadow: $shadow-area-sm;
+
+  &,
+  &:active,
+  &:focus,
+  &:hover {
+    color: $body-color;
+  }
+
+  &:hover {
+    box-shadow: $shadow-area-md;
+  }
+
+  * + .block-meta {
+    margin-top: 14px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    * + .block-meta {
+      margin-top: 5px;
+    }
+  }
+}
+
+// Block shadow
+// ------------------
+.block-shadow {
+  position: relative;
+  width: 100%;
+  padding-top: 30px;
+  overflow: hidden;
+  background: $white;
+  box-shadow: 0px 1px 10px 0px rgba($tundora, 0.12);
+  text-align: center;
+
+  .block-inner {
+    //padding: 35px 40px;
+    padding: 0 40px;
+  }
+
+  // Offsets
+  * + .block-footer {
+    margin-top: 32px;
+  }
+
+  * + .icon-block {
+    margin-top: 40px;
+  }
+}
+
+.block-shadow + * {
+  margin-top: 15px;
+}
+
+@include media-breakpoint-up(md) {
+  .block-shadow {
+    padding-top: 38px;
+    .block-inner {
+      //padding: 38px 70px;
+      padding: 0 70px;
+    }
+    * + .icon-block {
+      margin-top: 60px;
+    }
+    
+  }
+}
+
+// Box counter
+// ------------------
+.box-counter {
+  text-align: center;
+
+  .box-header {
+    font-weight: 400;
+  }
+
+  // Offsets
+  * + .box-header {
+    margin-top: 10px;
+  }
+  
+  figure {
+    display: flex;
+    min-height: 60px;
+    justify-content: center;
+    align-items: center;
+    > img {
+      width: inherit;
+    }
+  }
+  
+  * + .counter {
+    margin-top: 15px;
+  }
+}
+
+@include media-breakpoint-between(md, lg) {
+  .box-counter {
+    .box-header {
+      font-size: 15px;
+    }
+  }
+}
+
+.box-counter-inverse {
+  .box-header {
+    color: rgba($white, .2);
+  }
+
+  .counter {
+    color: $gray-300;
+  }
+}
+
+.box-counter-inverse-lighter {
+  .box-header {
+    color: rgba($white, .35);
+  }
+
+  .counter {
+    color: $gray-300;
+  }
+}
+
+.box-counter-white {
+  .box-header,
+  .counter {
+   color: $white;
+  }
+}
+
+// Box container small
+// ------------------
+.box-container-small {
+  display: inline-block;
+  width: 100%;
+  max-width: 280px;
+}
+
+.block-info {
+  * + .block-info-subtitle {
+    margin-top: 0;
+  }
+
+  * + .block-info-quote {
+    margin-top: 15px;
+  }
+  .block-info-quote + * {
+    margin-top: 15px;
+  }
+  * + .block-info-progress {
+    margin-top: 30px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  * + .block-info-quote {
+    margin-top: 0;
+  }
+  .block-info-quote + * {
+    margin-top: 0;
+  }
+}

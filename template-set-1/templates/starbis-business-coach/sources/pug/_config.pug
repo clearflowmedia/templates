@@ -1,0 +1,74 @@
+-
+	var
+		htmlClass = "wide wow-animation",
+		fonts = "//fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,500&display=swap",
+		logo = {
+			default: 'logo-default-187x60.svg',
+			inverse: 'logo-inverse-187x60.svg',
+			name: 'Lead Planner'
+		},
+		links = {
+			getTemplate: 'https://www.templatemonster.com/website-templates/starbis.html',
+			address: '9784 Bear Hill Drive Brooklyn, NY 11228',
+			soundcloud: '<iframe height="166" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/149065581&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>',
+			video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/VrLSBsOkP6k" allowfullscreen></iframe>'
+		},
+		colors = {
+			primary: '#e5e6e1'
+		},
+		menu = [
+			{ title: 'About me' },
+			{ title: 'Coaching' },
+			{ title: 'Client stories' },
+			{
+				title: 'Prices',
+				link:  'pricing.html'
+			},
+			{
+				title: 'Blog',
+				dropdown: [
+					{
+						title: 'Blog post'
+					}
+				]},
+			{
+				title: 'Pages',
+				link: '#',
+				megamenu: [
+					{
+						title: 'Components',
+						link: null,
+						list: [
+							{title: 'Accordion'},
+							{title: 'Buttons'},
+							{title: 'Grid'},
+							{title: 'Forms'},
+							{title: 'Icons'},
+							{title: 'Icon lists'},
+							{title: 'Progress bars'},
+							{title: 'Tabs'},
+							{title: 'Typography'}
+						]
+					},
+					{
+						title: 'Pages',
+						link: null,
+						list: [
+							{title: 'Contact me'},
+							{title: '404 Page'},
+							{title: '503 Page'},
+							{title: 'Maintenance'},
+							{title: 'Coming soon'},
+							{title: 'Login'},
+							{title: 'Registration'},
+							{title: 'Search results'},
+							{title: 'Privacy policy'}
+						]
+					},
+				]
+			}
+		],
+
+		// Predefined variables
+		breadcrumbs = [],
+		pageName = 'Home'

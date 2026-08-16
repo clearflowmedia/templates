@@ -1,0 +1,75 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-post-block
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Blog Grid'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title('Blog', 'bg-image-3')
+
+  //- Blog masonry
+  section.section-50.section-md-75.section-xl-100
+    .container
+      .row.justify-content-md-center.justify-content-lg-start.row-30
+        .col-md-9.col-lg-6.height-fill
+          +post-block({
+            img: 'blog-grid-1-570x253',
+            header: 'The Importance of Paperwork',
+            user: 'Joan Williams',
+            time: ['2021-01-01', '5 days ago'],
+            tags: ['Planning', 'Support']
+          })
+
+        .col-md-9.col-lg-6.height-fill
+          +post-block({
+            img: 'blog-grid-2-570x253',
+            header: 'Tax Investigations by HMRC',
+            user: 'Tom Park',
+            time: ['2021-01-01', '5 days ago'],
+            tags: ['Tax', 'Investigations']
+          })
+
+        .col-md-9.col-lg-6.height-fill
+          +post-block({
+            img: 'blog-grid-3-570x253',
+            header: 'Reforms to the taxation of non-doms',
+            user: 'John Miller',
+            time: ['2021-01-01', '5 days ago'],
+            tags: ['Reforms', 'Taxation']
+          })
+
+        .col-md-9.col-lg-6.height-fill
+          +post-block({
+            img: 'blog-grid-4-570x253',
+            header: 'HMRC – The Standard for Agents',
+            user: 'Julien Miro',
+            time: ['2021-01-01', '5 days ago'],
+            tags: ['Agents', 'Advisors']
+          })
+
+        .col-md-9.col-lg-6.height-fill
+          +post-block({
+            img: 'blog-grid-5-570x253',
+            header: 'New HMRC Offshore Disclosure Facility',
+            user: 'Amelia Anderson',
+            time: ['2021-01-01', '5 days ago'],
+            tags: ['Facility', 'Opportunity']
+          })
+
+      .row.text-center.offset-top-40.offset-sm-top-60.offset-lg-top-100
+        .col-sm-12
+          +pagination
+  ='\n'
+
+  //- Page Footer
+  include ../sections/_section-footer-default

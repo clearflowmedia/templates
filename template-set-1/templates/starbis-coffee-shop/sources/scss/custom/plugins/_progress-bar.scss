@@ -1,0 +1,68 @@
+/*
+* @subsection   Progress Bar
+*/
+
+// Linear Progress Bars
+.progress-linear-group {
+	* + & { margin-top: 30px; }
+}
+.progress-linear {
+	font-family: $font-family-sec;
+	position: relative;
+	text-align: left;
+	color: $primary;
+}
+
+.progress-linear-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	@include spacing(10px);
+}
+
+.progress-linear-body {
+	height: 4px;
+	border-radius: 3px;
+	background: $gray-100;
+}
+
+.progress-linear-bar {
+	width: 0;
+	height: inherit;
+	background: $primary;
+	transition: 1s all ease-in-out;
+	border-radius: 3px 0  0 3px;
+}
+
+.progress-linear-red .progress-linear-bar {
+	background: $red-orange-1;
+}
+.progress-linear-blue .progress-linear-bar {
+	background: $dodger-blue;
+}
+.progress-linear-yellow .progress-linear-bar {
+	background: $gorse;
+}
+.progress-linear-green .progress-linear-bar {
+	background: $primary;
+}
+
+.progress-linear-counter {
+	&::after {
+		content: "%";
+	}
+}
+
+* + .progress-linear-body {
+	margin-top: 3px;
+}
+
+.progress-linear + .progress-linear {
+	margin-top: 15px;
+}
+
+@include media-breakpoint-up(lg) {
+	.progress-linear + .progress-linear {
+		margin-top: 23px;
+	}
+}

@@ -1,0 +1,88 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_post-classic
+
+block variables
+	- pageName = 'Classic blog'
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title('Blog', 'bg-blog')
+
+	//- Classic blog
+	section.section.section-md.bg-default
+		.container
+			.row.justify-content-md-center
+				.col-xl-10
+					+post-classic({
+						img: 'blog-classic-2-113x113.png',
+						header: 'Controlling the Final Cost of Your Renovation',
+						text: [
+							'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti fugit omnis recusandae? Amet at, exercitationem inventore ipsa quos saepe velit? Aperiam at consequatur dolores dolorum iste obcaecati quo recusandae, suscipit.',
+							'Accusantium adipisci, asperiores delectus facere fugiat modi, molestiae mollitia natus quia quisquam similique soluta? Ab accusantium cumque eos esse, fugit ipsa minima molestias nostrum odit officia placeat quis ratione sint, temporibus tenetur.'
+						],
+						tags: ["News"],
+						user: 'Joan Williams',
+						time: ['2021-06-17', '05/14/2021'],
+						media: {
+							type: "image",
+							data: 'blog-classic-1-971x649'
+						}
+					})
+
+					+post-classic({
+						img: 'blog-classic-3-113x113.png',
+						header: 'Electrical Safety Tips For Home Renovation',
+						text: ['At blanditiis dicta eos numquam quia voluptates? A alias asperiores aut deleniti deserunt dolor doloribus ducimus earum est facere id ipsam itaque maxime molestiae, natus nihil obcaecati pariatur perspiciatis praesentium provident quibusdam quo quos, reprehenderit, saepe tempora tempore totam ullam. A accusamus dicta ex minus praesentium? Eveniet explicabo mollitia necessitatibus nisi temporibus?'],
+						tags: ['News'],
+						user: 'Tom Park',
+						time: ['2021-05-23', '05/17/2021']
+					})
+
+					+post-classic({
+						img: 'blog-classic-4-113x113.png',
+						header: 'How to Create Perfect Color Combinations',
+						text: [
+							"Alias consequuntur delectus dicta dolor ea eaque earum error et eveniet exercitationem fuga illum ipsa iste iure magni minus obcaecati pariatur praesentium quam quidem, quo similique veritatis vitae voluptatibus voluptatum. Architecto laudantium.",
+							"Accusantium aut blanditiis deleniti dolores, est facere illum, itaque iusto magni maiores modi molestiae qui quia ratione reprehenderit, rerum soluta veritatis voluptas!"
+						],
+						tags: ['News'],
+						user: 'John Miller',
+						time: ['2021-04-14', '04/10/2021'],
+						media: {
+							type: "video",
+							data: links.video
+						}
+					})
+
+					+post-classic({
+						img: 'blog-classic-8-113x113.png',
+						header: 'Standard Dimensions for Interior Design',
+						text: [
+							"Consequuntur distinctio dolores, eius eligendi explicabo minus mollitia officiis repellat sunt tempore. Ad aliquam dolore dolorem eligendi esse facilis ipsa labore, molestias, porro quos saepe tempore veritatis.",
+							"Asperiores deleniti eligendi harum id, omnis perferendis provident quisquam. Architecto consequuntur, dicta error ipsa minima numquam tenetur? Aliquam aspernatur dolore error exercitationem fugiat magni natus pariatur perspiciatis possimus quod recusandae, sed voluptate.",
+							"A aliquam asperiores atque consectetur corporis cum deserunt dicta ducimus eius eligendi error est excepturi exercitationem expedita, facere fugiat in iste libero minima, molestias neque perferendis praesentium quaerat quasi recusandae, sint."
+						],
+						tags: ["News"],
+						user: 'Julien Miro',
+						time: ['2021-03-02', '04/3/2021'],
+						media: {
+							type: "gallery",
+							data: [
+								"blog-classic-5-970x546",
+								"blog-classic-6-970x546",
+								"blog-classic-7-970x546"
+							]
+						}
+					})
+
+					.pagination-custom-wrap.text-center
+						+pagination
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

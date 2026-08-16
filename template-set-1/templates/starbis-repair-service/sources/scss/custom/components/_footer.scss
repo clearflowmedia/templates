@@ -1,0 +1,73 @@
+.footer  {
+	* + .rd-mailform { margin-top: 20px; }
+	a { @include link($white, darken($silver,10%)); }
+	.form-input {
+		border-radius:  $form-input-border-radius 0  0 $form-input-border-radius ;
+	}
+	.form-input-lg {
+		padding-right: 10px;}
+}
+
+.footer-list {
+	margin-top: 30px;
+}
+
+.footer-suptitle {
+	font-size: 14px;
+	line-height: 1.1;
+	& + * {
+		margin-top: 15px;
+	}
+
+	margin-top: 20px;
+}
+
+.footer-mail-link {
+	margin-top: 20px;
+	&:after {
+		display: block;
+		content: '';
+		height: 2px;
+		background-color: $sky-blue;
+		opacity: .2;
+		transition: $transition-base;
+	}
+	&:hover {
+		@include link($white,$white);
+		&:after { opacity: 1; }
+	}
+}
+
+.footer-button {
+	//position: absolute;
+	//right: 0;
+	//top: 0;
+	//bottom: 0;
+	min-width: 110px;
+	//margin-top: 0;
+	//padding: 15px;
+	//border: none;
+	border-radius: 0 $form-input-border-radius $form-input-border-radius 0;
+	font-weight: 700;
+	font-size: 16px;
+	transition: $transition-base;
+	@include button-variant-custom($primary, $sky-blue, transparent, $primary, darken($sky-blue, 10%), transparent);
+}
+
+@include media-breakpoint-up(md) {
+	.footer-list {
+		margin-top: 60px;
+	}
+	.footer-suptitle {
+		margin-top: 50px;
+	}
+}
+@include media-breakpoint-up(xl) {
+	.footer-button {
+		min-width: 180px;
+	}
+	.footer {
+
+		* + .rd-mailform { margin-top: 40px; }
+	}
+}

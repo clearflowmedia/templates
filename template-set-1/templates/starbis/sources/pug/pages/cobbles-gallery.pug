@@ -1,0 +1,63 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_thumbnail-3
+
+block variables
+	- pageName = 'Cobbles gallery'
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title('Gallery', 'bg-gallery')
+
+	//- Cobbles gallery
+	section.section.section-50.section-md-90.section-lg-bottom-120.section-xl-bottom-165
+		.container.isotope-wrap
+			.row.row-40
+				.col-sm-12.text-center
+					//- Isotope Filters
+					ul.isotope-filters-responsive
+						li: p Choose your category:
+						li.block-top-level
+							//- Isotope Filters
+							button.isotope-filters-toggle.btn.btn-sm.btn-default(data-custom-toggle='#isotope-1', data-custom-toggle-hide-on-blur='true', data-custom-toggle-disable-on-blur='true')
+								| Filter
+								span.caret
+
+							#isotope-1.isotope-filters.isotope-filters-minimal.isotope-filters-horizontal
+								ul.list-inline
+									li: a.active(data-isotope-filter='*', href='#') All
+									li: a(data-isotope-filter='Category 1', href='#') Webdesign
+									li: a(data-isotope-filter='Category 2', href='#') UI/UX
+									li: a(data-isotope-filter='Category 3', href='#') Branding
+
+				//- Isotope Content
+				.col-sm-12
+					.isotope.isotope-condensed(data-lightgallery='group', data-lg-thumbnail='false', data-column-width='.42')
+						.isotope-item.isotope-item-width-33p(data-filter='Category 1')
+							+thumbnail-3({img: 'gallery-cobbles-1-390x601', original: 'gallery-2-1200x978_original'})
+
+						.isotope-item.isotope-item-width-33p(data-filter='Category 2')
+							+thumbnail-3({img: 'gallery-cobbles-2-390x301', original: 'gallery-6-1200x900_original'})
+
+						.isotope-item.isotope-item-width-33p(data-filter='Category 1')
+							+thumbnail-3({img: 'gallery-cobbles-3-390x301', original: 'gallery-4-1200x713_original'})
+
+						.isotope-item.isotope-item-width-66p(data-filter='Category 2')
+							+thumbnail-3({img: 'gallery-cobbles-4-780x300', original: 'gallery-8-1200x714_original'})
+
+						.isotope-item.isotope-item-width-66p(data-filter='Category 3')
+							+thumbnail-3({img: 'gallery-cobbles-5-780x600', original: 'gallery-1-1200x900_original'})
+
+						.isotope-item.isotope-item-width-33p(data-filter='Category 3')
+							+thumbnail-3({img: 'gallery-cobbles-6-390x300', original: 'gallery-7-1200x722_original'})
+
+						.isotope-item.isotope-item-width-33p(data-filter='Category 3')
+							+thumbnail-3({img: 'gallery-cobbles-7-390x300', original: 'gallery-10-800x600_original'})
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

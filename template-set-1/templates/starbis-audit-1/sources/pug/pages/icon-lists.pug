@@ -1,0 +1,157 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-icon-box
+include ../elements/_ui-icon-box-vertical
+include ../elements/_ui-icon-box-horizontal
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Icon lists'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title(pageName, 'bg-image-1')
+
+  //- Lists
+  section.section-40.section-md-top-75.section-md-bottom-50.section-xl-top-90
+    .container
+      .row
+        .col-sm-12
+          h3 Lists
+      .row.row-40
+        .col-sm-6.col-md-4.col-xl-3
+          h5 Unordered List
+          ul.list-marked
+            li Responsive & Retina
+            li Extensive docs
+            li Powerful Navigation
+            li Video Backgrounds
+            li Social Plugins
+
+        .col-sm-6.col-md-4.col-xl-3
+          h5 Ordered List
+          ul.list-ordered
+            li Responsive & Retina
+            li Extensive docs
+            li Powerful Navigation
+            li Video Backgrounds
+            li Social Plugins
+
+
+  //- Icon Left List
+  section.section-40
+    .container
+      .row
+        .col-sm-12
+          h3 Icon Left List
+      .row
+        .col-lg-9.col-xl-12
+          .row.row-40
+            .col-md-6.col-xl-3
+              +icon-box-left({
+                icon: ['icon-lg-bigger', 'thin-icon-desktop'],
+                header: 'Edge Technologies',
+                text: 'Our team of professional analysts is constantly roaming the web in search of promising techniques.'
+              })
+
+            .col-md-6.col-xl-3
+              +icon-box-left({
+                icon: ['icon-lg-bigger', 'thin-icon-clock'],
+                header: 'We Value Your Time',
+                text: 'We know how important it is for you to maintain your schedule, that’s why we are trying to fit it. '
+              })
+
+            .col-md-6.col-xl-3
+              +icon-box-left({
+                icon: ['icon-lg-bigger', 'thin-icon-support'],
+                header: 'Qualified Support',
+                text: 'Our support team is online 24/7, and is ready to help you with any design-related issue.'
+              })
+
+            .col-md-6.col-xl-3
+              +icon-box-left({
+                icon: ['icon-lg-bigger', 'thin-icon-timer'],
+                header: 'Made for Speed',
+                text: 'We know how embarassing and time-consuming can be content loading.'
+              })
+
+
+  //- Icon Top List
+  section.section-60
+    .container
+      .row
+        .col-sm-12
+          h3 Icon Top List
+      .row
+        .col-lg-9.col-xl-12
+          .row.row-50
+            .col-sm-6.col-xl-3
+              +icon-box-vertical({
+                icon: ['icon-lg-bigger', 'thin-icon-mobile'],
+                header: 'Responsive & Retina',
+                text: 'Easy Audit looks simply great on any screen resolution and type. All images are responsive and ultra sharp. '
+              })
+
+            .col-sm-6.col-xl-3
+              +icon-box-vertical({
+                icon: ['icon-lg-bigger', 'thin-icon-briefcase-2'],
+                header: 'Extensive Docs',
+                text: 'Easy Audit has online and easily accesible documentation. Our documentation contains detailed instructions for further template customization.'
+              })
+
+            .col-sm-6.col-xl-3
+              +icon-box-vertical({
+                icon: ['icon-lg-bigger', 'thin-icon-camera'],
+                header: 'Video Backgrounds',
+                text: 'Our website is enabled with captivating video background, an option which can transform any website into esthetically appealing one. '
+              })
+
+            .col-sm-6.col-xl-3
+              +icon-box-vertical({
+                icon: ['icon-lg-bigger', 'thin-icon-map-marker'],
+                header: 'Powerful Navigation',
+                text: 'Powerful and really flexible RD Navbar plugin is included too. Create any type of navigation with our ready-to-go examples and adapt to your needs.'
+              })
+
+
+  //- Icon Box
+  section.section-60
+    .container
+      h3.text-center.text-md-start Icon Box
+
+    .row.range-condensed.g-0.justify-content-sm-center.justify-content-md-start.row-40.offset-top-50
+      .col-sm-10.col-md-4.height-fill
+        +icon-box({
+          icon: ['icon-lg', 'icon-1'],
+          header: 'Internal Audit',
+          mod: 'icon-box-top-line',
+          text: 'Audit services are designed to help your business mitigate risk, create new efficiencies and better support strategic objectives.'
+        })
+
+      .col-sm-10.col-md-4.height-fill
+        +icon-box({
+          icon: ['icon-lg', 'icon-2'],
+          header: 'Accounting',
+          mod: 'icon-box-top-line',
+          text: 'A range of services designed to provide timely preparation of company accounts, whether it be at the financial year end or on a monthly basis.'
+        })
+
+      .col-sm-10.col-md-4.height-fill
+        +icon-box({
+          icon: ['icon-lg', 'icon-3'],
+          header: 'Audit',
+          mod: 'icon-box-top-line',
+          text: 'Audits are verified by sight, confirmation, discussion with management, assessment of internal controls and analytical procedures.'
+        })
+
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

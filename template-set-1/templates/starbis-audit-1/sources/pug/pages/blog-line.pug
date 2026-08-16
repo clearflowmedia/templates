@@ -1,0 +1,100 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-post-classic-minimal
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Blog Line'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title('Blog', 'bg-image-1')
+
+  //- Blog line
+  section.section-50.section-md-75.section-xl-100
+    .container
+      .row.justify-content-md-center.row-40.row-md-60.row-xl-90
+        .col-xl-10
+          dl.blog-timeline
+            dt 2021
+            dd
+              +post-classic-minimal({
+                header: 'Choosing the Strategy',
+                text: [
+                  'Perhaps you are a new entrepreneur about to launch a business or innovation you have been dreaming about for years. Or maybe you have an established business and things are going well, or maybe even too well. In both instances you are going to need capital – the “oxygen” that every business needs to grow and prosper. So now you are writing your first business plan or touching up the old one in anticipation of raising capital. Capital can only come into a business in one of two ways...'
+                ],
+                tags: ["Strategy", "Capital"],
+                user: 'Joan Williams',
+                time: ['2021-06-17', 'Jun 17'],
+                media : {
+                  type: "image",
+                  data: 'blog-line-1-771x515'
+                }
+              })
+
+              +post-classic-minimal({
+                offset: "offset-top-5",
+                header: '8 Tips for Building a Bankable Business',
+                text: ["When it comes to the question of applying for a bank loan to fund your startup, most experts say, don’t bother. Banks are rarely interested in funding early stage companies these days, especially since the 2008 financial crash. However, it is not impossible to secure bank funding for your startup. Give yourself better odds with thoughtful planning, diligent preparation, and the eight tips..."],
+                tags: ["Business", "Plan"],
+                user: 'Tom Park',
+                time: ['2021-05-23', 'May 23']
+              })
+
+              +post-classic-minimal({
+                header: 'Your Business Model is the Foundation of Your Business Plan',
+                text: [
+                  "The report of the death of the business plan has been an exaggeration, to paraphrase Mark Twain. Yet, we often read opinions in popular business press that the business plan is no longer relevant. All you need is a business model, we are told by business gurus. While there is no consensus on the definition of a business model, most people use it as shorthand for the revenue model of a business; i.e. how does it make money. A business plan..."
+                ],
+                tags: ["Business", "Plan"],
+                user: 'John Miller',
+                time: ['2021-04-14', 'Apr 14'],
+                media: {
+                  type: "image",
+                  data: 'blog-line-5-772x435'
+                }
+              })
+
+              +post-classic-minimal({
+                header: 'Narrow Your Focus to Prevent Overanalysis',
+                text: [
+                  "Entrepreneurs come up with new business ideas all the time. Often, they just plunge ahead to develop the product or service without really taking the time to 1) determine if market conditions are favorable, and, if they are favorable, 2) assess the ability of the business concept to take advantage of the opportunity. We have found that by following a focused, two-step process, you can reduce risks..."
+                ],
+                tags: ["Idea", "Business"],
+                user: 'Julien Miro',
+                time: ['2021-03-02', 'Mar 2'],
+                media: {
+                  type: "gallery",
+                  data: [
+                    "blog-line-2-770x433",
+                    "blog-line-5-772x435",
+                    "blog-line-4-770x433"
+                  ]
+                }
+              })
+
+              +post-classic-minimal({
+                header: 'New HMRC Offshore Disclosure Facility',
+                text: ["After much speculation, ‘Son of LDF’ has now been launched by HMRC in order to give individuals and entities the opportunity to correct their UK tax position if they have previously made errors or omissions in declaring overseas income and gains. The new Worldwide Disclosure Facility (WDF), launched on 5 September 2021, replaces the Liechtenstein Disclosure Facility and 3 British Crown Dependencies Facility that came to an end on..."],
+                tags: ["Facility", "Opportunity"],
+                user: 'Amelia Anderson',
+                time: ['2021-02-16', 'Feb 16'],
+                media: {
+                  type: "audio",
+                  data: globals.soundcloud
+                }
+              })
+
+        .col-12.text-center
+          +pagination
+  ='\n'
+
+  //- Page Footer
+  include ../sections/_section-footer-default

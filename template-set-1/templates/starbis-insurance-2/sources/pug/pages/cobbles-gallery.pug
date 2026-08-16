@@ -1,0 +1,70 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-thumbnail-3
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Cobbles gallery'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  +page-title('Gallery', 'bg-image-1')
+
+  section.section-50.section-md-90.section-lg-bottom-120.section-xl-bottom-165
+    .container.isotope-wrap
+      .row.text-center.row-40
+        .col-sm-12
+          //- Isotope Filters
+          ul.isotope-filters-responsive
+            li: p Choose your category:
+            li.block-top-level
+              //- Isotope Filters
+              button.isotope-filters-toggle.btn.btn-sm.btn-default(data-custom-toggle='#isotope-1', data-custom-toggle-hide-on-blur='true')
+                | Filter
+                span.caret
+
+              #isotope-1.isotope-filters.isotope-filters-minimal.isotope-filters-horizontal
+                ul.list-inline.text-center
+                  li
+                    a.active(data-isotope-filter='*', data-isotope-group='gallery', href='#') All
+                  li
+                    a(data-isotope-filter='Category 1', data-isotope-group='gallery', href='#') Life Insurance
+                  li
+                    a(data-isotope-filter='Category 2', data-isotope-group='gallery', href='#') Business Insurance
+                  li
+                    a(data-isotope-filter='Category 3', data-isotope-group='gallery', href='#') House Insurance
+
+        //- Isotope Content
+        .col-sm-12
+          .isotope(data-isotope-layout='masonry', data-isotope-group='gallery', data-lightgallery='group')
+            .row.g-0
+              .col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 3')
+                +thumbnail-3({img: 'gallery-cobbles-1-390x601', original: 'gallery-1-803x1200_original'})
+  
+              .col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+                +thumbnail-3({img: 'gallery-cobbles-2-390x301', original: 'gallery-2-1200x800_original'})
+  
+              .col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+                +thumbnail-3({img: 'gallery-cobbles-3-390x301', original: 'gallery-3-1200x797_original'})
+  
+              .col-12.col-md-6.col-lg-8.isotope-item(data-filter='Category 2')
+                +thumbnail-3({img: 'gallery-cobbles-4-780x300', original: 'gallery-5-1200x800_original'})
+  
+              .col-12.col-md-6.col-lg-8.isotope-item(data-filter='Category 2')
+                +thumbnail-3({img: 'gallery-cobbles-5-780x600', original: 'gallery-4-1200x797_original'})
+  
+              .col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+                +thumbnail-3({img: 'gallery-cobbles-6-390x300', original: 'gallery-9-1200x800_original'})
+  
+              .col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+                +thumbnail-3({img: 'gallery-cobbles-7-390x300', original: 'gallery-8-1200x995_original'})
+    ='\n'
+
+  //- Page Footer
+  include ../sections/_section-footer-default

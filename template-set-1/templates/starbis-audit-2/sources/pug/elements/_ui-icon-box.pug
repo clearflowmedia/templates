@@ -1,0 +1,16 @@
+//- Icon box
+mixin icon-box(obj)
+  //- Icon box
+  article.icon-box(class=obj.mod)
+    
+    .box-top
+      .box-icon
+        span.icon(class=obj.icon)
+      .box-header
+        h5: a(href='#')=obj.header
+    //-.divider
+    .box-body
+      p.text-black=obj.text
+
+    a(href="#").btn.btn-icon-only.btn-icon-single.btn-icon-default
+      span.icon.icon-sm.material-icons-arrow_forward

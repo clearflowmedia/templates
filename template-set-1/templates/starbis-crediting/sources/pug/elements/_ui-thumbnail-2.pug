@@ -1,0 +1,21 @@
+//- Thumbnail variant 2
+mixin thumbnail-2(obj)
+  .thumbnail-variant-2-wrap
+    //- Thumbnail variant 2
+    .thumbnail.thumbnail-variant-2
+      figure.thumbnail-image
+        +jpg(obj.img)
+
+      .thumbnail-inner
+        .link-group
+          span.icon.icon-xxs.icon-primary.material-icons-local_phone
+          a.link-white(href='callto:#')=obj.phone
+
+        .link-group
+          span.icon.icon-xxs.icon-primary.fa-envelope-o
+          a.link-white(href='mailto:#')=obj.email
+
+      .thumbnail-caption
+        p.text-header: a(href='team-member-profile.html')=obj.header
+        .divider.divider-md
+        p.text-caption=obj.caption

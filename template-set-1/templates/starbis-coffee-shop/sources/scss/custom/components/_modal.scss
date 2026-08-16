@@ -1,0 +1,31 @@
+// Modal
+.modal {
+	z-index: $zindex-lg + 1;
+}
+
+.modal-backdrop {
+	z-index: $zindex-lg;
+}
+
+.modal-header {
+	border-radius: $modal-content-border-radius;
+}
+
+.btn-close:focus {
+	box-shadow: none;
+}
+
+.modal-content {
+	border: none;
+}
+
+.modal-header {
+	border-bottom: 0;
+	background-color: lighten($primary, 50%);
+}
+
+@include media-breakpoint-up(md) {
+	.modal-body, .modal-header {
+		padding: 30px;
+	}
+}

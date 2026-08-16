@@ -1,0 +1,46 @@
+#reservation.modal.modal-book.fade.text-left(role='dialog')
+	.modal-dialog.modal-lg.modal-dialog-centered
+		// Modal content
+		.modal-content
+			.modal-header
+				h3 Reserve a table
+				button.btn-close(type='button', data-bs-dismiss='modal')
+			.modal-body
+				//- RD Mailform
+				form.rd-mailform.form-modern(data-form-output="form-output-global", data-form-type='order', method='post', action='bat/rd-mailform.php')
+					.row.row-30
+						.col-md-6
+							.form-wrap
+								input#appointment-name.form-input(type="text" name="name" data-constraints="@Required")
+								label.form-label(for="appointment-name") Name
+						.col-md-6
+							.form-wrap
+								input#appointment-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+								label.form-label(for="appointment-email") Email
+						.col-md-4
+							.form-wrap
+								input#appointment-date.form-input(type="text" name="date" data-constraints="@Required", data-time-picker='date')
+								label.form-label(for="appointment-date") Date
+						.col-md-4
+							.form-wrap
+								input#appointment-time.form-input(type="text" name="time" data-constraints="@Required", data-time-picker='time')
+								label.form-label(for="appointment-time") Time Interval
+						.col-md-4.position-relative
+							.form-wrap
+								select.form-input.select-filter(data-minimum-results-for-search="Infinity",data-constraints="@Required", data-custom-theme='modern-2', data-placeholder='Persons')
+									option( label='placeholder' )
+									option(value="3") 1
+									option(value="4") 2
+									option(value="5") 3
+									option(value="6") more than 3
+
+						.col-12
+							.form-wrap
+								.textarea-lined-wrap
+									textarea#appointment-message.form-input(name="message" data-constraints="@Required")
+									label.form-label(for="appointment-message") Message
+
+						.col-12
+							.row.row-15
+								.col-md-6: button(type="submit").btn.btn-primary.btn-block Reserve
+								.col-md-6: button(type="reset").btn.btn-silver-outline.btn-block Reset

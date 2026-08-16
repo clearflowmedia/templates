@@ -1,0 +1,14 @@
+//- Post default
+mixin post-default(obj)
+	article.post-default.block-sm.hover-shadow&attributes(attributes)
+		.post-media
+			.tag= obj.tag
+			a.figure(href=links.post)
+				+img(obj.img)
+		.post-body
+			.post-meta
+				+icon-calendar
+				time(datetime= obj.date.dateFormat)= obj.date.dateStr
+			h4.post-title: a(href= links.post)= obj.title
+
+			p.post-text= obj.text

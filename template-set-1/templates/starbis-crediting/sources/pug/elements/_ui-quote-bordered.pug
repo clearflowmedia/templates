@@ -1,0 +1,16 @@
+//- Quote bordered
+mixin quote-bordered(obj)
+  //- Quote bordered
+  blockquote.quote-bordered
+    .quote-body
+      .quote-body-inner
+        h5.text-spacing-0=obj.header
+        block
+        p: q=obj.text
+    .quote-footer
+      .unit.flex-row.unit-spacing-sm.align-items-center
+        .unit-left
+          +jpg(obj.img, 'img-circle')
+        .unit-body
+          cite=obj.cite
+          p.font-italic.text-primary=obj.caption

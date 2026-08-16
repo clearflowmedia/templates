@@ -1,0 +1,330 @@
+//
+// Wrappers
+// --------------------------------------------------
+.object-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+// Positioning
+.object-wrap-right {
+  > .object-wrap-body {
+    right: 0;
+  }
+}
+
+.object-wrap-left {
+  > .object-wrap-body {
+    left: 0;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .object-wrap-sm-right {
+    > .object-wrap-body {
+      right: 0;
+    }
+  }
+
+  .object-wrap-sm-left {
+    > .object-wrap-body {
+      left: 0;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .object-wrap-body {
+    position: relative;
+    overflow: hidden;
+    min-height: 300px;
+    width: 100%;
+
+    > img {
+      position: absolute;
+      min-width: 100%;
+      max-width: none;
+      height: auto;
+      max-height: none;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -20%);
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .object-wrap-body {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    min-width: 1px;
+    max-width: none;
+    height: 100%;
+    min-height: 100%;
+    max-height: none;
+    margin: 0;
+    background: inherit;
+    z-index: 0;
+
+    > img {
+      position: relative;
+      height: auto;
+      min-height: 100.5%;
+      width: auto;
+      min-width: 102%;
+      max-width: none;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    & + * {
+      margin-top: 0;
+    }
+  }
+}
+
+// sizes
+@include media-breakpoint-up(md) {
+  .sm-width-c6 {
+    @include make-grid-parameter(width, 0, map-get($container-max-widths, md), 6);
+  }
+}
+
+.md-width-c7d20 {
+  @include media-breakpoint-up(lg) {
+    @include make-grid-parameter(width, 20px, map-get($container-max-widths, lg), 7);
+  }
+
+  @include media-breakpoint-up(xl) {
+    @include make-grid-parameter(width, 20px, map-get($container-max-widths, xl), 7);
+  }
+}
+
+.md-width-c5dm20 {
+  @include media-breakpoint-up(lg) {
+    @include make-grid-parameter(width, -20px, map-get($container-max-widths, lg), 5);
+  }
+
+  @include media-breakpoint-up(xl) {
+    @include make-grid-parameter(width, -20px, map-get($container-max-widths, xl), 5);
+  }
+}
+
+// bg-wrap
+.bg-wrap {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 120vw;
+    left: 50%;
+    transform: translateX(-50%);
+    background: inherit;
+    z-index: -1;
+  }
+}
+
+.bg-wrap-sm-left {
+  z-index: 1;
+  @include media-breakpoint-up(lg) {
+    &:before {
+      width: 100vw;
+      right: 0;
+      transform: none;
+    }
+  }
+}
+
+.bg-wrap-sm-right {
+  z-index: 1;
+  @include media-breakpoint-up(lg) {
+    &:before {
+      width: 100vw;
+      left: 0;
+      transform: none;
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .wrap-justify {
+    @include display-flex;
+    @include flex-direction(row);
+    @include flex-wrap(nowrap);
+    @include align-items(center);
+    @include justify-content(space-around);
+
+    > * + * {
+      margin-top: 0;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .wrap-justify {
+    @include justify-content(space-between);
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .wrap-justify {
+    padding-right: 30px;
+  }
+}
+
+// Link wrap
+.link-wrap {
+  line-height: 1;
+  a {
+    display: inline;
+    line-height: 1;
+  }
+}
+
+// Bg decoration
+[class*='bg-decoration-wrap'] {
+  position: relative;
+  overflow: hidden;
+
+  .bg-decoration-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .bg-decoration-object {
+    top: 0;
+    bottom: auto;
+  }
+}
+
+.bg-decoration-bottom {
+  .bg-decoration-object {
+    top: auto;
+    bottom: 0;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .bg-decoration-wrap-sm {
+    .bg-decoration-object {
+      height: 50%;
+      position: absolute;
+      right: 0;
+      left: 0;
+    }
+  }
+
+  .bg-decoration-bottom-sm {
+    .bg-decoration-object {
+      height: 34%;
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .bg-decoration-object {
+    height: 50%;
+    position: absolute;
+    right: 0;
+    left: 0;
+  }
+
+  .bg-decoration-bottom-mod {
+    .bg-decoration-object {
+      height: 45%;
+    }
+  }
+}
+
+.image-wrap-1 {
+  @include media-breakpoint-up(md) {
+    img {
+      max-width: 110%;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    img {
+      max-width: 140%;
+    }
+  }
+}
+
+.image-wrap-2 {
+  @include display-flex;
+  @include flex-direction(row);
+  @include justify-content(flex-end);
+
+  img {
+    @include flex-shrink(0);
+  }
+
+  @include media-breakpoint-up(md) {
+    img {
+      max-width: 110%;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    img {
+      max-width: 140%;
+    }
+  }
+}
+
+.block-wrap-1 {
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  text-align: center;
+  padding-top: 90px;
+  padding-bottom: 25px;
+  max-width: 430px;
+
+  * {
+    position: relative;
+    z-index: 2;
+  }
+
+  .block-number {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $whisper;
+    font-weight: 300;
+    font-size: 222px;
+    z-index: 0;
+    line-height: .7;
+  }
+
+  // Offsets
+  * + .block-header {
+    margin-top: 0;
+  }
+}
+
+.bg-displaced-wrap {
+  position: relative;
+  z-index: 0;
+
+  .bg-displaced-body {
+    position: relative;
+    z-index: 1;
+  }
+
+  .bg-displaced {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    bottom: 50px;
+    left: 0;
+    z-index: 0;
+  }
+}

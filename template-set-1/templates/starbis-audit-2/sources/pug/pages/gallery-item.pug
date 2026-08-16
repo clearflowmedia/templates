@@ -1,0 +1,86 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-post-minimal
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Gallery Item'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title('Gallery', 'bg-image-1')
+
+  //- The Importance of Paperwork
+  section.section-60.section-md-75.section-xl-90
+    .container
+      h3 Choosing the #[span.fw-thin Strategy]
+      article.post-info
+        .post-image
+          +jpg('gallery-item-1-1171x884')
+        .post-main
+          .post-left
+            ul.post-meta
+              li: time(datetime='2021-05-01') May 2021
+              li by Jack Williams
+              li
+                ul.list-hashtags
+                  li: a(href='#') Business
+                  li: a(href='#') Strategy
+                  li: a(href='#') Capital
+                  li: a(href='#') Company
+
+          .post-body
+            p Perhaps you are a new entrepreneur about to launch a business or innovation you have been dreaming about for years. Or maybe you have an established business and things are going well, or maybe even too well. In both instances you are going to need capital – the “oxygen” that every business needs to grow and prosper. So now you are writing your first business plan or touching up the old one in anticipation of raising capital. Capital can only come into a business in one of two ways...
+  ='\n'
+
+  //- Related Posts
+  section.section-35.section-md-75.section-xl-90.bg-whisper-lighten
+    .container.text-center.text-sm-start
+      .row
+        .col-sm-12
+          h4 Related Posts
+
+      .row.row-30
+        .col-md-10.col-lg-6
+          +post-minimal({
+            img: 'gallery-item-2-220x224',
+            header: 'Making Tax Digital',
+            time: ['2021-03-14', 'March 14'],
+            text: 'It was announced back in March 2015 that annual tax returns would be scrapped. You can view my immediate...'
+          })
+
+        .col-md-10.col-lg-6
+          +post-minimal({
+            img: 'gallery-item-3-220x224',
+            header: 'Who Is In Control?!',
+            time: ['2021-03-13', 'March 22'],
+            text: 'From 6 April 2021 unlisted UK companies must take reasonable steps to ascertain and record in a dedicated... '
+          })
+
+        .col-md-10.col-lg-6
+          +post-minimal({
+            img: 'gallery-item-4-220x224',
+            header: 'As Predicted…',
+            time: ['2021-03-12', 'March 17'],
+            text: 'As those who read my blog of last week looking at the details behind the PSC register, I predicted that the UK would... '
+          })
+
+        .col-md-10.col-lg-6
+          +post-minimal({
+            img: 'gallery-item-5-220x224',
+            header: 'Capital Gains Tax Changes',
+            time: ['2021-03-11', 'March 26'],
+            text: 'For a budget that was pretty boring, there was a fair amount in it about capital gains tax. Given I had clients...'
+          })
+    ='\n'
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

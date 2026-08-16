@@ -1,0 +1,15 @@
+//- Block vacation
+mixin block-vacation(obj)
+  a.block-vacation(href='#')
+    h5=obj.header
+    .block-meta
+      ul.list-objects-inline
+        li
+          span.novi-icon.icon.icon-xxs.icon-primary.material-icons-location_on
+          span=obj.location
+        li
+          span.novi-icon.icon.icon-xxs.icon-primary.material-icons-av_timer
+          span=obj.employment
+        li
+          span.novi-icon.icon.icon-xxs.icon-primary.material-icons-event_available
+          time(datetime=obj.time[0])=obj.time[1]

@@ -1,0 +1,129 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_product-item-default
+
+block variables
+	-
+		pageName = 'Grid shop',
+		activeShopLayout = 0;
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title('Shop', 'bg-shop')
+
+	include ../sections/_section-shop-panel
+
+	//- Shop grid
+	section.section.section-50.section-md-bottom-75.section-xl-bottom-100.bg-whisper.movi-background
+		.container
+			.row.row-30
+				.col-md-6.col-lg-4.col-xl-3
+					+product-item-default({
+						header: "Engineered Rib Cashmere",
+						brand: "Tommy Hilfiger",
+						price: {
+							irrelevant: '49.99',
+							current: '35'
+						},
+						badge: {
+							elClass: 'badge-danger',
+							positionClass: 'product-badge-wrap-left',
+							text: 'Sale'
+						},
+						slider: [
+							"product-01-270x360.png",
+							"product-01-270x360-2.png",
+							"product-01-270x360-3.png"
+						]
+					})
+
+				.col-md-6.col-lg-4.col-xl-3
+					+product-item-default({
+						header: "Twisted Sweater",
+						brand: "Adidas",
+						price: {
+							irrelevant: '99.00',
+							current: '59.89'
+						},
+						badge: {
+							elClass: 'badge-info',
+							positionClass: 'product-badge-wrap-right',
+							text: 'New'
+						},
+						slider: [
+							"product-02-270x360.png",
+							"product-02-270x360-2.png",
+							"product-02-270x360-3.png"
+						]
+					})
+
+				.col-md-6.col-lg-4.col-xl-3
+					+product-item-default({
+						header: "Knit Cami Top",
+						brand: "Paco Rabane",
+						price: {
+							irrelevant: '99.00',
+							current: '19.89'
+						},
+						slider: [
+							"product-03-270x360.png",
+							"product-03-270x360-2.png",
+							"product-03-270x360-3.png"
+						]
+					})
+
+				.col-md-6.col-lg-4.col-xl-3
+					+product-item-default({
+						header: "Contrast Back Zip",
+						brand: "Zara",
+						price: {
+							irrelevant: '22.99',
+							current: '14.00'
+						},
+						slider: [
+							"product-04-270x360.png",
+							"product-04-270x360-2.png",
+							"product-04-270x360-3.png"
+						]
+					})
+
+				.col-md-6.col-lg-4.col-xl-3
+					+product-item-default({
+						header: "Collar Leather Jacket",
+						brand: "Paco Rabane",
+						price: {
+							irrelevant: '99.00',
+							current: '19.89'
+						},
+						slider: [
+							"product-05-270x360.png",
+							"product-05-270x360-2.png",
+							"product-05-270x360-3.png"
+						]
+					})
+
+				.col-md-6.col-lg-4.col-xl-3
+					+product-item-default({
+						header: "Knit Skater Skirt",
+						brand: "Armani",
+						price: {
+							irrelevant: '22.00',
+							current: '14.00'
+						},
+						slider: [
+							"product-06-270x360.png",
+							"product-06-270x360-2.png",
+							"product-06-270x360-3.png"
+						]
+					})
+
+			.pagination-custom-wrap.text-center.offset-top-4
+				+pagination
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

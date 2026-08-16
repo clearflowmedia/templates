@@ -1,0 +1,140 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-thumbnail-1
+include ../elements/_ui-thumbnail-2
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Our Team'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title(pageName, 'bg-image-1')
+
+  //- Team
+  section.section-66.section-md-100
+    .container
+      .row
+        .col-sm-12.text-center
+          h3
+            | Our
+            =' '
+            span.fw-thin Team
+      .row.justify-content-sm-center
+        .col-md-8.col-xl-12
+          //- Owl Carousel
+          .owl-carousel.owl-carousel-center.owl-nav-modern.owl-style-minimal.owl-style-minimal-inverse.text-center(data-data-items='1', data-md-items='2', data-xl-items='3', data-stage-padding='15', data-loop='false', data-margin='15', data-mouse-drag="false", data-dots="true" )
+            .item.text-center
+              .thumbnail-variant-5
+                .thumbnail-variant-5-img-wrap
+                  img.img-circle(src="images/team-1-151x151.jpg" width="129" height="129" alt="")
+                h4 John Doe
+                .text-dusty-gray Managing Director
+                .divider-fullwidth.bg-porcelain
+
+                .link-group
+                  span.icon.icon-xxs.icon-primary.material-icons-local_phone
+                  a.link-black(href='tel:#') +1 (609) 567–8974
+                .link-group
+                  span.icon.icon-xxs.icon-primary.fa-envelope-o
+                  a.link-black(href='mailto:#') info@demolink.org
+
+            .item.text-center
+              .thumbnail-variant-5
+                .thumbnail-variant-5-img-wrap
+                  img.img-circle(src="images/team-2-151x151.jpg" width="129" height="129" alt="")
+                h4 Amanda Smith
+                .text-dusty-gray Accountant
+                .divider-fullwidth.bg-porcelain
+
+                .link-group
+                  span.icon.icon-xxs.icon-primary.material-icons-local_phone
+                  a.link-black(href='tel:#') +1 (409) 987–5874
+                .link-group
+                  span.icon.icon-xxs.icon-primary.fa-envelope-o
+                  a.link-black(href='mailto:#') info@demolink.org
+            .item.text-center
+              .thumbnail-variant-5
+                .thumbnail-variant-5-img-wrap
+                  img.img-circle(src="images/team-3-151x151.jpg" width="129" height="129" alt="")
+                h4 David Nicholson
+                .text-dusty-gray Audit Manager
+                .divider-fullwidth.bg-porcelain
+
+                .link-group
+                  span.icon.icon-xxs.icon-primary.material-icons-local_phone
+                  a.link-black(href='tel:#') +1 (609) 567–8974
+                .link-group
+                  span.icon.icon-xxs.icon-primary.fa-envelope-o
+                  a.link-black(href='mailto:#') info@demolink.org
+            .item.text-center
+              .thumbnail-variant-5
+                .thumbnail-variant-5-img-wrap
+                  img.img-circle(src="images/team-1-151x151.jpg" width="129" height="129" alt="")
+                h4 John Doe
+                .text-dusty-gray Managing Director
+                .divider-fullwidth.bg-porcelain
+
+                .link-group
+                  span.icon.icon-xxs.icon-primary.material-icons-local_phone
+                  a.link-black(href='tel:#') +1 (609) 567–8974
+                .link-group
+                  span.icon.icon-xxs.icon-primary.fa-envelope-o
+                  a.link-black(href='mailto:#') info@demolink.org
+
+  section.section-66.section-md-top-100.section-md-bottom-90.section-xl-bottom-130.bg-whisper-lighten
+    .container
+      .row
+        .col-sm-12.text-center
+          h3
+            | Our
+            =' '
+            span.fw-thin Team
+      .row.row-40
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-2({
+            img: 'team-9-246x300',
+            header: "Amanda Smith",
+            caption: "Client Services Assistant",
+            phone: "+1 (409) 987–5874",
+            email: "info@demolink.org"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-2({
+            img: 'team-10-246x300',
+            header: "David Nicholson",
+            caption: "Audit Manager",
+            phone: "+1 (409) 987–5874",
+            email: "info@demolink.org"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-2({
+            img: 'team-11-246x300',
+            header: "Vanessa Ives",
+            caption: "Accountant",
+            phone: "+1 (409) 987–5874",
+            email: "info@demolink.org"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-2({
+            img: 'team-12-246x300',
+            header: "Sam Kromstain",
+            caption: "Director",
+            phone: "+1 (409) 987–5874",
+            email: "info@demolink.org"
+          })
+
+  ='\n'
+
+  //- Page Footer
+  include ../sections/_section-footer-default

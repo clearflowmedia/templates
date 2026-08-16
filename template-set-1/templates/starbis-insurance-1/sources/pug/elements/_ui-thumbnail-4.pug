@@ -1,0 +1,7 @@
+//- Thumbnail 4
+mixin thumbnail-4(obj)
+  a.thumbnail.thumbnail-variant-4(class=obj.mod, href=obj.link)
+    figure.thumbnail-image
+      +jpg(obj.img)
+    .caption
+      h4.caption-header!=obj.header

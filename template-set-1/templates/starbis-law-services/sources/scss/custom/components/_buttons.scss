@@ -1,0 +1,278 @@
+//
+// Custom Buttons Styles
+// --------------------------------------------------
+
+// Base styles
+// --------------------------------------------------
+
+.btn {
+  text-align: center;
+  max-width: 100%;
+  padding: $padding-base-vertical $padding-base-horizontal;
+  font-family: $font-family-base;
+  font-size: $btn-font-size * 1px;
+  line-height: $line-height-base;
+  font-weight: $btn-font-weight;
+  border-radius: $btn-border-radius;
+  border: 2px solid;
+  transition: .3s ease-out;
+
+  &:hover,
+  &:focus,
+  &.focus {
+    box-shadow: none;
+  }
+
+  &:active,
+  &.active {
+    box-shadow: none;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+  }
+
+  &-smaller {
+    padding: 6px 32px;
+  }
+
+  &-small {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &-medium {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+	&:not([class*='shadow']) {
+		box-shadow: none;
+	}
+
+	&:not(:disabled):not(.disabled):active:focus,
+	&:not(:disabled):not(.disabled).active:focus{
+		&:not([class*='shadow']) {
+			box-shadow: none;
+		}
+	}
+}
+
+
+button.btn {
+  @include media-breakpoint-down(sm) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+html .dtp .dtp-buttons {
+  .btn-primary {
+    color: $white;
+
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      color: $white;
+      box-shadow: none;
+    }
+  }
+}
+
+// Alternate buttons
+// --------------------------------------------------
+html {
+  .btn-default {
+    @include button-variant-custom($white, $abbey, $abbey, $white, $primary, $primary);
+  }
+
+  .btn-primary {
+    @include button-variant-custom($btn-primary-color, $btn-primary-bg, $btn-primary-border, $white, $teak, $teak);
+  }
+
+  .btn-red-orange {
+    @include button-variant-custom($white, $red-orange, $red-orange, $white, $gray-dark, $gray-dark);
+  }
+
+  .btn-oslo-gray {
+    @include button-variant-custom($white, $oslo-gray, $oslo-gray, $white, $primary, $primary);
+  }
+
+  .btn-primary-contrast {
+    @include button-variant-custom($white, $primary, $primary, $white, $teak, $teak);
+  }
+
+  .btn-primary-outline {
+    @include button-variant-custom($primary, transparent, $primary, $white, $primary, $primary);
+  }
+
+  .btn-primary-outline-v2 {
+    @include button-variant-custom($white, transparent, $primary, $white, $primary, $primary);
+  }
+
+  .btn-white-outline {
+    @include button-variant-custom($white, transparent, $white, $tundora, $white, $white);
+  }
+
+  .btn-white-outline-variant-1 {
+    @include button-variant-custom($white, transparent, $white, $white, $primary, $primary);
+  }
+
+  .btn-silver-outline {
+    @include button-variant-custom($black, transparent, $silver, $white, $silver, $silver);
+  }
+
+  .btn-black-outline {
+    @include button-variant-custom($black, transparent, $black, $white, $black, $black);
+  }
+
+  // Success appears as green
+  .btn-success {
+  }
+
+  // Info appears as blue-green
+  .btn-info {
+  }
+
+  // Warning appears as orange
+  .btn-warning {
+  }
+
+  // Danger and error appear as red
+  .btn-danger {
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .btn-responsive {
+    font-size: 13px;
+    min-width: 120px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+// Button Sizes
+// --------------------------------------------------
+
+.btn-sm {
+  min-width: 120px;
+  @include button-size($padding-small-vertical, $padding-small-horizontal, 14px, $btn-border-radius);
+}
+
+.btn-lg {
+  min-width: 270px;
+  @include button-size($padding-large-vertical, $padding-large-horizontal, 18px, $btn-border-radius);
+}
+
+.btn-xl {
+  @include button-size(19px, 40px, 18px, $btn-border-radius);
+
+  @include media-breakpoint-up(md) {
+    min-width: 270px;
+    padding: $padding-extra-large-vertical $padding-extra-large-horizontal;
+  }
+
+  // Variats
+  &-bigger {
+    min-width: 100px;
+    @include media-breakpoint-up(lg) {
+      min-width: 270px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+}
+
+// Button Shapes
+// --------------------------------------------------
+
+.btn-block {
+  display: block;
+  min-width: 30px;
+  width: 100%;
+}
+
+.btn-rect {
+  border-radius: 0;
+}
+
+.btn-round {
+  border-radius: 12px;
+}
+
+.btn-round-2 {
+  border-radius: 6px;
+}
+
+.btn-circle {
+  border-radius: 35px;
+}
+
+.btn-round-bottom {
+  border-radius: 0 0 5px 5px;
+}
+
+// Button Modifiers
+// --------------------------------------------------
+.btn-shadow {
+  box-shadow: -3px 3px 3px 0 rgba($black, .14);
+}
+
+// Button Icon styles
+// --------------------------------------------------
+
+.btn {
+  &.btn-icon {
+    @include display-inline-flex;
+    @include flex-direction(row);
+    @include flex-wrap(nowrap);
+    @include align-items(center);
+    @include justify-content(center);
+    vertical-align: middle;
+
+    .icon {
+      position: relative;
+      top: 1px;
+      display: inline-block;
+      width: auto;
+      height: auto;
+      line-height: 0;
+      vertical-align: middle;
+      transition: 0s;
+    }
+
+    &-left {
+      .icon {
+        margin-right: 15px;
+      }
+    }
+
+    &-right {
+      @include flex-direction(row-reverse);
+      .icon {
+        margin-left: 15px;
+      }
+    }
+  }
+}
+
+.btn-icon-only {
+  @include reset-button;
+  font-size: 0;
+  line-height: 0;
+  transition: .33s all ease;
+
+  &.btn-icon-only-primary {
+    @include link($primary, $black);
+  }
+}
+
+.btn-icon-only {
+  padding: 9px 18px;
+}
+
+.btn-sm,
+.btn-group-sm > .btn {  }

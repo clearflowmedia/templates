@@ -1,0 +1,82 @@
+//
+// Page title
+// --------------------------------------------------
+.page-title {
+  text-align: center;
+  > * {
+    letter-spacing: 0;
+  }
+
+  h2, .h2 {
+    letter-spacing: 0;
+  }
+
+  .page-title-inner {
+    position: relative;
+    display: inline-block;
+  }
+
+  .page-title-left,
+  .page-title-right {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: middle;
+
+    * {
+      display: inline;
+      white-space: nowrap;
+    }
+  }
+
+  .page-title-left {
+    left: 0;
+    text-align: right;
+    transform: translate(-100%, -50%);
+
+    * {
+      padding-right: .25em;
+    }
+
+    *:nth-last-child(odd) {
+      color: rgba($white, .1);
+    }
+
+    *:nth-last-child(even) {
+      color: rgba($white, .2);
+    }
+  }
+
+  .page-title-right {
+    right: 0;
+    text-align: left;
+    transform: translate(100%, -50%);
+
+    * {
+      padding-left: .25em;
+    }
+
+    *:nth-child(odd) {
+      color: rgba($white, .1);
+    }
+
+    *:nth-child(even) {
+      color: rgba($white, .2);
+    }
+  }
+}
+
+.page-title-wrap {
+  background: $black;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center 80%;
+}
+
+@include media-breakpoint-up(md) {
+  .page-title {
+    text-align: left;
+  }
+}

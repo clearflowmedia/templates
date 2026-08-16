@@ -1,0 +1,70 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-thumbnail-3
+
+block variables
+  - var activeIndex = 7
+  - var pageName = 'Gallery Masonry'
+
+block title
+  title=pageName
+
+block page
+  //-Page Header
+  include ../sections/_section-header-default
+
+
+  +page-title('Gallery', 'bg-gallery')
+
+  section.section-50.section-md-90.section-lg-bottom-120.section-xl-bottom-165
+    .container.isotope-wrap
+      .row.row-40.text-center
+        .col-12
+          //-Isotope Filters
+          ul.isotope-filters-responsive
+            li: p Choose your category:
+            li.block-top-level
+              //-Isotope Filters
+              button.isotope-filters-toggle.btn.btn-sm.btn-default(data-custom-toggle='#isotope-1', data-custom-toggle-hide-on-blur='true')
+                | Filter
+                span.caret
+
+              #isotope-1.isotope-filters.isotope-filters-minimal.isotope-filters-horizontal
+                ul.list-inline
+                  li
+                    a.active(data-isotope-filter='*', data-isotope-group='gallery', href='#') All
+                  li
+                    a(data-isotope-filter='Category 1', data-isotope-group='gallery', href='#') Retirement & College Savings
+                  li
+                    a(data-isotope-filter='Category 2', data-isotope-group='gallery', href='#') Insurance & Annuities
+                  li
+                    a(data-isotope-filter='Category 3', data-isotope-group='gallery', href='#') Cash & Credit
+
+        //-Isotope Content
+        .col-12
+          .row.isotope.isotope-gutter-default(data-isotope-layout='masonry', data-isotope-group='gallery', data-lightgallery='group', data-column-width=".41")
+            .col-12.col-md-6.col-lg-8.isotope-item(data-filter='Category 1')
+              +thumbnail-3({img: 'gallery-masonry-1-770x586', original: 'gallery-2-1200x800_original'})
+
+            .col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+              +thumbnail-3({img: 'gallery-masonry-2-370x278', original: 'gallery-8-1200x800_original'})
+
+            .col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 3')
+              +thumbnail-3({img: 'gallery-masonry-3-371x587', original: 'gallery-6-1200x800_original'})
+
+            .col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+              +thumbnail-3({img: 'gallery-masonry-4-373x278', original: 'gallery-1-1200x800_original'})
+
+            .col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+              +thumbnail-3({img: 'gallery-masonry-5-373x278', original: 'gallery-5-1200x800_original'})
+
+            .col-12.col-md-6.col-lg-8.isotope-item(data-filter='Category 3')
+              +thumbnail-3({img: 'gallery-masonry-6-769x384', original: 'gallery-7-1200x800_original'})
+
+            .col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+              +thumbnail-3({img: 'gallery-masonry-7-371x384', original: 'gallery-3-1200x800_original'})
+  ='\n'
+
+  //-Page Footer
+  include ../sections/_section-footer-default

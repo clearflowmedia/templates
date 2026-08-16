@@ -1,0 +1,879 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_icon-box
+include ../elements/_thumbnail-3
+include ../elements/_thumbnail-4
+include ../elements/_thumbnail-5
+
+block variables
+	- layoutPanel = false;
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+	include ../sections/_section-slider
+
+	//- Check our portfolio
+	section.section.section-50.section-md-90.section-xl-120#section-start-journey
+		.container
+			h3.text-center
+				span Check
+				em our portfolio
+				span With Child Themes
+
+			.row.row-30
+				.col-md-6.col-lg-4
+					+thumbnail-4({
+						img: 'child-theme-1-550x420',
+						link: 'home.html'
+					})
+						h4.caption-header
+							span= logo.name
+
+				.col-md-6.col-lg-4
+					+thumbnail-4({
+						img: 'child-theme-2-550x420',
+						link: '../starbis-tax-management/index.html'
+					})
+						h4.caption-header
+							span Tax
+							span.fw-light Management
+
+				.col-md-6.col-lg-4
+					+thumbnail-4({
+						img: 'child-theme-3-550x420',
+						link: '../starbis-law-services/index.html'
+					})
+						h4.caption-header
+							span Law
+							span.fw-light Services
+
+				.col-md-6.col-lg-4
+					+thumbnail-4({
+						img: 'child-theme-4-550x420',
+						link: '../starbis-insurance-1/index.html'
+					})
+						h4.caption-header
+							span Insurance 1
+
+				.col-md-6.col-lg-4
+					+thumbnail-4({
+						img: 'child-theme-5-550x420',
+						link: '../starbis-investment-management-1/index.html'
+					})
+						h4.caption-header
+							span.fw-light Investment
+							span Management 1
+
+				.col-md-6.col-lg-4
+					+thumbnail-4({
+						img: 'child-theme-6-550x420',
+						link: '../starbis-audit-1/index.html'
+					})
+						h4.caption-header
+							span Audit 1
+
+				.col-md-6.col-lg-4
+					+thumbnail-4({
+						img: 'child-theme-7-550x420',
+						link: '../starbis-crediting/index.html'
+					})
+						h4.caption-header
+							span Crediting
+
+				.col-md-6.col-lg-4
+					+thumbnail-4({
+						img: 'child-theme-8-550x420',
+						link: '../starbis-audit-2/index.html'
+					})
+						h4.caption-header
+							span Audit 2
+
+				.col-md-6.col-lg-4
+					+thumbnail-4({
+						img: 'child-theme-9-550x420',
+						link: '../starbis-investment-management-2/index.html'
+					})
+						h4.caption-header
+							span.fw-light Investment
+							span Management 2
+
+				.col-md-6.col-lg-4
+					+thumbnail-4({
+						img: 'child-theme-10-550x420',
+						link: '../starbis-financial-advisory/index.html'
+					})
+						h4.caption-header
+							span.fw-light Financial
+							span Advisory
+
+				.col-md-6.col-lg-4
+					+thumbnail-4({
+						img: 'child-theme-11-550x420',
+						link: '../starbis-insurance-2/index.html'
+					})
+						h4.caption-header
+							span Insurance 2
+
+				.col-md-6.col-lg-4
+					+thumbnail-4({
+						img: 'child-theme-12-550x420',
+						link: '../starbis-audit-attent/index.html'
+					})
+						h4.caption-header
+							span.fw-light Audit
+							span Attent
+						p Landing Page
+
+				.col-md-6.col-lg-4
+					+thumbnail-4({
+						img: 'child-theme-13-550x420',
+						link: '../starbis-insurance-3/index.html'
+					})
+						h4.caption-header
+							span Insurance 3
+
+				.col-md-6.col-lg-4
+					+thumbnail-4({
+						img: 'child-theme-14-550x420',
+						link: '../starbis-repair-service/index.html'
+					})
+						h4.caption-header
+							span Repair
+							span.fw-light Service
+
+				.col-md-6.col-lg-4
+					+thumbnail-4({
+						img: 'child-theme-15-550x420',
+						link: '../starbis-internet-cafe/index.html'
+					})
+						h4.caption-header
+							span Internet
+							span.fw-light Cafe
+
+				.col-md-6.col-lg-4
+					+thumbnail-4({
+						img: 'child-theme-16-550x420',
+						link: '../starbis-war-corps/index.html'
+					})
+						h4.caption-header
+							span Military Service &
+							span.fw-light Army
+				.col-md-6.col-lg-4
+					+thumbnail-4({
+						img: 'child-theme-17-550x420',
+						link: '../starbis-coffee-shop/index.html'
+					})
+						h4.caption-header
+							span Coffee
+							span.fw-light Shop
+				.col-md-6.col-lg-4
+					+thumbnail-4({
+						img: 'child-theme-18-550x420',
+						link: '../starbis-business-coach/index.html'
+					})
+						h4.caption-header
+							span Business
+							span.fw-light Coach
+
+
+	//- Check our subpages
+	section.section.section-50.section-md-90.section-xl-120.bg-gray-lighter.novi-background
+		.container.isotope-wrap
+			h3.text-center Pages
+
+			//- Isotope Filters
+			ul.isotope-filters-responsive.text-center
+				li: p Choose your category:
+				li.block-top-level
+					//- Isotope Filters
+					button.isotope-filters-toggle.btn.btn-sm.btn-default(data-custom-toggle='#isotope-pages', data-custom-toggle-hide-on-blur='true', data-custom-toggle-disable-on-blur='true')
+						| Filter
+						span.caret
+
+					#isotope-pages.isotope-filters.isotope-filters-minimal.isotope-filters-horizontal
+						ul.list-inline
+							li: a.active(data-isotope-filter='*', href='#') All
+							li: a(data-isotope-filter='home', href='#') Home
+							li: a(data-isotope-filter='blog', href='#') Blog
+							li: a(data-isotope-filter='shop', href='#') Shop
+							li: a(data-isotope-filter='portfolio', href='#') Portfolio
+							li: a(data-isotope-filter='pages', href='#') Pages
+							li: a(data-isotope-filter='components', href='#') Components
+
+			.row.isotope.isotope-gutter-default( data-lightgallery='group' )
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='home')
+					a.thumbnail.thumbnail-variant-4.thumbnail-sm(href='home.html')
+						figure.thumbnail-figure
+							.thumbnail-image-wrap: img(src='images/child-theme-1-550x420.jpg' alt='')
+						.caption
+							p.caption-header
+								span= logo.name
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='home')
+					a.thumbnail.thumbnail-variant-4.thumbnail-sm(href='../starbis-tax-management/index.html')
+						figure.thumbnail-figure
+							.thumbnail-image-wrap: img(src='images/child-theme-2-550x420.jpg' alt='')
+						.caption
+							p.caption-header
+								span.fw-light Tax
+								span Management
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='home')
+					a.thumbnail.thumbnail-variant-4.thumbnail-sm(href='../starbis-law-services/index.html')
+						figure.thumbnail-figure
+							.thumbnail-image-wrap: img(src='images/child-theme-3-550x420.jpg' alt='')
+						.caption
+							p.caption-header
+								span.fw-light Law
+								span Services
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='home')
+					a.thumbnail.thumbnail-variant-4.thumbnail-sm(href='../starbis-insurance-1/index.html')
+						figure.thumbnail-figure
+							.thumbnail-image-wrap: img(src='images/child-theme-4-550x420.jpg' alt='')
+						.caption
+							p.caption-header
+								span Insurance 1
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='home')
+					a.thumbnail.thumbnail-variant-4.thumbnail-sm(href='../starbis-investment-management-1/index.html')
+						figure.thumbnail-figure
+							.thumbnail-image-wrap: img(src='images/child-theme-5-550x420.jpg' alt='')
+						.caption
+							p.caption-header
+								span.fw-light Investment
+								span Management 1
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='home')
+					a.thumbnail.thumbnail-variant-4.thumbnail-sm(href='../starbis-audit-1/index.html')
+						figure.thumbnail-figure
+							.thumbnail-image-wrap: img(src='images/child-theme-6-550x420.jpg' alt='')
+						.caption
+							p.caption-header
+								span Audit 1
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='home')
+					a.thumbnail.thumbnail-variant-4.thumbnail-sm(href='../starbis-crediting/index.html')
+						figure.thumbnail-figure
+							.thumbnail-image-wrap: img(src='images/child-theme-7-550x420.jpg' alt='')
+						.caption
+							p.caption-header
+								span Crediting
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='blog')
+					+thumbnail-5({
+						page: 'classic-blog'
+					})
+						p.caption-header
+							span.fw-light Classic
+							span Blog
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='blog')
+					+thumbnail-5({
+						page: 'grid-blog'
+					})
+						p.caption-header
+							span.fw-light Grid
+							span Blog
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='blog')
+					+thumbnail-5({
+						page: 'line-blog'
+					})
+						p.caption-header
+							span.fw-light Line
+							span Blog
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='blog')
+					+thumbnail-5({
+						page: 'masonry-blog'
+					})
+						p.caption-header
+							span.fw-light Masonry
+							span Blog
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='blog')
+					+thumbnail-5({
+						page: 'blog-post'
+					})
+						p.caption-header
+							span.fw-light Blog
+							span Post
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='shop')
+					+thumbnail-5({
+						page: 'shop-list'
+					})
+						p.caption-header
+							span.fw-light Shop
+							span List
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='shop')
+					+thumbnail-5({
+						page: 'grid-shop'
+					})
+						p.caption-header
+							span.fw-light Grid
+							span Shop
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='shop')
+					+thumbnail-5({
+						page: 'single-product'
+					})
+						p.caption-header
+							span.fw-light Single
+							span Product
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='shop')
+					+thumbnail-5({
+						page: 'shop-cart'
+					})
+						p.caption-header
+							span.fw-light Shop
+							span Cart
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='shop')
+					+thumbnail-5({
+						page: 'shop-checkout'
+					})
+						p.caption-header
+							span.fw-light Shop
+							span Checkout
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='portfolio')
+					+thumbnail-5({
+						page: 'grid-gallery'
+					})
+						p.caption-header
+							span.fw-light Grid
+							span Gallery
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='portfolio')
+					+thumbnail-5({
+						page: 'masonry-gallery'
+					})
+						p.caption-header
+							span.fw-light Masonry
+							span Gallery
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='portfolio')
+					+thumbnail-5({
+						page: 'cobbles-gallery'
+					})
+						p.caption-header
+							span.fw-light Cobbles
+							span Gallery
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='portfolio')
+					+thumbnail-5({
+						page: 'gallery-item'
+					})
+						p.caption-header
+							span.fw-light Gallery
+							span Item
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='pages')
+					+thumbnail-5({
+						page: 'about-us'
+					})
+						p.caption-header
+							span.fw-light About
+							span Us
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='pages')
+					+thumbnail-5({
+						page: 'services'
+					})
+						p.caption-header
+							span Services
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='pages')
+					+thumbnail-5({
+						page: 'contact-us'
+					})
+						p.caption-header
+							span.fw-light Contact
+							span Us
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='pages')
+					+thumbnail-5({
+						page: 'appointment'
+					})
+						p.caption-header
+							span Appointment
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='pages')
+					+thumbnail-5({
+						page: 'clients'
+					})
+						p.caption-header
+							span Clients
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='pages')
+					+thumbnail-5({
+						page: 'client-testimonials'
+					})
+						p.caption-header
+							span.fw-light Client
+							span Testimonials
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='pages')
+					+thumbnail-5({
+						page: 'our-team'
+					})
+						p.caption-header
+							span.fw-light Our
+							span Team
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='pages')
+					+thumbnail-5({
+						page: 'team-member-profile'
+					})
+						p.caption-header
+							span.fw-light Team member
+							span Profile
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='pages')
+					+thumbnail-5({
+						page: 'careers'
+					})
+						p.caption-header
+							span Careers
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='pages')
+					+thumbnail-5({
+						page: 'pricing'
+					})
+						p.caption-header
+							span Pricing
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='pages')
+					+thumbnail-5({
+						page: 'faq'
+					})
+						p.caption-header
+							span FAQ
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='pages')
+					+thumbnail-5({
+						page: '404-page'
+					})
+						p.caption-header
+							span.fw-light 404
+							span Page
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='pages')
+					+thumbnail-5({
+						page: '503-page'
+					})
+						p.caption-header
+							span.fw-light 503
+							span Page
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='pages')
+					+thumbnail-5({
+						page: 'maintenance'
+					})
+						p.caption-header
+							span Maintenance
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='pages')
+					+thumbnail-5({
+						page: 'coming-soon'
+					})
+						p.caption-header
+							span.fw-light Coming
+							span Soon
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='pages')
+					+thumbnail-5({
+						page: 'login'
+					})
+						p.caption-header
+							span Login
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='pages')
+					+thumbnail-5({
+						page: 'registration'
+					})
+						p.caption-header
+							span Registration
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='pages')
+					+thumbnail-5({
+						page: 'search-results'
+					})
+						p.caption-header
+							span.fw-light Search
+							span Results
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='pages')
+					+thumbnail-5({
+						page: 'privacy-policy'
+					})
+						p.caption-header
+							span.fw-light Privacy
+							span Policy
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='pages')
+					+thumbnail-5({
+						page: 'header-default'
+					})
+						p.caption-header
+							span.fw-light Header
+							span Default
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='pages')
+					+thumbnail-5({
+						page: 'header-corporate-light'
+					})
+						p.caption-header
+							span.fw-light Header
+							span Corporate Light
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='pages')
+					+thumbnail-5({
+						page: 'header-corporate-dark'
+					})
+						p.caption-header
+							span.fw-light Header
+							span Corporate Dark
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='pages')
+					+thumbnail-5({
+						page: 'footer-default'
+					})
+						p.caption-header
+							span.fw-light Footer
+							span Default
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='pages')
+					+thumbnail-5({
+						page: 'footer-widget'
+					})
+						p.caption-header
+							span.fw-light Footer
+							span Widget
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='pages')
+					+thumbnail-5({
+						page: 'footer-corporate'
+					})
+						p.caption-header
+							span.fw-light Footer
+							span Corporate
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='components')
+					+thumbnail-5({
+						page: 'accordion'
+					})
+						p.caption-header
+							span Accordion
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='components')
+					+thumbnail-5({
+						page: 'buttons'
+					})
+						p.caption-header
+							span Buttons
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='components')
+					+thumbnail-5({
+						page: 'grid'
+					})
+						p.caption-header
+							span Grid
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='components')
+					+thumbnail-5({
+						page: 'forms'
+					})
+						p.caption-header
+							span Forms
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='components')
+					+thumbnail-5({
+						page: 'icons'
+					})
+						p.caption-header
+							span Icons
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='components')
+					+thumbnail-5({
+						page: 'icon-lists'
+					})
+						p.caption-header
+							span.fw-light Icon
+							span Lists
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='components')
+					+thumbnail-5({
+						page: 'progress-bars'
+					})
+						p.caption-header
+							span.fw-light Progress
+							span Bars
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='components')
+					+thumbnail-5({
+						page: 'tabs'
+					})
+						p.caption-header
+							span Tabs
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='components')
+					+thumbnail-5({
+						page: 'table-styles'
+					})
+						p.caption-header
+							span.fw-light Table
+							span styles
+
+				.col-12.col-md-6.col-lg-4.col-xl-3.isotope-item(data-filter='components')
+					+thumbnail-5({
+						page: 'typography'
+					})
+						p.caption-header
+							span Typography
+
+
+
+	//- Ocean of Possibilities
+	+parallax({
+		img: 'parallax-1'
+	}).bg-black
+		.section-60.section-md-100
+			.container
+				.row.row-40
+					.col-sm-6.col-md-3
+						.box-counter.box-counter-lighter
+							span.novi-icon.icon.icon-lg-bigger.icon-primary.fl-bigmug-line-copy23
+							//- CountTo
+							.text-large.counter
+								| 150
+								span +
+							h5.box-header HTML Pages
+
+					.col-sm-6.col-md-3
+						.box-counter.box-counter-lighter
+							span.novi-icon.icon.icon-lg-bigger.icon-primary.fl-bigmug-line-favourites5
+							//- CountTo
+							.text-large.counter 5
+							h5.box-header Niche Themes
+
+					.col-sm-6.col-md-3
+						.box-counter.box-counter-lighter
+							span.novi-icon.icon.icon-lg-bigger.icon-primary.fl-bigmug-line-equalizer26
+							//- CountTo
+							.text-large.counter 7
+							h5.box-header Different skins
+
+					.col-sm-6.col-md-3
+						.box-counter.box-counter-lighter
+							span.novi-icon.icon.icon-lg-bigger.icon-primary.fl-bigmug-line-cube29
+							//- CountTo
+							.text-large.counter 86
+							h5.box-header PSD files
+
+
+	//- What you get With Starbis
+	section.section.section-50.section-md-90.section-xl-120
+		.container
+			h3.text-center
+				span What
+				em you get
+				span With Starbis
+
+			.row.row-40
+				.col-md-6.col-lg-4.height-fill
+					+icon-box({
+						mod: 'responsive-centered',
+						icon: ['icon-lg-variant-1', 'fl-bigmug-line-square160'],
+						header: 'Advanced UI Kit',
+						text: 'Make the pages of your website look more attractive with our new Advanced UI Kit.'
+					})
+
+				.col-md-6.col-lg-4.height-fill
+					+icon-box({
+						mod: 'responsive-centered',
+						icon: ['icon-lg-variant-1', 'fl-bigmug-line-equalization3'],
+						header: 'Bootstrap Toolkit',
+						text: 'Intuitive and powerful Bootstrap toolkit offers impressive customization possibilities.'
+					})
+
+				.col-md-6.col-lg-4.height-fill
+					+icon-box({
+						mod: 'responsive-centered',
+						icon: ['icon-lg-variant-1', 'fl-bigmug-line-two316'],
+						header: 'Free Updates',
+						text: 'The template is provided with free updates to keep your website stable.'
+					})
+
+
+	//- Home Layouts and Demos
+	section.section.section-50.section-md-60.section-lg-75.bg-gray-lighter.novi-background
+		.container
+			.row.row-40.justify-content-md-center.align-items-md-center.flex-row-md-reverse
+				.col-md-5.col-xl-4.text-start
+					.box-container-small.text-start
+						h3
+							span Home Layouts
+							em and
+							span Demos
+						p.text-secondary Choose from our wide range of predefined Homepage layouts and demos to create your Own Amazing Experience.
+						a.btn.btn-xl.btn-primary( href=links.getTemplate, target='_blank' ) Get template
+
+				.col-md-7.col-xl-8
+					.image-wrap-1: +img('landing-1-790x377.png')
+
+
+	//- Extremely responsive and Retina
+	section.section.section-50.section-md-75
+		.container
+			.row.row-40.justify-content-md-center.align-items-md-center
+				.col-md-5
+					.inset-lg-left-20.inset-xl-left-70
+						h3
+							span Extremely
+							em responsive
+							span and Retina
+
+						p.text-secondary(style='max-width: 290px;') Starbis is fully responsive and Retina ready that means its ability to be easily displayed on any modern device or gadget.
+						a.btn.btn-xl.btn-primary( href=links.getTemplate, target='_blank' ) Get template
+				.col-md-7
+					.image-group
+						figure: +img('home-1-243x199.png')
+						figure: +img('home-2-508x341.png')
+						figure: +img('home-3-689x469.png')
+
+
+	//- About Us
+	+parallax({
+		img: 'landing-parallax-1'
+	}).bg-black
+		.section-60.section-md-100.section-xl-120
+			.container.text-center
+				h3 Different Header and Footer Variations
+
+				.row.row-40
+					.col-6.col-md-4
+						+img('layout-1-210x124.png')
+						h5 Minimal Header
+
+					.col-6.col-md-4
+						+img('layout-2-210x124.png')
+						h5 Corporate Header
+
+					.col-6.col-md-4
+						+img('layout-3-210x124.png')
+						h5 Corporate Header Light
+
+
+	//- Portfolio Templates
+	section.bg-decoration-wrap-sm.bg-decoration-bottom.bg-decoration-bottom-sm.section-50.section-lg-top-100.section-lg-bottom-120.bg-gray-lighter.section.novi-background
+		.container.bg-decoration-content.text-center
+			h3 Portfolio Templates
+			p.text-secondary Showcase any of your products or projects with our great selection of Portfolios
+			.offset-top-50
+				+img('landing-2-970x361.png')
+
+		.bg-decoration-object.bg-primary
+
+
+	//- Blog Templates
+	section.block-top-level
+		.container
+			.row.align-items-md-center.flex-row-md-reverse.align-items-lg-end
+				.col-md-5.col-xl-4
+					.section-50
+						h3 Blog Templates
+						p.text-secondary(style='max-width: 270px;') Create any kind of blog variations & styles using our well-done Blog templates
+						a.btn.btn-xl.btn-primary( href=links.getTemplate, target='_blank' ) Get template
+
+				.col-md-7.col-xl-8.align-bottom
+					.inset-sm-right-20.inset-lg-right-50
+						.image-wrap-3: +img('landing-3-782x469.png')
+
+
+	//- eCommerce Ready
+	section.section.section-50.section-md-75.section-lg-50.block-top-level.bg-gray-lighter.novi-background
+		.container
+			.row.row-40.align-items-md-center
+				.col-md-5.col-xl-4
+					.inset-xl-left-60
+						h3 eCommerce Ready
+						p.text-secondary We have included all you may need to build an Amazing eCommerce Website from scratch. Create your successful business now!
+						ul.list-marked
+							li Grid View
+							li Shopping Cart Page
+							li Checkout Page
+							li Single Product Page
+
+				.col-md-7.col-xl-8
+					.image-wrap-2: +img('landing-4-764x424.png')
+
+
+	//- Powerful search Engine
+	+parallax({
+		img: 'landing-parallax-2'
+	}).bg-black
+		.section-60.section-md-100.section-xl-120
+			.container.text-center
+				h3
+					span Powerful
+					em search
+					span Engine
+				p.text-white Get a new kind of experience with our new powerful search engine
+				a.btn.btn-xl.btn-primary( href=links.getTemplate, target='_blank' ) Get template
+
+
+	//- Get free
+	section.overflow-hidden
+		.section-35.section-sm-50.section-md-75.section-lg-120
+			.container
+				.row.justify-content-sm-center
+					.col-sm-10.col-md-12.text-center
+						p.h1.text-uppercase.text-gray-light Get free
+						p.text-secondary.offset-top-0 Save more than $35 on awesome premium images included in demo
+						.object-inline.white-space-normal
+							+img('icon-ps-36x37.png')
+							h3
+								span 80+ PSDs
+								em and
+								span Demo Images Included
+
+		.image-group-extended
+			figure(style='width: 13.125%;')
+				+img('landing-5-252x135')
+			figure(style='width: 21.145%; margin-left: -5.73%; z-index: 3;')
+				+img('landing-6-406x200').img-shadow
+			figure(style='width: 20.365%; margin-left: -7.83%; z-index: 1;')
+				+img('landing-7-391x275').img-shadow
+			figure(style='width: 18.75%; margin-left: -3.28%; z-index: 0;')
+				+img('landing-8-360x348')
+			figure(style='width: 15.9375%; margin-left: -5.99%; z-index: 3;')
+				+img('landing-9-306x200').img-shadow
+			figure(style='width: 20%; margin-left: -2.76%;')
+				+img('landing-10-384x256')
+			figure(style='width: 21.042%; margin-left: -3.33%; z-index: 3;')
+				+img('landing-11-404x200').img-shadow
+
+
+	//- Dedicated 24/7 Support
+	+parallax({
+		img: 'landing-parallax-3'
+	}).bg-black
+		.section-60.section-md-75.section-xl-120
+			.container.text-center
+				h3
+					span Dedicated
+					em 24/7
+					span Support
+				p.text-white: span.d-inline-block(style='max-width: 380px;') Our Support Service is always available 24 hours a day, 7 days a week to help you create your own business solution.
+				a.btn.btn-xl.btn-primary( href=links.getTemplate, target='_blank' ) Get template
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

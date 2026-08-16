@@ -1,0 +1,99 @@
+//
+// Stucktable
+// --------------------------------------------------
+
+.stacktable {
+  width: 100%;
+  text-align: left;
+}
+
+.st-head-row {
+  padding-top: 1em;
+}
+
+.st-head-row.st-head-row-main {
+  font-size: 1.5em;
+  padding-top: 0;
+}
+
+.st-key {
+  width: 49%;
+  text-align: right;
+  padding-right: 1%;
+}
+
+.st-val {
+  width: 49%;
+  padding-left: 1%;
+}
+
+.stacktable.large-only {
+  display: none;
+}
+
+.stacktable.small-only {
+  display: table;
+}
+
+@include media-breakpoint-up(md) {
+  .stacktable.large-only {
+    display: table;
+  }
+
+  .stacktable.small-only {
+    display: none;
+  }
+}
+
+.table-transparent{
+  table-layout: fixed;
+  width: 100%;
+
+  @include media-breakpoint-up(xl) {
+    width: 85%;
+    margin-left: auto;
+  }
+
+  th{
+    .h6,
+    h6{
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: $primary;
+      font-size: 14px;
+    }
+  }
+
+  tr{
+    td,th{
+      padding: 3px 0;
+      text-align: center;
+
+      &:first-child{
+        font-size: 16px;
+        letter-spacing: .05em;
+        text-align: left;
+        color: #fff;
+
+        @include media-breakpoint-up(lg) {
+          width: 25%;
+        }
+      }
+    }
+
+    &:first-child{
+      th{
+        padding-bottom: 30px;
+      }
+    }
+  }
+}
+
+.table-custom-lined.table-custom{
+   > tbody > tr > th + th,
+   > tbody > tr > td + td,
+   > tfoot > tr > th + th,
+   > tfoot > tr > td + td{
+      border-left: 1px solid #d9d9d9;
+  }
+}

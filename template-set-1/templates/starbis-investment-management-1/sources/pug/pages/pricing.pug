@@ -1,0 +1,90 @@
+extends  ../_skeleton
+
+block variables
+  - var activeIndex = 2
+  - var pageName = 'Pricing'
+
+block title
+  title=pageName
+
+block page
+  //-Page Header
+  include ../sections/_section-header-default
+
+
+  +page-title(pageName, 'bg-image-2')
+
+  //-Choose your plan
+  section.section-60.section-md-90.section-xl-bottom-15.bg-athens-gray
+    .container
+      .row.row-40
+        .col-md-6.col-lg-8
+          .row.row-30
+            .col-lg-6
+              h3 Choose your plan
+
+            .col-lg-6
+              p.text-gray-05.
+                Pick the best plan that meets your business needs. A free trial is available to help you with the decision-making.
+        .col-xl-1.d-none.d-xl-inline-block
+        .col-md-5.col-lg-4.col-xl-3
+          a.btn.btn-primary.btn-block.btns-inset-horizontal-15(href='#') Download free trial
+
+  ='\n'
+
+  //-Pricing tables
+  section.bg-decoration-wrap.bg-decoration-bottom.section-bottom-60.section-xl-top-100.section-xl-bottom-100.bg-athens-gray
+    .container.bg-decoration-content
+      .row.justify-content-md-center
+        .col-lg-10.col-xl-12
+          include ../_includes/_pricing-tables-range
+    .bg-decoration-object.bg-whisperapprox
+  ='\n'
+
+  //-Questions & Answers
+  section.section-60.section-md-90
+    .container
+      h3 Questions & Answers
+      .row.row-offset-3.justify-content-lg-center
+        .col-lg-11.col-xl-10
+          .row.row-40
+            .col-md-6
+              dl.list-terms-variant-1
+                dt.h6.text-ebony-clay What is an Investment Advisor?
+                dd.text-gray-05 An Investment Advisor is a professional that works for you to create an investment portfolio that is best suited to meet your individual needs. Not all Investment Advisors are created equal. It is important to choose an Investment Advisor who can meet your needs and deliver solid returns.
+
+
+                dt.h6.text-ebony-clay How will I know what is happening in my account?
+                dd.text-gray-05 You will continue to receive trade confirmations directly from Schwab, TD Ameritrade, or another custodian of your choice, as you do now when a trade is made in your account. You will also continue to receive regular account statements from Schwab, TD Ameritrade, or another custodian.
+
+                dt.h6.text-ebony-clay What makes you different from many others?
+                dd.text-gray-05 We have no conflicts of interest that could adversely affect your portfolio performance. Unlike many brokers and other financial advisors, we receive no compensation from brokerages or mutual fund companies for investing in their funds. Our goal is to find the best investments to meet your objectives.
+
+            .col-md-6
+              dl.list-terms-variant-1
+                dt.h6.text-ebony-clay What are the available methods of fees payment?
+                dd.text-gray-05 Quarterly management fees are withdrawn from the account on a quarterly basis. This method of payment eliminates any “out-of-pocket” expense for our services. Quarterly management fees can also be charged to a credit card or paid by check if desired.
+
+                dt.h6.text-ebony-clay What is your minimum account size?
+                dd.text-gray-05 Currently our minimum account size is $200,000 (for non-401k accounts), although under some circumstances we will accept accounts less than $200,000. More important, however, than satisfying a minimum account size criteria, we are looking for long-term client relationships.
+
+                dt.h6.text-ebony-clay What if I decide to cancel my relationship with you?
+                dd.text-gray-05 There is never any obligation to stay with our program. So in the unlikely event that you are not completely satisfied, you may terminate the relationship at anytime by notifying us immediately.
+
+  ='\n'
+
+  //-Not Sure Which Plan is Right For You?
+  section.section-60.section-md-100.bg-whisperapprox
+    .container
+      .row.row-30.justify-content-lg-center
+        .col-lg-8.col-xl-7
+          h3 Which Plan is Right For You?
+          p.text-gray-05(style='max-width: 420px;').
+            If you are in doubt of which plan to opt for, subscribe to our newsletter and we will try to help you make the right decision.
+        .col-lg-4.col-xl-3
+          a.btn.btn-xl.btn-xl-bigger.btn-ebony-clay-outline(href='contacts.html') Send us a letter
+  ='\n'
+
+
+  //-Page Footer
+  include ../sections/_section-footer-default

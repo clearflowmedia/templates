@@ -1,0 +1,70 @@
+-
+	var
+		htmlClass = "wide wow-animation",
+		fonts = "//fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap",
+		logo = {
+			default: 'logo-default-166x40.svg',
+			inverse: 'logo-inverse-166x40.svg',
+			name: 'Starbis'
+		},
+		links = {
+			getTemplate: 'https://www.templatemonster.com/website-templates/starbis.html',
+			address: '9784 Bear Hill Drive Brooklyn, NY 11228',
+			soundcloud: '<iframe height="166" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/149065581&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>',
+			video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/VrLSBsOkP6k" allowfullscreen></iframe>'
+		},
+		colors = {
+			primary: '#4E3BC8'
+		},
+		menu = [
+			{
+				title: 'Home',
+				link: 'index.html'
+			},
+			{
+				title: 'Pages',
+				link: '#',
+				megamenu: [
+					{
+						title: 'Pages',
+						link: null,
+						list: [
+							{ title: 'About us' },
+							{ title: 'Services' },
+							{ title: '404 Page' },
+							{ title: 'Coming soon' },
+							{ title: 'Privacy Policy' }
+						]
+					},
+					{
+						title: 'Components',
+						link: null,
+						list: [
+							{ title: 'Accordion' },
+							{ title: 'Buttons' },
+							{ title: 'Forms' },
+							{ title: 'Progress bars' },
+							{ title: 'Tabs' },
+							{ title: 'Typography' }
+						]
+					}
+				]
+			},
+			{
+				title: 'Portfolio',
+				link: 'grid-gallery.html'
+			},
+			{
+				title: 'Blog',
+				link: 'masonry-blog.html',
+				dropdown: [
+					{ title: 'Masonry blog' },
+					{ title: 'Blog post' }
+				]
+			},
+			{ title: 'Contact us' }
+		],
+
+		// Predefined variables
+		breadcrumbs = [],
+		pageName = 'Home'

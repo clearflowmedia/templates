@@ -1,0 +1,91 @@
+extends  ../_skeleton
+
+block variables
+  - var activeIndex = 5
+  - var pageName = 'Pricing'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+
+  +page-title(pageName, 'bg-image-4')
+
+  //- Choose your plan
+  section.section-60.section-md-90.section-xl-bottom-15.bg-default
+    .container
+      .row.row-40
+        .col-md-6.col-lg-8
+          .row.row-30
+            .col-lg-6
+              h3.text-spacing--25 Choose Your Plan
+
+            .col-lg-6
+              p.
+                Pick the best plan that meets your business needs. A free trial is available to help you with the decision-making.
+
+        .col-md-5.col-lg-4.col-xl-3.offset-xl-1.offset-top-40.offset-sm-top-0
+          a.btn.btn-primary.btn-block(href='#') Learn More
+        .col-xl-1.d-none.d-xl-block
+
+  ='\n'
+
+  //- Pricing tables
+  section.bg-decoration-wrap.bg-decoration-bottom.section-bottom-60.section-xl-top-100.section-xl-bottom-100.bg-default
+    .container.bg-decoration-content
+      .row.justify-content-md-center
+        .col-lg-10.col-xl-12
+          include ../_includes/_pricing-tables-range
+    .bg-decoration-object.bg-iron.bg-iron-custom
+  ='\n'
+
+  //- Questions & Answers
+  section.section-60.section-md-90
+    .container
+      .row.justify-content-lg-center.row-50
+        .col-sm-12
+          h3.text-spacing--25 Questions & Answers
+        .col-lg-11.col-xl-10
+          .row.row-40
+            .col-md-6
+              dl.list-terms-variant-1
+                dt What if my policy is due for renewal?
+                dd At renewal, we will transfer your policy over to our sister company Insurance Services, which means that form your renewal date you will be insured through Insurance Services. We will write to you prior to your renewal with details of your cover and your premium for the coming year.
+
+                dt Who are Shelter?
+                dd We launched in 1995 to provide insurance to customers of the renowned garages. We now have 20 years of experience in the insurance industry and have recently been awarded a 5 star defaqto rating for our comprehensive car insurance cover, full UK recovery breakdown cover.
+
+                dt What is a claim?
+                dd A claim is a demand to be compensated for an alleged injury.  You may encounter a situation where a patient is unhappy with an outcome.  This is not a claim until there is a demand for compensation or formal legal proceedings based on alleged medical negligence are initiated.
+
+            .col-md-6
+              dl.list-terms-variant-1
+                dt What can I expect from your attorney?
+                dd Initially, you will be contacted by an Shelter attorney for an initial phone interview.  During this conference, you will be advised of the litigation process and a discussion of the specific facts of the insured’s matter will be entertained.
+
+                dt When does info get reported to the (NPDB)?
+                dd The information is reported to the NPDB only when the insurance carrier makes a payment on behalf of an insured. A situation could exist where there is a judgement against an insured and the insured chooses to pay the judgment himself or herself. In that case, no report is made to the NPDB.
+
+                dt How can I obtain my Claims History?
+                dd Requests for claims histories must be in writing and signed by the insured. The request should include the insured’s name, license number, policy number (if not insured under your own name), and the specific years for which the claims history is sought.
+
+  ='\n'
+
+  //- Not Sure Which Plan is Right For You?
+  section.section-60.section-md-100.bg-image.bg-accent
+    .container
+      .row.justify-content-lg-center.row-30
+        .col-lg-8.col-xl-7
+          h3 Not Sure Which Plan is Right For You?
+          p.text-white(style='max-width: 430px;').
+            If you are in doubt of which plan to opt for, subscribe to our newsletter and we will try to help you make the right decision.
+        .col-lg-4.col-xl-3
+          a.btn.btn-xl.btn-xl-bigger.btn-white-outline(href='contacts-us.html') Subscribe Now
+  ='\n'
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

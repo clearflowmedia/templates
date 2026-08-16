@@ -1,0 +1,134 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-icon-box
+include ../elements/_ui-icon-box-vertical
+include ../elements/_ui-icon-box-horizontal
+
+block variables
+  - var activeIndex = 2
+  - var pageName = 'Icon lists'
+
+block title
+  title=pageName
+
+block page
+  //-Page Header
+  include ../sections/_section-header-default
+
+
+  +page-title(pageName, 'bg-image-1')
+
+  //-Lists
+  section.section-40.section-md-top-75.section-md-bottom-50.section-xl-top-90
+    .container
+      h3 Lists
+      .row.row-40
+        .col-sm-6.col-md-4.col-xl-3
+          h5 Unordered List
+          ul.list-marked
+            li Diversification
+            li Potential wealth generation
+            li Cost-effective investment
+            li Access to a range of assets
+            li Geared exposure
+
+
+        .col-sm-6.col-md-4.col-xl-3
+          h5 Ordered List
+          ul.list-ordered
+            li Diversification
+            li Potential wealth generation
+            li Cost-effective investment
+            li Access to a range of assets
+            li Geared exposure
+
+  ='\n'
+
+  //-Icon Left List
+  section.section-40
+    .container
+      h3 Icon Left List
+      .row
+        .col-lg-9.col-xl-12
+          .row.row-40
+            .col-md-6.col-xl-3
+              +icon-box-left({
+                icon: ['icon-lg-bigger', 'mercury-ico mercury-icon-chart-up-2'],
+                header: 'Wealth Management',
+                text: 'The ability to deliver a full range of financial services and products to an affluent client in a consultative way.'
+              })
+
+            .col-md-6.col-xl-3
+              +icon-box-left({
+                icon: ['icon-lg-bigger', 'mercury-ico mercury-icon-group'],
+                header: 'Stocks/Bonds/Funds',
+                text: 'Stocks offer potentially high returns. Let us help you manage your portfolio and offer financial advice. '
+              })
+
+            .col-md-6.col-xl-3
+              +icon-box-left({
+                icon: ['icon-lg-bigger', 'mercury-ico mercury-icon-screen'],
+                header: 'Insurance & Annuities',
+                text: 'We offer a variety of solutions , so you have many options when deciding what type of annuity is right for you.'
+              })
+
+            .col-md-6.col-xl-3
+              +icon-box-left({
+                icon: ['icon-lg-bigger', 'mercury-ico mercury-icon-money'],
+                header: 'Business Owners',
+                text: 'You need a financial plan — one that addresses financial needs for every stage of your business life cycle.'
+              })
+  ='\n'
+
+  //-Icon Top List
+  section.section-50
+    .container
+      h3 Icon Top List
+      .row
+        .col-lg-9.col-xl-12
+          .row.row-50
+            .col-sm-6.col-xl-3
+              +icon-box-vertical({
+                icon: ['icon-lg-bigger', 'mercury-ico mercury-icon-chart-up-2'],
+                textClass: 'text-gray-05',
+                header: 'Wealth Management',
+                text: 'The ability to deliver a full range of financial services and products to an affluent client in a consultative way.'
+              })
+
+            .col-sm-6.col-xl-3
+              +icon-box-vertical({
+                icon: ['icon-lg-bigger', 'mercury-ico mercury-icon-group'],
+                textClass: 'text-gray-05',
+                header: 'Stocks/Bonds/Funds',
+                text: 'Stocks offer potentially high returns. Let us help you manage your portfolio and offer financial advice. '
+              })
+
+            .col-sm-6.col-xl-3
+              +icon-box-vertical({
+                icon: ['icon-lg-bigger', 'mercury-ico mercury-icon-screen'],
+                textClass: 'text-gray-05',
+                header: 'Insurance & Annuities',
+                text: 'We offer a variety of solutions , so you have many options when deciding what type of annuity is right for you.'
+              })
+
+            .col-sm-6.col-xl-3
+              +icon-box-vertical({
+                icon: ['icon-lg-bigger', 'mercury-ico mercury-icon-money'],
+                textClass: 'text-gray-05',
+                header: 'Business Owners',
+                text: 'You need a financial plan — one that addresses financial needs for every stage of your business life cycle.'
+              })
+  ='\n'
+
+  //-Icon Box
+  section.section-top-35.section-bottom-60.section-md-bottom-100
+    .container
+      h3 Icon Box
+
+      include ../sections/_section-icon-box
+  ='\n'
+
+
+  //-Page Footer
+  include ../sections/_section-footer-default

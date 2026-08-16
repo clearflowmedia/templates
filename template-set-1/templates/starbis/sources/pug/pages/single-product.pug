@@ -1,0 +1,287 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_product-item-default
+include ../elements/_quote-review
+include ../elements/_comment-minimal
+include ../elements/_accordion
+
+block variables
+	- pageName = 'Single product'
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title('Shop', 'bg-shop')
+
+	//- Shop product
+	section.section.section-50.section-md-75.section-xl-bottom-120
+		.container
+			.row.justify-content-xl-center
+				.col-xl-10
+					.product.product-single
+						.product-main
+							.product-slider
+								//- Owl Carousel
+								.owl-carousel.owl-carousel-bottom.owl-style-minimal(data-autoplay='true', data-items='1', data-stage-padding='0', data-loop='true', data-margin='30', data-mouse-drag="true", data-dots='true', data-animation-in='fadeIn', data-animation-out='fadeOut')
+									.item
+										+img('product-01-346x721.png')
+									.item
+										+img('product-01-364x720-2.png')
+									.item
+										+img('product-01-352x720-3.png')
+
+							.product-body
+								p.product-brand Tommy Hilfiger
+								h4.product-header Engineered Rib Cashmere
+
+								.product-rating
+									ul.list-rating
+										li: span.novi-icon.icon.icon-xxs.material-icons-star
+										li: span.novi-icon.icon.icon-xxs.material-icons-star
+										li: span.novi-icon.icon.icon-xxs.material-icons-star
+										li: span.novi-icon.icon.icon-xxs.material-icons-star_half
+										li: span.novi-icon.icon.icon-xxs.material-icons-star_border
+
+									span.fw-light 4 customer reviews
+
+								//- Bootstrap collapse
+								#accordionOne.accordion.accordion-group.accordion-group-light.product-accordion
+									+accordion-item({
+										show: true,
+										parentId: 'accordionOne',
+										title: 'Description'
+									}).accordion-light
+										p Rely on this gorgeous Engineered Rib Cashmere from Tommy Hilfiger to keep you cosy for years to come. An essential wardrobe investment, this timeless design adds a new texture to your winter layers.  This is a classic design that will never fade.
+
+									+accordion-item({
+										parentId: 'accordionOne',
+										title: 'Size & Fit'
+									}).accordion-light
+										p 17.25\" bust <br> 14\" shoulder to shoulder <br> 32.25\" shoulder to hem <br> Measurements taken from size small <br> Model wears size small. Model is 5'9 <br> This dress fits true to size
+
+									+accordion-item({
+										parentId: 'accordionOne',
+										title: 'Delivery & Returns'
+									}).accordion-light
+										p We deliver our goods worldwide. No matter where you live, your order will be shipped in time and delivered right to your door or to any other location you have stated. The packages are handled with utmost care, so the ordered products will be handed to you safe and sound, just like you expect them to be.
+
+								ul.product-info
+									li: dl
+										dt Colors
+										dd
+											.form-wrap.form-wrap-color.form-wrap-modern
+												label.radio-inline
+													input.radio-custom(name='input-group-radio-color' value='color-1' type='radio' checked='')
+													span.radio-control(style='background-color: #1b3164;')
+												label.radio-inline
+													input.radio-custom(name='input-group-radio-color' value='color-2' type='radio')
+													span.radio-control(style='background-color: #92909f;')
+												label.radio-inline
+													input.radio-custom(name='input-group-radio-color' value='color-3' type='radio')
+													span.radio-control(style='background-color: #f3f1f2;')
+									li: dl
+										dt Size
+										dd
+											.form-wrap.form-wrap-size.form-wrap-modern
+												label.radio-inline
+													input.radio-custom.radio-product-size(name='input-group-radio-size' value='size-1' type='radio')
+													span.radio-control XXL
+												label.radio-inline
+													input.radio-custom.radio-product-size(name='input-group-radio-size' value='size-2' type='radio')
+													span.radio-control XL
+												label.radio-inline
+													input.radio-custom.radio-product-size(name='input-group-radio-size' value='size-3' type='radio')
+													span.radio-control L
+												label.radio-inline
+													input.radio-custom.radio-product-size(name='input-group-radio-size' value='size-4' type='radio')
+													span.radio-control M
+												label.radio-inline
+													input.radio-custom.radio-product-size(name='input-group-radio-size' value='size-5' type='radio' checked='')
+													span.radio-control S
+												label.radio-inline
+													input.radio-custom.radio-product-size(name='input-group-radio-size' value='size-6' type='radio')
+													span.radio-control XS
+
+									li: dl
+										dt Quantity
+										dd
+											.stepper-lg: input(type="number" data-zeros="false" value="1" min="1" max="40")
+
+								.product-panel
+									.pricing-wrap
+										.pricing-object.pricing-object-md
+											span.small.small-middle $
+											span.price 35
+											span.small.small-bottom .00
+										span.price-irrelevant 49.99
+
+									a.btn.btn-icon.btn-icon-left.btn-primary.product-control(href='shop-cart.html')
+										span.novi-icon.icon.icon-sm.fa-shopping-cart
+										span Add to cart
+
+						.product-footer
+							//- Bootstrap tabs
+							#tabs-1.tabs-custom.tabs-vertical.tabs-corporate
+								//- Nav tabs
+								ul.nav.nav-tabs
+									li: a.nav-link.active(href='#tabs-1-1' data-bs-toggle='tab') Additional Information
+									li: a.nav-link(href='#tabs-1-2' data-bs-toggle='tab') Video Review
+									li: a.nav-link(href='#tabs-1-3' data-bs-toggle='tab') Customer Reviews
+									li: a.nav-link(href='#tabs-1-4' data-bs-toggle='tab') Comments
+
+								//- Tab panes
+								.tab-content.text-secondary
+									div#tabs-1-1.tab-pane.fade.show.active: p Fashion has always been so temporary and uncertain. You can’t keep up with it. This social phenomenon is very whimsical, thus we as the consumers always try to stay in touch with all the latest fashion tendencies.
+									div#tabs-1-2.tab-pane.fade
+										.ratio.ratio-16x9
+											| <iframe width="560" height="315" src="https://www.youtube.com/embed/hhF-oZbI0lk?si=yIJNMtV6l_Xw84pZ" allowfullscreen></iframe>
+									div#tabs-1-3.tab-pane.fade
+										h5 4 Customer Reviews
+										+quote-review({
+											cite: 'John Doe',
+											rating: {
+												count: 4,
+												half: true
+											},
+											text: 'Eius munere cum no. Alia ridens corpora ea his. Sed etiam ignota eu. Vidisse legendos pro ad, numquam voluptatibus per ut, his quot prompta ad. Ius malis movet ea. Altera dissentiunt ut pro, mundi ignota ad sed.'
+										})
+
+										+quote-review({
+											cite: 'Alex Ross',
+											rating: {
+												count: 5
+											},
+											text: 'Qui an veri illum incorrupte. Cu has assum laboramus gloriatur, mea ea meis ferri definitionem, quod percipit evertitur ad qui. Altera omittam moderatius id vis, at vix quod bonorum dolorum. Ei pro graecis reformidans, nisl percipitur ullamcorper vis eu.'
+										})
+
+										+quote-review({
+											cite: 'Diana Roe',
+											rating: {
+												count: 3
+											},
+											text: 'Eius munere cum no. Alia ridens corpora ea his. Sed etiam ignota eu. Vidisse legendos pro ad, numquam voluptatibus per ut, his quot prompta ad. Ius malis movet ea. Altera dissentiunt ut pro, mundi ignota ad sed.'
+										})
+
+										+quote-review({
+											cite: 'Sara Cole',
+											rating: {
+												count: 4,
+												half: true
+											},
+											text: 'No sit case indoctum, ad dicta singulis deterruisset vel. Mea ne nusquam corpora percipit, at ponderum rationibus sea, ubique invenire adolescens pri cu. Est maiorum omittantur ei. Et pro nisl insolens tincidunt, nam equidem maiorum tincidunt eu, magna tibique id vim'
+										})
+
+									div#tabs-1-4.tab-pane.fade
+										+comment-minimal({
+											author: 'martha Perkins',
+											text: "I wanted to say thank you for the amazing product and for the fast processing and delivery. It was impressive, you weren't kidding. I was surprised with such an excellent quality. I am very happy with my purchase. "
+										})
+
+										+comment-minimal({
+											author: 'Ann Johnson',
+											text: 'I loved everything about buying from you! My purchase was carefully packaged and quickly shipped. I was also pleased with great service and delivery times. There is no such awesome store on the web that can match you.'
+										})
+
+										h5 Leave a Comment
+
+										//- RD Mailform
+										form.rd-mailform.form-modern(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+											.row.row-30
+												.col-md-6
+													.form-wrap
+														label.form-label(for="contact-email") Email
+														input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+
+												.col-sm-12
+													.form-wrap
+														.textarea-lined-wrap
+															label.form-label(for="contact-message") Message
+															textarea#contact-message.form-input(name="message" data-constraints="@Required", style='height: 102px;')
+
+												.col-sm-12
+													button.min-width-1(type="submit").btn.btn-primary Submit
+
+	//- Related products
+	section.section.section-50.section-md-90.bg-whisper.novi-background
+		.container
+			.row.justify-content-xl-center
+				.col-xl-10.text-center.text-md-start
+					h3 Related Products
+
+			.row.row-30
+				.col-md-6.col-lg-4.col-xl-3
+					+product-item-default({
+						header: "Engineered Rib Cashmere",
+						brand: "Tommy Hilfiger",
+						price: {
+							irrelevant: '49.99',
+							current: '35'
+						},
+						badge: {
+							elClass: 'badge-danger',
+							positionClass: 'product-badge-wrap-left',
+							text: 'Sale'
+						},
+						slider: [
+							"product-01-270x360.png",
+							"product-01-270x360-2.png",
+							"product-01-270x360-3.png"
+						]
+					})
+
+				.col-md-6.col-lg-4.col-xl-3
+					+product-item-default({
+						header: "Twisted Sweater",
+						brand: "Adidas",
+						price: {
+							irrelevant: '99.00',
+							current: '59.89'
+						},
+						badge: {
+							elClass: 'badge-info',
+							positionClass: 'product-badge-wrap-right',
+							text: 'New'
+						},
+						slider: [
+							"product-02-270x360.png",
+							"product-02-270x360-2.png",
+							"product-02-270x360-3.png"
+						]
+					})
+
+				.col-md-6.col-lg-4.col-xl-3
+					+product-item-default({
+						header: "Knit Cami Top",
+						brand: "Paco Rabane",
+						price: {
+							irrelevant: '99.00',
+							current: '19.89'
+						},
+						slider: [
+							"product-03-270x360.png",
+							"product-03-270x360-2.png",
+							"product-03-270x360-3.png"
+						]
+					})
+
+				.col-md-6.col-lg-4.col-xl-3
+					+product-item-default({
+						header: "Knit Skater Skirt",
+						brand: "Armani",
+						price: {
+							irrelevant: '22.00',
+							current: '14.00'
+						},
+						slider: [
+							"product-06-270x360.png",
+							"product-06-270x360-2.png",
+							"product-06-270x360-3.png"
+						]
+					})
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

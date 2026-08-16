@@ -1,0 +1,74 @@
+// Panel groups
+.card-group.card-group-custom {
+	margin-bottom: 0;
+
+	.card-heading + .card-collapse > .card-body,
+	.card-heading + .card-collapse > .list-group {
+		border-top: 0;
+	}
+
+	.card + .card {
+		margin-top: 0;
+	}
+}
+
+.card-group.card-group-corporate {
+	.card + .card {
+		margin-top: 30px;
+	}
+}
+
+.card-custom {
+	margin: 0;
+	background: inherit;
+	border: 0;
+	border-radius: 0;
+	box-shadow: none;
+
+	a {
+		display: block;
+	}
+
+	// Panel heading
+	.card-heading {
+		padding: 0;
+		border-bottom: 0;
+		@include border-top-radius(0);
+	}
+
+	// Panel contents
+	.card-body {
+		padding: 0;
+		border: 0;
+	}
+}
+
+* + .card-group-custom {
+	margin-top: 35px;
+
+	@include media-breakpoint-up(md) {
+		margin-top: 50px;
+	}
+}
+
+
+.card-lg {
+	position: relative;
+	padding: 50px 15px;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: -45px;
+		left: 50%;
+		width: 55px;
+		height: 55px;
+		margin-left: -10px;
+		background: $white;
+		transform: translateX(-50%) rotate(-45deg);
+	}
+
+	@include media-breakpoint-up(md) {
+		padding: 90px 35px 100px;
+	}
+}

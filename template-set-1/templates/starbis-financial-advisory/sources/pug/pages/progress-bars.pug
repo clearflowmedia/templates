@@ -1,0 +1,100 @@
+extends  ../_skeleton
+include  ../elements/_ui-pogress-linear
+include  ../elements/_ui-countdown
+
+block variables
+	- var activeIndex = 4
+	- var pageName = 'Progress Bars'
+
+block title
+	title=pageName
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title(pageName, 'bg-image-2')
+
+	//- Skills Bars
+	section.section-60.section-md-90.section-xl-bottom-100
+		.container
+			h3 Skills Bars
+			.row.justify-content-md-between.row-40
+				.col-md-6
+					p Using a tax advisor to manage your taxation affairs can be very rewarding.  Professionals are much more likely to be aware of more of the ways in which your taxes can be optimised so that you pay the least possible amount.
+					p The down side is, obviously, the cost involved in employing such an advisor.  This may seem a bit daunting but if you ever find yourself out of your depth, don't worry - TaxAdvisor's tax question and answer service is always on hand.
+
+				.col-md-6
+					.shift-sm-top-1
+						+progress-linear({
+							title: 'Tax Consultancy Services',
+							value: '70'
+						})
+						+progress-linear({
+							title: 'Tax Training',
+							value: '54'
+						})
+						+progress-linear({
+							title: 'Bookkeeping',
+							value: '87'
+						})
+						+progress-linear({
+							title: 'Bank Reconciliation',
+							value: '90'
+						})
+
+	='\n'
+
+	//- Counters
+	section.section-60.section-md-90.bg-cello
+		.container
+			.row
+				.col-sm-12.text-center
+					h3 Counters
+
+			.row.row-40
+				.col-sm-6.col-md-3
+					.box-counter.box-counter-inverse
+						span.icon.icon-lg.icon-primary.fl-puppets-chat-bubble
+						//- CountTo
+						h3.counter 23
+						p.text-san-juan.fw-bold Consultants
+
+				.col-sm-6.col-md-3
+					.box-counter.box-counter-inverse
+						span.icon.icon-lg.icon-primary.fl-puppets-profiles-avatar
+						//- CountTo
+						h3.counter 546
+						p.text-san-juan.fw-bold Happy Clients
+
+				.col-sm-6.col-md-3
+					.box-counter.box-counter-inverse
+						span.icon.icon-lg.icon-primary.fl-puppets-dart19
+						//- CountTo
+						h3.counter 17
+						p.text-san-juan.fw-bold Years of Experience
+
+				.col-sm-6.col-md-3
+					.box-counter.box-counter-inverse
+						span.icon.icon-lg.icon-primary.fl-puppets-geography6
+						//- CountTo
+						h3.counter 260
+						p.text-san-juan.fw-bold Partners
+	='\n'
+
+	//- Progress Bars
+	section.section-60.section-md-90.section-xl-bottom-130
+		.container
+			.row
+				.col-sm-12.text-center
+					h3 Progress Bars
+			.row
+				.col-sm-12
+					.countdown-box.block-centered
+						//- Countdown
+						+countdown({ to: '2024-01-22' })
+	='\n'
+
+	//- Page Footer
+	include ../sections/_section-footer-default

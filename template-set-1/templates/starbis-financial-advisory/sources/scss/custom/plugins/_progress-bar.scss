@@ -1,0 +1,61 @@
+// Progress bars
+
+.progress-linear {
+  position: relative;
+  text-align: left;
+}
+
+.progress-linear-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.progress-linear-body {
+  height: $progress-height;
+  overflow: hidden; // force rounded corners by cropping it
+  line-height: 0;
+  @include font-size($progress-font-size);
+  font-weight: 500;
+  background-color: $progress-bg;
+  @include border-radius($progress-border-radius);
+  @include box-shadow($progress-box-shadow);
+
+}
+
+.progress-linear-title {
+  font-family: $font-family-sec;
+  color: $progress-bar-color;
+  font-weight: 700;
+}
+
+.progress-linear-bar {
+  width: 0;
+  height: inherit;
+  background: $progress-bar-bg;
+  transition: 1s all ease-in-out;
+}
+
+.progress-linear-counter {
+  font-weight: 500;
+  color: $black;
+
+  &::after {
+    content: "%";
+  }
+}
+
+* + .progress-linear-body {
+  margin-top: 4px;
+}
+
+.progress-linear + .progress-linear {
+  margin-top: 15px;
+}
+
+
+@include media-breakpoint-up(lg) {
+  .progress-linear + .progress-linear {
+    margin-top: 25px;
+  }
+}

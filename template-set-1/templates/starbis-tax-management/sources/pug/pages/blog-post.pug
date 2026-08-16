@@ -1,0 +1,170 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-comment
+include ../elements/_ui-post-preview
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Blog Post'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title('Blog', 'bg-image-3')
+
+  //- Blog post
+  section.section-60.section-md-75.section-xl-100
+    .container
+      .row.row-50
+        .col-lg-8.col-xl-9
+          article.post.post-single
+            .post-image
+              figure
+                +jpg('post-1-870x412')
+            .post-header
+              h4 The Importance of Paperwork
+
+            .post-meta
+              ul.list-bordered-horizontal
+                li
+                  dl.list-terms-inline
+                    dt Date
+                    dd: time(datetime='2021-01-22') January 22, 2021
+                li
+                  dl.list-terms-inline
+                    dt Posted by
+                    dd Amelia Lee
+                li
+                  dl.list-terms-inline
+                    dt Comments
+                    dd 3
+                li
+                  dl.list-terms-inline
+                    dt Category
+                    dd Tax Consultancy
+
+            .divider-fullwidth.bg-gray-light
+
+            .post-body
+              p.text-gray-base Most of us will implement some tax planning on behalf of a client which requires some paperwork to support the actions which have been taken. The incorporation of a business requires an issue of shares ,if appropriate a changing of the name of a PAYE scheme, the setting up of a company bank account and new headed notepaper and invoice books to reflect the change to a company.
+              p.text-gray-base A transfer of a property from a company to a director requires a notification to Land Registry. I have come across a number of cases recently where transactions or tax planning have taken place but there has been no paperwork to evidence/support what has happened. This can create significant problems with HMRC who will understandably take the view that in the absence of paperwork the transaction/planning should be ignored. Unexpected tax liabilities can arise – in the case of a property transferred to a director with no supporting paperwork HMRC would look to charge a benefit in kind on the director using the property as his residence.
+              
+              .post-blockquote.inset-md-right-70.inset-xl-left-50.inset-xl-right-120
+                blockquote.quote-minimal-bordered
+                  p: q We must have a fair tax in the United States. We have to re-adjust it, we must be fiscally responsible.
+              p.text-gray-base-08 A recent tribunal case – Terrance Raine v HMRC concerned the setting up of a company where the shares were intended to be allotted equally between Raine and his partner. The paperwork was never completed and the annual return of the company showed Raine as the sole shareholder.
+          
+            .post-footer
+              h5 Share this post:
+              ul.list-inline.list-inline-xs
+                li: a.icon.icon-xxs-small.link-primary.fa-facebook(href='#')
+                li: a.icon.icon-xxs-small.link-primary.fa-twitter(href='#')
+                li: a.icon.icon-xxs-small.link-primary.fa-google-plus(href='#')
+                li: a.icon.icon-xxs-small.link-primary.fa-pinterest-p(href='#')
+
+          .divider-fullwidth.bg-gray-lighter
+
+          //- Comments
+          .post-comment-block
+            h4 3 Comments
+            .comment-list.inset-md-right-60.inset-lg-right-30.inset-xl-right-100
+              .comment-group
+                +comment({
+                  img: 'post-2-70x71',
+                  user: 'July Mao',
+                  text: 'The topic you describe here is really important. However, the mentioned type of training cannot be applied to anyone.'
+                })
+
+                .comment-group-reply
+                  +comment({
+                    img: 'post-3-70x71',
+                    user: 'John doe',
+                    text: 'You are absolutely right! But here, we have everything necessary to prepare even the pre - beginners to extensive physical training.'
+                  })
+
+              .comment-group
+                +comment({
+                  img: 'post-4-70x71',
+                  user: 'Mila MOa',
+                  text: 'Very useful post! Thanks for sharing! Now I’ll be planning my visit to your gym to take part in some fitness classes.'
+                })
+
+          //- Leave a comment
+          .post-comment-form
+            h4 Leave a comment
+            .inset-md-right-60.inset-lg-right-30.inset-xl-right-100
+              //- RD Mailform
+              form.rd-mailform.form-classic.form-classic-bordered.label-outside
+                .form-group
+                  label.form-label-outside(for="comment-message") Message:
+                  textarea#comment-message.form-control(name="message" data-constraints="@Required")
+                
+                button(type="submit" style='min-width: 200px;').btn.btn-primary Submit
+
+        //- Aside
+        .col-lg-4.col-xl-3
+          .inset-lg-left-15
+            .row.row-50
+              .col-md-6.col-lg-12
+                form.rd-search.rd-search-classic(action="search-results.html", method="GET")
+                  .form-group
+                    label(for="rd-search-form-input-1" class="form-label") Search...
+                    input(class="form-control" id="rd-search-form-input-1" type="text" name="s" autocomplete="off")
+                  button.rd-search-submit(type='submit')
+                  
+                h6.text-uppercase.aside-title Categories
+                ul.list-marked-bordered
+                  li: a(href='#')
+                    span Tax Consultancy
+                    span.text-dusty-gray (3)
+                  li: a(href='#')
+                    span Tax Training
+                    span.text-dusty-gray (4)
+                  li: a(href='#')
+                    span Bank Reconciliation
+                    span.text-dusty-gray (4)
+                    
+                h6.text-uppercase.aside-title Popular posts
+                
+                +post-preview({
+                  classes: ['offset-top-15'],
+                  small: true,
+                  img: 'post-preview-1-70x70',
+                  header: 'HMRC Investigations and the Hidden Economy',
+                  time: ['2021-02-04', 'Feb 4, 2021']
+                })
+
+                +post-preview({
+                  classes: ['offset-top-15'],
+                  small: true,
+                  img: 'post-preview-2-70x70',
+                  header: 'The Fourth Industrial Revolution',
+                  time: ['2021-02-04', 'Feb 4, 2021']
+                })
+
+                +post-preview({
+                  classes: ['offset-top-15'],
+                  small: true,
+                  img: 'post-preview-3-70x70',
+                  header: 'Attracting & Retaining Your Best People',
+                  time: ['2021-02-04', 'Feb 4, 2021']
+                })
+
+              .col-md-6.col-lg-12
+                h6.text-uppercase.aside-title Tags
+                ul.list-tag-blocks
+                  li: a(href='#') Planning
+                  li: a(href='#') support
+                  li: a(href='#') business
+                  li: a(href='#') company
+  ='\n'
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

@@ -1,0 +1,56 @@
+include _config
+include _functions
+include _mixins
+
+block variables
+- main();
+
+doctype html
+html(lang="en" class= htmlClass)
+	head
+		block title
+			title= pageName
+
+		meta( charset='utf-8' )
+		meta( name='viewport', content='width=device-width, height=device-height, initial-scale=1.0' )
+		meta( http-equiv='X-UA-Compatible', content='IE=edge' )
+
+
+		//- Stylesheets
+		link( rel='icon', href='images/favicon.ico', type='image/x-icon' )
+		link(rel="stylesheet" type="text/css" href= fonts)
+		link(rel="stylesheet" href="css/bootstrap.css")
+		link(rel="stylesheet" href="css/fonts.css")
+		link(rel="stylesheet" href="css/style.css")
+
+	body
+		.preloader
+			div
+				//- Brand
+				a.brand.brand-md(href='index.html')
+					+logo(true)
+
+				.page-loader-body
+					#spinningSquaresG
+						#spinningSquaresG_1.spinningSquaresG
+						#spinningSquaresG_2.spinningSquaresG
+						#spinningSquaresG_3.spinningSquaresG
+						#spinningSquaresG_4.spinningSquaresG
+						#spinningSquaresG_5.spinningSquaresG
+						#spinningSquaresG_6.spinningSquaresG
+						#spinningSquaresG_7.spinningSquaresG
+						#spinningSquaresG_8.spinningSquaresG
+
+		//- Page
+		.page
+			block page
+
+		//- Global Mailform Output
+		#form-output-global.snackbars
+
+		//- Javascript
+		script(src='js/core.min.js')
+		script(src='js/script.js')
+
+		if( pageName === 'Privacy Policy' )
+			// coded by jarvis

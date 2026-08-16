@@ -1,0 +1,28 @@
+.blurb-icon {
+	position: relative;
+	display: inline-block;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: $primary-light;
+		transform: translate(50%, -15%);
+		z-index: -1;
+	}
+}
+
+.blurb-title {
+	font-family: $font-family-sec;
+	font-size: 20px;
+	letter-spacing: -.02em;
+	font-weight: 500;
+	margin-top: 15px;
+
+	@include media-breakpoint-up(xl) {
+		margin-top: 25px;
+	}
+}

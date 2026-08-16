@@ -1,0 +1,54 @@
+//- Include
+include ../elements/_ui-quote-strict
+
+//- Testimonials
+section.section-top-60.section-md-top-90
+  .container.text-center
+    .row.justify-content-md-center.row-40
+      .col-sm-12
+        h3 Testimonials
+
+      .col-md-11.col-lg-10.col-xl-8
+        //- Slick Carousel
+        .slick-carousel-complex-variant-1
+          .slick-slider.slick-slider-images.slick-slider#child-carousel(data-for=".carousel-parent", data-arrows="false", data-loop="true", data-dots="false", data-swipe="true", data-items="1", data-sm-items='3', data-md-items='3', data-lg-items='3', data-xl-items='3', data-slide-to-scroll="1", data-center-mode="true", data-center-padding='0')
+            .item
+              +jpg('clients-testimonials-3-153x153')
+
+            .item
+              +jpg('clients-testimonials-4-153x153')
+
+            .item
+              +jpg('clients-testimonials-5-153x153')
+
+            .item
+              +jpg('clients-testimonials-6-153x153')
+
+          .slick-slider.carousel-parent.slick-dots-variant-1(data-arrows="false", data-loop="true", data-dots="true", data-swipe="true", data-child="#child-carousel", data-for="#child-carousel", data-items="1", data-sm-items='1', data-md-items='1', data-lg-items='1', data-xl-items='1', data-slide-to-scroll="1", data-center-mode='true')
+            .item
+              +quote-strict({
+                mod: 'quote-strict-inverse',
+                text: "My wife and I want to express our thanks and gratitude for your work on our claim. The claim was handled with great care and sensitivity. Your agent deserves a commendation for your great teamwork. He made a terrible time in our lives go smoothly and quickly. ",
+                cite: "Mark Wilson"
+              })
+            .item
+              +quote-strict({
+                mod: 'quote-strict-inverse',
+                text: "I wanted to take a moment and tell you what a fantastic employee you have. She treated me with the utmost professionalism and was a calming voice that alleviated my stress during a stressful situation. She is an absolute pleasure to work with.",
+                cite: "Alan Smith"
+              })
+
+            .item
+              +quote-strict({
+                mod: 'quote-strict-inverse',
+                text: "I hold Shelter in the highest regard as far as customer service goes. You folks are top notch. Whether by phone or email, I get the information and answers I need in a prompt and courteous manner. Thanks again!",
+                cite: "Gregory Smith"
+              })
+
+            .item
+              +quote-strict({
+                mod: 'quote-strict-inverse',
+                text: "I love working with everyone here. Our underwriters have been fantastic and are so willing to help and figure out solutions if there are problems. I love that if my underwriter doesn’t know the answer to a question nothing is made up—she finds the answer.",
+                cite: "Jane Williams"
+              })
+='\n'

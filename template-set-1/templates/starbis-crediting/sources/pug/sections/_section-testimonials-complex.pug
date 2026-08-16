@@ -1,0 +1,46 @@
+//- Include
+include ../elements/_ui-quote-strict
+
+//- Testimonials
+section.section-75.section-lg-100.bg-lizar
+  .container
+    h2 What People Say
+
+    .quote-warpper
+      .quote-angle
+      // Owl Carousel
+      .owl-carousel.owl-carousel-nav-lg(data-animation-in='fadeIn', data-animation-out='fadeOut' data-items='1', data-stage-padding='0', data-loop='true', data-margin='30', data-mouse-drag="false",
+        data-owl= {
+          dots: true,
+          nav: true,
+          autoplayTimeout: 3500
+        })
+        .item
+          +quote-minimal({
+            img: 'clients-testimonials-13-156x156',
+            mod: 'quote-skew',
+            title: 'I’m recommending you to all my colleagues ',
+            text: "I recently closed a mortgage loan through FastCredit and I was extremely pleased with the procedure. This company has the most experienced loan experts.",
+            cite: "Susan Bennett",
+            caption: "Manager"
+          })
+
+        .item
+          +quote-minimal({
+            img: 'clients-testimonials-14-156x156',
+            mod: 'quote-skew',
+            title: 'I got a loan quickly and I felt like they really cared about me',
+            text: "All went well at the closing of my mortgage last week. FastCredit made the process as painless as possible and did everything in a professional and timely manner.",
+            cite: "Jeffrey Neddery",
+            caption: "Student"
+          })
+
+        .item
+          +quote-minimal({
+            img: 'clients-testimonials-15-156x156',
+            mod: 'quote-skew',
+            title: 'FastCredit cared and did everything to make the process fast and simple!',
+            text: " I just wanted to thank you and your                     colleagues                    for the                    role you                    played                    in my                    apartment closing,                    which occurred                    yesterday without                    a hitch. You are real professionals!",
+            cite: "Amanda smith ",
+            caption: "Sales Manager"
+          })

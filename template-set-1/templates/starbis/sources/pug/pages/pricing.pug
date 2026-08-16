@@ -1,0 +1,83 @@
+extends  ../_skeleton
+
+block variables
+	- pageName = 'Pricing'
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title(pageName, 'bg-image-2')
+
+	//- Choose your plan
+	section.section.section-60.section-md-90.section-xl-bottom-15.bg-whisper.novi-background
+		.container
+			.row.row-40
+				.col-md-6.col-lg-8
+					.row.row-30
+						.col-lg-6
+							h3 Choose your plan
+
+						.col-lg-6
+							p Pick the best plan that meets your business needs. A free trial is available to help you with the decision-making.
+
+				.col-md-5.col-lg-4.col-xl-3.offset-xl-1
+					a.btn.btn-primary.btn-block(href='#') Download free trial
+
+
+
+	//- Pricing tables
+	section.bg-decoration-wrap.bg-decoration-bottom.section-bottom-60.section-xl-top-100.section-xl-bottom-100.bg-whisper.novi-background
+		.container.bg-decoration-content
+			.row.justify-content-md-center
+				.col-lg-10.col-xl-12
+					include ../includes/_pricing-tables-range
+		.bg-decoration-object.bg-iron
+
+
+	//- Questions & Answers
+	section.section.section-60.section-md-90
+		.container
+			h3 Questions & Answers
+			.row.justify-content-lg-center
+				.col-lg-11.col-xl-10
+					.row.row-40
+						.col-md-6
+							dl.list-terms-variant-1
+								dt How does the 14-day trial work?
+								dd Once you decide to opt for any of our plans, you can run a 14-day free trial first. Including all the basic features of each of the offered pricing plans, it will help you decide which features are of the greatest value to you. Once the 14 day period is over, you will be asked to make your choice.
+
+								dt My account has expired, can I recover it?
+								dd If you do not decide to purchase the same or upgrade to a new plan, your account will expire. You can recover it by buying any of the offered plans. All data from your personal account will remain intact for 6 months. If you do not upgrade till that moment, all data will vanish.
+
+								dt Do you offer discounts for students?
+								dd We offer student and non-profit discounts. Just open a private discussion with us, verify your status and we will provide you with a 20% discount on any of the provided plans. We may ask you to confirm your status with documentation, so please get ready to verify that.
+
+						.col-md-6
+							dl.list-terms-variant-1
+								dt What happens at the end of my trial?
+								dd After the end of your trial, you will automatically pay for the Starter Plan (the cheapest of the offered ones). Just in case you do not want to continue or wish to opt for any other plan, be sure to cancel the subscription before the free trial ends. For more detailed information, contact the support team.
+
+								dt Can I change/cancel plans anytime?
+								dd Yes, you can. Our plans are month-to-month or yearly. You are free to cancel the selected plan anytime you wish. Once you decide to cancel the current plan, we will not charge you for the next period. As soon as you decide what other plan to opt for, we will contact you for verification.
+
+								dt How do I access my account?
+								dd If you are having problems with accessing your account, please follow several quick and easy troubleshooting steps that will help you fix the issue in no time. For example, you can reset your password via email or SMS, change the username, or whatsoever.
+
+
+	//- Not Sure Which Plan is Right For You?
+	section.section.section-60.section-md-100.bg-gray-dark.bg-image.novi-background(style='background-image: url(images/bg-gradient-1.png);')
+		.container
+			.row.row-30.justify-content-lg-center
+				.col-lg-8.col-xl-7
+					h3 Not Sure Which Plan is Right For You?
+					p(style='max-width: 420px;').
+						If you are in doubt of which plan to opt for, subscribe to our newsletter and we will try to help you make the right decision.
+				.col-lg-4.col-xl-3
+					a.btn.btn-xl.btn-xl-bigger.btn-black-outline(href='contact-us.html') Send us a letter
+
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

@@ -1,0 +1,129 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-quote-default
+include ../elements/_ui-placeholders
+
+block variables
+  - var activeIndex = 5
+  - var pageName = 'Typography'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+
+  +page-title(pageName, 'bg-image-1')
+
+  //- Typography
+  section.section-60.section-md-top-75.section-md-bottom-50
+    .container
+      .row.row-30
+        .col-md-6
+          h1 Heading 1
+          +text-placeholder
+
+        .col-md-6
+          h2 Heading 2
+          +text-placeholder
+
+      .row.row-30
+        .col-md-6
+          h3 Heading 3
+          +text-placeholder
+
+        .col-md-6
+          h4 Heading 4
+          +text-placeholder
+
+      .row.row-30
+        .col-md-6
+          h5 Heading 5
+          +text-placeholder
+
+        .col-md-6
+          h6 Heading 6
+          +text-placeholder
+  ='\n'
+
+  //- Blockquote
+  section.section-35
+    .container
+      .row
+        .col-sm-12
+          h3.text-spacing--30 Blockquote
+          div(style='max-width: 550px;')
+          +quote-default('Tom Brown was able to save us a substantial amount of premium dollars and improve our insurance coverage!')
+  ='\n'
+
+  //- Text Formatting
+  section.section-md-50
+    .container
+      .row
+        .col-sm-12
+          h3.text-spacing--30 Text Formatting
+
+          .box-text
+            a(href='#').link.link-primary-inline Link text
+            a(href='#').link.link-primary-inline.hover Hover link text
+            a(href='#').link.link-primary-inline.active Press link
+            span.mark highlighted text
+            span.text-strike strickethrough text
+            span.text-underline underlined text.
+  ='\n'
+
+
+  //- Image Centered
+  section.section-35
+    .container
+      .row
+        .col-sm-12
+          h3.text-spacing--30 Image Centered
+          figure
+            +jpg('typography-1-1169x610')
+          p.text-gray-darker Our agency can provide you and your family with quality insurance for your personal, business and financial needs.
+  ='\n'
+
+  //- Image Right
+  section.section-35.section-md-50
+    .container
+      .row
+        .col-sm-12
+          h3.text-spacing--30 Image Right
+      .row.flex-md-row-reverse.justify-content-lg-between.row-30
+        .col-md-6
+          figure
+            +jpg('typography-2-570x386')
+        .col-md-6
+          .inset-lg-right-40.inset-xl-right-85.text-gray-darker
+            p.
+              Our agency can provide you and your family with quality insurance for your personal, business and financial needs. Our knowledgeable agents can help your find affordable and reliable car insurance, home insurance, commercial insurance or life insurance. The staff truly believes, “It’s all about protecting you!”
+
+            p.
+              Our mission is to help protect people in our communities from the financial impact of law suits, fires, car accidents and other unexpected incidents. Our focus is to help our clients grow their assets. We believe in being local and we strive to improve the communities where we live and work. We offer an inclusive selection of products and client-focused service to go beyond meeting your needs and instead, exceeding your expectations! Our team of professionals are experienced and prepared to customize your policies to fit your situation and lifestyle.
+  ='\n'
+
+  //- Image Left
+  section.section-40.section-md-bottom-100.section-xl-bottom-165
+    .container
+      .row
+        .col-sm-12
+          h3.text-spacing--30 Image Left
+      .row.justify-content-lg-between.row-30
+        .col-md-6
+          figure
+            +jpg('typography-3-570x386')
+        .col-md-6
+          .inset-lg-left-40.inset-xl-left-70.text-gray-darker
+            p.
+              Our agency can provide you and your family with quality insurance for your personal, business and financial needs. Our knowledgeable agents can help your find affordable and reliable car insurance, home insurance, commercial insurance or life insurance. The staff truly believes, “It’s all about protecting you!”
+            p.
+              Our mission is to help protect people in our communities from the financial impact of law suits, fires, car accidents and other unexpected incidents. Our focus is to help our clients grow their assets. We believe in being local and we strive to improve the communities where we live and work. We offer an inclusive selection of products and client-focused service to go beyond meeting your needs and instead, exceeding your expectations! Our team of professionals are experienced and prepared to customize your policies to fit your situation and lifestyle.
+  ='\n'
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

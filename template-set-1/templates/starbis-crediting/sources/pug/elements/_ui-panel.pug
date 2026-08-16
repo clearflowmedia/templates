@@ -1,0 +1,47 @@
+mixin panel(obj)
+  - var headingId = id=obj.parentId + 'Heading' + obj.number
+  - var bodyId = id=obj.parentId + 'Collapse' + obj.number
+
+  //- Bootstrap panel
+  .panel.panel-custom(class=obj.panelClass)
+    .panel-heading(id=headingId, role='tab')
+      .panel-title
+        if(obj.first)
+          a(role='button', data-bs-toggle='collapse', data-parent='#' + obj.parentId, href='#' + bodyId, aria-controls=bodyId, aria-expanded='true')
+            =obj.header
+            .panel-arrow
+        else
+          a.collapsed(role='button', data-bs-toggle='collapse', data-parent='#'+ obj.parentId, href='#' + bodyId, aria-controls=bodyId)
+            =obj.header
+            .panel-arrow
+
+    .panel-collapse.collapse(id=bodyId, class={'in' : obj.first}, role='tabpanel', aria-labelledby=headingId)
+      .panel-body
+        if (typeof(obj.text) === 'undefined')
+          !=obj.content
+        else
+          p=obj.text
+
+mixin panel-secondary(obj)
+  - var headingId = id=obj.parentId + 'Heading' + obj.number
+  - var bodyId = id=obj.parentId + 'Collapse' + obj.number
+
+  //- Bootstrap panel
+  .panel.panel-white(class=obj.panelClass)
+    .panel-heading(id=headingId, role='tab')
+      .panel-title
+        if(obj.first)
+          a(role='button', data-bs-toggle='collapse', data-parent='#' + obj.parentId, href='#' + bodyId, aria-controls=bodyId, aria-expanded='true')
+            =obj.header
+            .panel-arrow
+        else
+          a.collapsed(role='button', data-bs-toggle='collapse', data-parent='#'+ obj.parentId, href='#' + bodyId, aria-controls=bodyId)
+            =obj.header
+            .panel-arrow
+
+    .panel-collapse.collapse(id=bodyId, class={'in' : obj.first}, role='tabpanel', aria-labelledby=headingId)
+      .panel-body
+        if (typeof(obj.text) === 'undefined')
+          !=obj.content
+        else
+          p=obj.text

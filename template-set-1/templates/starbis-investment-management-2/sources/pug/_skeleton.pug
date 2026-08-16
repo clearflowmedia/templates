@@ -1,0 +1,61 @@
+- var fonts = "//fonts.googleapis.com/css?family=Montserrat:400,700%7CLato:300,300italic,400,400italic,700italic,800%7CQuicksand:400,700"
+- var html_class = "wide wow-animation"
+
+include _mixins
+include _functions
+include _config
+
+block variables
+
+doctype html
+
+html(lang="en" class=html_class)
+	head
+		//- Site Title
+		block title
+			title Home
+
+		meta(name="format-detection" content="telephone=no")
+		meta(name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(charset='utf-8')
+
+		link(rel="icon" href="images/favicon.ico" type="image/x-icon")
+
+		//- Stylesheets
+		link(rel="stylesheet" type="text/css" href=fonts)
+		link(rel="stylesheet" href="css/bootstrap.css")
+		link(rel="stylesheet" href="css/fonts.css")
+		link(rel="stylesheet" href="css/style.css")
+
+		= "\n\t\t"
+
+	body(class=bodyClass, style=typeof(bodyImage) == 'undefined' ? '' : 'background-image: url(images/' + bodyImage + '.jpg);')
+		//- Page
+		.page
+			.page-loader.page-loader-variant-1
+				div
+					//- Brand
+					a.brand.brand-md.brand-inverse(href='index.html')
+						+png('logo-white-135x45')
+
+					.page-loader-body
+						#spinningSquaresG
+							#spinningSquaresG_1.spinningSquaresG
+							#spinningSquaresG_2.spinningSquaresG
+							#spinningSquaresG_3.spinningSquaresG
+							#spinningSquaresG_4.spinningSquaresG
+							#spinningSquaresG_5.spinningSquaresG
+							#spinningSquaresG_6.spinningSquaresG
+							#spinningSquaresG_7.spinningSquaresG
+							#spinningSquaresG_8.spinningSquaresG
+
+			block page
+
+		//- Global Mailform Output
+		#form-output-global.snackbars
+
+
+		//- Javascript
+		script(src='js/core.min.js')
+		script(src='js/script.js')

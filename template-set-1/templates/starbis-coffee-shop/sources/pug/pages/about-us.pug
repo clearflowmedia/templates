@@ -1,0 +1,82 @@
+extends  ../_skeleton
+include ../elements/_progress-linear
+
+//- Includes
+include ../sections/_section-header-default
+
+block variables
+	- pageName = 'About us'
+
+block page
+	// Page Header
+	+header-default
+
+	//- Page Content
+	+breadcrumbs
+
+	// Intro
+	section.section.section-intro-2.bg-transparent
+		.container.position-relative
+			.row.justify-content-center
+				.col-md-10.col-xl-8
+					h1 Your #1
+						br
+						| Coffee Shop
+					.row.row-30
+						.col-md-6
+							p Meate Coffee Shop offers a unique coffee house environment unlike any other. We are not just a place to drop in and get your morning cup of coffee.
+						.col-md-6
+							p We also are a place where you can sit down and enjoy that tailor-made cup of coffee. Meate also offers a seating area created specifically for comfortable work.
+
+			.row.row-30.row-4xl
+				.col-sm-6.col-md-2
+					.img-wrap.img-wrap-fit
+						+img("about-01-370x480").img-collapsed-end.img-shifted-08
+				.col-sm-6.col-md-4
+					.img-wrap.img-wrap-fit
+						+img("about-02-370x208").img-shifted-09
+				.col-sm-6.col-md-4
+					.img-wrap.img-wrap-fit
+						+img("about-03-370x340").img-shifted-10
+				.col-sm-6.col-md-2
+					.img-wrap.img-wrap-fit
+						+img("about-04-370x480").img-collapsed-start.img-shifted-08
+
+	//- About
+	section.section.section-lg.bg-transparent
+		.container
+			.row.row-30.row-md-60.row-xl-120.justify-content-center
+				.col-md-10.col-xl-8
+					h2 Established in 2007
+					h5 #1 provider of quality coffee
+					p We are a team of dedicated coffee fans who celebrate exceptional coffee brands and roasters by providing awesome coffee drinks.
+					p Our coffee shop offers a delicious variety of coffee made by our professionally trained baristas. We have everything from classic coffee to our house-made specialty beverages. All of our sauces & syrups are made in-house with all natural ingredients.
+				.col-md-8
+					+img('about-5-590x332')
+			.row.row-xs.justify-content-center: .col-md-10.col-xl-8: hr.divider-xl
+	='\n'
+
+	section.section.section-lg.bg-transparent
+		.container
+			.row.row-30.row-md-60.row-xl-120.justify-content-center
+				.col-md-10.col-xl-8
+					h2 Mission & Goals
+					p We aim to be a welcoming, comforting presence in every community we serve and anywhere else we happen to show up. We know our guests have a choice — and we want them to feel special.
+					p These four principles determine our work and commitment:
+					ul.list-marked-variant-2
+						li Serving the best quality coffees and teas
+						li Treating our customers respectfully
+						li Providing a welcoming & pleasant environment
+						li Creating a positive workplace for our employees
+				.col-md-10.col-xl-8
+					button.btn.btn-block.btn-xl.btn-transform.btn-icon.btn-icon-right.btn-primary( data-bs-toggle="modal", data-bs-target= "#reservation" )
+						span.icon.mdi.mdi-arrow-top-right
+						| Reserve a Table
+
+	='\n'
+
+	+map.section-sm
+	// Page Footer
+	include ../sections/_section-footer-default
+	// Modal
+	include ../includes/_modal

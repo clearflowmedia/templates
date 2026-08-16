@@ -1,0 +1,58 @@
+extends  ../_skeleton
+
+//- Includes
+include ../sections/_section-header-default
+include ../elements/_product-cart-item
+
+block variables
+	- pageName = 'Shop cart'
+
+block page
+	//- Page Header
+	+header-default
+
+	//- Page Content
+	+breadcrumbs
+
+	//- 2 Items in your cart
+	section.section.section-sm.bg-transparent
+		.container
+			.row.row-40
+				.col-sm-12
+					h3 2 Items in your cart
+
+				.col-sm-12
+					+product-cart-item({
+						img: 'product-01-146x152.png',
+						header: 'Black MUG',
+						color: '#151515',
+						size: 'XXL',
+						count: '1',
+						price: '19.89'
+					})
+
+					+product-cart-item({
+						img: 'product-05-146x152.png',
+						header: 'GRAY & WHITE MUG',
+						color: '#FFFFFF',
+						size: 'XXL',
+						count: '1',
+						price: '145'
+					})
+
+			.row.row-30.text-end
+				.col-md-11
+					dl.dl-inline
+						dt Total
+						dd
+							.pricing-object.pricing-object-sm
+								span.small.small-top $
+								span 164
+								span.small.small-bottom .89
+				.col-sm-12
+					a.btn.btn-xl.btn-primary(href='shop-checkout.html') proceed to checkout
+
+
+	+map.section-sm
+	//- Page Footer
+	include ../sections/_section-footer-default

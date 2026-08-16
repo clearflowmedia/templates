@@ -1,0 +1,75 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-post-block
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Blog Grid'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title('Blog', 'bg-image-1')
+
+  //- Blog masonry
+  section.section-50.section-md-75.section-xl-100
+    .container
+      .row.justify-content-md-center.justify-content-lg-start.row-30
+        .col-md-9.col-lg-6.height-fill
+          +post-block({
+            img: 'blog-grid-1-570x253',
+            header: 'Choosing the Strategy',
+            user: 'Joan Williams',
+            time: ['2021-01-01', '5 days ago'],
+            tags: ['Strategy', 'Capital']
+          })
+
+        .col-md-9.col-lg-6.height-fill
+          +post-block({
+            img: 'blog-grid-2-570x253',
+            header: 'Narrow Your Focus to Prevent Overanalysis',
+            user: 'Tom Park',
+            time: ['2021-01-01', '5 days ago'],
+            tags: ['Idea', 'Business']
+          })
+
+        .col-md-9.col-lg-6.height-fill
+          +post-block({
+            img: 'blog-grid-3-570x253',
+            header: '8 Tips for Building a Bankable Business',
+            user: 'John Miller',
+            time: ['2021-01-01', '5 days ago'],
+            tags: ['Business', 'Plan']
+          })
+
+        .col-md-9.col-lg-6.height-fill
+          +post-block({
+            img: 'blog-grid-4-570x253',
+            header: 'New HMRC Offshore Disclosure Facility',
+            user: 'Jack Williams',
+            time: ['2021-01-01', '5 days ago'],
+            tags: ['Facility', 'Opportunity']
+          })
+
+        .col-md-9.col-lg-6.height-fill
+          +post-block({
+            img: 'blog-grid-5-570x253',
+            header: 'Your Business Model is the Foundation of Your Business Plan',
+            user: 'Amelia Anderson',
+            time: ['2021-01-01', '5 days ago'],
+            tags: ['Business', 'Plan']
+          })
+
+      .row.text-center
+        .col-sm-12
+          +pagination
+  ='\n'
+
+  //- Page Footer
+  include ../sections/_section-footer-default

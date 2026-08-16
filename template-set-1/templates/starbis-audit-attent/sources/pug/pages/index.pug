@@ -1,0 +1,842 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-icon-box-vertical
+include ../elements/_ui-thumbnail-1
+include ../elements/_ui-thumbnail-3
+include ../elements/_ui-link-image
+include ../elements/_ui-icon-box
+include ../elements/_ui-quote-strict
+include ../elements/_ui-quote-vertical
+include ../elements/_ui-post-preview
+
+block variables
+	- var activeIndex = 0
+	- var footerLink = true
+
+block title
+	title Audit Attent
+
+block page
+	//- Page Header
+	header.page-head
+		//- RD Navbar
+		.rd-navbar-wrap
+			nav.rd-navbar.rd-navbar-corporate-dark(data-layout='rd-navbar-fixed', data-sm-layout='rd-navbar-fixed', data-md-device-layout='rd-navbar-fixed', data-md-layout='rd-navbar-fixed' data-lg-layout='rd-navbar-static'  data-xl-layout='rd-navbar-static'  data-xxl-layout='rd-navbar-static', data-lg-device-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static", data-stick-up-clone='false', data-md-stick-up-offset="53px", data-lg-stick-up-offset="53px" data-md-stick-up="true" data-lg-stick-up="true")
+				.rd-navbar-inner
+					.rd-navbar-aside
+						.rd-navbar-aside-toggle(data-custom-toggle='.rd-navbar-aside', data-custom-toggle-disable-on-blur='true')
+							span
+						.rd-navbar-aside-content.context-dark
+							ul.rd-navbar-aside-group.list-units
+								li
+									.unit.unit-horizontal.unit-spacing-xs
+										.unit-left
+											span.icon.icon-xxs-small.icon-primary.material-icons-place.icon-shift-1.offset-top-2
+										.unit-body
+											a.link-white-v2.d-inline(href='#')=globals.address
+
+								li
+									.unit.unit-horizontal.unit-spacing-xs
+										.unit-left
+											span.icon.icon-xxs.icon-primary.fa-clock-o.offset-top-2
+										.unit-body
+											p.text-white Mon – Sat: 9:00am–18:00pm. Sunday CLOSED
+
+								li
+									.unit.unit-horizontal.unit-spacing-xs
+										.unit-left
+											span.icon.icon-xxs.icon-primary.material-icons-phone.icon-shift-2
+										.unit-body
+											a.link-white-v2(href='tel:#') +1 (409) 987–5874
+
+
+							.rd-navbar-aside-group
+								ul.list-inline.list-inline-reset
+									li: a.icon.icon-round.icon-abbey-filled.icon-xxs-smallest.fa.fa-facebook(href='#')
+									li: a.icon.icon-round.icon-abbey-filled.icon-xxs-smallest.fa.fa-twitter(href='#')
+									li: a.icon.icon-round.icon-abbey-filled.icon-xxs-smallest.fa.fa-google-plus(href='#')
+
+					.rd-navbar-group.rd-navbar-search-wrap
+						//- RD Navbar Panel
+						.rd-navbar-panel
+							//- RD Navbar Toggle
+							button.rd-navbar-toggle(data-custom-toggle='.rd-navbar-nav-wrap', data-custom-toggle-disable-on-blur='true')
+								span
+
+							//- RD Navbar Brand
+							a.rd-navbar-brand.brand(href='index.html')
+								//- Logo
+								+png("logo-135x34")
+
+						.rd-navbar-nav-wrap
+							.rd-navbar-nav-inner
+								include ../_includes/navbar/_nav
+
+
+	//- Swiper
+	section#home(data-type="anchor")
+		.swiper-container.swiper-slider.swiper-variant-1.bg-black(data-loop='true' data-autoplay='5500', data-simulate-touch='true', data-slide-effect='fade')
+			.swiper-wrapper.text-center
+				.swiper-slide(data-slide-bg='images/home-slider-1-slide-1.jpg')
+					.swiper-slide-caption
+						.container
+							.row.justify-content-sm-center
+								.col-md-11.col-lg-10
+									.text-white.text-uppercase.jumbotron-custom.border-modern(data-caption-animate='fadeInUp', data-caption-delay='0s') Upgrade #[span.text-thin your business]
+										span.border-modern-item-1
+										span.border-modern-item-2
+										span.border-modern-item-3
+										span.border-modern-item-4
+									div(data-caption-animate='fadeInUp', data-caption-delay='450s')
+										p.text-big-19.text-white.d-none.d-md-inline-block We provide extensive assistance with any audit issues to modern businesses
+									.btn-block(data-caption-animate='fadeInUp', data-caption-delay='550s')
+										button.btn.btn-primary( data-bs-toggle="modal" data-bs-target="#appointment") make An Appointment
+
+				.swiper-slide(data-slide-bg='images/home-slider-1-slide-2.jpg')
+					.swiper-slide-caption
+						.container
+							.row.justify-content-sm-center
+								.col-md-11.col-lg-10.col-xl-12
+									.text-white.text-uppercase.jumbotron-custom.border-modern(data-caption-animate='fadeInUp', data-caption-delay='0s') We Provide Proper Audit Solutions
+										span.border-modern-item-1
+										span.border-modern-item-2
+										span.border-modern-item-3
+										span.border-modern-item-4
+									div(data-caption-animate='fadeInUp', data-caption-delay='450s')
+										p.text-big-19.text-white.d-none.d-md-inline-block Optimize audit costs using our years of experience
+									.btn-block(data-caption-animate='fadeInUp', data-caption-delay='550s')
+										button.btn.btn-primary(data-bs-toggle="modal" data-bs-target="#appointment") make An Appointment
+
+				.swiper-slide(data-slide-bg='images/home-slider-1-slide-3.jpg')
+					.swiper-slide-caption
+						.container
+							.row.justify-content-sm-center
+								.col-md-11.col-lg-10
+									.text-white.text-uppercase.jumbotron-custom.border-modern(data-caption-animate='fadeInUp', data-caption-delay='0s') Quality  #[span.text-thin Support]
+										span.border-modern-item-1
+										span.border-modern-item-2
+										span.border-modern-item-3
+										span.border-modern-item-4
+									div(data-caption-animate='fadeInUp', data-caption-delay='450s')
+										p.text-big-19.text-white.d-none.d-md-inline-block Our team is always ready to help you with any business issue you may have
+									.btn-block(data-caption-animate='fadeInUp', data-caption-delay='550s')
+										button.btn.btn-primary(data-bs-toggle="modal" data-bs-target="#appointment") make An Appointment
+
+			//- Swiper Navigation
+			.swiper-scrollbar.d-xl-none
+			.swiper-nav-wrap.d-none.d-xl-block
+				.swiper-button-prev
+				.swiper-button-next
+
+
+
+
+	//- Page Content
+
+	//- What is Tax?
+	section.section-60.section-md-90.section-md-bottom-100.bg-default.bg-image.bg-image-1(style='background-image: url(images/about-1.jpg);')
+		.container
+			.row.justify-content-md-center.justify-content-lg-end
+				.col-md-8.col-lg-6.col-xl-5
+					h3
+						| Why
+						=' '
+						span.text-thin Choose Us
+
+					p.text-black-05 At Audi attentt, we treat each client's business as if it were our own. To us, nothing is more important than knowing all we can about your financial goals and aspirations, and helping you to achieve them. Our professional team is constantly working to know every significant aspect of your business operation, and the key members of your organization. We understand that you are looking for high quality business consulting, and that’s exactly what we provide.
+					a.btn.btn-primary(href='#') Read more
+
+				.col-lg-1
+
+
+	section.bg-cape-cod.context-dark
+		.container
+			.row.justify-content-sm-center.justify-content-lg-start
+				.col-sm-10.col-lg-5.text-start.section-60.section-md-90
+					div
+						h3
+							| our
+							=' '
+							span.text-thin advantages
+
+						.row.row-30.inset-left-15
+							.col-12
+								.unit.unit-xs.unit-xs-horizontal
+									.unit-left
+										span.icon.icon-primary.icon-lg-bigger.thin-icon-briefcase-2
+									.unit-body
+										h4.text-white Confidentiality
+										p.text-white-05 We guarantee the confidentiality of our client data through strict control over our infrastructure, as well as our physical and personal access rights.
+							.col-12
+								.unit.unit-xs.unit-xs-horizontal
+									.unit-left
+										span.icon.icon-primary.icon-lg-bigger.thin-icon-support
+									.unit-body
+										h4.text-white Comprehensive support
+										p.text-white-05 As an experienced outsourcing provider, we  offer legal services, audit and internal control, financial administration, and other business support.
+							.col-12
+								.unit.unit-xs.unit-xs-horizontal
+									.unit-left
+										span.icon.icon-primary.icon-lg-bigger.thin-icon-time
+									.unit-body
+										h4.text-white Quality
+										p.text-white-05 We are dedicated to providing high quality financial administration services based on extensive experience and knowledge.
+
+				.col-lg-1.d-none.d-lg-inline-block
+				.col-lg-6.section-image-aside.section-image-aside-right
+					.section-image-aside-img.d-none.d-lg-block(style='background-image: url(images/about-2.jpg)')
+
+
+
+
+	//- Why Us?
+	section.section-66.section-md-90.section-xl-bottom-120#about(data-type="anchor")
+		.container
+			.row
+				.col-sm-12
+					h3
+						| Who
+						=' '
+						span.text-thin we are
+
+			.row.justify-content-xl-between.row-40
+				.col-md-6.col-xl-5.text-secondary
+					.inset-md-right-15.inset-xl-right-0
+						p.text-gray-darker.
+							Audit attent provides progressively minded, growing businesses with a single source of strategic solutions that span the full range of their needs – from tax, assurance, accounting and advisory to hands-on business consulting.
+						p.text-gray-darker.
+							We have built our firm on a solid foundation of knowledge, a forward-looking vision and a belief in doing business differently. Our goal is to empower you – wherever you are based – to navigate your complex business challenges with confidence.
+
+				.col-md-6
+					.shift-sm-top-1
+						include ../_includes/_progress-list
+
+						.progress-group
+							+progress-linear({
+							    title: 'Tax Consultancy Services',
+								value: '70'
+							}).progress-linear-primary
+							+progress-linear({
+                                title: 'Audit',
+                                value: '54'
+                            }).progress-linear-old-gold
+							+progress-linear({
+                                title: 'Bookkeeping',
+                                value: '87'
+                            }).progress-linear-bermuda-gray
+							+progress-linear({
+                                title: 'Bank Reconciliation',
+                                value: '90'
+                            }).progress-linear-contessa
+
+	//-sect Looking for
+	section.section-with-counters.bg-accent.text-center
+		.container.bg-cape-cod.context-dark.section-60.section-lg-90
+			h4.text-rolling-stone.fw-bold.text-uppercase Looking for
+			h3.section-title
+				span.text-thin a First-Class
+				=' '
+				| auditor?
+			p.text-white With a lot of experience in audit, hiring us will become a proper solution for your business!
+
+			.row.list-md-dashed.row-40
+				.col-md-3
+					.h1.small.counter-bold.counter 850
+					.counter-title.fw-bold.text-white.text-uppercase Trusted Clients
+				.col-md-3
+					.h1.small.counter-bold.counter 18
+					.counter-title.fw-bold.text-white.text-uppercase Awards
+				.col-md-3
+					.h1.small.counter-bold.counter 21
+					.counter-title.fw-bold.text-white.text-uppercase Years of Experience
+				.col-md-3
+					.h1.small.counter-bold.counter 16
+					.counter-title.fw-bold.text-white.text-uppercase Experts
+
+			.btn-block.inset-sm-left-60.inset-sm-right-60
+				.d-md-flex.justify-content-md-center.align-items-md-center
+					a(href="#" data-bs-toggle="modal" data-bs-target="#appointment").btn.btn-rect.btn-primary.d-block.d-md-inline-block Make an Appointment
+					span.font-italic.text-white.inset-md-left-20.inset-md-right-20.d-block.d-md-inline-block.text-big-18 or
+					a(href="#" style="min-width:236px;").btn.btn-rect.btn-white-outline.d-block.d-md-inline-block See All services
+
+
+
+	//- our team
+	section#team.section-66.section-md-top-100.section-md-bottom-75(data-type="anchor")
+		.container
+			h3.text-center our #[span.text-thin team]
+			.row.justify-content-sm-center
+				.col-md-8.col-xl-12
+					//- Owl Carousel
+					.owl-carousel.owl-carousel-center.owl-nav-modern.owl-style-minimal.owl-style-minimal-inverse.text-center(data-items='1', data-md-items='2', data-xl-items='3', data-stage-padding='15', data-loop='false', data-margin='15', data-mouse-drag="false",
+						data-owl= {
+                            dots: true,
+                            nav: true,
+                        })
+						.item.text-center
+							.thumbnail-variant-5
+								.thumbnail-variant-5-img-wrap
+									img.img-circle(src="images/team-1-151x151.jpg" width="129" height="129" alt="")
+								h4 John Doe
+								.text-dusty-gray Managing Director
+								.divider-fullwidth.bg-porcelain
+
+								.link-group
+									span.icon.icon-xxs.icon-primary.material-icons-local_phone
+									a.link-black(href='tel:#') +1 (609) 567–8974
+								.link-group
+									span.icon.icon-xxs.icon-primary.fa-envelope-o
+									a.link-black(href='mailto:#') info@demolink.org
+
+						.item.text-center
+							.thumbnail-variant-5
+								.thumbnail-variant-5-img-wrap
+									img.img-circle(src="images/team-2-151x151.jpg" width="129" height="129" alt="")
+								h4 Amanda Smith
+								.text-dusty-gray Accountant
+								.divider-fullwidth.bg-porcelain
+
+								.link-group
+									span.icon.icon-xxs.icon-primary.material-icons-local_phone
+									a.link-black(href='tel:#') +1 (409) 987–5874
+								.link-group
+									span.icon.icon-xxs.icon-primary.fa-envelope-o
+									a.link-black(href='mailto:#') info@demolink.org
+						.item.text-center
+							.thumbnail-variant-5
+								.thumbnail-variant-5-img-wrap
+									img.img-circle(src="images/team-3-151x151.jpg" width="129" height="129" alt="")
+								h4 David Nicholson
+								.text-dusty-gray Audit Manager
+								.divider-fullwidth.bg-porcelain
+
+								.link-group
+									span.icon.icon-xxs.icon-primary.material-icons-local_phone
+									a.link-black(href='tel:#') +1 (609) 567–8974
+								.link-group
+									span.icon.icon-xxs.icon-primary.fa-envelope-o
+									a.link-black(href='mailto:#') info@demolink.org
+						.item.text-center
+							.thumbnail-variant-5
+								.thumbnail-variant-5-img-wrap
+									img.img-circle(src="images/team-1-151x151.jpg" width="129" height="129" alt="")
+								h4 John Doe
+								.text-dusty-gray Managing Director
+								.divider-fullwidth.bg-porcelain
+
+								.link-group
+									span.icon.icon-xxs.icon-primary.material-icons-local_phone
+									a.link-black(href='tel:#') +1 (609) 567–8974
+								.link-group
+									span.icon.icon-xxs.icon-primary.fa-envelope-o
+									a.link-black(href='mailto:#') info@demolink.org
+
+			.row.justify-content-sm-center
+				.col-md-10.col-lg-10.col-xl-12
+					.panel.card-lg.bg-accent.bg-default-outline-btn.text-center
+						h3.text-white Request #[span.text-thin a callback]
+						form.rd-mailform.group.group-bottom
+							.group-item.form-wrap
+								input#index-request-name.form-input(type="text" name="name" data-constraints="@Required")
+								label.form-label(for="index-request-name") First Name
+							.group-item.form-wrap
+								input#index-request-phone.form-input(type="text" name="phone" data-constraints="@Numeric @Required")
+								label.form-label(for="index-request-phone") Phone Number
+							.group-item.form-wrap
+								//Select 2
+								select.form-input.select-filter(data-minimum-results-for-search="Infinity", data-constraints="@Required")
+									option(value="1") I Would Like to Discuss
+									option(value="2") I Wouldn't Like to Discuss
+							.group-item.group-item-sm
+								button.btn.btn-block.btn-white-outline(type="submit") submit
+
+	//- successful cases
+	section.bg-cape-cod.context-dark
+		.container
+			.row.justify-content-sm-center.justify-content-lg-start
+				.col-sm-10.col-lg-6.text-start.section-60.section-md-90
+					div
+						h3.text-center.text-lg-start
+							| successful
+							=' '
+							span.text-thin cases
+
+						.carousel-testimonials-home
+							.inset-xl-right-50
+								.slick-slider.slick-slider.slick-carousel-round-image.slick-images#child-carousel(data-for=".carousel-parent", data-arrows="false", data-loop="false", data-dots="false", data-swipe="true", data-items="1", data-sm-items='3', data-md-items='3', data-lg-items='3', data-xl-items='4', data-slide-to-scroll="1", data-center-mode="false", data-center-padding='0')
+									.item
+										.imp-wrap
+											+jpg('home-testimonials-1-99x99')
+									.item
+										.imp-wrap
+											+jpg('home-testimonials-2-99x99')
+									.item
+										.imp-wrap
+											+jpg('home-testimonials-3-99x99')
+									.item
+										.imp-wrap
+											+jpg('home-testimonials-4-99x99')
+
+
+							.slick-slider.carousel-parent.slick-dots-variant-1(data-arrows="false", data-loop="false", data-dots="true", data-swipe="true", data-child="#child-carousel", data-for="#child-carousel", data-items="1", data-sm-items='1', data-md-items='1', data-lg-items='1', data-xl-items='1', data-slide-to-scroll="1", data-center-mode='false')
+								.item.inset-left-10.inset-right-10.inset-
+									.inset-xl-right-85
+										blockquote.quote-left
+											.row.align-items-sm-end.row-20
+												.col-sm-6
+													.quote-name
+														cite Amelia Lee
+													.text-dusty-gray Sales, demolink.org
+												.col-sm-6.text-center
+													.quote-desc.row.d-flex
+														.col-sm-6
+															.quote-desc-text.text-fuel-yellow -20%
+															.text-medium.text-dusty-gray.text-uppercase Expenses
+														.col-sm-6
+															.quote-desc-text.text-primary +17%
+															.text-medium.text-dusty-gray.text-uppercase Profit
+											.divider-fullwidth
+											div.quote-body
+												q I would not hesitate even one bit to work with them for my future tax and accounting needs.
+
+										.btn-block
+											a(href="#").btn.btn-primary read more
+
+								.item.inset-left-10.inset-right-10.inset-
+									.inset-xl-right-85
+										blockquote.quote-left
+											.row.row-20
+												.col-sm-6
+													.quote-name
+														cite Mark Wilson
+													.text-dusty-gray CEO “WilsonCompany”
+												.col-sm-6.text-center
+													.quote-desc.row.d-flex
+														.col-sm-6
+															.quote-desc-text.text-fuel-yellow -30%
+															.text-medium.text-dusty-gray.text-uppercase Expenses
+														.col-sm-6
+															.quote-desc-text.text-primary +22%
+															.text-medium.text-dusty-gray.text-uppercase Profit
+											.divider-fullwidth
+											div.quote-body
+												q I’ve never known another auditor more prepared or focused.  You have the ability to dissect a case much like a skilled surgeon, with absolute calm.  Nothing seems to rattle you or distract from the goal on a case.
+
+										.btn-block
+											a(href="#").btn.btn-primary read more
+
+								.item.inset-left-10.inset-right-10.inset-
+									.inset-xl-right-85
+										blockquote.quote-left
+											.row.row-20
+												.col-sm-6
+													.quote-name
+														cite Jill Miller
+													.text-dusty-gray Artist
+												.col-sm-6.text-center
+													.quote-desc.row.d-flex
+														.col-sm-6
+															.quote-desc-text.text-fuel-yellow -29%
+															.text-medium.text-dusty-gray.text-uppercase Expenses
+														.col-sm-6
+															.quote-desc-text.text-primary +19%
+															.text-medium.text-dusty-gray.text-uppercase Profit
+											.divider-fullwidth
+											div.quote-body
+												q I am happy that I chose Audit attent for my US tax returns and would recommend it to everyone.
+										.btn-block
+											a(href="#").btn.btn-primary read more
+
+								.item.inset-left-10.inset-right-10.inset-
+									.inset-xl-right-85
+										blockquote.quote-left
+											.row.row-20
+												.col-sm-6
+													.quote-name
+														cite Christopher Taylor
+													.text-dusty-gray Financial Consultant
+												.col-sm-6.text-center
+													.quote-desc.row.d-flex
+														.col-sm-6
+															.quote-desc-text.text-fuel-yellow -28%
+															.text-medium.text-dusty-gray.text-uppercase Expenses
+														.col-sm-6
+															.quote-desc-text.text-primary +21%
+															.text-medium.text-dusty-gray.text-uppercase Profit
+											.divider-fullwidth
+											div.quote-body
+												q Over the last 6 years I have found their services to be reliable and their advice to be practical and clear.
+										.btn-block
+											a(href="#").btn.btn-primary read more
+
+				.col-lg-6.section-image-aside.section-image-aside-right
+					.section-image-aside-img.d-none.d-lg-block(style='background-image: url(images/home-4-946x689.jpg)')
+
+
+
+	//- Pricing tables
+	section#pricing.bg-decoration-wrap.bg-decoration-bottom.section-top-60.section-bottom-60.section-xl-top-100.section-xl-bottom-100.bg-athens-gray(data-type="anchor")
+		.container.bg-decoration-content.text-center
+			h3 CHOOSE  #[span.text-thin YOUR PLAN]
+			.row.justify-content-md-center
+				.col-lg-10.col-xl-12
+					.row.align-items-md-end.row-40
+						.col-md-6.col-xl-3
+							//- Pricing table
+							.pricing-table
+								.pricing-table-body
+									h5.pricing-table-header free
+									.pricing-object.pricing-object-lg
+										span.small.small-top $
+										span.price 0
+										span.small.small-bottom /mo
+									.divider-triangle
+
+									ul.pricing-list
+										li Consulting & Advisory
+										li Tax Planning
+										li Mandatory Audit
+										li Management Accounting
+										li Phone Support
+								.pricing-table-footer
+									a.btn.btn-primary.btn-block(href='#' data-bs-toggle="modal" data-bs-target="#sign-up") Sign up
+
+						.col-md-6.col-xl-3
+							//- Pricing table
+							.pricing-table
+								.pricing-table-body
+									h5.pricing-table-header Starter
+									.pricing-object.pricing-object-lg
+										span.small.small-top $
+										span.price 59
+										span.small.small-bottom /mo
+									.divider-triangle
+
+									ul.pricing-list
+										li Audit & Accounting
+										li Assurance
+										li Voluntary Audit
+										li Due Diligence
+										li Online Support
+
+								.pricing-table-footer
+									a.btn.btn-primary.btn-block(href='#' data-bs-toggle="modal" data-bs-target="#sign-up") Sign up
+
+						.col-md-6.col-xl-3
+							//- Pricing table
+							.pricing-table.pricing-table-preferred
+								.pricing-table-label
+									p Most popular
+								.pricing-table-body
+									h5.pricing-table-header Business
+									.pricing-object.pricing-object-lg
+										span.small.small-top $
+										span.price 99
+										span.small.small-bottom /mo
+									.divider-triangle
+
+									ul.pricing-list
+										li Assurance Engagement
+										li Financial Planning
+										li Tax Audit
+										li Accounting Restoration
+										li 24/7 Support
+
+								.pricing-table-footer
+									a.btn.btn-primary.btn-block(href='#' data-bs-toggle="modal" data-bs-target="#sign-up") Sign up
+
+						.col-md-6.col-xl-3
+							//- Pricing table
+							.pricing-table
+								.pricing-table-body
+									h5.pricing-table-header Ultimate
+									.pricing-object.pricing-object-lg
+										span.small.small-top $
+										span.price 199
+										span.small.small-bottom /mo
+									.divider-triangle
+
+									ul.pricing-list
+										li Business Management
+										li Review Engagement
+										li Registered Capital Audit
+										li Tax Reporting
+										li Premium Support
+								.pricing-table-footer
+									a.btn.btn-primary.btn-block(href='#' data-bs-toggle="modal" data-bs-target="#sign-up") Sign up
+		.bg-decoration-object.bg-whisper-lighten
+
+
+
+	//- Latest News
+	section#news.section-50.section-md-90.section-md-bottom-100(data-type='anchor')
+		.container.text-center
+			h3 Latest #[span.text-thin News]
+
+			.row.justify-content-sm-center.row-40
+				.col-sm-8.col-md-7.col-lg-4
+					//- Post Boxed
+					.post-boxed.d-xl-inline-block
+						.post-boxed-img-wrap
+							a(href="#")
+								+jpg("home-1-322x219")
+						.post-boxed-caption
+							.post-boxed-title.fw-bold
+								a(href="#") Presentations that Impress Your Audit Committee
+
+							//- List Inline
+							ul.list-inline.list-inline-dashed.text-uppercase
+								li JUNE 14, 2021
+								li
+									span by #[a.link-primary(href="#") Sam Kromstain]
+
+				.col-sm-8.col-md-7.col-lg-4
+					//- Post Boxed
+					.post-boxed.d-xl-inline-block
+						.post-boxed-img-wrap
+							a(href="#")
+								+jpg("home-2-322x219")
+						.post-boxed-caption
+							.post-boxed-title.fw-bold
+								a(href="#") Top 3 Concerns When Choosing a Cloud Vendor
+
+							//- List Inline
+							ul.list-inline.list-inline-dashed.text-uppercase
+								li JUNE 20, 2021
+								li
+									span by #[a.link-primary(href="#") Vanessa Ives]
+
+				.col-sm-8.col-md-7.col-lg-4
+					//- Post Boxed
+					.post-boxed.d-xl-inline-block
+						.post-boxed-img-wrap
+							a(href="#")
+								+jpg("home-3-322x219")
+						.post-boxed-caption
+							.post-boxed-title.fw-bold
+								a(href="#") Audit Data Analytics: Why Auditors Should Care
+
+
+							//- List Inline
+							ul.list-inline.list-inline-dashed.text-uppercase
+								li JUNE 23, 2021
+								li
+									span by #[a.link-primary(href="#") Amanda Smith]
+
+
+
+	//- Starbis Is Exactly What You Need
+	section.section-60.section-md-100.bg-accent
+		.container.text-center.text-lg-start
+			.row.align-items-lg-center.justify-content-lg-center.row-30
+				.col-lg-8.col-xl-7
+					h3.text-white Professional audit
+				.col-lg-4.col-xl-3
+					a.btn.btn-lg.btn-white-outline(href=globals.getTemplateLink) learn more
+
+
+
+	//- Our Clients
+	section#clients.section.parallax-container.context-dark.bg-black(data-parallax-img='images/clients-testimonials-parallax-2.jpg' data-type="anchor")
+		.parallax-content
+			.section-50.section-md-75.section-xl-top-100.section-xl-bottom-120
+				.container.text-center
+					.row
+						.col-sm-12
+							h3
+								| What
+								=' '
+								span.text-thin Clients Say?
+					.row.justify-content-sm-center.justify-content-md-start.row-60
+						.col-md-12
+							.owl-carousel.owl-carousel-center.owl-nav-republick.owl-style-minimal.owl-style-minimal-inverse.text-center(data-items='1', data-md-items='2', data-lg-items='3' data-xl-items='3', data-autoplay="false", data-loop="false", data-stage-padding='15', data-margin='15', data-mouse-drag="false" data-owl!={
+							    dots:  true,
+								nav: false,
+							})
+								+quote-vertical({
+                                    mod: 'quote-vertical-inverse',
+                                    img: 'clients-testimonials-7-113x113.jpg',
+                                    text: "Beyond a shadow of doubt, they are the Best Tax Consultants I have ever come across.",
+                                    cite: "Alex Murphy",
+                                    caption: 'Freelance developer'
+                                })
+								+quote-vertical({
+                                    mod: 'quote-vertical-inverse',
+                                    img: 'clients-testimonials-8-113x113.jpg',
+                                    text: "I would not hesitate even one bit to work with them for my future tax and accounting needs.",
+                                    cite: "Amelia Lee",
+                                    caption: 'Sales, demolink.org'
+                                })
+								+quote-vertical({
+                                    mod: 'quote-vertical-inverse',
+                                    img: 'clients-testimonials-9-113x113.jpg',
+                                    text: "The Tax Experts at Audit attent are thorough professionals and always go that extra mile to help their clients.",
+                                    cite: "Jack McGee",
+                                    caption: 'Founder, The Therapy'
+                                })
+
+
+
+	//- Get in Touch
+	section#contacts.section-60.section-md-top-90.section-md-bottom-100(data-type="anchor")
+		.container
+			.row.justify-content-sm-center.justify-content-lg-start.row-50
+				.col-lg-7.col-xl-6
+					h3 Get in #[span.text-thin Touch]
+					//- RD Mailform
+					form.rd-mailform.form-modern(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+						.row.row-30
+							.col-md-6
+								.form-wrap
+									input#contact-name.form-input(type="text" name="name" data-constraints="@Required")
+									label.form-label(for="contact-name") Name
+							.col-md-6
+								.form-wrap
+									input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+									label.form-label(for="contact-email") Email
+
+							.col-sm-12
+								.form-wrap
+									.textarea-lined-wrap
+										textarea#contact-message.form-input(name="message" data-constraints="@Required")
+										label.form-label(for="contact-message") Message
+
+							.col-sm-8
+								button(type="submit").btn.btn-primary.btn-block Send
+
+							.col-sm-4
+								button(type="reset").btn.btn-silver-outline.btn-block Reset
+
+				.col-xl-1.d-none.d-xl-inline-block
+
+				.col-lg-5.col-xl-4
+					.row.row-40
+						.col-md-10.col-lg-12
+							h3 How to #[span.text-thin Find Us]
+							p.text-secondary.
+								If you have any questions, just fill in the contact form, and we will answer you shortly. If you are living nearby, come visit us.
+
+						.col-md-6.col-lg-12
+							h4 Headquarters
+							address.contact-info
+								p.text-uppercase 9863 - 9867 MILL ROAD, CAMBRIDGE, MG09 99HT.
+								dl.list-terms-inline
+									dt Telephone
+									dd: a.link-secondary(href='tel:#') +1 800 603 6035
+
+								dl.list-terms-inline
+									dt E-mail
+									dd: a.link-primary(href='mailto:#') mail@demolink.org
+
+						.col-md-6.col-lg-12
+							h4 Support Centre
+							address.contact-info
+								p.text-uppercase 9870 ST VINCENT PLACE, GLASGOW, DC 45 FR 45
+								dl.list-terms-inline
+									dt Telephone
+									dd: a.link-secondary(href='tel:#') +1 800 603 6035
+
+								dl.list-terms-inline
+									dt E-mail
+									dd: a.link-primary(href='mailto:#') mail@demolink.org
+
+
+
+	section
+		.google-map-container(data-zoom='5', data-center='9870 St Vincent Place, Glasgow, DC 45 Fr 45.', data-styles='[{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":60}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","stylers":[{"visibility":"on"},{"lightness":30}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ef8c25"},{"lightness":40}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#b6c54c"},{"lightness":40},{"saturation":-40}]},{}]' )
+			.google-map
+			ul.google-map-markers
+				li( data-location='9870 St Vincent Place, Glasgow, DC 45 Fr 45.', data-description='9870 St Vincent Place, Glasgow', data-icon='images/gmap_marker.png', data-icon-active='images/gmap_marker_active.png' )
+
+	footer.page-foot.bg-cape-cod.context-dark
+		section.section-40.section-md-75
+			.container
+				.row.justify-content-sm-center
+					.col-sm-9.col-md-11.col-xl-12
+						.row.row-50
+							.col-md-6.col-lg-10.col-xl-3
+								.inset-xl-right-20(style='max-width: 510px;')
+									//- Brand
+									a.brand.brand-inverse(href='index.html')
+										+png("logo-light-135x34")
+									p.text-dusty-gray.
+										Audit attent delivers environment through which high-quality firms from diverse backgrounds can work together toward their own common goals.
+									.link-block
+										a.text-small-16.text-medium(href="#") Free Consultation
+
+							.col-md-6.col-lg-4.col-xl-3
+								h6.text-small-16.text-uppercase.footer-title Recent Posts
+
+								+post-preview({
+                                    classes: ['post-preview-inverse', 'offset-top-22'],
+                                    img: 'post-preview-1-70x70',
+                                    header: 'Top 3 Concerns Whe Choosing a Cloud Vendor',
+                                    time: 'June 23, 2021'
+                                })
+
+								+post-preview({
+                                    classes: ['post-preview-inverse', 'offset-top-22'],
+                                    img: 'post-preview-2-70x70',
+                                    header: 'Audit Data Analytics: Why Auditors Should Care',
+                                    time: 'June 20, 2021'
+                                })
+
+							.col-md-6.col-lg-4.col-xl-3
+								h6.text-small-16.text-uppercase.footer-title Quick links
+								.row(style='max-width: 270px;')
+									.col-6
+										ul.list-marked-variant-2
+											li: a(href='#') Home
+											li: a(href='#') Services
+											li: a(href='#') Careers
+											li: a(href='#') Blog
+
+									.col-6
+										ul.list-marked-variant-2
+											li: a(href='#') About us
+											li: a(href='#') Contacts
+											li: a(href='#') Appointment
+
+							.col-md-6.col-lg-4.col-xl-3
+								h6.text-small-16.text-uppercase.footer-title Contact us
+								address.contact-info.text-start
+									.unit.unit-horizontal.unit-spacing-md.align-items-center
+										.unit-left
+											span.icon.icon-xs.icon-dusty-gray.material-icons-phone
+										.unit-body
+											a.link-white(href='tel:#') +1 (409) 987–5874
+
+									.unit.unit-horizontal.unit-spacing-md.align-items-center
+										.unit-left
+											span.icon.icon-xs.icon-dusty-gray.fa.fa-envelope-o
+										.unit-body
+											a.link-white(href='mailto:#') info@demolink.org
+
+									.unit.unit-horizontal.unit-spacing-md
+										.unit-left
+											span.icon.icon-xs.icon-dusty-gray.material-icons-place
+										.unit-body
+											a.link-white.d-inline(href='#')
+												| 6036 Richmond hwy,
+												br
+												| Alexandria, VA USA 22303
+		.container
+			hr.hr.bg-abbey-04
+
+		section.section-35
+			.container.text-center
+				.row.flex-md-row-reverse.justify-content-md-between.align-items-md-center.row-15
+					.col-md-6.text-md-end
+						.group-sm.group-middle
+							p.font-italic.text-white Follow Us:
+							ul.list-inline.list-inline-reset
+								li: a.icon.icon-round.icon-abbey-filled.icon-xxs-smallest.fa.fa-facebook(href='#')
+								li: a.icon.icon-round.icon-abbey-filled.icon-xxs-smallest.fa.fa-twitter(href='#')
+								li: a.icon.icon-round.icon-abbey-filled.icon-xxs-smallest.fa.fa-google-plus(href='#')
+
+					.col-md-6.offset-top-15.offset-sm-top-0.text-md-start
+						p.rights.text-white
+							span.copyright-year
+							span &nbsp;&#169;&nbsp;
+							span Audit attent

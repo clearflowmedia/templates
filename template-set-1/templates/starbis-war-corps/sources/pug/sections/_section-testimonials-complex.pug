@@ -1,0 +1,55 @@
+//- Include
+include ../elements/_ui-quote-strict
+
+//- Testimonials
+section.section-top-60.section-md-top-90.bg-cape-cod.context-dark
+  .container.text-center
+    .row.justify-content-md-center.row-40
+      .col-sm-12
+        h3 Testimonials
+
+      .col-md-11.col-lg-10.col-xl-8
+        //- Slick Carousel
+        .slick-carousel-complex-variant-1.slick-carousel-round-image
+          .slick-slider.slick-slider-images.slick-slider#child-carousel(data-for=".carousel-parent", data-arrows="false", data-loop="true", data-dots="false", data-swipe="true", data-items="1", data-sm-items='3', data-md-items='3', data-lg-items='3', data-xl-items='3', data-slide-to-scroll="1", data-center-mode="true", data-center-padding='0')
+            .item
+              +jpg('clients-testimonials-3-153x153')
+            .item
+              +jpg('clients-testimonials-4-153x153')
+            .item
+              +jpg('team-2-151x151')
+            .item
+              +jpg('clients-testimonials-5-153x153')
+
+
+          .slick-slider.carousel-parent.slick-dots-variant-1(data-arrows="false", data-loop="true", data-dots="true", data-swipe="true", data-child="#child-carousel", data-for="#child-carousel", data-items="1", data-sm-items='1', data-md-items='1', data-lg-items='1', data-xl-items='1', data-slide-to-scroll="1", data-center-mode='true')
+            .item.inset-left-10.inset-right-10.inset-xl-left-0.inset-xl-right-0
+              +quote-strict({
+                mod: 'quote-strict-inverse',
+                text: "Highly experienced team of tax advisors! Tom was a tremendous asset to me in sorting out my tax affairs. His excellent advice helped me to make a complicated situation straightforward. I would recommend him to anyone.",
+                cite: "Ann Williams"
+              })
+
+            .item.inset-left-10.inset-right-10.inset-xl-left-0.inset-xl-right-0
+              +quote-strict({
+                mod: 'quote-strict-inverse',
+                text: "As part of brief interaction, have noticed a very high professionalism on TaxExpert’s part! They are very prompt and have managed to keep their word as part of process. Will be glad to work with them in future as well. Thank you very much!",
+                cite: "Gregory Smith"
+              })
+
+            .item.inset-left-10.inset-right-10.inset-xl-left-0.inset-xl-right-0
+              +quote-strict({
+                mod: 'quote-strict-inverse',
+                text: "The services they offered me for this year's tax filing has been exemplary and of the highest class. I would recommend them for doing taxes. The service that they rendered was very timely and the fees for the service were reasonable.",
+                cite: "Amanda Smith"
+              })
+
+            .item.inset-left-10.inset-right-10.inset-xl-left-0.inset-xl-right-0
+              +quote-strict({
+                mod: 'quote-strict-inverse',
+                text: "TaxExpert’s expertise and knowledge of USA and Indian Tax law assisted me in answering tricky tax questions and being able to better understand the tax implications of various financial transactions internationally. Very professional team!",
+                cite: "Mark Wilson"
+              })
+
+
+='\n'

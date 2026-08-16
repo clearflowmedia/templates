@@ -1,0 +1,12 @@
+//- Career block
+mixin block-career(obj)
+  li.block-image-plate.bg-black.bg-image(style='background-image: url(images/' + obj.img + '.jpg);')
+    .block-inner
+      .block-body
+        .block-left
+          .block-list-counter
+        .block-text
+          .block-header
+            h4=obj.header
+          each line in obj.text
+            p=line

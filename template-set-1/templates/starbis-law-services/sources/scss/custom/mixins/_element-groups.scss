@@ -1,0 +1,39 @@
+// Element-groups
+
+@mixin element-groups-custom($offset, $translate-offset) {
+  -webkit-transform: translateY(-$translate-offset);
+  transform: translateY(-$translate-offset);
+  margin-bottom: -$translate-offset;
+  margin-left: -$translate-offset;
+
+  > * {
+    display: inline-block;
+    margin-top: $offset;
+    margin-left: $offset;
+  }
+}
+
+@mixin group-contextual($offset-x, $offset-y: $offset-x) {
+  margin-bottom: -$offset-y;
+  margin-left: -$offset-x;
+
+  > * {
+    margin-bottom: $offset-y;
+    margin-left: $offset-x;
+  }
+}
+
+@mixin groupX($offset-x) {
+  margin-left: -$offset-x;
+
+  > * { margin-left: $offset-x; }
+}
+
+@mixin groupY($offset-y) {
+  margin-bottom: -$offset-y;
+
+  > * {
+    margin-top: 0;
+    margin-bottom: $offset-y;
+  }
+}

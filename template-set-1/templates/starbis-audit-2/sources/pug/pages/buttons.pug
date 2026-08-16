@@ -1,0 +1,68 @@
+extends  ../_skeleton
+
+//- Includes
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Buttons'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title(pageName, 'bg-image-1')
+
+  //- Buttons
+  section.section-60.section-md-top-90.section-md-bottom-100
+    .container
+      .row.row-60.row-xl-90
+        .col-sm-12
+          h3 Button #[span.fw-thin Sizes]
+          p.text-black 4 different sizes: super, large, default and small.
+          .group-lg.group-middle.button-group
+            a(href='#').btn.btn-xl.btn-primary super size
+            a(href='#').btn.btn-lg.btn-primary Large size
+            a(href='#').btn.btn.btn-primary Default size
+            a(href='#').btn.btn-sm.btn-primary small size
+
+        .col-sm-12
+          h3 Button #[span.fw-thin Shapes]
+          p.text-black 4 different shapes: default, round, square and circle.
+          .group-lg.group-middle.button-group
+            a(href='#').btn.btn-primary Default
+            a(href='#').btn.btn-primary.btn-round round
+            a(href='#').btn.btn-primary.btn-rect square
+            a(href='#').btn.btn-primary.btn-circle Circle
+
+        .col-sm-12
+          h3 Buttons #[span.fw-thin with Icons]
+          p.text-black Buttons are fully integrated with 900+ icons.
+          .group-lg.group-middle.button-group
+            a(href='#').btn.btn-icon.btn-icon-left.btn-primary
+              span.icon.icon-xs-smaller.material-icons-shopping_cart
+              | icon left
+            a(href='#').btn.btn-icon.btn-icon-right.btn-primary
+              span.icon.icon-xs-smaller.material-icons-shopping_cart
+              | icon right
+            a(href='#').btn.btn-icon.btn-icon-left.btn-primary-outline
+              span.icon.icon-xs-smaller.material-icons-shopping_cart
+              | icon left
+            a(href='#').btn.btn-icon.btn-icon-right.btn-primary-outline
+              span.icon.icon-xs-smaller.material-icons-shopping_cart
+              | icon right
+
+        .col-sm-12
+          h3 Buttons #[span.fw-thin with Shadow]
+          p.text-black Enhance your buttons with a shadow effect.
+          .group-lg.group-middle.button-group
+            a(href='#').btn.btn-primary.btn-shadow shadow
+            a(href='#').btn.btn-primary-outline.btn-shadow shadow
+  ='\n'
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

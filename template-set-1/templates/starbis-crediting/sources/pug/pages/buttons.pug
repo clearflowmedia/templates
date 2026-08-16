@@ -1,0 +1,92 @@
+extends  ../_skeleton
+
+//- Includes
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Buttons'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title(pageName, 'bg-image-1', {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Additional Pages",
+      "href": "#"
+    },
+    2: {
+      "title": "Buttons"
+    }
+  })
+
+  //- Buttons
+  section.section-top-60.section-md-top-90
+    .container
+      h3 Buttons
+
+      p.big.text-spacing-50.text-gray Easily insert buttons and call-to-actions in any page,
+        br.d-none.d-lg-block
+        | use amazing custom options to spice up your pages.
+
+  section.section-80.section-lg-bottom-100
+    .container
+      h4 Button Sizes
+      p.text-gray.text-spacing-50.text-secondary 4 different sizes: super, large, default and small.
+      .group-lg.group-middle
+        .btn.btn-xl.btn-primary Super size
+        .btn.btn-lg.btn-primary Large size
+        .btn.btn-primary Default size
+        .btn.btn-sm.btn-primary Small size
+
+  hr
+  section.section-80.section-lg-bottom-100
+    .container
+      h4 Button Shapes
+      p.text-gray.text-spacing-50 4 different shapes: default, round, square and circle.
+      .group-lg.group-middle
+        .btn.btn-width.btn-primary.btn-round-sm Default
+        .btn.btn-width.btn-primary.btn-round round
+        .btn.btn-width.btn-primary.btn-rect square
+        .btn.btn-width.btn-primary.btn-circle Circle
+
+  hr
+  section.section-80.section-lg-bottom-100
+    .container
+      h4 Buttons with Icons
+      p.text-gray.text-spacing-50 Buttons are fully integrated with 900+ icons.
+      .group-lg.group-middle
+        .btn.btn-icon.btn-icon-left.btn-primary
+          span.icon.icon-xs-smaller.material-icons-shopping_cart
+          | icon left
+        .btn.btn-icon.btn-icon-right.btn-primary
+          span.icon.icon-xs-smaller.material-icons-shopping_cart
+          | icon right
+        .btn.btn-icon.btn-icon-left.btn-black-outline
+          span.icon.icon-xs-smaller.material-icons-shopping_cart
+          | icon left
+        .btn.btn-icon.btn-icon-right.btn-black-outline
+          span.icon.icon-xs-smaller.material-icons-shopping_cart
+          | icon right
+
+  hr
+  section.section-80.section-lg-bottom-100
+    .container
+      h4 Buttons with Shadow
+      p.text-gray.text-spacing-50 Enhance your button with a shadow effect.
+      .group-lg.group-middle
+        .btn.btn-circle.btn-width.btn-primary.btn-shadow shadow
+        .btn.btn-circle.btn-width.btn-white.btn-shadow shadow
+  ='\n'
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

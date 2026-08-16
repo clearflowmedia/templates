@@ -1,0 +1,74 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-post-block
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Blog grid'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title('Blog', 'bg-image-1')
+
+  //- Blog masonry
+  section.section-50.section-md-75.section-xl-100
+    .container
+      .row.row-30.justify-content-md-center.justify-content-lg-start
+        .col-md-9.col-lg-6.height-fill
+          +post-block({
+            img: 'blog-grid-1-570x253',
+            header: 'Pitfalls of Dismissing',
+            user: 'Joan Williams',
+            time: ['2021-01-01', '5 days ago'],
+            tags: ['Clients', 'Employer']
+          })
+
+        .col-md-9.col-lg-6.height-fill
+          +post-block({
+            img: 'blog-grid-2-570x253',
+            header: 'Tips for Social Security Disability Process',
+            user: 'Tom Park',
+            time: ['2021-01-01', '5 days ago'],
+            tags: ['Security,', 'People']
+          })
+
+        .col-md-9.col-lg-6.height-fill
+          +post-block({
+            img: 'blog-grid-3-570x253',
+            header: 'Tips for Managing Workers’ Compensation Claims',
+            user: 'John Miller',
+            time: ['2021-01-01', '5 days ago'],
+            tags: ['Claims', 'Business']
+          })
+
+        .col-md-9.col-lg-6.height-fill
+          +post-block({
+            img: 'blog-grid-4-570x253',
+            header: 'LawExpert Law Firm Gives Back',
+            user: 'Julien Miro',
+            time: ['2021-01-01', '5 days ago'],
+            tags: ['Law Firm', 'Sponsor']
+          })
+
+        .col-md-9.col-lg-6.height-fill
+          +post-block({
+            img: 'blog-grid-5-570x253',
+            header: 'What Do I Do About Medical Bills from My Car Accident ?',
+            user: 'Amelia Anderson',
+            time: ['2021-01-01', '5 days ago'],
+            tags: ['Law Firm', 'Attorney']
+          })
+
+      .text-center.pagination-custom-wrap
+        +pagination
+  ='\n'
+
+  //- Page Footer
+  include ../sections/_section-footer-default

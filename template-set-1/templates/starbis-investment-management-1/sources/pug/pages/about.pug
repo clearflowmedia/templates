@@ -1,0 +1,159 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-thumbnail-1
+include ../elements/_ui-quote-vertical
+include ../elements/_ui-icon-box-horizontal
+include ../elements/_ui-progress-linear
+
+block variables
+	- var activeIndex = 9
+	- var pageName = 'About'
+
+block title
+	title=pageName
+
+block page
+	//-Page Header
+	include ../sections/_section-header-default
+
+
+	+page-title(pageName, 'bg-image-1')
+
+	//-Who we are?
+	section.section-66.section-md-90.section-xl-bottom-120.bg-whisperapprox
+		.container
+			h3 About Us
+			.row.row-40.justify-content-xl-between.align-items-center
+				.col-md-6.col-xl-5.text-secondary
+					.inset-md-right-15.inset-xl-right-0
+						p.
+							Our Investment Company, located in Rockville, Maryland, is a full service real estate company that provides acquisition, development and finance expertise for both commercial and multi-family projects.
+						p.
+							Our experience in structuring complicated financial transactions while accommodating diverse partnership interests, has allowed it to achieve over $1 Billion in acquisitions and financing.
+
+				.col-md-6
+					.progress-linear-group
+						+progress-linear({
+							title: 'Wealth Management',
+							value: '70'
+						}).progress-linear-primary
+						+progress-linear({
+							title: 'Business Owners',
+							value: '54'
+						}).progress-linear-khaki
+						+progress-linear({
+							title: 'Insurance & Annuities',
+							value: '87'
+						}).progress-linear-navy
+						+progress-linear({
+							title: 'Cash & Credit',
+							value: '90'
+						}).progress-linear-dark-orange
+	='\n'
+
+	//-Team members
+	section.section-60.section-md-90.bg-gray-lighter
+		.container
+			.row.row-60
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-1({
+						img: 'team-1-189x189.jpg',
+						header: "Julien Miro",
+						caption: "Fund Manager"
+					})
+
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-1({
+						img: 'team-2-189x189.jpg',
+						header: "Joan Williams",
+						caption: "Senior Investment Analyst"
+					})
+
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-1({
+						img: 'team-3-189x189.jpg',
+						header: "Benedict Smith",
+						caption: "Investment Analyst"
+					})
+
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-1({
+						img: 'team-4-189x189.jpg',
+						header: "Madlen Green",
+						caption: "Head of Trading"
+					})
+	='\n'
+
+	//-Why Choose Us
+	section.bg-whisperapprox
+		.container
+			.row.justify-content-sm-center.justify-content-md-start
+				.col-sm-10.col-md-6.text-start.section-60.section-md-90
+					div
+						h3 Our Mission
+						.box-photo-frame
+							+jpg('about-1-510x268')
+
+						h6 Our Investment Principles
+						p Our goal is to maximize investor return and minimize any potential loss by applying these principles in a disciplined and pragmatic process. We rely on facts, not speculation to purchase high return, predictable companies at significant discounts to intrinsic values.
+				.col-md-6.context-dark.section-image-aside.section-image-aside-right.pos-relative-before-sm.section-60.section-md-0.d-md-flex
+					.section-image-aside-img(style='background-image: url(images/bg-image-12.jpg)')
+						.section-bordered-inside
+					.row.align-items-md-center.offset-top-0
+						.col-md-11.col-lg-10.to-front.offset-md-1.offset-lg-2
+							h3 Benefits & Risks
+
+							h5 Why Choose Us
+							p.text-white-05
+								| The benefits of using managed funds include the ability to gain exposure to different asset classes and market sectors.
+							ul.list-marked
+								li.text-white Diversification
+								li.text-white Potential wealth generation
+								li.text-white Cost-effective investment
+								li.text-white Access to a range of assets
+								li.text-white Geared exposure
+								li.text-white Underperforming investments
+
+							a.btn.btn-icon.btn-icon-right.btn-primary.big(href='appointment.html')
+								span.icon.icon-xs.fa-angle-right
+								| Make an Appointment
+
+	='\n'
+
+	//-Why Choose Us
+	section.section-60.section-md-90.section-lg-top-30.section-lg-bottom-0
+		.container
+			.row.justify-content-md-center.justify-content-lg-start
+				.col-lg-6.offset-lg-1.d-none.d-lg-block
+					+jpg('about-2-446x608')
+				.col-md-10.col-lg-5.align-self-lg-center
+					h3 We Are Different
+					.inset-lg-left-15
+						ul.list-xl
+							li
+								+icon-box-left({
+									icon: ['icon-md', 'icon-1'],
+									header: 'Economies of Scale',
+									text: 'When you buy shares you have to pay dealing costs and admin fees, which can eat away at the value of your investment.'
+								})
+							li
+								+icon-box-left({
+									icon: ['icon-md', 'icon-2'],
+									header: 'A Way to Spread Your Risk',
+									text: 'Buying shares in only one investment company effectively gives you a diversified portfolio. '
+								})
+
+							li
+								+icon-box-left({
+									icon: ['icon-md', 'icon-3'],
+									header: 'Manager’s Expertise',
+									text: 'Each investment company uses professional management expertise.'
+								})
+
+	='\n'
+
+	include ../sections/_section-counters-black
+
+	//-Page Footer
+	include ../sections/_section-footer-default

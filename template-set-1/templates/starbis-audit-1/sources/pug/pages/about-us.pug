@@ -1,0 +1,174 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-thumbnail-2
+include ../elements/_ui-quote-vertical
+include ../elements/_ui-quote-bordered
+include ../elements/_ui-icon-box-horizontal
+include ../elements/_ui-quote-vertical
+include ../_includes/_progress-list
+
+block variables
+	- var activeIndex = 1
+	- var pageName = 'About Us'
+
+block title
+	title=pageName
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title(pageName, 'bg-image-1')
+
+	//- What is Tax?
+	section.section-60.section-md-90.section-md-bottom-100.bg-default.bg-image.bg-image-1(style='background-image: url(images/about-1.jpg);')
+		.container
+			.row.justify-content-md-center.justify-content-lg-end
+				.col-md-8.col-lg-6.col-xl-5
+					h3
+						| Why
+						=' '
+						span.text-thin Choose Us
+
+					p.text-black-05 At Easy Audit, we treat each client's business as if it were our own. To us, nothing is more important than knowing all we can about your financial goals and aspirations, and helping you to achieve them. Our professional team is constantly working to know every significant aspect of your business operation, and the key members of your organization. We understand that you are looking for high quality business consulting, and that’s exactly what we provide.
+					a.btn.btn-primary(href='our-team.html') Read more
+
+				.col-lg-1
+	='\n'
+
+	section.bg-cape-cod.context-dark
+		.container
+			.row.justify-content-sm-center.justify-content-lg-start
+				.col-sm-10.col-lg-5.text-start.section-60.section-md-90
+					div
+						h3
+							| our
+							=' '
+							span.text-thin advantages
+
+						.row.row-30.inset-left-15
+							.col-12
+								.unit.unit-xs.unit-xs-horizontal
+									.unit-left
+										span.icon.icon-primary.icon-lg-bigger.thin-icon-briefcase-2
+									.unit-body
+										h4.text-white Confidentiality
+										p.text-white-05 We guarantee the confidentiality of our client data through strict control over our infrastructure, as well as our physical and personal access rights.
+							.col-12
+								.unit.unit-xs.unit-xs-horizontal
+									.unit-left
+										span.icon.icon-primary.icon-lg-bigger.thin-icon-support
+									.unit-body
+										h4.text-white Comprehensive support
+										p.text-white-05 As an experienced outsourcing provider, we  offer legal services, audit and internal control, financial administration, and other business support.
+							.col-12
+								.unit.unit-xs.unit-xs-horizontal
+									.unit-left
+										span.icon.icon-primary.icon-lg-bigger.thin-icon-time
+									.unit-body
+										h4.text-white Quality
+										p.text-white-05 We are dedicated to providing high quality financial administration services based on extensive experience and knowledge.
+
+				.col-lg-1.d-none.d-lg-inline-block
+				.col-lg-6.section-image-aside.section-image-aside-right
+					.section-image-aside-img.d-none.d-lg-block(style='background-image: url(images/about-2.jpg)')
+
+
+	='\n'
+
+	//- Why Us?
+	section.section-66.section-md-90.section-xl-bottom-120
+		.container
+			.row
+				.col-sm-12
+					h3
+						| Who
+						=' '
+						span.text-thin we are
+
+			.row.justify-content-xl-between.row-40
+				.col-md-6.col-xl-5.text-secondary
+					.inset-md-right-15.inset-xl-right-0
+						p.text-gray-darker.
+							Easy Audit provides progressively minded, growing businesses with a single source of strategic solutions that span the full range of their needs – from tax, assurance, accounting and advisory to hands-on business consulting.
+						p.text-gray-darker.
+							We have built our firm on a solid foundation of knowledge, a forward-looking vision and a belief in doing business differently. Our goal is to empower you – wherever you are based – to navigate your complex business challenges with confidence.
+
+				.col-md-6
+					.progress-linear-group
+						+progress-linear({
+							title: 'Tax Consultancy Services',
+							value: '70'
+						})
+
+						+progress-linear({
+							title: 'Tax Training',
+							value: '54'
+						})
+
+						+progress-linear({
+							title: 'Bookkeeping',
+							value: '87'
+						})
+
+						+progress-linear({
+							title: 'Bank Reconciliation',
+							value: '90'
+						})
+	='\n'
+
+	//- Starbis Is Exactly What You Need
+	section.section-60.section-md-100.bg-accent
+		.container.text-center.text-lg-start
+			.row.align-items-lg-center.justify-content-lg-center.row-30
+				.col-lg-8.col-xl-7
+					h3.text-white Professional audit
+				.col-lg-4.col-xl-3
+					a.btn.btn-lg.btn-white-outline(href=globals.getTemplateLink) learn more
+	='\n'
+
+	//- What Clients Say?
+
+	section.section.parallax-container.bg-gray-base.bg-image.context-dark(data-parallax-img='images/clients-testimonials-parallax-2.jpg')
+		.parallax-content
+			.section-50.section-md-75.section-xl-top-100.section-xl-bottom-120
+				.container.text-center
+					.row
+						.col-sm-12
+							h3
+								| What
+								=' '
+								span.text-thin Clients Say?
+					.row.justify-content-sm-center.justify-content-md-start.row-60
+						.col-md-4
+							+quote-vertical({
+								mod: 'quote-vertical-inverse',
+								img: 'clients-testimonials-7-113x113.jpg',
+								text: "Beyond a shadow of doubt, they are the Best Tax Consultants I have ever come across.",
+								cite: "Axel Merphy",
+								caption: 'Client'
+							})
+
+						.col-md-4
+							+quote-vertical({
+								mod: 'quote-vertical-inverse',
+								img: 'clients-testimonials-8-113x113.jpg',
+								text: "I would not hesitate even one bit to work with them for my future tax and accounting needs.",
+								cite: "Amelia Lee",
+								caption: 'Client'
+							})
+
+						.col-md-4
+							+quote-vertical({
+								mod: 'quote-vertical-inverse',
+								img: 'clients-testimonials-9-113x113.jpg',
+								text: "The Tax Experts at TaxExpert are thorough professionals and always go that extra mile to help their clients.",
+								cite: "Jack McGee",
+								caption: 'Client'
+							})
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

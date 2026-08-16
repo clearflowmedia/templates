@@ -1,0 +1,117 @@
+extends  ../_skeleton
+include ../elements/_progress-linear
+
+//- Includes
+include ../elements/_thumbnail-1
+include ../elements/_quote-vertical
+include ../elements/_icon-box-horizontal
+
+block variables
+	- pageName = 'About us'
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title(pageName, 'bg-image-1')
+
+	//- Who we are?
+	section.section.section-66.section-md-90.section-xl-bottom-120.novi-background
+		.container
+			h3 Who we are?
+			.row.row-40.justify-content-lg-between
+				.col-md-6.col-xl-5.text-secondary
+					.inset-md-right-15.inset-xl-right-0
+						p Starbis is an independent web design studio with a rich history. It started as a small family-owned business in Oakville, and has grown enough to successfully occupy two large buildings in two different cities.
+						p Today Starbis offers a full range of web design, app development and content marketing services, including building full-featured ecommerce websites and web startups with custom functionality.
+
+				.col-md-6
+					.shift-sm-top-1
+						+progress-linear({
+							title: 'HTML/CSS',
+							value: '70'
+						}).progress-linear-red
+						+progress-linear({
+							title: 'JavaScript',
+							value: '54'
+						}).progress-linear-blue
+						+progress-linear({
+							title: 'Rails',
+							value: '87'
+						}).progress-linear-yellow
+						+progress-linear({
+							title: 'UI/UX',
+							value: '90'
+						}).progress-linear-green
+
+
+	//- Team members
+	section.section.section-60.section-md-90.bg-gray-lighter.novi-background
+		.container
+			.row.row-40.row-lg-60
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-1({
+						img: 'team-1-189x189.png',
+						header: "Julien Miro",
+						caption: "Software Developer"
+					})
+
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-1({
+						img: 'team-2-189x189.png',
+						header: "Joan Williams",
+						caption: "Support Operator"
+					})
+
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-1({
+						img: 'team-3-189x189.png',
+						header: "Benedict Smith",
+						caption: "Creative Director"
+					})
+
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-1({
+						img: 'team-4-189x189.png',
+						header: "Madlen Green",
+						caption: "Sales Manager"
+					})
+
+
+	include ../sections/_section-counters-black
+
+	//- Why Choose Us
+	section.section.section-60.section-md-90.bg-athens-gray.bg-image.bg-image-1.novi-background(style='background-image: url(images/about-1.jpg);')
+		.container
+			.row
+				.offset-md-4.col-md-8.offset-lg-5.col-lg-7.offset-xl-6.col-xl-5
+					.inset-md-left-100
+						h3 Why Choose Us
+					.inset-md-left-30.inset-md-right-30
+						ul.list-xl
+							li
+								+icon-box-left({
+									icon: ['icon-md', 'material-icons-phonelink'],
+									header: 'We use cutting-edge technologies',
+									text: 'Our team of professional analysts is constantly roaming the web in search of promising techniques.'
+								})
+							li
+								+icon-box-left({
+									icon: ['icon-md', 'material-icons-av_timer'],
+									header: 'Qualified Support',
+									text: 'We know how important it is for you to maintain your schedule, that’s why we do everything to fit it. '
+								})
+
+							li
+								+icon-box-left({
+									icon: ['icon-md', 'material-icons-headset_mic'],
+									header: 'We provide qualified support',
+									text: 'Our support team is online 24/7, and is ready to help you with any design - related issue.'
+								})
+
+
+	include ../sections/_section-testimonials-vertical-dark-small
+
+	//- Page Footer
+	include ../sections/_section-footer-default

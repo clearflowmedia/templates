@@ -1,0 +1,103 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-post-classic-minimal
+
+block variables
+	- var activeIndex = 4
+	- var pageName = 'Blog Line'
+
+block title
+	title=pageName
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+
+	+page-title('Blog', 'bg-blog')
+
+	//- Blog line
+	section.section-50.section-md-75.section-xl-100
+		.container
+			.row.justify-content-md-center.row-40.row-xl-90
+				.col-xl-10
+					dl.blog-timeline
+						dt 2021
+						dd
+							+post-classic-minimal({
+								header: 'Smart Travel',
+								text: [
+									"Whether you’re planning a trip to the beach in Florida this summer, or headed all the way across the country, you want your vacation to be relaxing. It’s a getaway from work, not to mention your day-to-day life. So we’ve got some tips – from packing smart to protecting yourself from pickpockets – to make your trip the best it can be. Even if you’re only headed across the state, a packing list is a must. How many times have you left your home and arrived at your destination, only to find that you forgot..."
+								],
+								tags: ["Travel", "Planning"],
+								user: 'Joan Williams',
+								time: ['2021-06-17', 'Jun 17'],
+								media: {
+									type: "image",
+									data: 'blog-line-1-771x515'
+								}
+							})
+
+							+post-classic-minimal({
+								header: 'Insurance After the Wedding',
+								text: ["The big day has come and gone but the happily ever after has just begun! You may think that planning the wedding was the worst of your stress, but there is still a lot to address afterwards. Once you are unpacked from the honeymoon, there are changes you will need to make, especially if you have a new last life insurance wedding name or new address. It’s important for all of your information to be..."],
+								tags: ["Insurance", "Wedding"],
+								user: 'Morgan Smith ',
+								time: ['2021-05-23', 'May 23'],
+								media: {
+									type: "image",
+									data: 'blog-line-2-772x435'
+								}
+							})
+
+							+post-classic-minimal({
+								header: 'About Motorcycle Insurance',
+								text: [
+									"If you own a motorcycle then you need to have motorcycle insurance.  Though they offer similar types of coverage, it differs from auto insurance as auto insurance helps to protect cars and motorcycle insurance helps protect motorcycles.  They are not interchangeable. What is motorcycle insurance? Motorcycle insurance is financial protection in case you get into an accident or something happens to your motorcycle or even you while riding your motorcycle.  If you get into an accident, instead of..."
+								],
+								tags: ["Motorcycle", "Auto"],
+								user: 'Amelia Condon',
+								time: ['2021-04-14', 'Apr 14'],
+								media: {
+									type: "image",
+									data: "blog-line-3-772x435"
+								}
+							})
+
+							+post-classic-minimal({
+								header: 'Back to School Insurance Needs',
+								text: [
+									"Going back to school is an exciting time for students, parents, and business owners.  When this time of year approaches, it is a good idea to reevaluate your commercial lines policies and make sure you have adequate coverage. for your business.  While it is always crucial as a business owner to have the right coverage for your business, this time of year can be particularly hectic. Dry... "
+								],
+								tags: ["Insurance", "School"],
+								user: 'Amelia Condon',
+								time: ['2021-03-02', 'Mar 2'],
+								media: {
+									type: "gallery",
+									data: [
+										"blog-line-2-770x433",
+										"blog-line-3-770x433",
+										"blog-line-4-770x433"
+									]
+								}
+							})
+
+							+post-classic-minimal({
+								header: 'Adding New Watercraft Coverage Enhancements',
+								text: ["Shelter’s expanded watercraft coverage offers the foundational liability, medical payments and physical damage coverage that many boat owners need. Optional endorsements are also available, including towing and assistance expense, watercraft agreed value, watercraft haul out, joint ownership and protection from damages resulting from uninsured watercraft. Competitively priced, a suite of deductibles and discounts are available, such as new discounts for watercraft safety course completion..."],
+								tags: ["Coverage", "Boat"],
+								user: 'Amelia Condon',
+								time: ['2021-02-16', 'Feb 16'],
+								media: {
+									type: "audio",
+									data: globals.soundcloud
+								}
+							})
+				.col-12
+					.text-center
+						+pagination
+	='\n'
+
+	//- Page Footer
+	include ../sections/_section-footer-default

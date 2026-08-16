@@ -1,0 +1,45 @@
+extends  ../_skeleton
+
+//- Includes
+include ../sections/_section-header-default
+include ../elements/_post-modern
+include ../_includes/_post
+
+block variables
+	- pageName = 'Blog'
+
+block page
+	//- Page Header
+	+header-default
+
+	//- Page Content
+	+page-title('Blog', 'bg-blog')
+
+	// Blog post
+	section.section-60.section-md-90.section-lg-150.bg-primary
+		.container
+			h2 Latest News & Blog Posts
+			h6.mt-4 Read the latest news from the world of military written daily by our team, volunteers, and global partners.
+			.row.row-40.row-lg-80.row-xxl-110.justify-content-center
+				.col-xs-10.col-md-6.col-lg-4( data-animate!={class: 'fadeInUpBig'} )
+					+post-classic-1({
+						title: '5 Charities That Build Homes For People',
+						label: 'News',
+						img: 'image-05-400x257.jpg'
+					}).post-sm
+				.col-xs-10.col-md-6.col-lg-4( data-animate!={class: 'fadeInUpBig', delay: '0.15s'} )
+					+post-classic-1({
+						title: 'The Road To Charity Isn’t Paved With Ease',
+						label: 'News',
+						img: 'image-06-400x257.jpg'
+					}).post-sm
+				.col-xs-10.col-md-6.col-lg-4( data-animate!={class: 'fadeInUpBig', delay: '0.3s'} )
+					+post-classic-1({
+						title: 'How People Worldwide Responded to COVID-19',
+						label: 'News',
+						img: 'image-07-400x257.jpg'
+					}).post-sm
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

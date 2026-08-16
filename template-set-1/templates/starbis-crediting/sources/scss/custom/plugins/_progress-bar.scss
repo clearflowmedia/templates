@@ -1,0 +1,103 @@
+/** @section Progress Circle */
+
+
+.progress-circle {
+  display: inline-block;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.progress-circle-block {
+  position: relative;
+}
+
+.progress-circle-bg {
+  fill: transparent;
+  stroke: $gray-100;
+  stroke-width: 4px;
+}
+
+.progress-circle-fg {
+  fill: transparent;
+  stroke: $primary;
+  stroke-width: 4px;
+}
+
+.progress-circle-counter {
+  position: absolute;
+  top: 50%;
+  left: 51%;
+  font-size: 36px;
+  line-height: 36px;
+  transform: translate(-50%, -50%);
+  color: $black;
+  
+  &::after {
+    content: "%";
+  }
+}
+
+.progress-circle-title {
+  margin-top: 20px;
+  font-size: 14px;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: $gray-600;
+}
+
+* + .progress-bar-circle-title {
+  margin-top: 12px;
+}
+
+// Linear Progress Bars
+.progress-linear {
+	position: relative;
+	text-align: left;
+}
+
+.progress-linear-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.progress-linear-body {
+	height: $progress-height;
+	overflow: hidden; // force rounded corners by cropping it
+	line-height: 0;
+	@include font-size($progress-font-size);
+	background-color: $progress-bg;
+	@include border-radius($progress-border-radius);
+	@include box-shadow($progress-box-shadow);
+}
+
+.progress-linear-bar {
+	width: 0;
+	height: inherit;
+	background: $primary;
+	transition: 1s all ease-in-out;
+}
+
+.progress-linear-counter {
+	font-weight: 700;
+	color: $black;
+
+	&::after {
+		content: "%";
+	}
+}
+
+* + .progress-linear-body {
+	margin-top: 8px;
+}
+
+.progress-linear + .progress-linear {
+	margin-top: 15px;
+}
+
+@include media-breakpoint-up(lg) {
+	.progress-linear + .progress-linear {
+		margin-top: 25px;
+	}
+}
+

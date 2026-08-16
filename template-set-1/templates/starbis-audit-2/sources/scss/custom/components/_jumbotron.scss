@@ -1,0 +1,37 @@
+//
+// Jumbotron Custom
+// --------------------------------------------------
+
+.jumbotron-custom {
+  font-weight: 900;
+  font-size: 35px;
+  line-height: 1.2;
+  letter-spacing: .01em;
+
+  > span {
+    font-size: 31px;
+    line-height: 1.2;
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: 45px; 
+
+    > span {
+      font-size: 41px;
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 55px;
+
+    > span {
+      font-size: 51px;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 65px;
+
+    > span {
+      font-size: 61px;
+    }
+  }
+}

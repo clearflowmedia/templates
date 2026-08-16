@@ -1,0 +1,55 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-quote-default
+include ../elements/_ui-placeholders
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Table styles'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title(pageName, 'bg-image-1', {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Additional Pages",
+      "href": "#"
+    },
+    2: {
+      "title": pageName
+    }
+  })
+
+  //- Tables
+  section.text-start.section-75.section-lg-100.bg-default
+    .container
+      .text-center
+        h3 Tables
+        p.big.text-gray Tables have always been perfect for displaying facts and numbers.
+          br.d-none.d-lg-block
+          | Now you can benefit from using them on your website.
+      +table('table-custom-primary')
+  ='\n'
+  hr
+  section.text-start.section-75.section-lg-100.bg-default
+    .container
+      +table(['table-custom-lined'])
+  ='\n'
+  hr
+  section.text-start.section-75.section-lg-100.bg-default
+    .container
+      +table(['table-custom-primary', 'table-custom-striped'])
+  ='\n'
+
+  //- Page Footer
+  include ../sections/_section-footer-default

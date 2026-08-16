@@ -1,0 +1,96 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-post-modern
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Masonry Blog'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title(pageName, 'bg-image-1', {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Blog",
+      "href": "#"
+    },
+    2: {
+      "title": pageName
+    }
+  })
+
+  //- Blog masonry
+  section.section-50.section-md-75.section-xl-100.bg-wasip.text-start
+    .container
+      .row.row-30.justify-content-md-center.justify-content-lg-start
+        .col-md-9.col-lg-6
+          +post-modern({
+            type: 'material-icons-videocam',
+            header: 'Common Home Selling Mistakes',
+            content: [
+              {type: 'video', data: globals.video},
+              {type: 'text', data: ['Preparing to sell a home often comes with many major changes, such as a new career or long-distance relocation. During this busy time, avoiding common seller mistakes will reduce stress and could add thousands...']}
+            ],
+            time: ['2021-01-01', '2 days ago'],
+            tags: ['Mortgage', 'Selling', 'Home']
+          })
+
+          +post-modern({
+            type: 'material-icons-local_see',
+            header: 'A Few Steps to Financing Your Future',
+            content: [
+                {type: 'image', data: 'blog-masonry-1-570x321'}
+            ],
+            time: ['2021-01-01', '7 days ago'],
+            tags: ['Tips', 'Loans']
+          })
+
+        .col-md-9.col-lg-6
+          +post-modern({
+            type: 'material-icons-library_books',
+            header: 'Getting a Loan to Build a House',
+            content: [
+              {type: 'text', data: ['Instead of buying an existing house for your next home, have you considered building? There can be many advantages to owning a brand-new house, such as higher energy efficiency, lower repair costs, and the opportunity to customize many features.The first step is determining how to get a loan to…']}
+            ],
+            time: ['2021-01-01', '3 days ago'],
+            tags: ['Build', 'Home', 'Loans']
+          })
+
+          +post-modern({
+            type: 'material-icons-audiotrack',
+            header: 'Refinancing Your Home for Cost Savings',
+            content: [
+              {type: 'audio', data: globals.soundcloud}
+            ],
+            time: ['2021-01-01', '4 days ago'],
+            tags: ['Tips']
+          })
+
+          +post-modern({
+            type: 'material-icons-videocam',
+            header: 'Selling or Leasing Your Home',
+            content: [
+              {type: 'image', data: 'blog-masonry-2-570x321'},
+              {type: 'text', data: ['Buying a home to live in involves different priorities from investing in real estate or converting a primary residence into a rental property. When you are moving out of your current home, you need to think about both…']}
+            ],
+            time: ['2021-01-01', '2 days ago'],
+            tags: ['Selling', 'Home']
+          })
+
+
+      .pagination-custom-wrap.text-center
+        +pagination
+  ='\n'
+
+  //- Page Footer
+  include ../sections/_section-footer-default

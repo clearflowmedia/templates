@@ -1,0 +1,28 @@
+extends  ../_skeleton
+
+block variables
+  - var activeIndex = 2
+  - var pageName = 'Appointment'
+
+block title
+  title=pageName
+
+block page
+  //-Page Header
+  include ../sections/_section-header-default
+
+
+  +page-title(pageName, 'bg-image-1')
+
+  //-Make an Appointment
+  section.section-60.section-md-top-90.section-md-bottom-100
+    .container
+      .row
+        .col-lg-9.col-xl-7
+          h3 Make an Appointment
+          //-RD Mailform
+          include ../sections/_section-form-feedback
+  ='\n'
+
+  //-Page Footer
+  include ../sections/_section-footer-default

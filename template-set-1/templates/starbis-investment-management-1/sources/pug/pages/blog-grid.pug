@@ -1,0 +1,74 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-post-block
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Blog Grid'
+
+block title
+  title=pageName
+
+block page
+  //-Page Header
+  include ../sections/_section-header-default
+
+
+  +page-title('Blog', 'bg-blog')
+
+  //-Blog masonry
+  section.section-50.section-md-75.section-xl-100
+    .container
+      .row.row-30.justify-content-md-center.justify-content-lg-start
+        .col-md-9.col-lg-6.height-fill
+          +post-block({
+            img: 'blog-grid-1-570x253',
+            header: 'Leave your Legacy through Planned Giving',
+            user: 'Joan Williams',
+            time: ['2021-01-01', '5 days ago'],
+            tags: ['Legacy', 'Plan']
+          })
+
+        .col-md-9.col-lg-6.height-fill
+          +post-block({
+            img: 'blog-grid-2-570x253',
+            header: 'Debt After Death – Do You Have it Covered ? ',
+            user: 'Tom Park',
+            time: ['2021-01-01', '5 days ago'],
+            tags: ['Debt', 'Credit Card']
+          })
+
+        .col-md-9.col-lg-6.height-fill
+          +post-block({
+            img: 'blog-grid-4-570x253',
+            header: 'Protecting Your Biggest Asset',
+            user: 'Julien Miro',
+            time: ['2021-01-01', '5 days ago'],
+            tags: ['Protecting', 'Insurance']
+          })
+
+        .col-md-9.col-lg-6.height-fill
+          +post-block({
+            img: 'blog-grid-4-570x253',
+            header: 'How to Purchase the Right Amount of Life Insurance ',
+            user: 'Julien Miro',
+            time: ['2021-01-01', '5 days ago'],
+            tags: ['Insurance', 'Financial']
+          })
+
+        .col-md-9.col-lg-6.height-fill
+          +post-block({
+            img: 'blog-grid-5-570x253',
+            header: 'A Lesson in Helping your Student Pay for College',
+            user: 'Amelia Anderson',
+            time: ['2021-01-01', '5 days ago'],
+            tags: ['Lesson', 'Student']
+          })
+
+      .pagination-custom-wrap.text-center
+        +pagination
+  ='\n'
+
+  //-Page Footer
+  include ../sections/_section-footer-default

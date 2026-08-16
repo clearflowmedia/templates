@@ -1,0 +1,85 @@
+extends  ../_skeleton
+include ../elements/_progress-linear
+include ../elements/_countdown
+block variables
+	- pageName = 'Progress bars'
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title(pageName, 'bg-image-1')
+
+	//- Skills Bars
+	section.section.section-lg
+		.container
+			h3.text-center Skills
+			.row.row-40.justify-content-lg-between.offset-top-1
+				.col-md-6.col-xl-5.text-secondary
+					p Vestibulum vulputate elit felis, vitae euismod augue porta eget. In mattis enim non lectus maximus congue. Sed faucibus pretium egestas. Pellentesque habitant morbi tristique senectus.
+					p Aliquam efficitur ex sit amet pellentesque faucibus. Vestibulum in blandit quam, vel mollis ante. Donec bibendum suscipit ante, id faucibus mauris blandit eu. Nunc at tortor eros.
+				.col-md-6
+					+progress-linear({
+						title: 'Knowledge',
+						value: '75'
+					})
+
+					+progress-linear({
+						title: 'Dedication',
+						value: '85'
+					})
+
+					+progress-linear({
+						title: 'Professionalism',
+						value: '80'
+					})
+
+
+
+
+	//- Counters
+	section.section.section-lg.bg-gray-dark
+		.container
+			h3.text-center Counters
+			.row.row-40
+				.col-sm-6.col-md-3
+					.box-counter.text-center.text-sm-start
+						span.icon.icon-md.icon-primary.material-icons-content_copy
+						//- CountTo
+						.text-large.counter 58249
+						h5.box-header projects
+
+				.col-sm-6.col-md-3
+					.box-counter.text-center.text-sm-start
+						span.icon.icon-md.icon-primary.material-icons-mood
+						//- CountTo
+						.text-large.counter.counter-k 246
+						h5.box-header happy clients
+
+				.col-sm-6.col-md-3
+					.box-counter.text-center.text-sm-start
+						span.icon.icon-md.icon-primary.material-icons-access_time
+						//- CountTo
+						.text-large.counter 1200
+						h5.box-header hours of work
+
+				.col-sm-6.col-md-3
+					.box-counter.text-center.text-sm-start
+						span.icon.icon-md.icon-primary.material-icons-code
+						//- CountTo
+						.text-large.counter.counter-k 834
+						h5.box-header qualified renovators
+
+
+	//- Progress Bars
+	section.section.section-lg
+		.container
+			h3.text-center Date Countdown
+			.block-centered
+				//- Countdown
+				+countdown({ to: '2024-01-22' })
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

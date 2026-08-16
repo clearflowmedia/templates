@@ -1,0 +1,114 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_thumbnail-1
+include ../elements/_quote-vertical
+include ../elements/_icon-box-horizontal
+include ../elements/_progress-linear
+
+block variables
+	- pageName = 'About'
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title(pageName, 'bg-image-1')
+
+	//- Who we are?
+	section.section.section-lg.bg-default
+		.container
+			h3 Who we are
+			.row.row-40.justify-content-lg-between
+				.col-md-6.col-xl-5.text-secondary
+					.inset-md-right-15.inset-xl-right-0
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid aspernatur consequatur eos exercitationem facilis, fugiat illum incidunt iste maxime modi officiis reprehenderit sint tempore temporibus ut voluptas? At dolores harum iusto necessitatibus neque, obcaecati odio officia sequi sint suscipit!
+						p Ab alias aut cum doloribus facere inventore ipsum laborum, magni natus nesciunt officia optio quisquam tenetur, unde voluptas! Adipisci aliquid aut blanditiis corporis dolor dolorem, dolores ducimus eius error eum facere hic illum ipsam labore laborum libero maxime molestiae neque non nostrum officia omnis possimus quam quidem quos ratione repellendus vel veniam.
+
+				.col-md-6
+					.shift-sm-top-1
+						+progress-linear({
+							title: 'Knowledge',
+							value: '75'
+						})
+
+						+progress-linear({
+							title: 'Dedication',
+							value: '85'
+						})
+
+						+progress-linear({
+							title: 'Professionalism',
+							value: '80'
+						})
+
+
+	//- Team members
+	section.section.section-lg.bg-gray-lighter
+		.container
+			.row.row-40.row-lg-60
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-1({
+						img: 'team-1-189x189.png',
+						header: "Ralph Edwards",
+						caption: "Floor and coverings expert"
+					})
+
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-1({
+						img: 'team-2-189x189.png',
+						header: "Edward Robertson",
+						caption: "Electrical and furniture expert"
+					})
+
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-1({
+						img: 'team-3-189x189.png',
+						header: "Jenny Wilson",
+						caption: "Paint expert"
+					})
+
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-1({
+						img: 'team-4-189x189.png',
+						header: "Brooklyn Simmons",
+						caption: "Repair technician"
+					})
+
+
+	include ../sections/_section-counters-black
+
+	//- Why Choose Us
+	section.section.section-lg.bg-athens-gray.bg-image.bg-image-1(style='background-image: url(images/about-1.jpg);')
+		.container
+			.row
+				.col-md-8.offset-lg-5.col-lg-7.offset-xl-6.col-xl-5
+					.inset-lg-left-100
+						h3 Why Choose Us
+					.inset-lg-left-30.inset-lg-right-30
+						ul.list-xl
+							li
+								+icon-box-left({
+									icon: ['icon-md', 'material-icons-phonelink'],
+									header: 'We use cutting-edge technologies',
+									text: 'Autem debitis ex ipsum, neque odio officiis omnis qui unde velit. Accusamus, autem dolorem eos ipsum.'
+								})
+							li
+								+icon-box-left({
+									icon: ['icon-md', 'material-icons-av_timer'],
+									header: 'We value your time',
+									text: 'Accusamus ad, at atque dolores earum eos eum ex hic ipsam iste nesciunt nulla officia optio quo sunt suscipit. '
+								})
+
+							li
+								+icon-box-left({
+									icon: ['icon-md', 'material-icons-headset_mic'],
+									header: 'We provide qualified support',
+									text: 'Iste maiores nihil nulla, officiis omnis pariatur perferendis porro quo repellat, repellendus sequi tempore unde velit vero.'
+								})
+
+	include ../sections/_section-testimonials-vertical-dark-small
+
+	//- Page Footer
+	include ../sections/_section-footer-default

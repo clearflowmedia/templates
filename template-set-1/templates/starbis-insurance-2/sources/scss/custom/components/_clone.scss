@@ -1,0 +1,139 @@
+.overlay-5 {
+	position: relative;
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba($cello, .5);
+	}
+}
+
+.overlay-8 {
+	position: relative;
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba($cello, .8);
+	}
+}
+
+.page-title-wrap.overlay-5 > * {
+	position: relative;
+	z-index: 1;
+}
+
+.parallax-container {
+	&.overlay-5 {
+		&::before {
+			z-index: 1;
+		}
+	}
+}
+
+.parallax-container {
+	&.overlay-8 {
+		&::before {
+			z-index: 1;
+		}
+	}
+}
+
+.rd-navbar-aside-group {
+	.unit-left {
+		display: flex;
+	}
+}
+
+.rd-navbar-corporate-light.rd-navbar-static .rd-search {
+	.rd-search-inner, .rd-search-results-live {
+		width: 600px;
+	}
+}
+
+.rd-search-results-live {
+	.search-list li {
+		margin-top: 25px;
+		width: 49%;
+		display: inline-block;
+		.search-list-item-all {
+			width: 100%;
+			display: block;
+		}
+	}
+}
+
+.owl-nav-position-numbering .owl-next, .owl-nav-position-numbering .owl-prev {
+	cursor: pointer;
+}
+
+.select2-container .select2-dropdown {
+	z-index: 100;
+}
+
+.inset-xl-left-70.inset-xl-right-70 {
+	@include media-breakpoint-down(lg) {
+		margin-top: 25px;
+	}
+}
+
+.post-boxed-title a:hover {
+	color: $primary;
+}
+
+.dtp-date > div {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.owl-style-minimal .owl-dot.active {
+	cursor: auto;
+}
+
+.owl-style-minimal .owl-dot,
+.owl-prev, .owl-next {
+	cursor: pointer;
+}
+
+form.label-outside .form-validation {
+	@include media-breakpoint-down(md) {
+		top: 4px;
+	}
+}
+
+.col-md-6.col-lg-12.offset-top-50.sideber-cus {
+	@include media-breakpoint-only(md) {
+		margin-top: 0;
+	}
+}
+
+.form-wrap-recaptcha {
+	.form-validation {
+		left: 10px;
+	}
+}
+
+[class*='ie-'] {
+	.shift-md-top-1 {
+		margin-top: 0;
+	}
+}
+
+@include media-breakpoint-down(md) {
+	.isotope-filters-responsive {
+		text-align: center;
+		* > {
+			display: inline-block;
+		}
+	}
+}

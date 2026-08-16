@@ -1,0 +1,118 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-quote-default
+include ../elements/_ui-placeholders
+
+block variables
+  - var activeIndex = 2
+  - var pageName = 'Typography'
+
+block title
+  title=pageName
+
+block page
+  //-Page Header
+  include ../sections/_section-header-default
+
+
+  +page-title(pageName, 'bg-image-1')
+
+  //-Typography
+  section.section-60.section-md-top-75.section-md-bottom-50
+    .container
+      .row.row-30.row-md-40
+        .col-md-6
+          h1 Heading 1
+          +text-placeholder('text-gray-05')
+
+        .col-md-6
+          h2 Heading 2
+          +text-placeholder('text-gray-05')
+
+        .col-md-6
+          h3 Heading 3
+          +text-placeholder('text-gray-05')
+
+        .col-md-6
+          h4 Heading 4
+          +text-placeholder('text-gray-05')
+
+        .col-md-6
+          h5 Heading 5
+          +text-placeholder('text-gray-05')
+
+        .col-md-6
+          h6 Heading 6
+          +text-placeholder('text-gray-05')
+  ='\n'
+
+  //-Blockquote
+  section.section-35
+    .container
+      h3 Blockquote
+      div(style='max-width: 530px;')
+        +quote-default('I am very happy I’ve purchased Starbis template from your company. It really helps my business!')
+  ='\n'
+
+  //-Text Formatting
+  section.section-md-50
+    .container
+      h3 Text Formatting
+      .box-text
+        a(href='#').link.link-primary-inline Link text
+        a(href='#').link.link-primary-inline.hover Hover link text
+        a(href='#').link.link-primary-inline.active Press link
+        span.mark highlighted text
+        span.text-strike strickethrough text
+        span.text-underline underlined text.
+  ='\n'
+
+
+  //-Image Centered
+  section.section-35
+    .container
+      h3 Image Centered
+      figure
+        +jpg('typography-1-1169x610')
+      p.text-gray-darker Our experience in structuring complicated financial transactions while accommodating diverse partnership interests, has allowed it to achieve over $1 Billion in acquisitions and financing.
+  ='\n'
+
+  //-Image Right
+  section.section-35.section-md-50
+    .container
+      h3 Image Right
+      .row.row-30.flex-row-md-reverse.justify-content-lg-between
+        .col-md-6
+          figure
+            +jpg('typography-2-570x386')
+        .col-md-6
+          .inset-lg-right-40.inset-xl-right-85.text-gray-darker
+            p.
+              Generally, an "investment company" is a company that issues securities and is primarily engaged in the business of investing in securities. An investment company invests the money it receives from investors on a collective basis, and each investor shares in the profits and losses in proportion to the investor's interest in the investment company.
+            p.
+              The performance of the investment company will be based on  the performance of the securities and other assets that the investment company owns. The federal securities laws categorize investment companies into three basic types: 1. Mutual funds (legally known as open-end companies); 2. Closed-end funds (legally known as closed-end companies); 3. UITs (legally known as unit investment trusts). Each type has its own unique features. For example, mutual fund and UIT shares are "redeemable" (meaning that when investors want to sell their shares, they sell them back to the fund or trust, or to a broker acting for the fund or trust, at their approximate net asset value).
+
+  ='\n'
+
+  //-Image Left
+  section.section-40.section-md-bottom-100.section-xl-bottom-165
+    .container
+      .row
+        .col-12
+          h3 Image Left
+      .row.row-30.justify-content-lg-between
+        .col-md-6
+          figure
+            +jpg('typography-3-570x386')
+        .col-md-6
+          .inset-lg-left-40.inset-xl-left-70.text-gray-darker
+            p.
+              Generally, an "investment company" is a company that issues securities and is primarily engaged in the business of investing in securities. An investment company invests the money it receives from investors on a collective basis, and each investor shares in the profits and losses in proportion to the investor's interest in the investment company.
+            p.
+              The performance of the investment company will be based on  the performance of the securities and other assets that the investment company owns. The federal securities laws categorize investment companies into three basic types: 1. Mutual funds (legally known as open-end companies); 2. Closed-end funds (legally known as closed-end companies); 3. UITs (legally known as unit investment trusts). Each type has its own unique features. For example, mutual fund and UIT shares are "redeemable" (meaning that when investors want to sell their shares, they sell them back to the fund or trust, or to a broker acting for the fund or trust, at their approximate net asset value).
+  ='\n'
+
+
+  //-Page Footer
+  include ../sections/_section-footer-default

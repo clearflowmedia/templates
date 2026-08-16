@@ -1,0 +1,62 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_thumbnail-3
+
+block variables
+	- pageName = 'Masonry gallery'
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title('Gallery', 'bg-gallery')
+
+	//- Masonry gallery
+	section.section.section-lg.bg-default
+		.container.isotope-wrap
+			.row.row-40.text-center
+				.col-sm-12
+					//- Isotope Filters
+					ul.isotope-filters-responsive
+						li: p Choose your category:
+						li.block-top-level
+							//- Isotope Filters
+							button.isotope-filters-toggle.btn.btn-sm.btn-default(data-custom-toggle='#isotope-1', data-custom-toggle-hide-on-blur='true', data-custom-toggle-disable-on-blur='true')
+								| Filter
+								span.caret
+
+							#isotope-1.isotope-filters.isotope-filters-minimal.isotope-filters-horizontal
+								ul.list-inline
+									li: a.active(data-isotope-filter='*', href='#') All
+									li: a(data-isotope-filter='Category 1', href='#') Interior
+									li: a(data-isotope-filter='Category 2', href='#') Exterior
+									li: a(data-isotope-filter='Category 3', href='#') Other
+				//- Isotope Content
+				.col-sm-12
+					.row.isotope.isotope-gutter-default( data-lightgallery='group', data-lg-thumbnail='false', data-column-width='.42' )
+						.col-12.col-md-6.col-lg-8.isotope-item(data-filter='Category 1')
+							+thumbnail-3({img: 'gallery-masonry-1-770x586', original: 'masonry-gallery-01-original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+							+thumbnail-3({img: 'gallery-masonry-2-370x278', original: 'masonry-gallery-02-original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 3')
+							+thumbnail-3({img: 'gallery-masonry-3-371x587', original: 'masonry-gallery-03-original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+							+thumbnail-3({img: 'gallery-masonry-4-373x279', original: 'masonry-gallery-04-original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+							+thumbnail-3({img: 'gallery-masonry-5-373x279', original: 'masonry-gallery-05-original'})
+
+						.col-12.col-md-6.col-lg-8.isotope-item(data-filter='Category 3')
+							+thumbnail-3({img: 'gallery-masonry-6-769x384', original: 'masonry-gallery-06-original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+							+thumbnail-3({img: 'gallery-masonry-7-371x384', original: 'masonry-gallery-07-original'})
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

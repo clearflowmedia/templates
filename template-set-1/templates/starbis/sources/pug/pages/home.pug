@@ -1,0 +1,224 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_icon-box-vertical
+include ../elements/_thumbnail-1
+include ../elements/_thumbnail-3
+include ../elements/_link-image
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+	include ../sections/_section-slider
+
+	//- Most Flexible Bootstrap template
+	section.section.section-50.section-md-90.section-xl-top-120.section-xl-bottom-145#section-start-journey
+		.container
+			.row.row-40.row-md-60.align-items-lg-end.justify-content-lg-center
+				.col-md-10.col-lg-5.wow.fadeInLeftSmall(data-wow-duration='1s' data-wow-offset='200')
+					h2.text-red-orange Most Flexible
+					p.h3 Bootstrap template
+					p.text-secondary Created by the industry leaders, Starbis Bootstrap template includes a comprehensive set of tools which are super easy to pick up and run. This template gives you a huge leg up to create your own beautiful site using powerful options & tools, unlimited designs, and responsive framework.
+					a.btn.btn-xl.btn-primary( href= links.getTemplate, target='_blank' ) Get Starbis Now
+
+				.col-md-11.col-lg-7
+					.image-group
+						figure.wow.fadeInRightSmall(data-wow-duration='.9s' data-wow-delay='.0s' data-wow-offset='80')
+							+img('home-1-243x199.png')
+						figure.wow.fadeInRightSmall(data-wow-duration='.9s' data-wow-delay='.2s' data-wow-offset='200')
+							+img('home-2-508x341.png')
+						figure.wow.fadeInRightSmall(data-wow-duration='.9s' data-wow-delay='.4s' data-wow-offset='300')
+							+img('home-3-689x469.png')
+
+
+	.divider-spectrum
+
+	//- Ocean of Possibilities
+	+parallax({
+		img: 'parallax-1'
+	}).bg-black
+		.section-50.section-md-75.section-xl-top-100.section-xl-bottom-120
+			.container
+				.row.justify-content-md-center
+					.col-md-11.col-lg-10.col-xl-9.text-center
+						h3
+							span Ocean
+							em of
+							span Possibilities
+						p.
+							Check out an incredible set of features provided by Starbis. We collected all common required features in one template. That makes it one of the most awesome ones on the market. Starbis allows you to take control of almost every element and section of the site.
+
+				.row.row-40.row-xl-60.offset-xl-top-60
+					.col-md-6.col-lg-4
+						+icon-box-vertical({
+							icon: ['icon-md', 'material-icons-security'],
+							header: 'Based on Bootstrap 4',
+							text: 'Starbis is based on the one of the most popular and flexible CSS Frameworks - Bootstrap. It gives you confidence in quality and flexibility of the product you buy.'
+						})
+
+					.col-md-6.col-lg-4
+						+icon-box-vertical({
+							icon: ['icon-md', 'material-icons-build'],
+							header: 'Extended Toolkit',
+							text: 'Starbis provides a powerful and flexible extended toolkit in addition to basic Bootstrap. If you’ve used Bootstrap itself, you’ll find this all super familiar and easy-to-use.'
+						})
+
+					.col-md-6.col-lg-4
+						+icon-box-vertical({
+							icon: ['icon-md', 'material-icons-palette'],
+							header: 'Unlimited Skins & Colors',
+							text: 'Starbis includes a wide variety of skins and colors, from which you can easily select what you like to attract the attention of your customers to your company.'
+						})
+
+					.col-md-6.col-lg-4
+						+icon-box-vertical({
+							icon: ['icon-md', 'material-icons-layers'],
+							header: 'Parallax Effects',
+							text: 'Everyone loves parallax scrolling effects, they are simply beautiful. Starbis has advanced parallax options & controls based on flexible and easy-to-use RD Parallax plugin.'
+						})
+
+					.col-md-6.col-lg-4
+						+icon-box-vertical({
+							icon: ['icon-md', 'material-icons-device_hub'],
+							header: 'Social Integration',
+							text: 'Starbis has full set of social icons and styling options which allow you to share any content the way you want.'
+						})
+
+					.col-md-6.col-lg-4
+						+icon-box-vertical({
+							icon: ['icon-md', 'material-icons-directions_run'],
+							header: 'Made for Speed',
+							text: 'We know how embarrassing and time-consuming content loading can be, so we took care of pages optimization for your smooth experience.'
+						})
+
+				.row.offset-xl-top-60
+					.col-sm-12.text-center
+						a.btn.btn-xl.btn-primary( href= links.getTemplate, target='_blank' ) Get Starbis Now
+
+
+	include ../sections/_section-default-cta
+
+	//- About Us
+	+parallax({
+		img: 'parallax-2'
+	}).bg-black
+		.section-60.section-md-100.section-xl-120
+			.container.text-center
+				.row
+					.col-sm-12
+						a.link-circle.link-white(data-lightgallery='item', href='https://www.youtube.com/watch?v=1UWpbtUupQQ'): span.novi-icon.icon.icon-xl.fl-36-slim-icons-play90
+						h3 About Us
+						p.big.fw-light: span.d-inline-block(style='max-width: 740px;') We are an internationally recognized web design studio, providing first-class templates at affordable prices. Our designs are used worldwide by companies of any size and type as well as by individuals - musicians, writers, businessmen etc.
+
+
+	include ../sections/_section-counters-black
+
+	//- Check our portfolio
+	section.section.section-50.section-md-90.section-xl-top-120.section-xl-bottom-145
+		.container.isotope-wrap
+			.row.row-40
+				.col-sm-12.text-center
+					h3
+						span Check
+						em our portfolio
+						span with Other Themes
+
+					//- Isotope Filters
+					ul.isotope-filters-responsive
+						li: p Choose your category:
+						li.block-top-level
+							//- Isotope Filters
+							button.isotope-filters-toggle.btn.btn-sm.btn-default(data-custom-toggle='#isotope-1', data-custom-toggle-disable-on-blur='true')
+								| Filter
+								span.caret
+
+							#isotope-1.isotope-filters.isotope-filters-minimal.isotope-filters-horizontal
+								ul.list-inline
+									li: a.active(data-isotope-filter='*', href='#') All
+									li: a(data-isotope-filter='Category 1', href='#') Webdesign
+									li: a(data-isotope-filter='Category 2', href='#') UI/UX
+									li: a(data-isotope-filter='Category 3', href='#') Branding
+
+				.col-sm-12
+					.row.isotope.isotope-gutter-default(data-lightgallery='group', data-lg-thumbnail='false')
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+							+thumbnail-3({img: 'gallery-grid-1-370x278', original: 'gallery-1-1200x900_original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+							+thumbnail-3({img: 'gallery-grid-2-370x278', original: 'gallery-2-1200x978_original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 3')
+							+thumbnail-3({img: 'gallery-grid-3-370x278', original: 'gallery-3-1200x606_original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+							+thumbnail-3({img: 'gallery-grid-4-370x278', original: 'gallery-4-1200x713_original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+							+thumbnail-3({img: 'gallery-grid-5-370x278', original: 'gallery-5-1200x900_original'})
+
+						.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 3')
+							+thumbnail-3({img: 'gallery-grid-6-370x278', original: 'gallery-6-1200x900_original'})
+
+
+	//- Meet Our Team
+	section.section.section-50.section-md-90.section-xl-120.bg-gray-lighter.novi-background
+		.container
+			.text-center
+				h3 Meet Our Team
+				p We are a team of developers, designers and leads who love what they do.
+			.row.row-40.row-lg-60
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-1({
+						img: 'team-1-189x189.png',
+						header: "Julien Miro",
+						caption: "Software Developer"
+					})
+
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-1({
+						img: 'team-2-189x189.png',
+						header: "Joan Williams",
+						caption: "Support Operator"
+					})
+
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-1({
+						img: 'team-3-189x189.png',
+						header: "Benedict Smith",
+						caption: "Creative Director"
+					})
+
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-1({
+						img: 'team-4-189x189.png',
+						header: "Madlen Green",
+						caption: "Sales Manager"
+					})
+
+
+	include ../sections/_section-testimonials-parallax
+
+	//- Our Partners
+	section.section.section-50.section-md-90.section-xl-top-120
+		.container
+			.text-center
+				h3 Our Partners
+				p: span.d-inline-block(style='max-width: 580px;') We work with the companies that have established a stainless reputation in what they do. They are leaders in various spheres of business, and we appreciate cooperating with them.
+
+			.row.row-30
+				.col-sm-6.col-md-3
+					+link-image({img: 'clients-1-126x68.png'})
+
+				.col-sm-6.col-md-3
+					+link-image({img: 'clients-2-126x100.png'})
+
+				.col-sm-6.col-md-3
+					+link-image({img: 'clients-4-169x68.png'})
+
+				.col-sm-6.col-md-3
+					+link-image({img: 'clients-6-138x55.png'})
+
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

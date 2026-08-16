@@ -1,0 +1,515 @@
+//
+// Custom typography
+// --------------------------------------------------
+
+// Page header
+// -------------------------
+
+.page-header {
+}
+
+// Fonts
+// -------------------------
+
+.font-default {
+  font-family: $font-family-base;
+}
+
+@mixin font-size-default {
+  font-size: $font-size-body;
+  line-height: $line-height-base;
+}
+
+.font-size-default {
+  @include font-size-default;
+}
+
+// Basic Typography
+// -------------------------
+
+#{headings()} {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  color: $headings-color;
+
+  > span {
+    display: inline-block;
+    font-size: inherit;
+  }
+
+  a {
+    display: inline;
+    font: inherit;
+    letter-spacing: inherit;
+    transition: .33s all ease;
+    &, &:active, &:focus {
+      color: inherit;
+    }
+
+    &:hover {
+      color: $link-hover-color;
+    }
+  }
+
+  > * {
+    margin-right: .25em;
+  }
+}
+
+h1,
+.h1 {
+  //{0 - 768px} <= 40px
+  //{768px - 992px} <= 62px
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: -.025em;
+
+  @include media-breakpoint-up(md) {
+    font-size: 40px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 70px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    line-height: $h1-line-height;
+    font-size: $h1-font-size;
+  }
+}
+
+h2,
+.h2 {
+  //{0 - 768px} <= 36px
+  //{768px - 992px} <= 52px
+  font-size: 32px;
+  line-height: 1.4;
+  letter-spacing: -.025em;
+
+  @include media-breakpoint-up(md) {
+    font-size: 32px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 40px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    line-height: $h2-line-height;
+    font-size: $h2-font-size;
+  }
+}
+
+h3.text-style-lighter,
+.h3.text-style-lighter {
+  font-weight: 400;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 50px;
+  }
+}
+
+h3,
+.h3 {
+  //{0 - 768px} <= 32px
+  //{768px - 992px} <= 44px
+  font-size: 24px;
+  line-height: 1.35;
+
+  @include media-breakpoint-up(md) {
+    font-size: 26px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 30px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    line-height: $h3-line-height;
+    font-size: $h3-font-size;
+  }
+}
+
+h4,
+.h4 {
+  //{0 - 768px} <= 26px
+  //{768px - 992px} <= 36px
+  font-size: 20px;
+  line-height: 1.35;
+
+  @include media-breakpoint-up(md) {
+    font-size: 24px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 26px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    line-height: $h4-line-height;
+    font-size: $h4-font-size;
+  }
+}
+
+h5,
+.h5 {
+  //{0 - 768px} <= 22px
+  //{768px - 992px} <= 28px
+  font-size: 16px;
+  line-height: 1.35;
+  font-family: $font-family-sans-serif;
+  font-weight: 700;
+
+
+  @include media-breakpoint-up(xl) {
+    line-height: $h5-line-height;
+    font-size: $h5-font-size;
+  }
+}
+
+h6,
+.h6 {
+  //{0 - 768px} <= 18px
+  //{768px - 992px} <= 22px
+  font-size: 15px;
+  line-height: 1.2;
+
+  @include media-breakpoint-up(sm) {
+    line-height: $h6-line-height;
+    font-size: $h6-font-size;
+  }
+}
+
+.h7 {
+  font: 700 14px/24px $headings-font-family;
+  text-transform: uppercase;
+  color: $tundora;
+}
+
+%text-bigger {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: (36 / 25);
+
+  @include media-breakpoint-up(md) {
+    font-size: 20px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: 25px;
+  }
+}
+
+.text-bigger {
+  @extend %text-bigger;
+}
+
+.text-large {
+  font: 700 38px/42px $font-family-sec;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 48px;
+  }
+}
+
+.text-extra-large-bordered {
+  display: inline-block;
+  padding: .07em .11em;
+  font: 700 120px $font-family-sec;
+  letter-spacing: -.05em;
+  line-height: .8;
+  border: .075em solid;
+  text-align: center;
+
+  @include media-breakpoint-up(md) {
+    font-size: 220px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 272px;
+  }
+}
+
+.big {
+  letter-spacing: .025em;
+}
+
+@include media-breakpoint-up(sm) {
+  .big {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .big {
+    font-size: $font-size-lg;
+    line-height: floor(($font-size-lg * $line-height-large));
+  }
+}
+
+small,
+.small {
+  font-size: $font-size-sm;
+  line-height: floor(($font-size-sm * $line-height-small));
+}
+
+code {
+  padding: 5px 7px;
+  font-size: 75%;
+  color: $brand-danger;
+  background-color: $gray-lighter;
+  border-radius: 2px;
+}
+
+em {
+  font-family: $font-family-serif;
+  font-size: inherit;
+  font-style: italic;
+  font-weight: 700;
+  line-height: inherit;
+  color: $gunsmoke;
+}
+
+mark,
+.mark {
+  color: $white;
+  background-color: $primary;
+  padding: .2em .3em;
+}
+
+.text-style-1 {
+  font-family: $font-family-sec;
+  color: $dusty-gray;
+}
+
+.text-style-2 {
+  font-family: $font-family-serif;
+  font-style: italic;
+  font-weight: 700;
+}
+
+// Misc
+// -------------------------
+
+// Addresses
+address {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+// Backgrounds
+// -------------------------
+
+// Contextual backgrounds
+//
+%context-dark {
+  color: $white;
+
+  #{headings()} {
+    color: $white;
+  }
+
+  a {
+    &,
+    &:active,
+    &:focus {
+      color: $white;
+    }
+  }
+
+  .rd-navbar-aside-group {
+    .time {
+      color: $white;
+    }
+  }
+
+  //a:not(.icon):hover {
+  //  color: $link-hover-color;
+  //}
+
+  .big,
+  .text-bigger,
+  .text-extra-large-bordered {
+    color: $white;
+  }
+}
+
+// Colors
+.bg-black {
+  @extend %context-dark;
+  @include bg-variant-custom(#{$black});
+}
+
+.bg-gray-darker {
+  @extend %context-dark;
+  @include bg-variant-custom(#{$gray-darker});
+}
+
+.bg-gray-dark {
+  @extend %context-dark;
+  @include bg-variant-custom(#{$gray-dark});
+}
+
+.bg-mine-shaft {
+  @extend %context-dark;
+  @include bg-variant-custom(#{$mine-shaft});
+}
+
+.bg-cod-gray {
+  @extend %context-dark;
+  @include bg-variant-custom(#{$cod-gray});
+}
+
+.bg-gray {
+  @include bg-variant-custom(#{$gray});
+}
+
+.bg-accent {
+  @extend %context-dark;
+  @include bg-variant-custom(#{$primary});
+}
+
+.bg-gray-light {
+  @include bg-variant-custom(#{$gray-light});
+}
+
+.bg-gray-lighter {
+  @include bg-variant-custom(#{$gray-lighter});
+}
+
+.bg-whisper {
+  @include bg-variant-custom(#{$whisper});
+}
+
+.bg-athens-gray {
+  @include bg-variant-custom(#{$athens-gray});
+}
+
+.bg-iron {
+  @include bg-variant-custom(#{$iron});
+}
+
+.bg-whisperapprox {
+  @include bg-variant-custom(#{$brand-whisperapprox});
+}
+
+.bg-ebony-clay {
+  @include bg-variant-custom(#{$brand-ebony-clay});
+
+  hr{
+    border-color: #394654;
+  }
+}
+
+.bg-athens-gray {
+  @include bg-variant-custom(#{$brand-athens-gray});
+}
+
+
+// Bg image
+.bg-image {
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.bg-image-centered {
+  -webkit-background-size: auto;
+  background-size: auto;
+}
+
+.bg-fixed {
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.bg-image-1 {
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+
+  @include media-breakpoint-down(md) {
+    background-image: none !important;
+  }
+}
+
+// Colors
+// -------------------------
+
+// Contextual colors
+//
+
+.page {
+	.text-primary {
+		color: $primary!important;
+		a:hover { color: darken($primary, 10%); }
+	}
+
+	.text-gray {
+		color: $gray-500;
+		a:hover { color: darken($gray-500, 10%); }
+	}
+
+	.text-gray-05 {
+		color: rgba(0, 0, 0, .5);
+		a:hover { color: darken(rgba(0, 0, 0, .5), 10%); }
+	}
+
+	.text-secondary {
+		color: $secondary;
+		a:hover { color: darken($secondary, 10%); }
+	}
+
+	.text-black {
+		color: $black;
+		a:hover { color: darken($black, 10%); }
+	}
+
+	.text-shuttle-gray {
+		color: $brand-shuttle-gray;
+		a:hover { color: darken($brand-shuttle-gray, 10%); }
+	}
+
+	.text-silver {
+		color: $silver;
+		a:hover { color: darken($silver, 10%); }
+	}
+
+	.text-dark {
+		color: $gray-800;
+		a:hover { color: lighten($gray-800, 10%); }
+	}
+
+	.text-ebony-clay {
+		color: $brand-ebony-clay;
+		a:hover { color: darken($brand-ebony-clay, 10%); }
+	}
+
+	.text-dusty-gray {
+		color: $dusty-gray;
+		a:hover { color: darken($dusty-gray, 10%); }
+	}
+
+	.text-white {
+		color: $white;
+		a:hover { color: darken($white, 20%); }
+	}
+
+	.text-white-05 {
+		color: rgba($white, .5);
+		a:hover { color: darken(rgba($white, .5), 10%); }
+	}
+
+  .context-dark {
+    @extend %context-dark;
+  }
+
+  a.text-gray-05:hover {
+    color: rgba(0, 0, 0, .5);
+  }
+}

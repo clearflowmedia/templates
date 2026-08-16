@@ -1,0 +1,68 @@
+extends  ../_skeleton
+
+//- Includes
+
+block variables
+  - var activeIndex = 2
+  - var pageName = 'Buttons'
+
+block title
+  title=pageName
+
+block page
+  //-Page Header
+  include ../sections/_section-header-default
+
+
+  +page-title(pageName, 'bg-image-1')
+
+  //-Buttons
+  section.section-60.section-md-top-90.section-md-bottom-100
+    .container
+      .row.row-60.row-lg-90
+        .col-12
+          h3 Button Size
+          p.text-secondary 4 different sizes: super, large, default and small.
+          .group-lg.group-middle
+            button.btn.btn-xl.btn-primary super size
+            button.btn.btn-lg.btn-primary Large size
+            button.btn.btn-primary Base size
+            button.btn.btn-sm.btn-primary small size
+
+        .col-12
+          h3 Button Size
+          p.text-secondary 4 different shapes: default, round, square and circle.
+          .group-lg.group-middle
+            button.btn.btn-primary Default
+            button.btn.btn-primary.btn-round round
+            button.btn.btn-primary square
+            button.btn.btn-primary.btn-circle Circle
+
+        .col-12
+          h3 Buttons with Icons
+          p.text-secondary Buttons are fully integrated with 900+ icons.
+          .group-lg.group-middle
+            button.btn.btn-icon.btn-icon-left.btn-primary
+              span.icon.icon-xs-smaller.material-icons-shopping_cart
+              | icon left
+            button.btn.btn-icon.btn-icon-right.btn-primary
+              span.icon.icon-xs-smaller.material-icons-shopping_cart
+              | icon right
+            button.btn.btn-icon.btn-icon-left.btn-ebony-clay-outline
+              span.icon.icon-xs-smaller.material-icons-shopping_cart
+              | icon left
+            button.btn.btn-icon.btn-icon-right.btn-ebony-clay-outline
+              span.icon.icon-xs-smaller.material-icons-shopping_cart
+              | icon right
+
+        .col-12
+          h3 Buttons with Shadow
+          p.text-secondary Enhance your button with a shadow effect.
+          .group-lg.group-middle
+            button.btn.btn-primary.btn-shadow shadow
+            button.btn.btn-ebony-clay-outline.btn-shadow shadow
+  ='\n'
+
+
+  //-Page Footer
+  include ../sections/_section-footer-default

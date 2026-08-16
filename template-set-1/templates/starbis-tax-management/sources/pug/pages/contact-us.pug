@@ -1,0 +1,90 @@
+extends  ../_skeleton
+
+block variables
+	- var activeIndex = 5
+	- var pageName = 'Contact Us'
+
+block title
+	title=pageName
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title(pageName, 'bg-image-7')
+
+	//- Get in Touch
+	section.section-60.section-md-top-90.section-md-bottom-100
+		.container
+			.row.justify-content-md-between.row-50
+				.col-lg-5.col-xl-4
+					.inset-lg-right-15.inset-xl-right-0
+						.row.row-40
+							.col-md-10.col-lg-12
+								h3 How to Find Us
+								p.text-secondary.
+									If you have any questions, just fill in the contact form, and we will answer you shortly. If you are living nearby, come visit TaxExpert at one of our comfortable offices.
+
+							.col-md-6.col-lg-12
+								h5 Headquarters
+								address.contact-info
+									p.text-uppercase 9863 - 9867 MILL ROAD, CAMBRIDGE, MG09 99HT.
+									dl.list-terms-inline
+										dt Telephone
+										dd: a.link-secondary(href='callto:#') +1 800 603 6035
+
+									dl.list-terms-inline
+										dt E-mail
+										dd: a.link-primary(href='mailto:#') mail@demolink.org
+
+							.col-md-6.col-lg-12
+								h5 Support Centre
+								address.contact-info
+									p.text-uppercase 9870 ST VINCENT PLACE, GLASGOW, DC 45 FR 45
+									dl.list-terms-inline
+										dt Telephone
+										dd: a.link-secondary(href='callto:#') +1 800 603 6035
+
+									dl.list-terms-inline
+										dt E-mail
+										dd: a.link-primary(href='mailto:#') mail@demolink.org
+
+				.col-lg-7.col-xl-6
+					h3 Get in Touch
+					//- RD Mailform
+					form.rd-mailform.form-modern(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+						.row.row-30
+							.col-md-6
+								.form-group
+									input#contact-name.form-control(type="text" name="name" data-constraints="@Required")
+									label.form-label(for="contact-name") Name
+							.col-md-6
+								.form-group
+									input#contact-us-email.form-control(type="email" name="email" data-constraints="@Email @Required")
+									label.form-label(for="contact-us-email") Email
+
+							.col-sm-12
+								.form-group
+									.textarea-lined-wrap
+										textarea#contact-message.form-control(name="message" data-constraints="@Required")
+										label.form-label(for="contact-message") Message
+
+							.col-sm-8
+								button(type="submit").btn.btn-primary.btn-block Send
+
+							.col-sm-4
+								button(type="reset").btn.btn-silver-outline.btn-block Reset
+	='\n'
+
+	//- Google map
+	section
+		.google-map-container(data-zoom='5', data-center='2130 Fulton Street San Francisco, 94117-1080 USA', data-styles='[{"featureType":"landscape","stylers":[{"hue":"#FFBB00"},{"saturation":43.400000000000006},{"lightness":37.599999999999994},{"gamma":1}]},{"featureType":"road.highway","stylers":[{"hue":"#FFC200"},{"saturation":-61.8},{"lightness":45.599999999999994},{"gamma":1}]},{"featureType":"road.arterial","stylers":[{"hue":"#FF0300"},{"saturation":-100},{"lightness":51.19999999999999},{"gamma":1}]},{"featureType":"road.local","stylers":[{"hue":"#FF0300"},{"saturation":-100},{"lightness":52},{"gamma":1}]},{"featureType":"water","stylers":[{"hue":"#0078FF"},{"saturation":-13.200000000000003},{"lightness":2.4000000000000057},{"gamma":1}]},{"featureType":"poi","stylers":[{"hue":"#00FF6A"},{"saturation":-1.0989010989011234},{"lightness":11.200000000000017},{"gamma":1}]}]')
+			.google-map
+			ul.google-map-markers
+				li( data-location='2130 Fulton Street San Francisco, 94117-1080 USA', data-description='2130 Fulton Street San Francisco, 94117-1080 USA', data-icon='images/gmap_marker.png', data-icon-active='images/gmap_marker_active.png' )
+
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

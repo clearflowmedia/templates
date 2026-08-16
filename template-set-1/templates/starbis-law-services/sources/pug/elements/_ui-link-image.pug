@@ -1,0 +1,11 @@
+//- Link image
+mixin link-image(obj)
+  .link-image-wrap(class=obj.mod)
+    a.link-image(href='#')
+      +png(obj.img)
+
+//- Link image scale
+mixin link-image-scale(obj)
+  .link-image-wrap(class=obj.mod)
+    a.link-image-scale(href='#')
+      +png(obj.img)

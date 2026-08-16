@@ -1,0 +1,296 @@
+//
+// Panels custom styles
+// --------------------------------------------------
+
+// Light (line & minimal style)
+$accordion-light-color: $black;
+$accordion-light-border: $gray-300;
+$accordion-light-content-color: $body-color;
+$accordion-light-arrow-color: $primary;
+$accordion-light-header-padding: 24px 55px 22px 32px;
+$accordion-light-content-padding: 25px 44px 25px nth($accordion-light-header-padding, 4);
+
+// Primary (corporate)
+$accordion-corporate-color: $black;
+$accordion-corporate-background: $white;
+$accordion-corporate-border: $gray-300;
+$accordion-corporate-content-color: $body-color;
+$accordion-corporate-arrow-color: $white;
+$accordion-corporate-arrow-background: $primary;
+$accordion-corporate-shadow: $shadow-area-sm;
+$accordion-corporate-border-radius: 6px;
+$accordion-corporate-header-padding: 24px 82px 22px 32px;
+$accordion-corporate-content-padding: 25px 44px 25px nth($accordion-corporate-header-padding, 4);
+
+// Panel groups
+.card-group.card-group-custom {
+  margin-bottom: 0;
+
+  .card-heading + .card-collapse > .card-body,
+  .card-heading + .card-collapse > .list-group {
+    border-top: 0;
+  }
+
+  .card + .card {
+    margin-top: 0;
+  }
+}
+
+.card-group.card-group-corporate {
+  .card + .card {
+    margin-top: 30px;
+  }
+}
+
+.card-custom {
+  margin: 0;
+  background: inherit;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+
+  a {
+    display: block;
+  }
+
+  // Panel heading
+  .card-heading {
+    padding: 0;
+    border-bottom: 0;
+    @include border-top-radius(0);
+  }
+
+  // Panel contents
+  .card-body {
+    padding: 0;
+    border: 0;
+  }
+}
+
+* + .card-group-custom {
+  margin-top: 35px;
+
+  @include media-breakpoint-up(md) {
+    margin-top: 50px;
+  }
+}
+
+// Panel light
+.card-light {
+  &:first-child {
+    .card-title {
+      border-top: 1px solid $accordion-light-border;
+    }
+  }
+
+  .card-title {
+    border-bottom: 1px solid $accordion-light-border;
+
+    &:nth-child(n + 2) {
+      margin-top: -1px;
+    }
+  }
+
+  .card-title a {
+    position: relative;
+    padding: $accordion-light-header-padding;
+    font: 500 18px/24px $font-family-base;
+    color: $accordion-light-color;
+    transition: 1.5s all ease;
+
+    // Opened state
+    .card-arrow:after {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    // Closed state
+    &.collapsed {
+      .card-arrow:after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  .card-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 26px;
+    transition: .33s;
+    will-change: transform;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: $accordion-light-arrow-color;
+    }
+
+    &:before {
+      width: 14px;
+      height: 2px;
+      right: 0;
+    }
+
+    &:after {
+      width: 2px;
+      height: 14px;
+      right: 6px;
+      transition: .2s all ease;
+    }
+  }
+
+  .card-collapse {
+    position: relative;
+    margin-top: -1px;
+    border-bottom: 1px solid $accordion-light-border;
+    color: $accordion-light-content-color;
+    will-change: transform;
+  }
+
+  .card-body {
+    padding: $accordion-light-content-padding;
+  }
+
+  // Media queries
+  @include media-breakpoint-down(md){
+    .card-title a,
+    .card-body {
+      padding-left: 15px;
+    }
+  }
+}
+
+// Panel corporate
+.card-corporate {
+  .card-title a,
+  .card-collapse {
+    background: $accordion-corporate-background;
+    box-shadow: $accordion-corporate-shadow;
+  }
+
+  .card-collapse.in {
+    box-shadow: -1px 0 5px 0 rgba($tundora, .12);
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      height: 1px;
+      background: $gallery;
+      left: 0;
+      width: 100%;
+    }
+  }
+
+  .card-title a {
+    position: relative;
+    z-index: 1;
+    padding: $accordion-corporate-header-padding;
+    font: 500 18px/24px $font-family-base;
+    color: $accordion-corporate-color;
+    transition: 1.3s all ease;
+    letter-spacing: -.025em;
+    border-radius: $accordion-corporate-border-radius $accordion-corporate-border-radius 0 0;
+
+    // Open state
+    .card-arrow {
+      &:after {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    // Collapsed state
+    &.collapsed {
+      border-radius: $accordion-corporate-border-radius;
+
+      .card-arrow {
+        border-radius: 0 $accordion-corporate-border-radius $accordion-corporate-border-radius 0;
+        &:after {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  // Panel arrow
+  .card-arrow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    width: 70px;
+    background: $accordion-corporate-arrow-background;
+    border-radius: 0 $accordion-corporate-border-radius 0 0;
+    transition: 1.3s all ease;
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      z-index: 4;
+      transform: translateY(-50%);
+      background: $accordion-corporate-arrow-color;
+    }
+
+    &:before {
+      width: 14px;
+      height: 2px;
+      right: 28px;
+    }
+
+    &:after {
+      width: 2px;
+      height: 14px;
+      right: 34px;
+    }
+  }
+
+  .card-collapse {
+    position: relative;
+    z-index: 2;
+    color: $accordion-corporate-content-color;
+    border-radius: 0 0 $accordion-corporate-border-radius $accordion-corporate-border-radius;
+  }
+
+  .card-body {
+    padding: $accordion-corporate-content-padding;
+  }
+
+  // Media queries
+  @include media-breakpoint-down(md) {
+    .card-title a,
+    .card-body {
+      padding-left: 25px;
+    }
+  }
+}
+
+.card-lg {
+  position: relative;
+  padding: 50px 15px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    width: 55px;
+    height: 55px;
+    margin-left: -10px;
+    background: $white;
+    transform: translateX(-50%) rotate(-45deg);
+  }
+
+  @include media-breakpoint-up(md) {
+    padding: 90px 35px 100px;
+  }
+}

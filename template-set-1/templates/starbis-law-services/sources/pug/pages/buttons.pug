@@ -1,0 +1,69 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-quote-default
+
+block variables
+  - var activeIndex = 5
+  - var pageName = 'Buttons'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title(pageName, 'bg-image-1')
+
+  //- Buttons
+  section.section-60.section-md-top-90.section-md-bottom-100
+    .container
+      .row.row-60.row-lg-90
+        .col-12
+          h3 Button Sizes
+          p.text-secondary 4 different sizes: super, large, default and small.
+          .group-lg.group-middle
+            .btn.btn-xl.btn-primary Super size
+            .btn.btn-lg.btn-primary Large size
+            .btn.btn-primary Base size
+            .btn.btn-sm.btn-primary Small size
+
+        .col-12
+          h3 Button Shapes
+          p.text-secondary 4 different shapes: default, round, square and circle.
+          .group-lg.group-middle
+            .btn.btn-primary Default
+            .btn.btn-primary.btn-round Round 1
+            .btn.btn-primary.btn-round-2 Round 2
+            .btn.btn-primary.btn-circle Circle
+
+        .col-12
+          h3 Buttons with Icons
+          p.text-secondary Buttons are fully integrated with 900+ icons.
+          .group-lg.group-middle
+            .btn.btn-icon.btn-icon-left.btn-primary
+              span.novi-icon.icon.icon-xs-smaller.material-icons-shopping_cart
+              | Icon Left
+            .btn.btn-icon.btn-icon-right.btn-primary
+              span.novi-icon.icon.icon-xs-smaller.material-icons-shopping_cart
+              | Icon Right
+            .btn.btn-icon.btn-icon-left.btn-primary-outline
+              span.novi-icon.icon.icon-xs-smaller.material-icons-shopping_cart
+              | Icon Left
+            .btn.btn-icon.btn-icon-right.btn-primary-outline
+              span.novi-icon.icon.icon-xs-smaller.material-icons-shopping_cart
+              | Icon Right
+
+        .col-12
+          h3 Buttons with Shadow
+          p.text-secondary Enhance your button with a shadow effect.
+          .group-lg.group-middle
+            .btn.btn-primary.btn-shadow Shadow
+            .btn.btn-primary-outline.btn-shadow Shadow
+  ='\n'
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

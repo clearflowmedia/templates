@@ -1,0 +1,270 @@
+extends  ../_skeleton
+
+//- Includes
+include ../sections/_section-header-default
+include ../elements/_vide
+include ../elements/_product-item-default
+
+block page
+	// Page Header
+	+header-default(
+		class=                'rd-navbar-absolute',
+		data-xl-auto-height=  'false'
+		data-xxl-auto-height= 'false'
+	)
+	='\n'
+	
+	// Intro
+	section.section.section-intro.bg-gray-lighter
+		.container.position-relative
+			.row
+				.col-md-4.offset-md-2
+					h1 Great. Fresh. Tasty.
+					p Enjoy the best coffee at Meate coffee shop.
+					a.btn-link( href='#' ) read more
+						span.mdi.mdi-arrow-top-right
+
+			.row.row-30.row-xxxl.row-collapse
+				.col-sm-6.col-md-2
+					.img-wrap.img-wrap-fit
+						+img("home-01-370x480").img-collapsed-end.img-shifted-01
+				.col-sm-6.col-md-4
+					.img-wrap.img-wrap-fit
+						+img("home-02-370x260").img-shifted-02
+				.col-sm-6.col-md-4
+					.img-wrap.img-wrap-fit
+						+img("home-03-370x260").img-shifted-03
+				.col-sm-6.col-md-2
+					.img-wrap.img-wrap-fit
+						+img("home-04-370x700").img-collapsed-start.img-shifted-04
+	='\n'
+	
+	// About
+	section.section.section-xl.bg-transparent
+		.container
+			.row.row-30.row-md-60.justify-content-center
+				.col-md-10.col-xl-8
+					h2 Coffee is our craft, our
+						br.d-none.d-md-block
+						| ritual, our passion.
+
+				.col-md-10.col-xl-8
+					.row.row-20
+						.col-md-6
+							p Our mission is to provide sustainably sourced, hand-picked, micro-roasted quality coffee. Great coffee is our passion and we want to share it with you.
+						.col-md-6
+							p We want to be a welcoming, comforting presence in every community we serve and anywhere else we happen to show up. We know our guests have a choice — and we want them to feel special.
+			.row.row-xl.justify-content-center
+				.col-md-10
+					+vide-bg({
+						"src": "video/video-lg",
+					})
+	='\n'
+
+	// Menu
+	section.section.section-lg.bg-transparent
+		.container
+			.row.justify-content-center
+				.col-md-10.col-xl-8.text-center
+					h2 Our Menu
+					p Take your time to explore the best drinks available at our coffee shop’s menu for you to enjoy.
+			.row.row-xxl.justify-content-center
+				.col-md-10.col-xl-8
+					h3 Coffee Bar
+					.row.row-25
+						.col-md-6
+							ul.list-flex.list-md
+								li
+									span MACCHIATO
+									span $2.00
+								li
+									span CORTADO
+									span $2.50
+								li
+									span AMERICANO
+									span $1.75
+								li
+									span LATTE
+									span $3.00
+								li
+									span AMERICAN LATTE
+									span $3.50
+								li
+									span CAPPUCCINO
+									span $3.00
+
+						.col-md-6
+							ul.list-flex.list-md
+								li
+									span AEROPRESS
+									span $3.20
+								li
+									span SINGLE ORIGIN
+									span $2.50
+								li
+									span DRIP OF THE DAY
+									span $1.90
+								li
+									span COFFEE POUR OVER
+									span $3.00
+								li
+									span CAFE AU LAIT
+									span $3.50
+					.row
+						.col-12.text-center
+							a.btn-link( href='#' ) and more
+								span.mdi.mdi-arrow-top-right
+							hr.divider-xl
+
+	='\n'
+
+	// Products
+	section.section.section-lg.bg-transparent
+		.container
+			.row.justify-content-center
+				.col-md-10.col-xl-8.text-center
+					h2 Popular Products
+					p Aside from tasty coffee, we also provide a variety of related products for fans of this popular drink.
+			.row.row-sm.row-40.row-xl-70
+				.col-sm-6.col-md-4.col-xl-3
+					+product-item-simple({
+						img: 'product-01-260x280',
+						header: 'Classic brewer',
+						price: {
+							current: '24'
+						}
+					})
+				.col-sm-6.col-md-4.col-xl-3
+					+product-item-simple({
+						img: 'product-02-257x282',
+						header: 'French press',
+						price: {
+							current: '25'
+						}
+					})
+				.col-sm-6.col-md-4.col-xl-3
+					+product-item-simple({
+						img: 'product-03-238x281',
+						header: 'Gray & white mug',
+						price: {
+							current: '22'
+						}
+					})
+				.col-sm-6.col-md-4.col-xl-3
+					+product-item-simple({
+						img: 'product-04-232x236',
+						header: 'electric pour-over kettle',
+						price: {
+							current: '23'
+						}
+					})
+				.col-sm-6.col-md-4.col-xl-3
+					+product-item-simple({
+						img: 'product-05-233x278',
+						header: 'Slim French Press',
+						price: {
+							current: '21'
+						}
+					})
+				.col-sm-6.col-md-4.col-xl-3
+					+product-item-simple({
+						img: 'product-06-251x314',
+						header: 'Black Mug',
+						price: {
+							current: '26'
+						}
+					})
+				.col-sm-6.col-md-4.col-xl-3
+					+product-item-simple({
+						img: 'product-07-244x253',
+						header: 'Pour-over kettle',
+						price: {
+							current: '27'
+						}
+					})
+				.col-sm-6.col-md-4.col-xl-3
+					+product-item-simple({
+						img: 'product-08-247x252',
+						header: 'Hand grinder',
+						price: {
+							current: '28'
+						}
+					})
+	='\n'
+
+	// Contacts
+	section.section.section-lg.bg-gray-lighter
+		.container
+			.row.row-50
+				.col-lg-5
+					.img-wrap
+						+img('home-05-700x394').img-collapsed-end
+				.col-lg-6.offset-lg-1
+					h2.mt-lg-5 Feel the Great Taste of Our Coffee
+					.row.row-sm.row-30
+						.col-sm-6
+							h5 Opening Hours:
+							ul.list-xs
+								li Tue-Fri: 8am – 10pm
+								li Sat-Sun: 8am – 7pm
+								li Monday: Closed
+						.col-sm-6
+							h5 Address:
+							a(href='#') 4140 Parker Rd. Allentown,
+								br
+								| New Mexico
+								br
+								| 31134
+						.col-sm-6
+							h5 Phone:
+							a(href='#') (480) 555-0103
+
+			.row.row-xs.justify-content-center
+				.col-md-10.col-xl-8
+					hr.divider-xl
+	='\n'
+
+	// Reservation
+	section.section.section-xl-2.bg-gray-lighter
+		.container.position-relative
+			.row.justify-content-center: .col-md-10.col-xl-8.text-center
+				h2 Book Your
+					br
+					| Reservation Today
+				p Book a table at Meate now to enjoy the best drinks in your new favorite coffee shop.
+				button.btn.btn-xl.btn-transform.btn-icon.btn-icon-right.btn-primary( data-bs-toggle="modal", data-bs-target= "#reservation" )
+					span.icon.mdi.mdi-arrow-top-right
+					| Reserve a Table
+			.row.row-30.row-4xl.row-collapse
+				.col-sm-6.col-md-2
+					.img-wrap.img-wrap-fit
+						+img("home-06-370x480").img-collapsed-end.img-shifted-05
+				.col-sm-6.col-md-4
+					.img-wrap.img-wrap-fit
+						+img("home-07-370x208").img-shifted-06
+				.col-sm-6.col-md-4
+					.img-wrap.img-wrap-fit
+						+img("home-08-370x340").img-shifted-07
+				.col-sm-6.col-md-2
+					.img-wrap.img-wrap-fit
+						+img("home-09-370x480").img-collapsed-start.img-shifted-05
+
+	='\n'
+
+	section.section.section-xl-3.bg-transparent
+		.container
+			.row.justify-content-center
+				.col-md-10.col-xl-8
+					//Please, add the data attribute data-key="YOUR_API_KEY" in order to insert your own API key for the Google map.
+					//Please note that YOUR_API_KEY should replaced with your key.
+					//Example: <div class="google-map-container" data-key="YOUR_API_KEY">
+					.google-map-container( data-center='9870 St Vincent Place, Glasgow, DC 45 Fr 45.', data-zoom='5', data-icon='images/gmap_marker.png', data-icon-active='images/gmap_marker_active.png', data-styles='[{"elementType":"geometry","stylers":[{"color":"#f5f5f5"}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"elementType":"labels.text.fill","stylers":[{"color":"#616161"}]},{"elementType":"labels.text.stroke","stylers":[{"color":"#f5f5f5"}]},{"featureType":"administrative.land_parcel","elementType":"labels.text.fill","stylers":[{"color":"#bdbdbd"}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#f4f2ef"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#eeeeee"}]},{"featureType":"poi","elementType":"labels.text.fill","stylers":[{"color":"#757575"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#e5e5e5"}]},{"featureType":"poi.park","elementType":"labels.text.fill","stylers":[{"color":"#9e9e9e"}]},{"featureType":"road","elementType":"geometry","stylers":[{"color":"#ffffff"}]},{"featureType":"road.arterial","elementType":"labels.text.fill","stylers":[{"color":"#757575"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#dadada"}]},{"featureType":"road.highway","elementType":"labels.text.fill","stylers":[{"color":"#616161"}]},{"featureType":"road.local","elementType":"labels.text.fill","stylers":[{"color":"#9e9e9e"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"color":"#e5e5e5"}]},{"featureType":"transit.station","elementType":"geometry","stylers":[{"color":"#eeeeee"}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#c9c9c9"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#e0e5e4"}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"color":"#9e9e9e"}]}]' )
+						.google-map
+						ul.google-map-markers
+							li( data-location='9870 St Vincent Place, Glasgow, DC 45 Fr 45.', data-description='9870 St Vincent Place, Glasgow' )
+
+	// Page Footer
+	include ../sections/_section-footer-default
+	// Modal
+	include ../includes/_modal
+

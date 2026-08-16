@@ -1,0 +1,91 @@
+extends  ../_skeleton
+
+//- Includes
+include ../sections/_section-header-default
+include ../elements/_post-modern
+
+block variables
+	- pageName = 'Masonry blog'
+
+block page
+	//- Page Header
+	+header-default
+
+	//- Page Content
+	+page-title('Blog', 'bg-blog')
+
+	//- Masonry blog
+	section.section.section-50.section-md-75.section-xl-100.bg-whisper.novi-background
+		.container
+			.row.row-30.justify-content-md-center.justify-content-lg-start
+				.col-md-9.col-lg-6
+					+post-modern({
+						type: 'material-icons-videocam',
+						header: 'Improving Your Coworking Space',
+						content: [
+							{type: 'video', data: links.video},
+							{
+								type: 'text',
+								data: ['Alias aliquid atque, consequuntur culpa dolor dolorem doloremque dolorum ea eaque id in incidunt laborum, laudantium magnam maiores molestiae nobis omnis perspiciatis quisquam temporibus velit veniam vero voluptas? Porro sequi sit tempore.']
+							}
+						],
+						time: ['2021-01-01', '2 days ago'],
+						tags: ['News']
+					})
+
+					+post-modern({
+						type: 'material-icons-local_see',
+						header: 'Creating a Productive Space',
+						content: [
+							{type: 'image', data: 'blog-masonry-1-570x321'}
+						],
+						time: ['2021-01-01', '7 days ago'],
+						tags: ['News']
+					})
+
+				.col-md-9.col-lg-6
+					+post-modern({
+						type: 'material-icons-library_books',
+						header: 'The History of Internet Cafes',
+						content: [
+							{
+								type: 'text',
+								data: ['Ad aliquid aspernatur error eum, eveniet, ex ipsum maiores mollitia nam natus pariatur soluta! Animi consequuntur dolorem, dolorum eum fugiat id iusto maxime minima natus, nemo, nobis possimus quia sapiente sed tenetur.']
+							}
+						],
+						time: ['2021-01-01', '3 days ago'],
+						tags: ['News']
+					})
+
+					+post-modern({
+						type: 'material-icons-audiotrack',
+						header: 'Top 5 Games to Play at Internet Cafes',
+						content: [
+							{type: 'audio', data: links.soundcloud}
+						],
+						time: ['2021-01-01', '4 days ago'],
+						tags: ['News']
+					})
+
+
+					+post-modern({
+						type: 'material-icons-videocam',
+						header: '10 Benefits of Remote Work',
+						content: [
+							{type: 'image', data: 'blog-masonry-2-570x321'},
+							{
+								type: 'text',
+								data: ['Aliquid, deleniti dicta dolorem doloremque dolores ea facere modi molestias quam repudiandae saepe sed. Debitis doloribus officiis possimus quia quo! Accusamus autem blanditiis, consequatur explicabo illum iusto libero magnam pariatur perferendis quas!']
+							}
+						],
+						time: ['2021-01-01', '2 days ago'],
+						tags: ['News']
+					})
+
+
+			.pagination-custom-wrap.text-center
+				+pagination
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

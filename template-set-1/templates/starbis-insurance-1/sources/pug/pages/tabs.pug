@@ -1,0 +1,139 @@
+extends  ../_skeleton
+
+//- Includes
+
+block variables
+  - var activeIndex = 5
+  - var pageName = 'Tabs'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+
+  +page-title(pageName, 'bg-image-3')
+
+  //- Horizontal Tabs
+  section.section-top-60.section-md-top-90
+    .container
+      .row.justify-content-md-center.row-40
+        .col-sm-12.text-center
+          h3 Horizontal Tabs
+        .col-xl-10
+          //- Bootstrap tabs
+          #tabs-1.tabs-custom.tabs-horizontal.tabs-corporate
+            //- Nav tabs
+            ul.nav.nav-tabs
+              li.nav-item: a.nav-link.active(href='#tabs-1-1' data-bs-toggle='tab') Tab 1
+              li.nav-item: a.nav-link(href='#tabs-1-2' data-bs-toggle='tab') Tab 2
+              li.nav-item: a.nav-link(href='#tabs-1-3' data-bs-toggle='tab') Tab 3
+              li.nav-item: a.nav-link(href='#tabs-1-4' data-bs-toggle='tab') Tab 4
+              li.nav-item: a.nav-link(href='#tabs-1-5' data-bs-toggle='tab') Tab 5
+            //- Tab panes
+            .tab-content.text-secondary
+              div#tabs-1-1.tab-pane.fade.show.active
+                p Our agency can provide you and your family with quality insurance for your personal, business and financial needs. Our knowledgeable agents can help your find affordable and reliable car insurance, home insurance, commercial insurance or life insurance. The staff truly believes, “It’s all about protecting you!” Our mission is to help protect people in our communities from the financial impact of lawsuits, fires, car accidents and other unexpected incidents. Our focus is to help our clients grow their assets.
+                p  We believe in being local and we strive to improve the communities where we live and work. We offer an inclusive selection of products and client-focused service to go beyond meeting your needs and instead, exceeding your expectations! Our team of professionals is experienced and prepared to customize your policies to fit your situation and lifestyle.
+              div#tabs-1-2.tab-pane.fade
+                p We underwrite specialty lines insurance on an admitted basis through AllRisk Insurance Company, Stonewood Insurance Company, and Falls Lake General Insurance Company. As the admitted insurance platform of James River Group and as subsidiaries of James River Group Holdings, Ltd., we operate against a capital base of almost $500 million.
+                p As with our affiliates, James River Insurance Company (excess and surplus lines) and JRG Re (Bermuda based reinsurer), we focus on underwriting specialty insurance products through limited distribution partners focused in our desired industry segments. We prefer to write specialty insurance policies on a primary basis, and combine an experienced, common sense approach to the business with rigorous underwriting and claims management and an entrepreneurial culture. We believe that this combination results in success for both you and All
+              div#tabs-1-3.tab-pane.fade
+                p We believe in More Better, and we work each day to ensure that our culture is embodied in our actions. We believe that it is OK to expect more from ourselves each and every day, in each and every activity and action. Equally, we believe it is OK to expect more from others in their actions and interactions with us. By focusing on achieving success in each and every action and interaction, we believe we both win.
+                p You get a more responsive, creative, financially sound, insurer that takes the time to understand your opportunities. We get an engaged and knowledgeable distribution source for our business, one that trusts that we will work for our mutual success in everything that we do. You and your clients deserve it. More. Better.
+              div#tabs-1-4.tab-pane.fade
+                p We underwrite specialty insurance products in more than 40 states in the U.S. We are licensed to underwrite property and casualty lines of insurance for both commercial and personal risks. While our heritage is in underwriting workers compensation insurance for specialty classes including construction and light industrial, and our focus is on writing casualty lines of insurance, we are licensed to write all property casualty lines of commercial and personal insurance.
+                p We underwrite specialty program business both in house and in conjunction with select program administrators and managing general agencies. We have unique capabilities to design a program for an independent retail agent and work with them as distribution partners in defined territories. We also look to partner with program administrators and managing general agencies that have unique specialty expertise in defined industry segments, and that want to share in the underwriting risk on the program. Our appetites range from $5 million to $25 million in annual premium.
+              div#tabs-1-5.tab-pane.fade
+                p Insurance Company was founded in 1996 as a physical damage carrier writing solely in Illinois. We have since expanded our services and territories, now offering commercial and personal auto insurance in Illinois and Indiana, and personal auto insurance in Georgia, Mississippi, New Mexico, and Tennessee.  We specialize in writing hard to place drivers.
+                p Despite tough economic times, AllRisk has expanded its writing and demonstrated sustainable growth.  We have been able to continue to prosper thanks to favorable underwriting performance. We are presently located in the northwest part of Chicago, in the Portage Park neighborhood.  We have a diverse group of dedicated employees who speak multiple languages. Our staff strives to meet the needs of our clients.
+  ='\n'
+
+  //- Vertical Tabs
+  section.section-top-60.section-md-top-90
+    .container
+      h3.text-center Vertical Tabs
+      .row.justify-content-md-center
+        .col-xl-10
+          //- Bootstrap tabs
+          #tabs-2.tabs-custom.tabs-vertical.tabs-corporate
+            //- Nav tabs
+            ul.nav.nav-tabs
+              li.nav-item: a.nav-link.active(href='#tabs-2-1' data-bs-toggle='tab') Tab 1
+              li.nav-item: a.nav-link(href='#tabs-2-2' data-bs-toggle='tab') Tab 2
+              li.nav-item: a.nav-link(href='#tabs-2-3' data-bs-toggle='tab') Tab 3
+              li.nav-item: a.nav-link(href='#tabs-2-4' data-bs-toggle='tab') Tab 4
+
+            //- Tab panes
+            .tab-content.text-secondary
+              div#tabs-2-1.tab-pane.fade.show.active
+                p Our agency can provide you and your family with quality insurance for your personal, business and financial needs. Our knowledgeable agents can help your find affordable and reliable car insurance, home insurance, commercial insurance or life insurance. The staff truly believes, “It’s all about protecting you!” Our mission is to help protect people in our communities from the financial impact of lawsuits, fires, car accidents and other unexpected incidents. Our focus is to help our clients grow their assets.
+                p We believe in being local and we strive to improve the communities where we live and work. We offer an inclusive selection of products and client-focused service to go beyond meeting your needs and instead, exceeding your expectations! Our team of professionals is experienced and prepared to customize your policies to fit your situation and lifestyle.
+              div#tabs-2-2.tab-pane.fade
+                p We underwrite specialty lines insurance on an admitted basis through AllRisk Insurance Company, Stonewood Insurance Company, and Falls Lake General Insurance Company. As the admitted insurance platform of James River Group and as subsidiaries of James River Group Holdings, Ltd., we operate against a capital base of almost $500 million.
+                p As with our affiliates, James River Insurance Company (excess and surplus lines) and JRG Re (Bermuda based reinsurer), we focus on underwriting specialty insurance products through limited distribution partners focused in our desired industry segments. We prefer to write specialty insurance policies on a primary basis, and combine an experienced, common sense approach to the business with rigorous underwriting and claims management and an entrepreneurial culture. We believe that this combination results in success for both you and AllRisk.
+              div#tabs-2-3.tab-pane.fade
+                p We believe in More Better, and we work each day to ensure that our culture is embodied in our actions. We believe that it is OK to expect more from ourselves each and every day, in each and every activity and action. Equally, we believe it is OK to expect more from others in their actions and interactions with us. By focusing on achieving success in each and every action and interaction, we believe we both win.
+                p You get a more responsive, creative, financially sound, insurer that takes the time to understand your opportunities. We get an engaged and knowledgeable distribution source for our business, one that trusts that we will work for our mutual success in everything that we do. You and your clients deserve it. More. Better.
+              div#tabs-2-4.tab-pane.fade
+                p We underwrite specialty insurance products in more than 40 states in the U.S. We are licensed to underwrite property and casualty lines of insurance for both commercial and personal risks. While our heritage is in underwriting workers compensation insurance for specialty classes including construction and light industrial, and our focus is on writing casualty lines of insurance, we are licensed to write all property casualty lines of commercial and personal insurance.
+                p We underwrite specialty program business both in house and in conjunction with select program administrators and managing general agencies. We have unique capabilities to design a program for an independent retail agent and work with them as distribution partners in defined territories. We also look to partner with program administrators and managing general agencies that have unique specialty expertise in defined industry segments, and that want to share in the underwriting risk on the program. Our appetites range from $5 million to $25 million in annual premium.
+  ='\n'
+
+  //- Tabs Line
+  section.section-top-60.section-md-top-90
+    .container
+      h3.text-center Tabs Line
+      .row.justify-content-md-center
+        .col-md-10.col-lg-8.col-xl-6
+          //- Responsive tabs
+          #tabs-3.tabs-custom.tabs-horizontal.tabs-line
+            //- Nav tabs
+            ul.nav.nav-tabs
+              li.nav-item: a.nav-link.active(href='#tabs-3-1' data-bs-toggle='tab') Tab 1
+              li.nav-item: a.nav-link(href='#tabs-3-2' data-bs-toggle='tab') Tab 2
+              li.nav-item: a.nav-link(href='#tabs-3-3' data-bs-toggle='tab') Tab 3
+              li.nav-item: a.nav-link(href='#tabs-3-4' data-bs-toggle='tab') Tab 4
+
+            //- Tab panes
+            .tab-content.text-black
+              div#tabs-3-1.tab-pane.fade.show.active: p Our agency can provide you and your family with quality insurance for your personal, business and financial needs. Our knowledgeable agents can help your find affordable and reliable car insurance, home insurance, commercial insurance or life insurance. The staff truly believes, “It’s all about protecting you!” Our mission is to help protect people in our communities from the financial impact of lawsuits, fires, car accidents and other unexpected incidents. Our focus is to help our clients grow their assets. We believe in being local and we strive to improve the communities where we live and work.
+
+
+              div#tabs-3-2.tab-pane.fade: p We underwrite specialty lines insurance on an admitted basis through AllRisk Insurance Company, Stonewood Insurance Company, and Falls Lake General Insurance Company. As the admitted insurance platform of James River Group and as subsidiaries of James River Group Holdings, Ltd., we operate against a capital base of almost $500 million. As with our affiliates, James River Insurance Company (excess and surplus lines) and JRG Re (Bermuda based reinsurer), we focus on underwriting specialty insurance products through limited distribution partners focused in our desired industry segments.
+
+              div#tabs-3-3.tab-pane.fade: p We believe in More Better, and we work each day to ensure that our culture is embodied in our actions. We believe that it is OK to expect more from ourselves each and every day, in each and every activity and action. Equally, we believe it is OK to expect more from others in their actions and interactions with us. By focusing on achieving success in each and every action and interaction, we believe we both win. You get a more responsive, creative, financially sound, insurer that takes the time to understand your opportunities.
+              div#tabs-3-4.tab-pane.fade: p We underwrite specialty insurance products in more than 40 states in the U.S. We are licensed to underwrite property and casualty lines of insurance for both commercial and personal risks. While our heritage is in underwriting workers compensation insurance for specialty classes including construction and light industrial, and our focus is on writing casualty lines of insurance, we are licensed to write all property casualty lines of commercial and personal insurance. We underwrite specialty program business both in house and in conjunction with select program administrators and managing general agencies.
+
+  ='\n'
+
+  //- Tabs Gallery
+  section.section-60.section-md-90.section-xl-bottom-120
+    .container
+      .row.justify-content-md-center.row-40
+        .col-sm-12.text-center
+          h3 Tabs Gallery
+        .col-md-10.col-lg-8.col-xl-6
+          //- Responsive tabs
+          #tabs-4.tabs-custom.tabs-horizontal.tabs-minimal
+            //- Nav tabs
+            ul.nav.nav-tabs.text-center
+              li.nav-item: a.nav-link.active(href='#tabs-4-1' data-bs-toggle='tab') All
+              li.nav-item: a.nav-link(href='#tabs-4-2' data-bs-toggle='tab') Consultancy Services
+              li.nav-item: a.nav-link(href='#tabs-4-3' data-bs-toggle='tab') Bookkeeping
+              li.nav-item: a.nav-link(href='#tabs-4-4' data-bs-toggle='tab') Bank Reconciliation
+
+            //- Tab panes
+            .tab-content.text-black
+              div#tabs-4-1.tab-pane.fade.show.active: p Our agency can provide you and your family with quality insurance for your personal, business and financial needs. Our knowledgeable agents can help your find affordable and reliable car insurance, home insurance, commercial insurance or life insurance. The staff truly believes, “It’s all about protecting you!” Our mission is to help protect people in our communities from the financial impact of lawsuits, fires, car accidents and other unexpected incidents. Our focus is to help our clients grow their assets. We believe in being local and we strive to improve the communities where we live and work.
+
+              div#tabs-4-2.tab-pane.fade: p We underwrite specialty lines insurance on an admitted basis through AllRisk Insurance Company, Stonewood Insurance Company, and Falls Lake General Insurance Company. As the admitted insurance platform of James River Group and as subsidiaries of James River Group Holdings, Ltd., we operate against a capital base of almost $500 million. As with our affiliates, James River Insurance Company (excess and surplus lines) and JRG Re (Bermuda based reinsurer), we focus on underwriting specialty insurance products through limited distribution partners focused in our desired industry segments.
+              div#tabs-4-3.tab-pane.fade: p We believe in More Better, and we work each day to ensure that our culture is embodied in our actions. We believe that it is OK to expect more from ourselves each and every day, in each and every activity and action. Equally, we believe it is OK to expect more from others in their actions and interactions with us. By focusing on achieving success in each and every action and interaction, we believe we both win. You get a more responsive, creative, financially sound, insurer that takes the time to understand your opportunities.
+              div#tabs-4-4.tab-pane.fade: p We underwrite specialty insurance products in more than 40 states in the U.S. We are licensed to underwrite property and casualty lines of insurance for both commercial and personal risks. While our heritage is in underwriting workers compensation insurance for specialty classes including construction and light industrial, and our focus is on writing casualty lines of insurance, we are licensed to write all property casualty lines of commercial and personal insurance. We underwrite specialty program business both in house and in conjunction with select program administrators and managing general agencies.
+  ='\n'
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

@@ -1,0 +1,95 @@
+extends  ../_skeleton
+
+//- Includes
+include ../sections/_section-header-default
+include ../elements/_product-item-default
+
+block variables
+	-
+		pageName = 'Grid shop',
+		activeShopLayout = 0;
+
+block page
+	//- Page Header
+	+header-default
+
+	//- Page Content
+	+breadcrumbs
+
+	include ../sections/_section-shop-panel
+
+	//- Shop grid
+	section.section.section-md.bg-transparent
+		.container
+			.row.row-sm.row-40.row-xl-70
+				.col-sm-6.col-md-4.col-xl-3
+					+product-item-simple({
+						img: 'product-01-260x280',
+						header: 'Classic brewer',
+						price: {
+							current: '24'
+						}
+					})
+				.col-sm-6.col-md-4.col-xl-3
+					+product-item-simple({
+						img: 'product-02-257x282',
+						header: 'French press',
+						price: {
+							current: '25'
+						}
+					})
+				.col-sm-6.col-md-4.col-xl-3
+					+product-item-simple({
+						img: 'product-03-238x281',
+						header: 'Gray & white mug',
+						price: {
+							current: '22'
+						}
+					})
+				.col-sm-6.col-md-4.col-xl-3
+					+product-item-simple({
+						img: 'product-04-232x236',
+						header: 'electric pour-over kettle',
+						price: {
+							current: '23'
+						}
+					})
+				.col-sm-6.col-md-4.col-xl-3
+					+product-item-simple({
+						img: 'product-05-233x278',
+						header: 'Slim French Press',
+						price: {
+							current: '21'
+						}
+					})
+				.col-sm-6.col-md-4.col-xl-3
+					+product-item-simple({
+						img: 'product-06-251x314',
+						header: 'Black Mug',
+						price: {
+							current: '26'
+						}
+					})
+				.col-sm-6.col-md-4.col-xl-3
+					+product-item-simple({
+						img: 'product-07-244x253',
+						header: 'Pour-over kettle',
+						price: {
+							current: '27'
+						}
+					})
+				.col-sm-6.col-md-4.col-xl-3
+					+product-item-simple({
+						img: 'product-08-247x252',
+						header: 'Hand grinder',
+						price: {
+							current: '28'
+						}
+					})
+
+			.pagination-custom-wrap.text-center.offset-top-6
+				+pagination
+
+	+map.section-sm
+	//- Page Footer
+	include ../sections/_section-footer-default

@@ -1,0 +1,673 @@
+//
+// Nav custom
+// --------------------------------------------------
+
+// Tabs
+//--------------------------------------
+// Corporate style
+$tabs-corporate-color: $black;
+$tabs-corporate-background: transparent;
+$tabs-corporate-active-color: $white;
+$tabs-corporate-active-background: $primary;
+$tabs-corporate-border: $primary;
+$tabs-corporate-arrow-color: $white;
+
+// Line style
+$tabs-line-color: $dusty-gray;
+$tabs-line-background: transparent;
+$tabs-line-active-color: $primary;
+$tabs-line-active-background: transparent;
+$tabs-line-active-border: $primary;
+$tabs-line-line: $porcelain;
+
+// Minimal style
+$tabs-minimal-color: $black;
+$tabs-minimal-background: transparent;
+$tabs-minimal-active-color: $primary;
+$tabs-minimal-active-background: transparent;
+$tabs-minimal-active-border: $primary;
+
+$vertical-tab-offset: 10px;
+
+// Base styles
+.tabs-custom {
+  .nav-tabs {
+    word-spacing: 0;
+    border: 0;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+
+    li {
+      float: none;
+      border: 0;
+      cursor: pointer;
+      transition: .33s all ease;
+    }
+
+    li {
+
+      a.active {
+        border: 0;
+        cursor: default;
+      }
+    }
+
+    a {
+      margin: 0;
+      border: 0;
+    }
+  }
+}
+
+// Offsets
+* + .tabs-custom {
+  margin-top: 35px;
+
+  @include media-breakpoint-up(lg) {
+    margin-top: 50px;
+  }
+}
+
+.tabs-custom {
+  &.tabs-corporate,
+  &.tabs-line,
+  &.tabs-minimal {
+    .nav-tabs {
+      font-size: 0;
+      line-height: 0;
+    }
+  }
+
+  // Tabs corporate style
+  &.tabs-corporate {
+    .nav-tabs {
+      border: 1px solid $tabs-corporate-border;
+      li {
+        margin: -1px 0;
+      }
+
+      li a {
+        padding: 8px 10px;
+        font: 700 11px/18px $font-family-sec;
+        color: $tabs-corporate-color;
+        background: $tabs-corporate-background;
+        border-bottom: 1px solid $tabs-corporate-border;
+        text-align: center;
+        vertical-align: middle;
+
+        &:after {
+          font: 400 17px 'Material Design Icons';
+          color: transparent;
+          position: relative;
+          top: -12px;
+          display: inline-block;
+          margin-left: 5px;
+          content: '\f236';
+          vertical-align: middle;
+          transition: .33s all ease;
+        }
+      }
+
+      li a:hover,
+      li a.active {
+        color: $tabs-corporate-active-color;
+        background: $tabs-corporate-active-background;
+        border-color: $tabs-corporate-active-background;
+
+        &:after {
+          top: -1px;
+          color: $tabs-corporate-arrow-color;
+        }
+      }
+    }
+
+    .tab-content {
+      padding: 22px 0 0;
+    }
+  }
+
+  // Tabs line style & Tabs minimal style
+  &.tabs-line,
+  &.tabs-minimal {
+    .nav-tabs {
+      li {
+        margin: 0;
+      }
+
+      li + li {
+        margin-top: -1px;
+      }
+    }
+
+    .tab-content {
+      padding: 22px 0 0;
+    }
+  }
+
+  // Tabs line style
+  &.tabs-line {
+    .nav-tabs {
+      li a {
+        font: 400 11px/16px $font-family-sec;
+        letter-spacing: -.05em;
+        text-transform: uppercase;
+        color: $tabs-line-color;
+      }
+
+      li a:hover,
+      li a.active {
+        color: $tabs-line-active-color;
+      }
+    }
+  }
+
+  // Tabs minimal style
+  &.tabs-minimal {
+    .nav-tabs {
+      li a {
+        font: 700 11px/24px $font-family-sec;
+        color: $tabs-minimal-color;
+      }
+
+      li a:hover,
+      li a.active {
+        color: $tabs-minimal-active-color;
+      }
+    }
+  }
+}
+
+// Horizontal tabs
+// ----------------------
+.tabs-custom {
+  // Tabs line style
+  &.tabs-line {
+    .nav-tabs {
+      text-align: center;
+
+      li {
+        display: block;
+        margin: 0 -1px;
+      }
+
+      li a {
+        padding: 8px 15px;
+        border: 1px solid $tabs-line-line;
+
+        &:last-child {
+          margin-right: 0;
+          border-bottom-width: 1px;
+        }
+      }
+
+      li a:hover,
+      li a.active {
+        color: $white;
+        background: $primary;
+        border-color: $primary;
+      }
+    }
+  }
+
+  // Tabs minimal style
+  &.tabs-minimal {
+    .nav-tabs {
+      text-align: center;
+
+      li {
+        display: block;
+      }
+
+      li a {
+        padding: 7px 15px;
+        border: 1px solid $tabs-line-line;
+
+        &:last-child {
+          border-bottom-width: 1px;
+        }
+      }
+
+      li a:hover,
+      li a.active {
+        color: $white;
+        background: $primary;
+        border-color: $primary;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .tabs-custom {
+
+    // Tabs line style & Tabs minimal style
+    &.tabs-line,
+    &.tabs-minimal {
+      li {
+        margin: 0;
+      }
+    }
+
+    &.tabs-line {
+      .nav-tabs {
+        li a {
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+    }
+
+    &.tabs-minimal {
+      .nav-tabs {
+        li a {
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+    }
+
+    // Horizontal tabs
+    // ----------------------
+    &.tabs-horizontal {
+      // Tabs corporate style & Tabs line style
+      &.tabs-corporate,
+      &.tabs-line {
+        .nav-tabs {
+          @include display-flex;
+          @include flex-direction(row);
+          @include align-items(center);
+          width: 100%;
+          text-align: left;
+        }
+      }
+
+      // Tabs line style & Tabs minimal style
+      &.tabs-line,
+      &.tabs-minimal {
+        .nav-tabs {
+          li a {
+            position: relative;
+            z-index: 10;
+            display: inline-block;
+            border: 0;
+          }
+
+          li + li {
+            margin-top: 0;
+          }
+        }
+
+        .tab-content {
+          padding: 40px 0 0;
+        }
+      }
+
+      // Tabs corporate style
+      &.tabs-corporate {
+        .nav-tabs {
+          li, a {
+            display: block;
+            border: 0;
+          }
+        }
+      }
+
+      // Tabs line style
+      &.tabs-line {
+        .nav-tabs {
+          @include justify-content(space-between);
+          border-bottom: 2px solid $tabs-line-line;
+
+          li a {
+            padding: 8px 0 8px 0;
+            margin: 0 30px 0 0;
+            background: $tabs-line-background;
+
+            &:after {
+              content: '';
+              position: absolute;
+              left: 0;
+              right: 100%;
+              bottom: -1px;
+              border-bottom: 2px solid $tabs-line-active-border;
+              opacity: 0;
+              visibility: hidden;
+              transition: .33s all ease;
+            }
+          }
+
+          li a:hover,
+          li a.active {
+            color: $tabs-line-active-color;
+            background: $tabs-line-active-background;
+          }
+
+          li a.active {
+            &:after {
+              right: 0;
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+      }
+
+      // Tabs minimal style
+      &.tabs-minimal {
+        .nav-tabs {
+          @include group(35px, 10px);
+
+          li {
+            display: inline-block;
+          }
+
+          li a {
+            position: relative;
+            bottom: -1px;
+            z-index: 10;
+            display: inline-block;
+            padding: 0 0 5px 0;
+
+            &:after {
+              content: '';
+              position: absolute;
+              left: 0;
+              right: 100%;
+              bottom: 0;
+              border-bottom: 2px solid $tabs-line-active-border;
+              opacity: 0;
+              visibility: hidden;
+              transition: .33s all ease;
+            }
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+
+          li a:hover,
+          li a.active {
+            color: $tabs-minimal-active-color;
+            background: $tabs-minimal-active-background;
+          }
+
+          li a.active {
+            &:after {
+              right: 0;
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Vertical tabs
+// ----------------------
+.tabs-vertical {
+
+  // Common styles
+  .nav-tabs {
+    position: relative;
+
+    > li {
+      z-index: 10;
+      display: block;
+      @include flex-grow(1);
+    }
+  }
+
+  // Tabs corporate style
+  &.tabs-corporate {
+    .nav-tabs {
+      width: 100%;
+
+      li {
+        display: block;
+      }
+
+      li a {
+        position: relative;
+        padding: 8px 10px;
+      }
+
+      li a:hover,
+      li a.active {
+        border-color: $tabs-corporate-active-background;
+      }
+    }
+
+    .tab-content {
+      padding: 30px 0 0;
+    }
+  }
+
+  // Tabs minimal style
+  &.tabs-minimal {
+    .nav-tabs {
+      border-right: 1px solid $alto;
+      li a {
+        position: relative;
+        right: -1px;
+        padding: 0 16px 0 0;
+        text-align: right;
+        border-right: 1px solid transparent;
+        background-color: transparent;
+
+        &:hover,
+        &.resp-tab-active {
+          border-right-color: $secondary;
+        }
+      }
+
+      li + li {
+        margin-top: 16px;
+      }
+    }
+  }
+}
+
+// Medium <768px
+@include media-breakpoint-down(md) {
+  .tabs-custom {
+
+    &.tabs-horizontal,
+    &.tabs-vertical {
+
+      .nav-tabs {
+        flex-direction: column;
+
+        > li a {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .tabs-custom {
+    // Tabs corporate style
+    &.tabs-corporate {
+      .nav-tabs {
+        li a {
+          font-size: 16px;
+          line-height: 26px;
+
+          &:after {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+
+    // Horizontal tabs
+    // ----------------------
+    &.tabs-horizontal {
+
+      // Tabs corporate style
+      &.tabs-corporate {
+        .nav-tabs {
+          position: relative;
+          @include justify-content(center);
+
+          li {
+            @include flex-grow(1);
+            @include flex-shrink(0);
+          }
+
+          li a {
+            display: block;
+            padding: 21px 10px 19px;
+          }
+        }
+
+        .tab-content {
+          padding: 30px 0 0;
+        }
+      }
+    }
+
+    // Vertical tabs
+    // ----------------------
+    &.tabs-vertical {
+      @include display-flex;
+      @include flex-direction(row);
+      @include flex-wrap(nowrap);
+      @include align-items(flex-start);
+
+      .nav-tabs {
+        @include display-flex;
+        @include flex-direction(column);
+        @include flex-wrap(nowrap);
+        @include align-items(stretch);
+        @include flex-shrink(0);
+        max-width: 50%;
+
+        li {
+          width: 100%;
+        }
+
+        li a {
+          text-align: left;
+        }
+
+        li a:hover,
+        li a.active {
+          border-color: $tabs-corporate-active-background;
+
+          &:after {
+            right: 15px;
+          }
+        }
+      }
+
+      .tab-content {
+        @include flex-grow(1);
+      }
+
+      &.tabs-corporate {
+        .nav-tabs {
+          width: auto;
+          min-width: 240px;
+          border-width: 0 0 1px 0;
+
+          li {
+            margin: 0;
+          }
+
+          li a {
+            padding: 23px 44px 22px 30px;
+            border-width: 1px 0 0 0;
+            text-align: left;
+            width: 100%;
+
+            &:after {
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              right: 26px;
+              content: '\f238';
+              transition: .33s all ease;
+            }
+
+            &:first-child {
+              border-top: 1px solid $tabs-corporate-border;
+            }
+          }
+
+          li a:hover,
+          li a.active {
+            &:after {
+              right: 15px;
+              top: 50%;
+            }
+          }
+        }
+
+        .tab-content {
+          padding: 0 0 0 30px;
+          margin-top: -5px;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .tabs-custom {
+
+    // Vertical tabs
+    // ----------------------
+    &.tabs-vertical {
+
+      // Tabs corporate style
+      &.tabs-corporate {
+        .nav-tabs {
+          min-width: 300px;
+        }
+
+        .tab-content {
+          padding: 0 0 0 44px;
+        }
+      }
+    }
+  }
+}
+
+.tabs-custom-variant-1.tabs-horizontal.tabs-minimal {
+  .nav-tabs > li > a {
+    padding: 6px 16px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color:$brand-ebony-clay;
+    background: $porcelain;
+    letter-spacing: 0.06em;
+
+    &:after{
+      display: none;
+    }
+  }
+
+  .nav-tabs {
+    margin: 0 0 -10px -15px;
+  }
+
+  .nav-tabs > li {
+    margin: 0 0 10px 15px;
+  }
+
+  .nav-tabs > li > a:hover,
+  .nav-tabs > li > a.active{
+    background: $primary;
+    color: $white;
+  }
+}
+
+* +  .tabs-custom-variant-1 { margin-top: 35px; }

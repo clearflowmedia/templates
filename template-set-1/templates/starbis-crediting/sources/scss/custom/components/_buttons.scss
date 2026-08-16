@@ -1,0 +1,300 @@
+//
+// Custom Buttons Styles
+// --------------------------------------------------
+
+// Base styles
+// --------------------------------------------------
+
+.btn {
+	text-align: center;
+	max-width: 100%;
+	padding: $padding-base-vertical $padding-base-horizontal;
+	font-family: $font-family-sec;
+	font-size: $btn-font-size * 1px;
+	line-height: $line-height-base;
+	font-weight: $btn-font-weight;
+	border-radius: $btn-border-radius;
+	border: 3px solid;
+	text-transform: uppercase;
+	transition: .3s ease-out;
+	letter-spacing: 0.05em;
+
+	&:focus,
+	&:active,
+	&:active:focus {
+		outline: none;
+	}
+
+	&-smaller {
+		padding: 8px 25px;
+	}
+
+	&-small {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	&:not([class*='shadow']) {
+		box-shadow: none;
+	}
+
+	&:not(:disabled):not(.disabled):active:focus,
+	&:not(:disabled):not(.disabled).active:focus{
+		&:not([class*='shadow']) {
+			box-shadow: none;
+		}
+	}
+}
+
+.btn-width {
+	min-width: 180px;
+}
+
+// Alternate buttons
+// --------------------------------------------------
+html {
+	.btn-default {
+		@include button-variant-custom($white, $abbey, $abbey, $white, $primary, $primary);
+	}
+
+	.btn-primary {
+		@include button-variant-custom($btn-primary-color, $btn-primary-bg, $btn-primary-border, $white, #95dee4, #95dee4);
+	}
+
+	.btn-dark {
+		@include button-variant-custom(#9b9b9b, #3b3b3b, #3b3b3b, $white, #5bc0c9, #5bc0c9);
+
+		.icon {
+			color: $primary;
+		}
+
+		&:hover {
+			.icon {
+				color: $white;
+			}
+		}
+	}
+
+	.btn-white {
+		@include button-variant-custom(#151515, $white, $white, $white, $gray-dark, $gray-dark);
+	}
+
+	.btn-red-orange {
+		@include button-variant-custom($white, $red-orange, $red-orange, $white, $gray-dark, $gray-dark);
+	}
+
+	.btn-primary-contrast {
+		@include button-variant-custom($white, $primary, $primary, $white, $keppel, $keppel);
+	}
+
+	.btn-primary-outline {
+		@include button-variant-custom($primary, transparent, $primary, $white, $primary, $primary);
+	}
+
+	.btn-white-outline {
+		@include button-variant-custom($white, transparent, $white, $tundora, $white, $white);
+	}
+
+	.btn-white-outline-variant-1 {
+		@include button-variant-custom($white, transparent, $white, $white, $primary, $primary);
+	}
+
+	.btn-silver-outline {
+		@include button-variant-custom($black, transparent, $silver, $white, $silver, $silver);
+	}
+
+	.btn-black-outline {
+		@include button-variant-custom(#151515, transparent, #cccccc, $white, $black, $black);
+	}
+
+	.btn-steel-blue {
+		@include button-variant-custom($white, #547ABB, #547ABB, $white, darken(#547ABB, 10%), darken(#547ABB, 10%));
+	}
+
+	.btn-cerulean {
+		@include button-variant-custom($white, #00bbf2, #00bbf2, $white, darken(#00bbf2, 5%), darken(#00bbf2, 5%));
+	}
+
+	.btn-mandy {
+		@include button-variant-custom($white, #e75854, #e75854, $white, darken(#e75854, 10%), darken(#e75854, 10%));
+	}
+}
+
+
+// Button Sizes
+// --------------------------------------------------
+
+.btn-xs {
+	min-width: 100px;
+	@include button-size($padding-xs-vertical, $padding-xs-horizontal, 13px, 0);
+}
+
+.btn-sm {
+	min-width: 120px;
+	@include button-size($padding-small-vertical, $padding-small-horizontal, 13px, 0);
+}
+
+.btn-lg {
+	min-width: 230px;
+	@include button-size($padding-large-vertical, $padding-large-horizontal, 14px, 0);
+}
+
+.btn-xl {
+	@include button-size(15px, 22px, 18px, 0);
+
+	@include media-breakpoint-up(md) {
+		padding: $padding-extra-large-vertical $padding-extra-large-horizontal;
+		font-size: 18px;
+	}
+
+	// Variants
+	@include media-breakpoint-up(lg) {
+		min-width: 270px;
+
+		&-bigger {
+			padding-top: 28px;
+			padding-bottom: 28px;
+		}
+	}
+}
+
+// Button Shapes
+// --------------------------------------------------
+
+.btn-block {
+	display: inline-block;
+	width: 100%;
+}
+
+.btn-round {
+	border-radius: 9px;
+}
+
+.btn-round-sm {
+	border-radius: 3px;
+}
+
+.btn-circle {
+	border-radius: 35px;
+}
+
+.btn-round-bottom {
+	border-radius: 0 0 5px 5px;
+}
+
+// Button Modifiers
+// --------------------------------------------------
+.btn-shadow {
+	box-shadow: 0 9px 21px 0 rgba(15, 15, 15, 0.15);
+}
+
+// Button Icon styles
+// --------------------------------------------------
+
+.layout-panel .btn,
+.page .btn {
+	&.btn-icon {
+		@include display-inline-flex;
+		@include flex-direction(row);
+		@include flex-wrap(nowrap);
+		@include align-items(center);
+		@include justify-content(center);
+		vertical-align: middle;
+
+		.icon {
+			position: relative;
+			top: 1px;
+			display: inline-block;
+			width: auto;
+			height: auto;
+			line-height: 0;
+			vertical-align: middle;
+			transition: 0s;
+		}
+
+		&-left {
+			.icon {
+				margin-right: 15px;
+
+				@include media-breakpoint-up(xl) {
+					margin-right: 20px;
+				}
+			}
+		}
+
+		&-right {
+			@include flex-direction(row-reverse);
+
+			.icon {
+				margin-left: 15px;
+
+				@include media-breakpoint-up(xl) {
+					margin-left: 20px;
+				}
+			}
+		}
+	}
+}
+
+.btn-icon-only {
+	@include reset-button;
+	font-size: 0;
+	line-height: 0;
+	transition: .33s all ease;
+
+	&.btn-icon-only-primary {
+		@include link($primary, $black);
+	}
+}
+
+.page .btn.btn-link {
+	padding: 10px 0;
+	border-color: transparent;
+	border-width: 2px;
+	border-bottom-color: $primary;
+	background: transparent;
+
+	font-family: $font-family-sec;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 0;
+
+	&:hover {
+		border-color: $primary;
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+
+	&-primary-white {
+		color: $primary;
+
+		&:hover {
+			color: $white;
+			border-color: $white;
+		}
+	}
+
+	&-primary {
+		color: $primary;
+	}
+
+	&-white {
+		color: #fff;
+		border-bottom-color: $white;
+
+		&:hover {
+			color: $primary;
+		}
+	}
+}
+
+.btn-icon-only {
+	padding: 9px 18px;
+}
+
+.btn-cta {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-weight: 400;
+	letter-spacing: .0em;
+}

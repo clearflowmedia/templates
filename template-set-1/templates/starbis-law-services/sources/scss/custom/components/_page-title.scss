@@ -1,0 +1,76 @@
+//
+// Page title
+// --------------------------------------------------
+$page-title-spacing: 1.2em;
+
+.page-title {
+  text-align: center;
+  * { letter-spacing: 0; }
+
+  .page-title-inner {
+    position: relative;
+    display: inline-block;
+  }
+
+  .page-title-left,
+  .page-title-right {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: middle;
+
+    * {
+      display: inline;
+      white-space: nowrap;
+      color: rgba($white, .1);
+    }
+  }
+
+  .page-title-left {
+    left: 0;
+    text-align: right;
+    transform: translate(-100%, -50%);
+
+    * {
+      padding-right: .5em;
+    }
+  }
+
+  .page-title-right {
+    right: 0;
+    text-align: left;
+    transform: translate(100%, -50%);
+
+    * {
+      padding-left: .5em;
+    }
+  }
+}
+
+.page-title-wrap {
+  background: $black;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center 80%;
+}
+
+@include media-breakpoint-up(md) {
+  .page-title {
+    text-align: left;
+
+    .page-title-left {
+      * {
+        padding-right: $page-title-spacing;
+      }
+    }
+
+    .page-title-right {
+      * {
+        padding-left: $page-title-spacing;
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-quote-default
+include ../elements/_ui-accordion
+
+block variables
+	- var activeIndex = 2
+	- var pageName = 'FAQ'
+
+block title
+	title=pageName
+
+block page
+	//-Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title(pageName, 'bg-image-4')
+
+	//-FAQ
+	section.section-60.section-md-90.section-xl-bottom-120.bg-whisperapprox
+		.container
+			.row.justify-content-md-center
+				.col-md-10.col-lg-12
+					.row.row-50
+						.col-lg-6
+							h3 General Questions
+							p All you need to know about our company and how to get support.
+							//-Bootstrap collapse
+							#accordionOne.accordion.accordion-group.accordion-group-corporate
+								+accordion-item({
+									show: true,
+									parentId: 'accordionOne',
+									header: 'What is an Investment Advisor?'
+								}).accordion-corporate
+									p.text-gray-05 An Investment Advisor is a professional that works for you to create an investment portfolio that is best suited to meet your individual needs. Not all Investment Advisors are created equal. It is important to choose an Investment Advisor who can meet your specific needs and deliver solid returns with good service.
+
+								+accordion-item({
+									parentId: 'accordionOne',
+									header: 'What are the advantages of becoming your client?'
+								}).accordion-corporate
+									p.text-gray-05 Your account will be managed by a professional money manager. We monitor the financial markets every day and regularly review your portfolio to ensure that an optimal blend of investments is being used to meet your individual goals. This provides our clients with many benefits, including more time to pursue what really interests them.
+
+								+accordion-item({
+									parentId: 'accordionOne',
+									header: 'What makes you different from many others?'
+								}).accordion-corporate
+									p.text-gray-05 We have no conflicts of interest that could adversely affect your portfolio performance. Unlike many brokers and other financial advisors, we receive no compensation from brokerages or mutual fund companies for investing in their funds. Our only goal is to find the best investments available to meet your objectives.
+
+								+accordion-item({
+									parentId: 'accordionOne',
+									header: 'How many offices do you have?'
+								}).accordion-corporate
+									p.text-gray-05 Three. We have offices in Grand Blanc, Michigan; Troy, Michigan; and Naples, Florida.
+
+						.col-lg-6
+							h3 Other Questions
+							p The answers on most common questions are described bellow.
+							//-Bootstrap collapse
+							#accordionTwo.accordion.accordion-group.accordion-group-corporate
+								+accordion-item({
+									show: true,
+									parentId: 'accordionTwo',
+									header: 'What is your minimum account size?'
+								}).accordion-corporate
+									p.text-gray-05 Currently, our minimum account size is $200,000 (for non-401k accounts), although under some circumstances we will accept accounts less than $200,000. More important, however, than satisfying a minimum account size criteria, we are looking for long-term client relationships. It is important to us to establish a relationship with our clients where we are satisfied that our investment style will meet your needs over the long run.
+
+								+accordion-item({
+									parentId: 'accordionTwo',
+									header: 'What approach to asset allocation do you use?'
+								}).accordion-corporate
+									p.text-gray-05 Our strategy is based on a long-term disciplined approach to investing. After reviewing your Client Profile and completing the client interview process, we can develop a portfolio and asset allocation strategy to meet your individual needs and tolerance for risk. We use tactical asset allocation in our ongoing management of your portfolio.
+
+								+accordion-item({
+									parentId: 'accordionTwo',
+									header: 'How do I withdraw money from my account if I need it?'
+								}).accordion-corporate
+									p.text-gray-05 Your money stays at Schwab, TD Ameritrade, or another custodian, and you withdraw it as you would from any custodial or brokerage account. In addition, accounts can be set up with check writing privileges, debit cards, and other features.
+
+								+accordion-item({
+									parentId: 'accordionTwo',
+									header: 'What are your fees?'
+								}).accordion-corporate
+									p.text-gray-05 You will continue to receive trade confirmations directly from Schwab, TD Ameritrade, or another custodian of your choice, as you do now when a trade is made in your account. You will also continue to receive regular account statements from Schwab, TD Ameritrade, or another custodian.
+
+								+accordion-item({
+									parentId: 'accordionTwo',
+									header: 'What are the available methods for payment of fees?'
+								}).accordion-corporate
+									p.text-gray-05 Clients pay a one-time account set up fee and quarterly management fee based on a percentage of assets under management. The complete fee schedule is shown in our Investment Advisory Agreement.
+
+								+accordion-item({
+									parentId: 'accordionTwo',
+									header: 'What if I decide to cancel my relationship with you?'
+								}).accordion-corporate
+									p.text-gray-05 There is never any obligation to stay with our program. So in the unlikely event that you are not completely satisfied, you may terminate the relationship at any time by notifying us immediately.
+	='\n'
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

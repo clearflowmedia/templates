@@ -1,0 +1,190 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-thumbnail-2
+include ../elements/_ui-quote-vertical
+include ../elements/_ui-quote-bordered
+include ../elements/_ui-icon-box-horizontal
+include ../_includes/_progress-list
+
+block variables
+	- var activeIndex = 1
+	- var pageName = 'About Us'
+
+block title
+	title=pageName
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title(pageName, 'bg-image-2')
+
+	//- What is Tax?
+	section.section-60.section-md-90.section-md-bottom-100.bg-default.bg-image.bg-image-1(style='background-image: url(images/about-1.jpg);')
+		.container
+			.row.justify-content-lg-start
+				.col-md-8.col-lg-6.col-xl-5
+					h3 What is Tax?
+
+					p.text-gray-darker Tax is a dynamic and fast paced industry which requires not only analytical ability, but excellent problem solving and commercial skills. For everything that has economic consequences, whether it is for a company, an individual or the Government - tax is relevant, as is the need for tax advisers.
+					p.text-gray-base The complex and diverse nature of taxation means that tax advisers rapidly develop areas of specialist knowledge.
+					a.btn.btn-primary(href='our-team.html') Read more
+	='\n'
+
+	//- Our Benefits
+	section.section-66.section-md-100.bg-gray-darker.bg-image(style="background-image: url(images/about-2.jpg);")
+		.container
+			.row.justify-content-sm-center.justify-content-md-end
+				.col-md-8.col-lg-6.col-xl-5
+					//- Box
+					.box.bg-cello
+						h3.text-white Our Benefits
+						//- Icon box horizontal left
+						article.icon-box-horizontal
+							.unit.unit-xs.unit-spacing-md.flex-column.flex-sm-row
+								.unit-left
+									span.icon.icon-primary.icon-lg.fl-puppets-book-bag.offset-top-5
+								.unit-body
+									h5
+										a(href='#') Competency
+									p.text-white
+										| We keep abreast of relevant trends and changes in accounting treatment, tax law, and financial management.
+						//- Icon box horizontal left
+						article.icon-box-horizontal
+							.unit.unit-xs.unit-spacing-md.flex-column.flex-sm-row
+								.unit-left
+									span.icon.icon-primary.icon-lg.fl-puppets-dart19.offset-top-5
+								.unit-body
+									h5
+										a(href='#') Professionalism
+									p.text-white
+										| We treat each client with dignity and respect. We listen attentively to their goals and needs.
+						//- Icon box horizontal left
+						article.icon-box-horizontal
+							.unit.unit-xs.unit-spacing-md.flex-column.flex-sm-row
+								.unit-left
+									span.icon.icon-primary.icon-lg.fl-puppets-loud1.offset-top-5
+								.unit-body
+									h5
+										a(href='#') Commitment
+									p.text-white
+										| Our relationships with clients extend beyond financial recordkeeping and reporting.
+
+	='\n'
+
+	//- Why Us?
+	section.section-66.section-md-90.section-xl-bottom-120
+		.container
+			.row
+				.col-sm-12
+					h3 Why Us?
+
+			.row.row-40.justify-content-xl-between
+				.col-md-6.col-xl-5.text-secondary
+					.inset-md-right-15.inset-xl-right-0
+						p.text-gray-darker.
+							Using a tax advisor to manage your taxation affairs can be very rewarding.  Professionals are much more likely to be aware of more of the ways in which your taxes can be optimised so that you pay the least possible amount.
+						p.text-gray-darker.
+							The down side is, obviously, the cost involved in employing such an advisor.  This may seem a bit daunting but if you ever find yourself out of your depth, don't worry - TaxExpert's tax question and answer service is always on hand.
+
+				.col-md-6
+					.progress-linear-group
+						+progress-linear({
+							title: 'Tax Consultancy Services',
+							value: '70'
+						})
+
+						+progress-linear({
+							title: 'Tax Training',
+							value: '54'
+						})
+
+						+progress-linear({
+							title: 'Bookkeeping',
+							value: '87'
+						})
+
+						+progress-linear({
+							title: 'Bank Reconciliation',
+							value: '90'
+						})
+	='\n'
+
+	//- Team members
+	section.section-60.section-md-100.bg-athens-gray
+		.container
+			.row.row-40
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-2({
+						img: 'team-9-246x300',
+						header: "Amanda Smith",
+						caption: "Insolvency Practitioner",
+						phone: "+1 (409) 987–5874",
+						email: "info@demolink.org"
+					})
+
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-2({
+						img: 'team-10-246x300',
+						header: "David Nicholson",
+						caption: "Tax Advisor",
+						phone: "+1 (409) 987–5874",
+						email: "info@demolink.org"
+					})
+
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-2({
+						img: 'team-11-246x300',
+						header: "Vanessa Ives",
+						caption: "Forensic Accounting",
+						phone: "+1 (409) 987–5874",
+						email: "info@demolink.org"
+					})
+
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-2({
+						img: 'team-12-246x300',
+						header: "Sam Kromstain",
+						caption: "Office Manager",
+						phone: "+1 (409) 987–5874",
+						email: "info@demolink.org"
+					})
+
+	='\n'
+
+
+	//- Team
+	section.section.parallax-container.context-dark(data-parallax-img='images/clients-testimonials-parallax-3.jpg')
+		.parallax-content
+			.section-60.section-md-90.bg-overlay-cello
+				.container.text-center
+					.row
+						.col-sm-12
+							h3 What People Say
+
+					.row.text-start
+						.col-sm-12
+							//- Owl Carousel
+							.owl-carousel.owl-spacing-1.owl-nav-classic.owl-style-minimal(data-autoplay='true', data-items="1" data-sm-items="2" data-stage-padding="15" data-loop="true" data-margin="30" data-mouse-drag="true" data-nav="true" data-dots="true" data-dots-each="1" class="owl-carousel owl-spacing-1 owl-nav-classic owl-style-minimal")
+								.item
+									+quote-bordered({
+										img: 'clients-testimonials-1-68x68',
+										header: 'Very professional team',
+										text: 'TaxExpert filed my tax returns for this year. They were very complicated as compared to any other due to a host of reasons. They handled my tax returns very professionally and accurately. I am pleased to recommend TaxExpert. ',
+										cite: 'Emily Wilson',
+										caption: 'Top Manager'
+									})
+
+								.item
+									+quote-bordered({
+										img: 'clients-testimonials-2-68x68',
+										header: 'Very knowledgeable tax accountants',
+										text: "The services they offered me for this year's tax filing has been exemplary and of the highest class. I would recommend them for doing taxes. The service that they rendered was very timely and the fees for the service were reasonable.",
+										cite: 'Denise Lewis',
+										caption: 'CEO, Eberson Co.'
+									})
+
+	//- Page Footer
+	include ../sections/_section-footer-default

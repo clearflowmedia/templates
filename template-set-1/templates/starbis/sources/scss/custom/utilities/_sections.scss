@@ -1,0 +1,11 @@
+/** @section Sections */
+
+$insets: (15px, 30px, 35px, 40px, 50px, 60px, 66px, 75px, 90px, 100px, 120px, 145px, 165px);
+
+@include indent-responsive(section, '', (padding-top, padding-bottom), $grid-breakpoints, $insets);
+@include indent-responsive(section, top, padding-top, $grid-breakpoints, $insets);
+@include indent-responsive(section, bottom, padding-bottom, $grid-breakpoints, $insets);
+
+.section-only-child {
+  flex-grow: 1;
+} 

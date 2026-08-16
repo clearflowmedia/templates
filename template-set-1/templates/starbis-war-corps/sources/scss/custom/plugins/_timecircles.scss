@@ -1,0 +1,112 @@
+/**
+ *	This element is created inside your target element
+ *	It is used so that your own element will not need to be altered
+ **/
+.time_circles {
+  position: relative;
+  width: 100%;
+}
+
+/**
+ *	This is all the elements used to house all text used
+ * in time circles
+ **/
+.time_circles > div {
+  position: absolute;
+  text-align: center;
+  font-family: $font-family-base;
+  top: 50% !important;
+  transform: translateY(-63%) !important;
+  -webkit-transform: translateY(-63%) !important;
+}
+
+@include media-breakpoint-up(xl) {
+  #DateCountdown {
+    width: 100%;
+  }
+}
+
+/**
+ *	Titles (Days, Hours, etc)
+ **/
+.time_circles > div > h4 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 14px !important;
+  color: $gray-800;
+  position: absolute;
+  bottom: -65px;
+  left: 0;
+  right: 0;
+
+  & + * {
+    margin-top: 0;
+  }
+}
+
+/**
+ *	Time numbers, ie: 12
+ **/
+.time_circles > div > span {
+  display: block;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+
+  @include media-breakpoint-up(md) {
+    font-size: 30px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    font-size: 36px;
+  }
+}
+
+.countdown-wrap {
+  max-width: 720px;
+  max-height: 134px;
+
+  .time_circles > div {
+    @include display-flex;
+    @include flex-direction(column-reverse);
+    @include flex-wrap(nowrap);
+    @include align-items(center);
+    @include justify-content(center);
+    font-size: 0;
+    line-height: 0;
+  }
+
+  div > h4 {
+    position: relative;
+    margin-top: -2px;
+    font: 500 12px $font-family-base !important;
+    color: rgba($black, .2);
+    letter-spacing: -.025em;
+    bottom: auto !important;
+    text-transform: uppercase;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 14px !important;
+    }
+  }
+
+  span {
+    font: 900 18px $font-family-base !important;
+    font-style: normal;
+    color: $black;
+  }
+
+  @include media-breakpoint-up(sm) {
+    span {
+      font-size: 40px !important;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    span {
+      font-size: 45px !important;
+      line-height: 1;
+    }
+  }
+}

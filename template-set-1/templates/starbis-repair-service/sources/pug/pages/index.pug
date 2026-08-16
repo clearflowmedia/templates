@@ -1,0 +1,374 @@
+extends  ../_skeleton
+
+//- Includes
+
+include ../elements/_service
+include ../elements/_counter
+include ../elements/_thumbnail-modern
+include ../elements/_post-default
+include ../elements/_pricing
+include ../elements/_person
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Intro
+	section.section.section-intro.bg-image.bg-overlay-2( style='background-image: url(images/intro-bg.jpg)')
+		.container
+			.row
+				.col-md-8.col-lg-7
+					h1 Create a cozy atmosphere in your house with us!
+					p.lead At Stract, we offer first-class home repair & renovation services to residents across the US.
+					a.btn.btn-lg.btn-circle.btn-primary(href='services.html') View All Services
+
+	//- About
+	section.section.section-lg.bg-sky-blue
+		.container
+			.row.row-30.align-items-md-center
+				.col-md-6.col-xl-5
+					h2 Who we are
+						br.d-none.d-lg-block
+						| and how we work
+					p We are an award-winning renovation & remodeling firm established in 2004. We design and deliver high-end, exquisite interiors for our clients, as well as full property renovations of any complexity.
+					.row.row-lg
+						.col-6
+							+counter({
+								value: '320',
+								postfix: '+',
+								title: 'Completed projects'
+							})
+						.col-6
+							+counter({
+								value: '16',
+								title: 'Qualified renovators'
+							})
+				.col-md-6.col-xl-5.offset-xl-2
+					.box-form.bg-white
+						h3 Sign up for a Repair
+						p Enter your contact details to schedule a repair.
+						form.rd-form.rd-mailform(data-form-output='form-output-global', data-form-type='contact', method='post', action='bat/rd-mailform.php')
+							.form-wrap
+								.form-input-icon
+									+icon-user
+
+								input#contact-name.form-input.form-input-lg.form-input-extended(type='text' name='name' data-constraints='@Required')
+								label.form-label.form-label-lg.form-label-extended(for='contact-name') Your name
+
+							.form-wrap
+								.form-input-icon
+									+icon-phone
+								input#contact-phone.form-input.form-input-lg.form-input-extended(type='text' name='phone' data-constraints='@Numeric')
+								label.form-label.form-label-lg.form-label-extended(for='contact-phone') Your phone
+							.form-wrap
+								button.btn.btn-block.btn-lg.btn-circle.btn-primary(type='submit') Submit Request
+							.form-wrap-bottom
+								label.small.checkbox-inline.text-gray
+									input(name='input-checkbox', value='checkbox-1', type='checkbox')
+									| I agree to the&nbsp;
+									a.link-underline.link-black(href='privacy-policy.html') Privacy Policy
+									| &nbsp;and&nbsp;
+									a.link-underline.link-black(href='privacy-policy.html') Terms of Service
+
+	//- Service
+	section.section.section-lg.bg-default
+		.container
+			.row.justify-content-center
+				.col-md-8.col-xxl-6.text-center
+					h2 What we offer
+					p We provide various home repair & renovation services to our new and regular customers. Feel free to find out more below.
+			.owl-carousel.owl-theme-1(
+				data-items='1',
+				data-sm-items='2',
+				data-lg-items='3',
+				data-margin='30',
+				data-dots='true',
+			)
+				+box-service({
+					img: 'service-01-370x220',
+					title: 'Interior renovation',
+					text: 'Whether you need a basic siding replacement or a full-home makeover, we are your partner for any kind of exterior renovations.'
+				})
+
+				+box-service({
+					img: 'service-02-370x220',
+					title: 'Home remodeling',
+					text: 'Our trusted and insured handymen can help with any part of your home remodeling project. Whatever you need to install, we can easily help you.'
+				})
+
+				+box-service({
+					img: 'service-03-370x220',
+					title: 'Home additions',
+					text: 'More living space means more warm, lasting memories. With countless options to choose from, we’ll help you get the extra room you need.'
+				})
+
+				+box-service({
+					img: 'service-04-370x220',
+					title: 'Property maintenance',
+					text: 'We will maintain your property during renovation of any complexity. We are committed to handling every job, whether small or large, with dedication.'
+				})
+
+				+box-service({
+					img: 'service-05-370x220',
+					title: 'Renovation services',
+					text: 'We offer a full range of renovation, remodeling and interior design services to clients throughout the USA. We strive to completely refurbish your house!'
+				})
+
+				+box-service({
+					img: 'service-06-370x220',
+					title: 'Project management',
+					text: 'We work from start to finish on your behalf, and provide full project management to produce the end result you’ve only dreamed of. You can fully rely on us.'
+				})
+
+	//- Portfolio
+	.section.section-xxl.bg-transparent.text-center
+		.container-fluid.ps-0.pe-0
+			.row.row-12.hoverdir.justify-content-center(data-lightgallery='group')
+				.col-sm-6.col-lg-5.col-xl-3
+					+thumbnail-modern({
+						img: 'grid-gallery-01-471x340',
+						imgOriginal: 'grid-gallery-01-original',
+						text: 'Thanks to the specialists at Stract, my house now looks spectacular both inside and outside.',
+						authorName: 'Johnny Smith',
+						authorPosition: 'Client'
+					}).hoverdir-item.wow.slideInRight(data-hoverdir-target='.thumbnail-modern-caption')
+				.col-sm-6.col-lg-5.col-xl-3
+					+thumbnail-modern({
+						img: 'grid-gallery-02-471x340',
+						imgOriginal: 'grid-gallery-02-original',
+						text: 'For those looking for a professional team to manage the renovation, Stract is the only team you’ll need.',
+						authorName: 'Lisa Kelly',
+						authorPosition: 'Client'
+					}).hoverdir-item.wow.slideInUp(data-hoverdir-target='.thumbnail-modern-caption')
+				.col-sm-6.col-lg-5.col-xl-3
+					+thumbnail-modern({
+						img: 'grid-gallery-03-471x340',
+						imgOriginal: 'grid-gallery-03-original',
+						text: 'Guys at Stract really know how a renovation should be done, and they deliver just what the clients ask.',
+						authorName: 'Betty Morgan',
+						authorPosition: 'Client'
+					}).hoverdir-item.wow.slideInDown(data-hoverdir-target='.thumbnail-modern-caption')
+				.col-sm-6.col-lg-5.col-xl-3
+					+thumbnail-modern({
+						img: 'grid-gallery-04-471x340',
+						imgOriginal: 'grid-gallery-04-original',
+						text: 'This renovation company has the best experts and equipment to do the job just the right way.',
+						authorName: 'Joyce Johnson',
+						authorPosition: 'Client'
+					}).hoverdir-item.wow.slideInLeft(data-hoverdir-target='.thumbnail-modern-caption')
+				.col-sm-6.col-lg-5.col-xl-3
+					+thumbnail-modern({
+						img: 'grid-gallery-05-471x340',
+						imgOriginal: 'grid-gallery-05-original',
+						text: 'When it comes to an interior renovation, the team of Stract can answer virtually any question about it.',
+						authorName: 'Craig Murphy',
+						authorPosition: 'Client'
+					}).hoverdir-item.wow.slideInRight(data-hoverdir-target='.thumbnail-modern-caption')
+				.col-sm-6.col-lg-5.col-xl-3
+					+thumbnail-modern({
+						img: 'grid-gallery-06-471x340',
+						imgOriginal: 'grid-gallery-06-original',
+						text: 'The team of Stract provides true expertise when it comes to interior renovation and project planning.',
+						authorName: 'Virginia Turner',
+						authorPosition: 'Client'
+					}).hoverdir-item.wow.slideInUp(data-hoverdir-target='.thumbnail-modern-caption')
+				.col-sm-6.col-lg-5.col-xl-3
+					+thumbnail-modern({
+						img: 'grid-gallery-07-471x340',
+						imgOriginal: 'grid-gallery-07-original',
+						text: 'Within a few weeks, I got new windows and siding installed by Stract’s experts. They know their job.',
+						authorName: 'Ralph Cooper',
+						authorPosition: 'Client'
+					}).hoverdir-item.wow.slideInDown(data-hoverdir-target='.thumbnail-modern-caption')
+				.col-sm-6.col-lg-5.col-xl-3
+					+thumbnail-modern({
+						img: 'grid-gallery-08-471x340',
+						imgOriginal: 'grid-gallery-08-original',
+						text: 'I am highly satisfied with the work you guys have done. Your level of professionalism is unmatched.',
+						authorName: 'Justin Roberts',
+						authorPosition: 'Client'
+					}).hoverdir-item.wow.slideInLeft(data-hoverdir-target='.thumbnail-modern-caption')
+
+	//- Why choose us
+	section.section.section-lg.bg-default
+		.container
+			.row.justify-content-center
+				.col-md-8.col-xxl-6.text-center
+					h2 Why choose us
+					p Our company provides a wide range of benefits and advantages alongside the first-class renovation services.
+			.row.row-30
+				.col-md-6.col-lg-4
+					article.box-advantage.bg-sky-blue
+						.box-icon
+							+icon-rocket
+						.box-content
+							h4 Quality assurance
+							p We always stand for doing our job fast and at the highest level as understand people value their time and money.
+				.col-md-6.col-lg-4
+					article.box-advantage
+						.box-icon
+							+icon-shield
+						.box-content
+							h4 Skilled team
+							p All the experts at Stract have the skills & experience to get the job done right. You can always rely on our professionalism.
+				.col-md-6.col-lg-4
+					article.box-advantage
+						.box-icon
+							+icon-money
+						.box-content
+							h4 Affordable price
+							p When the price is not right, be sure that it is not our price! We have the most reasonable pricing of all the competition!
+			.row.row-lg
+				.col-12.text-center
+					a.btn-link( href='appointment.html' ) Sign up for Repair >
+
+	//- Our Team
+	section.section.section-xl.bg-primary.section-bottom-0
+		.container
+			.row.justify-content-center
+				.col-md-8.text-center
+					h2 Meet our team
+					p All our team members are high-qualified, educated and skilled experts. We
+						br.d-none.d-xxl-block
+						| stand for quality, safety and credibility, so you could be sure about our work.
+			.owl-carousel.owl-theme-2(
+				data-items='1',
+				data-md-items='2',
+				data-lg-items='3',
+				data-xxl-items='4',
+				data-dots='true',
+			)
+				+person({
+					img: 'team-01-292x340',
+					name: 'Ralph Edwards',
+					position: 'Floor and coverings expert'
+				})
+				+person({
+					img: 'team-02-292x340',
+					name: 'Edward Robertson',
+					position: 'Electrical and furniture expert'
+				})
+				+person({
+					img: 'team-03-293x340',
+					name: 'Jenny Wilson',
+					position: 'Paint expert'
+				})
+				+person({
+					img: 'team-04-293x340',
+					name: 'Brooklyn Simmons',
+					position: 'Repair technician'
+				})
+				+person({
+					img: 'team-05-292x340',
+					name: 'Samantha Smith',
+					position: 'Interior designer'
+				})
+		.section.section-inset-1.bg-white
+
+	//- Pricing
+	section.section.section-xl.bg-sky-blue
+		.container
+			.row.justify-content-center
+				.col-md-8.col-xxl-6.text-center
+					h2 Select your package
+					p There are dozens of reasons why our clients choose Stract as their renovation service provider of choice.
+			.row.row-30
+				.col-md-6.col-lg-4
+					+pricing({
+						title: 'Basic',
+						subtitle: 'Perfect for Simple Repair',
+						price: '65',
+						options: ['Repairs', 'Maintenance'],
+						info: 'Other services can be ordered <br> at an extra rate.'
+					})
+				.col-md-6.col-lg-4
+					+pricing({
+						title: 'Standard',
+						subtitle: 'Most popular',
+						price: '120',
+						options: ['Repairs', 'Maintenance', 'Refinishing'],
+						info: 'Cleaning work are available <br> for additional $20.'
+					})
+				.col-md-6.col-lg-4
+					+pricing({
+						title: 'Ultimate',
+						subtitle: 'All services are included',
+						price: '250',
+						options: ['Repairs', 'Maintenance', 'Refinishing', 'Custom design work', 'Cleaning']
+					})
+
+	//- Advantage
+	section.section.section-lg.bg-default
+		.container
+			.row.row-30.align-items-md-center
+				.col-md-6.col-xl-5
+					h2 Take advantage
+						br.d-none.d-xxl-block
+						| of the benefits and services of our specialists
+					p.pe-xl-3.pt-xl-4.mb-xl-5 Get the best customer service and efficient repairs from our technicians. Make an inquiry today to get the services tomorrow.
+
+				.col-md-6.col-xl-5.offset-xl-2
+					.box-form.bg-sky-blue
+						h3 Sign up for a Repair
+						p Enter your contact details to schedule a repair.
+						form.rd-form.rd-mailform(data-form-output='form-output-global', data-form-type='contact', method='post', action='bat/rd-mailform.php')
+							.form-wrap
+								.form-input-icon
+									+icon-user
+								input#contact-name-2.form-input.form-input-lg.form-input-extended(type='text' name='name' data-constraints='@Required')
+								label.form-label.form-label-lg.form-label-extended(for='contact-name-2') Your name
+
+							.form-wrap
+								.form-input-icon
+									+icon-phone
+								input#contact-phone-2.form-input.form-input-lg.form-input-extended(type='text' name='phone' data-constraints='@Numeric')
+								label.form-label.form-label-lg.form-label-extended(for='contact-phone-2') Your phone
+							.form-wrap
+								button.btn.btn-block.btn-lg.btn-circle.btn-primary(type='submit') Submit Request
+							.form-wrap-bottom
+								label.small.checkbox-inline.checkbox-white.text-gray
+									input(name='input-checkbox', value='checkbox-1', type='checkbox')
+									| I agree to the&nbsp;
+									a.link-underline.link-black(href='privacy-policy.html') Privacy Policy
+									| &nbsp;and&nbsp;
+									a.link-underline.link-black(href='privacy-policy.html') Terms of Service
+
+	//- News
+	section.section.section-xl.bg-sky-blue
+		.container
+			.row.justify-content-center
+				.col-md-8.col-xxl-6.text-center
+					h2 Latest news
+					p Check out the latest publications by our team.
+			.row.row-30
+				.col-md-6.col-lg-4
+					+post-default({
+						tag: 'News',
+						img: 'post-01-370x220',
+						date: {dateFormat: '2021-06-21',dateStr:'June 21, 2021'},
+						title: 'Controlling the Final Cost of Your Renovation',
+						text: 'There are four key ingredients for controlling the cost of house...'
+					})
+				.col-md-6.col-lg-4
+					+post-default({
+						tag: 'News',
+						img: 'post-02-370x220',
+						date: {dateFormat: '2021-06-21',dateStr:'June 21, 2021'},
+						title: 'Electrical Safety Tips For Home Renovation',
+						text: 'Deciding to renovate your home is a big decision, and, while it can be...'
+					})
+				.col-md-6.col-lg-4
+					+post-default({
+						tag: 'News',
+						img: 'post-03-370x220',
+						date: {dateFormat: '2021-06-21',dateStr:'June 21, 2021'},
+						title: 'Standard Dimensions for Interior Design',
+						text: 'When planning a room or designing a piece of furniture, you should...'
+					})
+
+			.row.row-lg
+				.col-12.text-center
+					a.btn-link( href='grid-blog.html' ) See All News  >
+
+	//- Page Footer
+	include ../sections/_section-footer-default

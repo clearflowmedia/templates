@@ -1,0 +1,110 @@
+-
+  var
+  logo = {
+    default: 'logo-155x44.png',
+    inverse: 'logo-light-155x44.png',
+    name: 'WarCorps'
+  },
+
+  links = {
+    getTemplate: 'https://www.templatemonster.com/website-templates/starbis.html',
+    address: '9784 Bear Hill Drive Brooklyn, NY 11228',
+    soundcloud: '<iframe height="166" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/149065581&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>',
+    video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/VrLSBsOkP6k" allowfullscreen></iframe>'
+  },
+
+  menu = {
+    "home": {
+      index: 0,
+      title: 'Home',
+      link: 'index.html'
+    },
+
+    "about": {
+      index: 1,
+      title: 'About Us',
+      link: 'about-us.html'
+    },
+
+    "pages": {
+      index: 3,
+      title: 'Pages',
+      link: '#',
+      megamenu: [
+        [
+          {
+            title: 'Extras',
+            link: '#',
+            list: [
+              {
+                title: '404 Page',
+                link: '404-page.html'
+              },
+              {
+                title: 'Privacy Policy',
+                link: 'privacy-policy.html'
+              }
+            ]
+          }
+        ],
+        [
+          {
+            title: 'Components',
+            list: [
+              {
+                title: 'Accordions',
+                link: 'accordions.html'
+              },
+              {
+                title: 'Buttons',
+                link: 'buttons.html'
+              },
+              {
+                title: 'Forms',
+                link: 'forms.html'
+              },
+              {
+                title: 'Typography',
+                link: 'typography.html'
+              }
+            ]
+          }
+        ]
+      ]
+    },
+
+    "pricing": {
+      index: 4,
+      title: 'Blog',
+      link: 'blog.html',
+      dropdown: [
+        {
+          title: 'Blog post',
+          link: 'blog-post.html'
+        },
+      ]
+    },
+
+    "news": {
+      index: 5,
+      title: 'Gallery',
+      link: 'grid-gallery.html'
+    },
+
+    "contacts": {
+      index: 6,
+      title: 'Contact Us',
+      link: 'contact-us.html'
+    }
+  },
+
+  globals = {
+    getTemplateLink: 'https://www.templatemonster.com/website-templates/starbis.html',
+    address: '6036 Richmond hwy, Alexandria, VA USA 22303',
+    soundcloud: '<iframe height="166" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/149065581&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>',
+    video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/1UWpbtUupQQ" allowfullscreen></iframe>'
+  },
+
+  homePage,
+  activeIndex,
+  bodyClass = [];

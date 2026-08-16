@@ -1,0 +1,56 @@
+extends  ../_skeleton
+
+block variables
+  - var activeIndex = 5
+  - var pageName = 'Appointment'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+
+  +page-title(pageName, 'bg-image-4')
+
+  //- Make an Appointment
+  section.section-60.section-md-top-90.section-md-bottom-100
+    .container
+      .row
+        .col-lg-9.col-xl-7
+          h3.text-spacing--25 Make an Appointment
+          //- RD Mailform
+          form.rd-mailform.form-modern(data-form-output="form-output-global", data-form-type='order', method='post', action='bat/rd-mailform.php')
+            .row.row-30
+              .col-md-5
+                .form-wrap
+                  input#appointment-name.form-input(type="text" name="name" data-constraints="@Required")
+                  label.form-label(for="appointment-name") Name
+              .col-md-7
+                .form-wrap
+                  input#appointment-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+                  label.form-label(for="appointment-email") Email
+              .col-md-5
+                .form-wrap
+                  input#appointment-date.form-input(type="text" name="date" data-constraints="@Required", data-time-picker='date')
+                  label.form-label(for="appointment-date") Date
+              .col-md-7
+                .form-wrap
+                  input#appointment-time.form-input(type="text" name="time" data-constraints="@Required", data-time-picker='time')
+                  label.form-label(for="appointment-time") Time Interval
+              .col-sm-12
+                .form-wrap
+                  .textarea-lined-wrap
+                    textarea#appointment-message.form-input(name="message" data-constraints="@Required")
+                    label.form-label(for="appointment-message") Message
+
+              .col-sm-8
+                button(type="submit").btn.btn-primary.btn-block Send
+
+              .col-sm-4
+                button(type="reset").btn.btn-silver-outline.btn-block Reset
+  ='\n'
+
+  //- Page Footer
+  include ../sections/_section-footer-default

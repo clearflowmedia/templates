@@ -1,0 +1,89 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-post-classic
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Blog Classic'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title('Blog', 'bg-image-1')
+
+
+  //- Blog classic
+  section.section-50.section-md-75.section-xl-100
+    .container
+      .row.justify-content-md-center.row-40.row-md-60.row-xl-90
+        .col-xl-10
+          +post-classic({
+            img: 'blog-classic-2-113x113',
+            header: 'Choosing the Strategy',
+            text: [
+              'Perhaps you are a new entrepreneur about to launch a business or innovation you have been dreaming about for years. Or maybe you have an established business and things are going well, or maybe even too well. In both instances you are going to need capital – the “oxygen” that every business needs to grow and prosper. So now you are writing your first business plan or touching up the old one in anticipation of raising capital. Capital can only come into a business in one of two ways...'
+            ],
+            tags: ["Strategy", "Capital"],
+            user: 'Joan Williams',
+            time: ['2021-06-17', '05/14/2021'],
+            media : {
+              type: "image",
+              data: 'blog-classic-1-971x649'
+            }
+          })
+
+          +post-classic({
+            img: 'blog-classic-3-113x113',
+            header: '8 Tips for Building a Bankable Business',
+            text: ["When it comes to the question of applying for a bank loan to fund your startup, most experts say, don’t bother. Banks are rarely interested in funding early stage companies these days, especially since the 2008 financial crash. However, it is not impossible to secure bank funding for your startup. Give yourself better odds with thoughtful planning, diligent preparation, and the eight tips..."],
+            tags: ["Business", "Plan"],
+            user: 'Tom Park',
+            time: ['2021-05-23', '05/17/2021']
+          })
+
+          +post-classic({
+            img: 'blog-classic-4-113x113',
+            header: 'Your Business Model is the Foundation of Your Business Plan',
+            text: [
+              "The report of the death of the business plan has been an exaggeration, to paraphrase Mark Twain. Yet, we often read opinions in popular business press that the business plan is no longer relevant. All you need is a business model, we are told by business gurus. While there is no consensus on the definition of a business model, most people use it as shorthand for the revenue model of a business; i.e. how does it make money. A business plan..."
+            ],
+            tags: ["Facility", "Opportunity"],
+            user: 'John Miller',
+            time: ['2021-04-14', '04/10/2021'],
+            media: {
+              type: "image",
+              data: 'blog-classic-6-970x546'
+            }
+          })
+
+          +post-classic({
+            img: 'blog-classic-8-113x113',
+            header: 'Narrow Your Focus to Prevent Overanalysis',
+            text: [
+              "Entrepreneurs come up with new business ideas all the time. Often, they just plunge ahead to develop the product or service without really taking the time to 1) determine if market conditions are favorable, and, if they are favorable, 2) assess the ability of the business concept to take advantage of the opportunity. We have found that by following a focused, two-step process, you can reduce risks..."
+            ],
+            tags: ["Idea", "Business"],
+            user: 'Jim Anderson',
+            time: ['2021-03-02', '04/3/2021'],
+            media: {
+              type: "gallery",
+              data: [
+                "blog-classic-5-970x546",
+                "blog-classic-6-970x546",
+                "blog-classic-7-970x546"
+              ]
+            }
+          })
+
+        .col-12.text-center
+            +pagination
+  ='\n'
+
+  //- Page Footer
+  include ../sections/_section-footer-default

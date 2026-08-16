@@ -1,0 +1,53 @@
+extends  ../_skeleton
+
+include ../_includes/_countdown
+
+block variables
+	- var activeIndex = 3
+	- var pageName = 'Maintenance'
+
+block title
+	title=pageName
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title(pageName, 'bg-image-1', {
+		0: {
+			"title": "Home",
+			"href": "./"
+		},
+		1: {
+			"title": "Pages",
+			"href": "#"
+		},
+		2: {
+			"title": "Maintenance"
+		}
+	})
+
+	//- We are currently working on.
+	section.section-60.section-md-top-90.section-md-bottom-100.bg-default
+		.container.text-center
+			h3.text-spacing-50 We are Currently Working on.
+			p.h5 This page will appear in
+			.countdown-box.block-centered
+				// TimeCircles
+				+countdown({to: '2024-01-22'})
+
+			h4='Stay Tuned & Subscribe to '
+			br.d-none.d-lg-block
+			| Our Newsletter
+			//- RD Mailform
+			form.rd-mailform.form-center(style="max-width: 520px" data-form-output="form-output-global", data-form-type='subscribe', method='post', action='bat/rd-mailform.php')
+				.form-wrap
+					input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+					label.form-label(for="contact-email") Email
+				.btn-wrap
+					button(type="submit").btn.btn-primary.btn-block Subscribe
+	='\n'
+
+	//- Page Footer
+	include ../sections/_section-footer-default

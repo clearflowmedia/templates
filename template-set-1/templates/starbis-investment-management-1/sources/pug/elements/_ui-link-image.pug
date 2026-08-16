@@ -1,0 +1,6 @@
+//- Link image
+mixin link-image(obj, linkClass)
+  //-Link image
+  .link-image-wrap
+    a.link-image(href='#', class=linkClass)
+      +png(obj.img)

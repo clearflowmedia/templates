@@ -1,0 +1,70 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_post-block
+
+block variables
+	- pageName = 'Grid blog'
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title('Blog', 'bg-blog')
+
+	//- Grid blog
+	section.section.section-50.section-md-75.section-xl-100
+		.container
+			.row.row-30.justify-content-md-center.justify-content-lg-start
+				.col-md-9.col-lg-6.height-fill
+					+post-block({
+						img: 'blog-grid-1-570x253',
+						header: '5 Steps to Blog’s Success',
+						user: 'Joan Williams',
+						time: ['2024-01-01', '5 days ago'],
+						tags: ['Business', 'Blog']
+					})
+
+				.col-md-9.col-lg-6.height-fill
+					+post-block({
+						img: 'blog-grid-2-570x253',
+						header: 'Making Money Online with Your Computer Only',
+						user: 'Tom Park',
+						time: ['2024-01-01', '5 days ago'],
+						tags: ['Business', 'Startup']
+					})
+
+				.col-md-9.col-lg-6.height-fill
+					+post-block({
+						img: 'blog-grid-3-570x253',
+						header: 'How to Create Perfect Color Combinations',
+						user: 'John Miller',
+						time: ['2024-01-01', '5 days ago'],
+						tags: ['Design', 'Color']
+					})
+
+				.col-md-9.col-lg-6.height-fill
+					+post-block({
+						img: 'blog-grid-4-570x253',
+						header: '10 Type Rules for an Excellent User Experience',
+						user: 'Julien Miro',
+						time: ['2024-01-01', '5 days ago'],
+						tags: ['Type', 'Tips']
+					})
+
+				.col-md-9.col-lg-6.height-fill
+					+post-block({
+						img: 'blog-grid-5-570x253',
+						header: 'What Design Thinking is',
+						user: 'Amelia Anderson',
+						time: ['2024-01-01', '5 days ago'],
+						tags: ['Website', 'Design']
+					})
+
+			.pagination-custom-wrap.text-center
+				+pagination
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

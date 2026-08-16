@@ -1,0 +1,146 @@
+//
+// Page Loaders
+// --------------------------------------------------
+
+// Base styles
+// -------------------------
+
+.page-loader-variant-1 {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  float: left;
+  @include display-flex();
+  @include justify-content(center);
+  @include align-items(center);
+  padding: $page-loader-v-1-padding;
+  z-index: 9999999;
+  background: $white;
+  transition: .3s all ease;
+
+  &.loaded {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+  }
+
+  &.ending {
+    display: none;
+  }
+
+  .page-loader-body {
+    margin-top: 40px;
+    text-align: center;
+  }
+}
+
+
+[data-x-mode="true"] {
+  .page-loader-variant-1 {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+  }
+}
+
+
+.cube-folding {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  transform: rotate(45deg);
+  font-size: 0;
+}
+.cube-folding span {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  transform: scale(1.1);
+  display: inline-block;
+}
+.cube-folding span::before {
+  content: '';
+  background-color: lighten($primary, 5%);
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 25px;
+  height: 25px;
+  transform-origin: 100% 100%;
+  animation: folding 2.5s infinite linear both;
+}
+.cube-folding .leaf2 {
+  transform: rotateZ(90deg) scale(1.1);
+}
+.cube-folding .leaf2::before {
+  animation-delay: 0.3s;
+  background-color: $primary;
+}
+.cube-folding .leaf3 {
+  transform: rotateZ(270deg) scale(1.1);
+}
+.cube-folding .leaf3::before {
+  animation-delay: 0.9s;
+  background-color: $primary;
+}
+.cube-folding .leaf4 {
+  transform: rotateZ(180deg) scale(1.1);
+}
+.cube-folding .leaf4::before {
+  animation-delay: 0.6s;
+  background-color: darken($primary, 10%);
+}
+
+
+
+@keyframes folding {
+  0%, 10% {
+    transform: perspective(140px) rotateX(-180deg);
+    opacity: 0;
+  }
+  25%, 75% {
+    transform: perspective(140px) rotateX(0deg);
+    opacity: 1;
+  }
+  90%, 100% {
+    transform: perspective(140px) rotateY(180deg);
+    opacity: 0;
+  }
+}
+.cube-wrapper {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+}
+
+.cube-wrapper:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -20px;
+  margin: auto;
+  width: 90px;
+  height: 6px;
+  background-color: rgba(0, 0, 0, 0.1);
+  filter: blur(2px);
+  border-radius: 100%;
+  z-index: 1;
+  animation: shadow 0.5s ease infinite alternate;
+}
+
+@keyframes text {
+  100% {
+    top: 35px;
+  }
+}
+
+@keyframes shadow {
+  100% {
+    bottom: -18px;
+    width: 100px;
+  }
+}

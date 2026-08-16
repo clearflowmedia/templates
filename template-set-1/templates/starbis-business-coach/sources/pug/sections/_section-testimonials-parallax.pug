@@ -1,0 +1,51 @@
+//- Include
+include ../elements/_quote-minimal
+
+//- Parallax
++parallax({
+	img: 'clients-testimonials-parallax-1'
+}).bg-nero
+	.section-60.section-md-90.section-xl-120
+		.container.text-center
+			h3 What People Say
+			.row.justify-content-lg-center
+				.col-lg-11.col-xl-9
+					//- Owl Carousel
+					.owl-carousel-inverse
+						.owl-carousel.owl-nav-position-numbering(
+						data-items='1',
+						data-stage-padding='0',
+						data-loop='false',
+						data-margin='30',
+						data-nav='true',
+						data-numbering='#owl-numbering-1',
+						data-animation-in='fadeIn',
+						data-animation-out='fadeOut')
+							.item
+								+quote-minimal({
+									mod: "quote-minimal-inverse",
+									text: "I am glad I've purchased Starbis Bootstrap template. It allows me not to worry how to represent my services on the web – everything is already included! Moreover, I think this web design will perfectly suit anyone, even a small local entrepreneur!",
+									cite: "Jane Wilson",
+									caption: "Freelancer"
+								})
+
+							.item
+								+quote-minimal({
+									mod: "quote-minimal-inverse",
+									text: "The themes are beautiful! But what really makes the difference is the customer service. Both pre and post sales support is second to none. Very fast, friendly and competent. I can only recommend Starbis.",
+									cite: "Amanda Smith",
+									caption: "Sales manager"
+								})
+
+							.item
+								+quote-minimal({
+									mod: "quote-minimal-inverse",
+									text: "We have purchased several themes and contacted support once, the case had to be passed to technical support but it was resolved within the day. Very fast responses and excellent templates to choose from. Would highly recommend.",
+									cite: "Sam Cole",
+									caption: "Business owner"
+								})
+						#owl-numbering-1.owl-numbering.owl-numbering-default
+							.numbering-current
+							.numbering-separator
+							.numbering-count
+

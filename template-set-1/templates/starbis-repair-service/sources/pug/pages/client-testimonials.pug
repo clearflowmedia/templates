@@ -1,0 +1,48 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_quote-bordered
+
+
+block variables
+	- pageName = 'Client testimonials'
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title('Clients', 'bg-image-7')
+
+	//- Team
+	section.section.section-lg.bg-default
+		.container
+			h3.text-center Testimonials
+			.row.row-40
+				.col-md-6
+					+quote-bordered({
+						img: 'clients-testimonials-1-68x68',
+						header: 'True Experts in Renovation',
+						text: 'Aperiam atque corporis cum cumque deleniti doloribus earum, eligendi esse exercitationem illo ipsum necessitatibus perferendis provident quae quasi quidem quisquam repellat saepe, suscipit tempore veritatis.',
+						cite: 'Mark Wilson',
+						caption: 'Client'
+					})
+				.col-md-6
+					+quote-bordered({
+						img: 'clients-testimonials-2-68x68',
+						header: 'Affordable Prices and Great Customer Service',
+						text: 'Donec elit lorem, porta vitae auctor non, fermentum nec quam. Sed condimentum risus dignissim eros lobortis, in molestie ipsum euismod. In tristique risus tortor ipsum necessitatibus perferendis provident.',
+						cite: 'Amanda Eberson',
+						caption: 'Client'
+					})
+
+
+	include ../sections/_section-testimonials-parallax
+
+	include ../sections/_section-testimonials-complex
+
+	include ../sections/_section-testimonials-vertical
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

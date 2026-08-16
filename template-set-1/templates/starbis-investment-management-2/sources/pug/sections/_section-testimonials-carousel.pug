@@ -1,0 +1,53 @@
+//- Team
+//- Parallax
++parallax({
+  img: 'bg-image-6',
+  addClass: 'bg-black bg-overlay-dark'
+})
+  .section-66.section-md-90.section-xl-bottom-120.context-dark
+    .container
+      h3.text-center Testimonials
+
+      //- Owl Carousel
+      .owl-carousel.owl-quote-bordered.owl-nav-style-1(data-items='1', data-lg-items='2', data-stage-padding='0', data-loop='true', data-margin='30', data-mouse-drag="true", data-nav='true', data-dots='true', data-dots-each='1')
+        .item
+          .inset-xl-left-60.inset-xl-right-40
+            +quote-bordered({
+              img: 'clients-testimonials-1-68x68',
+              header: 'Highly Professional Team',
+              text: 'Working with InvestPlus has been a great experience. An exceptional group of people who are well versed in all legal, accounting, and compliance aspects of fund administration for onshore or offshore funds. I would highly recommend.',
+              cite: 'Emily Wilson',
+              caption: 'Top Manager'
+            })
+
+        .item
+          .inset-xl-left-60.inset-xl-right-40
+            +quote-bordered({
+              img: 'clients-testimonials-2-68x68',
+              header: 'Real Experts in Investment Management',
+              text: "These guys are efficient! From the first moment that I dealt with InvestPlus I knew that they were real pros. They are asking the right questions, and when getting the answers they are on ball non-stop, providing an excellent service!",
+              cite: 'Dennis Lewis',
+              caption: 'Civil Servant'
+            })
+
+        .item
+          .inset-xl-left-60.inset-xl-right-40
+            +quote-bordered({
+              img: 'clients-testimonials-9-68x68',
+              header: 'A Team of Dedicated Investment Specialists',
+              text: "It took me a while to find someone who could accomplish what I needed for my company. I have to say it was well worth the wait. InvestPlus is a team of real professionals who showed their hard work, patience, and professionalism, and they far exceeded my expectations.",
+              cite: 'Jack McGee',
+              caption: 'Founder, The Therapy'
+            })
+
+        .item
+          .inset-xl-left-60.inset-xl-right-40
+            +quote-bordered({
+              img: 'clients-testimonials-11-113x113',
+              header: 'A Team of Dedicated Investment Specialists',
+              text: "It has been a pleasure to work with Meet Our Team of professional designers. The Reactive team was quick studies who learned about our complex business and market and created a web presence that we are all proud to call our own. Many thanks to all of you!",
+              cite: 'Jill Miller',
+              caption: 'Artist'
+            })
+
+='\n'

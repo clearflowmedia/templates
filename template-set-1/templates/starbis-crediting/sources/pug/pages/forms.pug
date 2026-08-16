@@ -1,0 +1,104 @@
+extends  ../_skeleton
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Forms'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title(pageName, 'bg-image-1', {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Additional Pages",
+      "href": "#"
+    },
+    2: {
+      "title": "Forms"
+    }
+  })
+
+  section.section-75.section-lg-100.bg-default
+    .container
+      h3 Forms
+      p.big.text-gray With forms you can get almost any kind of information from
+        br.d-none.d-lg-block
+        | your visitors, who will definitely appreciate this attractive element.
+
+      .row.row-offset-3.justify-content-sm-center
+        .col-md-10.col-lg-8.col-xl-6
+          h4.font-accent.fw-normal Login form
+
+          include ../sections/_section-login-form
+
+  hr
+  section.section-75.section-lg-100.bg-default
+    .container
+      h4.font-accent.fw-normal Contact us
+
+      .row.justify-content-sm-center
+        .col-md-10.col-lg-8.col-xl-6
+          include ../sections/_section-contacts-form
+
+  // Material Parallax
+  +parallax({
+    img: 'bg-form',
+    addClass: 'bg-black'
+  })
+    .container.section-75.section-lg-100.context-dark
+      h3.text-spacing-50 Subscribe to Our Newsletter
+      .row.justify-content-sm-center
+        .col-md-8.col-xl-7
+          p.heading-subtext.text-white Sign up to our newsletter and be the first to know about latest company news, special offers, events, and discounts.
+
+          // RD Mailform
+          form.rd-mailform.rd-mailform-inline(data-form-output="form-output-global", data-form-type='forms', method='post', action='bat/rd-mailform.php')
+            .form-wrap
+              label.text-white.form-label(for="inline-email") Enter your e-mail
+              input#inline-email.form-input.form-input-transparent(type="email" name="email" data-constraints="@Email @Required")
+            button(type="submit").btn.btn-white.btn-width subscribe
+
+  ='\n'
+
+  //- Mailchimp
+  section.section.section-40.section-md-75.bg-whisper
+    .container
+      .row.justify-content-sm-center
+        .col-md-6.col-lg-5.col-xl-4
+          h3 MailChimp
+          // Mailchimp
+          form.rd-form.mailchimp-mailform.rd-mailform-inline(data-form-output='form-output-global' action='https://templatemonster.us1.list-manage.com/subscribe/post?u=1e39a6d114a4cc130a4edbe43&id=9fc9ef194a' method='post')
+            .form-wrap.form-wrap_icon.linear-icon-envelope
+              label.form-label(for='mailchimp-email') Enter your e-mail
+              input#mailchimp-email.form-input(type='email' name='email' data-constraints='@Email @Required')
+
+            button.btn.btn-primary.btn-block(type='submit') Subscribe
+  ='\n'
+
+  //- Campaign monitor
+  section.section.section-40.section-md-75
+    .container
+      .row.justify-content-sm-center
+        .col-md-6.col-lg-5.col-xl-4
+          h3 Campaign Monitor 
+          //- RD Mailform
+          form.rd-form.campaign-mailform.rd-mailform-inline(data-form-output='form-output-global' action='https://templatermonster.createsend.com/t/j/s/zjjikd/' method='post')
+            .form-wrap.form-wrap_icon.linear-icon-envelope
+              label.form-label(for='campaign-email') Enter your e-mail
+              input#campaign-email.form-input(type='email' name='cm-zjjikd-zjjikd' data-constraints='@Email @Required')
+
+            button.btn.btn-primary.btn-block(type='submit') Subscribe
+  ='\n'
+  
+  
+
+  //- Page Footer
+  include ../sections/_section-footer-default

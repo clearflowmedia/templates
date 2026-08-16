@@ -1,0 +1,45 @@
+//
+// Text styling
+// --------------------------------------------------
+
+// Text decoration
+//
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-strike {
+  text-decoration: line-through;
+}
+
+// Text weight
+//
+
+strong {
+  font-weight: 700;
+}
+
+.fw-extra-bold {
+	font-weight: 800;
+}
+
+.fw-ubold {
+	font-weight: 900;
+}
+
+
+// Text spacing
+//
+
+.text-spacing-0{
+  letter-spacing: 0;
+}
+
+.text-spacing-40 {
+  letter-spacing: 0.04em;
+}
+
+.text-spacing-120{
+  letter-spacing: 0.12em;
+}

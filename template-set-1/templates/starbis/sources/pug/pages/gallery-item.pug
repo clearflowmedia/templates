@@ -1,0 +1,80 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_post-minimal
+
+block variables
+	- pageName = 'Gallery item'
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title('Gallery', 'bg-gallery')
+
+	//- Starting a Web Design Project
+	section.section.section-60.section-md-75.section-xl-90
+		.container
+			h3 Starting a Web Design Project
+			article.post-info
+				.post-image: +img('gallery-item-1-1171x884')
+				.post-main
+					.post-left
+						ul.post-meta
+							li: time(datetime='2024-01-01') Jan 2024
+							li by Julien Miro
+							li
+								ul.list-hashtags
+									li: a(href='#') Web
+									li: a(href='#') Design
+									li: a(href='#') Project
+									li: a(href='#') Tips
+
+					.post-body
+						p There’s a first time for everything — and it’s finally time for your very first web design project! While landing your first gig is a huge accomplishment in itself, keeping your first client happy requires a whole different set of skills. You’re not just a designer — you’re a project manager, and offering a great customer service experience is essential for winning over your clients’ repeat business, so you’ll need to be on target from day one.
+
+
+	//- Related posts
+	section.section.section-35.section-md-75.section-xl-90.bg-gray-light.novi-background
+		.container.text-center.text-sm-start
+			.row
+				.col-sm-12
+					h4 Related posts
+
+			.row.row-30
+				.col-md-10.col-lg-6
+					+post-minimal({
+						img: 'gallery-item-2-220x224',
+						header: 'Better User Experience',
+						time: ['2024-01-01', 'January 1']
+					})
+						p The best user experience is the one the user doesn’t notice. It appears smooth and simple on the surface, but it’s more complex.
+
+				.col-md-10.col-lg-6
+					+post-minimal({
+						img: 'gallery-item-3-220x224',
+						header: 'Retina Asset Workflow',
+						time: ['2024-01-01', 'January 1']
+					})
+						p If you’ve dreamed of the day when you could design more than one thing at once, the wait is over, and here’s what it means.
+
+				.col-md-10.col-lg-6
+					+post-minimal({
+						img: 'gallery-item-4-220x224',
+						header: 'Your Way of Icon Design',
+						time: ['2024-01-01', 'January 1']
+					})
+						p Icon and vector marketplaces are making well-designed vector icons an inexpensive and readily available resource.
+
+				.col-md-10.col-lg-6
+					+post-minimal({
+						img: 'gallery-item-5-220x224',
+						header: 'Truly Fluid Typography',
+						time: ['2024-01-01', 'January 1']
+					})
+						p Embracing fluid typography might be easier than you think. It has wide browser support and is simple to implement.
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

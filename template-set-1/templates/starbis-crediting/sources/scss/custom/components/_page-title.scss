@@ -1,0 +1,21 @@
+//
+// Page title
+// --------------------------------------------------
+.page-title {
+  text-align: center;
+
+  h2 {
+    letter-spacing: 0;
+  }
+
+  .page-title-inner {
+    position: relative;
+    display: inline-block;
+  }
+}
+
+
+.page-title-wrap {
+  background: $black;
+  background-size: cover;
+}

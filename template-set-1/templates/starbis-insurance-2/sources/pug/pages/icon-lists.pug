@@ -1,0 +1,156 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-icon-box
+include ../elements/_ui-icon-box-vertical
+include ../elements/_ui-icon-box-horizontal
+
+block variables
+  - var activeIndex = 5
+  - var pageName = 'Icon lists'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+
+  +page-title(pageName, 'bg-image-5')
+
+  //- Lists
+  section.section-40.section-md-top-75.section-md-bottom-50.section-xl-top-90
+    .container
+      .row
+        .col-sm-12
+          h3.text-spacing--30 Lists
+      .row.row-40
+        .col-sm-6.col-md-4.col-xl-3
+          h5 Unordered List
+          ul.list-marked
+            li Responsive & Retina
+            li Extensive docs
+            li Powerful Navigation
+            li Video Backgrounds
+            li Social Plugins
+
+        .col-sm-6.col-md-4.col-xl-3
+          h5.text-spacing--30 Ordered List
+          ul.list-ordered
+            li Responsive & Retina
+            li Extensive docs
+            li Powerful Navigation
+            li Video Backgrounds
+            li Social Plugins
+  ='\n'
+
+  //- Icon Left List
+  section.section-40
+    .container
+      .row
+        .col-sm-12
+          h3.text-spacing--30 Icon Left List
+      .row
+        .col-lg-9.col-xl-12
+          .row.row-40
+            .col-md-6.col-xl-3
+              +icon-box-left({
+                icon: ['icon-lg-variant-1', 'material-icons-phonelink'],
+                header: 'Edge Technologies',
+                text: 'Our team of professional analysts is constantly roaming the web in search of promising techniques.'
+              })
+
+            .col-md-6.col-xl-3
+              +icon-box-left({
+                icon: ['icon-lg', 'material-icons-av_timer'],
+                header: 'We Value Your Time',
+                text: 'We know how important it is for you to maintain your schedule, that’s why we do everything to fit it. '
+              })
+
+            .col-md-6.col-xl-3
+              +icon-box-left({
+                icon: ['icon-lg-variant-1', 'material-icons-headset_mic'],
+                header: 'Qualified Support',
+                text: 'Our support team is online 24/7, and is ready to help you with any design-related issue.'
+              })
+
+            .col-md-6.col-xl-3
+              +icon-box-left({
+                icon: ['icon-lg', 'material-icons-av_timer'],
+                header: 'Made for Speed',
+                text: 'We know how embarassing and time-consuming content loading can be.'
+              })
+  ='\n'
+
+  //- Icon Top List
+  section.section-50
+    .container
+      .row
+        .col-sm-12
+          h3.text-spacing--30 Icon Top List
+      .row
+        .col-lg-9.col-xl-12
+          .row.row-50
+            .col-sm-6.col-xl-3
+              +icon-box-vertical({
+                icon: ['icon-md', 'material-icons-phonelink'],
+                header: 'Responsive & Retina',
+                text: 'Shelter looks simply great on any screen resolution. All images are responsive and ultra sharp.'
+              })
+
+            .col-sm-6.col-xl-3
+              +icon-box-vertical({
+                icon: ['icon-md', 'material-icons-library_books'],
+                header: 'Extensive docs',
+                text: 'Shelter has online and easily accesible documentation. Our documentation contains detailed instructions for further template customization and self adaptation.'
+              })
+
+            .col-sm-6.col-xl-3
+              +icon-box-vertical({
+                icon: ['icon-md', 'material-icons-videocam'],
+                header: 'Video Backgrounds',
+                text: 'Our templates are enabled with captivating video background, an option which can transform any website into esthetically appealing one.'
+              })
+
+            .col-sm-6.col-xl-3
+              +icon-box-vertical({
+                icon: ['icon-md', 'material-icons-open_with'],
+                header: 'Powerful Navigation',
+                text: 'Powerful and really flexible RD Navbar plugin is included too. Create any type of navigation with our ready-to-go examples and adapt them to your needs.'
+              })
+  ='\n'
+
+  //- Icon Box
+  section.section-top-35.section-bottom-60.section-md-bottom-100
+    .container
+      .row
+        .col-sm-12
+          h3.text-spacing--30 Icon Box
+
+      .row.row-40
+        .col-md-6.col-lg-4.height-fill
+          +icon-box({
+            icon: ['icon-lg-variant-2', 'material-icons-device_hub'],
+            header: 'Social Integration',
+            text: 'Shelter has full set of social icons and styling options which allow you to share any content.'
+          })
+
+        .col-md-6.col-lg-4.height-fill
+          +icon-box({
+            icon: ['icon-md', 'material-icons-filter'],
+            header: 'Parallax Effects',
+            text: 'Everyone loves parallax scrolling effects, they are simply beautiful. Shelter has advanced parallax options '
+          })
+
+        .col-md-6.col-lg-4.height-fill
+          +icon-box({
+            icon: ['icon-md', 'material-icons-build'],
+            header: 'Extended Toolkit',
+            text: 'Shelter provides a poweful and flexible exntended toolkit in addition to basic Bootsrap. '
+          })
+  ='\n'
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

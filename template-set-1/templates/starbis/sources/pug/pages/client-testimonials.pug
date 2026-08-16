@@ -1,0 +1,50 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_quote-bordered
+
+
+block variables
+	- pageName = 'Client testimonials'
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title('Clients', 'bg-image-7')
+
+	//- Team
+	section.section.section-66.section-md-90.section-xl-bottom-120
+		.container
+			h3.text-center Testimonials
+
+			.row.row-40
+				.col-md-6
+					+quote-bordered({
+						img: 'clients-testimonials-1-68x68',
+						header: 'A Superb Product for The Price...',
+						text: 'I guess I’ll be a returning client. Your Live Chat service is awesome. It allows to settle any issue 24/7. Got really enjoyable experience with your product. Easy set up is a huge plus. I even didn’t turn to support service. A superb product for the price. ',
+						cite: 'Mark Wilson',
+						caption: 'Top Manager'
+					})
+
+				.col-md-6
+					+quote-bordered({
+						img: 'clients-testimonials-2-68x68',
+						header: 'Easy to Read Instructions are Really Helpful...',
+						text: "Got really enjoyable experience with your product. Easy set up is a huge plus.I even didn’t turn to support service. Easy to read instructions are really helpful. Excellent, have nothing to add. Your Live Chat service is awesome. It allows to settle any issue 24/7.",
+						cite: 'Amanda Eberson',
+						caption: 'CEO, Eberson Co.'
+					})
+
+
+	include ../sections/_section-testimonials-parallax
+
+	include ../sections/_section-testimonials-complex
+
+	include ../sections/_section-testimonials-vertical
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

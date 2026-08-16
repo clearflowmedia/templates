@@ -1,0 +1,165 @@
+extends  ../_skeleton
+
+//- Includes
+include ../sections/_section-header-default
+include ../elements/_comment
+include ../elements/_post-preview
+
+block variables
+	- pageName = 'Blog post'
+
+block page
+	//- Page Header
+	+header-default
+
+	//- Page Content
+	+page-title('Blog', 'bg-blog')
+
+	//- Blog post
+	section.section.section-60.section-md-75.section-xl-90
+		.container
+			.row.row-50
+				.col-lg-8.col-xl-9
+					article.post.post-single
+						.post-image
+							figure: +img('post-1-870x412')
+						.post-header
+							h4 Improving Your Coworking Space
+
+						.post-meta
+							ul.list-bordered-horizontal
+								li
+									dl.list-terms-inline
+										dt Date
+										dd: time(datetime='2021-01-22') January 22, 2021
+								li
+									dl.list-terms-inline
+										dt Posted by
+										dd Amelia Lee
+								li
+									dl.list-terms-inline
+										dt Comments
+										dd 3
+								li
+									dl.list-terms-inline
+										dt Category
+										dd News
+
+						.divider-fullwidth.bg-gray-light
+
+						.post-body
+							p Blanditiis dolorem, libero. Atque ducimus facere fugit, itaque nesciunt optio provident quidem rem repellat veniam? Aliquam, cum cumque delectus dicta doloremque eaque, eum fugiat iusto labore laboriosam neque nulla perferendis perspiciatis quisquam quod, reprehenderit sunt tenetur veritatis vitae voluptatem. Libero nam, temporibus!
+							p Aliquid animi hic modi nobis sit! A accusamus adipisci aspernatur aut autem culpa enim eveniet fuga harum id in labore laborum libero minima, nemo neque nesciunt obcaecati optio perspiciatis placeat qui quis rem reprehenderit rerum, temporibus ut vero voluptate! Accusamus consequatur ducimus, enim labore nobis unde vel. Amet assumenda cupiditate dolores incidunt veniam? Adipisci ducimus eligendi esse facilis illo in ipsa laudantium nobis? Dolores magni placeat saepe, veritatis voluptatibus voluptatum? Autem beatae consequatur delectus est exercitationem fugiat, ipsa magnam molestias officia quasi qui recusandae suscipit totam, vel voluptate. Maiores non vel velit?
+							.quote-wrap-1
+								blockquote.quote-minimal-bordered
+									p: q Zoning is a very important concept in space planning. You should try to provide as many areas as possible.
+							p Blanditiis consectetur obcaecati quod voluptas! Aliquam autem commodi delectus deserunt distinctio, dolore dolorem, doloremque dolorum error est facere ipsum laboriosam minus nulla officiis perferendis perspiciatis placeat quaerat quasi quo rem rerum sint sunt suscipit ullam, velit voluptate voluptatum. Id incidunt ipsam nesciunt similique voluptatum! Et excepturi fugit laudantium temporibus tenetur, veniam voluptatum!
+
+						.post-footer
+							h5 Share this post:
+							ul.list-inline.list-inline-xs
+								li: a.novi-icon.icon.icon-xxs-small.link-tundora.fa-facebook(href='#')
+								li: a.novi-icon.icon.icon-xxs-small.link-tundora.fa-twitter(href='#')
+								li: a.novi-icon.icon.icon-xxs-small.link-tundora.fa-google-plus(href='#')
+								li: a.novi-icon.icon.icon-xxs-small.link-tundora.fa-pinterest-p(href='#')
+
+					.divider-fullwidth.bg-gray-lighter
+
+
+					//- Comments
+					.comment-list-wrap
+						h4 3 Comments
+						.comment-list.inset-md-right-60.inset-lg-right-30.inset-xl-right-100
+							.comment-group
+								+comment({
+									img: 'post-2-70x71',
+									user: 'Julia Smith',
+									text: 'Aperiam cupiditate deleniti dolorem dolorum est facilis fugiat minima natus officiis omnis, quae quia quis quo recusandae rem sint suscipit ut voluptatibus.'
+								})
+
+								.comment-group-reply
+									+comment({
+										img: 'post-3-70x71',
+										user: 'John doe',
+										text: 'Consectetur cumque laborum, libero, minima minus mollitia nihil nostrum officia perspiciatis, praesentium quas quo recusandae similique sit.'
+									})
+
+							.comment-group
+								+comment({
+									img: 'post-4-70x71',
+									user: 'Ann Peters',
+									text: 'Error esse explicabo minus molestiae molestias natus odio placeat quas temporibus unde.'
+								})
+
+					//- Leave a comment
+					.offset-top-1
+						h4 Leave a comment
+						.form-classic-wrap
+							//- RD Mailform
+							form.rd-mailform.form-classic.form-classic-bordered.label-outside
+								.form-wrap
+									label.form-label-outside(for="comment-message") Message:
+									textarea#comment-message.form-input(name="message" data-constraints="@Required")
+
+								button(type="submit" style='min-width: 200px;').btn.btn-primary Submit
+
+				//- Aside
+				.col-lg-4.col-xl-3
+					.blog-aside
+						.blog-aside-item
+							form.rd-search.rd-search-classic(action="search-results.html", method="GET")
+								.form-wrap
+									label.form-label(for="rd-search-form-input-1") Search...
+									input.form-input(id="rd-search-form-input-1" type="text" name="s" autocomplete="off")
+								button.rd-search-submit(type='submit')
+
+						.blog-aside-item
+							h6 Categories
+							ul.list-marked-bordered
+								li: a(href='#')
+									span News
+									span.list-counter (4)
+								li: a(href='#')
+									span Tips
+									span.list-counter (4)
+								li: a(href='#')
+									span Other
+									span.list-counter (4)
+
+						.blog-aside-item
+							h6 Popular posts
+							.post-preview-wrap
+								+post-preview({
+									small: true,
+									img: 'post-preview-1-70x70',
+									header: 'The History of Internet Cafes',
+									time: ['2021-02-04', 'Feb 4, 2021']
+								})
+
+								+post-preview({
+									small: true,
+									img: 'post-preview-2-70x70',
+									header: 'Top 5 Games to Play at Internet Cafes',
+									time: ['2021-02-04', 'Feb 4, 2021']
+								})
+
+								+post-preview({
+									small: true,
+									img: 'post-preview-3-70x70',
+									header: 'Creating a Productive Space',
+									time: ['2021-02-04', 'Feb 4, 2021']
+								})
+
+						.blog-aside-item
+							h6 Tags
+							ul.list-tag-blocks
+								li: a(href='#') News
+								li: a(href='#') Coworking
+								li: a(href='#') Gaming
+								li: a(href='#') Tips
+								li: a(href='#') Other
+
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

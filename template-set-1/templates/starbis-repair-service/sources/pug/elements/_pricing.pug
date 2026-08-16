@@ -1,0 +1,19 @@
+//- Box pricing
+mixin pricing(obj)
+	.box-pricing.block-sm.text-center&attributes(attributes)
+		.box-pricing-header.context-dark
+			h4.box-pricing-title= obj.title
+			p.box-pricing-subtitle= obj.subtitle
+		.box-pricing-content
+			.h2.box-pricing-price= '$'+ obj.price +'.00'
+			a.btn.btn-lg.btn-block.btn-circle.btn-sky-blue(href='#') Order Now
+			ul.h4.box-pricing-list
+				each option in obj.options
+					li= option
+			if obj.info
+				.box-pricing-bottom
+					.box-pricing-bottom-icon
+						+icon-info
+					.box-pricing-bottom-text Other services can be ordered
+						br
+						| at an extra rate.

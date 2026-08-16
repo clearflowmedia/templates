@@ -1,0 +1,92 @@
+/** @section Breadcrumbs */
+
+// Local variables
+$breadcrumb-padding-vertical: 8px;
+$breadcrumb-padding-horizontal: 15px;
+$breadcrumb-bg: transparent;
+$breadcrumb-color: $body-color;
+$breadcrumb-active-color: $breadcrumb-color;
+$breadcrumb-separator: "/";
+
+// Base styles
+.breadcrumbs-custom {
+	position: relative;
+	padding: 0 15px;
+	text-align: left;
+	background-color: $breadcrumb-bg;
+	background-position: center;
+	@include media-breakpoint-up(xxl) {
+		padding: 0 35px;
+	}
+}
+
+.breadcrumbs-custom-path {
+	@include spacingX(30px);
+	line-height: 1;
+	a {
+		display: inline;
+		vertical-align: middle;
+		&,
+		&:active,
+		&:focus {
+			color: $breadcrumb-color;
+		}
+	}
+
+	li {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 12px;
+		line-height: 1;
+
+		&::after {
+			content: $breadcrumb-separator;
+			font-family: 'FontAwesome';
+			position: absolute;
+			top: 52%;
+			right: -7px;
+			display: inline-block;
+			font-size: inherit;
+			font-style: normal;
+			color: $breadcrumb-color;
+			transform: translate3d(0, -50%, 0);
+		}
+	}
+
+	li:last-child {
+		&:after {
+			display: none;
+		}
+	}
+	a {
+		position: relative;
+		padding-bottom: 3px;
+
+	}
+	a::before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		height: 1px;
+		background-color: lighten($body-color, 50%);
+		opacity: 0;
+		visibility: hidden;
+		transition: all .2s linear;
+	}
+	a:hover::before {
+		opacity: 1;
+		visibility: visible;
+		width: 100%;
+	}
+
+	li.active {
+	}
+}
+
+* + .breadcrumbs-custom-path {
+	margin-top: 14px;
+}
+

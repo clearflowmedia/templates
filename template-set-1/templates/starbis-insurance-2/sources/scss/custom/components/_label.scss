@@ -1,0 +1,30 @@
+//
+// Label custom
+// --------------------------------------------------
+.label-custom {
+  padding: .35em .3em .25em;
+  font-weight: 400;
+  font-size: 70%;
+  text-transform: uppercase;
+}
+
+
+.mac {
+  .label-custom {
+    padding-top: .4em;
+  }
+}
+
+.label-custom {
+  &.label-danger {
+    color: $white;
+    background: $brand-danger;
+    box-shadow: inset 0 8px 12px rgba($black, .25);
+  }
+
+  &.label-info {
+    color: $white;
+    background: $brand-info;
+    box-shadow: inset 0 8px 12px rgba($black, .25);
+  }
+}

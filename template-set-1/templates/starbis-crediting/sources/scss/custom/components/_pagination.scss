@@ -1,0 +1,95 @@
+//
+// Pagination
+// --------------------------------------------------
+$pagination-size: 50px;
+$pagination-offset: 20px;
+
+.pagination-custom {
+  position: relative;
+  display: inline-block;
+  @include spacing(8px);
+
+  li {
+    display: inline-block;
+    line-height: 1;
+
+    &:first-child,
+    &:last-child{
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
+
+      a{
+        padding: 10px 30px;
+      }
+    }
+  }
+
+  li a {
+    display: block;
+    width: auto;
+    min-width: $pagination-size;
+    height: $pagination-size;
+    padding: 10px 20px;
+    border: 3px solid;
+    font: 700 14px/14px $font-family-sec;
+    text-transform: uppercase;
+    vertical-align: middle;
+    letter-spacing: 0.05em;
+
+    &:after {
+      content: '';
+      height: 108%;
+      width: 0;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    &,
+    &:active,
+    &:focus {
+      color: $pagination-color;
+      background: $pagination-bg;
+      border-color: $pagination-border;
+    }
+
+    &:hover {
+      color: $pagination-hover-color;
+      background: $pagination-hover-bg;
+      border-color: $pagination-hover-border;
+    }
+  }
+
+  li.disabled,
+  li.active {
+    pointer-events: none;
+  }
+
+  li.active a {
+    color: $pagination-active-color;
+    background: $pagination-active-bg;
+    border-color: $pagination-active-border;
+  }
+
+  li.disabled a {
+    color: $pagination-disabled-color;
+    background: $pagination-disabled-bg;
+    border-color: $pagination-disabled-border;
+  }
+}
+
+
+* + .pagination-custom,
+* + .pagination-custom-wrap {
+  margin-top: 40px;
+
+  // Medium ≥768px
+  @include media-breakpoint-up(md) {
+    margin-top: 60px;
+  }
+
+  // Extra large ≥1200px
+  @include media-breakpoint-up(xl) {
+    margin-top: 100px;
+  }
+}

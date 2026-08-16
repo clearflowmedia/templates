@@ -1,0 +1,49 @@
+/*
+* Static Layout
+*/
+
+.rd-navbar-static {
+  display: block;
+
+  // Base elements
+  // ---------------
+
+  // RD Navbar inner
+  .rd-navbar-inner {
+    @extend %rd-navbar-transition;
+  }
+
+  .rd-navbar-nav {
+    > li {
+      display: inline-block;
+
+      & + li {
+        margin-left: $navbar-static-nav-indent;
+      }
+    }
+  }
+
+  // RD Navbar clone
+  &.rd-navbar--is-clone {
+    display: block;
+    transform: translateY(-105%);
+    transition: .33s all ease;
+
+    &.rd-navbar--is-stuck {
+      transform: translateY(0);
+    }
+  }
+
+  // States
+  &.rd-navbar--is-clone,
+  &.rd-navbar--is-stuck {
+    .rd-navbar-inner {
+      padding: 13px 30px;
+    }
+
+    .rd-navbar-nav-wrap {
+      margin-top: 0;
+    }
+  }
+}
+

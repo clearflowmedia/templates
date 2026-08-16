@@ -1,0 +1,26 @@
+//ul.list-progress
+//  li
+//    p.animated.fadeIn Conventional loans
+//    //- Progress Bar
+//    .progress-bar-js.progress-bar-horizontal.progress-bar-primary(data-value='70', data-stroke='10', data-easing='linear', data-counter='true' data-duration='1000', data-trail='100')
+//  li
+//    p.animated.fadeIn mortgage plans
+//    //- Progress Bar
+//    .progress-bar-js.progress-bar-horizontal.progress-bar-primary(data-value='54', data-stroke='10', data-easing='linear', data-counter='true' data-duration='1000', data-trail='100')
+//  li
+//    p.animated.fadeIn Refinancing
+//    //- Progress Bar
+//    .progress-bar-js.progress-bar-horizontal.progress-bar-primary(data-value='87', data-stroke='10', data-easing='linear', data-counter='true' data-duration='1000', data-trail='100')
+
+//- Progress Bar linear
+	@param {object} data
+	@param {string} data.title
+	@param {number} data.value
+mixin progress-linear( data )
+	//Linear progress bar
+	.progress-linear( data-daration= data.duration )&attributes( attributes )
+		.progress-linear-header
+			p.animated.fadeIn.text-gray-darker.h7.progress-linear-title= data.title
+			span.progress-linear-counter= data.value
+		.progress-linear-body
+			.progress-linear-bar

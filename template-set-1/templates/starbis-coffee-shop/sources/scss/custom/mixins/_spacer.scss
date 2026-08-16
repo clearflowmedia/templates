@@ -1,0 +1,33 @@
+// Spacer
+@mixin spacing($x, $y : $x) {
+  position: relative;
+  transform: translateY(-$y);
+  margin-bottom: -$y;
+
+  > * {
+    margin-top: $y;
+  }
+
+  > *:not(:last-child) {
+    margin-right: $x;
+  }
+}
+
+@mixin spacingX($x) {
+	margin-left: - round($x / 2);
+	margin-right: - round($x / 2);
+
+	> * {
+		padding-left: round($x / 2);
+		padding-right: round($x / 2);
+	}
+}
+
+@mixin spacingY($y) {
+	transform: translate3d(0, -$y, 0);
+	margin-bottom: -$y;
+
+	> * {
+		margin-top: $y;
+	}
+}

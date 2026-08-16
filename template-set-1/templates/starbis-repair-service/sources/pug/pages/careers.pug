@@ -1,0 +1,123 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_career-block
+include ../elements/_block-vacation
+
+block variables
+	- pageName = 'Careers'
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title(pageName, 'bg-image-9')
+
+	//- Join Our Team
+	section.section.section-md.bg-default
+		.container
+			h3 Join Our Team
+			.row.row-40.justify-content-lg-between.offset-top-2
+				.col-md-10.col-lg-7
+					.inset-lg-right-15.inset-xl-right-0
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium esse expedita, illo nisi nostrum, numquam, quis quisquam ratione sed sequi totam voluptatibus. Alias asperiores commodi cupiditate dicta dolorum facilis fugit officia perferendis, repellendus voluptatibus! A aliquam aut dolores eveniet magni necessitatibus voluptas? Aliquam aut consequuntur dolores, magni perferendis sequi ut?
+				.col-md-6.col-lg-4
+					a.btn.btn-lg.btn-circle.btn-primary.btn-block(href='our-team.html') get started now
+
+
+	//- Explore Our Corporate Culture
+	section.section.section-md.bg-gray-lighter
+		.container
+			h3 Explore Our Corporate Culture
+			p(style='max-width: 600px;') Consectetur adipisicing elit dolor sit amet, consectetur adipisicing elit. Accusamus ad consectetur deleniti dignissimos dolor dolore earum eius expedita in incidunt magnam, maiores minima nulla obcaecati omnis porro quia quidem reiciendis repellat saepe sed sint tenetur veritatis voluptate voluptatibus? Hic, iure?
+
+			ul.list-blocks
+				+block-career({
+					img: 'careers-1-1171x519',
+					header: 'The Main Corporate Values of Stract'
+				})
+					p Pellentesque pharetra velit vitae molestie mattis. Cras tortor lacus, sagittis sit amet ornare non, dictum vitae mauris. In hac habitasse platea dictumst. Sed venenatis, enim eget mollis elementum, arcu mauris vehicula dolor, non lobortis arcu dolor id nisl. Duis sollicitudin mattis nisl. Aliquam venenatis scelerisque ipsum eu suscipit. Etiam tristique ligula vel sem vehicula, sit amet lobortis justo auctor. Praesent varius urna in sem volutpat euismod. Pellentesque sodales tempor efficitur. Nulla urna odio, condimentum vel ex vel, bibendum tempor tortor.
+					p Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin eu ultrices eros, vitae sagittis ante. In rhoncus finibus massa, vel malesuada dui luctus ut. In iaculis ac tortor sed sollicitudin. Cras et vestibulum lectus.
+					p Donec vel libero ac massa tincidunt vestibulum. In a volutpat mauris. Quisque pulvinar metus at pharetra fermentum. Fusce nunc ligula, fringilla a ex vel, iaculis feugiat tortor. Donec eget tellus nisl. Morbi tincidunt nibh odio, eget pulvinar odio viverra in. Fusce nunc lacus, egestas nec nisl quis, tristique cursus leo. Sed et sagittis nunc. Praesent magna sem, rutrum ut pulvinar a, tempus et dolor. Suspendisse finibus justo id nunc eleifend, sed accumsan massa sodales. Integer quam magna, tristique vel mi vel, condimentum maximus ligula.
+				+block-career({
+					img: 'careers-2-1171x519',
+					header: 'Diversity of Learning Opportunities at Stract'
+				})
+					p Phasellus condimentum maximus ipsum, ut venenatis libero vestibulum eget. Quisque tincidunt in tellus non varius. Morbi eu tellus dapibus, sodales tellus sit amet, varius dui. Vivamus pellentesque volutpat risus ut porttitor. Nam ultricies at risus id eleifend. Curabitur varius sit amet neque dictum pellentesque. Nulla rutrum ligula vel tellus mattis pulvinar. Curabitur sit amet risus a tortor dictum blandit venenatis nec tortor. Aenean ac leo nec justo aliquet tincidunt quis sit amet sem.
+					p Sed porttitor ipsum a erat bibendum convallis. Vestibulum fringilla magna at laoreet pellentesque. Vestibulum malesuada, est vel varius pharetra, orci quam commodo lorem, a feugiat mauris lacus et massa. Curabitur felis eros, porttitor et diam quis, scelerisque tristique erat. Vivamus sit amet ornare ante. Nunc laoreet ex ac urna tempor lacinia. Aliquam erat volutpat. Curabitur tellus urna, iaculis sed consectetur eu, imperdiet et justo. Sed ullamcorper leo quis sem imperdiet gravida.
+					p Cras dictum risus at congue elementum. Aenean congue massa sit amet semper varius. Integer volutpat nunc eget pretium rutrum. Pellentesque sollicitudin gravida metus, sit amet iaculis nibh malesuada ac. Mauris tempus laoreet sapien sed placerat. Cras interdum nisi ac dolor rhoncus, sed pellentesque libero euismod. Sed ullamcorper, nulla in mattis lobortis, erat risus consequat tortor, non consequat augue magna in mi. Sed porta semper mauris in luctus. Vestibulum at dui maximus, feugiat nisi sit amet, euismod risus.
+				+block-career({
+					img: 'careers-3-1171x519',
+					header: 'Top Qualities We Are Looking For'
+				})
+					p Sed eget commodo nulla. Aliquam auctor nulla egestas magna fringilla ultricies. Nam id porta purus. In malesuada, sapien sit amet fringilla volutpat, eros nunc rhoncus eros, sit amet ornare ante nisi ac nisl. Donec egestas placerat ex eget posuere. In id dui vitae enim ullamcorper consequat. Pellentesque sit amet velit euismod, suscipit eros nec, mollis tortor. Vivamus interdum nunc a est laoreet, eu placerat lacus tempor.
+					p In sit amet ex eget mauris imperdiet mollis. Suspendisse ultricies dolor ac sapien ullamcorper, eget rhoncus ligula fringilla. Integer tincidunt lectus sed velit finibus posuere. In maximus, ex sit amet faucibus luctus, odio dui vehicula quam, eleifend malesuada risus augue sed tortor. Curabitur fermentum, arcu at tempor malesuada, ligula massa egestas erat, a rhoncus lectus massa sit amet libero.
+					p Nulla ut lorem euismod, vehicula purus in, viverra lorem. Nam venenatis purus id tortor mollis, a rhoncus lorem ornare. Donec id accumsan nibh. Donec sed placerat elit, condimentum porta ipsum. Integer a nulla sed turpis efficitur placerat. Curabitur rhoncus lobortis porttitor. Cras dignissim dui et magna hendrerit egestas. Curabitur viverra, magna quis finibus sollicitudin, massa mi consectetur erat, sed sagittis sem justo sit amet mauris.
+				+block-career({
+					img: 'careers-4-1171x519',
+					header: 'Check Interview Stages at Stract'
+				})
+					p Mauris ultricies sem ligula, interdum fermentum quam varius quis. Curabitur non lectus scelerisque, laoreet quam at, lobortis ex. Aliquam eu lacus a elit dignissim scelerisque. Suspendisse bibendum nec dolor et laoreet. Etiam id urna ultrices, aliquet nisl a, ultricies nunc. Aliquam scelerisque ante a leo luctus, non lacinia diam gravida. In eget dolor at augue mattis fermentum.
+					p Aliquam efficitur ex sit amet pellentesque faucibus. Nullam magna augue, commodo a nunc quis, malesuada gravida felis. Morbi ut orci varius, bibendum neque sit amet, vehicula magna. Sed magna tellus, euismod non semper nec, mattis a velit. Ut dignissim urna et erat venenatis mollis.
+					p Vestibulum vulputate elit felis, vitae euismod augue porta eget. In mattis enim non lectus maximus congue. Sed faucibus pretium egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum in blandit quam, vel mollis ante. Donec bibendum suscipit ante, id faucibus mauris blandit eu. Nunc at tortor eros.
+
+	//- Your Career Starts Here
+	section.section.section-md.bg-gray-light
+		.container
+			h3 Your Career Starts Here
+			p(style='max-width: 440px;') Can't find the job you want? Send your resume to info@demolink.org, and we'll contact you when a new position opens.
+
+			.row.row-30
+				.col-md-6
+					+block-vacation({
+						header: 'Project Manager',
+						location: 'London',
+						employment: 'Full Time',
+						time: ['2021-01-01', '6 hours ago']
+					})
+
+				.col-md-6
+					+block-vacation({
+						header: 'Design Consultant',
+						location: 'Athlanta',
+						employment: 'Freelance',
+						time: ['2021-01-01', '3 day ago']
+					})
+
+				.col-md-6
+					+block-vacation({
+						header: 'Interior Designer',
+						location: 'Oakland',
+						employment: 'Full Time',
+						time: ['2021-01-01', '4 days ago']
+					})
+
+				.col-md-6
+					+block-vacation({
+						header: 'Sales Manager',
+						location: 'New York',
+						employment: 'Full Time',
+						time: ['2021-01-01', 'week ago']
+					})
+
+				.col-md-6
+					+block-vacation({
+						header: 'Plumber',
+						location: 'Bristol',
+						employment: 'Freelance',
+						time: ['2021-01-01', 'month ago']
+					})
+
+				.col-md-6
+					+block-vacation({
+						header: 'Electrical Engineer',
+						location: 'Tampa',
+						employment: 'Full Time',
+						time: ['2021-01-01', 'May 12, 2021']
+					})
+
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

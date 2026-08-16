@@ -1,0 +1,19 @@
+.counter{
+  font: 900 45px/45px $font-family-base;
+  margin-bottom: 0;
+  color: $white;
+}
+
+.counter-bold{
+  font-weight: 700;
+}
+
+.counter-k {
+  &:after {
+    content: 'k';
+  }
+}
+
+* + .counter-title {
+  margin-top: 0;
+}

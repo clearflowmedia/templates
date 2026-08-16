@@ -1,0 +1,318 @@
+//
+// Offsets
+// --------------------------------------------------
+
+
+// Insets
+// -------------------------
+
+$insets: (0, 10px, 15px, 20px, 30px, 40px, 50px, 60px, 70px, 85px, 100px);
+
+@include indent-responsive(inset, left, padding-left, $grid-breakpoints, $insets);
+@include indent-responsive(inset, right, padding-right, $grid-breakpoints, $insets);
+
+
+// Elements
+// -------------------------
+* + .row {
+	margin-top: 40px;
+
+	@include media-breakpoint-up(xl) {
+		margin-top: 50px;
+	}
+}
+
+* + .box-text {
+	margin-top: 40px;
+}
+
+* + .block-centered {
+	margin-top: 30px;
+}
+
+[class*='inset'] + [class*='inset'] {
+	margin-top: 40px;
+}
+
+* + .group-inline {
+	margin-top: 15px;
+}
+
+* + .group-md {
+	margin-top: 22px;
+}
+
+* + .group-lg {
+	margin-top: 30px;
+}
+
+* + .text-large {
+	margin-top: 22px;
+}
+
+* + .big {
+	margin-top: 22px;
+}
+
+
+// Medium ≥768px
+@include media-breakpoint-up(md) {
+	* + .block-centered {
+		margin-top: 60px;
+	}
+}
+
+* + .group-xl {
+	margin-top: 40px;
+
+	@include media-breakpoint-up(md) {
+		margin-top: 60px;
+	}
+
+	@include media-breakpoint-up(xxl) {
+		margin-top: 120px;
+	}
+}
+
+* + .group-xl-responsive {
+	margin-top: 40px;
+
+	// Medium ≥768px
+	@include media-breakpoint-up(md) {
+		margin-top: 45px;
+	}
+}
+
+* + .offset-top-0 {
+	margin-top: 0;
+}
+
+* + .offset-top-50 {
+	margin-top: 50px;
+}
+
+* + .offset-top-1 {
+	margin-top: 40px;
+
+	@include media-breakpoint-up(md) {
+		margin-top: 60px;
+	}
+}
+
+* + .offset-top-2 {
+	margin-top: 15px;
+}
+
+* + .offset-top-3 {
+	margin-top: 35px;
+	// Medium ≥768px
+	@include media-breakpoint-up(md) {
+		margin-top: 50px;
+	}
+}
+
+* + .offset-top-4 {
+	margin-top: 40px;
+}
+
+* + .offset-top-5 {
+	margin-top: 22px;
+
+	// Large ≥992px
+	@include media-breakpoint-up(lg) {
+		margin-top: 25px;
+	}
+}
+
+* + .offset-top-6 {
+	margin-top: 40px;
+
+	@include media-breakpoint-up(md) {
+		margin-top: 60px;
+	}
+	// Extra large ≥1200px
+	@include media-breakpoint-up(xl) {
+		margin-top: 90px;
+	}
+}
+
+* + .offset-top-7 {
+	margin-top: 22px;
+	// Medium ≥768px
+	@include media-breakpoint-up(md) {
+		margin-top: 40px;
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	* + .offset-lg-top-60 {
+		margin-top: 60px;
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.offset-xl-top-60 {
+		margin-top: 60px;
+	}
+}
+
+* + .rd-mailform {
+	margin-top: 40px;
+}
+
+
+h1 + *, * + .btn-link {
+	margin-top: 30px;
+	@include media-breakpoint-up(xl) {
+		margin-top: 60px;
+	}
+}
+h3 + p, .h3 + p {
+	margin-top: 40px;
+}
+
+h2 + h3,
+h2 + .h3 {
+	margin-top: 0;
+}
+
+h2 + p {
+	margin-top: 30px;
+
+	@include media-breakpoint-up(xl) {
+		margin-top: 60px;
+	}
+}
+
+p + .object-inline {
+	margin-top: 22px;
+}
+
+h3 + p {
+	margin-top: 22px;
+}
+
+h3 + .rd-mailform {
+	margin-top: 30px;
+}
+
+p + .form-inline {
+	margin-top: 15px;
+}
+
+* + .container {
+	margin-top: 40px;
+}
+
+* + .offset-top-8 {
+	margin-top: 60px;
+
+	// Medium ≥768px
+	@include media-breakpoint-up(md) {
+		margin-top: 75px;
+	}
+}
+
+
+//
+// Grid
+//
+.row-15 {
+	@include grid-offset(15px);
+}
+
+.row-20 {
+	@include grid-offset(20px);
+}
+
+.row-25 {
+	@include grid-offset(25px);
+}
+
+.row-30 {
+	@include grid-offset(30px);
+}
+
+.row-40 {
+	@include grid-offset(40px);
+}
+
+.row-50 {
+	@include grid-offset(50px);
+}
+
+.row-60 {
+	@include grid-offset(60px);
+}
+
+// Medium ≥576px
+@include media-breakpoint-up(sm) {
+	.row-sm-50 {
+		@include grid-offset(50px);
+	}
+}
+
+// Medium ≥768px
+@include media-breakpoint-up(md) {
+	.row-md-40 {
+		@include grid-offset(40px);
+	}
+
+	.row-md-60 {
+		@include grid-offset(60px);
+	}
+
+	.row-md-70 {
+		@include grid-offset(70px);
+	}
+
+}
+
+// Large ≥992px
+@include media-breakpoint-up(lg) {
+	.row-lg-60 {
+		@include grid-offset(60px);
+	}
+
+	.row-lg-90 {
+		@include grid-offset(90px);
+	}
+}
+
+// Extra large ≥1200px
+@include media-breakpoint-up(xl) {
+	.row-xl-60 {
+		@include grid-offset(60px);
+	}
+
+	.row-xl-70 {
+		@include grid-offset(70px);
+	}
+
+	.row-xl-120 {
+		@include grid-offset(120px);
+	}
+}
+
+
+.shift-md-top-1 {
+	@include media-breakpoint-up(lg) {
+		margin-top: -33px;
+	}
+
+	@include media-breakpoint-up(xl) {
+		margin-top: -43px;
+	}
+}
+
+.offset-top-xl {
+	margin-top: 40px;
+
+	@include media-breakpoint-up(md) {
+		margin-top: 60px;
+	}
+
+	@include media-breakpoint-up(xl) {
+		margin-top: 75px;
+	}
+}

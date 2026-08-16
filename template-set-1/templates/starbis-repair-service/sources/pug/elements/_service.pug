@@ -1,0 +1,11 @@
+//- Service
+	@param {object} obj - parameters storage
+	@param {string} obj.img - image path
+	@param {string} obj.title - title
+mixin box-service(obj)
+	article.box-service.hover-shadow&attributes(attributes)
+		a.figure(href='services.html')
+			+img(obj.img)
+		.box-content
+			h4.box-title: a(href='services.html')=obj.title
+			p.box-text= obj.text

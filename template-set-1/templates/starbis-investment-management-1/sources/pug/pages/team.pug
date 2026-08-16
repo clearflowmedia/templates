@@ -1,0 +1,90 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-thumbnail-1
+include ../elements/_ui-thumbnail-2
+
+block variables
+  - var activeIndex = 2
+  - var pageName = 'Team'
+
+block title
+  title=pageName
+
+block page
+  //-Page Header
+  include ../sections/_section-header-default
+
+
+  +page-title(pageName, 'bg-image-8')
+
+  //-Team
+  section.section-top-66.section-bottom-30.section-md-bottom-40
+    .container
+      h3.text-center Team
+      .row.row-60
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-1({
+            img: 'team-1-189x189.jpg',
+            header: "Julien Miro",
+            caption: "Software Developer"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-1({
+            img: 'team-2-189x189.jpg',
+            header: "Joan Williams",
+            caption: "Support Operator"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-1({
+            img: 'team-3-189x189.jpg',
+            header: "Benedict Smith",
+            caption: "Creative Director"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-1({
+            img: 'team-4-189x189.jpg',
+            header: "Madlen Green",
+            caption: "Sales Manager"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-1({
+            img: 'team-5-189x189.jpg',
+            header: "Hannah Lamb",
+            caption: "Graphic Designer"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-1({
+            img: 'team-6-189x189.jpg',
+            header: "John Miller",
+            caption: "Junior UX Designer"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-1({
+            img: 'team-7-189x189.jpg',
+            header: "Tom Park",
+            caption: "Executive Director"
+          })
+
+        .col-sm-6.col-md-4.col-lg-3
+          +thumbnail-1({
+            img: 'team-8-189x189.jpg',
+            header: "Nora Russell",
+            caption: "Account Manager"
+          })
+
+  section.section-top-30.section-md-top-40.section-bottom-66.section-md-bottom-90.section-xl-bottom-120
+    include ../sections/_section-team
+
+  ='\n'
+
+
+
+  //-Page Footer
+  include ../sections/_section-footer-default

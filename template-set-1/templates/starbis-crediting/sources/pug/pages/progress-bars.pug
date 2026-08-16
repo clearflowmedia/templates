@@ -1,0 +1,93 @@
+extends  ../_skeleton
+
+include ../_includes/_progress_circle
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Progress Bars, Skill Bars, Counters'
+
+block title
+  title='Progress Bars'
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title(pageName, 'bg-image-1', {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Additional Pages",
+      "href": "#"
+    },
+    2: {
+      "title": "Progress Bars, Skill Bars, Counters"
+    }
+  })
+
+  //- Skills Bars
+  section.section-60.section-md-75.section-xl-bottom-120.bg-default
+    .container
+      h3.text-center Progress Bars, Skill Bars, Counters
+      p.big.text-gray These elements are vital to every website, and with them you are able to improve
+        br.d-none.d-lg-block
+        | the overall look of your resource and attract more clients.
+      .row.row-40.row-offset-2.flex-md-row-reverse.justify-content-lg-between.text-md-start
+        .col-md-6.col-xl-5
+          h4.font-accent.text-spacing-0 Welcome to our website
+          p.text-gray.
+            Welcome to our wonderful world. We sincerely hope that each and every user entering our website will find exactly what he/she is looking for. With advanced features of activating account and new login widgets, you will definitely have a great experience of using our web page. It will tell you lots of interesting things about our company, its products and services, highly professional staff and happy customers.
+        .col-md-6
+          .text-start
+            include ../_includes/_progress-list
+
+            +progress-linear({
+              title: 'CONVENTIONAL LOANS',
+              value: '70'
+            })
+
+            +progress-linear({
+              title: 'MORTGAGE PLANS',
+              value: '54'
+            })
+
+            +progress-linear({
+              title: 'REFINANCING',
+              value: '87'
+            })
+  ='\n'
+
+  include ../sections/_section-counter-default
+
+  //- Progress Bars
+  section.section-60.section-md-75.section-lg-100.bg-default
+    .container
+      .row.row-50
+        .col-lg-3.col-sm-6
+          // Circle Progress Bar
+          +progress-circle({
+            title: 'Leadership',
+            value: 73
+          })
+        .col-lg-3.col-sm-6
+          +progress-circle({
+            title: 'Management',
+            value: 11
+          })
+        .col-lg-3.col-sm-6
+          +progress-circle({
+            title: 'Innovation and creativity',
+            value: 13
+          })
+        .col-lg-3.col-sm-6
+          +progress-circle({
+            title: 'Resilience',
+            value: 59
+          })
+  ='\n'
+
+  //- Page Footer
+  include ../sections/_section-footer-default

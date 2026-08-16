@@ -1,0 +1,376 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-icon-box-vertical
+include ../elements/_ui-thumbnail-1
+include ../elements/_ui-thumbnail-3
+include ../elements/_ui-link-image
+include ../elements/_ui-icon-box
+include ../elements/_ui-quote-strict
+
+block variables
+  - var activeIndex = 0
+  - var footerLink = true
+
+block title
+  title Home
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+  include ../sections/_section-slider
+
+  //- Page Content
+
+  //Icon box
+  section
+    .row.g-0.justify-content-sm-center.justify-content-md-start.row-40.row-sm-0
+      .col-sm-10.col-md-4.height-fill
+        +icon-box({
+          icon: ['icon-lg', 'icon-1'],
+          header: 'Internal Audit',
+          mod: 'icon-box-top-line icon-box-hover',
+          text: 'Audit services are designed to help your business mitigate risk, create new efficiencies and better support strategic objectives.'
+        })
+
+      .col-sm-10.col-md-4.height-fill
+        +icon-box({
+          icon: ['icon-lg', 'icon-2'],
+          header: 'Accounting',
+          mod: 'icon-box-top-line icon-box-hover',
+          text: 'A range of services designed to provide timely preparation of company accounts, whether it be at the financial year end or on a monthly basis.'
+        })
+
+      .col-sm-10.col-md-4.height-fill
+        +icon-box({
+          icon: ['icon-lg', 'icon-3'],
+          header: 'Audit',
+          mod: 'icon-box-top-line icon-box-hover',
+          text: 'Audits are verified by sight, confirmation, discussion with management, assessment of internal controls and analytical procedures.'
+        })
+      .col-sm-10.col-md-4.height-fill
+        +icon-box({
+          icon: ['icon-lg', 'icon-4'],
+          header: 'Legislative Support',
+          mod: 'icon-box-hover',
+          text: 'To ensure the quality and effectiveness of every business activity, we support our every client by supporting them in all legislative issues.'
+        })
+
+      .col-sm-10.col-md-4.height-fill
+        +icon-box({
+          icon: ['icon-lg', 'icon-5'],
+          header: 'Review',
+          mod: 'icon-box-hover',
+          text: 'Reviews are less detailed and consist predominantly of an assessment of the company`s books and records.'
+        })
+
+      .col-sm-10.col-md-4.height-fill
+        +icon-box({
+          icon: ['icon-lg', 'icon-6'],
+          header: 'Attest Services',
+          mod: 'icon-box-hover',
+          text: 'Attestation services that we provide, include the process of independent review of the data validity audited by an accountant.'
+        })
+  ='\n'
+
+  //-sect Looking for
+  section.section-with-counters.bg-accent.text-center
+    .container.bg-cape-cod.context-dark.section-60.section-lg-90
+      h4.text-rolling-stone.fw-bold.text-uppercase Looking for
+      h3.section-title
+        span.text-thin a First-Class
+        =' '
+        | auditor?
+      p.text-white With a lot of experience in audit, hiring us will become a proper solution for your business!
+      
+      .row.list-md-dashed.row-40
+        .col-md-3
+          .h1.small.counter-bold.counter 850
+          .counter-title.fw-bold.text-white.text-uppercase Trusted Clients
+        .col-md-3
+          .h1.small.counter-bold.counter 18
+          .counter-title.fw-bold.text-white.text-uppercase Awards
+        .col-md-3
+          .h1.small.counter-bold.counter 21
+          .counter-title.fw-bold.text-white.text-uppercase Years of Experience
+        .col-md-3
+          .h1.small.counter-bold.counter 16
+          .counter-title.fw-bold.text-white.text-uppercase Experts
+
+      .button-block.inset-sm-left-60.inset-sm-right-60
+        .d-md-flex.justify-content-md-center.align-items-md-center
+          a(href="appointment.html").btn.btn-rect.btn-primary.d-block.d-md-inline-block Make an Appointment
+          span.font-italic.text-white.inset-md-left-20.inset-md-right-20.d-block.d-md-inline-block.text-big-18 or
+          a(href="services.html" style="min-width:236px;").btn.btn-rect.btn-white-outline.d-block.d-md-inline-block See All services
+
+  ='\n'
+
+  //- our team
+  section.section-66.section-md-top-100.section-md-bottom-75
+    .container
+      h3.text-center our #[span.text-thin team]
+      .row.justify-content-sm-center
+        .col-md-8.col-xl-12
+          //- Owl Carousel
+          .owl-carousel.owl-carousel-center.owl-nav-modern.owl-style-minimal.owl-style-minimal-inverse.text-center(data-items='1', data-md-items='2', data-xl-items='3', data-stage-padding='15', data-loop='false', data-margin='15', data-mouse-drag="false", data-dots="true", data-nav="true")
+            .item.text-center
+              .thumbnail-variant-5
+                .thumbnail-variant-5-img-wrap
+                  img.img-circle(src="images/team-1-151x151.jpg" width="129" height="129" alt="")
+                h4 John Doe
+                .text-dusty-gray Managing Director
+                .divider-fullwidth.bg-porcelain
+
+                .link-group
+                  span.icon.icon-xxs.icon-primary.material-icons-local_phone
+                  a.link-black(href='callto:#') +1 (609) 567–8974
+                .link-group
+                  span.icon.icon-xxs.icon-primary.fa-envelope-o
+                  a.link-black(href='mailto:#') info@demolink.org
+
+            .item.text-center
+              .thumbnail-variant-5
+                .thumbnail-variant-5-img-wrap
+                  img.img-circle(src="images/team-2-151x151.jpg" width="129" height="129" alt="")
+                h4 Amanda Smith
+                .text-dusty-gray Accountant
+                .divider-fullwidth.bg-porcelain
+
+                .link-group
+                  span.icon.icon-xxs.icon-primary.material-icons-local_phone
+                  a.link-black(href='callto:#') +1 (409) 987–5874
+                .link-group
+                  span.icon.icon-xxs.icon-primary.fa-envelope-o
+                  a.link-black(href='mailto:#') info@demolink.org
+            .item.text-center
+              .thumbnail-variant-5
+                .thumbnail-variant-5-img-wrap
+                  img.img-circle(src="images/team-3-151x151.jpg" width="129" height="129" alt="")
+                h4 David Nicholson
+                .text-dusty-gray Audit Manager
+                .divider-fullwidth.bg-porcelain
+
+                .link-group
+                  span.icon.icon-xxs.icon-primary.material-icons-local_phone
+                  a.link-black(href='callto:#') +1 (609) 567–8974
+                .link-group
+                  span.icon.icon-xxs.icon-primary.fa-envelope-o
+                  a.link-black(href='mailto:#') info@demolink.org
+            .item.text-center
+              .thumbnail-variant-5
+                .thumbnail-variant-5-img-wrap
+                  img.img-circle(src="images/team-1-151x151.jpg" width="129" height="129" alt="")
+                h4 John Doe
+                .text-dusty-gray Managing Director
+                .divider-fullwidth.bg-porcelain
+
+                .link-group
+                  span.icon.icon-xxs.icon-primary.material-icons-local_phone
+                  a.link-black(href='callto:#') +1 (609) 567–8974
+                .link-group
+                  span.icon.icon-xxs.icon-primary.fa-envelope-o
+                  a.link-black(href='mailto:#') info@demolink.org
+
+      .row.justify-content-sm-center
+        .col-md-10.col-lg-10.col-xl-12
+          .panel.card-lg.bg-accent.bg-default-outline-btn.text-center
+            h3.text-white Request #[span.text-thin a callback]
+            form.rd-mailform.group.group-bottom
+              .group-item.form-wrap
+                input#index-request-name.form-input(type="text" name="name" data-constraints="@Required")
+                label.form-label(for="index-request-name") First Name
+              .group-item.form-wrap
+                input#index-request-phone.form-input(type="text" name="phone" data-constraints="@Numeric @Required")
+                label.form-label(for="index-request-phone") Phone Number
+              .group-item.form-wrap
+                //Select 2
+                select.form-input.select-filter(data-minimum-results-for-search="Infinity", data-constraints="@Required")
+                  option(value="1") I Would Like to Discuss
+                  option(value="2") I Wouldn't Like to Discuss
+              .group-item.group-item-sm
+                button.btn.btn-block.btn-white-outline(type="submit") submit
+
+  //- successful cases
+  section.bg-cape-cod.context-dark
+    .container
+      .row.justify-content-sm-center.justify-content-lg-start
+        .col-sm-10.col-lg-6.text-start.section-60.section-md-90
+          div
+            h3.text-center.text-lg-start
+              | successful
+              =' '
+              span.text-thin cases
+
+            .carousel-testimonials-home
+              .inset-xl-right-50
+                .slick-slider.slick-slider.slick-carousel-round-image.slick-images#child-carousel(data-for=".carousel-parent", data-arrows="false", data-loop="false", data-dots="false", data-swipe="true", data-items="1", data-sm-items='3', data-md-items='3', data-lg-items='3', data-xl-items='4', data-slide-to-scroll="1", data-center-mode="false", data-center-padding='0')
+                  .item
+                    .imp-wrap
+                      +jpg('home-testimonials-1-99x99')
+                  .item
+                    .imp-wrap
+                      +jpg('home-testimonials-2-99x99')
+                  .item
+                    .imp-wrap
+                      +jpg('home-testimonials-3-99x99')
+                  .item
+                    .imp-wrap
+                      +jpg('home-testimonials-4-99x99')
+
+
+              .slick-slider.carousel-parent.slick-dots-variant-1(data-arrows="false", data-loop="false", data-dots="true", data-swipe="true", data-child="#child-carousel", data-for="#child-carousel", data-items="1", data-sm-items='1', data-md-items='1', data-lg-items='1', data-xl-items='1', data-slide-to-scroll="1", data-center-mode='false')
+                .item.inset-left-10.inset-right-10
+                  .inset-xl-right-85
+                    blockquote.quote-left
+                      .row.align-items-sm-end.row-20
+                        .col-sm-6
+                          .quote-name
+                            cite Amelia Lee
+                          .text-dusty-gray Sales, demolink.org
+                        .col-sm-6.text-center
+                          .quote-desc.row.d-flex
+                            .col-sm-6
+                              .quote-desc-text.text-fuel-yellow -20%
+                              .text-medium.text-dusty-gray.text-uppercase Expenses
+                            .col-sm-6
+                              .quote-desc-text.text-primary +17%
+                              .text-medium.text-dusty-gray.text-uppercase Profit
+                      .divider-fullwidth
+                      div.quote-body
+                        q I would not hesitate even one bit to work with them for my future tax and accounting needs.
+
+                    .button-block
+                      a(href="#").btn.btn-primary read more
+
+                .item.inset-left-10.inset-right-10.inset-
+                  .inset-xl-right-85
+                    blockquote.quote-left
+                      .row.row-20
+                        .col-sm-6
+                          .quote-name
+                            cite Mark Wilson
+                          .text-dusty-gray CEO “WilsonCompany”
+                        .col-sm-6.text-center
+                          .quote-desc.row.d-flex
+                            .col-sm-6
+                              .quote-desc-text.text-fuel-yellow -30%
+                              .text-medium.text-dusty-gray.text-uppercase Expenses
+                            .col-sm-6
+                              .quote-desc-text.text-primary +22%
+                              .text-medium.text-dusty-gray.text-uppercase Profit
+                      .divider-fullwidth
+                      div.quote-body
+                        q I’ve never known another auditor more prepared or focused.  You havethe ability to dissect a case much like a skilled surgeon, with absolute calm.  Nothing seems to rattle you or distract from the goal on a case.
+
+                    .button-block
+                      a(href="#").btn.btn-primary read more
+
+                .item.inset-left-10.inset-right-10.inset-
+                  .inset-xl-right-85
+                    blockquote.quote-left
+                      .row.row-20
+                        .col-sm-6
+                          .quote-name
+                            cite Jill Miller
+                          .text-dusty-gray Artist
+                        .col-sm-6.text-center
+                          .quote-desc.row.d-flex
+                            .col-sm-6
+                              .quote-desc-text.text-fuel-yellow -29%
+                              .text-medium.text-dusty-gray.text-uppercase Expenses
+                            .col-sm-6
+                              .quote-desc-text.text-primary +19%
+                              .text-medium.text-dusty-gray.text-uppercase Profit
+                      .divider-fullwidth
+                      div.quote-body
+                        q I am happy that I chose Easy Audit for my US tax returns and would recommend it to everyone.
+                    .button-block
+                      a(href="#").btn.btn-primary read more
+
+                .item.inset-left-10.inset-right-10.inset-
+                  .inset-xl-right-85
+                    blockquote.quote-left
+                      .row.row-20
+                        .col-sm-6
+                          .quote-name
+                            cite Christopher Taylor
+                          .text-dusty-gray Financial Consultant
+                        .col-sm-6.text-center
+                          .quote-desc.row.d-flex
+                            .col-sm-6
+                              .quote-desc-text.text-fuel-yellow -28%
+                              .text-medium.text-dusty-gray.text-uppercase Expenses
+                            .col-sm-6
+                              .quote-desc-text.text-primary +21%
+                              .text-medium.text-dusty-gray.text-uppercase Profit
+                      .divider-fullwidth
+                      div.quote-body
+                        q Over the last 6 years I have found their services to be reliable and their advice to be practical and clear.
+                    .button-block
+                      a(href="#").btn.btn-primary read more
+
+        .col-lg-6.section-image-aside.section-image-aside-right
+          .section-image-aside-img.d-none.d-lg-block(style='background-image: url(images/home-4-946x689.jpg)')
+
+  ='\n'
+
+  //- Latest News
+  section.section-50.section-md-90.section-md-bottom-100
+    .container.text-center
+      h3 Latest #[span.text-thin News]
+
+      .row.justify-content-sm-center.row-40
+        .col-sm-8.col-md-7.col-lg-4
+          //- Post Boxed
+          .post-boxed.d-xl-inline-block
+            .post-boxed-img-wrap
+              a(href="blog-post.html")
+                +jpg("home-1-322x219")
+            .post-boxed-caption
+              .post-boxed-title.fw-bold
+                a(href="blog-post.html") Presentations that Impress Your Audit Committee
+                
+              //- List Inline
+              ul.list-inline.list-inline-dashed.text-uppercase
+                li JUNE 14, 2021
+                li
+                  span by #[a.link-primary(href="#") Sam Kromstain]
+
+        .col-sm-8.col-md-7.col-lg-4
+          //- Post Boxed
+          .post-boxed.d-xl-inline-block
+            .post-boxed-img-wrap
+              a(href="blog-post.html")
+                +jpg("home-2-322x219")
+            .post-boxed-caption
+              .post-boxed-title.fw-bold
+                a(href="blog-post.html") Top 3 Concerns When Choosing a Cloud Vendor
+                
+              //- List Inline
+              ul.list-inline.list-inline-dashed.text-uppercase
+                li JUNE 20, 2021
+                li
+                  span by #[a.link-primary(href="#") Vanessa Ives]
+
+        .col-sm-8.col-md-7.col-lg-4
+          //- Post Boxed
+          .post-boxed.d-xl-inline-block
+            .post-boxed-img-wrap
+              a(href="blog-post.html")
+                +jpg("home-3-322x219")
+            .post-boxed-caption
+              .post-boxed-title.fw-bold
+                a(href="blog-post.html") Audit Data Analytics: Why Auditors Should Care
+
+           
+              //- List Inline
+              ul.list-inline.list-inline-dashed.text-uppercase
+                li JUNE 23, 2021
+                li
+                  span by #[a.link-primary(href="#") Amanda Smith]
+
+  ='\n'
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

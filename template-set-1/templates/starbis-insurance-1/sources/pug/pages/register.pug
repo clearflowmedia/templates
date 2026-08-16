@@ -1,0 +1,56 @@
+extends  ../_skeleton
+
+block variables
+	- var pageName = 'Login'
+	- var bodyClass = ['one-screen-page', 'bg-gray-darker', 'bg-image'];
+	- var bodyImage = 'bg-login'
+
+block title
+	title=pageName
+
+block page
+	.page-inner(style='background-image: url(images/bg-register.jpg);')
+		//- Page Header
+		include ../sections/_section-header-base-transparent
+
+
+		section
+			.container
+				.row.justify-content-md-center
+					//- Page Content
+			.section-single-main
+				.container
+					.row.justify-content-md-center
+						.col-md-7.col-lg-5.col-xl-4
+							//- Block shadow
+							.block-shadow.text-center
+								.block-inner
+									p.h7 Create your account
+									.icon-block
+										span.icon.icon-xl.icon-black.material-icons-face
+								//- RD Mailform
+								form.rd-mailform.form-modern.form-darker.form-login
+									.block-inner
+										.form-wrap
+											input#register-form-name.form-input(type="text" name="name" data-constraints="@Required")
+											label.form-label(for="register-form-name") Username
+										.form-wrap
+											input#feedback-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+											label.form-label(for="feedback-email") Email
+										.form-wrap
+											input#register-form-password.form-input(type="password" name="pass" data-constraints="@Required")
+											label.form-label(for="register-form-password") Password
+										.form-wrap
+											input#register-form-password-confirm.form-input(type="password" name="pass-confirm" data-constraints="@Required")
+											label.form-label(for="register-form-password-confirm") Repeat a password
+										.info-text.text-start.text-secondary
+											label.checkbox-inline.checkbox-small.position-relative.text-gray
+												input(name='input-checkbox', value='checkbox-1', type='checkbox')
+												| I agree with the&nbsp;
+												a.link-primary-inline(href='privacy-policy.html') Terms of use
+												| .
+									button(type="submit").btn.btn-primary.btn-round-bottom.btn-block Sign up
+
+
+		//- Page Footer
+		include ../sections/_section-footer-base-transparent

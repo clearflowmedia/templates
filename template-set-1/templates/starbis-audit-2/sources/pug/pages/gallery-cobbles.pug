@@ -1,0 +1,91 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-thumbnail-3
+
+block variables
+	- var activeIndex = 4
+	- var pageName = 'Gallery Cobbles'
+
+block title
+	title=pageName
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title('Gallery', 'bg-image-1')
+
+	section.section-50.section-md-100
+		.container.isotope-wrap
+			.row.text-center.row-40
+				.col-sm-12
+					//- Isotope Filters
+					ul.isotope-filters-responsive
+						li: p Choose your category:
+						li.block-top-level
+							//- Isotope Filters
+							button.isotope-filters-toggle.btn.btn-sm.btn-default(data-custom-toggle='#isotope-1', data-custom-toggle-hide-on-blur='true')
+								| Filter
+								span.caret
+
+							#isotope-1.isotope-filters.isotope-filters-minimal.isotope-filters-horizontal
+								ul.list-inline
+									li
+										a.active(data-isotope-filter='*', data-isotope-group='gallery', href='#') All
+									li
+										a(data-isotope-filter='Category 1', data-isotope-group='gallery', href='#') Internal Audit
+									li
+										a(data-isotope-filter='Category 2', data-isotope-group='gallery', href='#') Capital Markets
+									li
+										a(data-isotope-filter='Category 3', data-isotope-group='gallery', href='#') Corporate Reporting
+									li
+										a(data-isotope-filter='Category 4', data-isotope-group='gallery', href='#') Risk Assurance
+
+				//- Isotope Content
+				.col-sm-12
+					.isotope(data-isotope-layout='masonry', data-isotope-group='gallery', data-lightgallery='group')
+						.row.g-0
+							.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+								+thumbnail-3({img: 'gallery-cobbles-1-390x601', original: 'gallery-2-600x772_original'})
+
+							.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 2')
+								+thumbnail-3({
+									img: 'gallery-cobbles-2-390x301',
+									original: 'gallery-4-1170x780_original'
+								})
+
+							.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 1')
+								+thumbnail-3({
+									img: 'gallery-cobbles-3-390x301',
+									original: 'gallery-3-1170x780_original'
+								})
+
+							.col-12.col-md-6.col-lg-8.isotope-item(data-filter='Category 4')
+								+thumbnail-3({
+									img: 'gallery-cobbles-4-780x300',
+									original: 'gallery-5-1170x841_original'
+								})
+
+							.col-12.col-md-6.col-lg-8.isotope-item(data-filter='Category 3')
+								+thumbnail-3({
+									img: 'gallery-cobbles-5-780x600',
+									original: 'gallery-1-1170x781_original'
+								})
+
+							.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 3')
+								+thumbnail-3({
+									img: 'gallery-cobbles-6-390x300',
+									original: 'gallery-9-1170x780_original'
+								})
+
+							.col-12.col-md-6.col-lg-4.isotope-item(data-filter='Category 4')
+								+thumbnail-3({
+									img: 'gallery-cobbles-7-390x300',
+									original: 'gallery-6-1170x780_original'
+								})
+	='\n'
+
+	//- Page Footer
+	include ../sections/_section-footer-default

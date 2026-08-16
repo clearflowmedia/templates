@@ -1,0 +1,8 @@
+mixin post-creative( obj )
+	.post-creative&attributes( attributes )
+		figure.post-creative-figure
+			a( href= obj.link )
+				+img( obj.img )
+		.post-creative-time
+			time( datetime='2021' ) 05 July, 10:00 am
+		h3.post-creative-title: a( href= obj.link )= obj.title

@@ -1,0 +1,94 @@
+//- Includes
+include ../elements/_post-preview
+
+//- Pre-footer Widget
+section.section.page-prefoot.bg-cod-gray.nov-background
+	.section-40.section-md-75
+		.container
+			.row.justify-content-sm-center
+				.col-sm-9.col-md-11.col-xl-12
+					.row.row-50
+						.col-md-6.col-lg-10.col-xl-3
+							.inset-xl-right-20(style='max-width: 510px;')
+								//- Brand
+								a.brand(href='index.html')
+									+logo(true)
+								p Zemez is an A-size depot of website templates - more than 46,000 designs to choose from. Since coming up in May 2002, we've gone 25 partners.
+								a.link.link-group.link-group-animated.link-bold.link-white( href= links.getTemplate, target='_blank' )
+									span Get Starbis Now
+									span.novi-icon.icon.icon-xxs.icon-primary.fa.fa-angle-right
+
+						.col-md-6.col-lg-4.col-xl-3
+							h6.page-prefoot-header Recent Posts
+							.post-preview-wrap.post-preview-wrap-md
+								+post-preview({
+									img: 'post-preview-1-70x70',
+									header: 'The Ultimate Technique to Pitch Anything',
+									time: ['2024-01-04', 'Jan 4, 2024']
+								})
+
+								+post-preview({
+									img: 'post-preview-2-70x70',
+									header: 'Four Types of Verbal Communication',
+									time: ['2024-01-04', 'Jan 4, 2024']
+								})
+
+						.col-md-6.col-lg-4.col-xl-3
+							h6.page-prefoot-header Quick links
+							.row(style='max-width: 270px;')
+								.col-6
+									ul.list-marked-variant-2
+										li: a(href='index.html') Home
+										li: a(href='services.html') Services
+										li: a(href='careers.html') Careers
+										li: a(href='classic-blog.html') Blog
+
+								.col-6
+									ul.list-marked-variant-2
+										li: a(href='about-us.html') About us
+										li: a(href='contact-us.html') Contacts
+										li: a(href='appointment.html') Appointment
+
+						.col-md-6.col-lg-4.col-xl-3
+							h6.page-prefoot-header Contact us
+							address.contact-info.text-start
+								ul.list-sm
+									li: .unit.unit-spacing-md.align-items-center
+										.unit-left: span.novi-icon.icon.icon-xs.icon-primary.material-icons-phone
+										.unit-body
+											a.link-white(href='tel:#') +1 800 123 45 67
+									li: .unit.unit-spacing-md.align-items-center
+										.unit-left: span.novi-icon.icon.icon-xs.icon-primary.fa.fa-envelope-o
+										.unit-body
+											a.link-white(href='mailto:#') info@demolink.org
+									li: .unit.unit-spacing-md
+										.unit-left: span.novi-icon.icon.icon-xs.icon-primary.material-icons-place
+										.unit-body
+											a.link-white.d-inline(href='#')
+												| 9784 Bear Hill Drive
+												br
+												| Brooklyn, NY 11228
+
+	//- Divider default
+	.container
+		hr
+
+//- Footer Widget
+footer.section.page-foot.section-35.bg-cod-gray.novi-background
+	.container.text-center
+		.row.row-15.flex-row-md-reverse.justify-content-md-between.align-items-md-center
+			.col-md-6.text-md-end
+				.group-sm.group-middle
+					p.fst-italic.text-white Follow Us:
+					ul.list-inline.list-inline-reset
+						li: a.novi-icon.icon.icon-circle.icon-gray-dark-filled.icon-xxs-smallest.fa.fa-facebook(href='#')
+						li: a.novi-icon.icon.icon-circle.icon-gray-dark-filled.icon-xxs-smallest.fa.fa-twitter(href='#')
+						li: a.novi-icon.icon.icon-circle.icon-gray-dark-filled.icon-xxs-smallest.fa.fa-google-plus(href='#')
+
+			.col-md-6.text-md-start
+				p.rights
+					span.copyright-year
+					span &nbsp;&#169;&nbsp;
+					span= logo.name
+					span .&nbsp;
+					a.link-light-2(href='privacy-policy.html') Privacy Policy

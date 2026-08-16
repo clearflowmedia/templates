@@ -1,0 +1,11 @@
+//- Icon box left
+mixin icon-box-left(obj)
+  //- Icon box horizontal left
+  article.icon-box-horizontal
+    .unit.unit-horizontal.unit-spacing-md
+      .unit-left
+        span.novi-icon.icon.icon-primary(class=obj.icon)
+      .unit-body
+        h5: a(href='#')=obj.header
+        p=obj.text
+  ='\n'

@@ -1,0 +1,61 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-link-image
+
+block variables
+  - var activeIndex = 5
+  - var pageName = 'Clients'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+
+  +page-title(pageName, 'bg-image-1')
+
+  //- Our Partners
+  section.section-66.section-md-top-90.section-md-bottom-75
+    .container
+      .row.row-40.row-md-60
+        .col-sm-12
+          h3.text-spacing--25 Our Partners
+          p(style='max-width: 590px;').
+            We rely on a hybrid distribution model to ensure that we have the right expertise engaged in each part of your policy transaction. Using appointed independent retail agents and program managers on a select basis, we ensure local expertise is used to produce reliable insurance.
+        .col-12  
+          .row
+            .col-sm-6.col-md-4.col-lg-3.col-xl-2
+              +link-image({img: 'clients-1-126x68'})
+            .col-sm-6.col-md-4.col-lg-3.col-xl-2
+              +link-image({img: 'clients-2-126x100'})
+            .col-sm-6.col-md-4.col-lg-3.col-xl-2
+              +link-image({img: 'clients-3-132x83'})
+            .col-sm-6.col-md-4.col-lg-3.col-xl-2
+              +link-image({img: 'clients-4-169x68'})
+            .col-sm-6.col-md-4.col-lg-3.col-xl-2
+              +link-image({img: 'clients-5-141x88'})
+            .col-sm-6.col-md-4.col-lg-3.col-xl-2
+              +link-image({img: 'clients-6-138x55'})
+            .col-sm-6.col-md-4.col-lg-3.col-xl-2
+              +link-image({img: 'clients-7-104x84'})
+            .col-sm-6.col-md-4.col-lg-3.col-xl-2
+              +link-image({img: 'clients-8-144x68'})
+            .col-sm-6.col-md-4.col-lg-3.col-xl-2
+              +link-image({img: 'clients-9-105x94'})
+            .col-sm-6.col-md-4.col-lg-3.col-xl-2
+              +link-image({img: 'clients-10-95x101'})
+            .col-sm-6.col-md-4.col-lg-3.col-xl-2
+              +link-image({img: 'clients-11-126x68'})
+            .col-sm-6.col-md-4.col-lg-3.col-xl-2
+              +link-image({img: 'clients-12-132x83'})
+
+  ='\n'
+
+  include ../sections/_section-testimonials-vertical-dark
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

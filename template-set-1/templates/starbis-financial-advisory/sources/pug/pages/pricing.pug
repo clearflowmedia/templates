@@ -1,0 +1,88 @@
+extends  ../_skeleton
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Pricing'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title(pageName, 'bg-image-12')
+
+  //- Choose your plan
+  section.section-60.section-md-90.section-xl-bottom-15.bg-whisper
+    .container
+      .row.row-40
+        .col-md-6.col-lg-9
+          .row.row-30
+            .col-lg-6 
+              h3 Choose Your Plan
+
+            .col-lg-6
+              p Pick the best plan that meets your needs. A free trial is available to help you with the decision-making.
+
+        .col-md-5.col-lg-4.col-xl-3
+          a.btn.btn-primary.btn-block(href='#') Download free trial
+
+  ='\n'
+
+  //- Pricing tables
+  section.bg-decoration-wrap.bg-decoration-bottom.section-bottom-60.section-xl-top-100.section-xl-bottom-100.bg-whisper
+    .container.bg-decoration-content
+      .row.justify-content-md-center
+        .col-lg-10.col-xl-12
+          include ../_includes/_pricing-tables-range
+    .bg-decoration-object.bg-athens-gray
+  ='\n'
+
+  //- Questions & Answers
+  section.section-60.section-md-90
+    .container
+      .row.justify-content-lg-center.row-40
+        .col-sm-12
+          h3 Questions & Answers
+        .col-lg-11.col-xl-10
+          .row.row-40
+            .col-md-6
+              dl.list-terms-variant-1
+                dt What is a taxable sale?
+                dd.text-gray-base-05 A taxable sale includes any transaction in which title or possession of tangible personal property or the benefit of certain services is, or will be, transferred or provided for a price. All retail sales are subject to the tax unless they are specifically excepted or exempted in sales tax law.
+
+                dt Is the charge for Internet service taxable?
+                dd.text-gray-base-05 The charges for Internet service (on-line access to information stored in a computer) for use in business are subject to Ohio sales or use tax. The charges for Internet service for individuals are not subject to Ohio sales or use tax.
+
+                dt Are delivery costs taxable?
+                dd.text-gray-base-05 Yes. Effective Aug. 1, 2003 delivery charges by a vendor for preparation and delivery to a location designated by the consumer of tangible personal property or a service, including transportation, shipping, postage, handling, crating, and packing are taxable.
+
+            .col-md-6
+              dl.list-terms-variant-1
+                dt What is sales tax?
+                dd.text-gray-base-05 Sales tax is a "trust" tax that is to be collected by all retailers and certain service providers when they make taxable retail sales. It is called a "trust" tax because the consumer has entrusted this tax to retailers and certain service providers with the understanding that it will be reported.
+
+                dt Do businesses need to be concerned with use tax?
+                dd.text-gray-base-05 A business is no different than any other Ohio consumer when it comes to possible use tax liability. For example, if a business buys a taxable item from out-of-state, such as office equipment or supplies, the business owes use tax. The tax must be paid to the seller.
+
+                dt Can I get a refund if I overpay my tax?
+                dd.text-gray-base-05 Anyone who overpays sales or use tax may be entitled to a refund by applying to the Tax Commissioner. In no case may applications be filed later than four years from the date of the payment. All refund claims must be filed using the proper form (ST-AR).
+  ='\n'
+
+  //- Not Sure Which Plan is Right For You?
+  section.section-60.section-md-90.bg-primary.bg-image
+    .container
+      .row.justify-content-lg-center.row-30
+        .col-lg-8.col-xl-7
+          h3.h3-variant-2 Not Sure Which Plan is Right For You?
+          p.text-white(style='max-width: 420px;').
+            If you are in doubt of which plan to opt for, subscribe to our newsletter and we will try to help you make the right decision.
+        .col-lg-4.col-xl-3
+          a.btn.btn-lg.btn-lg-bigger.btn-white-outline(href='contact-us.html') Send us a letter
+  ='\n'
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

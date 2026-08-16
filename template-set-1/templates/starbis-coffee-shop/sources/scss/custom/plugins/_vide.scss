@@ -1,0 +1,41 @@
+/** @section Vide */
+.vide {
+	width: 100%;
+	min-height: 250px ;
+	background-size: cover;
+	background-position: center;
+
+	> * {
+		position: relative;
+		z-index: 1;
+	}
+
+	video {
+		will-change: transform;
+		pointer-events: none;
+	}
+}
+
+.vide-inner {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: Arial;
+	text-align: center;
+	color: white;
+}
+@include media-breakpoint-up(md) {
+	.vide {
+		min-height: 400px;
+	}
+}
+@include media-breakpoint-up(xl) {
+	.vide {
+		min-height: 580px;
+	}
+}

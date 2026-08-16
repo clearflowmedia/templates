@@ -1,0 +1,87 @@
+extends  ../_skeleton
+
+block variables
+	- var activeIndex = 10
+	- var pageName = 'Contacts'
+
+block title
+	title=pageName
+
+block page
+	//-Page Header
+	include ../sections/_section-header-default
+
+
+	+page-title(pageName, 'bg-image-4')
+
+	//- Get in Touch
+	section.section-60.section-md-top-90.section-md-bottom-100
+		.container
+			.row.row-50.justify-content-lg-between
+				.col-lg-5.col-xl-4
+					.inset-lg-right-15.inset-xl-right-0
+						.row.row-30.row-md-40
+							.col-md-10.col-lg-12
+								h3 How to Find Us
+								p If you have any questions, just fill in the contact form, and we will answer you shortly. If you are living nearby, come visit us at one of our comfortable offices.
+
+							.col-md-6.col-lg-12
+								h5 Headquarters
+								address.contact-info
+									p.text-uppercase 9863 - 9867 MILL ROAD, CAMBRIDGE, MG09 99HT.
+									dl.list-terms-inline
+										dt Telephone
+										dd: a.link-secondary(href='callto:#') +1 800 603 6035
+
+									dl.list-terms-inline
+										dt E-mail
+										dd: a.link-primary(href='mailto:#') mail@demolink.org
+
+							.col-md-6.col-lg-12
+								h5 Support Centre
+								address.contact-info
+									p.text-uppercase 9870 ST VINCENT PLACE, GLASGOW, DC 45 FR 45
+									dl.list-terms-inline
+										dt Telephone
+										dd: a.link-secondary(href='callto:#') +1 800 603 6035
+
+									dl.list-terms-inline
+										dt E-mail
+										dd: a.link-primary(href='mailto:#') mail@demolink.org
+
+				.col-lg-7.col-xl-6
+					h3 Get in Touch
+					//- RD Mailform
+					form.rd-mailform.form-modern(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+						.row.row-30
+							.col-md-6
+								.form-wrap
+									input#contact-name.form-input(type="text" name="name" data-constraints="@Required")
+									label.form-label(for="contact-name") Name
+							.col-md-6
+								.form-wrap
+									input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+									label.form-label(for="contact-email") Email
+
+							.col-sm-12
+								.form-wrap
+									.textarea-lined-wrap
+										textarea#contact-message.form-input(name="message" data-constraints="@Required")
+										label.form-label(for="contact-message") Message
+
+						.row.row-30.row-offset-5
+							.col-sm-8: button(type="submit").btn.btn-primary.btn-block Send
+							.col-sm-4: button(type="reset").btn.btn-silver-outline.btn-block Reset
+	='\n'
+
+	//- Google map
+	section
+		.google-map-container(data-zoom='5', data-center='2130 Fulton Street San Francisco, 94117-1080 USA', data-styles='[{"featureType":"administrative.locality","elementType":"all","stylers":[{"hue":"#2c2e33"},{"saturation":7},{"lightness":19},{"visibility":"on"}]},{"featureType":"landscape","elementType":"all","stylers":[{"hue":"#ffffff"},{"saturation":-100},{"lightness":100},{"visibility":"simplified"}]},{"featureType":"poi","elementType":"all","stylers":[{"hue":"#ffffff"},{"saturation":-100},{"lightness":100},{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"hue":"#bbc0c4"},{"saturation":-93},{"lightness":31},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"hue":"#bbc0c4"},{"saturation":-93},{"lightness":31},{"visibility":"on"}]},{"featureType":"road.arterial","elementType":"labels","stylers":[{"hue":"#bbc0c4"},{"saturation":-93},{"lightness":-2},{"visibility":"simplified"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"hue":"#e9ebed"},{"saturation":-90},{"lightness":-8},{"visibility":"simplified"}]},{"featureType":"transit","elementType":"all","stylers":[{"hue":"#e9ebed"},{"saturation":10},{"lightness":69},{"visibility":"on"}]},{"featureType":"water","elementType":"all","stylers":[{"hue":"#e9ebed"},{"saturation":-78},{"lightness":67},{"visibility":"simplified"}]}]')
+			.google-map
+			ul.google-map-markers
+				li( data-location='2130 Fulton Street San Francisco, 94117-1080 USA', data-description='2130 Fulton Street San Francisco, 94117-1080 USA', data-icon='images/gmap_marker.png', data-icon-active='images/gmap_marker_active.png' )
+
+
+
+	//-Page Footer
+	include ../sections/_section-footer-default

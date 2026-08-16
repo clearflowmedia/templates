@@ -1,0 +1,43 @@
+//- Post modern
+mixin post-modern(obj)
+  //- Post modern
+  article.post-modern
+    .post-header
+      h5: a(href='blog-post.html')=obj.header
+    .post-body
+      each element in obj.content
+        case element.type
+          when "video"
+            .ratio.ratio-16x9
+              !=element.data
+
+          when "image"
+            figure
+              +jpg(element.data)
+
+          when "audio"
+            .post-inset
+              .soundcloud-player-classic
+                !=element.data
+
+          when "text"
+            .post-inset
+              each line in element.data
+                p=line
+
+
+    .post-footer
+      .post-meta
+        ul.post-list
+          li.object-inline
+            span.icon.icon-xxs.icon-black.material-icons-query_builder
+            time(datetime=obj.time[0])=obj.time[1]
+
+          li.object-inline
+            span.icon.icon-xxs.icon-black.material-icons-loyalty
+            ul.list-tags-inline
+              each tag in obj.tags
+                li: a(href='#')=tag
+
+      .post-type
+        span.icon.icon-xxs.icon-black(class=obj.type)

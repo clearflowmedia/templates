@@ -1,0 +1,13 @@
+//- Icon box
+mixin icon-box(obj)
+  //- Icon box
+  article.icon-box(class=obj.mod)
+    .box-top
+      .box-icon
+        span.icon.icon-san-juan(class=obj.icon)
+      .box-header
+        h5: a(href='#')=obj.header
+    .icon-box-divider
+    .box-body 
+      p=obj.text
+

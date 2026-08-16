@@ -1,0 +1,84 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-post-modern
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Masonry blog'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  +page-title('Blog', 'bg-blog')
+
+  //- Blog masonry
+  section.section-50.section-md-75.section-xl-100.bg-whisper
+    .container
+      .row.justify-content-md-center.justify-content-lg-start.row-30
+        .col-md-9.col-lg-6
+          +post-modern({
+            type: 'material-icons-videocam',
+            header: 'Smart Travel',
+            content: [
+              {type: 'image', data: 'blog-masonry-3-570x321'},
+              {type: 'text', data: ['Whether you’re planning a trip to the beach in Florida this summer, or headed all the way across the country, you want your vacation to be relaxing. It’s a getaway from work, not to mention your day-to-day life. So we’ve got some tips – from...']}
+            ],
+            time: ['2021-01-01', '2 days ago'],
+            tags: ['Travel', 'Planning']
+          })
+
+          +post-modern({
+            type: 'material-icons-local_see',
+            header: 'Insurance After the Wedding',
+            content: [
+                {type: 'image', data: 'blog-masonry-1-570x321'}
+            ],
+            time: ['2021-01-01', '7 days ago'],
+            tags: ['Insurance', 'Wedding']
+          })
+
+        .col-md-9.col-lg-6
+          +post-modern({
+            type: 'material-icons-library_books',
+            header: 'About Motorcycle Insurance',
+            content: [
+              {type: 'text', data: ['If you own a motorcycle then you need to have motorcycle insurance.  Though they offer similar types of coverage, it differs from auto insurance as auto insurance helps to protect cars and motorcycle insurance helps protect motorcycles.  They are not interchangeable. What is motorcycle insurance? Motorcycle insurance is...']}
+            ],
+            time: ['2021-01-01', '3 days ago'],
+            tags: ['Motorcycle', 'Auto']
+          })
+
+          +post-modern({
+            type: 'material-icons-audiotrack',
+            header: 'Adding New Watercraft Coverage Enhancements',
+            content: [
+              {type: 'audio', data: globals.soundcloud}
+            ],
+            time: ['2021-01-01', '4 days ago'],
+            tags: ['Coverage', 'Boat']
+          })
+
+          +post-modern({
+            type: 'material-icons-videocam',
+            header: 'Back to School Insurance Needs',
+            content: [
+              {type: 'image', data: 'blog-masonry-2-570x321'},
+              {type: 'text', data: ['Going back to school is an exciting time for students, parents, and business owners.  When this time of year approaches, it is a good idea to reevaluate your commercial lines policies and make sure you have adequate coverage. for your business...']}
+            ],
+            time: ['2021-01-01', '2 days ago'],
+            tags: ['Design']
+          })
+
+
+      .row.text-center
+        .col-sm-12
+          +pagination
+  ='\n'
+
+  //- Page Footer
+  include ../sections/_section-footer-default

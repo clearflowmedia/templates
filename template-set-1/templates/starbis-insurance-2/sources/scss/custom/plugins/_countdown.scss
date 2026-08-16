@@ -1,0 +1,112 @@
+/** @section Countdown */
+.countdown-box {
+	max-width: 700px;
+}
+
+.countdown {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: -5px;
+	margin-right: -5px;
+	line-height: 1.2;
+	text-align: center;
+}
+
+.countdown-block {
+	position: relative;
+	flex: 0 1 auto;
+	padding: 0 5px;
+}
+
+.countdown-block-seconds {
+	display: none;
+	@include media-breakpoint-up(sm) {
+		display: block;
+	}
+}
+
+.countdown-wrap {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.countdown-circle {
+	fill: transparent;
+	width: 100%;
+	height: auto;
+}
+
+.countdown-circle-bg {
+	stroke: $gray-100;
+	stroke-width: 5px;
+}
+
+.countdown-circle-fg {
+	stroke: $primary;
+	stroke-width: 5px;
+}
+
+.countdown-secondary .countdown-circle-fg {
+	stroke: $secondary;
+}
+
+
+.countdown-counter {
+	font: 900 24px "Roboto", Helvetica, Arial, sans-serif;
+	line-height: 1;
+	letter-spacing: 0;
+	font-style: normal;
+	color: $black;
+	@include media-breakpoint-up(md) {
+		font-size: 36px;
+	}
+	@include media-breakpoint-up(xl) {
+		font-size: 45px;
+	}
+}
+
+.countdown-title {
+	position: relative;
+	margin-top: 2px;
+	color: rgba($black,.4);
+	letter-spacing: -.025em;
+	text-transform: capitalize;
+	font-family: $font-family-base;
+	font-weight: 700;
+	font-size: 12px;
+	@include media-breakpoint-up(sm) {
+		font-size: 14px;
+		margin-top: 10px;
+	}
+}
+
+* + .countdown-box {
+	margin-top: 35px;
+}
+
+.countdown-box + * {
+	margin-top: 35px;
+}
+
+
+.bg-gray-darker {
+	.countdown-title {
+		color: rgba(255, 255, 255, 0.5);
+	}
+	.countdown-circle-bg {
+		stroke: rgba($gray-300, .3);
+	}
+}
+.context-dark {
+	.countdown-counter,
+	.countdown-title {
+		color: rgba(255, 255, 255, .8);
+	}
+}

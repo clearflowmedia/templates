@@ -1,0 +1,22 @@
+// RD Mailform
+form.rd-mailform.text-start(data-form-output="form-output-global", data-form-type='forms', method='post', action='bat/rd-mailform.php')
+  .row.row-30.justify-content-sm-center
+    .col-md-6
+      .form-wrap
+        label.form-label(for="forms-name") Your Name
+        input#forms-name.form-input(type="text" name="name" data-constraints='@Required')
+    .col-md-6
+      .form-wrap
+        label.form-label(for="forms-phone") Phone
+        input#forms-phone.form-input(type="text" name="phone" data-constraints="@Numeric @Required")
+    .col-12
+      .form-wrap
+        label.form-label(for="forms-message") Your Message
+        textarea#forms-message.form-input(name="message" data-constraints="@Required")
+    .col-md-6
+      .form-wrap
+        label.form-label(for="forms-email") E-mail
+        input#forms-email.form-input(type="text" name="email" data-constraints="@Email @Required")
+    .col-md-6
+      .form-btn
+        button(type="submit").btn.btn-block.btn-primary send message

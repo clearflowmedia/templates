@@ -1,0 +1,116 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-quote-default
+include ../elements/_ui-accordion
+
+block variables
+	- var activeIndex = 5
+	- var pageName = 'FAQ'
+
+block title
+	title=pageName
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+
+	+page-title(pageName, 'bg-image-8')
+
+	//- FAQ
+	section.section-60.section-md-90.section-xl-bottom-120.bg-gray-lighter
+		.container
+			.row.justify-content-md-center
+				.col-md-10.col-lg-12
+					.row.row-50
+						.col-lg-6
+							h3 General Questions
+							p On this page we have collected the most popular questions.
+							//- Bootstrap collapse
+							#accordionOne.accordion.accordion-group.accordion-group-corporate
+								+accordion-item({
+									show: true,
+									panelClass: 'card-corporate',
+									parentId: 'accordionOne',
+									number: '1',
+									header: 'What will happen when my policy is due for renewal?',
+									text: "At renewal, we will transfer your policy over to our sister company Insurance Services, which means that form your renewal date you will be insured through Insurance Services. We will write to you prior to your renewal with details of your cover and your premium for the coming year."
+								}).accordion-corporate
+
+								+accordion-item({
+									panelClass: 'card-corporate',
+									parentId: 'accordionOne',
+									number: '2',
+									header: 'Will I see any change in the level of service you provide?',
+									text: "Absolutely not, we will continue to provide the high level of service you expect from us, by operating under the one brand it will allow us to continue to deliver competitive premiums and great service."
+								}).accordion-corporate
+
+								+accordion-item({
+									panelClass: 'card-corporate',
+									parentId: 'accordionOne',
+									number: '3',
+									header: 'Will this affect my no-claims bonus?',
+									text: "We will transfer your no claims bonus along with the rest of your policy details to Insurance Services before we send your renewal invitation."
+								}).accordion-corporate
+
+								+accordion-item({
+									panelClass: 'card-corporate',
+									parentId: 'accordionOne',
+									number: '4',
+									header: 'Who are Insurance Services?',
+									text: "We launched in 1995 to provide insurance to customers of the renowned garages. We now have 20 years of experience in the insurance industry and have recently been awarded a 5 star defaqto rating for our comprehensive car insurance cover, full UK recovery breakdown cover and our platinum pet insurance cover."
+								}).accordion-corporate
+
+						.col-lg-6
+							h3 Other Questions
+							p The answers on most common questions are described bellow.
+							//- Bootstrap collapse
+							#accordionTwo.accordion.accordion-group.accordion-group-corporate
+								+accordion-item({
+									show: true,
+									parentId: 'accordionTwo',
+									header: 'What if I am in the process of making a claim?',
+									text: "Absolutely not, we will continue to provide the high level of service you expect from us, by operating under the one brand it will allow us to continue to deliver competitive premiums and great service."
+								}).accordion-corporate
+
+								+accordion-item({
+									parentId: 'accordionTwo',
+									header: 'What about your Agency Credentials?',
+									text: "We are very proud of our Agency Credentials and over the period 2007 to 2012, we offset car CO2 emissions, and are proud to have planted 2.5 million trees.  To mark the end of The Insurance Agency, we have donated £30,000 to Eco Schools – a programme launched in 1992 to provide children with a fun and engaging way to learn about protecting our environment."
+								}).accordion-corporate
+
+								+accordion-item({
+									parentId: 'accordionTwo',
+									header: 'Will my payments change?',
+									text: "No - Your payments will stay the same unless you make a change to your policy."
+								}).accordion-corporate
+
+								+accordion-item({
+									parentId: 'accordionTwo',
+									header: 'Will terms and conditions change my current policy?',
+									text: "No - Your current policy will continue to run as normal and all terms, conditions and policy details will stay exactly the same, unless you make a change to your policy."
+								}).accordion-corporate
+
+								+accordion-item({
+									parentId: 'accordionTwo',
+									header: 'Do you offer Life insurance?',
+									text: "No. We are a non life insurer."
+								}).accordion-corporate
+
+								+accordion-item({
+									parentId: 'accordionTwo',
+									header: 'Do you offer home insurance or other personal products?',
+									text: "Yes. We offer excellent cost effective covers for motor, home and personal accident insurance programs."
+								}).accordion-corporate
+
+								+accordion-item({
+									parentId: 'accordionTwo',
+									header: 'Will you increase number of your branches and offices?',
+									text: "Yes. Indeed, we will expand our branch net work in years to come."
+								}).accordion-corporate
+	='\n'
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

@@ -1,0 +1,66 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-link-image
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Clients'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title(pageName, 'bg-image-7')
+
+  //- Our Partners
+  section.section-66.section-md-top-90.section-md-bottom-75
+    .container
+      .row.row-30
+        .col-sm-12
+          h3 Our Partners
+          
+          p(style='max-width: 590px;').
+              We work with companies that have established a stainless reputation in what they do. There are leaders in various spheres of business, and we appreciate cooperating with them.
+
+        .col-sm-12
+          //- Slick Carousel
+          .slick-slider(data-arrows="false",
+          data-loop="true", data-dots="true", data-swipe="true",
+          data-items="1",  data-sm-items="2",
+          data-md-items="3", data-lg-items="5", data-xl-items='6' data-slide-to-scroll="1")
+            .item
+              +link-image({img: 'clients-1-126x68'})
+              +link-image({img: 'clients-7-104x84'})
+
+            .item
+              +link-image({img: 'clients-2-126x100'})
+              +link-image({img: 'clients-8-144x68'})
+
+            .item
+              +link-image({img: 'clients-3-132x83'})
+              +link-image({img: 'clients-9-105x94'})
+
+            .item
+              +link-image({img: 'clients-4-169x68'})
+              +link-image({img: 'clients-10-95x101'})
+
+            .item
+              +link-image({img: 'clients-5-141x88'})
+              +link-image({img: 'clients-11-126x68'})
+
+            .item
+              +link-image({img: 'clients-6-138x55'})
+              +link-image({img: 'clients-12-132x83'})
+
+  ='\n'
+
+  include ../sections/_section-testimonials-vertical-dark
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

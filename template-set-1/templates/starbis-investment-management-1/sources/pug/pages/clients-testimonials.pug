@@ -1,0 +1,57 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-quote-bordered
+
+
+block variables
+  - var activeIndex = 2
+  - var pageName = 'Clients testimonials'
+
+block title
+  title=pageName
+
+block page
+  //-Page Header
+  include ../sections/_section-header-default
+
+
+  +page-title('Clients', 'bg-image-8')
+
+  //-Team
+  +parallax({
+    img: 'bg-image-6',
+    addClass: 'bg-black'
+  })
+    .container.section-66.section-md-90.section-xl-bottom-120.context-dark
+      h3.text-center Testimonials
+      .row.row-40
+        .col-md-6
+          .inset-xl-left-60.inset-xl-right-40
+            +quote-bordered({
+              img: 'clients-testimonials-1-68x68',
+              header: 'Highly Professional Team',
+              text: 'Working with TopInvest has been a great experience. An exceptional group of people who are well versed in all legal, accounting, and compliance aspects of fund administration for onshore or offshore funds. I would highly recommend.',
+              cite: 'Emily Wilson',
+              caption: 'Top Manager'
+            })
+        .col-md-6
+          .inset-xl-left-60.inset-xl-right-40
+            +quote-bordered({
+              img: 'clients-testimonials-2-68x68',
+              header: 'Real Experts in Investment Management',
+              text: "These guys are efficient! From the first moment that I dealt with TopInvest I knew that they were real pros. They are asking the right questions, and when getting the answers they are on ball non-stop, providing an excellent service!",
+              cite: 'Dennis Lewis',
+              caption: 'Civil Servant'
+            })
+  ='\n'
+
+  include ../sections/_section-testimonials-parallax
+
+  include ../sections/_section-testimonials-complex
+
+  include ../sections/_section-testimonials-vertical-dark
+
+
+  //-Page Footer
+  include ../sections/_section-footer-default

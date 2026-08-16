@@ -1,0 +1,85 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-post-minimal
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Gallery item'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title('Gallery', 'bg-image-2')
+
+  //- Medical Malpractice Case
+  section.section-60.section-md-75.section-xl-90
+    .container
+      h3 Medical Malpractice Case
+      article.post-info
+        .post-image
+          +jpg('gallery-item-1-1170x883')
+        .post-main
+          .post-left
+            ul.post-meta
+              li: time(datetime='2021-05-01') May 2021
+              li by luis-e
+              li
+                ul.list-hashtags
+                  li: a(href='#') lawyers
+                  li: a(href='#') law
+                  li: a(href='#') case
+                  li: a(href='#') innovation
+                  li: a(href='#') advice
+
+          .post-body
+            p We do not see ourselves simply as 'lawyers' but will always strive to be our clients' trusted adviser whether that be in a commercial or personal context. We provide additional services well beyond those that might be expected of a law firm. Our core values are integrity and trust, the encouragement of innovation, teamwork and the continuing personal development of everyone at the firm.
+  ='\n'
+
+  //- Related posts
+  section.section-35.section-md-75.section-xl-90.bg-whisper
+    .container.text-center.text-sm-start
+      h4 Related posts
+
+      .row.row-30
+        .col-md-10.col-lg-6
+          +post-minimal({
+            img: 'gallery-item-2-220x224',
+            header: 'More Court Fee increases',
+            time: ['2021-03-14', 'March 14'],
+            text: 'On 22 July 2021, The Civil Proceedings, First-tier Tribunal, Upper Tribunal and Employment Tribunals Fees (Amendment)... '
+          })
+
+        .col-md-10.col-lg-6
+          +post-minimal({
+            img: 'gallery-item-3-220x224',
+            header: 'Code of Fundraising Practice',
+            time: ['2021-03-22', 'March 22'],
+            text: 'Suzanne McCarthy who is the Chair of the Fundraising Regulator Standards Committee, has said that the public will be...'
+          })
+
+        .col-md-10.col-lg-6
+          +post-minimal({
+            img: 'gallery-item-4-220x224',
+            header: 'Raising funds for local charities',
+            time: ['2021-03-17', 'March 17'],
+            text: 'We are hosting our 28th annual charity golf day on Thursday 7 July 2021. The event, which has become a firm fixture in the... '
+          })
+
+        .col-md-10.col-lg-6
+          +post-minimal({
+            img: 'gallery-item-5-220x224',
+            header: 'Abuse of Power',
+            time: ['2021-03-25', 'March 25'],
+            text: 'An increase in male-on-male sexual harassment shows larger truths about abuse in the workplace. The Cheesecake...'
+          })
+  ='\n'
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

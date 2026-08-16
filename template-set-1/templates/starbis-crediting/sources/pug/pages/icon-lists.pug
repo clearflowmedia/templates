@@ -1,0 +1,249 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-icon-box
+include ../elements/_ui-icon-box-vertical
+include ../elements/_ui-icon-box-horizontal
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Icon Lists'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title(pageName, 'bg-image-1', {
+    0: {
+      "title": "Home",
+      "href": "./"
+    },
+    1: {
+      "title": "Additional Pages",
+      "href": "#"
+    },
+    2: {
+      "title": pageName
+    }
+  })
+
+  //- Lists
+  section.section-40.section-md-top-75.section-md-bottom-50.section-xl-top-90.text-start
+    .container
+      .row.row-60.row-lg-90
+        .col-xl-8
+          h3 Unordered List
+          p We specialize in a variety of services. Our aim is to deliver the top level of customer service based on your requests.
+          ul.list-marked
+            li Consulting
+            li Customer Service
+            li Innovation
+            li Management
+            li Ethics
+          p We hope that with our services you will receive the most personalized help in purchasing any kind of products you are looking for.
+
+        .col-xl-8
+          h3 Ordered List
+          p We specialize in a variety of services. Our aim is to deliver the top level of customer service based on your requests.
+          ul.list-ordered
+            li Consulting
+            li Customer Service
+            li Innovation
+            li Management
+            li Ethics
+          p We hope that with our services you will receive the most personalized help in purchasing any kind of products you are looking for.
+  ='\n'
+
+  //- Icon Left List
+  section.section-40.text-start
+    .container
+      h3 Icon Left List
+      .row
+        .col-lg-9.col-xl-12
+          .row.row-40
+            .col-md-6.col-xl-3
+              +icon-box-left({
+                header: 'Quick and Easy',
+                text: 'We offer lots of ways to quickly pay off your loans.'
+              })
+                svg(version='1.1', x='0px', y='0px', width='45px', height='45px', viewbox='0 0 43.598 44', style='stroke: #6bcad2; enable-background:new 0 0 43.598 44;')
+                  polyline(style='fill:none;;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', points='\
+                						  30.598,16 21.598,24 15.598,21 ')
+                  g
+                    path(style='clip-path:url(#SVGID_2_);fill:none;;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', d='\
+                						    M42.598,22c0-11.598-9.402-21-21-21S1,10.402,1,22s9.402,21,21.402,21v-4C12.402,39,5,31.389,5,22S12.41,5,21.799,5\
+                						    s16.899,7.611,16.899,17c0,6.893-4.152,12.828-10.049,15.496')
+
+            .col-md-6.col-xl-3
+              +icon-box-left({
+                header: 'Secure Process',
+                text: 'Complete loans on our site quickly and securely.'
+              })
+                svg(version='1.1',   xmlns='http://www.w3.org/2000/svg',  x='0px', y='0px', width='37', height='58', viewbox='0 0 30 45.016', style='stroke: #6bcad2; enable-background:new 0 0 30 45.016;')
+                  g
+                    path(style='clip-path:url(#SVGID_2_);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', d='\
+                                						    M26.417,11.984C26.417,5.909,21.701,1,15.626,1S4.803,5.94,4.803,12.078v4.937')
+                    line(style='clip-path:url(#SVGID_2_);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', x1='11.804', y1='29.016', x2='19.804', y2='29.016')
+                    line(style='clip-path:url(#SVGID_2_);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', x1='9.804', y1='25.016', x2='21.804', y2='25.016')
+                    line(style='clip-path:url(#SVGID_2_);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', x1='13.804', y1='33.016', x2='17.804', y2='33.016')
+                    path(style='clip-path:url(#SVGID_2_);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', d='\
+                                						    M20,17.016H4.366C2.507,17.016,1,18.523,1,20.382V38.65c0,1.859,1.507,2.366,3.366,2.366h21.267c1.86,0,3.367-0.507,3.367-2.366\
+                                						    V20.382c0-1.859-1.507-3.366-3.367-3.366H25H20z')
+                    line(style='clip-path:url(#SVGID_2_);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', x1='5.804', y1='44.016', x2='25.804', y2='44.016')
+
+            .col-md-6.col-xl-3
+              +icon-box-left({
+                header: 'Lower Rates',
+                text: 'We have lower rates than most of our competitors.'
+              })
+                img(src="images/icon-01.png", width='48' height='48' alt="")
+
+            .col-md-6.col-xl-3
+              +icon-box-left({
+                header: 'No Penalties',
+                text: 'Our clients are free of any prepayment penalties.'
+              })
+                svg(version='1.1',   xmlns='http://www.w3.org/2000/svg', x='0px', y='0px', width='44', height='41', viewbox='0 0 45 42', style='fill: #6bcad2; enable-background:new 0 0 45 42;')
+                  g
+                    path(style='clip-path:url(#SVGID_2_);', d='M36.562,42H5.439C2.439,42,0,39.561,0,36.562V5.438C0,2.439,2.439,0,5.439,0h31.123\
+                                						    C39.559,0,41.998,2.439,42,5.437c0,0.553-0.447,1.001-1,1.001c-0.551,0-1-0.447-1-1C40,3.542,38.458,2,36.562,2H5.439\
+                                						    C3.542,2,2,3.542,2,5.438v31.124C2,38.458,3.542,40,5.439,40h31.123C38.458,40,40,38.458,40,36.562V21c0-0.552,0.448-1,1-1\
+                                						    c0.553,0,1,0.448,1,1v15.562C42,39.561,39.56,42,36.562,42')
+                    path(style='clip-path:url(#SVGID_2_);', d='M5,36c-0.553,0-1-0.448-1-1V8.037C4,5.811,5.811,4,8.036,4H35c0.553,0,1,0.448,1,1\
+                                						    c0,0.552-0.447,1-1,1H8.036C6.913,6,6,6.914,6,8.037V35C6,35.552,5.553,36,5,36')
+                    path(style='clip-path:url(#SVGID_2_);', d='M21,32c-0.033,0-0.067-0.001-0.101-0.005c-0.283-0.029-0.541-0.177-0.708-0.407l-8-11\
+                                						    c-0.325-0.446-0.226-1.072,0.221-1.397c0.447-0.325,1.072-0.226,1.397,0.221l7.342,10.096L43.326,9.262\
+                                						    c0.406-0.372,1.039-0.345,1.412,0.064c0.373,0.407,0.344,1.04-0.064,1.412l-23,21C21.489,31.908,21.248,32,21,32')
+  ='\n'
+
+  //- Icon Top List
+  section.section-50
+    .container
+      h3.text-sm-start Icon List
+      .row.row-offset-1
+        .col-lg-9.col-xl-12
+          .row.row-50
+            .col-sm-6.col-xl-3
+              +icon-box-vertical({
+                header: 'Quick and Easy',
+                text: 'We offer lots of ways to quickly pay off your loans.'
+              })
+                svg(version='1.1', x='0px', y='0px', width='52', height='52', viewbox='0 0 43.598 44', style='stroke: #6bcad2; enable-background:new 0 0 43.598 44;')
+                  polyline(style='fill:none;;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', points='\
+                                						  30.598,16 21.598,24 15.598,21 ')
+                  g
+                    path(style='clip-path:url(#SVGID_2_);fill:none;;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', d='\
+                                						    M42.598,22c0-11.598-9.402-21-21-21S1,10.402,1,22s9.402,21,21.402,21v-4C12.402,39,5,31.389,5,22S12.41,5,21.799,5\
+                                						    s16.899,7.611,16.899,17c0,6.893-4.152,12.828-10.049,15.496')
+
+            .col-sm-6.col-xl-3
+              +icon-box-vertical({
+                header: 'No Penalties',
+                text: 'Our clients are free of any prepayment penalties.'
+              })
+                svg(version='1.1',   xmlns='http://www.w3.org/2000/svg', x='0px', y='0px', width='52', height='48', viewbox='0 0 45 42', style='fill: #6bcad2; enable-background:new 0 0 45 42;')
+                  g
+                    path(style='clip-path:url(#SVGID_2_);', d='M36.562,42H5.439C2.439,42,0,39.561,0,36.562V5.438C0,2.439,2.439,0,5.439,0h31.123\
+                                                						    C39.559,0,41.998,2.439,42,5.437c0,0.553-0.447,1.001-1,1.001c-0.551,0-1-0.447-1-1C40,3.542,38.458,2,36.562,2H5.439\
+                                                						    C3.542,2,2,3.542,2,5.438v31.124C2,38.458,3.542,40,5.439,40h31.123C38.458,40,40,38.458,40,36.562V21c0-0.552,0.448-1,1-1\
+                                                						    c0.553,0,1,0.448,1,1v15.562C42,39.561,39.56,42,36.562,42')
+                    path(style='clip-path:url(#SVGID_2_);', d='M5,36c-0.553,0-1-0.448-1-1V8.037C4,5.811,5.811,4,8.036,4H35c0.553,0,1,0.448,1,1\
+                                                						    c0,0.552-0.447,1-1,1H8.036C6.913,6,6,6.914,6,8.037V35C6,35.552,5.553,36,5,36')
+                    path(style='clip-path:url(#SVGID_2_);', d='M21,32c-0.033,0-0.067-0.001-0.101-0.005c-0.283-0.029-0.541-0.177-0.708-0.407l-8-11\
+                                                						    c-0.325-0.446-0.226-1.072,0.221-1.397c0.447-0.325,1.072-0.226,1.397,0.221l7.342,10.096L43.326,9.262\
+                                                						    c0.406-0.372,1.039-0.345,1.412,0.064c0.373,0.407,0.344,1.04-0.064,1.412l-23,21C21.489,31.908,21.248,32,21,32')
+
+            .col-sm-6.col-xl-3
+              +icon-box-vertical({
+                header: 'Lower Rates',
+                text: 'We have lower rates than most of our competitors.'
+              })
+                img(src="images/icon-01.png", alt="")
+
+            .col-sm-6.col-xl-3
+              +icon-box-vertical({
+                header: 'Secure Process',
+                text: 'Complete loans on our site quickly and securely.'
+              })
+                svg(version='1.1',   xmlns='http://www.w3.org/2000/svg',  x='0px', y='0px', width='37', height='58', viewbox='0 0 30 45.016', style='stroke: #6bcad2; enable-background:new 0 0 30 45.016;')
+                  g
+                    path(style='clip-path:url(#SVGID_2_);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', d='\
+                                                						    M26.417,11.984C26.417,5.909,21.701,1,15.626,1S4.803,5.94,4.803,12.078v4.937')
+                    line(style='clip-path:url(#SVGID_2_);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', x1='11.804', y1='29.016', x2='19.804', y2='29.016')
+                    line(style='clip-path:url(#SVGID_2_);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', x1='9.804', y1='25.016', x2='21.804', y2='25.016')
+                    line(style='clip-path:url(#SVGID_2_);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', x1='13.804', y1='33.016', x2='17.804', y2='33.016')
+                    path(style='clip-path:url(#SVGID_2_);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', d='\
+                                                						    M20,17.016H4.366C2.507,17.016,1,18.523,1,20.382V38.65c0,1.859,1.507,2.366,3.366,2.366h21.267c1.86,0,3.367-0.507,3.367-2.366\
+                                                						    V20.382c0-1.859-1.507-3.366-3.367-3.366H25H20z')
+                    line(style='clip-path:url(#SVGID_2_);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', x1='5.804', y1='44.016', x2='25.804', y2='44.016')
+  ='\n'
+
+  //- Icon Box
+  section.section-75.section-lg-100.bg-wasip
+    .container
+      h3.text-xl-start Icon Box
+
+      .row.row-40
+        .col-md-6.col-xl-3.height-fill
+          +icon-box({
+            header: 'Quick and Easy',
+            text: 'We offer lots of ways to quickly pay off your loans.'
+          })
+            svg(version='1.1', x='0px', y='0px', width='52', height='52', viewbox='0 0 43.598 44', style='stroke: #6bcad2; enable-background:new 0 0 43.598 44;')
+              polyline(style='fill:none;;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', points='\
+                                            						  30.598,16 21.598,24 15.598,21 ')
+              g
+                path(style='clip-path:url(#SVGID_2_);fill:none;;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', d='\
+                                            						    M42.598,22c0-11.598-9.402-21-21-21S1,10.402,1,22s9.402,21,21.402,21v-4C12.402,39,5,31.389,5,22S12.41,5,21.799,5\
+                                            						    s16.899,7.611,16.899,17c0,6.893-4.152,12.828-10.049,15.496')
+
+        .col-md-6.col-xl-3.height-fill
+          +icon-box({
+            header: 'No Penalties',
+            text: 'Our clients are free of any prepayment penalties.'
+          })
+            svg(version='1.1',   xmlns='http://www.w3.org/2000/svg', x='0px', y='0px', width='52', height='48', viewbox='0 0 45 42', style='fill: #6bcad2; enable-background:new 0 0 45 42;')
+              g
+                path(style='clip-path:url(#SVGID_2_);', d='M36.562,42H5.439C2.439,42,0,39.561,0,36.562V5.438C0,2.439,2.439,0,5.439,0h31.123\
+                                                            						    C39.559,0,41.998,2.439,42,5.437c0,0.553-0.447,1.001-1,1.001c-0.551,0-1-0.447-1-1C40,3.542,38.458,2,36.562,2H5.439\
+                                                            						    C3.542,2,2,3.542,2,5.438v31.124C2,38.458,3.542,40,5.439,40h31.123C38.458,40,40,38.458,40,36.562V21c0-0.552,0.448-1,1-1\
+                                                            						    c0.553,0,1,0.448,1,1v15.562C42,39.561,39.56,42,36.562,42')
+                path(style='clip-path:url(#SVGID_2_);', d='M5,36c-0.553,0-1-0.448-1-1V8.037C4,5.811,5.811,4,8.036,4H35c0.553,0,1,0.448,1,1\
+                                                            						    c0,0.552-0.447,1-1,1H8.036C6.913,6,6,6.914,6,8.037V35C6,35.552,5.553,36,5,36')
+                path(style='clip-path:url(#SVGID_2_);', d='M21,32c-0.033,0-0.067-0.001-0.101-0.005c-0.283-0.029-0.541-0.177-0.708-0.407l-8-11\
+                                                            						    c-0.325-0.446-0.226-1.072,0.221-1.397c0.447-0.325,1.072-0.226,1.397,0.221l7.342,10.096L43.326,9.262\
+                                                            						    c0.406-0.372,1.039-0.345,1.412,0.064c0.373,0.407,0.344,1.04-0.064,1.412l-23,21C21.489,31.908,21.248,32,21,32')
+
+        .col-md-6.col-xl-3.height-fill
+          +icon-box({
+            header: 'Lower Rates',
+            text: 'We have lower rates than most of our competitors.'
+          })
+            img(src="images/icon-01.png", alt="")
+
+        .col-md-6.col-xl-3.height-fill
+          +icon-box({
+            header: 'Secure Process',
+            text: 'Complete loans on our site quickly and securely.'
+          })
+            svg(version='1.1',   xmlns='http://www.w3.org/2000/svg',  x='0px', y='0px', width='37', height='58', viewbox='0 0 30 45.016', style='stroke: #6bcad2; enable-background:new 0 0 30 45.016;')
+              g
+                path(style='clip-path:url(#SVGID_2_);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', d='\
+                                                            						    M26.417,11.984C26.417,5.909,21.701,1,15.626,1S4.803,5.94,4.803,12.078v4.937')
+                line(style='clip-path:url(#SVGID_2_);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', x1='11.804', y1='29.016', x2='19.804', y2='29.016')
+                line(style='clip-path:url(#SVGID_2_);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', x1='9.804', y1='25.016', x2='21.804', y2='25.016')
+                line(style='clip-path:url(#SVGID_2_);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', x1='13.804', y1='33.016', x2='17.804', y2='33.016')
+                path(style='clip-path:url(#SVGID_2_);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', d='\
+                                                            						    M20,17.016H4.366C2.507,17.016,1,18.523,1,20.382V38.65c0,1.859,1.507,2.366,3.366,2.366h21.267c1.86,0,3.367-0.507,3.367-2.366\
+                                                            						    V20.382c0-1.859-1.507-3.366-3.367-3.366H25H20z')
+                line(style='clip-path:url(#SVGID_2_);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;', x1='5.804', y1='44.016', x2='25.804', y2='44.016')
+
+  ='\n'
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

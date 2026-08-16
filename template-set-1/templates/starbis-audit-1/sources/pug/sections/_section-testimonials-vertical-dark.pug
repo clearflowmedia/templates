@@ -1,0 +1,70 @@
+//- Includes
+include ../elements/_ui-quote-vertical
+
+//- What Clients Say?
+
+section.section.parallax-container.context-dark.bg-black(data-parallax-img='images/clients-testimonials-parallax-2.jpg')
+  .parallax-content
+    .section-50.section-md-75.section-xl-top-100.section-xl-bottom-120
+      .container.text-center
+        .row
+          .col-sm-12
+            h3
+              | What
+              =' '
+              span.text-thin Clients Say?
+        .row.justify-content-sm-center.justify-content-md-start.row-60
+          .col-md-4
+            +quote-vertical({
+              mod: 'quote-vertical-inverse',
+              img: 'clients-testimonials-7-113x113.jpg',
+              text: "Beyond a shadow of doubt, they are the Best Tax Consultants I have ever come across.",
+              cite: "Axel Merphy",
+              caption: 'Freelance developer'
+            })
+
+          .col-md-4
+            +quote-vertical({
+              mod: 'quote-vertical-inverse',
+              img: 'clients-testimonials-8-113x113.jpg',
+              text: "I would not hesitate even one bit to work with them for my future tax and accounting needs.",
+              cite: "Amelia Lee",
+              caption: 'Sales, demolink.org'
+            })
+
+          .col-md-4
+            +quote-vertical({
+              mod: 'quote-vertical-inverse',
+              img: 'clients-testimonials-9-113x113.jpg',
+              text: "The Tax Experts at TaxExpert are thorough professionals and always go that extra mile to help their clients.",
+              cite: "Jack McGee",
+              caption: 'Founder, The Therapy'
+            })
+
+          .col-md-4
+            +quote-vertical({
+              mod: 'quote-vertical-inverse',
+              img: 'clients-testimonials-10-113x113.jpg',
+              text: "It's been a pleasure working with Easy Audit. I have found them to be highly responsive to customer queries.",
+              cite: "John Davis",
+              caption: 'Writer'
+            })
+
+          .col-md-4
+            +quote-vertical({
+              mod: 'quote-vertical-inverse',
+              img: 'clients-testimonials-11-113x113.jpg',
+              text: "I am happy that I chose Easy Audit for my US tax returns and would recommend it to everyone.",
+              cite: "Jill Miller",
+              caption: 'Artist'
+            })
+
+          .col-md-4
+            +quote-vertical({
+              mod: 'quote-vertical-inverse',
+              img: 'clients-testimonials-12-113x113.jpg',
+              text: "Over the last 6 years I have found their services to be reliable and their advice to be practical and clear.",
+              cite: "Christopher Taylor",
+              caption: 'Financial Consultant'
+            })
+='\n'

@@ -1,0 +1,56 @@
+//- Include
+include ../elements/_ui-quote-strict
+
+//- Testimonials
+section.section-top-60.section-md-top-90
+  .container.text-center
+    h3 Testimonials
+    .row.row-offset-4.justify-content-md-center
+      .col-md-11.col-lg-10.col-xl-8
+        //- Slick Carousel
+        .slick-carousel-complex-variant-1
+          .slick-slider.slick-slider-images.slick-slider#child-carousel(data-for=".carousel-parent", data-arrows="false", data-loop="true", data-dots="false", data-swipe="true", data-items="1", data-md-items='3', data-lg-items='3', data-xl-items='3', data-xxl-items='3', data-slide-to-scroll="1", data-center-mode="true", data-center-padding='0')
+            .item
+              figure
+                +jpg('clients-testimonials-3-150x150')
+
+            .item
+              figure
+                +jpg('clients-testimonials-4-150x150')
+
+            .item
+              figure
+                +jpg('clients-testimonials-5-150x150')
+
+            .item
+              figure
+                +jpg('clients-testimonials-6-150x150')
+
+          .slick-slider.carousel-parent.slick-dots-variant-1(data-arrows="false", data-loop="true", data-dots="true", data-swipe="true", data-child="#child-carousel", data-for="#child-carousel", data-items="1", data-md-items='1', data-lg-items='1', data-xl-items='1', data-xxl-items='1', data-slide-to-scroll="1", data-center-mode='true')
+            .item
+              +quote-strict({
+                mod: 'quote-strict-inverse',
+                text: "I am so glad we chose LawExpert firm to represent us. We were in a very bad motorcycle accident. We were treated like family and were kept involved every step of the way. Thank you all who were involved in one way or other working our case!",
+                cite: "Ann Williams"
+              })
+            .item
+              +quote-strict({
+                mod: 'quote-strict-inverse',
+                text: "We have been very pleased with our experience with the LawExpert. Although we did not actually go to court, I felt that Jane was more than ready to fight her best for us. Our whole experience with all of the staff was very easy and enjoyable. Thank you for your work!",
+                cite: "Mark Wilson"
+              })
+
+            .item
+              +quote-strict({
+                mod: 'quote-strict-inverse',
+                text: "Tom and his staff were great with making us feel comfortable during the process. They kept us updated on our case progress and were very helpful with all of the paperwork we needed to complete. We are very pleased with the outcome of everything.",
+                cite: "Gregory Smith"
+              })
+
+            .item
+              +quote-strict({
+                mod: 'quote-strict-inverse',
+                text: "They handled my matter in an extremely timely manner, communicated every step of the process, highly recommend them.",
+                cite: "Jane Miller"
+              })
+='\n'

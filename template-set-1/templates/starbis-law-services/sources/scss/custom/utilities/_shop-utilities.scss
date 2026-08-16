@@ -1,0 +1,117 @@
+//
+// Shop utilities
+// --------------------------------------------------
+
+// Pricing tables
+// ----------------
+.pricing-table {
+  overflow: hidden;
+  background: $white;
+  text-align: center;
+  box-shadow: $shadow-area-sm;
+
+  &-header {
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: $abbey;
+  }
+
+  &-body {
+    padding: 35px 30px;
+  }
+
+  &-label {
+    padding: 12px 15px;
+    text-align: center;
+    background: $primary;
+
+    p {
+      font-size: 17px;
+      font-weight: 700;
+      color: $white;
+    }
+  }
+
+  .pricing-list {
+    font-size: 16px;
+    font-weight: 300;
+    color: $secondary;
+
+    span {
+      display: inline-block;
+      margin-right: .25em;
+    }
+
+    // Offsets
+    > li + li {
+      margin-top: 12px;
+    }
+  }
+
+  // Offsets
+  * + .price-object {
+    margin-top: 22px;
+  }
+
+  * + .pricing-list {
+    margin-top: 22px;
+  }
+}
+
+// Pricing object
+.pricing-object {
+  font-family: $font-family-serif;
+  font-weight: 900;
+  font-size: 0;
+  line-height: 0;
+  color: $black;
+
+  > * {
+    margin-top: 0;
+  }
+
+  .small {
+    position: relative;
+    font: 700 10px $font-family-sec;
+    color: inherit;
+    text-transform: uppercase;
+  }
+
+  .small-middle {
+    vertical-align: middle;
+  }
+
+  .small-bottom {
+    vertical-align: bottom;
+  }
+}
+
+.pricing-object-lg {
+  font-size: 64px;
+  line-height: .7;
+
+  .small {
+    font-size: 10px;
+  }
+
+  .small-top {
+    top: .5em;
+    margin-right: 5px;
+    font-size: .22em;
+    vertical-align: top;
+  }
+
+  .small-bottom {
+    bottom: -1em;
+    margin-left: 3px;
+    vertical-align: bottom;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .pricing-object-lg {
+    font-size: 72px;
+  }
+}

@@ -1,0 +1,95 @@
+extends  ../_skeleton
+
+block variables
+	- var activeIndex = 5
+	- var pageName = 'Contact Us'
+
+block title
+	title=pageName
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title(pageName, 'bg-image-1')
+
+	//- Get in Touch
+	section.section-60.section-md-top-90.section-md-bottom-100
+		.container
+			.row.justify-content-sm-center.justify-content-lg-start.row-50
+				.col-lg-7.col-xl-6
+					h3 Get in #[span.text-thin Touch]
+					//- RD Mailform
+					form.rd-mailform.form-modern(data-form-output="form-output-global", data-form-type='contact', method='post', action='bat/rd-mailform.php')
+						.row.row-30
+							.col-md-6
+								.form-wrap
+									input#contact-name.form-input(type="text" name="name" data-constraints="@Required")
+									label.form-label(for="contact-name") Name
+							.col-md-6
+								.form-wrap
+									input#contact-email.form-input(type="email" name="email" data-constraints="@Email @Required")
+									label.form-label(for="contact-email") Email
+
+							.col-sm-12
+								.form-wrap
+									.textarea-lined-wrap
+										textarea#contact-message.form-input(name="message" data-constraints="@Required")
+										label.form-label(for="contact-message") Message
+
+							.col-sm-8
+								button(type="submit").btn.btn-primary.btn-block Send
+
+							.col-sm-4
+								button(type="reset").btn.btn-silver-outline.btn-block Reset
+
+				.col-xl-1.d-none.d-xl-inline-block
+
+				.col-lg-5.col-xl-4
+					.row.row-40
+						.col-md-10.col-lg-12
+							h3 How to #[span.text-thin Find Us]
+							p.text-secondary.
+								If you have any questions, just fill in the contact form, and we will answer you shortly. If you are living nearby, come visit us.
+
+						.col-md-6.col-lg-12
+							h4 Headquarters
+							address.contact-info
+								p.text-uppercase 9863 - 9867 MILL ROAD, CAMBRIDGE, MG09 99HT.
+								dl.list-terms-inline
+									dt Telephone
+									dd: a.link-secondary(href='callto:#') +1 800 603 6035
+
+								dl.list-terms-inline
+									dt E-mail
+									dd: a.link-primary(href='mailto:#') mail@demolink.org
+
+						.col-md-6.col-lg-12
+							h4 Support Centre
+							address.contact-info
+								p.text-uppercase 9870 ST VINCENT PLACE, GLASGOW, DC 45 FR 45
+								dl.list-terms-inline
+									dt Telephone
+									dd: a.link-secondary(href='callto:#') +1 800 603 6035
+
+								dl.list-terms-inline
+									dt E-mail
+									dd: a.link-primary(href='mailto:#') mail@demolink.org
+
+	='\n'
+	// Google Map
+	//Please, add the data attribute data-key="YOUR_API_KEY" in order to insert your own API key for the Google map.
+	//Please note that YOUR_API_KEY should replaced with your key.
+	//Example: <div class="google-map-container" data-key="YOUR_API_KEY">
+	section.section
+		.google-map-container(data-center='2130 Fulton Street San Francisco, CA 94117-1080 USA', data-zoom='5', data-icon='images/gmap_marker.png', data-icon-active='images/gmap_marker_active.png', data-styles='[{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}]')
+			.google-map
+			ul.google-map-markers
+				li( data-location='2130 Fulton Street San Francisco, CA 94117-1080 USA', data-description='2130 Fulton Street San Francisco, CA 94117-1080 USA' )
+
+	='\n'
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

@@ -1,0 +1,269 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-icon-box-vertical
+include ../elements/_ui-thumbnail-1
+include ../elements/_ui-thumbnail-3
+include ../elements/_ui-link-image
+include ../elements/_ui-icon-box
+include ../elements/_ui-quote-strict
+
+block variables
+	- var activeIndex = 0
+	- var footerLink = true
+
+block title
+	title Home
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+	include ../sections/_section-slider
+
+	//- Page Content
+	section.section-50.section-md-90
+		.container.text-center
+			h3 Our Services
+			p.text-big.font-accent.text-spacing-40 We provide expert tax and advisory services to individuals and small businesses.
+
+			.row.justify-content-sm-center.row-40
+				.col-sm-10.col-md-6.col-lg-4.height-fill
+					+icon-box({
+						icon: ['icon-lg', 'fl-puppets-chart6'],
+						header: 'Tax Planning',
+						text: 'Planning is the key to successfully and legally reducing your tax liability.'
+					})
+
+				.col-sm-10.col-md-6.col-lg-4.height-fill
+					+icon-box({
+						icon: ['icon-lg', 'fl-puppets-maths26'],
+						header: 'Bookkeeping',
+						text: 'We’ll create a chart of accounts to capture all your financial transactions.'
+					})
+
+				.col-sm-10.col-md-6.col-lg-4.height-fill
+					+icon-box({
+						icon: ['icon-lg', 'fl-puppets-bank17'],
+						header: 'Bank Reconciliation',
+						text: 'Every deposit and withdrawal aligns with entries into your accounting records. '
+					})
+	='\n'
+
+	//- Our Benefits
+	section.section-75.section-bottom-60.section-md-100.bg-default.bg-image(style="background-image: url(images/home-6.png);")
+		.container
+			.row.row-40.g-0.justify-content-center.justify-content-md-end.align-items-center
+				.col-sm-10.col-md-7.col-lg-6.col-xl-5(style="max-width:430px;")
+					//- Box
+					.box.bg-cello.section-relative
+						h3.text-white About Us
+
+						p.text-white We are dedicated to providing professional service with the highest degree of honesty and integrity, and strive to add value to our tax and consulting services.
+
+						ul.list-marked
+							li.text-white Highly Competent Professionals
+							li.text-white Affordable Prices
+							li.text-white High Successful Recovery
+
+						.button-block
+							a.btn.btn-icon.btn-icon-right.btn-white-outline(href='appointment.html')
+								span.icon.icon-xs-smaller.fa-angle-right.text-primary
+								| make An Appointment
+				.col-sm-10.col-md-4.col-lg-3.col-xl-2.box-list-xs
+					//- Counter Boxed
+					.counter-boxed.box-xs.bg-cello.text-center
+						//- CountTo
+						.counter 23
+						.offset-top-5
+							p.text-bismark.fw-sbold Consultants
+					//- Counter Boxed
+					.counter-boxed.box-xs.bg-cello.text-center
+						//- CountTo
+						.counter 546
+						.offset-top-5
+							p.text-bismark.fw-sbold Happy Clients
+					//- Counter Boxed
+					.counter-boxed.box-xs.bg-cello.text-center
+						//- CountTo
+						.counter 17
+						.offset-top-5
+							p.text-bismark.fw-sbold(style="line-height:1.2;") Years of Experience
+
+	='\n'
+
+	//- Tax Calculator
+	section.bg-image.bg-image-md-inverse-transparent(style="background-image: url(images/home-5.jpg);")
+		.bg-overlay-lighten-inverse-md
+			.container.section-66.section-md-100
+				.row.justify-content-sm-center.justify-content-md-start
+					.col-sm-10.col-md-8.col-lg-6
+						.unit.align-items-center.unit-horizontal.unit-spacing-sm
+							.unit-left
+								span.icon.icon-lg.fl-puppets-maths27.text-gray
+							.unit-body
+								h3 Tax Calculator
+
+						form.rd-mailform.row.justify-content-sm-center.justify-content-md-start.inset-xl-right-30.row-40(data-form-output="form-output-global", method='post', action='bat/rd-mailform.php')
+							.col-md-6
+								.form-group.form-group-outside
+									//Select 2
+									select#index-business.form-control.select-filter(data-minimum-results-for-search="Infinity")
+										option(value="1") Retail
+										option(value="2") All
+									label.form-label.form-label-outside(for="index-business") Choose your business area
+							.col-md-6
+								.form-group.form-group-outside
+									//Select 2
+									select#index-residence.form-control.select-filter(data-minimum-results-for-search="Infinity")
+										option(value="2") US Residence
+										option(value="3") All
+									label.form-label.form-label-outside(for="index-residence") Country of residence
+							.col-md-6
+								.form-group.form-group-outside
+									//Select 2
+									select#index-employees.form-control.select-filter(data-minimum-results-for-search="Infinity")
+										option(value="2") 1-5
+										option(value="3") 1-6
+									label.form-label.form-label-outside(for="index-employees") Employees number
+							.col-md-6
+								.form-group.form-group-outside
+									input#index-income.form-control.bg-whisper-lighten(type="text" name="name" data-constraints="@Required @Numeric")
+									label.form-label.form-label-outside(for="index-income") Yearly Income
+							.col-md-6
+								.form-group.form-group-outside
+									input#index-total.form-control.form-border-bottom.bg-whisper-lighten(type="text" name="name" )
+									label.form-label.form-label-outside(for="index-total") Total Payment
+							.col-md-6
+								.form-group.form-group-outside
+									button.btn.btn-block.btn-icon.btn-icon-right.btn-primary.big(type='submit')
+										span.icon.icon-xs.fa-angle-right
+										| Calculate
+	='\n'
+
+	//- Testimonials
+	section.section-top-60.section-md-top-90.bg-whisper-lighten
+		.container.text-center
+			.row.justify-content-md-center.row-40.row-sm-50
+				.col-sm-12
+					h3 Testimonials
+
+				.col-md-11.col-lg-10.col-xl-8
+					//- Slick Carousel
+					.slick-carousel-complex-variant-1
+						.slick-slider.slick-slider-images.slick-slider#child-carousel(data-for=".carousel-parent", data-arrows="false", data-loop="true", data-dots="false", data-swipe="true", data-items="1",  data-sm-items='3', data-md-items='3', data-lg-items='3', data-xl-items='3' data-slide-to-scroll="1", data-center-mode="true", data-center-padding='0')
+							.item
+								+jpg('clients-testimonials-4-153x153')
+
+							.item
+								+jpg('clients-testimonials-5-153x153')
+
+							.item
+								+jpg('clients-testimonials-6-153x153')
+
+							.item
+								+jpg('clients-testimonials-3-153x153')
+
+						.slick-slider.carousel-parent.slick-dots-variant-1(data-arrows="false", data-loop="true", data-dots="true", data-swipe="true", data-child="#child-carousel", data-for="#child-carousel", data-items="1",  data-sm-items='1', data-md-items='1', data-lg-items='1', data-slide-to-scroll="1", data-center-mode='true')
+							.item.inset-left-10.inset-right-10.inset-xl-left-0.inset-xl-right-0
+								+quote-strict({
+									mod: 'quote-strict-inverse',
+									text: "TaxExpert’s expertise and knowledge of USA and Indian Tax law assisted me in answering tricky tax questions and being able to better understand the tax implications of various financial transactions internationally. Very professional team!",
+									cite: "Mark Wilson"
+								})
+							.item.inset-left-10.inset-right-10.inset-xl-left-0.inset-xl-right-0
+								+quote-strict({
+									mod: 'quote-strict-inverse',
+									text: "As part of brief interaction, have noticed a very high professionalism on TaxExpert’s part! They are very prompt and have managed to keep their word as part of process. Will be glad to work with them in future as well. Thank you very much!",
+									cite: "Gregory Smith"
+								})
+
+							.item.inset-left-10.inset-right-10.inset-xl-left-0.inset-xl-right-0
+								+quote-strict({
+									mod: 'quote-strict-inverse',
+									text: "Highly experienced team of tax advisors! Tom was a tremendous asset to me in sorting out my tax affairs. His excellent advice helped me to make a complicated situation straightforward. I would recommend him to anyone.",
+									cite: "Ann Williams"
+								})
+
+							.item.inset-left-10.inset-right-10.inset-xl-left-0.inset-xl-right-0
+								+quote-strict({
+									mod: 'quote-strict-inverse',
+									text: "It has been a pleasure to work with Starbis team of professional designers. The Reactive team was quick studies who learned about our complex business and market and created a web presence that we are all proud to call our own. Many thanks to all of you!",
+									cite: "Jane Miller"
+								})
+	='\n'
+
+	//- Latest News
+	section.section-50.section-md-90.section-md-bottom-100
+		.container.text-center
+			h3 Latest News
+
+			.row.justify-content-sm-center.row-40
+				.col-sm-8.col-md-5.col-xl-3
+					//- Post Boxed
+					.post-boxed.d-xl-inline-block
+						.post-boxed-img-wrap
+							a(href="blog-post.html")
+								+jpg("home-1-268x182")
+						.post-boxed-caption
+							.post-boxed-title.fw-bold
+								a(href="blog-post.html") The Top 5 Tax Paper Downloads
+
+							//- List Inline
+							ul.list-inline.list-inline-dashed.text-uppercase.font-accent
+								li JUNE 14, 2021
+								li
+									span by #[a.link-primary(href="#") Sam Kromstain]
+
+				.col-sm-8.col-md-5.col-xl-3
+					//- Post Boxed
+					.post-boxed.d-xl-inline-block
+						.post-boxed-img-wrap
+							a(href="blog-post.html")
+								+jpg("home-2-268x182")
+						.post-boxed-caption
+							.post-boxed-title.fw-bold
+								a(href="blog-post.html") Exploring American Taxes: Then & Now
+
+							//- List Inline
+							ul.list-inline.list-inline-dashed.text-uppercase.font-accent
+								li JUNE 20, 2021
+								li
+									span by #[a.link-primary(href="#") Vanessa Ives]
+
+				.col-sm-8.col-md-5.col-xl-3
+					//- Post Boxed
+					.post-boxed.d-xl-inline-block
+						.post-boxed-img-wrap
+							a(href="blog-post.html")
+								+jpg("home-3-268x182")
+						.post-boxed-caption
+							.post-boxed-title.fw-bold
+								a(href="blog-post.html") The Tax Consequences Of Brexit
+
+							//- List Inline
+							ul.list-inline.list-inline-dashed.text-uppercase.font-accent
+								li JUNE 23, 2021
+								li
+									span by #[a.link-primary(href="#") Amanda Smith]
+
+				.col-sm-8.col-md-5.col-xl-3
+					//- Post Boxed
+					.post-boxed.d-xl-inline-block
+						.post-boxed-img-wrap
+							a(href="blog-post.html")
+								+jpg("home-4-268x182")
+						.post-boxed-caption
+							.post-boxed-title.fw-bold
+								a(href="blog-post.html") What You Need to File Your Taxes This Year
+
+								//- List Inline
+							ul.list-inline.list-inline-dashed.text-uppercase.font-accent
+								li JUNE 12, 2021
+								li
+									span by #[a.link-primary(href="#") David Nicholson]
+
+	='\n'
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

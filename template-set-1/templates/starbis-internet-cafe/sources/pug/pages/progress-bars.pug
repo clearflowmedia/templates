@@ -1,0 +1,87 @@
+extends  ../_skeleton
+
+//- Includes
+include ../sections/_section-header-default
+include ../elements/_progress-linear
+include ../elements/_countdown
+
+block variables
+	- pageName = 'Progress bars'
+
+block page
+	//- Page Header
+	+header-default
+
+	//- Page Content
+	+page-title(pageName, 'bg-image-1')
+
+	//- Skills Bars
+	section.section.section-60.section-md-75.section-xl-bottom-120
+		.container
+			h3.text-center Skill Bars
+			.row.row-40.justify-content-lg-between.offset-top-1
+				.col-md-6.col-xl-5.text-primary
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias delectus fugiat iste molestias nemo nesciunt obcaecati placeat, quas tempora totam voluptate.
+					p Alias aliquam architecto aspernatur atque cumque, debitis, delectus dolore doloribus esse exercitationem facilis fuga hic id impedit inventore iste magni maiores minus modi mollitia necessitatibus non odit pariatur provident quasi ratione repudiandae rerum sed similique tempore tenetur ullam unde veritatis! Ad cupiditate, delectus doloremque in iusto labore minima natus officia saepe. Doloribus esse id incidunt nam officiis provident.
+				.col-md-6
+					+progress-linear({
+						title: 'Experience',
+						value: '70'
+					}).progress-linear-red
+					+progress-linear({
+						title: 'Professionalism',
+						value: '54'
+					}).progress-linear-blue
+					+progress-linear({
+						title: 'Reliability',
+						value: '87'
+					}).progress-linear-yellow
+					+progress-linear({
+						title: 'Resilience',
+						value: '90'
+					}).progress-linear-green
+
+	//- Counters
+	section.section.section-60.section-md-100.bg-secondary.novi-background
+		.container
+			h3.text-center Counters
+			.row.row-40
+				.col-sm-6.col-md-3
+					.box-counter
+						span.novi-icon.icon.icon-md.icon-primary.material-icons-content_copy
+						//- CountTo
+						.text-large.counter 582
+						h5.box-header Regular visitors
+
+				.col-sm-6.col-md-3
+					.box-counter
+						span.novi-icon.icon.icon-md.icon-primary.material-icons-mood
+						//- CountTo
+						.text-large.counter.counter-k 246
+						h5.box-header Annual clients
+
+				.col-sm-6.col-md-3
+					.box-counter
+						span.novi-icon.icon.icon-md.icon-primary.material-icons-access_time
+						//- CountTo
+						.text-large.counter 1200
+						h5.box-header Websites visited
+
+				.col-sm-6.col-md-3
+					.box-counter
+						span.novi-icon.icon.icon-md.icon-primary.material-icons-code
+						//- CountTo
+						.text-large.counter.counter-k 834
+						h5.box-header Positive reviews
+
+
+	//- Progress Bars
+	section.section.section-60.section-md-75.section-lg-100
+		.container
+			h3.text-center Date Countdown
+			.countdown-box.block-centered
+				//- Countdown
+				+countdown({ to: '2024-01-22' })
+
+	//- Page Footer
+	include ../sections/_section-footer-default

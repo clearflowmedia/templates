@@ -1,0 +1,94 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_thumbnail-1
+include ../elements/_thumbnail-2
+
+block variables
+	- pageName = 'Our team'
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title(pageName, 'bg-image-6')
+
+	//- Team
+	section.section.section-md.bg-default
+		.container
+			h3.text-center Team
+			.row.row-40.row-lg-60.offset-lg-top-60
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-1({
+						img: 'team-1-189x189.png',
+						header: "Ralph Edwards",
+						caption: "Floor and coverings expert"
+					})
+
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-1({
+						img: 'team-2-189x189.png',
+						header: "Edward Robertson",
+						caption: "Furniture expert"
+					})
+
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-1({
+						img: 'team-3-189x189.png',
+						header: "Jenny Wilson",
+						caption: "Paint expert"
+					})
+
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-1({
+						img: 'team-4-189x189.png',
+						header: "Brooklyn Simmons",
+						caption: "Repair technician"
+					})
+
+
+	//- Starbis Team
+	section.section.section-md.bg-default
+		.container
+			h3.text-center Stract Team
+			.row.row-40
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-2({
+						img: 'team-01-292x340',
+						header: 'Ralph Edwards',
+						caption: "Floor and coverings expert",
+						phone: "+1 (409) 987–5874",
+						email: "info@demolink.org"
+					})
+
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-2({
+						img: 'team-02-292x340',
+						header: "Edward Robertson",
+						caption: "Furniture expert",
+						phone: "+1 (409) 987–5874",
+						email: "info@demolink.org"
+					})
+
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-2({
+						img: 'team-03-293x340',
+						header: "Jenny Wilson",
+						caption: "Paint expert",
+						phone: "+1 (409) 987–5874",
+						email: "info@demolink.org"
+					})
+
+				.col-sm-6.col-md-4.col-lg-3
+					+thumbnail-2({
+						img: 'team-04-293x340',
+						header: "Brooklyn Simmons",
+						caption: "Repair technician",
+						phone: "+1 (409) 987–5874",
+						email: "info@demolink.org"
+					})
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

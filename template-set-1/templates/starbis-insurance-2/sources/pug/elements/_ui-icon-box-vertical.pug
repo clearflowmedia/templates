@@ -1,0 +1,11 @@
+//- Icon box vertical
+mixin icon-box-vertical(obj)
+  //- Icon box vertical
+  article.icon-box-vertical(class=obj.mod)
+    .unit.flex-column.unit-spacing-sm
+      .unit-left
+        span.icon.icon-primary(class=obj.icon)
+      .unit-body
+        h5=obj.header
+        p(class='text-black-08')=obj.text
+  ='\n'

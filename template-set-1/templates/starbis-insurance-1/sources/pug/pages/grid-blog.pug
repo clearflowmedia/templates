@@ -1,0 +1,74 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-post-block
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Grid blog'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  +page-title('Blog', 'bg-blog')
+
+  //- Blog masonry
+  section.section-50.section-md-75.section-xl-100
+    .container
+      .row.justify-content-md-center.justify-content-lg-start.row-30
+        .col-md-9.col-lg-6.height-fill
+          +post-block({
+            img: 'blog-grid-1-570x253',
+            header: 'Smart Travel',
+            user: 'Amelia Condon',
+            time: ['2021-01-01', '5 days ago'],
+            tags: ['Business', 'Startup']
+          })
+
+        .col-md-9.col-lg-6.height-fill
+          +post-block({
+            img: 'blog-grid-2-570x253',
+            header: 'Back to School Insurance Needs',
+            user: 'Amelia Condon',
+            time: ['2021-01-01', '5 days ago'],
+            tags: ['Business', 'Startup']
+          })
+
+        .col-md-9.col-lg-6.height-fill
+          +post-block({
+            img: 'blog-grid-3-570x253',
+            header: 'Insurance After the Wedding',
+            user: 'Amelia Condon',
+            time: ['2021-01-01', '5 days ago'],
+            tags: ['Business', 'Startup']
+          })
+
+        .col-md-9.col-lg-6.height-fill
+          +post-block({
+            img: 'blog-grid-4-570x253',
+            header: 'Adding New Watercraft Coverage Enhancements',
+            user: 'Amelia Condon',
+            time: ['2021-01-01', '5 days ago'],
+            tags: ['Business', 'Startup']
+          })
+
+        .col-md-9.col-lg-6.height-fill
+          +post-block({
+            img: 'blog-grid-5-570x253',
+            header: 'About Motorcycle Insurance',
+            user: 'Amelia Condon',
+            time: ['2021-01-01', '5 days ago'],
+            tags: ['Business', 'Startup']
+          })
+
+      .row.text-center
+        .col-sm-12
+          +pagination
+  ='\n'
+
+  //- Page Footer
+  include ../sections/_section-footer-default

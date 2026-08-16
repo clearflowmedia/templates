@@ -1,0 +1,238 @@
+//
+// Links
+// --------------------------------------------------
+
+.link {
+  display: inline-block;
+}
+
+.link-inline {
+  font: inherit;
+  line-height: inherit;
+  text-decoration: underline;
+}
+
+.link-underline {
+  &,
+  &:active,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.link-circle {
+  border-radius: 50%;
+
+  .icon,
+  .icon:before {
+    position: static;
+  }
+}
+
+.link-bold {
+  font: 700 16px/22px $font-family-sec;
+}
+
+// Link group (icon + link)
+.link-group {
+  white-space: nowrap;
+
+  * {
+    vertical-align: middle;
+  }
+
+  span {
+    display: inline-block;
+  }
+
+  span + *,
+  * + span {
+    margin-left: 5px;
+  }
+
+  &.link-group-animated {
+    .icon {
+      position: relative;
+      right: 0;
+      transition: .22s;
+    }
+
+    &:hover {
+      .icon {
+        right: -5px;
+      }
+    }
+  }
+}
+
+.link-group-baseline {
+  * {
+    vertical-align: baseline;
+  }
+}
+
+// Link icon (without text)
+.link-icon {
+  &, * {
+    vertical-align: middle;
+  }
+
+  .icon {
+    margin-right: 5px;
+  }
+}
+
+.link-icon-mod {
+  .icon {
+    position: relative;
+    top: -3px;
+  }
+}
+
+// Link image
+.link-image {
+  img {
+    width: auto;
+    transition: .44s all ease;
+    opacity: .5;
+  }
+
+  &:hover {
+    img {
+      opacity: 1;
+    }
+  }
+}
+
+.link-image-wrap {
+  @include display-flex;
+  @include flex-direction(row);
+  @include flex-wrap(nowrap);
+  @include align-items(center);
+  @include justify-content(center);
+  min-height: 126px;
+
+  * + & {
+    margin-top: 13px;
+  }
+}
+
+// Styles
+.page {
+  .link-primary-inline {
+    color: $primary;
+
+    &:active,
+    &:focus {
+      color: $dusty-gray;
+    }
+
+    &:hover {
+      color: #62bdc5;
+    }
+  }
+
+  .link-default {
+    @include link($body-color, $primary);
+  }
+
+  .link-primary {
+    @include link($primary, $secondary);
+  }
+
+  .link-primary-inverse {
+    @include link($primary, $alto);
+  }
+
+  .link-primary-inverse-v2 {
+    @include link($primary, $white);
+  }
+
+  .link-secondary {
+    @include link($secondary, $primary);
+  }
+
+  .link-tundora {
+    @include link($tundora, $primary);
+  }
+
+  .link-tundora-inverse {
+    @include link($tundora, $white);
+  }
+
+  .link-secondary {
+    @include link($black, $primary);
+  }
+
+  .link-gray-light {
+    @include link($gray-light, $black);
+  }
+
+  .link-white {
+    @include link($white, $primary);
+
+    &.link-circle{
+      height: 91px;
+      width: 91px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(255,255,255, .33);
+      transition: .2s ease-in;
+
+      &:hover{
+        width: 113px;
+        height: 113px;
+        line-height: 113px;
+        color: #fa6e6e;
+        //color: $primary;
+        background-color: rgba(255,255,255, .4);
+      }
+    }
+  }
+
+  .link-white-v2 {
+    @include link($white, $silver-chalice);
+  }
+
+  .link-white-03 {
+    @include link(rgba($white, .3), $primary);
+  }
+
+  .link-black-v2 {
+    @include link(rgba($black, .6), $black);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .link-gray-dark-filled {
+    &,
+    &:active,
+    &:focus {
+      color: $white;
+      background: $gray-dark;
+    }
+
+    &:hover {
+      color: $white;
+      background: $primary;
+    }
+  }
+
+  .link-shop {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    @include link($primary, $gray-darker);
+
+    .icon{
+      margin-right: 5px;
+      @include icon-sizing(16px);
+    }
+  }
+}

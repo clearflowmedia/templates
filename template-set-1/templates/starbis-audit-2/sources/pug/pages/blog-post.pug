@@ -1,0 +1,175 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-comment
+include ../elements/_ui-post-preview
+
+block variables
+  - var activeIndex = 3
+  - var pageName = 'Blog Post'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title('Blog', 'bg-image-1')
+
+  //- Blog post
+  section.section-60.section-md-75.section-xl-100
+    .container
+      .row.row-50
+        .col-lg-8.col-xl-9
+          article.post.post-single
+            .post-image
+              figure
+                +jpg('post-1-870x412')
+            .post-header
+              h4 Choosing the Strategy
+
+            .post-meta
+              ul.list-bordered-horizontal
+                li
+                  dl.list-terms-inline
+                    dt Date
+                    dd: time(datetime='2021-01-22') January 22, 2021
+                li
+                  dl.list-terms-inline
+                    dt Posted by
+                    dd Amelia Lee
+                li
+                  dl.list-terms-inline
+                    dt Comments
+                    dd 3
+                li
+                  dl.list-terms-inline
+                    dt Category
+                    dd Marketing
+
+            .divider-fullwidth.bg-gray-light
+
+            .post-body
+              p.text-black Perhaps you are a new entrepreneur about to launch a business or innovation you have been dreaming about for years. Or maybe you have an established business and things are going well, or maybe even too well. In both instances you are going to need capital – the “oxygen” that every business needs to grow and prosper.
+              p.text-black So now you are writing your first business plan or touching up the old one in anticipation of raising capital. Capital can only come into a business in one of two ways. Capital that is generated internally through positive cash flow from business operations (e.g., selling stuff), or from external funding sources. The new entrepreneur is limited to only one option – external funding sources. The established business is hopefully generating positive cash flow, but may require additional capital. Which funding option is best? Is it best that the capital come from only one source, or does it make more sense for the capital to come from multiple sources? How do you decide?
+              .post-blockquote.inset-md-right-40.inset-xl-left-40.inset-xl-right-120
+                blockquote.quote-minimal-bordered
+                  p: q A proper business strategy is vital to your company’s success. Moreover, it should be controlled and well-managed.
+              p.text-black-08 How you decide to capitalize the business is called your capital formation strategy. There are undoubtedly a number of other factors to consider depending on your company’s current circumstances, and, quite importantly, where you want your company to go in the next few years. If you are still hesitating what development strategy to pick for your company.
+
+            .post-footer
+              h6.fw-medium Share this post:
+              ul.list-inline.list-inline-xs
+                li: a.icon.icon-xxs-small.link-primary.fa-facebook(href='#')
+                li: a.icon.icon-xxs-small.link-primary.fa-twitter(href='#')
+                li: a.icon.icon-xxs-small.link-primary.fa-google-plus(href='#')
+                li: a.icon.icon-xxs-small.link-primary.fa-pinterest-p(href='#')
+
+          .divider-fullwidth.bg-gray-lighter
+
+          //- Comments
+          .post-comment-block
+            h4 3 Comments
+            .comment-list.inset-md-right-60.inset-lg-right-30.inset-xl-right-100
+              .comment-group
+                +comment({
+                  img: 'post-2-70x71',
+                  user: 'Kate Smith',
+                  text: 'The topic you describe here is really important. I think it may be useful and interesting to many beginners in this sphere.'
+                })
+
+                .comment-group-reply
+                  +comment({
+                    img: 'post-3-70x71',
+                    user: 'John doe',
+                    text: "Thank you for your opinion! I'm glad that you found this article interesting, and I hope to continue this topic in further publications."
+                  })
+
+              .comment-group
+                +comment({
+                  img: 'post-4-70x71',
+                  user: 'Jane Peterson',
+                  text: 'Very useful post! Thanks for sharing! Now I’ll be planning my visit to your company to pick the best strategy for my business.'
+                })
+
+          //- Leave a comment
+          .post-comment-form
+            h4 Leave a comment
+            .inset-md-right-60.inset-lg-right-30.inset-xl-right-100
+              //- RD Mailform
+              form.rd-mailform.form-classic.form-classic-bordered.label-outside
+                .form-wrap
+                  label.fw-normal.form-label-outside(for="comment-message") Message:
+                  textarea#comment-message.form-input(name="message" data-constraints="@Required")
+                .button-block
+                  button(type="submit" style='min-width: 200px;').btn.btn-primary Submit
+
+        //- Aside
+        .col-lg-4.col-xl-3
+          .inset-lg-left-15
+            .row.row-50
+              .col-md-6.col-lg-12
+                .row.row-40
+                  .col-12
+                    form.rd-search.rd-search-classic(action="search-results.html", method="GET")
+                      .form-wrap
+                        label(for="rd-search-form-input-1" class="form-label") Search...
+                        input(class="form-input" id="rd-search-form-input-1" type="text" name="s" autocomplete="off")
+                      button.rd-search-submit(type='submit')
+
+                  .col-12
+                    h6.text-small-16.fw-bold.text-uppercase.aside-title Categories
+                    ul.list-marked-bordered
+                      li: a(href='#')
+                        span Business
+                        span.text-dusty-gray (2)
+                      li: a(href='#')
+                        span Marketing
+                        span.text-dusty-gray (5)
+                      li: a(href='#')
+                        span Audit
+                        span.text-dusty-gray (3)
+
+                  .col-12
+                    h6.text-small-16.fw-bold.text-uppercase.aside-title Popular posts
+
+                    +post-preview({
+                      classes: ['offset-top-15'],
+                      small: true,
+                      img: 'post-preview-1-70x70',
+                      header: 'How is that Strategic Alliance Working Out?',
+                      time: ['Feb 4, 2021']
+                    })
+  
+                    +post-preview({
+                      classes: ['offset-top-15'],
+                      small: true,
+                      img: 'post-preview-2-70x70',
+                      header: 'The Fourth Industrial Revolution',
+                      time: ['Feb 4, 2021']
+                    })
+  
+                    +post-preview({
+                      classes: ['offset-top-15'],
+                      small: true,
+                      img: 'post-preview-3-70x70',
+                      header: 'Attracting & Retaining the Best Employees',
+                      time: ['Feb 4, 2021']
+                    })
+
+              .col-md-6.col-lg-12
+                .row
+                  .col-12
+                    h6.text-small-16.fw-bold.text-uppercase.aside-title Tags
+                    ul.list-tag-blocks.offset-top-22
+                      li: a(href='#') Planning
+                      li: a(href='#') support
+                      li: a(href='#') business
+                      li: a(href='#') company
+  ='\n'
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

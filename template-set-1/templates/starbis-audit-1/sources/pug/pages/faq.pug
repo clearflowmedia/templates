@@ -1,0 +1,112 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-quote-default
+include ../elements/_ui-accordion
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'FAQ'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title(pageName, 'bg-image-1')
+
+  //- FAQ
+  section.section-60.section-md-90.section-xl-bottom-120.bg-athens-lighten
+    .container
+      .row.justify-content-md-center
+        .col-md-10.col-lg-12
+          .row
+            .col-lg-6
+              h3 General #[span.text-thin Questions]
+              
+              p.text-big All you need to know about Starbis design studio and how to get Support.
+                
+              
+              //- Bootstrap collapse
+              #accordionOne.accordion.accordion-group.accordion-group-corporate
+                +accordion-item({
+                  show: true,
+                  parentId: 'accordionOne',
+                  header: 'What is the role of internal audit?',
+                  text: "Internal audit is an independent, objective assurance and consulting activity designed to add value and improve an organization’s operations. It helps an organization accomplish its objectives by bringing a systematic, disciplined approach to business activities evaluation."
+                }).accordion-corporate
+
+                +accordion-item({
+                  parentId: 'accordionOne',
+                  header: 'What type of access do auditors have?',
+                  text: "Our auditors are authorized to have full, free and unrestricted access to information including records, computer files, property and personnel of your company and are free to review and evaluate all policies, procedures, and practices for any aspect of your business."
+                }).accordion-corporate
+
+                +accordion-item({
+                  parentId: 'accordionOne',
+                  header: 'What types of services are performed by Easy Audit?',
+                  text: "We perform various assurance, Consulting/Advisory and support services including internal and external audit, accounting, consulting services, risk assurance, corporate reporting, and lots of other services. Each and every of them is aimed at your company’s financial success."
+                }).accordion-corporate
+
+                +accordion-item({
+                  parentId: 'accordionOne',
+                  header: 'How long does an audit take?',
+                  text: 'We budget between 200 and 600 hours for a typical audit, depending on the size and complexity of your business. We normally have one auditor leading the audit, and auditors will sometimes have more than one audit in process at a time, so an audit could take from two months to six months to complete.'
+                }).accordion-corporate
+
+            .col-lg-6
+              h3 Other #[span.text-thin Questions]
+              p.text-big The answers on most common questions are described bellow.
+              
+              //- Bootstrap collapse
+              #accordionTwo.accordion.accordion-group.accordion-group-corporate
+                +accordion-item({
+                  show: true,
+                  parentId: 'accordionTwo',
+                  header: 'May I request an audit?',
+                  text: "If you would like to order one of our audit services, all you have to do is to contact the Office of Internal Audit Services. Our managers will be happy to discuss the request to determine a mutually convenient time. Please use the contact data located on our website or leave an appointment request."
+                }).accordion-corporate
+
+                +accordion-item({
+                  parentId: 'accordionTwo',
+                  header: 'Are auditors looking for fraud?',
+                  text: "Auditors are not specifically searching for the existence of fraud when performing audits. We are more concerned with ensuring that adequate systems of internal control exist to reduce the risk of fraud. In situations where internal controls are weak, our testing is designed to determine if indications of fraud exist."
+                }).accordion-corporate
+
+                +accordion-item({
+                  parentId: 'accordionTwo',
+                  header: 'What types of issues do audit services address?',
+                  text: "Audits primarily address accountability and sometimes efficiency issues. The key questions auditors try to answer are whether adequate records were maintained, funds were appropriately spent, and amounts properly recorded or not. Audit projects account for approximately twenty-five percent of staff time."
+                }).accordion-corporate
+
+                +accordion-item({
+                  parentId: 'accordionTwo',
+                  header: 'How will I know if you find anything?',
+                  text: "Prior to the end of the fieldwork, the audit staff will conduct a meeting, or provide through other forms of communication, the tentative findings with departmental management responsible for the area. A written synopsis of the tentative findings may be provided to the subject or client."
+                }).accordion-corporate
+
+                +accordion-item({
+                  parentId: 'accordionTwo',
+                  header: 'How are audits selected?',
+                  text: "Audits are selected through a risk assessment process. There are several factors affecting the activities, departments, functions or units selected to be audited. For example, we assess the risk or exposure to loss that any given activity, department, function, or unit represents to your business."
+                }).accordion-corporate
+
+                +accordion-item({
+                  parentId: 'accordionTwo',
+                  header: "How much of my time will the audit require?",
+                  text: "For each audit, there will generally be an individual within your organization who will act as our main contact for the duration of the audit. The main contact will be responsible for meeting with us to help determine the scope of the audit.  Length of meetings can vary depending on the subject matter."
+                }).accordion-corporate
+
+                +accordion-item({
+                  parentId: 'accordionTwo',
+                  header: "What are the benefits of the audit process?",
+                  text: "The overall goal of our audit is to provide the department, unit or function being reviewed with an assessment of their control environment and compliance with appropriate policies, procedures, laws, regulations and mandates of senior management and the Corporation."
+                }).accordion-corporate
+  ='\n'
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

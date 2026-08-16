@@ -1,0 +1,162 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_comment
+include ../elements/_post-preview
+
+block variables
+	- pageName = 'Blog post'
+
+block page
+	//- Page Header
+	include ../sections/_section-header-default
+
+	//- Page Content
+	+page-title('Blog', 'bg-blog')
+
+	//- Blog post
+	section.section.section-60.section-md-75.section-xl-90
+		.container
+			.row.row-50
+				.col-lg-8.col-xl-9
+					article.post.post-single
+						.post-image
+							figure: +img('post-1-870x412')
+						.post-header
+							h4 5 Simple Steps to Blog’s Success
+
+						.post-meta
+							ul.list-bordered-horizontal
+								li
+									dl.list-terms-inline
+										dt Date
+										dd: time(datetime='2024-01-22') January 22, 2024
+								li
+									dl.list-terms-inline
+										dt Posted by
+										dd Amelia Lee
+								li
+									dl.list-terms-inline
+										dt Comments
+										dd 3
+								li
+									dl.list-terms-inline
+										dt Category
+										dd Marketing
+
+						.divider-fullwidth.bg-gray-light
+
+						.post-body
+							p Unfortunately people will not come to your blog just to see what you have published on it. To make sure that your blog becomes a successful one, you have to work on it to attract visitors interested in your content. This can be achieved by serious work on some important aspects. In a word, give people the reason to see what you have to say or offer.
+							p Follow and comment on other blogs. In a blogging community, as in forums, if you want others to pay attention to what you have to say, you must interact with them.  This means commenting on other blogs that you find interesting and following others who share similar interests.  When you comment on others’ blog posts, people who read that blog will often take a look at your profile to find out who you are and why you were commenting in that forum.  This leads to traffic to your blog and gets you respect as a contributing member of that community. It may seem like a lot of hard work at first, but usually it only takes a few minutes to read another blog post and leave a few thoughtful comments.
+							.quote-wrap-1
+								blockquote.quote-minimal-bordered
+									p: q Not only should you post interesting content, you should try to blog at least three times a week as a business.
+							p You don’t necessarily need to blog a lot more than that (blogging too frequently may cause people to ignore some of your posts) but you should make sure to update your content enough that Google notices and continues crawling your site.  Also, if you update regularly, your readers will know that you still have something to say that is worth listening to and they will return to your blog site.
+
+						.post-footer
+							h5 Share this post:
+							ul.list-inline.list-inline-xs
+								li: a.novi-icon.icon.icon-xxs-small.link-tundora.fa-facebook(href='#')
+								li: a.novi-icon.icon.icon-xxs-small.link-tundora.fa-twitter(href='#')
+								li: a.novi-icon.icon.icon-xxs-small.link-tundora.fa-google-plus(href='#')
+								li: a.novi-icon.icon.icon-xxs-small.link-tundora.fa-pinterest-p(href='#')
+
+					.divider-fullwidth.bg-gray-lighter
+
+					//- Comments
+					.comment-list-wrap
+						h4 3 Comments
+						.comment-list.inset-md-right-60.inset-lg-right-30.inset-xl-right-100
+							.comment-group
+								+comment({
+									img: 'post-2-70x71',
+									user: 'July Mao',
+									text: 'The topic you describe here is really important. However, the mentioned type of training cannot be applied to anyone.'
+								})
+
+								.comment-group-reply
+									+comment({
+										img: 'post-3-70x71',
+										user: 'John doe',
+										text: 'You are absolutely right! But here, we have everything necessary to prepare even the pre - beginners to extensive physical training.'
+									})
+
+							.comment-group
+								+comment({
+									img: 'post-4-70x71',
+									user: 'Mila MOa',
+									text: 'Very useful post! Thanks for sharing! Now I’ll be planning my visit to your gym to take part in some fitness classes.'
+								})
+
+					//- Leave a comment
+					.offset-top-1
+						h4 Leave a comment
+						.form-classic-wrap
+							//- RD Mailform
+							form.rd-mailform.form-classic.form-classic-bordered.label-outside
+								.form-wrap
+									label.form-label-outside(for="comment-message") Message:
+									textarea#comment-message.form-input(name="message" data-constraints="@Required")
+
+								button(type="submit" style='min-width: 200px;').btn.btn-primary Submit
+
+				//- Aside
+				.col-lg-4.col-xl-3
+					.blog-aside
+						.blog-aside-item
+							form.rd-search.rd-search-classic(action="search-results.html", method="GET")
+								.form-wrap
+									label.form-label(for="rd-search-form-input-1") Search...
+									input.form-input(id="rd-search-form-input-1" type="text" name="s" autocomplete="off")
+								button.rd-search-submit(type='submit')
+
+						.blog-aside-item
+							h6 Categories
+							ul.list-marked-bordered
+								li: a(href='#')
+									span Marketing
+									span.list-counter (4)
+								li: a(href='#')
+									span Events
+									span.list-counter (4)
+								li: a(href='#')
+									span Design
+									span.list-counter (4)
+
+						.blog-aside-item
+							h6 Popular posts
+							.post-preview-wrap
+								+post-preview({
+									small: true,
+									img: 'post-preview-1-70x70',
+									header: 'The Ultimate Technique to Pitch Anything',
+									time: ['2024-02-04', 'Feb 4, 2024']
+								})
+
+								+post-preview({
+									small: true,
+									img: 'post-preview-2-70x70',
+									header: 'Four Types of Verbal Communication',
+									time: ['2024-02-04', 'Feb 4, 2024']
+								})
+
+								+post-preview({
+									small: true,
+									img: 'post-preview-3-70x70',
+									header: 'Proper Color Solutions For The Office',
+									time: ['2024-02-04', 'Feb 4, 2024']
+								})
+
+						.blog-aside-item
+							h6 Tags
+							ul.list-tag-blocks
+								li: a(href='#') Marketing
+								li: a(href='#') Design
+								li: a(href='#') Events
+								li: a(href='#') office
+
+
+
+	//- Page Footer
+	include ../sections/_section-footer-default

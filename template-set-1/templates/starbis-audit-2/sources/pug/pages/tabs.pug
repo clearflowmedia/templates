@@ -1,0 +1,139 @@
+extends  ../_skeleton
+
+//- Includes
+
+block variables
+  - var activeIndex = 4
+  - var pageName = 'Tabs'
+
+block title
+  title=pageName
+
+block page
+  //- Page Header
+  include ../sections/_section-header-default
+
+  //- Page Content
+  +page-title(pageName, 'bg-image-1')
+
+  //- Horizontal Tabs
+  section.section-top-60.section-md-top-90
+    .container
+      .row.justify-content-md-center.row-40
+        .col-sm-12.text-center
+          h3 Horizontal #[span.fw-thin Tabs]
+        .col-xl-10
+          //- Bootstrap tabs
+          #tabs-1.tabs-custom.tabs-horizontal.tabs-corporate
+            //- Nav tabs
+            ul.nav.nav-tabs
+              li.nav-item: a.nav-link.active(href='#tabs-1-1' data-bs-toggle='tab') Tab 1
+              li.nav-item: a.nav-link(href='#tabs-1-2' data-bs-toggle='tab') Tab 2
+              li.nav-item: a.nav-link(href='#tabs-1-3' data-bs-toggle='tab') Tab 3
+              li.nav-item: a.nav-link(href='#tabs-1-4' data-bs-toggle='tab') Tab 4
+              li.nav-item: a.nav-link(href='#tabs-1-5' data-bs-toggle='tab') Tab 5
+            //- Tab panes
+            .tab-content.text-secondary
+              div#tabs-1-1.tab-pane.fade.show.active
+                p.text-black Risk Assurance is a portfolio of three large groupings of interrelated but distinct services and competencies: Internal Audit, Business Controls & Enterprise Risk and Technology & Business Resilience. The practice has matured dramatically over recent years. Our breadth helps boards to start taking a holistic approach to risk, moving from being reactive and compliance driven to being proactive and seeing it as a strategic driver of performance.
+                p.text-black Organizations are constantly being exposed to new and evolving strategic, technical, talent and reputation risks, particularly in the Middle East region where they face significant geopolitical and macroeconomic challenges. To survive and thrive in this uncertainty, we understand that strong enterprise risk processes are crucial as these drive business controls. Instead of tackling all kinds of possible risks,  we approach them as a whole to derive the most value from alignment and consistency that allows your business to stay functional in almost any environment.
+              div#tabs-1-2.tab-pane.fade
+                p.text-black The exact definition of corporate reporting differs depending on who you speak to. However, throughout our company we use the term ‘corporate reporting’ to refer to the presentation and disclosure aspects - as distinct from accounting/measurement - of the following areas of reporting:  integrated reporting, financial reporting,  corporate governance, executive remuneration, corporate responsibility, and narrative reporting.
+                p.text-black To begin with, integrated reporting is about connecting information about an organisation’s current decisions with its future prospects; connecting information about strategy, risk, remuneration and performance; and recognising that the economy, environment and society are inseparable and therefore information provided to understand an organisation’s performance in each of these areas needs to be viewed as part of a whole. Integrated reporting helps boards of directors to see the issues they face more clearly, and enables them to explain their business rationale to stakeholders with greater clarity and authority.
+              div#tabs-1-3.tab-pane.fade
+                p.text-black Capital markets are markets for buying and selling equity and debt instruments. Capital markets channel savings and investment between suppliers of capital such as retail investors and institutional investors, and users of capital like businesses, government and individuals. Capital markets are vital to the functioning of an economy, since capital is a critical component for generating economic output. Capital markets include primary markets, where new stock and bond issues are sold to investors, and secondary markets, which trade existing securities.
+                p.text-black Capital markets are a broad category of markets facilitating the buying and selling of financial instruments. In particular, there are two categories of financial instruments that capital in which markets are involved. These are equity securities, which are often known as stocks, and debt securities, which are often known as bonds. Capital markets involve the issuing of stocks and bonds for medium-term and long-term durations, generally terms of one year or more.
+              div#tabs-1-4.tab-pane.fade
+                p.text-black An internal audit is the examination, monitoring and analysis of activities related to a company's operations, including its business structure, employee behavior and information systems. Internal audit regulations, such as the Sarbanes-Oxley Act of 2002, have increased corporate requirements for performing internal audits. Audits are important components of a company's risk management as they help to identify issues before they become substantial problems, such as attempts to steal intellectual property.
+                p.text-black An internal audit begins by an auditor assessing current processes and procedures. The auditor then analyzes and compares the results to internal control objectives. He determines whether the results comply with internal policies and procedures as well as state and federal laws. Finally, the auditor compiles and presents an audit report to the business owner.
+              div#tabs-1-5.tab-pane.fade
+                p.text-black When it comes to external auditing, there are two different categories of auditors. First, there is an external or statutory auditor who works independently to evaluate financial reporting, and then there are external cost auditors who evaluate cost statements and sheets to see if they’re free of misstatements or fraud. Both of these types of auditors follow a set of standards different from that of the company or organization hiring them to do the work.
+                p.text-black Internal auditors, as the name implies, are employed by the company or organization for whom they are performing the audit. To the best of their ability, internal auditors provide information to the board, managers, and other stakeholders on the accuracy of their books and the efficacy of their internal systems. Consultant auditors, while not working internally, use the standards of the company they are auditing as opposed to a separate set of standards. These types of auditors are used when an organization doesn’t have the resources to audit certain parts of their own operations.
+  ='\n'
+
+  //- Vertical Tabs
+  section.section-top-60.section-md-top-90
+    .container
+      h3.text-center Vertical #[span.fw-thin Tabs]
+      .row.justify-content-md-center.offset-top-40
+        .col-xl-10
+          //- Bootstrap tabs
+          #tabs-2.tabs-custom.tabs-vertical.tabs-corporate
+            //- Nav tabs
+            ul.nav.nav-tabs
+              li.nav-item: a.nav-link.active(href='#tabs-2-1' data-bs-toggle='tab') Tab 1
+              li.nav-item: a.nav-link(href='#tabs-2-2' data-bs-toggle='tab') Tab 2
+              li.nav-item: a.nav-link(href='#tabs-2-3' data-bs-toggle='tab') Tab 3
+              li.nav-item: a.nav-link(href='#tabs-2-4' data-bs-toggle='tab') Tab 4
+
+            //- Tab panes
+            .tab-content.text-secondary
+              div#tabs-2-1.tab-pane.fade.show.active
+                p.text-black The exact definition of corporate reporting differs depending on who you speak to. However, throughout our company we use the term ‘corporate reporting’ to refer to the presentation and disclosure aspects - as distinct from accounting/measurement - of the following areas of reporting:  integrated reporting, financial reporting,  corporate governance, executive remuneration, corporate responsibility, and narrative reporting.
+                p.text-black To begin with, integrated reporting is about connecting information about an organisation’s current decisions with its future prospects; connecting information about strategy, risk, remuneration and performance; and recognising that the economy, environment and society are inseparable and therefore information provided to understand an organisation’s performance in each of these areas needs to be viewed as part of a whole.
+              div#tabs-2-2.tab-pane.fade
+                p.text-black Capital markets are markets for buying and selling equity and debt instruments. Capital markets channel savings and investment between suppliers of capital such as retail investors and institutional investors, and users of capital like businesses, government and individuals. Capital markets are vital to the functioning of an economy, since capital is a critical component for generating economic output. Capital markets include primary markets, where new stock and bond issues are sold to investors, and secondary markets, which trade existing securities.
+                p.text-black Capital markets are a broad category of markets facilitating the buying and selling of financial instruments. In particular, there are two categories of financial instruments that capital in which markets are involved. These are equity securities, which are often known as stocks, and debt securities, which are often known as bonds. Capital markets involve the issuing of stocks and bonds for medium-term and long-term durations, generally terms of one year or more.
+              div#tabs-2-3.tab-pane.fade
+                p.text-black An internal audit is the examination, monitoring and analysis of activities related to a company's operations, including its business structure, employee behavior and information systems. Internal audit regulations, such as the Sarbanes-Oxley Act of 2002, have increased corporate requirements for performing internal audits. Audits are important components of a company's risk management as they help to identify issues before they become substantial problems, such as attempts to steal intellectual property.
+                p.text-black An internal audit begins by an auditor assessing current processes and procedures. The auditor then analyzes and compares the results to internal control objectives. He determines whether the results comply with internal policies and procedures as well as state and federal laws. Finally, the auditor compiles and presents an audit report to the business owner.
+              div#tabs-2-4.tab-pane.fade
+                p.text-black When it comes to external auditing, there are two different categories of auditors. First, there is an external or statutory auditor who works independently to evaluate financial reporting, and then there are external cost auditors who evaluate cost statements and sheets to see if they’re free of misstatements or fraud. Both of these types of auditors follow a set of standards different from that of the company or organization hiring them to do the work.
+                p.text-black Internal auditors, as the name implies, are employed by the company or organization for whom they are performing the audit. To the best of their ability, internal auditors provide information to the board, managers, and other stakeholders on the accuracy of their books and the efficacy of their internal systems. Consultant auditors, while not working internally, use the standards of the company they are auditing as opposed to a separate set of standards. These types of auditors are used when an organization doesn’t have the resources to audit certain parts of their own operations.
+  ='\n'
+
+  //- Tabs Line
+  section.section-top-60.section-md-top-90
+    .container
+      h3.text-center Tabs #[span.fw-thin Line]
+      .row.justify-content-md-center.offset-top-40
+        .col-md-10.col-lg-8.col-xl-6
+          //- Responsive tabs
+          #tabs-3.tabs-custom.tabs-horizontal.tabs-line
+            //- Nav tabs
+            ul.nav.nav-tabs
+              li.nav-item: a.nav-link.active(href='#tabs-3-1' data-bs-toggle='tab') Tab 1
+              li.nav-item: a.nav-link(href='#tabs-3-2' data-bs-toggle='tab') Tab 2
+              li.nav-item: a.nav-link(href='#tabs-3-3' data-bs-toggle='tab') Tab 3
+              li.nav-item: a.nav-link(href='#tabs-3-4' data-bs-toggle='tab') Tab 4
+
+            //- Tab panes
+            .tab-content.text-secondary
+              div#tabs-3-1.tab-pane.fade.show.active: p.text-black An internal audit is the examination, monitoring and analysis of activities related to a company's operations, including its business structure, employee behavior and information systems. Internal audit regulations, such as the Sarbanes-Oxley Act of 2002, have increased corporate requirements for performing internal audits. Audits are important components of a company's risk management as they help to identify issues before they become substantial problems, such as attempts to steal intellectual property. An internal audit begins by an auditor assessing current processes and procedures.
+              div#tabs-3-2.tab-pane.fade
+                p.text-black When it comes to external auditing, there are two different categories of auditors. First, there is an external or statutory auditor who works independently to evaluate financial reporting, and then there are external cost auditors who evaluate cost statements and sheets to see if they’re free of misstatements or fraud. Both of these types of auditors follow a set of standards different from that of the company or organization hiring them to do the work. Internal auditors, as the name implies, are employed by the company or organization for whom they are performing the audit.
+              div#tabs-3-3.tab-pane.fade: p.text-black Capital markets are markets for buying and selling equity and debt instruments. Capital markets channel savings and investment between suppliers of capital such as retail investors and institutional investors, and users of capital like businesses, government and individuals. Capital markets are vital to the functioning of an economy, since capital is a critical component for generating economic output. Capital markets include primary markets, where new stock and bond issues are sold to investors, and secondary markets, which trade existing securities.
+              div#tabs-3-4.tab-pane.fade: p.text-black Risk Assurance is a portfolio of three large groupings of interrelated but distinct services and competencies: Internal Audit, Business Controls & Enterprise Risk and Technology & Business Resilience. The practice has matured dramatically over recent years. Our breadth helps boards to start taking a holistic approach to risk, moving from being reactive and compliance driven to being proactive and seeing it as a strategic driver of performance. Organizations are constantly being exposed to new and evolving strategic, technical, talent and reputation risks, particularly in the Middle East region.
+  ='\n'
+
+  //- Tabs Gallery
+  section.section-60.section-md-90.section-xl-bottom-120
+    .container
+      .row.justify-content-md-center
+        .col-sm-12.text-center
+          h3 Tabs #[span.fw-thin Gallery]
+        .col-md-10.col-lg-8.col-xl-6.offset-top-40
+          //- Responsive tabs
+          #tabs-4.tabs-custom.tabs-horizontal.tabs-minimal
+            //- Nav tabs
+            ul.nav.nav-tabs.text-center
+              li.nav-item: a.nav-link.active(href='#tabs-4-1' data-bs-toggle='tab') All
+              li.nav-item: a.nav-link(href='#tabs-4-2' data-bs-toggle='tab') Internal Audit
+              li.nav-item: a.nav-link(href='#tabs-4-3' data-bs-toggle='tab') Capital Markets
+              li.nav-item: a.nav-link(href='#tabs-4-4' data-bs-toggle='tab') Corporate Reporting
+              li.nav-item: a.nav-link(href='#tabs-4-5' data-bs-toggle='tab') Risk Assurance
+
+            //- Tab panes
+            .tab-content.text-secondary
+              div#tabs-4-1.tab-pane.fade.show.active: p.text-black Tax is a dynamic and fast paced industry which requires not only analytical ability, but excellent problem solving and commercial skills. For everything that has economic consequences, whether it is for a company, an individual or the Government - tax is relevant, as is the need for tax advisers. A career in tax has an enormous amount to offer, including variety, intellectual stimulation and an ever-changing, dynamic working environment. The complex and diverse nature of taxation means that tax advisers rapidly develop areas of specialist knowledge.
+              div#tabs-4-2.tab-pane.fade
+                p.text-black Tax advisers can work in compliance, ensuring a client meets all tax obligations by preparing and submitting tax returns, tax computations and any other necessary forms. Alternatively, they may work in consultancy, advising clients on how to minimise their tax liabilities.
+                p.text-black The work of a tax adviser depends on the nature and size of the employer. Larger accountancy firms tend to adopt a structure that permits greater specialisation, whereas in smaller companies, the work may be more varied.
+              div#tabs-4-3.tab-pane.fade: p.text-black The majority of tax advisers work for professional accountancy firms, tax consultancies and practices, and the in-house tax departments of large companies. However, there are also opportunities with banks, legal firms, HM Revenue & Customs (HMRC) and in the finance departments of large companies. Increasingly, there are opportunities with firms in commerce and industry too. Some large companies and financial institutions have their own taxation departments and employ staff with an in-depth knowledge of the market sector. These firms offer the chance for greater specialisation and rapid promotion.
+              div#tabs-4-4.tab-pane.fade: p.text-black It is important to choose your accountant/tax adviser carefully. Here are a few tips to help you. If you have not used an adviser before you should be aware that anyone can call themselves an accountant/tax adviser whether or not they are professionally qualified. There are some non-qualified advisers who may have the experience to help you but qualified accountants/ tax advisers have completed relevant qualifications and will be regulated by their professional body. Professionally qualified advisers will have achieved a qualification comprising knowledge, work experience and ethics.
+              div#tabs-4-5.tab-pane.fade: p.text-black When it comes to external auditing, there are two different categories of auditors. First, there is an external or statutory auditor who works independently to evaluate financial reporting, and then there are external cost auditors who evaluate cost statements and sheets to see if they’re free of misstatements or fraud. Both of these types of auditors follow a set of standards different from that of the company or organization hiring them to do the work. Internal auditors, as the name implies, are employed by the company or organization for whom they are performing the audit.
+  ='\n'
+
+
+  //- Page Footer
+  include ../sections/_section-footer-default

@@ -1,0 +1,297 @@
+//
+// Custom Buttons Styles
+// --------------------------------------------------
+
+// Base styles
+// --------------------------------------------------
+
+.btn {
+  max-width: 100%;
+  font-family: $font-family-sec;
+  font-size: $btn-font-size * 1px;
+  font-weight: $btn-font-weight;
+  border-radius: 0;
+  line-height: 1.7;
+  padding: 11px 59px;
+  border: 2px solid;
+  text-transform: capitalize;
+  transition: .3s ease-out;
+
+  &:focus,
+  &:active,
+  &:active:focus {
+    outline: none;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+  }
+
+  &-smaller {
+    padding: 8px 25px;
+  }
+
+  &-small {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+	&:not([class*='shadow']) {
+		box-shadow: none;
+	}
+
+	&:not(:disabled):not(.disabled):active:focus,
+	&:not(:disabled):not(.disabled).active:focus{
+		&:not([class*='shadow']) {
+			box-shadow: none;
+		}
+	}
+}
+
+// Alternate buttons
+// --------------------------------------------------
+html {
+  .btn-default {
+    @include button-variant-custom($white, $abbey, $abbey, $white, $primary, $primary);
+  }
+
+  .btn-primary {
+    @include button-variant-custom($btn-primary-color, $btn-primary-bg, $btn-primary-border, $white, $keppel, $keppel);
+  }
+
+  .btn-cello {
+    @include button-variant-custom($white, $cello, $cello, $white, $primary, $primary);
+  }
+
+  .btn-red-orange {
+    @include button-variant-custom($white, $red-orange, $red-orange, $white, $gray-800, $gray-800);
+  }
+
+  .btn-primary-contrast {
+    @include button-variant-custom($white, $primary, $primary, $white, $keppel, $keppel);
+  }
+
+  .btn-primary-outline {
+    @include button-variant-custom($primary, transparent, $primary, $white, $primary, $primary);
+  }
+
+  .btn-cello-outline {
+    @include button-variant-custom($cello, transparent, $cello, $white, $primary, $primary);
+  }
+
+  .btn-white-outline {
+    @include button-variant-custom($white, transparent, $white, $tundora, $white, $white);
+  }
+
+  .btn-white-outline-variant-1 {
+    @include button-variant-custom($white, transparent, $white, $white, $primary, $primary);
+  }
+
+  .btn-silver-outline {
+    @include button-variant-custom($cello, transparent, $silver, $white, $silver, $silver);
+  }
+
+  .btn-black-outline {
+    @include button-variant-custom($black, transparent, $black, $white, $black, $black);
+  }
+
+  // Success appears as green
+  .btn-success {
+  }
+
+  // Info appears as blue-green
+  .btn-info {
+  }
+
+  // Warning appears as orange
+  .btn-warning {
+  }
+
+  // Danger and error appear as red
+  .btn-danger {
+  }
+}
+
+.page {
+}
+
+// Button Sizes
+// --------------------------------------------------
+
+.btn-sm {
+  min-width: 120px;
+  @include button-size(9px, 45px, 13px, 0);
+}
+
+.btn-lg {
+  min-width: 270px;
+  @include button-size(15px, $padding-large-horizontal, 14px, 0);
+  @include media-breakpoint-up(md) {
+    font-size: 18px;
+  }
+}
+
+.btn-xl {
+  @include button-size(15px, 22px, 18px, 0);
+
+  @include media-breakpoint-up(md) {
+    padding: $padding-extra-large-vertical $padding-extra-large-horizontal;
+    font-size: 18px;
+  }
+
+  // Variants
+  @include media-breakpoint-up(lg) {
+    min-width: 270px;
+    &-bigger {
+      padding-top: 28px;
+      padding-bottom: 28px;
+    }
+  }
+}
+
+.btn-block {
+	width: 100%;
+}
+
+// Button Shapes
+// --------------------------------------------------
+
+.btn-round,
+.btn-circle,
+.btn-rect {
+  padding: 11px 64px;
+}
+
+.btn-block {
+  padding-left: 10px;
+  padding-right: 10px;
+  min-width: 30px;
+  max-width: 100%;
+}
+
+.btn-rect {
+  border-radius: 5px;
+}
+
+.btn-round {
+  border-radius: 15px;
+}
+
+.btn-circle {
+  border-radius: 35px;
+}
+
+.btn-round-bottom {
+  border-radius: 0 0 5px 5px;
+}
+
+// Button Modifiers
+// --------------------------------------------------
+.btn-shadow {
+  box-shadow: -3px 3px 3px 0 rgba($black, .14);
+}
+
+// Button Icon styles
+// --------------------------------------------------
+
+.btn {
+  &.btn-icon {
+    @include display-inline-flex;
+    @include flex-direction(row);
+    @include flex-wrap(nowrap);
+    @include align-items(center);
+    @include justify-content(center);
+    padding: 11px 49px;
+    vertical-align: middle;
+
+    .icon {
+      position: relative;
+      top: 1px;
+      display: inline-block;
+      width: auto;
+      height: auto;
+      line-height: 0;
+      vertical-align: middle;
+      transition: 0s;
+    }
+
+    &-left {
+      .icon {
+        margin-right: 5px;
+      }
+    }
+
+    &-right {
+      @include flex-direction(row-reverse);
+      padding: 11px 39px;
+      .icon {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+.btn-icon-only {
+  @include reset-button;
+  font-size: 0;
+  line-height: 0;
+  transition: .33s all ease;
+
+  &.btn-icon-only-primary {
+    @include link($primary, $black);
+  }
+}
+
+.btn-icon-only {
+  padding: 9px 18px;
+}
+
+.btn-custom {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: none;
+  &.btn.btn-icon-right {
+    padding: 9px 41px;
+  }
+  &.btn.btn-icon-right .icon {
+    margin-left: 9px;
+  }
+  &.btn-cello {
+    .icon {
+      color: $primary;
+      @include transition(.3s ease-out all);
+    }
+    &:hover {
+      .icon {
+        color: $white;
+      }
+    }
+  }
+}
+
+button.btn.btn-icon {
+  display: inline-block;
+  vertical-align: middle;
+  .icon {
+    top: -1px;
+  }
+}
+
+.section-buttons{
+
+  @include media-breakpoint-down(md){
+    .btn {
+      min-width: 170px;
+    }
+    .btn-sm {
+      min-width: 135px;
+    }
+	  .btn-lg {
+		  min-width: 200px;
+	  }
+    .btn-xl {
+      min-width: 250px;
+    }
+  }
+}

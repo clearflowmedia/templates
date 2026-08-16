@@ -1,0 +1,111 @@
+//
+// RD Navbar default
+// --------------------------------------------------
+
+.rd-navbar-default {
+
+  // RD Navbar Nav
+  .rd-navbar-nav {
+    > li > a {
+      font-family: $font-family-sec;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      line-height: 1.2;
+      text-transform: uppercase;
+      color: $rd-navbar-nav-color;
+    }
+  }
+
+  // Mobile & tablet variant
+  &.rd-navbar-fixed {
+    // RD Navbar Search
+    .rd-navbar-search {
+      .rd-navbar-search-toggle {
+        display: none;
+      }
+    }
+  }
+
+  // Desktop variant
+  &.rd-navbar-static {
+    .rd-navbar-inner {
+      @include display-flex;
+      @include flex-direction(row);
+      @include align-items(center);
+      @include flex-wrap(nowrap);
+    }
+
+    // RD Navbar Inner
+    .rd-navbar-inner {
+      @include justify-content(space-between);
+      padding: 36px 15px 34px;
+      font-size: 0;
+      line-height: 0;
+    }
+
+    // RD Navbar Panel
+    .rd-navbar-panel {
+      min-width: 100px;
+    }
+
+    // RD Navbar Nav
+    .rd-navbar-nav {
+      z-index: 0;
+      margin-right: 10px;
+      transition: .25s;
+
+      > li + li {
+        &:before{
+          content: '';
+          width: 1px;
+          background-color: #e1e1e1;
+          display: block;
+          height: 22px;
+          float: left;
+          position: relative;
+          left: -18px;
+        }
+      }
+
+      @include media-breakpoint-up(xl) {
+        > li + li {
+
+          &:before{
+            left: -29px;
+          }
+        }
+      }
+    }
+
+    // RD Navbar Toggle
+    .rd-navbar-toggle {
+      .rd-navbar-nav {
+        > li {
+          .rd-navbar-toggle {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .rd-navbar-nav > li > .rd-navbar-dropdown {
+      margin-top: 27px;
+    }
+
+    // RD Navbar states
+    &.rd-navbar--is-clone,
+    &.rd-navbar--is-stuck {
+      .rd-navbar-inner {
+        padding: 18px 15px;
+      }
+
+      .rd-navbar-nav > li > .rd-navbar-dropdown {
+        margin-top: 22px;
+      }
+
+      .rd-navbar-nav > li > .rd-navbar-megamenu {
+        margin-top: 22px;
+      }
+    }
+  }
+}

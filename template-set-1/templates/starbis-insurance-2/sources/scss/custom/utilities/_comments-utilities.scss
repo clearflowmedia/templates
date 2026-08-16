@@ -1,0 +1,137 @@
+//
+// Comment utilities
+// --------------------------------------------------
+$comment-border-color: $gray-300;
+
+.comment {
+  figure {
+    &, img {
+      border-radius: 50%;
+      max-width: 71px;
+    }
+  }
+
+  time {
+    font-size: 12px;
+    line-height: 1;
+    color: $dusty-gray;
+  }
+
+  .user {
+    font-size: $h6-font-size;
+    line-height: $h6-line-height;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $cello;
+  }
+
+  .list-icon-meta {
+    @include spacing(8px, 0);
+
+    > li {
+      display: inline-block;
+    }
+
+    li {
+      font-size: 12px;
+      line-height: 1;
+      font-weight: 400;
+      
+      a {
+        color: inherit;
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  // Elements
+  .comment-body {
+    padding: 17px 22px;
+    border: 1px solid $comment-border-color;
+    border-radius: 7px;
+  }
+
+  .comment-body-header {
+    @include display-flex;
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include align-items(flex-start);
+    @include justify-content(space-between);
+    @include spacing(5px);
+
+    @include media-breakpoint-up(md) {
+      @include align-items(center);
+    }
+
+    > * {
+      @include flex-shrink(0);
+    }
+  }
+
+  .comment-meta {
+    @include flex-grow(1);
+    @include spacing(10px, 5px);
+
+    @include media-breakpoint-up(md) {
+      > * {
+        display: inline-block;
+        vertical-align: baseline;
+      }
+    }
+  }
+
+  .comment-body-text {
+    margin-top: 10px;
+  }
+}
+
+.comment-minimal {
+  .author {
+    font: 700 14px/18px $font-family-sec;
+    text-transform: uppercase;
+    letter-spacing: -.025em;
+    color: $black;
+  }
+
+  // Offsets
+  * + .comment-body {
+    margin-top: 10px;
+  }
+}
+
+* + .comment-minimal {
+  margin-top: 35px;
+}
+
+.comment-group-reply {
+  padding-left: 12%;
+}
+
+// Offsets
+.comment + * {
+  margin-top: 21px;
+}
+
+* + .comment-group {
+  margin-top: 30px;
+}
+
+@include media-breakpoint-up(md) {
+  .comment {
+    > .unit > .unit-left {
+      margin-top: 16px;
+    }
+  }
+
+  * + .comment-minimal {
+    margin-top: 45px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  * + .post-comment {
+    margin-top: 80px;
+  }
+}
