@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html class="#{html_class}" lang="en">
+  <head>
+    <title>Login</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,700%7CUbuntu:400,500,700%7CPlayfair+Display:400,700,700i,900i">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+		
+  <link rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+  <body class="one-screen-page bg-gray-darker bg-image" style="background-image: url(images/bg-image-4.jpg);">
+    <div class="page">
+      <div class="page-loader page-loader-variant-1">
+        <div><a class="brand brand-md brand-inverse" href="index.html"><img src="images/logo-light-150x27.png" alt="" width="150" height="27"/></a>
+          <div class="page-loader-body">
+            <div id="spinningSquaresG">
+              <div class="spinningSquaresG" id="spinningSquaresG_1"></div>
+              <div class="spinningSquaresG" id="spinningSquaresG_2"></div>
+              <div class="spinningSquaresG" id="spinningSquaresG_3"></div>
+              <div class="spinningSquaresG" id="spinningSquaresG_4"></div>
+              <div class="spinningSquaresG" id="spinningSquaresG_5"></div>
+              <div class="spinningSquaresG" id="spinningSquaresG_6"></div>
+              <div class="spinningSquaresG" id="spinningSquaresG_7"></div>
+              <div class="spinningSquaresG" id="spinningSquaresG_8"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-inner">
+        <header class="page-head">
+          <div class="page-head-inner">
+            <div class="container text-center"><a class="brand brand-md brand-inverse" href="index.html"><img src="images/logo-light-150x27.png" alt="" width="150" height="27"/></a></div>
+          </div>
+        </header>
+        <section>
+          <div class="container">
+            <div class="row justify-content-md-center">
+              <div class="col-md-7 col-lg-5 col-xl-4">
+                <div class="block-shadow text-center">
+                  <div class="block-inner">
+                    <p class="text-uppercase text-abbey fw-bold font-accent">Log in to your account</p>
+                    <div class="icon-block"><span class="icon icon-xl icon-black material-icons-lock_open"></span></div>
+                  </div>
+                  <form class="rd-mailform form-modern form-darker form-login">
+                    <div class="block-inner">
+                      <div class="form-group">
+                        <input class="form-control" id="login-form-login" type="text" name="login" data-constraints="@Required">
+                        <label class="form-label" for="login-form-login">Login</label>
+                      </div>
+                      <div class="form-group">
+                        <input class="form-control" id="login-form-password" type="password" name="pass" data-constraints="@Required">
+                        <label class="form-label" for="login-form-password">Password</label>
+                      </div>
+                      <div class="info-text"><a class="link-default" href="#">Forgot your password?</a></div>
+                    </div>
+                    <button class="btn btn-primary btn-round-bottom btn-block" type="submit">Sign in</button>
+                  </form>
+                </div>
+                <div class="group-inline text-center"><span class="text-white-08">Haven’t an account?</span><a class="link link-primary-inverse" href="register.html">Sign up here.</a></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page-foot">
+          <div class="page-foot-inner">
+            <div class="container text-center">
+              <div class="row">
+                <div class="col-sm-12">
+                  <p class="rights text-small fw-light"><span>TaxPro</span><span>&nbsp;&#169;&nbsp;</span><span id="copyright-year"></span><span>All Rights Reserved</span><br class="d-md-none"><a class="link-primary-inverse" href="#">Terms of Use</a><span>and</span><a class="link-primary-inverse" href="privacy-policy.html">Privacy Policy</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+    <div class="snackbars" id="form-output-global"></div>
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <title>Gallery Masonry</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700%7CPlayfair+Display:400,700,700i,900,900i">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+  <body>
+    <div class="page">
+      <div class="page-loader page-loader-variant-1">
+        <div><a class="brand brand-md brand-inverse" href="index.html"><img src="images/logo-light-135x34.png" alt="" width="135" height="34"/></a>
+          <div class="page-loader-body">
+            <div id="spinningSquaresG">
+              <div class="spinningSquaresG" id="spinningSquaresG_1"></div>
+              <div class="spinningSquaresG" id="spinningSquaresG_2"></div>
+              <div class="spinningSquaresG" id="spinningSquaresG_3"></div>
+              <div class="spinningSquaresG" id="spinningSquaresG_4"></div>
+              <div class="spinningSquaresG" id="spinningSquaresG_5"></div>
+              <div class="spinningSquaresG" id="spinningSquaresG_6"></div>
+              <div class="spinningSquaresG" id="spinningSquaresG_7"></div>
+              <div class="spinningSquaresG" id="spinningSquaresG_8"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <header class="page-head">
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar rd-navbar-corporate-dark" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-md-layout="rd-navbar-static" data-lg-layout="rd-navbar-static" data-xl-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-stick-up-clone="false" data-md-stick-up-offset="53px" data-lg-stick-up-offset="53px" data-md-stick-up="true" data-lg-stick-up="true">
+            <div class="rd-navbar-inner">
+              <div class="rd-navbar-aside">
+                <div class="rd-navbar-aside-toggle" data-custom-toggle=".rd-navbar-aside" data-custom-toggle-disable-on-blur="true"><span></span></div>
+                <div class="rd-navbar-aside-content context-dark">
+                  <ul class="rd-navbar-aside-group list-units">
+                    <li>
+                      <div class="unit unit-horizontal unit-spacing-xs">
+                        <div class="unit-left"><span class="icon icon-xxs-small icon-primary material-icons-place icon-shift-1 offset-top-2"></span></div>
+                        <div class="unit-body"><a class="link-white-v2 d-inline" href="#">6036 Richmond hwy, Alexandria, VA USA 22303</a></div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="unit unit-horizontal unit-spacing-xs">
+                        <div class="unit-left"><span class="icon icon-xxs icon-primary fa-clock-o offset-top-2"></span></div>
+                        <div class="unit-body">
+                          <p class="text-white">Mon – Sat: 9:00am–18:00pm. Sunday CLOSED</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="unit unit-horizontal unit-spacing-xs">
+                        <div class="unit-left"><span class="icon icon-xxs icon-primary material-icons-phone icon-shift-2"></span></div>
+                        <div class="unit-body"><a class="link-white-v2" href="callto:#">+1 (409) 987–5874</a></div>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="rd-navbar-aside-group">
+                    <ul class="list-inline list-inline-reset">
+                      <li><a class="icon icon-round icon-abbey-filled icon-xxs-smallest fa fa-facebook" href="#"></a></li>
+                      <li><a class="icon icon-round icon-abbey-filled icon-xxs-smallest fa fa-x-twitter" href="#"></a></li>
+                      <li><a class="icon icon-round icon-abbey-filled icon-xxs-smallest fa fa-google-plus" href="#"></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="rd-navbar-group rd-navbar-search-wrap">
+                <div class="rd-navbar-panel">
+                  <button class="rd-navbar-toggle" data-custom-toggle=".rd-navbar-nav-wrap" data-custom-toggle-disable-on-blur="true"><span></span></button><a class="rd-navbar-brand brand" href="index.html"><img src="images/logo-135x34.png" alt="" width="135" height="34"/></a>
+                </div>
+                <div class="rd-navbar-nav-wrap">
+                  <div class="rd-navbar-nav-inner">
+                    <div class="rd-navbar-search">
+                      <form class="rd-search" action="search-results.html" method="GET" data-search-live="rd-search-results-live">
+                        <div class="form-wrap">
+                          <label class="form-label" for="rd-search-form-input">Search...</label>
+                          <input class="form-input" id="rd-search-form-input" type="text" name="s" autocomplete="off">
+                          <div class="rd-search-results-live" id="rd-search-results-live"></div>
+                        </div>
+                        <button class="rd-search-submit" type="submit"></button>
+                      </form>
+                      <button class="rd-navbar-search-toggle" data-rd-navbar-toggle=".rd-navbar-search, .rd-navbar-search-wrap"></button>
+                    </div>
+                    <ul class="rd-navbar-nav">
+                      <li><a href="index.html">Home</a>
+                      </li>
+                      <li><a href="about-us.html">About Us</a>
+                      </li>
+                      <li><a href="services.html">Services</a>
+                      </li>
+                      <li><a href="#">Blog</a>
+                        <ul class="rd-navbar-dropdown">
+                          <li><a href="blog-classic.html">Classic blog</a>
+                          </li>
+                          <li><a href="blog-grid.html">Grid blog</a>
+                          </li>
+                          <li><a href="blog-line.html">Blog Line</a>
+                          </li>
+                          <li><a href="blog-masonry.html">Masonry Blog</a>
+                          </li>
+                          <li><a href="blog-post.html">Blog post</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="active"><a href="#">Pages</a>
+                        <ul class="rd-navbar-megamenu">
+                          <li>
+                            <h6 class="rd-megamenu-header">Gallery</h6>
+                            <ul class="rd-navbar-list">
+                              <li><a href="gallery-grid.html">Grid gallery</a></li>
+                              <li><a href="gallery-masonry.html">Masonry gallery</a></li>
+                              <li><a href="gallery-cobbles.html">Cobbles gallery</a></li>
+                              <li><a href="gallery-item.html">Gallery item</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <h6 class="rd-megamenu-header">Pages</h6>
+                            <ul class="rd-navbar-list">
+                              <li><a href="appointment.html">Make an Appointment</a></li>
+                              <li><a href="clients.html">Clients</a></li>
+                              <li><a href="clients-testimonials.html">Clients testimonials</a></li>
+                              <li><a href="our-team.html">Our team</a></li>
+                              <li><a href="team-member-profile.html">Team member profile</a></li>
+                              <li><a href="careers.html">Careers</a></li>
+                              <li><a href="pricing.html">Pricing</a></li>
+                              <li><a href="faq.html">FAQ</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <h6 class="rd-megamenu-header">Extras</h6>
+                            <ul class="rd-navbar-list">
+                              <li><a href="404-page.html">404 Page</a></li>
+                              <li><a href="503-page.html">503 Page</a></li>
+                              <li><a href="maintenance.html">Maintenance</a></li>
+                              <li><a href="coming-soon.html">Coming soon</a></li>
+                              <li><a href="login.html">Login</a></li>
+                              <li><a href="register.html">Register</a></li>
+                              <li><a href="search-results.html">Search results</a></li>
+                              <li><a href="privacy-policy.html">Terms of use</a></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <h6 class="rd-megamenu-header">Components</h6>
+                            <ul class="rd-navbar-list">
+                              <li><a href="accordion.html">Accordion</a></li>
+                              <li><a href="buttons.html">Buttons</a></li>
+                              <li><a href="grid-system.html">Grid</a></li>
+                              <li><a href="forms.html">Forms</a></li>
+                              <li><a href="icons.html">Icons</a></li>
+                              <li><a href="icon-lists.html">Icon lists</a></li>
+                              <li><a href="progress-bars.html">Progress bars</a></li>
+                              <li><a href="tabs.html">Tabs</a></li>
+                              <li><a href="tables.html">Table styles</a></li>
+                              <li><a href="typography.html">Typography</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a href="contact-us.html">Contacts</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <section class="section-30 section-md-40 section-lg-66 section-xl-bottom-90 bg-gray-dark page-title-wrap" style="background-image: url(images/bg-image-1.jpg);">
+        <div class="container">
+          <div class="page-title">
+            <h2>Gallery</h2>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-50 section-md-100">
+        <div class="container isotope-wrap">
+          <div class="row text-center row-40">
+            <div class="col-sm-12">
+              <ul class="isotope-filters-responsive">
+                <li>
+                  <p>Choose your category:</p>
+                </li>
+                <li class="block-top-level">
+                  <button class="isotope-filters-toggle btn btn-sm btn-default" data-custom-toggle="#isotope-1" data-custom-toggle-hide-on-blur="true">Filter<span class="caret"></span></button>
+                  <div class="isotope-filters isotope-filters-minimal isotope-filters-horizontal" id="isotope-1">
+                    <ul class="list-inline">
+                      <li><a class="active" data-isotope-filter="*" data-isotope-group="gallery" href="#">All</a></li>
+                      <li><a data-isotope-filter="Category 1" data-isotope-group="gallery" href="#">Internal Audit</a></li>
+                      <li><a data-isotope-filter="Category 2" data-isotope-group="gallery" href="#">Capital Markets</a></li>
+                      <li><a data-isotope-filter="Category 3" data-isotope-group="gallery" href="#">Corporate Reporting</a></li>
+                      <li><a data-isotope-filter="Category 4" data-isotope-group="gallery" href="#">Risk Assurance</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="col-sm-12">
+              <div class="row isotope isotope-gutter-default" data-isotope-layout="masonry" data-isotope-group="gallery" data-lightgallery="group">
+                <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Category 2">
+                  <div class="thumbnail thumbnail-variant-3"><a class="link link-external" href="gallery-item.html"><span class="icon icon-sm fa fa-link"></span></a>
+                    <figure><img src="images/gallery-masonry-2-370x278.jpg" alt="" width="370" height="278"/>
+                    </figure>
+                    <div class="caption"><a class="link link-original" href="images/gallery-3-1170x780_original.jpg" data-lightgallery="item"></a></div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-8 isotope-item" data-filter="Category 1">
+                  <div class="thumbnail thumbnail-variant-3"><a class="link link-external" href="gallery-item.html"><span class="icon icon-sm fa fa-link"></span></a>
+                    <figure><img src="images/gallery-masonry-1-770x586.jpg" alt="" width="770" height="586"/>
+                    </figure>
+                    <div class="caption"><a class="link link-original" href="images/gallery-1-1170x781_original.jpg" data-lightgallery="item"></a></div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Category 3">
+                  <div class="thumbnail thumbnail-variant-3"><a class="link link-external" href="gallery-item.html"><span class="icon icon-sm fa fa-link"></span></a>
+                    <figure><img src="images/gallery-masonry-3-371x587.jpg" alt="" width="371" height="587"/>
+                    </figure>
+                    <div class="caption"><a class="link link-original" href="images/gallery-2-600x772_original.jpg" data-lightgallery="item"></a></div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Category 4">
+                  <div class="thumbnail thumbnail-variant-3"><a class="link link-external" href="gallery-item.html"><span class="icon icon-sm fa fa-link"></span></a>
+                    <figure><img src="images/gallery-masonry-4-373x279.jpg" alt="" width="373" height="279"/>
+                    </figure>
+                    <div class="caption"><a class="link link-original" href="images/gallery-4-1170x780_original.jpg" data-lightgallery="item"></a></div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Category 2">
+                  <div class="thumbnail thumbnail-variant-3"><a class="link link-external" href="gallery-item.html"><span class="icon icon-sm fa fa-link"></span></a>
+                    <figure><img src="images/gallery-masonry-5-373x279.jpg" alt="" width="373" height="279"/>
+                    </figure>
+                    <div class="caption"><a class="link link-original" href="images/gallery-5-1170x841_original.jpg" data-lightgallery="item"></a></div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-8 isotope-item" data-filter="Category 3">
+                  <div class="thumbnail thumbnail-variant-3"><a class="link link-external" href="gallery-item.html"><span class="icon icon-sm fa fa-link"></span></a>
+                    <figure><img src="images/gallery-masonry-6-769x384.jpg" alt="" width="769" height="384"/>
+                    </figure>
+                    <div class="caption"><a class="link link-original" href="images/gallery-8-1170x780_original.jpg" data-lightgallery="item"></a></div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Category 4">
+                  <div class="thumbnail thumbnail-variant-3"><a class="link link-external" href="gallery-item.html"><span class="icon icon-sm fa fa-link"></span></a>
+                    <figure><img src="images/gallery-masonry-7-371x384.jpg" alt="" width="371" height="384"/>
+                    </figure>
+                    <div class="caption"><a class="link link-original" href="images/gallery-9-1170x780_original.jpg" data-lightgallery="item"></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="page-foot bg-cape-cod context-dark">
+        <section class="section-40 section-md-75">
+          <div class="container">
+            <div class="row justify-content-sm-center">
+              <div class="col-sm-9 col-md-11 col-xl-12">
+                <div class="row row-50">
+                  <div class="col-md-6 col-lg-10 col-xl-3">
+                    <div class="inset-xl-right-20" style="max-width: 510px;"><a class="brand brand-inverse" href="index.html"><img src="images/logo-light-135x34.png" alt="" width="135" height="34"/></a>
+                      <p class="text-dusty-gray">ClearAudit delivers environment through which high-quality firms from diverse backgrounds can work together toward their own common goals.</p>
+                      <div class="link-block"><a class="text-small-16 text-medium" href="contact-us.html">Free Consultation</a></div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4 col-xl-3">
+                    <h6 class="text-small-16 text-uppercase footer-title">Recent Posts</h6>
+                          <article class="post post-preview post-preview-inverse offset-top-22"><a href="blog-post.html">
+                              <div class="unit unit-horizontal unit-spacing-lg">
+                                <div class="unit-left">
+                                  <figure class="post-image"><img src="images/post-preview-1-70x70.jpg" alt="" width="70" height="70"/>
+                                  </figure>
+                                </div>
+                                <div class="unit-body">
+                                  <div class="post-header">
+                                    <p>Top 3 Concerns Whe Choosing a Cloud Vendor</p>
+                                  </div>
+                                  <div class="post-meta">
+                                    <ul class="list-meta">
+                                      <li>
+                                        <time datetime="2021-12-23">June 23, 2021</time>
+                                      </li>
+                                      <li>4 Comment</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div></a></article>
+                          <article class="post post-preview post-preview-inverse offset-top-22"><a href="blog-post.html">
+                              <div class="unit unit-horizontal unit-spacing-lg">
+                                <div class="unit-left">
+                                  <figure class="post-image"><img src="images/post-preview-2-70x70.jpg" alt="" width="70" height="70"/>
+                                  </figure>
+                                </div>
+                                <div class="unit-body">
+                                  <div class="post-header">
+                                    <p>Audit Data Analytics: Why Auditors Should Care</p>
+                                  </div>
+                                  <div class="post-meta">
+                                    <ul class="list-meta">
+                                      <li>
+                                        <time datetime="2021-12-23">June 20, 2021</time>
+                                      </li>
+                                      <li>4 Comment</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div></a></article>
+                  </div>
+                  <div class="col-md-6 col-lg-4 col-xl-3">
+                    <h6 class="text-small-16 text-uppercase footer-title">Quick links</h6>
+                    <div class="row" style="max-width: 270px;">
+                      <div class="col-6">
+                        <ul class="list-marked-variant-2">
+                          <li><a href="index.html">Home</a></li>
+                          <li><a href="services.html">Services</a></li>
+                          <li><a href="careers.html">Careers</a></li>
+                          <li><a href="blog-classic.html">Blog</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-6">
+                        <ul class="list-marked-variant-2">
+                          <li><a href="about-us.html">About us</a></li>
+                          <li><a href="contact-us.html">Contacts</a></li>
+                          <li><a href="appointment.html">Appointment</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4 col-xl-3">
+                    <h6 class="text-small-16 text-uppercase footer-title">Contact us</h6>
+                    <address class="contact-info text-start">
+                      <div class="unit unit-horizontal unit-spacing-md align-items-center">
+                        <div class="unit-left"><span class="icon icon-xs icon-dusty-gray material-icons-phone"></span></div>
+                        <div class="unit-body"><a class="link-white" href="callto:#">+1 (409) 987–5874</a></div>
+                      </div>
+                      <div class="unit unit-horizontal unit-spacing-md align-items-center">
+                        <div class="unit-left"><span class="icon icon-xs icon-dusty-gray fa fa-envelope-o"></span></div>
+                        <div class="unit-body"><a class="link-white" href="mailto:#">info@demolink.org</a></div>
+                      </div>
+                      <div class="unit unit-horizontal unit-spacing-md">
+                        <div class="unit-left"><span class="icon icon-xs icon-dusty-gray material-icons-place"></span></div>
+                        <div class="unit-body"><a class="link-white d-inline" href="#">6036 Richmond hwy,<br>Alexandria, VA USA 22303</a></div>
+                      </div>
+                    </address>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="container">
+          <hr class="hr bg-abbey-04">
+        </div>
+        <section class="section-35">
+          <div class="container text-center">
+            <div class="row flex-md-row-reverse justify-content-md-between align-items-md-center row-15">
+              <div class="col-md-6 text-md-end">
+                <div class="group-sm group-middle">
+                  <p class="font-italic text-white">Follow Us:</p>
+                  <ul class="list-inline list-inline-reset">
+                    <li><a class="icon icon-round icon-abbey-filled icon-xxs-smallest fa fa-facebook" href="#"></a></li>
+                    <li><a class="icon icon-round icon-abbey-filled icon-xxs-smallest fa fa-x-twitter" href="#"></a></li>
+                    <li><a class="icon icon-round icon-abbey-filled icon-xxs-smallest fa fa-google-plus" href="#"></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 offset-top-15 offset-sm-top-0 text-md-start">
+                <p class="rights text-white"><span id="copyright-year"></span><span>&nbsp;&#169;&nbsp;</span><span>ClearAudit.&nbsp;</span><a class="link-white-v2" href="privacy-policy.html">Privacy Policy</a></p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </footer>
+    </div>
+    <div class="snackbars" id="form-output-global"></div>
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
